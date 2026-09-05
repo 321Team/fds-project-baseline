@@ -36,7 +36,17 @@
 - OID-02 Control Plane/System Image Registry 결정
 - OID-03 Bootstrap Package/Registry Egress 결정
 - `CR-P1-ANS-01-01` Reviewer 승인, CI, Merge 및 필요한 Runtime Evidence
-- GitHub `main` 보호 Ruleset 활성화 및 검증
 - Draft PR 승인 후 v3.1.17 `RELEASED` 승격
 
-**D37_DECISION_VERDICT=USER_APPROVED_RELEASE_PENDING**
+## GitHub Free compensating control — 2026-09-05 approved
+
+Private 저장소를 유지하며 유료 플랜이 필요한 Ruleset은 적용 대상에서 제외한다. Public 전환은 금지한다.
+
+- 모든 변경은 `release/vX.Y.Z` Branch와 Pull Request를 사용한다.
+- `main` 직접 Push 금지는 절차 통제로 유지한다.
+- 최소 1인의 독립 Reviewer 승인을 받은 뒤 승인 운영자가 수동 Merge한다.
+- PR에 대상 Head Commit SHA, 검증 결과, Reviewer, 승인 결과를 기록한다.
+- GitHub Actions가 실행되지 않으면 로컬 SHA-256·Workbook QA·민감정보 검사 PASS를 PR Evidence로 보존하되, CI PASS로 표현하지 않는다.
+- 자동 Merge와 자동 정본 배포는 사용하지 않는다.
+
+**D37_DECISION_VERDICT=USER_APPROVED_FREE_PLAN_COMPENSATING_CONTROL_RELEASE_PENDING**

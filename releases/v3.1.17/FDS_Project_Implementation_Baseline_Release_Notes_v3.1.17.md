@@ -35,7 +35,7 @@ v3.1.17은 개발 구현 릴리즈가 아니라 정본 저장소 운영과 문�
 | Secret-pattern scan | PASS |
 | GitHub Actions `canonical-integrity` | PASS |
 | CODEOWNERS review | 1 approval minimum |
-| `main` protection Ruleset | Active |
+| GitHub Free compensating control | APPROVED — Private 유지, PR+1인 Review+수동 Merge, 직접 Push 절차 금지 |
 | Final merge and release tag | Pending |
 
 **RELEASE_NOTES_VERDICT=READY_FOR_REVIEW**

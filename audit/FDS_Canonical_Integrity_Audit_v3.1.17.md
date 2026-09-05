@@ -3,7 +3,7 @@
 > Audit date: 2026-09-04  
 > Scope: v3.1.17 Release Candidate and preserved v3.1.15/v3.1.16 history  
 > Source mutation: none for preserved history  
-> Overall verdict: CONDITIONAL PASS — PR/CI/Ruleset pending
+> Overall verdict: CONDITIONAL PASS — Review/Actions pending; GitHub Free limitation accepted
 
 | Check | Result | Evidence |
 |---|---|---|
@@ -22,7 +22,7 @@
 | Credential-pattern scan | PASS | Credential-like extensions and configured secret patterns matched 0 in candidate payload |
 | GitHub Actions | PENDING | `canonical-integrity` workflow is included; PR run required |
 | CODEOWNERS review | PENDING | One approval minimum required before merge |
-| `main` protection Ruleset | PENDING | Active Ruleset must be confirmed before release merge |
+| `main` protection Ruleset | ACCEPTED LIMITATION | GitHub Free Private Repository 403; Public 전환 금지, PR+1인 Review+수동 Merge 보상 통제 승인 |
 
 ## Open findings not resolved by this document release
 
@@ -32,5 +32,7 @@
 - `CR-P1-ANS-01-01` review, CI, merge and Runtime evidence
 
 The audit does not authorize merge and does not convert design or document approval into Runtime PASS.
+
+GitHub Free 보상 통제는 기술적 Branch Protection과 동일하지 않다. 승인 운영자는 Reviewer 승인과 대상 Head SHA를 확인한 뒤에만 수동 Merge해야 한다.
 
 **CANONICAL_INTEGRITY_AUDIT_VERDICT=CONDITIONAL_PASS**
