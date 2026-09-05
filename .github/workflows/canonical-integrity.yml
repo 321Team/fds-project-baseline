@@ -1,5 +1,7 @@
 name: canonical-integrity
 on:
+  push:
+    branches: ["release/**"]
   pull_request:
     branches: [main]
   workflow_dispatch:
