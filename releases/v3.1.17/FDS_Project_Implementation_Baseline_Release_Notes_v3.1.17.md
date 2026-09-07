@@ -1,8 +1,8 @@
 # FDS Project Implementation Baseline Release Notes v3.1.17
 
-> Release date: 2026-09-04 candidate  
+> Release date: 2026-09-07  
 > Decision: D37  
-> Status: READY FOR REVIEW  
+> Status: RELEASED  
 > Previous released baseline: v3.1.16
 
 ## Release purpose
@@ -35,8 +35,9 @@ v3.1.17은 개발 구현 릴리즈가 아니라 정본 저장소 운영과 문�
 | Spreadsheet formula and render QA | PASS |
 | Secret-pattern scan | PASS |
 | GitHub Actions `canonical-integrity` | 실행 시 PASS. 실행이 생성되지 않으면 `NOT RUN`을 명시하고 승인된 무료 플랜 보상 통제에 따라 Local artifact integrity·Spreadsheet QA·Secret-pattern scan PASS를 대체 증적으로 사용하며 CI PASS를 선언하지 않음 |
-| CODEOWNERS review | 1 approval minimum |
+| CODEOWNERS review | PASS — `hayeounglee` APPROVED exact HEAD `53ea99cc904a411f64b95d0e61fcef8533c5f6a7` |
 | GitHub Free compensating control | APPROVED — Private 유지, PR+1인 Review+수동 Merge, 직접 Push 절차 금지 |
-| Final merge and release tag | Pending |
+| Approved content merge | PASS — PR #1 merge commit `8515ecd97e69035f329032ba17206972c7b0739d` |
+| Finalization tag / GitHub Release | Pending finalization PR merge |
 
-**RELEASE_NOTES_VERDICT=READY_FOR_REVIEW**
+**RELEASE_NOTES_VERDICT=RELEASED_FINALIZATION_IN_PROGRESS**

@@ -4,11 +4,11 @@
 > Audit update: 2026-09-07 — Review comment and GitHub Free gate alignment  
 > Scope: v3.1.17 Release Candidate and preserved v3.1.15/v3.1.16 history  
 > Source mutation: none for preserved history  
-> Overall verdict: CONDITIONAL PASS — Independent approval pending; Actions NOT RUN accepted under the approved GitHub Free compensating control
+> Overall verdict: PASS — exact-HEAD approval and merge verified; finalization metadata and tag remain controlled follow-up actions
 
 | Check | Result | Evidence |
 |---|---|---|
-| Version status separation | PASS | v3.1.16 remains RELEASED; v3.1.17 is READY FOR REVIEW |
+| Version status separation | PASS | v3.1.17 is RELEASED; v3.1.16 is retained as SUPERSEDED history |
 | v3.1.15 history | PASS | Baseline, Ticket Pack, Release Notes, Manifest, D35 record preserved under `releases/v3.1.15/` |
 | v3.1.16 history | PASS | Baseline, WBS/Gantt, Ticket Pack, Release Notes, Manifest, D36 record preserved under `releases/v3.1.16/` |
 | WBS formula preservation | PASS | Formula count 1,636 before and after; change 0 |
@@ -23,7 +23,8 @@
 | Credential-pattern scan | PASS | Credential-like extensions and configured secret patterns matched 0 in candidate payload |
 | Repository size / binary handling | PASS / MONITOR | Candidate working set is approximately 640 KiB; largest file is the 94,805-byte ZIP. Git LFS is not justified for v3.1.17; future distribution ZIP files move to tag-based GitHub Release Assets while text and editable source remain in Git. |
 | GitHub Actions | ACCEPTED NOT RUN | `canonical-integrity` workflow exists but no run/status was created for the reviewed Head. Local integrity, workbook QA and credential scan are PASS; CI PASS is not claimed. |
-| CODEOWNERS review | PENDING | `hayeounglee` submitted `COMMENTED` on 2026-09-07; independent `APPROVED` count remains 0. One approval is required before merge. |
+| CODEOWNERS review | PASS | `hayeounglee` submitted `APPROVED` on 2026-09-07 for exact candidate HEAD `53ea99cc904a411f64b95d0e61fcef8533c5f6a7`. |
+| Approved content merge | PASS | PR #1 merged to `main` as `8515ecd97e69035f329032ba17206972c7b0739d`. |
 | `main` protection Ruleset | ACCEPTED LIMITATION | GitHub Free Private Repository 403; Public 전환 금지, PR+1인 Review+수동 Merge 보상 통제 승인 |
 
 ## Open findings not resolved by this document release
@@ -37,4 +38,4 @@ The audit does not authorize merge and does not convert design or document appro
 
 GitHub Free 보상 통제는 기술적 Branch Protection과 동일하지 않다. 승인 운영자는 Reviewer의 명시적 `APPROVED` 상태와 대상 Head SHA를 확인한 뒤에만 수동 Merge해야 한다. `COMMENTED`는 승인으로 간주하지 않는다.
 
-**CANONICAL_INTEGRITY_AUDIT_VERDICT=CONDITIONAL_PASS**
+**CANONICAL_INTEGRITY_AUDIT_VERDICT=PASS_FINALIZATION_IN_PROGRESS**

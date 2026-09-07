@@ -5,7 +5,7 @@
 > Decision owner: 이권욱  
 > Repository: `321Team/fds-project-baseline` (Private)  
 > Decision status: USER APPROVED  
-> Release status: READY FOR REVIEW
+> Release status: RELEASED — 2026-09-07
 
 ## Decision
 
@@ -36,7 +36,7 @@
 - OID-02 Control Plane/System Image Registry 결정
 - OID-03 Bootstrap Package/Registry Egress 결정
 - `CR-P1-ANS-01-01` Reviewer 승인, CI, Merge 및 필요한 Runtime Evidence
-- Draft PR 승인 후 v3.1.17 `RELEASED` 승격
+- v3.1.17 finalization PR 승인·Merge 후 `docs-v3.1.17` Tag 및 GitHub Release 발행
 
 ## GitHub Free compensating control — 2026-09-05 approved
 
@@ -49,4 +49,14 @@ Private 저장소를 유지하며 유료 플랜이 필요한 Ruleset은 적용 �
 - GitHub Actions가 실행되지 않으면 로컬 SHA-256·Workbook QA·민감정보 검사 PASS를 PR Evidence로 보존하되, CI PASS로 표현하지 않는다.
 - 자동 Merge와 자동 정본 배포는 사용하지 않는다.
 
-**D37_DECISION_VERDICT=USER_APPROVED_FREE_PLAN_COMPENSATING_CONTROL_RELEASE_PENDING**
+## Release evidence — 2026-09-07
+
+- Pull Request: `#1`
+- Approved reviewer: `hayeounglee`
+- Approved candidate HEAD: `53ea99cc904a411f64b95d0e61fcef8533c5f6a7`
+- Merge commit: `8515ecd97e69035f329032ba17206972c7b0739d`
+- Review threads: `0`
+- GitHub Actions: `NOT RUN`; CI PASS 미선언
+- Compensating evidence: Local artifact integrity, Workbook QA, Secret-pattern scan, ZIP/Sidecar verification `PASS`
+
+**D37_DECISION_VERDICT=APPROVED_AND_RELEASED_FINALIZATION_IN_PROGRESS**
