@@ -18,13 +18,14 @@ v3.1.17은 개발 구현 릴리즈가 아니라 정본 저장소 운영과 문�
 - `CR-P1-ANS-01-01`을 별도 상태 레코드로 추가하고 `In Review`로 기록했다.
 - 정적 WEB Snapshot, SHA-256 목록, 배포 ZIP, sidecar hash, 무결성 감사 문서를 추가했다.
 - Pull Request에서 해시·금지 확장자·민감정보 패턴을 검사하는 GitHub Actions workflow를 추가했다.
+- Git 저장소에는 텍스트 정본과 편집 원본을 우선 보존하고, 향후 배포 ZIP은 정식 Tag 기반 GitHub Release Asset으로 분리하는 대용량 산출물 관리 원칙을 추가했다. 현재 후보의 최대 파일은 94,805 bytes이므로 v3.1.17에는 Git LFS를 도입하지 않는다.
 
 ## Explicit non-claims
 
 - `CR-P1-ANS-01-01` Merge 또는 Runtime PASS를 선언하지 않는다.
 - P1-LB Stage B, G1, G2 완료를 선언하지 않는다.
 - OID-02/03을 임의 종결하지 않는다.
-- Draft PR 승인 전 v3.1.17을 `RELEASED`로 표시하지 않는다.
+- PR 승인 및 수동 Merge 전 v3.1.17을 `RELEASED`로 표시하지 않는다.
 
 ## Release gates
 
@@ -33,7 +34,7 @@ v3.1.17은 개발 구현 릴리즈가 아니라 정본 저장소 운영과 문�
 | Local artifact integrity | PASS |
 | Spreadsheet formula and render QA | PASS |
 | Secret-pattern scan | PASS |
-| GitHub Actions `canonical-integrity` | PASS |
+| GitHub Actions `canonical-integrity` | 실행 시 PASS. 실행이 생성되지 않으면 `NOT RUN`을 명시하고 승인된 무료 플랜 보상 통제에 따라 Local artifact integrity·Spreadsheet QA·Secret-pattern scan PASS를 대체 증적으로 사용하며 CI PASS를 선언하지 않음 |
 | CODEOWNERS review | 1 approval minimum |
 | GitHub Free compensating control | APPROVED — Private 유지, PR+1인 Review+수동 Merge, 직접 Push 절차 금지 |
 | Final merge and release tag | Pending |

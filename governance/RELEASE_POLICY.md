@@ -57,3 +57,11 @@ GitHub Free에서 Private 저장소 Ruleset 또는 Branch Protection을 적용�
 - 직접 `main` Push, 자동 Merge, CI 직후 자동 정본 배포를 금지한다.
 - GitHub Actions 실행이 없으면 로컬 검증 결과만 기록하며 CI PASS로 오인 표시하지 않는다.
 - Merge 후 `CURRENT.md`, Release 상태 및 Tag를 별도 finalization 변경으로 확정한다.
+
+## 7. Large artifact and repository-size policy
+
+- Markdown 정본과 검토·편집이 필요한 WBS/Gantt 원본은 Git에서 버전 관리한다.
+- 배포용 ZIP은 정식 Release Tag 이후 GitHub Release Asset으로 제공하는 것을 기본으로 하며, 다음 버전부터 동일 ZIP을 Git 이력에 반복 추가하지 않는다.
+- 현 저장소 이력은 재작성하지 않는다. 기존 v3.1.17 후보 ZIP은 해당 릴리즈의 감사 추적을 위해 유지한다.
+- 단일 파일이 50 MiB에 접근하거나 저장소가 1 GiB에 접근하면 크기 점검을 수행하고 Release Asset 또는 Git LFS 전환을 결정한다.
+- Git LFS는 실제 대용량 편집 원본이 발생하고 Free 사용량·대역폭 통제가 합의된 경우에만 도입한다.
