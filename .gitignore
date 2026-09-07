@@ -1,0 +1,20 @@
+# Microsoft Office temporary files
+~$*.xlsx
+~$*.xls
+~$*.docx
+~$*.pptx
+
+# Local temporary and backup files
+*.tmp
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+# Local secrets and credentials
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
