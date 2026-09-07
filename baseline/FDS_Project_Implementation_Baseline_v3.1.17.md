@@ -1,8 +1,8 @@
 
 # On-Premises / Hybrid FDS 프로젝트 Implementation Baseline v3.1.17
 
-> **Release:** v3.1.17 Release Candidate  
-> **Status:** READY FOR REVIEW — PR 승인 전 `RELEASED` 아님  
+> **Release:** v3.1.17  
+> **Status:** RELEASED — 2026-09-07  
 > **팀 프로젝트 착수일:** 2026-08-24  
 > **팀 구성:** 3인  
 > **1차 부제:** MSA 기반 거래 시스템 구축 및 FDS 모니터링  
@@ -52,14 +52,14 @@ v3.1.17은 GitHub Canonical Baseline Repository / Integrity Correction Release C
 
 | Deliverable | Version | Status | Freeze Ticket |
 |---|---|---|---|
-| `FDS_Project_Implementation_Baseline_v3.1.17.md` | v3.1.17 | READY FOR REVIEW | D37 / GitHub Canonical Repository / Integrity Correction |
-| `D37_GitHub_Canonical_Baseline_Repository_and_v3.1.17_Release_Record_v1.0.md` | v1.0 | USER APPROVED / RELEASE PENDING | Repository 운영 결정 승인; PR 승인 후 정본 발행 |
-| `FDS_v3.1.17_WBS_and_Gantt_v1.0.xlsx` | v1.0 | READY FOR REVIEW | D37 / WBS·Gantt·Source·Team Label 정합성 |
-| `FDS_v3.1.17_Canonical_Ticket_Update_Pack_v1.0.md` | v1.0 | READY FOR REVIEW | D37 / Notion Upsert Source |
-| `FDS_Project_Implementation_Baseline_Release_Notes_v3.1.17.md` | v3.1.17 | READY FOR REVIEW | D37 |
-| `FDS_Document_Distribution_Manifest_v3.1.17.md` | v3.1.17 | READY FOR REVIEW | D37 / Canonical File Integrity |
-| `FDS_v3.1.17_Canonical_Status.html` | v3.1.17 | READY FOR REVIEW | D37 / Static WEB Snapshot |
-| `FDS_Project_Implementation_Baseline_v3.1.16.md` | v3.1.16 | RELEASED | D36 / Team Availability / Phase 1 Schedule & Status Update |
+| `FDS_Project_Implementation_Baseline_v3.1.17.md` | v3.1.17 | RELEASED | D37 / GitHub Canonical Repository / Integrity Correction |
+| `D37_GitHub_Canonical_Baseline_Repository_and_v3.1.17_Release_Record_v1.0.md` | v1.0 | APPROVED / RELEASED | PR #1 approved and merged; finalization metadata synchronized |
+| `FDS_v3.1.17_WBS_and_Gantt_v1.0.xlsx` | v1.0 | RELEASED | D37 / WBS·Gantt·Source·Team Label 정합성 |
+| `FDS_v3.1.17_Canonical_Ticket_Update_Pack_v1.0.md` | v1.0 | RELEASED | D37 / Notion Upsert Source |
+| `FDS_Project_Implementation_Baseline_Release_Notes_v3.1.17.md` | v3.1.17 | RELEASED | D37 |
+| `FDS_Document_Distribution_Manifest_v3.1.17.md` | v3.1.17 | RELEASED | D37 / Canonical File Integrity |
+| `FDS_v3.1.17_Canonical_Status.html` | v3.1.17 | RELEASED | D37 / Static WEB Snapshot |
+| `FDS_Project_Implementation_Baseline_v3.1.16.md` | v3.1.16 | SUPERSEDED | D36 / Team Availability / Phase 1 Schedule & Status Update |
 | `D36_Team_Availability_and_Status_Update_Record_v1.0.md` | v1.0 | APPROVED | 09-04 이재환 개인 휴가 / 연동 일정 / 상태 동기화 |
 | `FDS_v3.1.16_WBS_and_Gantt_v1.0.xlsx` | v1.0 | RELEASED | D36 / WBS·Gantt·Team Calendar |
 | `FDS_v3.1.16_Canonical_Ticket_Update_Pack_v1.0.md` | v1.0 | RELEASED | D36 / Notion Upsert Source |

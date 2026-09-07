@@ -43,8 +43,8 @@ A release must not be merged when any of the following remains unresolved:
 
 - Review owners: `@GWONUK`, `@hayeounglee`
 - The PR must record scope, changed artifacts, validation results, and known limitations.
-- The merge commit SHA is the repository-level canonical identifier.
-- A version tag such as `docs-v3.1.17` fixes the published release point.
+- The approved candidate HEAD and its content-merge commit are recorded as review evidence.
+- A version tag such as `docs-v3.1.17` fixes the finalization merge commit as the published canonical release point. This avoids recursive commits made only to record their own SHA.
 
 ## 6. GitHub Free Private Repository compensating control
 

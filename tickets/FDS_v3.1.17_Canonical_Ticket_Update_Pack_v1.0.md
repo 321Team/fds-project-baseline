@@ -4,7 +4,7 @@
 > **As of:** 2026-09-04  
 > **Authority:** D37 / `FDS_Project_Implementation_Baseline_v3.1.17.md`  
 > **Purpose:** Notion·WBS·상태 레지스터 Upsert Source
-> **Status:** READY FOR REVIEW — PR 승인 전 운영 정본은 v3.1.16
+> **Status:** RELEASED — 2026-09-07 정본. 개별 티켓 Runtime 상태는 각 레코드의 상태를 유지한다.
 
 ---
 
@@ -73,4 +73,4 @@ P1-DB-01 Plan End와 정렬해 G1 Target을 2026-09-07로 이동한다. P1-DNS-0
 - SELinux Enforcing 유지
 - firewalld→Calico HostEndpoint 전환 원칙
 
-**CANONICAL_TICKET_UPDATE_PACK_VERDICT=READY_FOR_REVIEW**
+**CANONICAL_TICKET_UPDATE_PACK_VERDICT=RELEASED**
