@@ -4,6 +4,8 @@ on:
     branches: ["release/**"]
   pull_request:
     branches: [main]
+  release:
+    types: [published]
   workflow_dispatch:
 permissions:
   contents: read
@@ -14,5 +16,13 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install ripgrep
         run: sudo apt-get update && sudo apt-get install -y ripgrep
-      - name: Verify canonical release
+      - name: Verify canonical release candidate
+        if: github.event_name != 'release'
         run: bash scripts/verify-canonical-release.sh
+      - name: Verify published WBS and Gantt assets
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          release_version="${GITHUB_REF_NAME#docs-}"
+          bash scripts/verify-wbs-gantt-distribution.sh "${release_version}" --published
