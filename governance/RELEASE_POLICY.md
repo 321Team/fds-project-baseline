@@ -37,6 +37,15 @@ Every canonical version must contain all applicable items:
 - GitHub Release가 발행되면 `canonical-integrity` Workflow가 `--published` 검증을 자동 실행한다. Actions가 실행되지 않거나 사용량 제한으로 중단되면 결과를 `NOT RUN`으로 기록하고 동일 스크립트의 로컬 PASS를 보상 증적으로 남긴다.
 - v3.1.17은 WBS/Gantt가 저장소와 ZIP 내부에는 포함됐으나 독립 Release Asset으로는 제공되지 않았던 이력으로 보존한다. 과거 Tag나 Release Asset을 소급 변경하지 않고 v3.1.18부터 본 통제를 적용한다.
 
+### 2.2 완료 변경 요청의 정본 동기화
+
+- 직전 RELEASED 버전 이후 `Done` 또는 `Merged`로 승인된 모든 Change Request는 다음 정본 후보에 반드시 동기화한다.
+- 동기화 대상은 Baseline, WBS/Gantt, Canonical Ticket Pack, `tickets/<Record-ID>_Notion_Description_*.md`, Milestone/Completion Record, Evidence 참조, Release Notes 및 적용되는 Manifest·`SHA256SUMS`이다.
+- Record ID, 상태, 담당자, 일정, Acceptance Criteria, 승인된 Head Commit, Merge Commit, CI/Runtime Evidence 상태가 산출물 사이에서 일치해야 한다.
+- GitHub Actions가 실행되지 않은 경우 `NOT RUN`으로 명시하며 CI PASS로 대체하거나 확대 해석하지 않는다.
+- 변경 요청 완료는 별도 티켓·ICR·Milestone·Runtime Gate를 자동 완료하거나 승인하지 않는다.
+- 완료 변경 요청이 누락되거나 상호 상태가 불일치하면 정본 병합과 Release 발행을 중단한다.
+
 ## 3. Version and status rules
 
 - `CANDIDATE`: exists only on a release branch and is not canonical.
