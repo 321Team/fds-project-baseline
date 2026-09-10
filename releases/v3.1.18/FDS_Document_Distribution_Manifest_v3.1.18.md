@@ -1,34 +1,35 @@
 # FDS v3.1.18 Document Distribution Manifest
 
-> CANDIDATE / 2026-09-10 · 이 후보는 아직 발행되지 않았다.
+> RELEASED / FINALIZATION — 최종화 PR 승인·병합 후 적용. GitHub Tag/Asset 게시 대기.
 
 ## 배포 범위
 
-- Baseline·WBS/Gantt·Ticket Pack·64개 Description·원본 스냅샷·감사·Release Notes·WEB·기존 속성 정책 및 검증 도구를 함께 배포한다.
-- `CURRENT.md`는 현재 발행 정본 v3.1.17의 검토 맥락이다. v3.1.18의 RELEASED 표시는 승인된 finalization 단계에서 별도 확정한다.
-- Architecture 자체의 변경은 없다. 기존 Baseline 내 Architecture/Interface 계약과 `architecture/README.md`의 관리 규칙을 유지한다. 과거 외부 산출물 참조는 이번 ZIP에 새 원본을 만든 것으로 간주하지 않는다.
-- `governance/ticket-sync-map.json`은 이전 동기화의 고정 맵이다. Description 최신화 이후 재작성해야 하며 이 후보에서 apply하지 않는다.
-- ZIP에는 아래 파일, 이 Manifest와 `releases/v3.1.18/SHA256SUMS`가 들어간다. Manifest 자신의 해시는 SHA256SUMS로 검증한다. SHA256SUMS는 자신을 해싱하지 않는다.
-- ZIP sidecar는 ZIP 바깥에서 전체 바이트를 검증한다. ZIP/sidecar는 Git에 추가하지 않는다. `python3 scripts/build-canonical-package.py v3.1.18 OUTPUT_DIR`로 동일 ZIP을 재생성한다.
-- 후보 검증: 저장소·Manifest·SHA256SUMS·ZIP의 WBS 바이트를 대조한다. 게시 후 독립 WBS Release Asset은 `--published` Gate에서 추가 대조한다. 미게시 Asset은 PASS가 아니다.
-
-- K8S 최신 이력 편입 문서·고정 원문·보존 검증 결과를 포함한다. PR #3 보완 PASS/병합과 PR #2/#4 최신 구현·리뷰 상태를 구분한다.
+- PR #69 승인 HEAD `04c1ca46dcf82f814d350b4d49539e3ba4d6a9b4`, 내용 병합 `02be2150f7662319a3d796cdcb99f6d26aec5472`를 기준으로 릴리즈 메타데이터와 WBS 상태 표시를 최종화한다.
+- Baseline·WBS/Gantt·Ticket Pack·64개 Description·원본 스냅샷·감사·Release Notes·WEB·기존 정책/검증 도구 및 최종화·게시 기록을 함께 배포한다.
+- 원본 후보 감사·Description 적용 입력·계획 원문은 승인 당시 스냅샷이다. 내부의 CANDIDATE/이전 정본 표시는 당시 기록이며, 전체 발행 상태는 CURRENT·Baseline 머리말·최종화 기록·실제 GitHub Release를 따른다.
+- Architecture 자체의 변경은 없다. 현재 최종화에서 상태·담당·일정·AC·Runtime/보안 사양은 변경하지 않는다. CA/CI-CD·외부 알림 별도 편입 잔여는 유지한다.
+- 이전 버전 파일·Tag·Release는 보존한다. native Issue 적용은 별도이며 기존 stale map/plan을 재사용하지 않는다.
+- Manifest 자신의 해시는 SHA256SUMS로 검증한다. SHA256SUMS는 자신을 해싱하지 않는다. ZIP은 아래 파일과 이 Manifest 및 SHA256SUMS를 포함한다.
+- ZIP/sidecar는 Git에 저장하지 않는다. `python3 scripts/build-canonical-package.py v3.1.18 OUTPUT_DIR`로 승인된 최종화 Tag에서 재생성한다. ZIP 전체 SHA-256은 외부 sidecar가 검증한다.
+- WBS는 저장소·Manifest·SHA256SUMS·ZIP 내부·독립 Release Asset의 바이트가 같아야 한다. 로컬 후보 검증은 게시 후 `--published` Gate를 대체하지 않는다.
 
 ## 파일별 SHA-256
 
 | 경로 | SHA-256 |
 |---|---|
-| `CURRENT.md` | `7b85e4e4f2e2adc5809dab129a2011f4945fadef2d59af7979207b5855ea42e7` |
-| `README.md` | `2bc3b2e303516103f263121df6a03ab9bdeefa025f29e277c0a7d75cdbef51e5` |
+| `CURRENT.md` | `0fceba12075f00a8fb6a62812a7035ac2e46a47027af976d67d716b28507c024` |
+| `README.md` | `dda8a70feddf9543e99c79ccc19c304852b9387700f2a04135e94aaf7b6bebc0` |
 | `architecture/README.md` | `ece5d836bdcfdc6093635dd9cdfd4a966b014fb6c027a091f37d8fe1ddcddf48` |
 | `audit/FDS_Canonical_Integrity_Audit_v3.1.18.md` | `c169a5729a8455ba010210ee7f92f833b2bd4d9b9ededc9c5b56005a0a46b349` |
 | `audit/v3.1.18/fast-track-plan.json` | `ee757ce6102650b59cf367be3bf1ba8128768f4bb850cac81511f9c31b40a1d6` |
+| `audit/v3.1.18/finalization-validation.json` | `a4558aca4445de5eb947147be7d72d89da1cd763c8e061d459a8e990ed777b6c` |
 | `audit/v3.1.18/followup-20260910.json` | `10cb146fc4b2bcbf99129f88fdda9284c4fd8922eb1d1d45694c8b9b0e694102` |
 | `audit/v3.1.18/k8s-intake-20260910.json` | `3fa7b0d26dbe2af31d610600d3c0111cbbb4044e35c843f7907534a1214858f7` |
 | `audit/v3.1.18/k8s-intake-validation.json` | `df7bf23c276d10e13552b44fb29f63573bc18ab481e57cd97fd93c09f575fe24` |
 | `audit/v3.1.18/property-delta.json` | `dd8d95d7b80a2cde9016bf9478432b752a0f5eec62f31bd00b7f55b29ff2dfde` |
+| `audit/v3.1.18/release-approval-evidence.json` | `593a4736f4ea7b95d77297d39c228083badecb561cc1bcaf65662ec128901ccb` |
 | `audit/v3.1.18/validation.json` | `d89c4d3a637f163db05a6cae383c849a62a81943eabfe76d9a1a8c35bc61cc6a` |
-| `baseline/FDS_Project_Implementation_Baseline_v3.1.18.md` | `cdaab94849e29f8210600f55933df903aa3cd9e8e06d6dd7162fb2fdc2b6bd37` |
+| `baseline/FDS_Project_Implementation_Baseline_v3.1.18.md` | `d7b500ea29ea6ffc910f23dac6c7e59cac8bb0c1fd25d81ff13fa7aae8e9d36f` |
 | `governance/GITHUB_IDENTITY_MAP.md` | `162910ee52843352aa5a868cb79bc76bf7b6ea5ddde35f022d1a7ba34c3ba2bc` |
 | `governance/GITHUB_LABEL_SCHEMA.md` | `9d07c160d20b8e43b90ca1047b0c263ddcad2f3d2af968c3a583c6a69e9bd8ff` |
 | `governance/GITHUB_MILESTONE_MAP.md` | `bfe9087c24df0938df1e0f777e26fb6c4f0f3444de7f257ab2b17e8e1757625b` |
@@ -37,9 +38,11 @@
 | `governance/TICKET_SYNC_RUNBOOK.md` | `eae4da7f455e01c52ed3a0ccee5e66334f4a7443240568da5cc25010728a073e` |
 | `governance/ticket-sync-map.json` | `deae909490f3259120618ce1f2516ab8303ed54c94a2d6c78efdbaaa874a95e7` |
 | `releases/v3.1.18/FDS_Canonical_Consolidation_Record_v3.1.18.md` | `77ae040ec8f46d4c44d31b4f589b9dd82dedf1e51ba6b02bd34a3f8601b1acaa` |
+| `releases/v3.1.18/FDS_GitHub_Release_Body_v3.1.18.md` | `f0ffcf61b9c1bc51b849b171dfad65304bf1f04bf6d6dfec8dc52ea0876b48ba` |
 | `releases/v3.1.18/FDS_K8S_Candidate_Integration_20260910.md` | `e34b9717e21de0493df0c08daee6ada2ae84e7cceab26cb359b09282c6a5b2d6` |
 | `releases/v3.1.18/FDS_Phase1_Fast_Track_Schedule_Recommendation_v1.0.md` | `54479010be0777e3e5743871bdf048a9bd09176bad8d22f7c16fc8cf35b3a023` |
-| `releases/v3.1.18/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.18.md` | `5675937b293be5476518668be032d7e287d47e4edd82bb743b64eef6341c2194` |
+| `releases/v3.1.18/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.18.md` | `3f8e3557267b27a0dade62418abdedf6c4522ddf01788bf1bbb886b7d4569a84` |
+| `releases/v3.1.18/FDS_Release_Finalization_Record_v3.1.18.md` | `fde645d44360b5f983bfdad24211e897767d5b4e4e6a66076580731a94f455af` |
 | `scripts/build-canonical-package.py` | `3cd8825ae9a84e680aae361728833c80f1e17bc60f70127d4f3d19f19a5cb299` |
 | `scripts/publish-canonical-release-assets.sh` | `509e61e15ee1a5681730f559838f36b0c3fdd0cbcf3b1f8cc43db15b2a72752a` |
 | `scripts/ticket-sync.py` | `f4440607707cbb466f85903369cb3caede820983e11f6386a99cf8622278ae85` |
@@ -48,7 +51,7 @@
 | `scripts/verify-wbs-gantt-distribution.sh` | `139e45ba113d08df98bd58f7b4ad864822b459dd10e04422e6fe12ff63c7c774` |
 | `tests/test_ticket_sync.py` | `e2d030151ade38c0e0506f2b0f64a69f19d7f561bbb8072a8d7b8c57a7ca1bef` |
 | `tickets/CR-P1-ANS-01-01_Notion_Description_v1.1.md` | `bdfefae5c63040286b03810acefbeb2d94a02bb4da2eb54cee8a14bb0d249d64` |
-| `tickets/FDS_v3.1.18_Canonical_Ticket_Update_Pack_v1.0.md` | `9784319fbf52c76feb72412151afb5e3432e2133afeab849df346640d8a47365` |
+| `tickets/FDS_v3.1.18_Canonical_Ticket_Update_Pack_v1.0.md` | `3e2adbc5a1dda5756f9758106ad3e3176b8a8b20af741745bf9ca5a6c9388024` |
 | `tickets/v3.1.18/canonical-records.json` | `4f624bfaabbb5dfd2b87f56f8757cdb1c77f6dc5a82bb28fd91ed75e5e74211e` |
 | `tickets/v3.1.18/descriptions/CR-P1-ANS-01-01.md` | `7de7244faceb3e2701103b38efcc7db29db5e38516dea220d50e5115fa773b4f` |
 | `tickets/v3.1.18/descriptions/D-ARC-01.md` | `e3a445a6e12c757cdc7b1bf4e9f1811a16c0ce1c317a73f41da1403538274aa3` |
@@ -115,5 +118,5 @@
 | `tickets/v3.1.18/descriptions/P2-ROSA-01.md` | `cbbf361749b7c3ff4cb78a2ba004852907c56df410d24204a3391691a5f76463` |
 | `tickets/v3.1.18/descriptions/P2-VPN-01.md` | `856e5a8f7eee25bd24e27c37626694276a731eb7654f44a123e2488b6d659cc1` |
 | `tickets/v3.1.18/source-snapshot.json` | `9afcc11674292dadc9ac6c1f58c8e39d99cd2abd5aae9220d4226f59d9bdaf8e` |
-| `wbs/FDS_v3.1.18_WBS_and_Gantt_v1.0.xlsx` | `38b0737b7718a8c5b271537f0c10a2d7c226dd850269fbf7b058bc376a446287` |
-| `web/FDS_v3.1.18_Canonical_Status.html` | `3ba1de4c726cdde10894f2c0680aa3aef3aa9835c2f26f9595d9b85926d376c8` |
+| `wbs/FDS_v3.1.18_WBS_and_Gantt_v1.0.xlsx` | `73ad269ee2272f19ebe898b445f240ba652f40cf29326dffef590ee4f0ef1734` |
+| `web/FDS_v3.1.18_Canonical_Status.html` | `cfbbd42b2bdf46fd364cd8eea8440ee2d9fd2584d63bdeab6ddddf0df86a574b` |

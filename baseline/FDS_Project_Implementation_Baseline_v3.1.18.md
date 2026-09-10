@@ -2,7 +2,7 @@
 # On-Premises / Hybrid FDS 프로젝트 Implementation Baseline v3.1.18
 
 > **Release:** v3.1.18  
-> **Status:** CANDIDATE — 2026-09-10 / 미발행  
+> **Status:** RELEASED / FINALIZATION — 최종화 PR 승인·병합 후 적용; GitHub 게시 별도  
 > **팀 프로젝트 착수일:** 2026-08-24  
 > **팀 구성:** 3인  
 > **1차 부제:** MSA 기반 거래 시스템 구축 및 FDS 모니터링  
@@ -14,7 +14,7 @@
 
 ## 0. v3.1.18 통합 변경 요약
 
-기준일 2026-09-10. 이 문서는 누적 변경·실행 기록·티켓 Description을 통합한 **CANDIDATE**다. 독립 리뷰·명시적 병합 승인·발행 전 운영 정본은 v3.1.17이며, 현재 상태는 `CURRENT.md`를 따른다.
+내용 기준일 2026-09-10. 누적 변경·실행 기록·티켓 Description을 통합한 내용은 PR #69의 HEAD `04c1ca46dcf82f814d350b4d49539e3ba4d6a9b4`로 이하영에게 승인됐고 `02be2150f7662319a3d796cdcb99f6d26aec5472`로 병합됐다. 문서의 RELEASED 표시는 별도 최종화 PR 승인·병합 후 적용한다. GitHub Tag·Asset 게시 여부는 `CURRENT.md`와 릴리즈 최종화 기록을 따른다. 아래 티켓·Gate 상태는 승인된 기준일 스냅샷이며 정본 발행으로 자동 완료되지 않는다.
 
 - 완료 DNS CR과 Ansible SSH 보완·Gate 0 도구 병합, 증적 편입·인수 상태를 실제 Commit으로 연결한다.
 - DEC-P1-FDS-01/TXN-01/ADMIN-01의 2026-09-09 종결을 반영한다. 기존 탐지·기록·관측과 계약을 유지하고 별도 프론트엔드·거래 보류·운영 기능 확대는 유예한다.
@@ -70,13 +70,13 @@ v3.1.17은 GitHub Canonical Baseline Repository / Integrity Correction Release C
 
 | Deliverable | Version | Status | Freeze Ticket |
 |---|---|---|---|
-| `FDS_Project_Implementation_Baseline_v3.1.18.md` | v3.1.18 | CANDIDATE | v3.1.18 누적 변경 통합 / 후보 PR |
+| `FDS_Project_Implementation_Baseline_v3.1.18.md` | v3.1.18 | RELEASED / FINALIZATION | v3.1.18 누적 변경 통합 / PR #69 승인·내용 병합 |
 | `D37_GitHub_Canonical_Baseline_Repository_and_v3.1.17_Release_Record_v1.0.md` | v1.0 | APPROVED / RELEASED | PR #1 approved and merged; finalization metadata synchronized |
-| `FDS_v3.1.18_WBS_and_Gantt_v1.0.xlsx` | v1.0 | CANDIDATE | v3.1.18 상태·55건 집계·가용일 정합성 |
-| `FDS_v3.1.18_Canonical_Ticket_Update_Pack_v1.0.md` | v1.0 | CANDIDATE | v3.1.18 Description 후보 / 발행 후 적용 |
-| `FDS_Project_Implementation_Baseline_Release_Notes_v3.1.18.md` | v3.1.18 | CANDIDATE | v3.1.18 통합 변경 |
-| `FDS_Document_Distribution_Manifest_v3.1.18.md` | v3.1.18 | CANDIDATE | v3.1.18 배포 무결성 |
-| `FDS_v3.1.18_Canonical_Status.html` | v3.1.18 | CANDIDATE | v3.1.18 현재 상태 스냅샷 |
+| `FDS_v3.1.18_WBS_and_Gantt_v1.0.xlsx` | v1.0 | RELEASED / FINALIZATION | v3.1.18 상태·55건 집계·가용일 정합성 |
+| `FDS_v3.1.18_Canonical_Ticket_Update_Pack_v1.0.md` | v1.0 | RELEASED / FINALIZATION | v3.1.18 Description 후보 / 발행 후 적용 |
+| `FDS_Project_Implementation_Baseline_Release_Notes_v3.1.18.md` | v3.1.18 | RELEASED / FINALIZATION | v3.1.18 통합 변경 |
+| `FDS_Document_Distribution_Manifest_v3.1.18.md` | v3.1.18 | RELEASED / FINALIZATION | v3.1.18 배포 무결성 |
+| `FDS_v3.1.18_Canonical_Status.html` | v3.1.18 | RELEASED / FINALIZATION | v3.1.18 현재 상태 스냅샷 |
 | `FDS_Project_Implementation_Baseline_v3.1.16.md` | v3.1.16 | SUPERSEDED | D36 / Team Availability / Phase 1 Schedule & Status Update |
 | `D36_Team_Availability_and_Status_Update_Record_v1.0.md` | v1.0 | APPROVED | 09-04 이재환 개인 휴가 / 연동 일정 / 상태 동기화 |
 | `FDS_v3.1.16_WBS_and_Gantt_v1.0.xlsx` | v1.0 | RELEASED | D36 / WBS·Gantt·Team Calendar |
@@ -302,7 +302,7 @@ Remaining Backlog의 권위 Source는 다음 파일이다.
 
 - Phase 1 P0는 1.1, Phase 1 P1은 1.2, Scope Out은 1.3을 권위 목록으로 사용한다.
 - Phase 2 P0는 13장의 Hybrid P0와 `FDS_Remaining_Backlog_WBS_v3.1.12.xlsx`를 권위 목록으로 사용한다.
-- 신규 티켓 Description은 `FDS_Notion_Remaining_Backlog_Manual_v1.9.md` 3장의 고정 템플릿을 사용한다. 현재 Description 후보는 `FDS_v3.1.18_Canonical_Ticket_Update_Pack_v1.0.md`와 64개 개별 파일을 사용한다. v3.1.18 발행 전 운영 정본은 v3.1.17이다.
+- 신규 티켓 Description은 `FDS_Notion_Remaining_Backlog_Manual_v1.9.md` 3장의 고정 템플릿을 사용한다. 현재 Description 후보는 `FDS_v3.1.18_Canonical_Ticket_Update_Pack_v1.0.md`와 64개 개별 파일을 사용한다. 64개 Description 파일은 승인된 후보 시점의 원문과 발행 후 적용 입력으로 보존한다. 최신 운영 delta 대조와 Issue 적용은 별도 절차다. 전체 문서 버전의 발행 상태는 CURRENT.md를 따른다.
 - P1 미완료는 해당 P0 Gate를 차단하지 않으며 Owner, Due, Known Issue를 남긴다.
 - Scope Out 기능을 일정에 추가하거나 P0/P1 우선순위를 변경할 때는 Change Request가 필요하다.
 - 작업 상태 변경은 Exit Criteria와 Evidence 확인 후 수행하며 단순 구현 완료만으로 `DONE` 처리하지 않는다.
@@ -1109,7 +1109,7 @@ Rolling Update, CP Failure, Harbor Restore는 P1이며 미완료 시 Known Issue
 | P1-DR-01 / #21 | To Do | 2026-09-11 / 2026-09-21 | 9/1 격리 신규 DB의 pg_dump→TRUNCATE→pg_restore 13건 재현과 9/3 dump 보관이 담당자에 의해 보고됐다. 운영 db01 원본 변경을 뜻하지 않는다. 백업 원본 해시 독립 검증, 정식 Evidence 등록·Runbook·정본 Restore 후 E2E는 미완료다. 사전 착수 보고만으로 To Do를 자동 변경하지 않는다. 현재 후보 Plan: 2026-09-11 ~ 2026-09-21 (권장안; 실제 완료일·Gate 승인은 미확정). |
 | P1-HA-01 / #22 | To Do | 2026-09-11 / 2026-09-21 | 임시 단일노드 k3s drain/uncordon 참고 로그만 보고됐다. 재배치할 다른 Worker가 없어 Continuity 실증으로 인정하지 않는다. 최소 2 Worker 분산 및 externalTrafficPolicy Local 조건의 정본 무중단 시험은 NOT RUN / To Do다. 현재 후보 Plan: 2026-09-11 ~ 2026-09-21 (권장안; 실제 완료일·Gate 승인은 미확정). |
 | MS-G2-01 / #23 | To Do | 2026-09-21 / 2026-09-21 | G2 목표 2026-09-11 유지. App/Security/CI-CD/Hybrid Monitoring/Initial E2E Runtime 증적은 미완료다. Decision #4~6 종결이나 문서·도구 시험을 G2 PASS로 확대하지 않는다. 현재 후보 Plan: 2026-09-21 ~ 2026-09-21 (권장안; 실제 완료일·Gate 승인은 미확정). |
-| P1-DOC-01 / #24 | To Do | 2026-09-11 / 2026-09-22 | 이번 v3.1.18은 정본 후보의 누적 이력·설명·배포 정합성 통합 작업이다. 독립 리뷰·명시적 병합 승인·발행은 아직 없으며 P1-DOC 전체 문서 Freeze/Done을 의미하지 않는다. 정본 발행 뒤 Issue Description 최신화, 마지막에 속성 재계획을 수행한다. 현재 후보 Plan: 2026-09-11 ~ 2026-09-22 (권장안; 실제 완료일·Gate 승인은 미확정). |
+| P1-DOC-01 / #24 | To Do | 2026-09-11 / 2026-09-22 | 이번 v3.1.18의 누적 이력·설명·배포 정합성 통합 내용은 PR #69에서 독립 승인·내용 병합됐다. 최종화·게시 절차와 P1-DOC 전체 문서 Freeze/Done은 별도이며, 이 내용 승인으로 완료 처리하지 않는다. 정본 발행 뒤 Issue Description 최신화, 마지막에 속성 재계획을 수행한다. 현재 후보 Plan: 2026-09-11 ~ 2026-09-22 (권장안; 실제 완료일·Gate 승인은 미확정). |
 | P1-MON-02 / #25 | To Do | TBD — P0 인수 후 재계획 / TBD — 구현 유예 권장 | 담당자 보고 기준 미착수 / NOT RUN, Plan 2026-09-12~09-18 유지. Baseline §1.2/§11과 D33의 P1 범위인 HA·Dashboard/Alert 고도화·장기 보존을 수행한다. P0 기본 3 View·기본 Alert·15일 Retention·Watchdog은 P1-MON-01 책임이며 중복 완료 기준을 제거한다. P1 미완료는 P0 Gate를 자동 차단하지 않는다. 현재 후보 Plan: TBD — P0 인수 후 재계획 ~ TBD — 구현 유예 권장 (권장안; 실제 완료일·Gate 승인은 미확정). |
 | P1-DR-02 / #26 | To Do | TBD — P0 인수 후 재계획 / TBD — 구현 유예 권장 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. 현재 후보 Plan: TBD — P0 인수 후 재계획 ~ TBD — 구현 유예 권장 (권장안; 실제 완료일·Gate 승인은 미확정). |
 | P1-HA-02 / #27 | To Do | TBD — P0 인수 후 재계획 / TBD — 구현 유예 권장 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. 현재 후보 Plan: TBD — P0 인수 후 재계획 ~ TBD — 구현 유예 권장 (권장안; 실제 완료일·Gate 승인은 미확정). |

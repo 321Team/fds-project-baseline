@@ -1,6 +1,6 @@
 # FDS v3.1.18 Release Notes
 
-> CANDIDATE · 2026-09-10 · 현재 RELEASED v3.1.17
+> RELEASED / FINALIZATION · 내용 승인 2026-09-10 · 최종화 PR 승인·병합 후 적용 / GitHub 게시 대기
 
 ## 변경 이유
 
@@ -34,7 +34,7 @@ v3.1.17 발행 이후 DNS CR·Ansible 후속 변경·Decision 종결·모니터�
 
 후보의 구체적 검증 결과는 `audit/v3.1.18/validation.json` 및 `audit/FDS_Canonical_Integrity_Audit_v3.1.18.md`를 따른다. 체크섬은 `releases/v3.1.18/SHA256SUMS`에서 파일 단위로 검증한다.
 
-독립 리뷰와 이권욱의 명시적 merge 승인 후 content merge / finalization / tag / Release Asset 검증을 수행한다. 현재 `CURRENT.md`와 v3.1.17 파일·태그·Release는 유지한다. ZIP은 Git에 중복 보관하지 않으며 외부 생성한 후보 ZIP과 sidecar를 검토 자료로 제공한다. 발행된 독립 WBS Asset 검증과 CI는 이번 로컬 검증에 포함되지 않는다.
+PR #69는 이하영이 HEAD `04c1ca46dcf82f814d350b4d49539e3ba4d6a9b4`를 승인한 뒤 사용자 지시에 따라 `02be2150f7662319a3d796cdcb99f6d26aec5472`로 내용 병합됐다. 별도 최종화 PR 승인·병합 후 `docs-v3.1.18`를 그 병합 커밋에 고정하고 ZIP·Sidecar·SHA256SUMS·독립 WBS Asset을 게시한다. v3.1.17 파일·태그·Release는 수정하지 않는다. ZIP은 Git에 중복 보관하지 않는다. 현재 최종화·Tag·Asset 게시 및 게시 후 검증은 미완료이며 CI는 NOT RUN이다.
 
 발행 후 순서는 **티켓 Description의 최신 운영 delta 대조·갱신 → 매핑 재작성 → 새 plan 검토·적용 → 재조회**다. 이전 fingerprint를 덮어써서 stale 검사를 우회하지 않는다.
 
@@ -67,3 +67,11 @@ v3.1.17 발행 이후 DNS CR·Ansible 후속 변경·Decision 종결·모니터�
 
 고정 출처·당시 본문·이전 후보 값은 `audit/v3.1.18/k8s-intake-20260910.json`, 자세한 조건은 `releases/v3.1.18/FDS_K8S_Candidate_Integration_20260910.md`에 기록한다. 이 통합은 후보 문서 갱신이며 운영 적용·정본 발행이 아니다.
 
+
+## 승인·종결 인계
+
+- [이하영 승인](https://github.com/321Team/fds-project-baseline/pull/69#pullrequestreview-5168287548): 2026-09-10T14:20:47Z, 정확한 후보 HEAD `04c1ca46dcf82f814d350b4d49539e3ba4d6a9b4`.
+- [리뷰어 미결 항목 확인](https://github.com/321Team/fds-project-baseline/pull/69#issuecomment-5620195632): 사양 수치·Runtime·보호 전환 잔여를 승인 범위와 함께 보존한다. 3CP+3Worker 총 6대 구성을 유지한다.
+- PR #3은 #69 인계 이력을 남기고 중복 선행 후보로 종결됐다. PR #68은 이번 후속에서 종결하지 않았다.
+- CA/CI-CD·외부 Monitoring·Notification은 PR #69 본문의 별도 편입 입력이다. 이 릴리즈의 K8S 파일 통합이나 신규 구현 완료로 포함하지 않는다.
+- [최종화·게시 기록](FDS_Release_Finalization_Record_v3.1.18.md)에 다음 Gate와 배포 절차를 연결한다.

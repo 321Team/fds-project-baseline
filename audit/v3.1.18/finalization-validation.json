@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "scope": "finalization artifact consistency and preservation; no finalization approval or publication",
+  "approved_content_head": "04c1ca46dcf82f814d350b4d49539e3ba4d6a9b4",
+  "content_merge_sha": "02be2150f7662319a3d796cdcb99f6d26aec5472",
+  "records_preserved": 64,
+  "ticket_descriptions_preserved": 64,
+  "record_property_date_owner_status_AC_changes": 0,
+  "workbook_metadata_cell_changes": [
+    {
+      "part": "xl/worksheets/sheet1.xml",
+      "cell": "B5",
+      "before": "3.1.18 CANDIDATE",
+      "after": "3.1.18 RELEASED"
+    },
+    {
+      "part": "xl/worksheets/sheet1.xml",
+      "cell": "A1",
+      "before": "FDS v3.1.18 · Executive Schedule Summary (CANDIDATE)",
+      "after": "FDS v3.1.18 · Executive Schedule Summary (RELEASED)"
+    },
+    {
+      "part": "xl/worksheets/sheet2.xml",
+      "cell": "D2",
+      "before": "3.1.18 CANDIDATE / Fast Tracking",
+      "after": "3.1.18 RELEASED / Fast Tracking"
+    },
+    {
+      "part": "xl/worksheets/sheet2.xml",
+      "cell": "A1",
+      "before": "FDS v3.1.18 · WBS (CANDIDATE)",
+      "after": "FDS v3.1.18 · WBS (RELEASED)"
+    },
+    {
+      "part": "xl/worksheets/sheet3.xml",
+      "cell": "A1",
+      "before": "FDS v3.1.18 · Phase 1 Gantt (CANDIDATE)",
+      "after": "FDS v3.1.18 · Phase 1 Gantt (RELEASED)"
+    },
+    {
+      "part": "xl/worksheets/sheet4.xml",
+      "cell": "A1",
+      "before": "FDS v3.1.18 · Phase 2 Gantt (CANDIDATE)",
+      "after": "FDS v3.1.18 · Phase 2 Gantt (RELEASED)"
+    },
+    {
+      "part": "xl/worksheets/sheet5.xml",
+      "cell": "A1",
+      "before": "FDS v3.1.18 · Milestones & Decision Calendar (CANDIDATE)",
+      "after": "FDS v3.1.18 · Milestones & Decision Calendar (RELEASED)"
+    },
+    {
+      "part": "xl/worksheets/sheet6.xml",
+      "cell": "A1",
+      "before": "FDS v3.1.18 · Risks, Assumptions & Lead Decisions (CANDIDATE)",
+      "after": "FDS v3.1.18 · Risks, Assumptions & Lead Decisions (RELEASED)"
+    },
+    {
+      "part": "xl/worksheets/sheet7.xml",
+      "cell": "A1",
+      "before": "FDS v3.1.18 · Sources & Change Log (CANDIDATE)",
+      "after": "FDS v3.1.18 · Sources & Change Log (RELEASED)"
+    },
+    {
+      "part": "xl/worksheets/sheet8.xml",
+      "cell": "A1",
+      "before": "FDS v3.1.18 · Team Availability Calendar (CANDIDATE)",
+      "after": "FDS v3.1.18 · Team Availability Calendar (RELEASED)"
+    }
+  ],
+  "workbook_non_metadata_value_formula_changes": 0,
+  "workbook_formulas": 2209,
+  "workbook_errors": 0,
+  "workbook_chart_parts_byte_identical": 2,
+  "workbook_relationships_validations_used_styles_preserved": true,
+  "visual_review": "PASS: finalization version labels; original layout retained",
+  "publication_status": "NOT PUBLISHED",
+  "finalization_review": "PENDING",
+  "tag": "NOT CREATED",
+  "release_assets": "NOT UPLOADED",
+  "ci": "NOT RUN",
+  "credential_scan": "verified separately by verify-canonical-release.sh"
+}
