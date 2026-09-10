@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "scope": "K8S candidate integration compared with e2992efa4e7e3659480fb209da874b01fa30dfb1; no runtime or release approval",
+  "candidate_parent": "e2992efa4e7e3659480fb209da874b01fa30dfb1",
+  "records": 64,
+  "changed_records": [
+    "P1-K8S-01",
+    "ICR-D-NET-01-01",
+    "P1-SEC-01"
+  ],
+  "property_changes": [
+    {
+      "record_id": "P1-K8S-01",
+      "fields": [
+        "Source"
+      ]
+    },
+    {
+      "record_id": "ICR-D-NET-01-01",
+      "fields": [
+        "Source"
+      ]
+    },
+    {
+      "record_id": "P1-SEC-01",
+      "fields": [
+        "Source"
+      ]
+    }
+  ],
+  "unchanged_status_lead_support_dates_AC": true,
+  "fast_track_changed_slots": [
+    0,
+    1
+  ],
+  "changed_slot_fields": [
+    "task"
+  ],
+  "slot_dates_people_capacity_preserved": true,
+  "workbook_sheets": 9,
+  "workbook_formulas": 2209,
+  "workbook_literal_cell_changes": [
+    "xl/worksheets/sheet2.xml:R11",
+    "xl/worksheets/sheet2.xml:R17",
+    "xl/worksheets/sheet2.xml:R7",
+    "xl/worksheets/sheet7.xml:A25",
+    "xl/worksheets/sheet7.xml:A26",
+    "xl/worksheets/sheet7.xml:B25",
+    "xl/worksheets/sheet7.xml:B26",
+    "xl/worksheets/sheet7.xml:C24",
+    "xl/worksheets/sheet7.xml:C25",
+    "xl/worksheets/sheet7.xml:D24",
+    "xl/worksheets/sheet7.xml:D25",
+    "xl/worksheets/sheet7.xml:D26",
+    "xl/worksheets/sheet7.xml:E24",
+    "xl/worksheets/sheet7.xml:E25",
+    "xl/worksheets/sheet7.xml:E26",
+    "xl/worksheets/sheet9.xml:E6",
+    "xl/worksheets/sheet9.xml:E7"
+  ],
+  "workbook_non_target_cell_changes": 0,
+  "workbook_chart_parts_byte_identical": 2,
+  "workbook_relationship_targets_layout_validations_used_styles_preserved": true,
+  "workbook_export_note": "Existing OVERBOOKED conditional format was recreated with the same predicate/font/solid fill to preserve appearance after import; unused differential style entry is ignored.",
+  "visual_review": "PASS: modified WBS source rows, source/change log, Fast Track Plan",
+  "preserved_snapshots": [
+    "tickets/v3.1.18/source-snapshot.json",
+    "audit/v3.1.18/followup-20260910.json",
+    "CURRENT.md"
+  ],
+  "runtime": "NOT RUN",
+  "independent_review": "PENDING",
+  "main_release": "NOT MODIFIED"
+}

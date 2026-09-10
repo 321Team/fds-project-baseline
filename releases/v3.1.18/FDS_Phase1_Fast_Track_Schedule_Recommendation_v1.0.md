@@ -48,7 +48,7 @@ P0는 3CP+3Worker, 승인된 네트워크·보안 통제, transaction-api/fds-en
 
 | 일자 | 이권욱 | 이하영 | 이재환 | 일 가용량 |
 |---|---|---|---|---|
-| 09-11 금 | 보완 수집 / CP1 canary | PR #2 리뷰·NTP 기준 / 검증·Harbor 준비 | APP/DB/MON/HA/DR 인계 | 3인일 |
+| 09-11 금 | CP1 보호·복구·inspect 준비 / canary | PR #2/#4 재리뷰·NTP 기준 / 검증·Harbor 준비 | APP/DB/MON/HA/DR 인계 | 3인일 |
 | 09-14 월 | CP2/3·Worker 통신 지원 | 순차 join·노드 확인 | 부재 | 2인일 |
 | 09-15 화 | NTP·IF-16 / LB Stage B | Calico 보호 / Harbor | 부재 | 2인일 |
 | 09-16 수 | CI Gate / Deploy·MON 준비 | 보안 통제 / Harbor Digest | 부재 | 2인일 |
@@ -85,12 +85,16 @@ P0는 3CP+3Worker, 승인된 네트워크·보안 통제, transaction-api/fds-en
 
 ## ICR 추가 유입 범위
 
-초기 v18은 CP 측 110개 조회 및 13:56 KST 재점검까지를 포함했다. 이번 보완은 [PR #2](https://github.com/321Team/infra-kubernetes/pull/2)의 Ready for review/이하영 리뷰 요청 상태와 [PR #3 고정 잔여 작업 원문](https://github.com/321Team/infra-kubernetes/blob/3309866766236bbdbe20b9e2ae1d8fd6f9233bcd/docs/change/ICR-D-NET-01-01/RESIDUAL_WORK_20260910.md)의 Worker/NTP 후속을 추가했다.
+- PR #2: 실행 source `afc246d2db041c68de5014972107484dad122558`, 증적 편입 HEAD `097ddb56d87b229a9eb465f72ea9f55d16524c51`. 현장 Linux **모의시험 37/37**, CP **읽기 전용 조회 115개**의 검증 기록을 반영한다. Runtime apply/rollback 증적은 아니다.
+- Worker: 15:34 KST 보완 증적에서 6대 시간 속성, Worker kubelet의 config.yaml 부재 오류, Cockpit 6 unit mask 및 9090 listener 부재를 확인했다. 같은 supplement의 추가 재수집은 잔여에서 제외한다. TCP·firewall·chrony source를 재조회한 결과는 아니다.
+- PR #3: `3309866766236bbdbe20b9e2ae1d8fd6f9233bcd`의 수집기 소스가 **Merged**, merge `7d44afc3afff4d322cb4dbeff4433d61e23e111a`. 병합을 클러스터·방화벽 운영 인수로 해석하지 않는다.
+- PR #4: 최신 `75d476edc33d6368fe4ab07e78fc51759e81a6fc`에서 최신 PR #2 영수증·실제 인수 연결, Runtime 전용 변경/복구, 정책·상태·실행 통제를 보완했다. 로컬 Linux **모의시험 74개**(PR #4 55+Worker 회귀 19) PASS 기록이며 새 HEAD 리뷰·실서버 검증은 미완료다. 구 소스의 계약/순서 지적은 보존하되 보완 미착수로 표시하지 않는다.
+- PR #2/#4는 이하영의 최신 HEAD 독립 리뷰와 실제 Runtime 인수가 남는다. 현재 구현은 Runtime 전용이며 Permanent 승격은 미구현이다. CP2 재개·6대 가입·etcd 3 Member·DNS/cross-node·NTP·HEP/GNP·Storage·재부팅/복구는 기존 미완료 상태다.
+- 09-11의 완료된 Worker supplement 재수집 문구를 CP1 보호/복구·inspect 준비로 교체한다. PR #2/#4 재리뷰를 연결하며 날짜·담당·배정 인일·휴가·주말 가용량·Gate/AC는 유지한다.
 
-- Worker 99개 조회의 명령 종료 코드는 0이지만 시간 속성 6개 공백이 있어 무결성 PASS / 완전성 PARTIAL / 운영 인수 HOLD다.
-- CP→Worker 10250 TCP 0/9이며 허용 규칙뿐 아니라 listener 부재·kubelet auto-restart 원인도 남았다. Worker→LB 6443 TCP 3/3은 TLS·인증·3Backend 인수를 대체하지 않는다.
-- Chrony 설정 동일·Leap Normal 6/6과 승인된 고정 Primary/Fallback NTP 기준은 구분한다. Cockpit 허용/마스킹·v1.1 보완 수집 및 IF-06B/IF-16·Negative/Reboot/Rollback·보호 인계는 후속이다.
-- ICR 실제 종료일은 미확정이다. 09-21은 이번 권장 Plan End이며 기존 End TBD 및 당시 미완료 AC는 원본에 보존한다. 실제 supplement/canary/join을 이번 문서 작업에서 실행하지 않았다.
+고정 출처·당시 본문·이전 후보 값은 `audit/v3.1.18/k8s-intake-20260910.json`, 자세한 조건은 `releases/v3.1.18/FDS_K8S_Candidate_Integration_20260910.md`에 기록한다. 이 통합은 후보 문서 갱신이며 운영 적용·정본 발행이 아니다.
+
+NTP 관련 일정은 해당 변경·인수 전 승인과 기존 시간 동기화 선행조건을 면제하지 않는다. PR #4 최신 HEAD 리뷰·CP1 Runtime 인수가 늦어지면 후속 창의 공수를 재산정한다. 09-11에 모든 리뷰가 끝난다고 확약하지 않는다.
 
 ## 티켓 계획일 전후 대장
 

@@ -100,3 +100,5 @@ FDS_RELEASE_ZIP=/tmp/fds-v18-package/FDS_v3.1.18_Canonical_Baseline_Release_Pack
 추가 유입: 이하영 09-10 면접 휴가(09-08 유지), P1-SEC 기존 계획창 가용 작업일 4일(권장 종료 09-21 창은 10일), ICR/K8S Worker·NTP 검토 및 PR #2 리뷰 요청 상태를 후보에 반영했다. 상세 원문은 `audit/v3.1.18/followup-20260910.json`을 참조한다.
 
 Fast Tracking 권장안은 [일정 변경안](releases/v3.1.18/FDS_Phase1_Fast_Track_Schedule_Recommendation_v1.0.md)과 WBS의 `Fast Track Plan` 시트에 반영했다. 주말 작업 가용량 0, 개인 부재 반영, 총 23인일 중 1.5인일 버퍼다. 이는 metadata 자동 동기화의 일정 변경 금지 규칙과 별개인 사용자 요청 기반의 계획 변경 후보다. 발행/실행 승인은 아직 부여되지 않았다.
+
+K8S 최신 이력은 [후보 통합 기록](releases/v3.1.18/FDS_K8S_Candidate_Integration_20260910.md)을 참조한다. Worker 보완·PR #3 병합, PR #2 현장 모의/읽기 전용 검증, PR #4 Runtime 전용 보완을 동기화했으며 전체 Runtime 인수는 미완료다.

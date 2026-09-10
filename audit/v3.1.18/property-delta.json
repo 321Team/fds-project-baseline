@@ -130,7 +130,7 @@
     "record_id": "P1-K8S-01",
     "field": "Source",
     "before": "Baseline v3.1.15; P1-K8S Preflight Review v1.1; D35 IF-11A Approval Record; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #10 snapshot 2026-09-10T05:03:27Z; Issue #10 후속 2026-09-10T06:25:12Z; infra-kubernetes PR #3 @3309866766236bbdbe20b9e2ae1d8fd6f9233bcd; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
+    "after": "Baseline/Ticket Pack v3.1.18; GitHub #10; K8S PR #2 097ddb5, #3 merge 7d44afc, #4 75d476e; audit/v3.1.18/k8s-intake-20260910.json"
   },
   {
     "issue": 10,
@@ -249,7 +249,7 @@
     "record_id": "ICR-D-NET-01-01",
     "field": "Source",
     "before": "ICR-D-NET-01-01...v1.4.md`; `FDS_Project_Implementation_Baseline_v3.1.17.md`; Interface Register IF-06B/IF-16; 2026-09-08 연결된 321Team GitHub 검색 결과; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #14 snapshot 2026-09-10T05:03:39Z; Issue #14 후속 2026-09-10T06:25:25Z; infra-kubernetes PR #3 @3309866766236bbdbe20b9e2ae1d8fd6f9233bcd; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
+    "after": "Baseline/Ticket Pack v3.1.18; GitHub #14; K8S PR #2 097ddb5, #3 merge 7d44afc, #4 75d476e; audit/v3.1.18/k8s-intake-20260910.json"
   },
   {
     "issue": 14,
@@ -424,7 +424,7 @@
     "record_id": "P1-SEC-01",
     "field": "Source",
     "before": "Baseline v3.1.15; D-SEC-01 Security Design Baseline v1.0; ICR v1.4; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #19 snapshot 2026-09-10T05:05:52Z; 사용자 2026-09-10 면접 휴가 추가 지시; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
+    "after": "Baseline/Ticket Pack v3.1.18; GitHub #19; K8S PR #2 097ddb5, #3 merge 7d44afc, #4 75d476e; audit/v3.1.18/k8s-intake-20260910.json"
   },
   {
     "issue": 19,

@@ -42,4 +42,15 @@
 
 09-08 기록을 유지하고 09-10 부재를 추가했다. P1-SEC 기존 계획창 09-04~11에서 가용일 입력을 범위 밖으로 옮겼을 때 5일, 09-10으로 복원했을 때 4일을 확인했다. 이후 Fast Tracking 권장 End를 09-21로 바꾼 전체 계획창의 가용일은 10일이다. 이는 잔여 공수가 아니다. ICR 기존 End TBD와 실제 미완료 이력을 보존하고 권장 Plan End만 09-21로 제안한다. 상태·Lead/Support·AC·원본 스냅샷은 보존했다.
 
-ICR 추가 유입의 고정 원문은 `v3.1.18/followup-20260910.json`, 일정·배정·중간 판단은 `v3.1.18/fast-track-plan.json`이다. 무결성 PASS / 완전성 PARTIAL / 운영 인수 HOLD를 구분하며 이번에 supplement/canary/join을 실행하지 않았다.
+ICR 최초 추가 유입의 고정 원문은 `v3.1.18/followup-20260910.json`, 일정·배정·중간 판단은 `v3.1.18/fast-track-plan.json`이다. 당시 무결성 PASS / 완전성 PARTIAL / 운영 인수 HOLD는 과거 이력이다. 이후 Worker 보완 검증 및 PR #3 병합 결과는 아래 최신 편입으로 갱신한다.
+
+## 09-10 K8S 최신 이력 후보 편입 검증
+
+사용자의 권장안 후보 병합 요청에 따라 `infra-kubernetes` PR #2 `097ddb5`, PR #3 merge `7d44afc`, PR #4 `75d476e`와 baseline Issue #10/#14/#19를 고정했다. 고정 원문·메타데이터·본문 SHA-256·변경 전 후보 3개 레코드와 작업 2개는 `v3.1.18/k8s-intake-20260910.json`에 보존했다. Source·설명·Baseline·WBS·일정 권장안의 현재 요약을 동기화했다.
+
+- Worker supplement 기술 PASS와 PR #3 병합을 반영했다. PR #2 현장 mock 37/37·읽기 전용 inspect 115건 및 PR #4 로컬 mock 74건은 원문에서 확인한 결과이며 이번 편입에서 실행한 시험이 아니다.
+- 후보 부모 `e2992efa4e7e3659480fb209da874b01fa30dfb1` 대비 64개 레코드 중 K8S/ICR/SEC 3개만 갱신했다. 속성은 Source 3개만 변경했고, 상태·Lead/Support·일정·기존 AC 체크는 보존했다. Fast Track 배정 54개 중 작업 설명 2개만 갱신했다.
+- WBS의 실제 문자값 변경은 17셀이다. 9개 탭·수식 2,209개·날짜·비대상 값·차트 2개 원본 XML·관계 대상·레이아웃·데이터 유효성·사용 서식을 비교해 보존을 확인했다. 내보내기 중 기존 OVERBOOKED 조건부 서식의 solid fill이 누락되는 현상을 같은 조건·색·글꼴로 복구했으며, 사용되지 않는 서식 항목 1개만 남는다.
+- 수정된 WBS Source 3행·Sources & Change Log·Fast Track Plan을 렌더 검수했다. 후보 검증 스크립트 PASS, 수식 오류 0·속성/Description 불일치 0·새 AC 체크 0이다. 결과는 `v3.1.18/validation.json` 및 `v3.1.18/k8s-intake-validation.json`이다.
+- NTP 승인 기준, CP2 잔존 상태에 따른 재개 절차, 최종 host 보호와 정적 Local PV 상세는 후속 확정 대상으로 유지한다. PR #2/#4의 최신 HEAD 독립 리뷰 및 운영 canary/join/인수는 완료로 표시하지 않았다.
+- CA/CI-CD 및 외부 Monitoring·Notification의 별도 편입 요청은 이번 K8S 파일 통합 범위에 포함하지 않았다. 원본 스냅샷·기존 후속 이력·`CURRENT.md`는 바이트 단위로 보존했다.

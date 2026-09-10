@@ -103,9 +103,7 @@
 ## 2026-09-10 추가 반영
 
 - 이하영 09-10 면접 휴가를 추가하고 09-08 기록은 유지한다. P1-SEC-01 가용 작업일은 기존 후보 5→4일(원래 Issue 속성 6→4)이다. 이는 기존 계획창 09-04~11의 계산이다. Fast Tracking 권장창 09-04~21의 가용일은 10일이며 잔여 공수가 아니다. 담당·상태는 유지한다.
-- ICR과 K8S에 Worker/NTP 검토를 추가한다. PR #2는 같은 HEAD의 Ready for review / 이하영 리뷰 요청 상태다. PR #3은 3309866766236bbdbe20b9e2ae1d8fd6f9233bcd의 Draft다.
-- Worker 수집은 무결성 PASS / 완전성 PARTIAL / 운영 인수 HOLD. 시간 속성 공백, CP→Worker 0/9, kubelet listener 부재·auto-restart, Cockpit 허용·mask 및 NTP 승인 미완료를 기록한다. Worker→LB TCP 3/3은 부분 증적이다.
-- 이번 반영은 고정된 검토 기록의 문서 동기화다. 실제 v1.1 supplement·canary·join·보호 인계 실행 또는 승인 완료를 의미하지 않는다.
+- 초기 Worker/NTP PARTIAL·PR #3 Draft와 PR #2 구 HEAD 기록은 당시 후보 이력이며 `audit/v3.1.18/followup-20260910.json`에 보존한다. 현재 진행 판정은 아래 K8S 최신 통합을 적용한다.
 - ICR은 이권욱 Lead·이하영 Support, In Progress와 실제 종료 미확정을 유지한다. 기존 End TBD는 이력에 보존하고 이번 권장 Plan End만 09-21로 제안한다. 09-10 휴가는 지원·독립 리뷰 일정 영향으로 관리한다.
 - 상세 원문·출처: `audit/v3.1.18/followup-20260910.json`. 기존 원본 스냅샷과 당시 판정은 보존한다.
 
@@ -119,3 +117,15 @@
 - 미착수 P1-MON-02/DR-02/HA-02 구현 유예, P0 AC 전부 유지.
 - Phase 2 Review도 10-24 토요일에서 10-23 금요일 오후로 권장한다.
 - 상세: `releases/v3.1.18/FDS_Phase1_Fast_Track_Schedule_Recommendation_v1.0.md`, 원본/전후/배정: `audit/v3.1.18/fast-track-plan.json`.
+
+## 2026-09-10 K8S 최신 이력 통합
+
+- PR #2: 실행 source `afc246d2db041c68de5014972107484dad122558`, 증적 편입 HEAD `097ddb56d87b229a9eb465f72ea9f55d16524c51`. 현장 Linux **모의시험 37/37**, CP **읽기 전용 조회 115개**의 검증 기록을 반영한다. Runtime apply/rollback 증적은 아니다.
+- Worker: 15:34 KST 보완 증적에서 6대 시간 속성, Worker kubelet의 config.yaml 부재 오류, Cockpit 6 unit mask 및 9090 listener 부재를 확인했다. 같은 supplement의 추가 재수집은 잔여에서 제외한다. TCP·firewall·chrony source를 재조회한 결과는 아니다.
+- PR #3: `3309866766236bbdbe20b9e2ae1d8fd6f9233bcd`의 수집기 소스가 **Merged**, merge `7d44afc3afff4d322cb4dbeff4433d61e23e111a`. 병합을 클러스터·방화벽 운영 인수로 해석하지 않는다.
+- PR #4: 최신 `75d476edc33d6368fe4ab07e78fc51759e81a6fc`에서 최신 PR #2 영수증·실제 인수 연결, Runtime 전용 변경/복구, 정책·상태·실행 통제를 보완했다. 로컬 Linux **모의시험 74개**(PR #4 55+Worker 회귀 19) PASS 기록이며 새 HEAD 리뷰·실서버 검증은 미완료다. 구 소스의 계약/순서 지적은 보존하되 보완 미착수로 표시하지 않는다.
+- PR #2/#4는 이하영의 최신 HEAD 독립 리뷰와 실제 Runtime 인수가 남는다. 현재 구현은 Runtime 전용이며 Permanent 승격은 미구현이다. CP2 재개·6대 가입·etcd 3 Member·DNS/cross-node·NTP·HEP/GNP·Storage·재부팅/복구는 기존 미완료 상태다.
+- 09-11의 완료된 Worker supplement 재수집 문구를 CP1 보호/복구·inspect 준비로 교체한다. PR #2/#4 재리뷰를 연결하며 날짜·담당·배정 인일·휴가·주말 가용량·Gate/AC는 유지한다.
+
+고정 출처·당시 본문·이전 후보 값은 `audit/v3.1.18/k8s-intake-20260910.json`, 자세한 조건은 `releases/v3.1.18/FDS_K8S_Candidate_Integration_20260910.md`에 기록한다. 이 통합은 후보 문서 갱신이며 운영 적용·정본 발행이 아니다.
+

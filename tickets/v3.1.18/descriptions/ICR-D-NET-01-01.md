@@ -23,16 +23,35 @@
 | Exit Criteria | Kubernetes 6개 Node의 보호 공백 없는 firewalld→Calico named HEP/GNP 전환, 30080/9100/10250 최소 허용, 관리망 반환 경로와 IF-06B 정합화, Positive/Negative/Regression/Reboot/Rollback 및 무결성 Evidence 완료 |
 | Related Decision IDs | D17; D18; D33; D34; D35 |
 | Related Risk IDs | RISK-04; RISK-07 |
-| Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #14 snapshot 2026-09-10T05:03:39Z; Issue #14 후속 2026-09-10T06:25:25Z; infra-kubernetes PR #3 @3309866766236bbdbe20b9e2ae1d8fd6f9233bcd; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청 |
+| Source | Baseline/Ticket Pack v3.1.18; GitHub #14; K8S PR #2 097ddb5, #3 merge 7d44afc, #4 75d476e; audit/v3.1.18/k8s-intake-20260910.json |
 | Schedule Note | 09-21은 권장 Plan End이며 실제 종료일 확정이나 AC 완료가 아니다. 기존 End TBD 이력은 보존한다. CP→Worker·NTP·IF-16을 먼저, IF-06B·Negative/Reboot/Rollback·보호 인계를 후속 검증한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트. |
 
 ## 현재 실행·검토 상태
 
-CP v1.1 재점검 110개 기록의 사전 증적 검증은 완료됐다. PR #2 HEAD 068661e076de02669170d3582f3d596d6e1a8eb3는 Ready for review이며 이하영(hayeounglee) 리뷰 요청 완료, 독립 승인·운영 적용은 대기다. 후속 Worker 수집 검토는 무결성 PASS / 완전성 PARTIAL / 운영 인수 HOLD다. 99개 query rc=0이나 6대 time_state가 비어 v1.1 supplement 재수집이 필요하다. CP→Worker 10250은 0/9, 허용 규칙·listener 부재와 kubelet auto-restart를 함께 확인했다. Worker→LB TCP 3/3 성공은 부분 증적이다. NTP 고정 기본·대체 목적지 승인, Cockpit 잔여 허용·mask 확인, CP1 canary·CP2/3·Worker 단계 적용, HEP/GNP·IF-06B·IF-16 및 ICR AC-01~20은 미완료다. 기존 End/기간 TBD는 이력에 보존하며 실제 종료는 미확정이다. 현재 후보 Plan: 2026-09-01 ~ 2026-09-21 (권장안; 실제 완료일·Gate 승인은 미확정).
+PR #2 실행 source afc246d의 현장 Linux 모의시험 37/37·CP 읽기 전용 115개 조회가 검증됐고 최신 HEAD는 097ddb56d87b229a9eb465f72ea9f55d16524c51이다. Worker 보완 24개 조회·내부 8/8 체크섬과 시간·kubelet 원인·Cockpit mask 증적 PASS, PR #3 merge 7d44afc3afff4d322cb4dbeff4433d61e23e111a를 반영한다. 과거 CP→Worker TCP 0/9 및 Worker→LB TCP 3/3은 당시 부분 증적이다. PR #4 75d476edc33d6368fe4ab07e78fc51759e81a6fc는 최신 영수증/실제 인수 연결·Runtime 전용 변경/복구로 보완됐고 로컬 모의시험 74개 PASS 기록이 있다. 새 HEAD 독립 리뷰·실제 CP1 canary·후속 노드 적용/복구는 미완료이며 Permanent 승격은 미구현이다. NTP 목적지/운영 주체·동기화 기준, Cockpit 잔여 방화벽 허용 제거, HEP/GNP·IF-06B·IF-16 및 ICR AC-01~20은 잔여다. 실제 종료일 미확정·이전 End TBD 이력을 보존한다. 현재 후보 Plan: 2026-09-01 ~ 2026-09-21 (조건부 목표).
 
 근거: [Issue #14](https://github.com/321Team/fds-project-baseline/issues/14), Issue 갱신 시각 `2026-09-10T05:03:39Z`. 댓글·승인 기록과 본문 보관본은 `../source-snapshot.json`에 보존하고 실제 Gate는 해당 증적·승인 범위로 판정한다.
 
-후속 출처: [Worker/NTP 검토·잔여 작업](https://github.com/321Team/infra-kubernetes/blob/3309866766236bbdbe20b9e2ae1d8fd6f9233bcd/docs/change/ICR-D-NET-01-01/RESIDUAL_WORK_20260910.md). 원래 수집본은 보존하고 `audit/v3.1.18/followup-20260910.json`에 추가 기록을 고정했다. 이번 정본 보완은 연결된 검토 기록의 반영이며 서버 재시험은 아니다.
+이전 후보 출처: [Worker/NTP 검토·잔여 작업](https://github.com/321Team/infra-kubernetes/blob/3309866766236bbdbe20b9e2ae1d8fd6f9233bcd/docs/change/ICR-D-NET-01-01/RESIDUAL_WORK_20260910.md). 원래 수집본은 보존하고 `audit/v3.1.18/followup-20260910.json`에 추가 기록을 고정했다. 이번 정본 보완은 연결된 검토 기록의 반영이며 서버 재시험은 아니다.
+
+## 2026-09-10 K8S 최신 이력 통합
+
+- PR #2: 실행 source `afc246d2db041c68de5014972107484dad122558`, 증적 편입 HEAD `097ddb56d87b229a9eb465f72ea9f55d16524c51`. 현장 Linux **모의시험 37/37**, CP **읽기 전용 조회 115개**의 검증 기록을 반영한다. Runtime apply/rollback 증적은 아니다.
+- Worker: 15:34 KST 보완 증적에서 6대 시간 속성, Worker kubelet의 config.yaml 부재 오류, Cockpit 6 unit mask 및 9090 listener 부재를 확인했다. 같은 supplement의 추가 재수집은 잔여에서 제외한다. TCP·firewall·chrony source를 재조회한 결과는 아니다.
+- PR #3: `3309866766236bbdbe20b9e2ae1d8fd6f9233bcd`의 수집기 소스가 **Merged**, merge `7d44afc3afff4d322cb4dbeff4433d61e23e111a`. 병합을 클러스터·방화벽 운영 인수로 해석하지 않는다.
+- PR #4: 최신 `75d476edc33d6368fe4ab07e78fc51759e81a6fc`에서 최신 PR #2 영수증·실제 인수 연결, Runtime 전용 변경/복구, 정책·상태·실행 통제를 보완했다. 로컬 Linux **모의시험 74개**(PR #4 55+Worker 회귀 19) PASS 기록이며 새 HEAD 리뷰·실서버 검증은 미완료다. 구 소스의 계약/순서 지적은 보존하되 보완 미착수로 표시하지 않는다.
+- PR #2/#4는 이하영의 최신 HEAD 독립 리뷰와 실제 Runtime 인수가 남는다. 현재 구현은 Runtime 전용이며 Permanent 승격은 미구현이다. CP2 재개·6대 가입·etcd 3 Member·DNS/cross-node·NTP·HEP/GNP·Storage·재부팅/복구는 기존 미완료 상태다.
+- 09-11의 완료된 Worker supplement 재수집 문구를 CP1 보호/복구·inspect 준비로 교체한다. PR #2/#4 재리뷰를 연결하며 날짜·담당·배정 인일·휴가·주말 가용량·Gate/AC는 유지한다.
+
+고정 출처·당시 본문·이전 후보 값은 `audit/v3.1.18/k8s-intake-20260910.json`, 자세한 조건은 `releases/v3.1.18/FDS_K8S_Candidate_Integration_20260910.md`에 기록한다. 이 통합은 후보 문서 갱신이며 운영 적용·정본 발행이 아니다.
+
+### 미결 사양과 실행 조건
+
+현재 3CP+3Worker·kubeadm·Calico·static local PV 범위를 유지한다. 추가 노드·플랫폼 도입 결정은 없다. NTP 목적지/운영 주체(#14), 동기화 수치 인수조건(#10), 최소 egress(#19)는 해당 변경·인수 전에 확정한다. `100ms·60초×6`은 미승인 초안이고 MTU 1450도 실측 확정 전 후보값이다. CP2 원래 join 단계·비표준 data 경로와 보존/정리/재개 방식은 실제 조사 후 판단한다.
+
+발행 D34의 Calico 설치 전 firewalld OFF 이력과 실제 CP1 공존 drift를 구분한다. ADV-20260910에 따라 사유·기간·보호·복구·종료조건을 기록한 제한적 선행 준비를 이어간다. 최종 6대 firewalld disabled/inactive 및 named HEP/GNP 목표, Bootstrap Allow→canary Worker→Worker 확대→CP의 보호 전환 순서를 유지한다. CP 통신 canary가 HEP 전환 순서를 대체하지 않는다.
+
+PR #2 최신 HEAD 리뷰·실행 창의 inspect·보호/콘솔/백업/복구·실행 결정 후 CP1 제한 Runtime을 검증한다. 실제 CP1 인수 및 PR #4 최신 HEAD 리뷰 후 후속 대상의 실행·복구/가입을 판단한다. Runtime 시험·리뷰 이후의 Permanent 또는 최종 보호 인계 종료 절차는 별도 결정·구현 대상이다. 승인 JSON을 실제 GitHub 리뷰 인증으로 해석하지 않는다. NTP 미결을 모든 준비의 전역 중단 조건으로 만들거나 기존 시간 동기화 선행조건을 면제하지 않는다.
 
 ## 일정 권장안
 
