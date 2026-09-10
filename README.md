@@ -71,7 +71,7 @@ python3 -m unittest discover -s tests -p 'test_ticket_sync.py'
 
 기본 흐름은 전체 조회 → Record ID/17개 속성 검증 → 차이 계획 → 명시적 Apply → 재조회다. 재실행 시 차이가 없으면 쓰지 않는다. 실제 Type·Milestone이 미설정이거나 원본 미확인 값이 남으면 결과는 `PARTIAL`이며 완전 동기화 PASS로 선언하지 않는다.
 
-README·정책 보완은 후보 PR의 변경이다. 독립 리뷰와 기존 배포 Gate 전까지 `main`, `CURRENT.md`, Release Tag, 정본/WBS 및 Runtime 완료 상태를 변경하지 않는다.
+README·정책 보완은 PR #69의 승인·내용 병합에 포함됐다. 최종화 PR·Tag·배포 Asset 검증을 거쳐 문서 정본을 발행하며 Runtime 완료 상태는 해당 증적으로 별도 판정한다.
 
 ## v3.1.18 통합 후보
 
@@ -99,6 +99,10 @@ FDS_RELEASE_ZIP=/tmp/fds-v18-package/FDS_v3.1.18_Canonical_Baseline_Release_Pack
 
 추가 유입: 이하영 09-10 면접 휴가(09-08 유지), P1-SEC 기존 계획창 가용 작업일 4일(권장 종료 09-21 창은 10일), ICR/K8S Worker·NTP 검토 및 PR #2 리뷰 요청 상태를 후보에 반영했다. 상세 원문은 `audit/v3.1.18/followup-20260910.json`을 참조한다.
 
-Fast Tracking 권장안은 [일정 변경안](releases/v3.1.18/FDS_Phase1_Fast_Track_Schedule_Recommendation_v1.0.md)과 WBS의 `Fast Track Plan` 시트에 반영했다. 주말 작업 가용량 0, 개인 부재 반영, 총 23인일 중 1.5인일 버퍼다. 이는 metadata 자동 동기화의 일정 변경 금지 규칙과 별개인 사용자 요청 기반의 계획 변경 후보다. 발행/실행 승인은 아직 부여되지 않았다.
+Fast Tracking 권장안은 [일정 변경안](releases/v3.1.18/FDS_Phase1_Fast_Track_Schedule_Recommendation_v1.0.md)과 WBS의 `Fast Track Plan` 시트에 반영했다. 주말 작업 가용량 0, 개인 부재 반영, 총 23인일 중 1.5인일 버퍼다. 이는 metadata 자동 동기화의 일정 변경 금지 규칙과 별개인 사용자 요청 기반의 계획 변경 후보다. 문서 내용은 PR #69에서 승인·병합됐다. 정식 게시와 실제 실행 승인은 별도 절차로 추적한다.
 
 K8S 최신 이력은 [후보 통합 기록](releases/v3.1.18/FDS_K8S_Candidate_Integration_20260910.md)을 참조한다. Worker 보완·PR #3 병합, PR #2 현장 모의/읽기 전용 검증, PR #4 Runtime 전용 보완을 동기화했으며 전체 Runtime 인수는 미완료다.
+
+## v3.1.18 발행 이력
+
+[릴리즈 최종화 기록](releases/v3.1.18/FDS_Release_Finalization_Record_v3.1.18.md)과 `CURRENT.md`에서 현재 발행 단계를 확인한다. PR #69 승인 HEAD `04c1ca46dcf82f814d350b4d49539e3ba4d6a9b4`와 내용 병합 `02be2150f7662319a3d796cdcb99f6d26aec5472`를 고정했다. 후보 원문·감사·Description 적용 입력은 당시 기록으로 보존하며, 그 안의 CANDIDATE/미발행 표시는 해당 수집·작성 시점의 상태다.

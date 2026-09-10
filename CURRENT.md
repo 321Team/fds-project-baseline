@@ -3,14 +3,18 @@
 | Field | Value |
 |---|---|
 | Repository status | ACTIVE / CANONICAL |
-| Current RELEASED version | v3.1.17 |
-| Current RELEASED history path | `releases/v3.1.17/` |
-| Previous version | v3.1.16 / SUPERSEDED |
-| Approved content merge SHA | `8515ecd97e69035f329032ba17206972c7b0739d` |
-| Approved candidate HEAD | `53ea99cc904a411f64b95d0e61fcef8533c5f6a7` |
-| Canonical release tag | `docs-v3.1.17` — create after finalization PR merge |
-| Published date | 2026-09-07 |
+| Current RELEASED version | v3.1.18 |
+| Current RELEASED history path | `releases/v3.1.18/` |
+| Previous version | v3.1.17 / SUPERSEDED |
+| Approved content merge SHA | `02be2150f7662319a3d796cdcb99f6d26aec5472` |
+| Approved candidate HEAD | `04c1ca46dcf82f814d350b4d49539e3ba4d6a9b4` |
+| Canonical release tag | `docs-v3.1.18` — create after finalization PR approval and merge |
+| Published date | NOT PUBLISHED — confirm in GitHub Release after Tag/Asset verification |
 
 ## Control note
 
-v3.1.17 content was independently approved by `hayeounglee` for exact candidate HEAD `53ea99cc904a411f64b95d0e61fcef8533c5f6a7` and merged to `main` as `8515ecd97e69035f329032ba17206972c7b0739d`. GitHub Actions was `NOT RUN`; approved GitHub Free compensating control and local PASS evidence were used without claiming CI PASS. The finalization PR updates release metadata; its merge commit is fixed by tag `docs-v3.1.17` to avoid recursive self-referential SHA updates.
+This is the proposed release metadata in the finalization branch. It takes effect after this finalization PR is independently approved and manually merged. Until then, `main/CURRENT.md` continues to identify v3.1.17.
+
+PR #69 content was independently approved by `hayeounglee` at 2026-09-10T14:20:47Z for exact HEAD `04c1ca46dcf82f814d350b4d49539e3ba4d6a9b4` and merged as `02be2150f7662319a3d796cdcb99f6d26aec5472` following the user's merge instruction. GitHub Actions is `NOT RUN`; local candidate integrity and WBS/ZIP checks passed under the existing Free-plan compensating control. The approved finalization merge is the target of `docs-v3.1.18`; tag and published assets do not yet exist at preparation time.
+
+The [finalization record](releases/v3.1.18/FDS_Release_Finalization_Record_v3.1.18.md) distinguishes approved content, publication gates, historical candidate snapshots and unresolved runtime work. A document release does not complete runtime gates or apply Issue metadata.

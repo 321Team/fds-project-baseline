@@ -1,11 +1,11 @@
 # FDS v3.1.18 Canonical Ticket Update Pack
 
-> Status: CANDIDATE · 기준일: 2026-09-10 · 아직 미발행/미적용
+> Status: RELEASED / FINALIZATION · 내용 기준일: 2026-09-10 · 최종화 승인·병합 후 적용 / 실제 Issue 미적용
 
 ## 적용 순서와 효력
 
-1. Baseline·WBS/Gantt·이 Pack·Description·Manifest를 같은 후보로 독립 검토한다.
-2. 이권욱의 명시적 승인 후 병합·정본 발행을 완료한다.
+1. Baseline·WBS/Gantt·이 Pack·Description·Manifest의 내용은 PR #69에서 이하영의 정확한 HEAD 승인 후 병합됐다.
+2. 별도 최종화 PR의 독립 승인·수동 병합과 Tag·배포 Asset 검증을 거쳐 정본 발행을 완료한다.
 3. 발행된 SHA의 Description 후보와 그때의 실제 Issue 본문/댓글을 다시 대조하여 갱신한다. 수집 이후 운영 기록은 덮어쓰지 않고 보존한다.
 4. 실제 Issue Type·Milestone·Label 등은 마지막에 현재 본문으로 새 계획을 생성해 동기화한다. 기존 stale plan은 재사용하지 않는다.
 
@@ -98,7 +98,7 @@
 - P1-DR-01의 사전 착수 보고만으로 상태를 변경하지 않는다. 기존 To Do와 Runtime 미완료를 유지한다.
 - DB 시간대/Timestamp 계약·배포와 소스 연결, OID-01/02/03, NTP 목적지, FUP 잔여 원본/승인 참조는 미확정 상태를 보존한다.
 
-이 후보의 정합성 PASS는 Release 승인·운영 Gate 해제와 구분한다. 배포 자산과 독립 리뷰가 준비돼도 명시적 merge 승인 전에는 발행하지 않는다.
+PR #69 내용 승인·병합과 로컬 정합성 PASS는 운영 Gate 해제를 뜻하지 않는다. 별도 최종화 PR 승인·병합과 Tag·Asset 검증 전에는 게시 완료로 표시하지 않는다. 64개 Description·canonical-records.json의 CANDIDATE 표기는 승인된 적용 입력의 작성 시점 상태로 보존한다.
 
 ## 2026-09-10 추가 반영
 
