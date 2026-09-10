@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "scope": "local candidate consistency; no runtime or release approval",
+  "scope": "local candidate consistency; no runtime, schedule feasibility or release approval",
   "records": 64,
   "planning": 55,
   "historical_closed": 9,
@@ -10,14 +10,27 @@
     "To Do": 39
   },
   "protected_property_differences": 0,
-  "property_deltas": 80,
+  "protected_fields": [
+    "Record ID",
+    "Status",
+    "Lead",
+    "Support"
+  ],
+  "authorized_plan_windows": 24,
+  "property_deltas": 174,
   "new_checked_AC": 0,
-  "workbook_sheets": 8,
-  "workbook_formulas": 2101,
+  "workbook_sheets": 9,
+  "workbook_formulas": 2209,
   "workbook_errors": 0,
   "working_day_mismatches": 0,
   "description_property_mismatches": 0,
   "milestone_decision_coverage": 25,
+  "resource_slots": 54,
+  "available_person_days": 23.0,
+  "buffer_person_days": 1.5,
+  "overbooked_person_days": 0,
+  "weekend_or_absence_assignments": 0,
+  "remaining_effort": "NOT MEASURED",
   "ci": "NOT RUN",
   "release_assets": "NOT RUN",
   "live_issue_updates": "NOT RUN"

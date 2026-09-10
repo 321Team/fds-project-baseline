@@ -15,22 +15,28 @@
 | Status | In Progress |
 | Priority | P0 |
 | Start | 2026-09-01 |
-| End | TBD — Runtime Evidence 완료 후 확정 |
-| Calendar Days | TBD |
-| Working Days | TBD |
+| End | 2026-09-21 |
+| Calendar Days | 21 |
+| Working Days | 15 |
 | Lead | 이권욱 |
 | Support | 이하영, 이재환 |
 | Exit Criteria | Kubernetes 6개 Node의 보호 공백 없는 firewalld→Calico named HEP/GNP 전환, 30080/9100/10250 최소 허용, 관리망 반환 경로와 IF-06B 정합화, Positive/Negative/Regression/Reboot/Rollback 및 무결성 Evidence 완료 |
 | Related Decision IDs | D17; D18; D33; D34; D35 |
 | Related Risk IDs | RISK-04; RISK-07 |
-| Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #14 snapshot 2026-09-10T05:03:39Z |
-| Schedule Note | CP1 사전 진단 완료, 최소 CP 통신 canary 적용·독립 리뷰·운영 인수 대기. 6대 HEP/GNP·IF-06B·IF-16 및 NTP 목적지/Worker 검증은 잔여. End/기간 TBD 유지. |
+| Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #14 snapshot 2026-09-10T05:03:39Z; Issue #14 후속 2026-09-10T06:25:25Z; infra-kubernetes PR #3 @3309866766236bbdbe20b9e2ae1d8fd6f9233bcd; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청 |
+| Schedule Note | 09-21은 권장 Plan End이며 실제 종료일 확정이나 AC 완료가 아니다. 기존 End TBD 이력은 보존한다. CP→Worker·NTP·IF-16을 먼저, IF-06B·Negative/Reboot/Rollback·보호 인계를 후속 검증한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트. |
 
 ## 현재 실행·검토 상태
 
-v1.1 읽기 전용 CP 재점검은 snapshot/일반 조회 110개 기록 rc=0, gaps 없음으로 검토됐다. 소스 HEAD 068661e076de02669170d3582f3d596d6e1a8eb3는 Draft PR #2이며 독립 리뷰·실행 결정 대기다. CP1 제한 canary의 방화벽 적용·복구·join은 미실행. CP2/3·Worker·NTP 목적지 고정·HEP/GNP 및 기존 IF-06B/IF-16 범위는 잔여다. 6대 기준 AC와 종료일 TBD를 유지한다.
+CP v1.1 재점검 110개 기록의 사전 증적 검증은 완료됐다. PR #2 HEAD 068661e076de02669170d3582f3d596d6e1a8eb3는 Ready for review이며 이하영(hayeounglee) 리뷰 요청 완료, 독립 승인·운영 적용은 대기다. 후속 Worker 수집 검토는 무결성 PASS / 완전성 PARTIAL / 운영 인수 HOLD다. 99개 query rc=0이나 6대 time_state가 비어 v1.1 supplement 재수집이 필요하다. CP→Worker 10250은 0/9, 허용 규칙·listener 부재와 kubelet auto-restart를 함께 확인했다. Worker→LB TCP 3/3 성공은 부분 증적이다. NTP 고정 기본·대체 목적지 승인, Cockpit 잔여 허용·mask 확인, CP1 canary·CP2/3·Worker 단계 적용, HEP/GNP·IF-06B·IF-16 및 ICR AC-01~20은 미완료다. 기존 End/기간 TBD는 이력에 보존하며 실제 종료는 미확정이다. 현재 후보 Plan: 2026-09-01 ~ 2026-09-21 (권장안; 실제 완료일·Gate 승인은 미확정).
 
 근거: [Issue #14](https://github.com/321Team/fds-project-baseline/issues/14), Issue 갱신 시각 `2026-09-10T05:03:39Z`. 댓글·승인 기록과 본문 보관본은 `../source-snapshot.json`에 보존하고 실제 Gate는 해당 증적·승인 범위로 판정한다.
+
+후속 출처: [Worker/NTP 검토·잔여 작업](https://github.com/321Team/infra-kubernetes/blob/3309866766236bbdbe20b9e2ae1d8fd6f9233bcd/docs/change/ICR-D-NET-01-01/RESIDUAL_WORK_20260910.md). 원래 수집본은 보존하고 `audit/v3.1.18/followup-20260910.json`에 추가 기록을 고정했다. 이번 정본 보완은 연결된 검토 기록의 반영이며 서버 재시험은 아니다.
+
+## 일정 권장안
+
+Start/End는 이번 Fast Tracking 후보의 계획값이다. 기존 승인 일정은 `audit/v3.1.18/fast-track-plan.json`에 전후 값으로 보존한다. 실제 착수·완료·Status·AC·승인을 변경한 것이 아니다. 교육장 주말 작업은 없으며 세부 AM/PM 배정과 선행 조건을 따른다.
 
 ## 적용 기준
 
@@ -169,6 +175,6 @@ v1.1 읽기 전용 CP 재점검은 snapshot/일반 조회 110개 기록 rc=0, ga
 - 독립 Reviewer 승인: **미완료**
 - Lead 최종 승인: **미완료**
 - 최종 판정: **In Progress 유지**
-- End / Calendar Days / Working Days: **TBD 유지**
+- 기존 2026-09-08 기록의 End / 기간: **TBD**. 현재 권장 Plan End/기간은 상단 속성표를 따르며 실제 완료일은 미확정이다.
 
 `ICR-D-NET-01-01`은 2026-09-08 기준 완료 조건을 충족하지 않았다. ICR-AC-01~20의 PASS Evidence 또는 승인된 N/A 근거, IF-06B 차단 해소, IF-16 Drift 시정, Positive/Negative/Regression/Reboot/Rollback 결과, Evidence 무결성, 독립 리뷰 및 Lead 승인을 모두 확보한 후에만 `Done`으로 상향한다.

@@ -15,22 +15,26 @@
 | Status | In Progress |
 | Priority | P0 |
 | Start | 2026-09-07 |
-| End | 2026-09-11 |
-| Calendar Days | 5 |
-| Working Days | 5 |
+| End | 2026-09-18 |
+| Calendar Days | 12 |
+| Working Days | 6 |
 | Lead | 이재환 |
 | Support | 이권욱 |
 | Exit Criteria | Hybrid Monitoring의 Runtime Acceptance 14개와 필수 보조통제 2개, 구축·복구·Rollback Runbook 및 Support Review 증적 확보 |
 | Related Decision IDs | D05; D14; D17; D19; D33; D34 |
 | Related Risk IDs | RISK-04; RISK-07 |
-| Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #17 snapshot 2026-09-10T04:01:45Z |
-| Schedule Note | 이재환 09-04 개인 휴가로 실행 착수를 09-07로 이동한다. 사전 Metrics/Target 설계는 유지하고, 이권욱 지원 아래 K8S/APP 준비 후 통합한다. G2 09-11 목표 유지. |
+| Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #17 snapshot 2026-09-10T04:01:45Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청 |
+| Schedule Note | 09-11 Monitoring 인계, 부재 중 기존 Support의 준비·구현, 09-18 복귀 후 14개 AC+2개 보조통제 검증을 목표로 한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트. |
 
 ## 현재 실행·검토 상태
 
-담당자 9/10 보고는 임시 k3s/fds 사전 실증이다. kube-state-metrics, Alertmanager 수신, Dashboard 일부는 보고됐지만 Prometheus/Grafana의 monitoring-api 이전, 3종 PVC, Default Deny, node-exporter DaemonSet/monitoring-node, Prometheus SA/RBAC, monitor01 Blackbox/remote_write가 미완료다. 정본 Runtime NOT VERIFIED / In Progress. Acceptance는 Baseline §11.6의 14개와 필수 보조통제 2개를 구분한다.
+담당자 9/10 보고는 임시 k3s/fds 사전 실증이다. kube-state-metrics, Alertmanager 수신, Dashboard 일부는 보고됐지만 Prometheus/Grafana의 monitoring-api 이전, 3종 PVC, Default Deny, node-exporter DaemonSet/monitoring-node, Prometheus SA/RBAC, monitor01 Blackbox/remote_write가 미완료다. 정본 Runtime NOT VERIFIED / In Progress. Acceptance는 Baseline §11.6의 14개와 필수 보조통제 2개를 구분한다. 현재 후보 Plan: 2026-09-07 ~ 2026-09-18 (권장안; 실제 완료일·Gate 승인은 미확정).
 
 근거: [Issue #17](https://github.com/321Team/fds-project-baseline/issues/17), Issue 갱신 시각 `2026-09-10T04:01:45Z`. 댓글·승인 기록과 본문 보관본은 `../source-snapshot.json`에 보존하고 실제 Gate는 해당 증적·승인 범위로 판정한다.
+
+## 일정 권장안
+
+Start/End는 이번 Fast Tracking 후보의 계획값이다. 기존 승인 일정은 `audit/v3.1.18/fast-track-plan.json`에 전후 값으로 보존한다. 실제 착수·완료·Status·AC·승인을 변경한 것이 아니다. 교육장 주말 작업은 없으며 세부 AM/PM 배정과 선행 조건을 따른다.
 
 ## 적용 기준
 

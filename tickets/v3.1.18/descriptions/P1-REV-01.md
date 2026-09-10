@@ -14,23 +14,27 @@
 | Type | Task |
 | Status | To Do |
 | Priority | P0 |
-| Start | 2026-09-18 |
+| Start | 2026-09-22 |
 | End | 2026-09-23 |
-| Calendar Days | 6 |
-| Working Days | 4 |
+| Calendar Days | 2 |
+| Working Days | 2 |
 | Lead | 이권욱 |
 | Support | 이하영, 이재환 |
 | Exit Criteria | G3 결과, Demo, P0 Evidence, Known Issue, P1 이관, Review Action을 승인하고 Phase 1 Close Sign-off 확보 |
 | Related Decision IDs | D12; D20 |
 | Related Risk IDs | RISK-05; RISK-13 |
-| Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #30 snapshot 2026-09-10T04:08:08Z |
-| Schedule Note | Review 실행일은 D20 결과를 따른다. 09-24~09-25 비근무 전에 09-23 Close를 완료한다. |
+| Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #30 snapshot 2026-09-10T04:08:08Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청 |
+| Schedule Note | 09-22 오후 Review, 09-23 오전 보완·재시험, 오후 Close를 권장한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트. |
 
 ## 현재 실행·검토 상태
 
-9/10 진행 롤업은 구성요소별 사전 실증과 남은 Runtime을 구분한다. P1-DB/APP/MON의 정본 검증은 K8S·Stage B에 종속하고 DR/HA 사전 자료는 정식 완료 증적이 아니다. G2/G3/Close 일정과 Review/Close To Do 상태를 유지한다.
+9/10 진행 롤업은 구성요소별 사전 실증과 남은 Runtime을 구분한다. P1-DB/APP/MON의 정본 검증은 K8S·Stage B에 종속하고 DR/HA 사전 자료는 정식 완료 증적이 아니다. G2/G3/Close 일정과 Review/Close To Do 상태를 유지한다. 현재 후보 Plan: 2026-09-22 ~ 2026-09-23 (권장안; 실제 완료일·Gate 승인은 미확정).
 
 근거: [Issue #30](https://github.com/321Team/fds-project-baseline/issues/30), Issue 갱신 시각 `2026-09-10T04:08:08Z`. 댓글·승인 기록과 본문 보관본은 `../source-snapshot.json`에 보존하고 실제 Gate는 해당 증적·승인 범위로 판정한다.
+
+## 일정 권장안
+
+Start/End는 이번 Fast Tracking 후보의 계획값이다. 기존 승인 일정은 `audit/v3.1.18/fast-track-plan.json`에 전후 값으로 보존한다. 실제 착수·완료·Status·AC·승인을 변경한 것이 아니다. 교육장 주말 작업은 없으며 세부 AM/PM 배정과 선행 조건을 따른다.
 
 ## 적용 기준
 

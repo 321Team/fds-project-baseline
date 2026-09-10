@@ -15,22 +15,26 @@
 | Status | In Progress |
 | Priority | P0 |
 | Start | 2026-09-01 |
-| End | 2026-09-10 |
-| Calendar Days | 10 |
-| Working Days | 7 |
+| End | 2026-09-18 |
+| Calendar Days | 18 |
+| Working Days | 9 |
 | Lead | 이재환 |
 | Support | 이하영 |
 | Exit Criteria | 2개 Deployment/Service, 업무 8000/8001·metrics 9091/9090, `/livez`·`/readyz`, DB/FDS 장애정책, Resource, local endpoint topology, Contract/E2E Evidence |
 | Related Decision IDs | D03; D04; D18; D27; D31; D34 |
 | Related Risk IDs | RISK-07; RISK-09 |
-| Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #15 snapshot 2026-09-10T04:01:11Z |
-| Schedule Note | 이재환 09-04 개인 휴가를 owner-specific 비가용일로 반영해 종료를 09-10으로 조정한다. 이하영이 기술 지원하며 G2 09-11 목표는 유지한다. |
+| Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #15 snapshot 2026-09-10T04:01:11Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청 |
+| Schedule Note | 09-11 인계 및 사전 검증, 09-18 복귀 후 정본 Runtime 통합. 휴가 중 미승인 업무 계약·Schema 변경은 중단한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트. |
 
 ## 현재 실행·검토 상태
 
-임시 k3s/fds의 FastAPI 스캐폴딩, /livez·/readyz 및 Secret 갱신 이력이 보고됐다. 정본 fds-app 배포는 미검증이며 Service 80→8000, 불변 Digest, RBAC, 승인 경로 및 실패 응답/DB 저장 계약 확인이 남아 있다. D17/D34 설계 승인은 2026-09-01 완료됐고 현재 대기는 Platform Ready와 실제 보안 적용이다. DEC-P1-FDS/TXN/ADMIN의 현행 유지·확대 유예 선택을 적용한다.
+임시 k3s/fds의 FastAPI 스캐폴딩, /livez·/readyz 및 Secret 갱신 이력이 보고됐다. 정본 fds-app 배포는 미검증이며 Service 80→8000, 불변 Digest, RBAC, 승인 경로 및 실패 응답/DB 저장 계약 확인이 남아 있다. D17/D34 설계 승인은 2026-09-01 완료됐고 현재 대기는 Platform Ready와 실제 보안 적용이다. DEC-P1-FDS/TXN/ADMIN의 현행 유지·확대 유예 선택을 적용한다. 현재 후보 Plan: 2026-09-01 ~ 2026-09-18 (권장안; 실제 완료일·Gate 승인은 미확정).
 
 근거: [Issue #15](https://github.com/321Team/fds-project-baseline/issues/15), Issue 갱신 시각 `2026-09-10T04:01:11Z`. 댓글·승인 기록과 본문 보관본은 `../source-snapshot.json`에 보존하고 실제 Gate는 해당 증적·승인 범위로 판정한다.
+
+## 일정 권장안
+
+Start/End는 이번 Fast Tracking 후보의 계획값이다. 기존 승인 일정은 `audit/v3.1.18/fast-track-plan.json`에 전후 값으로 보존한다. 실제 착수·완료·Status·AC·승인을 변경한 것이 아니다. 교육장 주말 작업은 없으며 세부 AM/PM 배정과 선행 조건을 따른다.
 
 ## 적용 기준
 

@@ -15,22 +15,26 @@
 | Status | In Progress |
 | Priority | P0 |
 | Start | 2026-09-01 |
-| End | 2026-09-09 |
-| Calendar Days | 9 |
-| Working Days | 7 |
+| End | 2026-09-18 |
+| Calendar Days | 18 |
+| Working Days | 14 |
 | Lead | 이권욱 |
 | Support | 이하영 |
 | Exit Criteria | GitHub→Runner→Test→Build→Trivy→Harbor→Kubernetes Deploy→Health/E2E 흐름과 실패 시 Deploy 차단 Evidence 확보; 승인 Digest와 이전 Digest 복구 추적 |
 | Related Decision IDs | D03; D04; D19; D34; D35 |
 | Related Risk IDs | RISK-06; RISK-08 |
-| Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #16 snapshot 2026-09-10T02:09:24Z |
-| Schedule Note | 2026-09-08 사전 점검·구현 준비 착수. 기존 계획 09-01~09-09 보존. G1 09-07 목표일은 경과했으나 Runner/Harbor 실제 완료 증적은 미확인. G2 09-11 유지. 일정 재산정은 선행 증적·앱 저장소 확인 후 변경관리로 처리. Ansible 연관 이슈 #5는 앱 Delivery AC를 대체하지 않음. |
+| Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #16 snapshot 2026-09-10T02:09:24Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청 |
+| Schedule Note | Runner/Workflow·Negative Gate 준비를 플랫폼 구축과 병행하고 승인된 플랫폼·Harbor가 준비된 뒤 배포한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트. |
 
 ## 현재 실행·검토 상태
 
-2026-09-08 사전 점검·구현 준비 착수에 따른 In Progress를 반영한다. 정본 클러스터 Delivery Runtime은 미검증이다. P1-HBR AC-05에 제공할 Workflow/Source SHA·Run ID/Attempt·CI Trivy Scan Digest·Negative Gate·Push 제어·Manifest Digest patch와 이전 승인 Digest 복구 증적은 P1-CICD 책임이다. 임시 k3s의 일부 CI 성공 보고를 이 티켓 전체 CI/Gate PASS로 옮기지 않는다.
+2026-09-08 사전 점검·구현 준비 착수에 따른 In Progress를 반영한다. 정본 클러스터 Delivery Runtime은 미검증이다. P1-HBR AC-05에 제공할 Workflow/Source SHA·Run ID/Attempt·CI Trivy Scan Digest·Negative Gate·Push 제어·Manifest Digest patch와 이전 승인 Digest 복구 증적은 P1-CICD 책임이다. 임시 k3s의 일부 CI 성공 보고를 이 티켓 전체 CI/Gate PASS로 옮기지 않는다. 현재 후보 Plan: 2026-09-01 ~ 2026-09-18 (권장안; 실제 완료일·Gate 승인은 미확정).
 
 근거: [Issue #16](https://github.com/321Team/fds-project-baseline/issues/16), Issue 갱신 시각 `2026-09-10T02:09:24Z`. 댓글·승인 기록과 본문 보관본은 `../source-snapshot.json`에 보존하고 실제 Gate는 해당 증적·승인 범위로 판정한다.
+
+## 일정 권장안
+
+Start/End는 이번 Fast Tracking 후보의 계획값이다. 기존 승인 일정은 `audit/v3.1.18/fast-track-plan.json`에 전후 값으로 보존한다. 실제 착수·완료·Status·AC·승인을 변경한 것이 아니다. 교육장 주말 작업은 없으며 세부 AM/PM 배정과 선행 조건을 따른다.
 
 ## 적용 기준
 

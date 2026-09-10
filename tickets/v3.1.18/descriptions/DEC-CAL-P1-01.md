@@ -14,23 +14,29 @@
 | Type | Decision |
 | Status | To Do |
 | Priority | P0 |
-| Start | 2026-09-17 |
-| End | 2026-09-18 |
-| Calendar Days | 2 |
-| Working Days | 2 |
+| Start | 2026-09-11 |
+| End | 2026-09-11 |
+| Calendar Days | 1 |
+| Working Days | 1 |
 | Lead | 이권욱 |
 | Support | 이하영, 이재환 |
 | Exit Criteria | 09-20 일요일 Review 유지 또는 영업일 재배치, 참석자·승인권자·시간·대체일을 확정하고 WBS/Calendar 동기화 |
 | Related Decision IDs | D20 |
 | Related Risk IDs | RISK-05; RISK-13 |
-| Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #28 snapshot 2026-09-09T12:04:41Z |
-| Schedule Note | 09-20은 일요일이며 Working Days 0이다. 결정 전 해당 일정을 확정된 근무일로 간주하지 않는다. |
+| Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #28 snapshot 2026-09-09T12:04:41Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청 |
+| Schedule Note | 교육장 주말 작업 불가를 반영해 Review 09-22 오후를 권장한다. 참석자·승인자는 아직 확정하지 않으며 To Do를 유지한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트. |
 
 ## 현재 실행·검토 상태
 
-기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다.
+기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. 현재 후보 Plan: 2026-09-11 ~ 2026-09-11 (권장안; 실제 완료일·Gate 승인은 미확정).
 
 근거: [Issue #28](https://github.com/321Team/fds-project-baseline/issues/28), Issue 갱신 시각 `2026-09-09T12:04:41Z`. 댓글·승인 기록과 본문 보관본은 `../source-snapshot.json`에 보존하고 실제 Gate는 해당 증적·승인 범위로 판정한다.
+
+## 일정 권장안
+
+주말 교육장 사용 불가에 따라 기존 요구사항의 주말 유지 선택지는 사용하지 않는다. 평일 재배치 옵션으로 참석자·시간·승인권자를 확정하며 실제 Review는 선행 Gate 통과 후 진행한다.
+
+Start/End는 이번 Fast Tracking 후보의 계획값이다. 기존 승인 일정은 `audit/v3.1.18/fast-track-plan.json`에 전후 값으로 보존한다. 실제 착수·완료·Status·AC·승인을 변경한 것이 아니다. 교육장 주말 작업은 없으며 세부 AM/PM 배정과 선행 조건을 따른다.
 
 ## 적용 기준
 

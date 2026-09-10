@@ -15,22 +15,26 @@
 | Status | In Progress |
 | Priority | P0 |
 | Start | 2026-09-04 |
-| End | 2026-09-11 |
-| Calendar Days | 8 |
-| Working Days | 5 |
+| End | 2026-09-21 |
+| Calendar Days | 18 |
+| Working Days | 10 |
 | Lead | 이하영 |
 | Support | 이권욱, 이재환 |
 | Exit Criteria | PSA/SecurityContext/Default Deny/RBAC/HEP-GNP/Secretbox/LimitRange/Probe와 `.50/32→30080` 포함 Positive·Negative·Rollback Evidence PASS |
 | Related Decision IDs | D12; D17; D18; D19; D27; D31; D34 |
 | Related Risk IDs | RISK-06; RISK-07; RISK-08 |
-| Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #19 snapshot 2026-09-10T05:05:52Z |
-| Schedule Note | D17/D34 설계 승인 후 Manifest/Prework 착수. 09-08 이하영 개인 부재와 이권욱 지원을 기록하며 기존 일정은 유지한다. Runtime은 Platform Ready·보호 인계·Positive/Negative 증적 조건부다. |
+| Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #19 snapshot 2026-09-10T05:05:52Z; 사용자 2026-09-10 면접 휴가 추가 지시; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청 |
+| Schedule Note | 09-10 휴가 추가 후 기존 09-04~11 가용일은 4일. 권장 종료 09-21로 확장한 전체 계획창의 가용일은 10일이며 잔여 공수를 뜻하지 않는다. Runtime 검증은 플랫폼·앱 인수와 연계한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트. |
 
 ## 현재 실행·검토 상태
 
-Manifest/Prework와 호스트 보호 선행도구 연계 착수로 In Progress. D17/D34 설계 승인 완료. Runtime AC는 PASS 0 / FAIL 0 / NOT VERIFIED 6, 완료 HOLD / NOT READY. CP1의 HEP/GNP 각 0개, 3CP firewalld active 및 전체 Platform Ready 미완료 상태에서 일괄 firewalld OFF를 실행하지 않는다.
+Manifest/Prework와 호스트 보호 선행도구 연계 착수로 In Progress. D17/D34 설계 승인 완료. Runtime AC는 PASS 0 / FAIL 0 / NOT VERIFIED 6, 완료 HOLD / NOT READY. CP1의 HEP/GNP 각 0개, 3CP firewalld active 및 전체 Platform Ready 미완료 상태에서 일괄 firewalld OFF를 실행하지 않는다. 현재 후보 Plan: 2026-09-04 ~ 2026-09-21 (권장안; 실제 완료일·Gate 승인은 미확정).
 
 근거: [Issue #19](https://github.com/321Team/fds-project-baseline/issues/19), Issue 갱신 시각 `2026-09-10T05:05:52Z`. 댓글·승인 기록과 본문 보관본은 `../source-snapshot.json`에 보존하고 실제 Gate는 해당 증적·승인 범위로 판정한다.
+
+## 일정 권장안
+
+Start/End는 이번 Fast Tracking 후보의 계획값이다. 기존 승인 일정은 `audit/v3.1.18/fast-track-plan.json`에 전후 값으로 보존한다. 실제 착수·완료·Status·AC·승인을 변경한 것이 아니다. 교육장 주말 작업은 없으며 세부 AM/PM 배정과 선행 조건을 따른다.
 
 ## 적용 기준
 

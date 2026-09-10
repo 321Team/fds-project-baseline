@@ -14,23 +14,27 @@
 | Type | Task |
 | Status | To Do |
 | Priority | P0 |
-| Start | 2026-09-12 |
-| End | 2026-09-18 |
-| Calendar Days | 7 |
-| Working Days | 5 |
+| Start | 2026-09-11 |
+| End | 2026-09-22 |
+| Calendar Days | 12 |
+| Working Days | 8 |
 | Lead | 이권욱 |
 | Support | 이하영, 이재환 |
 | Exit Criteria | As-built Architecture, Test/Evidence Index, 구축·운영·복구 Runbook, P1 미완료 Known Issue의 풀네임 Owner·Due, Version/Source 및 Review 재현성 승인 |
 | Related Decision IDs | D12; D20; D25 |
 | Related Risk IDs | RISK-05; RISK-13 |
-| Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #24 snapshot 2026-09-10T02:09:36Z |
-| Schedule Note | 이재환 부재 전 09-13까지 HA/DR Evidence 초안을 인계하고 09-18 최종 검토한다. |
+| Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #24 snapshot 2026-09-10T02:09:36Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청 |
+| Schedule Note | 구축 시 증적·Runbook을 병행 축적하고 09-22 오전 Final Evidence와 함께 동결한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트. |
 
 ## 현재 실행·검토 상태
 
-이번 v3.1.18은 정본 후보의 누적 이력·설명·배포 정합성 통합 작업이다. 독립 리뷰·명시적 병합 승인·발행은 아직 없으며 P1-DOC 전체 문서 Freeze/Done을 의미하지 않는다. 정본 발행 뒤 Issue Description 최신화, 마지막에 속성 재계획을 수행한다.
+이번 v3.1.18은 정본 후보의 누적 이력·설명·배포 정합성 통합 작업이다. 독립 리뷰·명시적 병합 승인·발행은 아직 없으며 P1-DOC 전체 문서 Freeze/Done을 의미하지 않는다. 정본 발행 뒤 Issue Description 최신화, 마지막에 속성 재계획을 수행한다. 현재 후보 Plan: 2026-09-11 ~ 2026-09-22 (권장안; 실제 완료일·Gate 승인은 미확정).
 
 근거: [Issue #24](https://github.com/321Team/fds-project-baseline/issues/24), Issue 갱신 시각 `2026-09-10T02:09:36Z`. 댓글·승인 기록과 본문 보관본은 `../source-snapshot.json`에 보존하고 실제 Gate는 해당 증적·승인 범위로 판정한다.
+
+## 일정 권장안
+
+Start/End는 이번 Fast Tracking 후보의 계획값이다. 기존 승인 일정은 `audit/v3.1.18/fast-track-plan.json`에 전후 값으로 보존한다. 실제 착수·완료·Status·AC·승인을 변경한 것이 아니다. 교육장 주말 작업은 없으며 세부 AM/PM 배정과 선행 조건을 따른다.
 
 ## 적용 기준
 

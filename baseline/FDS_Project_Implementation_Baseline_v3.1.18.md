@@ -21,7 +21,7 @@
 - P1-CICD-01, P1-HBR-01, P1-SEC-01의 실제 In Progress를 동기화한다. P1-K8S는 CP1 진단 완료와 3CP+3Worker 미완료를 구분한다.
 - 임시 k3s 사전 실증을 정본 Runtime PASS로 확대하지 않는다. DB 증적 PR #2는 이미 병합됐으며 부분 증적의 한계는 유지한다.
 - P1-MON-01의 14개 Runtime AC + 필수 보조통제 2개와 P1-MON-02의 P1 고도화 범위를 정합화한다.
-- 이하영 09-08 개인 휴가, WBS 55개/전체 티켓 64개 집계 및 Lead 가용일 계산을 보완한다. 기존 Plan Start/End와 Gate 목표일은 유지한다.
+- 이하영 09-08·09-10 개인 휴가, WBS 55개/전체 티켓 64개 집계 및 Lead 가용일 계산을 보완한다. 휴가 반영 후 사용자 요청에 따른 Fast Tracking 권장안을 별도로 수립한다. 실제 상태와 승인 이력은 유지한다.
 - README·속성 정책·계정·라벨·마일스톤 사전 및 검증 도구를 통합한다. 실제 속성 적용은 정본 발행·Issue Description 최신화 뒤 새 계획으로 재개한다.
 
 변경별 출처·판정·미완료 조건은 `releases/v3.1.18/FDS_Canonical_Consolidation_Record_v3.1.18.md`, 티켓별 현재 설명은 `tickets/v3.1.18/descriptions/`를 참조한다. 과거 서술은 아래 이력이며 현재 완료 판정은 §16을 적용한다.
@@ -232,10 +232,10 @@ Terraform으로 AWS/ROSA 기반 Infrastructure를 구축하고, OCI VPN Relay를
 |---|---|
 | 프로젝트 착수 | 2026-08-24 |
 | `MS-G0-01` / G0 Design Freeze | 09-01 — **Done / FULL PASS** (`D-SEC-01/D17`, `D34` PASS) |
-| G1 Infrastructure Ready | 09-07 — D36 일정 조정 |
-| G2 Security / Feature Ready | 09-11 |
-| G3 Review Ready Freeze | 09-18 |
-| Phase 1 Review | 09-20 |
+| G1 Infrastructure Ready | 09-17 오후 — Fast Tracking 권장안 |
+| G2 Security / Feature Ready | 09-21 오후 — 권장안 |
+| G3 Review Ready Freeze | 09-22 오전 — 권장안 |
+| Phase 1 Review | 09-22 오후 — 평일 권장안 |
 | Phase 1 Close | 09-23 |
 | Phase 2 Start | 09-28 |
 | OCI Go/No-Go | 10-02 |
@@ -243,16 +243,16 @@ Terraform으로 AWS/ROSA 기반 Infrastructure를 구축하고, OCI VPN Relay를
 | G5 ROSA Application Ready | 10-16 |
 | G6 Hybrid Integration Ready | 10-22 |
 | Deliverable Freeze | 10-23 |
-| Phase 2 Review | 10-24 |
+| Phase 2 Review | 10-23 오후 — 평일 권장안 |
 | Project Close | 10-26 |
 
 ### Non-working / Absence
 
-- 이하영: 08-28 시험 휴가, 09-08 면접 휴가(개인 부재, 이권욱 지원)
+- 이하영: 08-28 시험 휴가, 09-08 면접 휴가(개인 부재, 이권욱 지원), 09-10 면접 휴가(사용자 추가 지시)
 - 이재환: 09-04 개인 사정 휴가, 09-14 ~ 09-17 예비군
 - Non-working: 09-24 ~ 09-25, 10-05, 10-09
 
-개인 휴가는 해당 담당자의 가용일에서만 제외하며 전사 Non-working Date로 취급하지 않는다. 휴가/비근무일에는 Critical Task의 단독 담당 완료일을 배치하지 않는다. WBS의 `Lead Workdays`는 전사 비근무일과 해당 Lead의 개인 부재를 제외해 산정한다. 2026-09-08 개인 부재는 해당 Lead의 가용일에서 제외하며 Start/End를 자동 변경하지 않는다. 실제 지연·미완료는 별도 Lead 판단 대상으로 기록한다. 2026-09-04 부재 영향은 `P1-DB-01`, `P1-APP-01`, `P1-MON-01`, `MS-G1-01`에만 적용하며 다른 담당자의 작업일은 유지한다.
+개인 휴가는 해당 담당자의 가용일에서만 제외하며 전사 Non-working Date로 취급하지 않는다. 휴가/비근무일에는 Critical Task의 단독 담당 완료일을 배치하지 않는다. WBS의 `Lead Workdays`는 전사 비근무일과 해당 Lead의 개인 부재를 제외해 산정한다. 2026-09-08 및 2026-09-10 개인 부재는 해당 Lead의 가용일에서 제외하며 Start/End를 자동 변경하지 않는다. 실제 지연·미완료는 별도 Lead 판단 대상으로 기록한다. 2026-09-04 부재 영향은 `P1-DB-01`, `P1-APP-01`, `P1-MON-01`, `MS-G1-01`에만 적용하며 다른 담당자의 작업일은 유지한다.
 
 ---
 
@@ -1085,29 +1085,29 @@ Rolling Update, CP Failure, Harbor Restore는 P1이며 미완료 시 Known Issue
 | DEC-P1-ADMIN-01 / #6 | Done | 2026-09-08 / 2026-09-09 | 2026-09-09 Decision Done. 기존 Grafana 관측·합성 데이터 시연으로 범위를 한정했다. 새 업무 역할·2인 승인·세션 수명·관리 감사 정책값은 유예. OID-01 Source/Identity와 기존 보안 부정시험은 유지한다. |
 | D-SEC-01 / #7 | Done | 2026-08-26 / 2026-09-01 | 기준 시점의 Done 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. |
 | MS-G0-01 / #8 | Done | 2026-08-26 / 2026-09-01 | 기준 시점의 Done 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. |
-| P1-LB-01 / #9 | In Progress | 2026-08-27 / 2026-09-07 | Stage A 기존 Technical/Evidence PASS 및 이하영의 조건부 인수는 유지한다. 증적 PR #6의 현재 Permanent Supplement는 독립 승인·main 편입 완료. 남은 조건은 이하영의 Supplement 인정 범위 판단과 LB-A-01 IP 중복검사 원본/고정 참조 연결이다. Stage B Backend 3대·인증 API·Failover/Recovery는 미완료이며 Ticket In Progress를 유지한다. |
-| P1-K8S-01 / #10 | In Progress | 2026-08-27 / 2026-09-04 | CP1 Node Ready·API readyz 성공, etcd member 1개(CP1)·learner 없음이 제출 증적 검토로 확인됐다. CP2 부분 bootstrap 잔여 구성, CP2/3 가입 미완료와 CP 간 2379/2380/10250 허용 누락이 남아 있다. 원 join 실패의 단일 원인은 확정하지 않는다. infra-ansible PR #3 Gate 0 도구는 병합됐고 infra-kubernetes PR #2 HEAD 068661e076de02669170d3582f3d596d6e1a8eb3의 v1.1 재점검은 110개 조회 기록 rc=0으로 검토됐다. CP1 canary 적용·join 재개·6/6 Ready·etcd 3 Member·HEP/GNP 보호 인수는 미완료다. |
-| P1-DB-01 / #11 | In Progress | 2026-08-28 / 2026-09-07 | 임시 edge01 k3s/fds 사전 실증의 부분 증적은 fds-project-evidence PR #2 HEAD 51c3ed8b0c32110543bc08eb4128663ff75dbaa7에서 2026-09-09 병합됐다(36a65c64763077eabe680b81827b1c4dc6ad3fc5). 9/10 댓글의 PR 미병합 표기는 실제 병합 기록으로 정정한다. 독립 Runtime 재시험은 이번에 하지 않았다. 0002 코드·병합·운영 적용·신규 환경 재현, Source별 정상/거부와 Listener/정책 근거, 시간대·Timestamp 승인 계약, 백업 원본 해시·Restore 및 정본 클러스터 검증은 남아 있다. P1-DB Done/IF-04/G1 PASS가 아니다. |
+| P1-LB-01 / #9 | In Progress | 2026-08-27 / 2026-09-17 | Stage A 기존 Technical/Evidence PASS 및 이하영의 조건부 인수는 유지한다. 증적 PR #6의 현재 Permanent Supplement는 독립 승인·main 편입 완료. 남은 조건은 이하영의 Supplement 인정 범위 판단과 LB-A-01 IP 중복검사 원본/고정 참조 연결이다. Stage B Backend 3대·인증 API·Failover/Recovery는 미완료이며 Ticket In Progress를 유지한다. 현재 후보 Plan: 2026-08-27 ~ 2026-09-17 (권장안; 실제 완료일·Gate 승인은 미확정). |
+| P1-K8S-01 / #10 | In Progress | 2026-08-27 / 2026-09-17 | CP1 Node Ready·API readyz 성공, etcd member 1개(CP1)·learner 없음이 제출 증적 검토로 확인됐다. CP2 부분 bootstrap 잔여 구성, CP2/3 가입 미완료와 CP 간 2379/2380/10250 허용 누락이 남아 있다. 원 join 실패의 단일 원인은 확정하지 않는다. infra-ansible PR #3 Gate 0 도구는 병합됐고 infra-kubernetes PR #2 HEAD 068661e076de02669170d3582f3d596d6e1a8eb3의 v1.1 재점검은 110개 조회 기록 rc=0으로 검토됐다. CP1 canary 적용·join 재개·6/6 Ready·etcd 3 Member·HEP/GNP 보호 인수는 미완료다. 추가 Worker 검토(PR #3 HEAD 3309866766236bbdbe20b9e2ae1d8fd6f9233bcd)에서 CP→Worker kubelet TCP 0/9, kubelet auto-restart·listener 부재를 확인했다. Worker→LB TCP 3/3 성공은 API 인증·클러스터 인수 PASS가 아니다. 6대 시간 속성 공백과 Worker journal/설정 경로·Cockpit mask는 v1.1 supplement로 보완해야 한다. PR #2는 동일 HEAD의 Ready for review / 이하영 리뷰 요청 상태다. 현재 후보 Plan: 2026-08-27 ~ 2026-09-17 (권장안; 실제 완료일·Gate 승인은 미확정). |
+| P1-DB-01 / #11 | In Progress | 2026-08-28 / 2026-09-17 | 임시 edge01 k3s/fds 사전 실증의 부분 증적은 fds-project-evidence PR #2 HEAD 51c3ed8b0c32110543bc08eb4128663ff75dbaa7에서 2026-09-09 병합됐다(36a65c64763077eabe680b81827b1c4dc6ad3fc5). 9/10 댓글의 PR 미병합 표기는 실제 병합 기록으로 정정한다. 독립 Runtime 재시험은 이번에 하지 않았다. 0002 코드·병합·운영 적용·신규 환경 재현, Source별 정상/거부와 Listener/정책 근거, 시간대·Timestamp 승인 계약, 백업 원본 해시·Restore 및 정본 클러스터 검증은 남아 있다. P1-DB Done/IF-04/G1 PASS가 아니다. 현재 후보 Plan: 2026-08-28 ~ 2026-09-17 (권장안; 실제 완료일·Gate 승인은 미확정). |
 | P1-DNS-01 / #12 | Done | 2026-08-28 / 2026-09-03 | 기준 시점의 Done 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. |
-| P1-HBR-01 / #13 | In Progress | 2026-08-31 / 2026-09-04 | 구현 절차 및 6차 리뷰 후속 보완 착수로 In Progress. Runtime AC는 PASS 0 / FAIL 0 / NOT VERIFIED 6, 완료 HOLD. AC-05는 CI Scan Digest·Harbor Artifact·Manifest image@sha256·Pod imageID 4개 동일성으로 검증하고 CI 산출물은 P1-CICD에서 인수한다. Harbor Scanner 제외/CI-only 전환, Robot Token Never와 미확정 Threshold는 승인 대기 제안이다. |
-| ICR-D-NET-01-01 / #14 | In Progress | 2026-09-01 / TBD — Runtime Evidence 완료 후 확정 | v1.1 읽기 전용 CP 재점검은 snapshot/일반 조회 110개 기록 rc=0, gaps 없음으로 검토됐다. 소스 HEAD 068661e076de02669170d3582f3d596d6e1a8eb3는 Draft PR #2이며 독립 리뷰·실행 결정 대기다. CP1 제한 canary의 방화벽 적용·복구·join은 미실행. CP2/3·Worker·NTP 목적지 고정·HEP/GNP 및 기존 IF-06B/IF-16 범위는 잔여다. 6대 기준 AC와 종료일 TBD를 유지한다. |
-| P1-APP-01 / #15 | In Progress | 2026-09-01 / 2026-09-10 | 임시 k3s/fds의 FastAPI 스캐폴딩, /livez·/readyz 및 Secret 갱신 이력이 보고됐다. 정본 fds-app 배포는 미검증이며 Service 80→8000, 불변 Digest, RBAC, 승인 경로 및 실패 응답/DB 저장 계약 확인이 남아 있다. D17/D34 설계 승인은 2026-09-01 완료됐고 현재 대기는 Platform Ready와 실제 보안 적용이다. DEC-P1-FDS/TXN/ADMIN의 현행 유지·확대 유예 선택을 적용한다. |
-| P1-CICD-01 / #16 | In Progress | 2026-09-01 / 2026-09-09 | 2026-09-08 사전 점검·구현 준비 착수에 따른 In Progress를 반영한다. 정본 클러스터 Delivery Runtime은 미검증이다. P1-HBR AC-05에 제공할 Workflow/Source SHA·Run ID/Attempt·CI Trivy Scan Digest·Negative Gate·Push 제어·Manifest Digest patch와 이전 승인 Digest 복구 증적은 P1-CICD 책임이다. 임시 k3s의 일부 CI 성공 보고를 이 티켓 전체 CI/Gate PASS로 옮기지 않는다. |
-| P1-MON-01 / #17 | In Progress | 2026-09-07 / 2026-09-11 | 담당자 9/10 보고는 임시 k3s/fds 사전 실증이다. kube-state-metrics, Alertmanager 수신, Dashboard 일부는 보고됐지만 Prometheus/Grafana의 monitoring-api 이전, 3종 PVC, Default Deny, node-exporter DaemonSet/monitoring-node, Prometheus SA/RBAC, monitor01 Blackbox/remote_write가 미완료다. 정본 Runtime NOT VERIFIED / In Progress. Acceptance는 Baseline §11.6의 14개와 필수 보조통제 2개를 구분한다. |
-| MS-G1-01 / #18 | To Do | 2026-09-07 / 2026-09-07 | G1 목표 2026-09-07은 유지하되 이미 경과했다. Stage A PASS나 CP1 Ready만으로 G1을 통과시키지 않는다. 3CP+3Worker·Stage B·Harbor·Runner·PostgreSQL 및 필요한 TLS/Source Runtime 증적이 남아 있다. 일정 재기준선화는 별도 Lead 결정이 필요하다. |
-| P1-SEC-01 / #19 | In Progress | 2026-09-04 / 2026-09-11 | Manifest/Prework와 호스트 보호 선행도구 연계 착수로 In Progress. D17/D34 설계 승인 완료. Runtime AC는 PASS 0 / FAIL 0 / NOT VERIFIED 6, 완료 HOLD / NOT READY. CP1의 HEP/GNP 각 0개, 3CP firewalld active 및 전체 Platform Ready 미완료 상태에서 일괄 firewalld OFF를 실행하지 않는다. |
-| P1-E2E-01 / #20 | To Do | 2026-09-09 / 2026-09-18 | 담당자 보고 기준 미착수 / NOT RUN. 정본 3CP+3Worker, Stage B, App 배포와 기존 Initial/Final E2E·Regression 증적이 필요하다. 단일노드 개별 실증을 통합 E2E로 인정하지 않는다. Decision #4~6의 신규 기능 유예와 기존 실패 경로·보안 부정시험 경계는 유지한다. |
-| P1-DR-01 / #21 | To Do | 2026-09-10 / 2026-09-13 | 9/1 격리 신규 DB의 pg_dump→TRUNCATE→pg_restore 13건 재현과 9/3 dump 보관이 담당자에 의해 보고됐다. 운영 db01 원본 변경을 뜻하지 않는다. 백업 원본 해시 독립 검증, 정식 Evidence 등록·Runbook·정본 Restore 후 E2E는 미완료다. 사전 착수 보고만으로 To Do를 자동 변경하지 않는다. |
-| P1-HA-01 / #22 | To Do | 2026-09-10 / 2026-09-13 | 임시 단일노드 k3s drain/uncordon 참고 로그만 보고됐다. 재배치할 다른 Worker가 없어 Continuity 실증으로 인정하지 않는다. 최소 2 Worker 분산 및 externalTrafficPolicy Local 조건의 정본 무중단 시험은 NOT RUN / To Do다. |
-| MS-G2-01 / #23 | To Do | 2026-09-11 / 2026-09-11 | G2 목표 2026-09-11 유지. App/Security/CI-CD/Hybrid Monitoring/Initial E2E Runtime 증적은 미완료다. Decision #4~6 종결이나 문서·도구 시험을 G2 PASS로 확대하지 않는다. |
-| P1-DOC-01 / #24 | To Do | 2026-09-12 / 2026-09-18 | 이번 v3.1.18은 정본 후보의 누적 이력·설명·배포 정합성 통합 작업이다. 독립 리뷰·명시적 병합 승인·발행은 아직 없으며 P1-DOC 전체 문서 Freeze/Done을 의미하지 않는다. 정본 발행 뒤 Issue Description 최신화, 마지막에 속성 재계획을 수행한다. |
-| P1-MON-02 / #25 | To Do | 2026-09-12 / 2026-09-18 | 담당자 보고 기준 미착수 / NOT RUN, Plan 2026-09-12~09-18 유지. Baseline §1.2/§11과 D33의 P1 범위인 HA·Dashboard/Alert 고도화·장기 보존을 수행한다. P0 기본 3 View·기본 Alert·15일 Retention·Watchdog은 P1-MON-01 책임이며 중복 완료 기준을 제거한다. P1 미완료는 P0 Gate를 자동 차단하지 않는다. |
-| P1-DR-02 / #26 | To Do | 2026-09-14 / 2026-09-18 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. |
-| P1-HA-02 / #27 | To Do | 2026-09-14 / 2026-09-18 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. |
-| DEC-CAL-P1-01 / #28 | To Do | 2026-09-17 / 2026-09-18 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. |
-| MS-G3-01 / #29 | To Do | 2026-09-18 / 2026-09-18 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. |
-| P1-REV-01 / #30 | To Do | 2026-09-18 / 2026-09-23 | 9/10 진행 롤업은 구성요소별 사전 실증과 남은 Runtime을 구분한다. P1-DB/APP/MON의 정본 검증은 K8S·Stage B에 종속하고 DR/HA 사전 자료는 정식 완료 증적이 아니다. G2/G3/Close 일정과 Review/Close To Do 상태를 유지한다. |
-| MS-P1-REVIEW-01 / #31 | To Do | 2026-09-20 / 2026-09-20 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. |
+| P1-HBR-01 / #13 | In Progress | 2026-08-31 / 2026-09-17 | 구현 절차 및 6차 리뷰 후속 보완 착수로 In Progress. Runtime AC는 PASS 0 / FAIL 0 / NOT VERIFIED 6, 완료 HOLD. AC-05는 CI Scan Digest·Harbor Artifact·Manifest image@sha256·Pod imageID 4개 동일성으로 검증하고 CI 산출물은 P1-CICD에서 인수한다. Harbor Scanner 제외/CI-only 전환, Robot Token Never와 미확정 Threshold는 승인 대기 제안이다. 현재 후보 Plan: 2026-08-31 ~ 2026-09-17 (권장안; 실제 완료일·Gate 승인은 미확정). |
+| ICR-D-NET-01-01 / #14 | In Progress | 2026-09-01 / 2026-09-21 | CP v1.1 재점검 110개 기록의 사전 증적 검증은 완료됐다. PR #2 HEAD 068661e076de02669170d3582f3d596d6e1a8eb3는 Ready for review이며 이하영(hayeounglee) 리뷰 요청 완료, 독립 승인·운영 적용은 대기다. 후속 Worker 수집 검토는 무결성 PASS / 완전성 PARTIAL / 운영 인수 HOLD다. 99개 query rc=0이나 6대 time_state가 비어 v1.1 supplement 재수집이 필요하다. CP→Worker 10250은 0/9, 허용 규칙·listener 부재와 kubelet auto-restart를 함께 확인했다. Worker→LB TCP 3/3 성공은 부분 증적이다. NTP 고정 기본·대체 목적지 승인, Cockpit 잔여 허용·mask 확인, CP1 canary·CP2/3·Worker 단계 적용, HEP/GNP·IF-06B·IF-16 및 ICR AC-01~20은 미완료다. 기존 End/기간 TBD는 이력에 보존하며 실제 종료는 미확정이다. 현재 후보 Plan: 2026-09-01 ~ 2026-09-21 (권장안; 실제 완료일·Gate 승인은 미확정). |
+| P1-APP-01 / #15 | In Progress | 2026-09-01 / 2026-09-18 | 임시 k3s/fds의 FastAPI 스캐폴딩, /livez·/readyz 및 Secret 갱신 이력이 보고됐다. 정본 fds-app 배포는 미검증이며 Service 80→8000, 불변 Digest, RBAC, 승인 경로 및 실패 응답/DB 저장 계약 확인이 남아 있다. D17/D34 설계 승인은 2026-09-01 완료됐고 현재 대기는 Platform Ready와 실제 보안 적용이다. DEC-P1-FDS/TXN/ADMIN의 현행 유지·확대 유예 선택을 적용한다. 현재 후보 Plan: 2026-09-01 ~ 2026-09-18 (권장안; 실제 완료일·Gate 승인은 미확정). |
+| P1-CICD-01 / #16 | In Progress | 2026-09-01 / 2026-09-18 | 2026-09-08 사전 점검·구현 준비 착수에 따른 In Progress를 반영한다. 정본 클러스터 Delivery Runtime은 미검증이다. P1-HBR AC-05에 제공할 Workflow/Source SHA·Run ID/Attempt·CI Trivy Scan Digest·Negative Gate·Push 제어·Manifest Digest patch와 이전 승인 Digest 복구 증적은 P1-CICD 책임이다. 임시 k3s의 일부 CI 성공 보고를 이 티켓 전체 CI/Gate PASS로 옮기지 않는다. 현재 후보 Plan: 2026-09-01 ~ 2026-09-18 (권장안; 실제 완료일·Gate 승인은 미확정). |
+| P1-MON-01 / #17 | In Progress | 2026-09-07 / 2026-09-18 | 담당자 9/10 보고는 임시 k3s/fds 사전 실증이다. kube-state-metrics, Alertmanager 수신, Dashboard 일부는 보고됐지만 Prometheus/Grafana의 monitoring-api 이전, 3종 PVC, Default Deny, node-exporter DaemonSet/monitoring-node, Prometheus SA/RBAC, monitor01 Blackbox/remote_write가 미완료다. 정본 Runtime NOT VERIFIED / In Progress. Acceptance는 Baseline §11.6의 14개와 필수 보조통제 2개를 구분한다. 현재 후보 Plan: 2026-09-07 ~ 2026-09-18 (권장안; 실제 완료일·Gate 승인은 미확정). |
+| MS-G1-01 / #18 | To Do | 2026-09-17 / 2026-09-17 | 기존 G1 목표 2026-09-07은 미달성으로 경과했다. 이번 일정 권장안은 2026-09-17 오후를 조건부 목표로 둔다. Stage A PASS나 CP1 Ready만으로 G1을 통과시키지 않는다. 3CP+3Worker·Stage B·Harbor·Runner·PostgreSQL 및 필요한 TLS/Source Runtime 증적이 남아 있다. |
+| P1-SEC-01 / #19 | In Progress | 2026-09-04 / 2026-09-21 | Manifest/Prework와 호스트 보호 선행도구 연계 착수로 In Progress. D17/D34 설계 승인 완료. Runtime AC는 PASS 0 / FAIL 0 / NOT VERIFIED 6, 완료 HOLD / NOT READY. CP1의 HEP/GNP 각 0개, 3CP firewalld active 및 전체 Platform Ready 미완료 상태에서 일괄 firewalld OFF를 실행하지 않는다. 현재 후보 Plan: 2026-09-04 ~ 2026-09-21 (권장안; 실제 완료일·Gate 승인은 미확정). |
+| P1-E2E-01 / #20 | To Do | 2026-09-11 / 2026-09-22 | 담당자 보고 기준 미착수 / NOT RUN. 정본 3CP+3Worker, Stage B, App 배포와 기존 Initial/Final E2E·Regression 증적이 필요하다. 단일노드 개별 실증을 통합 E2E로 인정하지 않는다. Decision #4~6의 신규 기능 유예와 기존 실패 경로·보안 부정시험 경계는 유지한다. 현재 후보 Plan: 2026-09-11 ~ 2026-09-22 (권장안; 실제 완료일·Gate 승인은 미확정). |
+| P1-DR-01 / #21 | To Do | 2026-09-11 / 2026-09-21 | 9/1 격리 신규 DB의 pg_dump→TRUNCATE→pg_restore 13건 재현과 9/3 dump 보관이 담당자에 의해 보고됐다. 운영 db01 원본 변경을 뜻하지 않는다. 백업 원본 해시 독립 검증, 정식 Evidence 등록·Runbook·정본 Restore 후 E2E는 미완료다. 사전 착수 보고만으로 To Do를 자동 변경하지 않는다. 현재 후보 Plan: 2026-09-11 ~ 2026-09-21 (권장안; 실제 완료일·Gate 승인은 미확정). |
+| P1-HA-01 / #22 | To Do | 2026-09-11 / 2026-09-21 | 임시 단일노드 k3s drain/uncordon 참고 로그만 보고됐다. 재배치할 다른 Worker가 없어 Continuity 실증으로 인정하지 않는다. 최소 2 Worker 분산 및 externalTrafficPolicy Local 조건의 정본 무중단 시험은 NOT RUN / To Do다. 현재 후보 Plan: 2026-09-11 ~ 2026-09-21 (권장안; 실제 완료일·Gate 승인은 미확정). |
+| MS-G2-01 / #23 | To Do | 2026-09-21 / 2026-09-21 | G2 목표 2026-09-11 유지. App/Security/CI-CD/Hybrid Monitoring/Initial E2E Runtime 증적은 미완료다. Decision #4~6 종결이나 문서·도구 시험을 G2 PASS로 확대하지 않는다. 현재 후보 Plan: 2026-09-21 ~ 2026-09-21 (권장안; 실제 완료일·Gate 승인은 미확정). |
+| P1-DOC-01 / #24 | To Do | 2026-09-11 / 2026-09-22 | 이번 v3.1.18은 정본 후보의 누적 이력·설명·배포 정합성 통합 작업이다. 독립 리뷰·명시적 병합 승인·발행은 아직 없으며 P1-DOC 전체 문서 Freeze/Done을 의미하지 않는다. 정본 발행 뒤 Issue Description 최신화, 마지막에 속성 재계획을 수행한다. 현재 후보 Plan: 2026-09-11 ~ 2026-09-22 (권장안; 실제 완료일·Gate 승인은 미확정). |
+| P1-MON-02 / #25 | To Do | TBD — P0 인수 후 재계획 / TBD — 구현 유예 권장 | 담당자 보고 기준 미착수 / NOT RUN, Plan 2026-09-12~09-18 유지. Baseline §1.2/§11과 D33의 P1 범위인 HA·Dashboard/Alert 고도화·장기 보존을 수행한다. P0 기본 3 View·기본 Alert·15일 Retention·Watchdog은 P1-MON-01 책임이며 중복 완료 기준을 제거한다. P1 미완료는 P0 Gate를 자동 차단하지 않는다. 현재 후보 Plan: TBD — P0 인수 후 재계획 ~ TBD — 구현 유예 권장 (권장안; 실제 완료일·Gate 승인은 미확정). |
+| P1-DR-02 / #26 | To Do | TBD — P0 인수 후 재계획 / TBD — 구현 유예 권장 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. 현재 후보 Plan: TBD — P0 인수 후 재계획 ~ TBD — 구현 유예 권장 (권장안; 실제 완료일·Gate 승인은 미확정). |
+| P1-HA-02 / #27 | To Do | TBD — P0 인수 후 재계획 / TBD — 구현 유예 권장 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. 현재 후보 Plan: TBD — P0 인수 후 재계획 ~ TBD — 구현 유예 권장 (권장안; 실제 완료일·Gate 승인은 미확정). |
+| DEC-CAL-P1-01 / #28 | To Do | 2026-09-11 / 2026-09-11 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. 현재 후보 Plan: 2026-09-11 ~ 2026-09-11 (권장안; 실제 완료일·Gate 승인은 미확정). |
+| MS-G3-01 / #29 | To Do | 2026-09-22 / 2026-09-22 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. 현재 후보 Plan: 2026-09-22 ~ 2026-09-22 (권장안; 실제 완료일·Gate 승인은 미확정). |
+| P1-REV-01 / #30 | To Do | 2026-09-22 / 2026-09-23 | 9/10 진행 롤업은 구성요소별 사전 실증과 남은 Runtime을 구분한다. P1-DB/APP/MON의 정본 검증은 K8S·Stage B에 종속하고 DR/HA 사전 자료는 정식 완료 증적이 아니다. G2/G3/Close 일정과 Review/Close To Do 상태를 유지한다. 현재 후보 Plan: 2026-09-22 ~ 2026-09-23 (권장안; 실제 완료일·Gate 승인은 미확정). |
+| MS-P1-REVIEW-01 / #31 | To Do | 2026-09-22 / 2026-09-22 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. 현재 후보 Plan: 2026-09-22 ~ 2026-09-22 (권장안; 실제 완료일·Gate 승인은 미확정). |
 | MS-P1-CLOSE-01 / #32 | To Do | 2026-09-23 / 2026-09-23 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. |
 | MS-P2-START-01 / #33 | To Do | 2026-09-28 / 2026-09-28 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. |
 | P2-ARC-01 / #34 | To Do | 2026-09-28 / 2026-09-28 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. |
@@ -1128,11 +1128,11 @@ Rolling Update, CP Failure, Harbor Restore는 P1이며 미완료 시 Known Issue
 | P2-DOC-01 / #49 | To Do | 2026-10-19 / 2026-10-23 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. |
 | P2-E2E-01 / #50 | To Do | 2026-10-19 / 2026-10-22 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. |
 | P2-OP-01 / #51 | To Do | 2026-10-19 / 2026-10-20 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. |
-| DEC-CAL-P2-01 / #52 | To Do | 2026-10-22 / 2026-10-23 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. |
+| DEC-CAL-P2-01 / #52 | To Do | 2026-10-22 / 2026-10-22 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. 현재 후보 Plan: 2026-10-22 ~ 2026-10-22 (권장안; 실제 완료일·Gate 승인은 미확정). |
 | MS-G6-01 / #53 | To Do | 2026-10-22 / 2026-10-22 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. |
 | MS-DELIVERABLE-FREEZE-01 / #54 | To Do | 2026-10-23 / 2026-10-23 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. |
 | P2-REV-01 / #55 | To Do | 2026-10-23 / 2026-10-26 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. |
-| MS-P2-REVIEW-01 / #56 | To Do | 2026-10-24 / 2026-10-24 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. |
+| MS-P2-REVIEW-01 / #56 | To Do | 2026-10-23 / 2026-10-23 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. 현재 후보 Plan: 2026-10-23 ~ 2026-10-23 (권장안; 실제 완료일·Gate 승인은 미확정). |
 | MS-PROJECT-CLOSE-01 / #57 | To Do | 2026-10-26 / 2026-10-26 | 기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. |
 | CR-P1-ANS-01-01 / #58 | Done | 2026-09-04 / 2026-09-07 | 2026-09-07 CR 최종 승인·병합 완료. 승인 HEAD 507d8882a04f53640b07251bcc234b7d6ee81c09, merge 4f9bdb7c08704eebb3d1b294751e51b0721b6af4, AC 11/11은 당시 실행·Support 승인 기록에 근거한다. CI NOT RUN. FUP-01 원본 보완·독립 편입과 증적 PR #1 병합은 완료됐으며 Stage A 조건부 인수의 잔여 조건, Bootstrap 해제·Stage B는 별도다. |
 | D-ARC-01 / #59 | Done | 원본 속성 미확인 / 원본 속성 미확인 | D-ARC-01 Done/2026-08-26 유지. FUP-06 후보 원본 편입과 수용은 완료됐으나 개인별 과거 승인 회신·시각 참조 한계는 유지한다. 현재 Issue의 Phase/Type/일정 등 원본 미확인 속성은 추정하지 않는다. |
@@ -1152,9 +1152,9 @@ Rolling Update, CP Failure, Harbor Restore는 P1이며 미완료 시 Known Issue
 | Gate | Status | Date | Basis |
 |---|---|---|---|
 | MS-G0-01 / G0 Design Freeze | Done / FULL PASS | 2026-09-01 | D-ARC-01/D-NET-01/D-WBS-01/D-SEC-01 `Done`; D17/D34 PASS. D35는 정합성 보정이며 G0를 재개방하지 않음 |
-| G1 Infrastructure Ready | To Do | 2026-09-07 Target | D36 일정 조정. D19 설계 PASS; P1-K8S/LB Stage B/Harbor/Runner/PostgreSQL, 인증서·CA Trust 배포 및 Connectivity Runtime Evidence 필요 |
-| G2 Security / Feature Ready | To Do | 2026-09-11 Target | D18/D19/D33 설계 PASS; App/Security/CI-CD/Hybrid Monitoring/Initial E2E 및 Allowlist·TLS·Push/Pull·Heartbeat 장애탐지 Runtime Evidence 필요 |
-| G3 Review Ready | To Do | 2026-09-18 Target | Final E2E/Drain/DB Restore/Runbook/Critical 0 |
+| G1 Infrastructure Ready | To Do | 2026-09-17 Target / 권장안 | 기존 D36 목표 09-07 미달성. D19 설계 PASS; P1-K8S/LB Stage B/Harbor/Runner/PostgreSQL, 인증서·CA Trust 배포 및 Connectivity Runtime Evidence 필요 |
+| G2 Security / Feature Ready | To Do | 2026-09-21 Target / 권장안 | D18/D19/D33 설계 PASS; App/Security/CI-CD/Hybrid Monitoring/Initial E2E 및 Allowlist·TLS·Push/Pull·Heartbeat 장애탐지 Runtime Evidence 필요 |
+| G3 Review Ready | To Do | 2026-09-22 Target / 권장안 | Final E2E/Drain/DB Restore/Runbook/Critical 0 |
 
 `MS-G0-01`은 D32에 따라 등록되었고 D34에 따라 `Done / FULL PASS`로 종결됐다. D35는 Interface Register 정합성과 IF-11A 설계 승인을 확정하며 D36은 Stage A Runtime PASS와 P1-K8S 착수, P1-DNS 종결 및 일정 조정만 반영한다. D-SEC-01/G0는 재개방하지 않고 P1-LB Stage B·P1-K8S·G1/G2 Runtime 완료를 선언하지 않는다.
 
@@ -1206,3 +1206,32 @@ P1 미완료는 P0 Gate를 차단하지 않으며 Known Issue, 후속 Due와 풀
 - Grafana, Deploy Grafana on Kubernetes: https://grafana.com/docs/grafana/latest/setup-grafana/installation/kubernetes/
 
 공식 문서의 예시는 기본 동작을 설명하기 위한 것이며 프로젝트 보안 기준을 자동 충족하지 않는다. 본 Baseline은 `latest` Image 사용, 기본 관리자 암호, LoadBalancer 외부 노출을 허용하지 않고 승인 Digest·Secret·ClusterIP·접근통제를 우선한다.
+
+## 16.3 2026-09-10 추가 유입 — 면접 휴가·ICR Worker/NTP
+
+이하영의 09-10 면접 휴가를 개인 부재로 추가한다. 기존 09-08 기록은 유지한다. P1-SEC-01의 계획 09-04~11 중 가용 작업일은 이전 후보 5일에서 4일이다. ICR은 이권욱 Lead·이하영 Support와 실제 종료 미확정을 유지하며, PR #2 독립 리뷰와 지원 일정의 가용성 영향을 추적한다. 대체 Reviewer를 지정하지 않는다. ICR의 새 권장 Plan End는 09-21이며 실제 완료일이 아니다.
+
+초기 후보 HEAD `46e0424bf614c8b5ae14ea5d93864d72c92e4ca0`에는 13:56 KST CP 재점검까지 반영돼 있었다. 이후 Worker/NTP 검토와 PR #2 Ready for review·이하영 요청 상태를 추가한다. 후속 근거는 `audit/v3.1.18/followup-20260910.json`과 [고정 잔여 작업표](https://github.com/321Team/infra-kubernetes/blob/3309866766236bbdbe20b9e2ae1d8fd6f9233bcd/docs/change/ICR-D-NET-01-01/RESIDUAL_WORK_20260910.md)다.
+
+Worker 제출본 검토는 무결성 PASS / 완전성 PARTIAL / 운영 인수 HOLD다. CP→Worker 10250 0/9와 kubelet listener 부재·auto-restart를 함께 다루고 포트 허용만으로 완료를 선언하지 않는다. Worker→LB TCP 3/3은 TLS/Auth/전체 Backend 인수 증거가 아니다. 6대 시간 속성 공백은 v1.1 supplement로 보완하고, NTP 선택 IP 4종을 승인된 고정 목적지로 바꾸어 기록하지 않는다.
+
+순서는 보완 수집·PR #2 독립 리뷰 → 적용 창의 최신 inspect·CP1 canary 검증 → 별도 CP2/CP3·Worker 적용/가입 판단 → NTP 승인·HEP/GNP 보호 인계다. IF-06B/IF-16, Negative/Reboot/Rollback 및 ICR AC-01~20은 기존 미완료 상태를 유지한다.
+
+## 2026-09-10 Fast Tracking 일정 권장안
+
+주말 교육장 가용량은 0이다. G1 09-17 오후 → G2 09-21 오후 → G3 09-22 오전 → Review 09-22 오후 → Close 09-23 오후를 조건부 권장한다. 09-23 오전 1.5인일을 보완 버퍼로 남긴다. 실제 잔여공수와 인계 품질 확인 전에는 09-23 성공을 확약할 수 없다.
+
+이번 Start/End 변경은 사용자 요청에 따른 일정 권장안이며 승인된 실행 실적이 아니다. 기존 일정 전후 값은 `audit/v3.1.18/fast-track-plan.json`, 실제 본문·댓글은 원본 스냅샷으로 보존한다. Record ID·상태·Lead·Support·AC·승인 기록은 유지한다.
+
+| 항목 | 기존 목표 | 권장 목표 | 선행·인수 조건 |
+|---|---|---|---|
+| G1 Infrastructure Ready | 09-07 | 09-17(목) 오후 | 6대·API/LB Stage B·Calico·DB·Harbor·Runner 인수 |
+| G2 Security / Feature Ready | 09-11 | 09-21(월) 오후 | APP/보안/CI/MON·Initial E2E·통신 증적. 권장안은 Drain/Restore까지 같은 날 순차 수집 |
+| G3 Review Ready | 09-18 | 09-22(화) 오전 | Final E2E/Drain/Restore/Runbook·Critical 0·산출물 동결 |
+| Phase 1 Review | 09-20(일) | 09-22(화) 오후 | G3 통과 및 참석자/시간 확정 |
+| Phase 1 Close | 09-23 | 09-23(수) 오후 | 오전 보완·재시험 후 P0 전부 충족/인수 |
+| Phase 2 Start | 09-28 | 09-28(월) 유지 | P1 인수 후 기존 선행조건 |
+| Phase 2 Review | 10-24(토) | 10-23(금) 오후 | G6 10-22 및 Deliverable Freeze 10-23 오전 후; 참석자 확정 필요 |
+| Project Close | 10-26 | 10-26(월) 유지 | Phase 2 P0 인수. 전체 Phase 2 공수 재산정은 별도 잔여 |
+
+세부 인일·인계·환경 직렬화·P1 구현 유예·실패 시 조치는 [일정 권장안](../releases/v3.1.18/FDS_Phase1_Fast_Track_Schedule_Recommendation_v1.0.md)을 따른다. 기존 v3.1.16/17 본문의 당시 목표일은 역사적 변경 기록이며 현재 후보 계획표와 구분한다.

@@ -65,9 +65,58 @@
   {
     "issue": 9,
     "record_id": "P1-LB-01",
+    "field": "End",
+    "before": "2026-09-07",
+    "after": "2026-09-17"
+  },
+  {
+    "issue": 9,
+    "record_id": "P1-LB-01",
+    "field": "Calendar Days",
+    "before": "12",
+    "after": "22"
+  },
+  {
+    "issue": 9,
+    "record_id": "P1-LB-01",
+    "field": "Working Days",
+    "before": "8",
+    "after": "16"
+  },
+  {
+    "issue": 9,
+    "record_id": "P1-LB-01",
     "field": "Source",
     "before": "Baseline v3.1.15; P1-LB Stage A Guide v1.3; D35 IF-11A Approval Record; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #9 snapshot 2026-09-10T02:09:13Z"
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #9 snapshot 2026-09-10T02:09:13Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
+  },
+  {
+    "issue": 9,
+    "record_id": "P1-LB-01",
+    "field": "Schedule Note",
+    "before": "Stage A PASS 2026-09-03. Stage B target rebaselined to approved D36 G1 target 2026-09-07; remains In Progress until backend/auth/failover/recovery evidence is PASS.",
+    "after": "Stage B는 3CP API 기동 후 검증하며 09-17 G1 인수에 연결한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
+  },
+  {
+    "issue": 10,
+    "record_id": "P1-K8S-01",
+    "field": "End",
+    "before": "2026-09-04",
+    "after": "2026-09-17"
+  },
+  {
+    "issue": 10,
+    "record_id": "P1-K8S-01",
+    "field": "Calendar Days",
+    "before": "9",
+    "after": "22"
+  },
+  {
+    "issue": 10,
+    "record_id": "P1-K8S-01",
+    "field": "Working Days",
+    "before": "6",
+    "after": "13"
   },
   {
     "issue": 10,
@@ -81,21 +130,49 @@
     "record_id": "P1-K8S-01",
     "field": "Source",
     "before": "Baseline v3.1.15; P1-K8S Preflight Review v1.1; D35 IF-11A Approval Record; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #10 snapshot 2026-09-10T05:03:27Z"
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #10 snapshot 2026-09-10T05:03:27Z; Issue #10 후속 2026-09-10T06:25:12Z; infra-kubernetes PR #3 @3309866766236bbdbe20b9e2ae1d8fd6f9233bcd; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
   },
   {
     "issue": 10,
     "record_id": "P1-K8S-01",
     "field": "Schedule Note",
     "before": "2026-09-03 착수. P1-LB-01 Stage A PASS를 인계받아 Gate 0~2 수행 중. SELinux Enforcing 유지, firewalld→Calico HostEndpoint 전환, D34 확정값 적용.",
-    "after": "승인 목표는 SELinux Enforcing·Calico named HEP/GNP 보호 전환이다. 실제 적용은 현행 Gate와 고정 변경안의 리뷰·실행 결정 후 노드별 검증으로 진행한다. CP1 준비/진단은 전체 6대 Runtime PASS가 아니며 날짜 재기준선화는 하지 않는다."
+    "after": "09-11 CP1, 09-14 CP2/3·Worker, 09-15 NTP·Calico, 09-17 증적 인수를 조건부 목표로 둔다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
+  },
+  {
+    "issue": 11,
+    "record_id": "P1-DB-01",
+    "field": "End",
+    "before": "2026-09-07",
+    "after": "2026-09-17"
+  },
+  {
+    "issue": 11,
+    "record_id": "P1-DB-01",
+    "field": "Calendar Days",
+    "before": "11",
+    "after": "21"
+  },
+  {
+    "issue": 11,
+    "record_id": "P1-DB-01",
+    "field": "Working Days",
+    "before": "6",
+    "after": "10"
   },
   {
     "issue": 11,
     "record_id": "P1-DB-01",
     "field": "Source",
     "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #11 snapshot 2026-09-10T04:01:06Z"
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #11 snapshot 2026-09-10T04:01:06Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
+  },
+  {
+    "issue": 11,
+    "record_id": "P1-DB-01",
+    "field": "Schedule Note",
+    "before": "이재환 2026-09-04 개인 휴가로 당일 작업·단독 종료를 배치하지 않는다. 09-07 복귀 후 완료하여 Lead 가용 작업일 6일을 보존한다. PostgreSQL HA는 Scope Out.",
+    "after": "09-11 이재환의 고정 Source·Schema·검증/복구 절차 인계가 선행돼야 한다. 기존 Support 이권욱이 부재 중 검증을 지원하며 실제 인수 권한은 기존 통제를 따른다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
   },
   {
     "issue": 12,
@@ -107,16 +184,58 @@
   {
     "issue": 13,
     "record_id": "P1-HBR-01",
+    "field": "End",
+    "before": "2026-09-04",
+    "after": "2026-09-17"
+  },
+  {
+    "issue": 13,
+    "record_id": "P1-HBR-01",
+    "field": "Calendar Days",
+    "before": "5",
+    "after": "18"
+  },
+  {
+    "issue": 13,
+    "record_id": "P1-HBR-01",
+    "field": "Working Days",
+    "before": "5",
+    "after": "12"
+  },
+  {
+    "issue": 13,
+    "record_id": "P1-HBR-01",
     "field": "Source",
     "before": "Baseline v3.1.15; DEC-P1-TLS-01/D19; D-SEC-01 Security Design Baseline v1.0; D35; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #13 snapshot 2026-09-10T03:15:50Z"
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #13 snapshot 2026-09-10T03:15:50Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
   },
   {
     "issue": 13,
     "record_id": "P1-HBR-01",
     "field": "Schedule Note",
     "before": "이하영 08-28 휴가를 반영해 08-31 시작한다. TLS 결정 D19를 선행한다. Harbor HA는 P2, 실제 Backup/Restore는 P1-DR-02 범위다.",
-    "after": "D19 TLS와 Harbor 구현·6차 리뷰 보완 진행 중. 2026-09-08 이하영 개인 부재는 이권욱이 지원하며 Plan End는 유지한다. Harbor HA는 Phase 1 Scope Out/P2 검토, 실제 Backup/Restore는 P1-DR-02 범위다."
+    "after": "Harbor 준비는 CP 후속과 병행하고 09-16 CI Scan Digest까지 4/4 대조 후 09-17 인수 목표다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
+  },
+  {
+    "issue": 14,
+    "record_id": "ICR-D-NET-01-01",
+    "field": "End",
+    "before": "TBD — Runtime Evidence 완료 후 확정",
+    "after": "2026-09-21"
+  },
+  {
+    "issue": 14,
+    "record_id": "ICR-D-NET-01-01",
+    "field": "Calendar Days",
+    "before": "TBD",
+    "after": "21"
+  },
+  {
+    "issue": 14,
+    "record_id": "ICR-D-NET-01-01",
+    "field": "Working Days",
+    "before": "TBD",
+    "after": "15"
   },
   {
     "issue": 14,
@@ -130,28 +249,105 @@
     "record_id": "ICR-D-NET-01-01",
     "field": "Source",
     "before": "ICR-D-NET-01-01...v1.4.md`; `FDS_Project_Implementation_Baseline_v3.1.17.md`; Interface Register IF-06B/IF-16; 2026-09-08 연결된 321Team GitHub 검색 결과; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #14 snapshot 2026-09-10T05:03:39Z"
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #14 snapshot 2026-09-10T05:03:39Z; Issue #14 후속 2026-09-10T06:25:25Z; infra-kubernetes PR #3 @3309866766236bbdbe20b9e2ae1d8fd6f9233bcd; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
   },
   {
     "issue": 14,
     "record_id": "ICR-D-NET-01-01",
     "field": "Schedule Note",
     "before": "Read-only와 설계 승인은 완료됐으나 Runtime Evidence는 미확인이다. IF-06B는 Receiver/TLS/Auth·반환 경로·실제 Source 관찰이 미완료이고, IF-16은 edge/harbor/db 경로 Drift가 남아 있다. End와 기간은 추정하지 않고 `TBD`를 유지하며 Positive/Negative/Regression/Reboot/Rollback 증적과 독립 리뷰 후 완료를 판정한다.",
-    "after": "CP1 사전 진단 완료, 최소 CP 통신 canary 적용·독립 리뷰·운영 인수 대기. 6대 HEP/GNP·IF-06B·IF-16 및 NTP 목적지/Worker 검증은 잔여. End/기간 TBD 유지."
+    "after": "09-21은 권장 Plan End이며 실제 종료일 확정이나 AC 완료가 아니다. 기존 End TBD 이력은 보존한다. CP→Worker·NTP·IF-16을 먼저, IF-06B·Negative/Reboot/Rollback·보호 인계를 후속 검증한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
+  },
+  {
+    "issue": 15,
+    "record_id": "P1-APP-01",
+    "field": "End",
+    "before": "2026-09-10",
+    "after": "2026-09-18"
+  },
+  {
+    "issue": 15,
+    "record_id": "P1-APP-01",
+    "field": "Calendar Days",
+    "before": "10",
+    "after": "18"
+  },
+  {
+    "issue": 15,
+    "record_id": "P1-APP-01",
+    "field": "Working Days",
+    "before": "7",
+    "after": "9"
   },
   {
     "issue": 15,
     "record_id": "P1-APP-01",
     "field": "Source",
     "before": "Baseline v3.1.15; D-SEC-01 Security Design Baseline v1.0; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #15 snapshot 2026-09-10T04:01:11Z"
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #15 snapshot 2026-09-10T04:01:11Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
+  },
+  {
+    "issue": 15,
+    "record_id": "P1-APP-01",
+    "field": "Schedule Note",
+    "before": "이재환 09-04 개인 휴가를 owner-specific 비가용일로 반영해 종료를 09-10으로 조정한다. 이하영이 기술 지원하며 G2 09-11 목표는 유지한다.",
+    "after": "09-11 인계 및 사전 검증, 09-18 복귀 후 정본 Runtime 통합. 휴가 중 미승인 업무 계약·Schema 변경은 중단한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
+  },
+  {
+    "issue": 16,
+    "record_id": "P1-CICD-01",
+    "field": "End",
+    "before": "2026-09-09",
+    "after": "2026-09-18"
+  },
+  {
+    "issue": 16,
+    "record_id": "P1-CICD-01",
+    "field": "Calendar Days",
+    "before": "9",
+    "after": "18"
+  },
+  {
+    "issue": 16,
+    "record_id": "P1-CICD-01",
+    "field": "Working Days",
+    "before": "7",
+    "after": "14"
   },
   {
     "issue": 16,
     "record_id": "P1-CICD-01",
     "field": "Source",
     "before": "Baseline v3.1.17 §10/§15/§16; D-SEC-01 v1.0/D34; FDS_Notion_Remaining_Backlog_Manual_v1.9 §12; 사용자 2026-09-08 착수 지시; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #16 snapshot 2026-09-10T02:09:24Z"
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #16 snapshot 2026-09-10T02:09:24Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
+  },
+  {
+    "issue": 16,
+    "record_id": "P1-CICD-01",
+    "field": "Schedule Note",
+    "before": "2026-09-08 사전 점검·구현 준비 착수. 기존 계획 09-01~09-09 보존. G1 09-07 목표일은 경과했으나 Runner/Harbor 실제 완료 증적은 미확인. G2 09-11 유지. 일정 재산정은 선행 증적·앱 저장소 확인 후 변경관리로 처리. Ansible 연관 이슈 #5는 앱 Delivery AC를 대체하지 않음.",
+    "after": "Runner/Workflow·Negative Gate 준비를 플랫폼 구축과 병행하고 승인된 플랫폼·Harbor가 준비된 뒤 배포한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
+  },
+  {
+    "issue": 17,
+    "record_id": "P1-MON-01",
+    "field": "End",
+    "before": "2026-09-11",
+    "after": "2026-09-18"
+  },
+  {
+    "issue": 17,
+    "record_id": "P1-MON-01",
+    "field": "Calendar Days",
+    "before": "5",
+    "after": "12"
+  },
+  {
+    "issue": 17,
+    "record_id": "P1-MON-01",
+    "field": "Working Days",
+    "before": "5",
+    "after": "6"
   },
   {
     "issue": 17,
@@ -165,70 +361,294 @@
     "record_id": "P1-MON-01",
     "field": "Source",
     "before": "FDS_Project_Implementation_Baseline_v3.1.14; D-SEC-01 Security Design Baseline v1.0; DEC-P1-MON-01/D33; D34; ICR-D-NET-01-01 v1.3; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #17 snapshot 2026-09-10T04:01:45Z"
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #17 snapshot 2026-09-10T04:01:45Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
+  },
+  {
+    "issue": 17,
+    "record_id": "P1-MON-01",
+    "field": "Schedule Note",
+    "before": "이재환 09-04 개인 휴가로 실행 착수를 09-07로 이동한다. 사전 Metrics/Target 설계는 유지하고, 이권욱 지원 아래 K8S/APP 준비 후 통합한다. G2 09-11 목표 유지.",
+    "after": "09-11 Monitoring 인계, 부재 중 기존 Support의 준비·구현, 09-18 복귀 후 14개 AC+2개 보조통제 검증을 목표로 한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
+  },
+  {
+    "issue": 18,
+    "record_id": "MS-G1-01",
+    "field": "Start",
+    "before": "2026-09-07",
+    "after": "2026-09-17"
+  },
+  {
+    "issue": 18,
+    "record_id": "MS-G1-01",
+    "field": "End",
+    "before": "2026-09-07",
+    "after": "2026-09-17"
   },
   {
     "issue": 18,
     "record_id": "MS-G1-01",
     "field": "Source",
     "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #18 snapshot 2026-09-09T12:01:41Z"
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #18 snapshot 2026-09-09T12:01:41Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
+  },
+  {
+    "issue": 18,
+    "record_id": "MS-G1-01",
+    "field": "Schedule Note",
+    "before": "이재환 09-04 개인 휴가와 P1-DB-01 완료일 조정에 연동해 G1을 09-07로 이동한다. P1-DNS-01 Done, P1-LB-01 Stage A PASS를 반영하며 G2/G3/Phase 1 Close는 유지한다.",
+    "after": "09-17 오후 조건부 인수 목표. 6대·API/LB·Calico·DB·Harbor·Runner 증적 미충족이면 PASS 불가. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
+  },
+  {
+    "issue": 19,
+    "record_id": "P1-SEC-01",
+    "field": "End",
+    "before": "2026-09-11",
+    "after": "2026-09-21"
+  },
+  {
+    "issue": 19,
+    "record_id": "P1-SEC-01",
+    "field": "Calendar Days",
+    "before": "8",
+    "after": "18"
   },
   {
     "issue": 19,
     "record_id": "P1-SEC-01",
     "field": "Working Days",
     "before": "6",
-    "after": "5"
+    "after": "10"
   },
   {
     "issue": 19,
     "record_id": "P1-SEC-01",
     "field": "Source",
     "before": "Baseline v3.1.15; D-SEC-01 Security Design Baseline v1.0; ICR v1.4; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #19 snapshot 2026-09-10T05:05:52Z"
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #19 snapshot 2026-09-10T05:05:52Z; 사용자 2026-09-10 면접 휴가 추가 지시; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
   },
   {
     "issue": 19,
     "record_id": "P1-SEC-01",
     "field": "Schedule Note",
     "before": "09-04 이재환 지원 부재는 이권욱이 커버한다. Lead 이하영 일정은 유지하며 D34/D35 및 P1-K8S-01 Gate 결과를 반영한다.",
-    "after": "D17/D34 설계 승인 후 Manifest/Prework 착수. 09-08 이하영 개인 부재와 이권욱 지원을 기록하며 기존 일정은 유지한다. Runtime은 Platform Ready·보호 인계·Positive/Negative 증적 조건부다."
+    "after": "09-10 휴가 추가 후 기존 09-04~11 가용일은 4일. 권장 종료 09-21로 확장한 전체 계획창의 가용일은 10일이며 잔여 공수를 뜻하지 않는다. Runtime 검증은 플랫폼·앱 인수와 연계한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
+  },
+  {
+    "issue": 20,
+    "record_id": "P1-E2E-01",
+    "field": "Start",
+    "before": "2026-09-09",
+    "after": "2026-09-11"
+  },
+  {
+    "issue": 20,
+    "record_id": "P1-E2E-01",
+    "field": "End",
+    "before": "2026-09-18",
+    "after": "2026-09-22"
+  },
+  {
+    "issue": 20,
+    "record_id": "P1-E2E-01",
+    "field": "Calendar Days",
+    "before": "10",
+    "after": "12"
   },
   {
     "issue": 20,
     "record_id": "P1-E2E-01",
     "field": "Source",
     "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #20 snapshot 2026-09-10T04:08:25Z"
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #20 snapshot 2026-09-10T04:08:25Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
+  },
+  {
+    "issue": 20,
+    "record_id": "P1-E2E-01",
+    "field": "Schedule Note",
+    "before": "이재환 09-14~09-17 부재 중 지원자가 Evidence 정리와 결함 추적을 수행하고, 최종 판정은 09-18 복귀 후 완료한다.",
+    "after": "09-11은 케이스·명령·판정 기준 준비일, Runtime은 09-18 이후, 최종 회귀는 09-22 오전이다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
+  },
+  {
+    "issue": 21,
+    "record_id": "P1-DR-01",
+    "field": "Start",
+    "before": "2026-09-10",
+    "after": "2026-09-11"
+  },
+  {
+    "issue": 21,
+    "record_id": "P1-DR-01",
+    "field": "End",
+    "before": "2026-09-13",
+    "after": "2026-09-21"
+  },
+  {
+    "issue": 21,
+    "record_id": "P1-DR-01",
+    "field": "Calendar Days",
+    "before": "4",
+    "after": "11"
+  },
+  {
+    "issue": 21,
+    "record_id": "P1-DR-01",
+    "field": "Working Days",
+    "before": "2",
+    "after": "3"
   },
   {
     "issue": 21,
     "record_id": "P1-DR-01",
     "field": "Source",
     "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #21 snapshot 2026-09-10T04:02:43Z"
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #21 snapshot 2026-09-10T04:02:43Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
+  },
+  {
+    "issue": 21,
+    "record_id": "P1-DR-01",
+    "field": "Schedule Note",
+    "before": "Harbor Restore와 etcd Snapshot/Restore는 P1이다. 운영 데이터 삭제 없이 별도 Restore DB 또는 승인 절차를 사용한다.",
+    "after": "09-11 복구 절차·격리 대상 준비, 실제 Restore 및 후속 E2E는 09-21 오후 전용 창에서 수행한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
+  },
+  {
+    "issue": 22,
+    "record_id": "P1-HA-01",
+    "field": "Start",
+    "before": "2026-09-10",
+    "after": "2026-09-11"
+  },
+  {
+    "issue": 22,
+    "record_id": "P1-HA-01",
+    "field": "End",
+    "before": "2026-09-13",
+    "after": "2026-09-21"
+  },
+  {
+    "issue": 22,
+    "record_id": "P1-HA-01",
+    "field": "Calendar Days",
+    "before": "4",
+    "after": "11"
+  },
+  {
+    "issue": 22,
+    "record_id": "P1-HA-01",
+    "field": "Working Days",
+    "before": "2",
+    "after": "3"
   },
   {
     "issue": 22,
     "record_id": "P1-HA-01",
     "field": "Source",
     "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #22 snapshot 2026-09-10T04:08:14Z"
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #22 snapshot 2026-09-10T04:08:14Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
+  },
+  {
+    "issue": 22,
+    "record_id": "P1-HA-01",
+    "field": "Schedule Note",
+    "before": "Control Plane 장애와 Rolling Update는 P1이다. 본 P0는 Worker 1대 Drain 시 서비스 지속만 검증한다.",
+    "after": "09-11 Drain 케이스 준비, 3Worker 및 서비스 분산 확인 후 09-21 오전 전용 창에서 수행한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
+  },
+  {
+    "issue": 23,
+    "record_id": "MS-G2-01",
+    "field": "Start",
+    "before": "2026-09-11",
+    "after": "2026-09-21"
+  },
+  {
+    "issue": 23,
+    "record_id": "MS-G2-01",
+    "field": "End",
+    "before": "2026-09-11",
+    "after": "2026-09-21"
   },
   {
     "issue": 23,
     "record_id": "MS-G2-01",
     "field": "Source",
     "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #23 snapshot 2026-09-09T12:03:10Z"
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #23 snapshot 2026-09-09T12:03:10Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
+  },
+  {
+    "issue": 23,
+    "record_id": "MS-G2-01",
+    "field": "Schedule Note",
+    "before": "D-SEC-01/D17과 DEC-P1-ENTRY-01/D18을 G2 선행조건으로 판정한다. Scope·Approver·Exit Criteria 승인과 External Exposure 결정을 P1-SEC-01 및 P1-APP-01 Evidence에 연결한다.",
+    "after": "09-21 오후 종료 시점 목표. 앱/보안/CI/Monitoring·초기 E2E/Negative/Drain 준비도와 해당 증적이 선행한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
+  },
+  {
+    "issue": 24,
+    "record_id": "P1-DOC-01",
+    "field": "Start",
+    "before": "2026-09-12",
+    "after": "2026-09-11"
+  },
+  {
+    "issue": 24,
+    "record_id": "P1-DOC-01",
+    "field": "End",
+    "before": "2026-09-18",
+    "after": "2026-09-22"
+  },
+  {
+    "issue": 24,
+    "record_id": "P1-DOC-01",
+    "field": "Calendar Days",
+    "before": "7",
+    "after": "12"
+  },
+  {
+    "issue": 24,
+    "record_id": "P1-DOC-01",
+    "field": "Working Days",
+    "before": "5",
+    "after": "8"
   },
   {
     "issue": 24,
     "record_id": "P1-DOC-01",
     "field": "Source",
     "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #24 snapshot 2026-09-10T02:09:36Z"
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #24 snapshot 2026-09-10T02:09:36Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
+  },
+  {
+    "issue": 24,
+    "record_id": "P1-DOC-01",
+    "field": "Schedule Note",
+    "before": "이재환 부재 전 09-13까지 HA/DR Evidence 초안을 인계하고 09-18 최종 검토한다.",
+    "after": "구축 시 증적·Runbook을 병행 축적하고 09-22 오전 Final Evidence와 함께 동결한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
+  },
+  {
+    "issue": 25,
+    "record_id": "P1-MON-02",
+    "field": "Start",
+    "before": "2026-09-12",
+    "after": "TBD — P0 인수 후 재계획"
+  },
+  {
+    "issue": 25,
+    "record_id": "P1-MON-02",
+    "field": "End",
+    "before": "2026-09-18",
+    "after": "TBD — 구현 유예 권장"
+  },
+  {
+    "issue": 25,
+    "record_id": "P1-MON-02",
+    "field": "Calendar Days",
+    "before": "7",
+    "after": "TBD"
+  },
+  {
+    "issue": 25,
+    "record_id": "P1-MON-02",
+    "field": "Working Days",
+    "before": "1",
+    "after": "TBD"
   },
   {
     "issue": 25,
@@ -249,56 +669,238 @@
     "record_id": "P1-MON-02",
     "field": "Source",
     "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #25 snapshot 2026-09-10T04:08:35Z"
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #25 snapshot 2026-09-10T04:08:35Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
   },
   {
     "issue": 25,
     "record_id": "P1-MON-02",
     "field": "Schedule Note",
     "before": "P1-MON-01의 Metric 수집 완료 후 수행한다. Grafana 또는 Prometheus UI 중 승인된 최소 구현을 사용하며 Loki/SIEM은 Scope Out이다.",
-    "after": "P1-MON-01의 P0 기본 3 View·Alert·15일 Retention·Watchdog 인수 후 HA·Dashboard/Alert·장기보존을 고도화한다. P1 Non-blocking. 이재환 09-14~17 부재를 반영한 가용일 1일이며 범위/일정 재평가는 별도 Lead 결정이다."
+    "after": "P0 마감 보호를 위해 신규 구현을 유예하는 권장안이다. 기존 Lead·Type·Priority·AC·To Do는 유지한다. 09-23은 Known Issue/Owner 인계 기한, 09-28은 차기 착수·납기 결정 기한이며 구현 완료일은 TBD다. Phase 2 공수를 자동 배정하지 않는다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
+  },
+  {
+    "issue": 26,
+    "record_id": "P1-DR-02",
+    "field": "Start",
+    "before": "2026-09-14",
+    "after": "TBD — P0 인수 후 재계획"
+  },
+  {
+    "issue": 26,
+    "record_id": "P1-DR-02",
+    "field": "End",
+    "before": "2026-09-18",
+    "after": "TBD — 구현 유예 권장"
+  },
+  {
+    "issue": 26,
+    "record_id": "P1-DR-02",
+    "field": "Calendar Days",
+    "before": "5",
+    "after": "TBD"
+  },
+  {
+    "issue": 26,
+    "record_id": "P1-DR-02",
+    "field": "Working Days",
+    "before": "5",
+    "after": "TBD"
   },
   {
     "issue": 26,
     "record_id": "P1-DR-02",
     "field": "Source",
     "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #26 snapshot 2026-09-10T02:09:39Z"
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #26 snapshot 2026-09-10T02:09:39Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
+  },
+  {
+    "issue": 26,
+    "record_id": "P1-DR-02",
+    "field": "Schedule Note",
+    "before": "기존 P1-DR-02와 기준선의 etcd Snapshot/Restore P1 범위를 통합한다. Harbor HA는 Scope Out이며 미완료 시 Known Issue로 이관한다.",
+    "after": "P0 마감 보호를 위해 신규 구현을 유예하는 권장안이다. 기존 Lead·Type·Priority·AC·To Do는 유지한다. 09-23은 Known Issue/Owner 인계 기한, 09-28은 차기 착수·납기 결정 기한이며 구현 완료일은 TBD다. Phase 2 공수를 자동 배정하지 않는다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
+  },
+  {
+    "issue": 27,
+    "record_id": "P1-HA-02",
+    "field": "Start",
+    "before": "2026-09-14",
+    "after": "TBD — P0 인수 후 재계획"
+  },
+  {
+    "issue": 27,
+    "record_id": "P1-HA-02",
+    "field": "End",
+    "before": "2026-09-18",
+    "after": "TBD — 구현 유예 권장"
+  },
+  {
+    "issue": 27,
+    "record_id": "P1-HA-02",
+    "field": "Calendar Days",
+    "before": "5",
+    "after": "TBD"
+  },
+  {
+    "issue": 27,
+    "record_id": "P1-HA-02",
+    "field": "Working Days",
+    "before": "5",
+    "after": "TBD"
   },
   {
     "issue": 27,
     "record_id": "P1-HA-02",
     "field": "Source",
     "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #27 snapshot 2026-09-10T02:09:41Z"
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #27 snapshot 2026-09-10T02:09:41Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
+  },
+  {
+    "issue": 27,
+    "record_id": "P1-HA-02",
+    "field": "Schedule Note",
+    "before": "기존 P1-HA-02와 P1-HA-03 및 기준선의 PDB/TopologySpreadConstraint P1 범위를 통합한다. 미완료 시 Phase 1 Close의 Known Issue에 Owner 이하영과 Due를 기록한다.",
+    "after": "P0 마감 보호를 위해 신규 구현을 유예하는 권장안이다. 기존 Lead·Type·Priority·AC·To Do는 유지한다. 09-23은 Known Issue/Owner 인계 기한, 09-28은 차기 착수·납기 결정 기한이며 구현 완료일은 TBD다. Phase 2 공수를 자동 배정하지 않는다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
+  },
+  {
+    "issue": 28,
+    "record_id": "DEC-CAL-P1-01",
+    "field": "Start",
+    "before": "2026-09-17",
+    "after": "2026-09-11"
+  },
+  {
+    "issue": 28,
+    "record_id": "DEC-CAL-P1-01",
+    "field": "End",
+    "before": "2026-09-18",
+    "after": "2026-09-11"
+  },
+  {
+    "issue": 28,
+    "record_id": "DEC-CAL-P1-01",
+    "field": "Calendar Days",
+    "before": "2",
+    "after": "1"
+  },
+  {
+    "issue": 28,
+    "record_id": "DEC-CAL-P1-01",
+    "field": "Working Days",
+    "before": "2",
+    "after": "1"
   },
   {
     "issue": 28,
     "record_id": "DEC-CAL-P1-01",
     "field": "Source",
     "before": "FDS_Project_Implementation_Baseline_v3.1.12; 2026 Calendar; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #28 snapshot 2026-09-09T12:04:41Z"
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #28 snapshot 2026-09-09T12:04:41Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
+  },
+  {
+    "issue": 28,
+    "record_id": "DEC-CAL-P1-01",
+    "field": "Schedule Note",
+    "before": "09-20은 일요일이며 Working Days 0이다. 결정 전 해당 일정을 확정된 근무일로 간주하지 않는다.",
+    "after": "교육장 주말 작업 불가를 반영해 Review 09-22 오후를 권장한다. 참석자·승인자는 아직 확정하지 않으며 To Do를 유지한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
+  },
+  {
+    "issue": 29,
+    "record_id": "MS-G3-01",
+    "field": "Start",
+    "before": "2026-09-18",
+    "after": "2026-09-22"
+  },
+  {
+    "issue": 29,
+    "record_id": "MS-G3-01",
+    "field": "End",
+    "before": "2026-09-18",
+    "after": "2026-09-22"
   },
   {
     "issue": 29,
     "record_id": "MS-G3-01",
     "field": "Source",
     "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #29 snapshot 2026-09-09T12:04:58Z"
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #29 snapshot 2026-09-09T12:04:58Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
+  },
+  {
+    "issue": 29,
+    "record_id": "MS-G3-01",
+    "field": "Schedule Note",
+    "before": "같은 날 DEC-CAL-P1-01을 종결해 Review 일정을 확정한다.",
+    "after": "09-22 오전 최종 회귀·Drain·Restore 증적·Critical Issue 0과 산출물 동결이 모두 충족될 때 인수한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
+  },
+  {
+    "issue": 30,
+    "record_id": "P1-REV-01",
+    "field": "Start",
+    "before": "2026-09-18",
+    "after": "2026-09-22"
+  },
+  {
+    "issue": 30,
+    "record_id": "P1-REV-01",
+    "field": "Calendar Days",
+    "before": "6",
+    "after": "2"
+  },
+  {
+    "issue": 30,
+    "record_id": "P1-REV-01",
+    "field": "Working Days",
+    "before": "4",
+    "after": "2"
   },
   {
     "issue": 30,
     "record_id": "P1-REV-01",
     "field": "Source",
     "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #30 snapshot 2026-09-10T04:08:08Z"
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #30 snapshot 2026-09-10T04:08:08Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
+  },
+  {
+    "issue": 30,
+    "record_id": "P1-REV-01",
+    "field": "Schedule Note",
+    "before": "Review 실행일은 D20 결과를 따른다. 09-24~09-25 비근무 전에 09-23 Close를 완료한다.",
+    "after": "09-22 오후 Review, 09-23 오전 보완·재시험, 오후 Close를 권장한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
+  },
+  {
+    "issue": 31,
+    "record_id": "MS-P1-REVIEW-01",
+    "field": "Start",
+    "before": "2026-09-20",
+    "after": "2026-09-22"
+  },
+  {
+    "issue": 31,
+    "record_id": "MS-P1-REVIEW-01",
+    "field": "End",
+    "before": "2026-09-20",
+    "after": "2026-09-22"
+  },
+  {
+    "issue": 31,
+    "record_id": "MS-P1-REVIEW-01",
+    "field": "Working Days",
+    "before": "0",
+    "after": "1"
   },
   {
     "issue": 31,
     "record_id": "MS-P1-REVIEW-01",
     "field": "Source",
     "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #31 snapshot 2026-09-09T12:05:57Z"
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #31 snapshot 2026-09-09T12:05:57Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
+  },
+  {
+    "issue": 31,
+    "record_id": "MS-P1-REVIEW-01",
+    "field": "Schedule Note",
+    "before": "2026-09-20은 일요일이며 Working Days 0이다. D20이 변경을 승인하면 Start/End를 동일하게 수정한다.",
+    "after": "기존 09-20 일요일 대신 09-22 화요일 오후. G3 통과와 참석자 확정이 필요하다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
   },
   {
     "issue": 32,
@@ -443,9 +1045,37 @@
   {
     "issue": 52,
     "record_id": "DEC-CAL-P2-01",
+    "field": "End",
+    "before": "2026-10-23",
+    "after": "2026-10-22"
+  },
+  {
+    "issue": 52,
+    "record_id": "DEC-CAL-P2-01",
+    "field": "Calendar Days",
+    "before": "2",
+    "after": "1"
+  },
+  {
+    "issue": 52,
+    "record_id": "DEC-CAL-P2-01",
+    "field": "Working Days",
+    "before": "2",
+    "after": "1"
+  },
+  {
+    "issue": 52,
+    "record_id": "DEC-CAL-P2-01",
     "field": "Source",
     "before": "FDS_Project_Implementation_Baseline_v3.1.12; 2026 Calendar; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #52 snapshot 2026-09-09T12:11:51Z"
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #52 snapshot 2026-09-09T12:11:51Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
+  },
+  {
+    "issue": 52,
+    "record_id": "DEC-CAL-P2-01",
+    "field": "Schedule Note",
+    "before": "2026-10-24는 토요일이며 Working Days 0이다. Project Close 10-26 영향을 함께 검토한다.",
+    "after": "교육장 주말 작업 불가를 반영해 10-22까지 평일 10-23 오후 Review의 참석자·시간을 확정한다. 상태는 To Do다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
   },
   {
     "issue": 53,
@@ -471,9 +1101,37 @@
   {
     "issue": 56,
     "record_id": "MS-P2-REVIEW-01",
+    "field": "Start",
+    "before": "2026-10-24",
+    "after": "2026-10-23"
+  },
+  {
+    "issue": 56,
+    "record_id": "MS-P2-REVIEW-01",
+    "field": "End",
+    "before": "2026-10-24",
+    "after": "2026-10-23"
+  },
+  {
+    "issue": 56,
+    "record_id": "MS-P2-REVIEW-01",
+    "field": "Working Days",
+    "before": "0",
+    "after": "1"
+  },
+  {
+    "issue": 56,
+    "record_id": "MS-P2-REVIEW-01",
     "field": "Source",
     "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Phase1_Logical_Architecture_v3.1.2; Phase 2 OCI/AWS/ROSA Design; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #56 snapshot 2026-09-09T12:12:58Z"
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #56 snapshot 2026-09-09T12:12:58Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청"
+  },
+  {
+    "issue": 56,
+    "record_id": "MS-P2-REVIEW-01",
+    "field": "Schedule Note",
+    "before": "2026-10-24는 토요일이며 Working Days 0이다. D24가 변경을 승인하면 Start/End를 동일하게 수정한다.",
+    "after": "교육장 주말 작업 불가로 기존 10-24 토요일 대신 10-23 금요일 오후를 권장한다. G6/Deliverable Freeze 후 진행하고 참석자는 별도 확정한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
   },
   {
     "issue": 57,

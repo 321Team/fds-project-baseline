@@ -14,23 +14,27 @@
 | Type | Milestone |
 | Status | To Do |
 | Priority | P0 |
-| Start | 2026-10-24 |
-| End | 2026-10-24 |
+| Start | 2026-10-23 |
+| End | 2026-10-23 |
 | Calendar Days | 1 |
-| Working Days | 0 |
+| Working Days | 1 |
 | Lead | 이권욱 |
 | Support | 이하영, 이재환 |
 | Exit Criteria | 승인된 일정에 Hybrid Demo/산출물/G6/Known Issue/Cloud Resource Review를 수행하고 Action·승인결과를 기록 |
 | Related Decision IDs | D24 |
 | Related Risk IDs | RISK-05; RISK-13 |
-| Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #56 snapshot 2026-09-09T12:12:58Z |
-| Schedule Note | 2026-10-24는 토요일이며 Working Days 0이다. D24가 변경을 승인하면 Start/End를 동일하게 수정한다. |
+| Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #56 snapshot 2026-09-09T12:12:58Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청 |
+| Schedule Note | 교육장 주말 작업 불가로 기존 10-24 토요일 대신 10-23 금요일 오후를 권장한다. G6/Deliverable Freeze 후 진행하고 참석자는 별도 확정한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트. |
 
 ## 현재 실행·검토 상태
 
-기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다.
+기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. 현재 후보 Plan: 2026-10-23 ~ 2026-10-23 (권장안; 실제 완료일·Gate 승인은 미확정).
 
 근거: [Issue #56](https://github.com/321Team/fds-project-baseline/issues/56), Issue 갱신 시각 `2026-09-09T12:12:58Z`. 댓글·승인 기록과 본문 보관본은 `../source-snapshot.json`에 보존하고 실제 Gate는 해당 증적·승인 범위로 판정한다.
+
+## 일정 권장안
+
+Start/End는 이번 Fast Tracking 후보의 계획값이다. 기존 승인 일정은 `audit/v3.1.18/fast-track-plan.json`에 전후 값으로 보존한다. 실제 착수·완료·Status·AC·승인을 변경한 것이 아니다. 교육장 주말 작업은 없으며 세부 AM/PM 배정과 선행 조건을 따른다.
 
 ## 적용 기준
 

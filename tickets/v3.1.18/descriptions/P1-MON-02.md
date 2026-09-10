@@ -14,23 +14,27 @@
 | Type | Task |
 | Status | To Do |
 | Priority | P1 |
-| Start | 2026-09-12 |
-| End | 2026-09-18 |
-| Calendar Days | 7 |
-| Working Days | 1 |
+| Start | TBD — P0 인수 후 재계획 |
+| End | TBD — 구현 유예 권장 |
+| Calendar Days | TBD |
+| Working Days | TBD |
 | Lead | 이재환 |
 | Support | 이권욱, 이하영 |
 | Exit Criteria | Prometheus 2 Replica·Alertmanager 3 Replica, PDB/TopologySpread, Dashboard/Alert·장기보존 고도화와 장애·복구·P0 회귀 Evidence 및 Review |
 | Related Decision IDs | D25; D33 |
 | Related Risk IDs | RISK-05; RISK-07; RISK-09; RISK-14 |
-| Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #25 snapshot 2026-09-10T04:08:35Z |
-| Schedule Note | P1-MON-01의 P0 기본 3 View·Alert·15일 Retention·Watchdog 인수 후 HA·Dashboard/Alert·장기보존을 고도화한다. P1 Non-blocking. 이재환 09-14~17 부재를 반영한 가용일 1일이며 범위/일정 재평가는 별도 Lead 결정이다. |
+| Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #25 snapshot 2026-09-10T04:08:35Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청 |
+| Schedule Note | P0 마감 보호를 위해 신규 구현을 유예하는 권장안이다. 기존 Lead·Type·Priority·AC·To Do는 유지한다. 09-23은 Known Issue/Owner 인계 기한, 09-28은 차기 착수·납기 결정 기한이며 구현 완료일은 TBD다. Phase 2 공수를 자동 배정하지 않는다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트. |
 
 ## 현재 실행·검토 상태
 
-담당자 보고 기준 미착수 / NOT RUN, Plan 2026-09-12~09-18 유지. Baseline §1.2/§11과 D33의 P1 범위인 HA·Dashboard/Alert 고도화·장기 보존을 수행한다. P0 기본 3 View·기본 Alert·15일 Retention·Watchdog은 P1-MON-01 책임이며 중복 완료 기준을 제거한다. P1 미완료는 P0 Gate를 자동 차단하지 않는다.
+담당자 보고 기준 미착수 / NOT RUN, Plan 2026-09-12~09-18 유지. Baseline §1.2/§11과 D33의 P1 범위인 HA·Dashboard/Alert 고도화·장기 보존을 수행한다. P0 기본 3 View·기본 Alert·15일 Retention·Watchdog은 P1-MON-01 책임이며 중복 완료 기준을 제거한다. P1 미완료는 P0 Gate를 자동 차단하지 않는다. 현재 후보 Plan: TBD — P0 인수 후 재계획 ~ TBD — 구현 유예 권장 (권장안; 실제 완료일·Gate 승인은 미확정).
 
 근거: [Issue #25](https://github.com/321Team/fds-project-baseline/issues/25), Issue 갱신 시각 `2026-09-10T04:08:35Z`. 댓글·승인 기록과 본문 보관본은 `../source-snapshot.json`에 보존하고 실제 Gate는 해당 증적·승인 범위로 판정한다.
+
+## 일정 권장안
+
+Start/End는 이번 Fast Tracking 후보의 계획값이다. 기존 승인 일정은 `audit/v3.1.18/fast-track-plan.json`에 전후 값으로 보존한다. 실제 착수·완료·Status·AC·승인을 변경한 것이 아니다. 교육장 주말 작업은 없으며 세부 AM/PM 배정과 선행 조건을 따른다.
 
 ## 적용 기준
 
