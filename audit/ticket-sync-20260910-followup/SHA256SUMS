@@ -1,0 +1,4 @@
+deae909490f3259120618ce1f2516ab8303ed54c94a2d6c78efdbaaa874a95e7  governance/ticket-sync-map.json
+f4440607707cbb466f85903369cb3caede820983e11f6386a99cf8622278ae85  scripts/ticket-sync.py
+e2d030151ade38c0e0506f2b0f64a69f19d7f561bbb8072a8d7b8c57a7ca1bef  tests/test_ticket_sync.py
+54086be5717b43b57797af7183c0c67d55a032d790ac416dddd1e452046060cc  audit/ticket-sync-20260910-followup/README.md

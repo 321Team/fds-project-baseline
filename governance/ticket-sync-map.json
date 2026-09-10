@@ -584,13 +584,13 @@
       "issue_number": 13,
       "record_id": "P1-HBR-01",
       "source_url": "https://github.com/321Team/fds-project-baseline/issues/13",
-      "source_updated_at": "2026-09-09T12:00:20Z",
+      "source_updated_at": "2026-09-10T03:15:50Z",
       "properties": {
         "Record ID": "P1-HBR-01",
         "Phase": "Phase 1",
         "Category": "Registry / Supply Chain",
         "Type": "Task",
-        "Status": "To Do",
+        "Status": "In Progress",
         "Priority": "P0",
         "Start": "2026-08-31",
         "End": "2026-09-04",
@@ -602,7 +602,7 @@
         "Related Decision IDs": "D04; D17; D19; D35",
         "Related Risk IDs": "RISK-04; RISK-06; RISK-07",
         "Source": "Baseline v3.1.15; DEC-P1-TLS-01/D19; D-SEC-01 Security Design Baseline v1.0; D35; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
-        "Schedule Note": "이하영 08-28 휴가를 반영해 08-31 시작한다. TLS 결정 D19를 선행하고 Harbor HA/실제 Restore는 P1이다."
+        "Schedule Note": "이하영 08-28 휴가를 반영해 08-31 시작한다. TLS 결정 D19를 선행한다. Harbor HA는 P2, 실제 Backup/Restore는 P1-DR-02 범위다."
       },
       "milestone_record_id": "MS-G1-01",
       "milestone_status": "MAPPED_NOT_APPLIED",
