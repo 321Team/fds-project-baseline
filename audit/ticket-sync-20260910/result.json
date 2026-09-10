@@ -1,0 +1,2765 @@
+{
+  "status": "PARTIAL",
+  "total_issues": 64,
+  "changed_issues": [
+    4,
+    5,
+    6
+  ],
+  "protected_changes": [],
+  "remaining_metadata_changes": [],
+  "blockers": [],
+  "unresolved": [
+    {
+      "issue": 67,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 67,
+      "kind": "MILESTONE_MAPPING_HOLD",
+      "reason": "G0 근거 / G1 선행조건. 단일 대표 Milestone 확정 필요."
+    },
+    {
+      "issue": 66,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 66,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G1-01"
+    },
+    {
+      "issue": 65,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 65,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G1-01"
+    },
+    {
+      "issue": 64,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:decision"
+    },
+    {
+      "issue": 64,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G1-01"
+    },
+    {
+      "issue": 63,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:decision"
+    },
+    {
+      "issue": 63,
+      "kind": "MILESTONE_MAPPING_HOLD",
+      "reason": "G0 변경 통제 / G2 선행 설계. 단일 대표 Milestone 확정 필요."
+    },
+    {
+      "issue": 62,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:decision"
+    },
+    {
+      "issue": 62,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G2-01"
+    },
+    {
+      "issue": 61,
+      "kind": "SOURCE_UNKNOWN",
+      "fields": [
+        "Phase",
+        "Category",
+        "Type",
+        "Priority",
+        "Start",
+        "End",
+        "Calendar Days",
+        "Working Days",
+        "Schedule Note"
+      ]
+    },
+    {
+      "issue": 61,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G0-01"
+    },
+    {
+      "issue": 60,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 60,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G0-01"
+    },
+    {
+      "issue": 59,
+      "kind": "SOURCE_UNKNOWN",
+      "fields": [
+        "Phase",
+        "Category",
+        "Type",
+        "Priority",
+        "Start",
+        "End",
+        "Calendar Days",
+        "Working Days",
+        "Schedule Note"
+      ]
+    },
+    {
+      "issue": 59,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G0-01"
+    },
+    {
+      "issue": 58,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:change-request"
+    },
+    {
+      "issue": 58,
+      "kind": "MILESTONE_MAPPING_HOLD",
+      "reason": "완료 CR은 후속 Gate를 자동 해제하지 않음. 대표 Milestone 미확정."
+    },
+    {
+      "issue": 57,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:milestone"
+    },
+    {
+      "issue": 57,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-PROJECT-CLOSE-01"
+    },
+    {
+      "issue": 56,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:milestone"
+    },
+    {
+      "issue": 56,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-P2-REVIEW-01"
+    },
+    {
+      "issue": 55,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 55,
+      "kind": "MILESTONE_MAPPING_HOLD",
+      "reason": "Phase 2 Review / Project Close 중 GitHub 단일 대표 Milestone 확정 필요."
+    },
+    {
+      "issue": 54,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:milestone"
+    },
+    {
+      "issue": 54,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-DELIVERABLE-FREEZE-01"
+    },
+    {
+      "issue": 53,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:milestone"
+    },
+    {
+      "issue": 53,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G6-01"
+    },
+    {
+      "issue": 52,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:decision"
+    },
+    {
+      "issue": 52,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-P2-REVIEW-01"
+    },
+    {
+      "issue": 51,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 51,
+      "kind": "MILESTONE_MAPPING_HOLD",
+      "reason": "Phase 2 P1. 실제 Milestone 미확정."
+    },
+    {
+      "issue": 50,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 50,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G6-01"
+    },
+    {
+      "issue": 49,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 49,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-DELIVERABLE-FREEZE-01"
+    },
+    {
+      "issue": 48,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 48,
+      "kind": "MILESTONE_MAPPING_HOLD",
+      "reason": "Phase 2 P1 / G6 Non-blocker. 단일 대표 Milestone 미확정."
+    },
+    {
+      "issue": 47,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 47,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G6-01"
+    },
+    {
+      "issue": 46,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 46,
+      "kind": "MILESTONE_MAPPING_HOLD",
+      "reason": "본문 G5지만 Plan End 2026-10-19가 G5 2026-10-16 이후임. 일정/Gate 불일치 검토 후 확정."
+    },
+    {
+      "issue": 45,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:milestone"
+    },
+    {
+      "issue": 45,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G5-01"
+    },
+    {
+      "issue": 44,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 44,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G6-01"
+    },
+    {
+      "issue": 43,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 43,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G5-01"
+    },
+    {
+      "issue": 42,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:decision"
+    },
+    {
+      "issue": 42,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G5-01"
+    },
+    {
+      "issue": 41,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:decision"
+    },
+    {
+      "issue": 41,
+      "kind": "MILESTONE_MAPPING_HOLD",
+      "reason": "G5 / Phase 2 P1. 단일 대표 Milestone 미확정."
+    },
+    {
+      "issue": 40,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:decision"
+    },
+    {
+      "issue": 40,
+      "kind": "MILESTONE_MAPPING_HOLD",
+      "reason": "G5 / G6 Non-blocking Decision. 단일 대표 Milestone 미확정."
+    },
+    {
+      "issue": 39,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:milestone"
+    },
+    {
+      "issue": 39,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G4-01"
+    },
+    {
+      "issue": 38,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 38,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G5-01"
+    },
+    {
+      "issue": 37,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 37,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G4-01"
+    },
+    {
+      "issue": 36,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:decision"
+    },
+    {
+      "issue": 36,
+      "kind": "MILESTONE_MAPPING_HOLD",
+      "reason": "OCI Go/No-Go는 Decision 레코드이며 실제 Milestone 등록 여부 미확인."
+    },
+    {
+      "issue": 35,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 35,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G4-01"
+    },
+    {
+      "issue": 34,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 34,
+      "kind": "MILESTONE_MAPPING_HOLD",
+      "reason": "Phase 2 Start / G4 중 GitHub 단일 대표 Milestone 확정 필요."
+    },
+    {
+      "issue": 33,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:milestone"
+    },
+    {
+      "issue": 33,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-P2-START-01"
+    },
+    {
+      "issue": 32,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:milestone"
+    },
+    {
+      "issue": 32,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-P1-CLOSE-01"
+    },
+    {
+      "issue": 31,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:milestone"
+    },
+    {
+      "issue": 31,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-P1-REVIEW-01"
+    },
+    {
+      "issue": 30,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 30,
+      "kind": "MILESTONE_MAPPING_HOLD",
+      "reason": "Phase 1 Review / Close 중 GitHub 단일 대표 Milestone 확정 필요."
+    },
+    {
+      "issue": 29,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:milestone"
+    },
+    {
+      "issue": 29,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G3-01"
+    },
+    {
+      "issue": 28,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:decision"
+    },
+    {
+      "issue": 28,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-P1-REVIEW-01"
+    },
+    {
+      "issue": 27,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 27,
+      "kind": "MILESTONE_MAPPING_HOLD",
+      "reason": "본문 Phase 1 P1 / Close Tracking. 실제 Milestone 별도 확정."
+    },
+    {
+      "issue": 26,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 26,
+      "kind": "MILESTONE_MAPPING_HOLD",
+      "reason": "본문 Phase 1 P1 / Close Tracking. 실제 Milestone 별도 확정."
+    },
+    {
+      "issue": 25,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 25,
+      "kind": "MILESTONE_MAPPING_HOLD",
+      "reason": "본문 Phase 1 P1 / Close Tracking. 실제 Milestone 별도 확정."
+    },
+    {
+      "issue": 24,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 24,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G3-01"
+    },
+    {
+      "issue": 23,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:milestone"
+    },
+    {
+      "issue": 23,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G2-01"
+    },
+    {
+      "issue": 22,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 22,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G3-01"
+    },
+    {
+      "issue": 21,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 21,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G3-01"
+    },
+    {
+      "issue": 20,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 20,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G3-01"
+    },
+    {
+      "issue": 19,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 19,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G2-01"
+    },
+    {
+      "issue": 18,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:milestone"
+    },
+    {
+      "issue": 18,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G1-01"
+    },
+    {
+      "issue": 17,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 17,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G2-01"
+    },
+    {
+      "issue": 16,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 16,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G2-01"
+    },
+    {
+      "issue": 15,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 15,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G2-01"
+    },
+    {
+      "issue": 14,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:change-request"
+    },
+    {
+      "issue": 14,
+      "kind": "MILESTONE_MAPPING_HOLD",
+      "reason": "복수 인터페이스/Gate 영향, End TBD. 최종 추적 Milestone 미확정."
+    },
+    {
+      "issue": 13,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 13,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G1-01"
+    },
+    {
+      "issue": 12,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 12,
+      "kind": "MILESTONE_MAPPING_HOLD",
+      "reason": "G1 Non-blocker. 추적 Milestone과 Gate 필수조건을 구분하여 별도 확정."
+    },
+    {
+      "issue": 11,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 11,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G1-01"
+    },
+    {
+      "issue": 10,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 10,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G1-01"
+    },
+    {
+      "issue": 9,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:task"
+    },
+    {
+      "issue": 9,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G1-01"
+    },
+    {
+      "issue": 8,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:milestone"
+    },
+    {
+      "issue": 8,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G0-01"
+    },
+    {
+      "issue": 7,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:decision"
+    },
+    {
+      "issue": 7,
+      "kind": "MILESTONE_NOT_APPLIED",
+      "target": "MS-G0-01"
+    },
+    {
+      "issue": 6,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:decision"
+    },
+    {
+      "issue": 6,
+      "kind": "MILESTONE_MAPPING_HOLD",
+      "reason": "미도입/유예 결정. 현재 G2 신규 기능 편입이 아님. 추적 Milestone 미확정."
+    },
+    {
+      "issue": 5,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:decision"
+    },
+    {
+      "issue": 5,
+      "kind": "MILESTONE_MAPPING_HOLD",
+      "reason": "미도입/유예 결정. 현재 G2 신규 기능 편입이 아님. 추적 Milestone 미확정."
+    },
+    {
+      "issue": 4,
+      "kind": "NATIVE_TYPE_NOT_APPLIED",
+      "fallback": "type:decision"
+    },
+    {
+      "issue": 4,
+      "kind": "MILESTONE_MAPPING_HOLD",
+      "reason": "미도입/유예 결정. 현재 G2 신규 기능 편입이 아님. 추적 Milestone 미확정."
+    }
+  ],
+  "records": [
+    {
+      "issue": 4,
+      "record_id": "DEC-P1-FDS-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/4",
+      "before_updated_at": "2026-09-09T06:37:02Z",
+      "after_updated_at": "2026-09-10T01:21:55Z",
+      "body_sha256_before": "b81dd805b68691e8f34739b408a748a2c3e70f45489a3d363380cb18f4c0edd2",
+      "body_sha256_after": "b81dd805b68691e8f34739b408a748a2c3e70f45489a3d363380cb18f4c0edd2",
+      "labels_before": [],
+      "labels_after": [
+        "area:application",
+        "phase:phase-1",
+        "priority:P0",
+        "status:done",
+        "type:decision"
+      ],
+      "assignees_before": [
+        "supreme33-kr"
+      ],
+      "assignees_after": [
+        "supreme33-kr"
+      ],
+      "state_before": "closed",
+      "state_after": "closed",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 5,
+      "record_id": "DEC-P1-TXN-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/5",
+      "before_updated_at": "2026-09-09T06:37:13Z",
+      "after_updated_at": "2026-09-10T01:22:10Z",
+      "body_sha256_before": "5538d2581e405a721740a841bd64a28a5f56e959268a93fa6503bc9e751812ae",
+      "body_sha256_after": "5538d2581e405a721740a841bd64a28a5f56e959268a93fa6503bc9e751812ae",
+      "labels_before": [],
+      "labels_after": [
+        "area:application",
+        "phase:phase-1",
+        "priority:P0",
+        "status:done",
+        "type:decision"
+      ],
+      "assignees_before": [
+        "supreme33-kr"
+      ],
+      "assignees_after": [
+        "supreme33-kr"
+      ],
+      "state_before": "closed",
+      "state_after": "closed",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 6,
+      "record_id": "DEC-P1-ADMIN-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/6",
+      "before_updated_at": "2026-09-09T06:37:24Z",
+      "after_updated_at": "2026-09-10T01:22:24Z",
+      "body_sha256_before": "58f4442e3ca1cbb99a6fdfaf6fbe6ff2c6d571d36cc94a4db736e50dbc9bceb6",
+      "body_sha256_after": "58f4442e3ca1cbb99a6fdfaf6fbe6ff2c6d571d36cc94a4db736e50dbc9bceb6",
+      "labels_before": [],
+      "labels_after": [
+        "area:security",
+        "phase:phase-1",
+        "priority:P0",
+        "status:done",
+        "type:decision"
+      ],
+      "assignees_before": [
+        "hayeounglee"
+      ],
+      "assignees_after": [
+        "hayeounglee"
+      ],
+      "state_before": "closed",
+      "state_after": "closed",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 7,
+      "record_id": "D-SEC-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/7",
+      "before_updated_at": "2026-09-09T12:13:54Z",
+      "after_updated_at": "2026-09-09T12:13:54Z",
+      "body_sha256_before": "6fd026756d179899072507d4e515e1d7d46f555a171fcf39e9e64ce7c5234ec4",
+      "body_sha256_after": "6fd026756d179899072507d4e515e1d7d46f555a171fcf39e9e64ce7c5234ec4",
+      "labels_before": [
+        "area:security",
+        "phase:design",
+        "priority:P0",
+        "status:done",
+        "type:decision"
+      ],
+      "labels_after": [
+        "area:security",
+        "phase:design",
+        "priority:P0",
+        "status:done",
+        "type:decision"
+      ],
+      "assignees_before": [
+        "hayeounglee"
+      ],
+      "assignees_after": [
+        "hayeounglee"
+      ],
+      "state_before": "closed",
+      "state_after": "closed",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 8,
+      "record_id": "MS-G0-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/8",
+      "before_updated_at": "2026-09-09T12:14:17Z",
+      "after_updated_at": "2026-09-09T12:14:17Z",
+      "body_sha256_before": "168963d707fbc59ed37d38de62fb097ea869f240bc3123268ff61ef413b526e1",
+      "body_sha256_after": "168963d707fbc59ed37d38de62fb097ea869f240bc3123268ff61ef413b526e1",
+      "labels_before": [
+        "area:milestone",
+        "phase:design",
+        "priority:P0",
+        "status:done",
+        "type:milestone"
+      ],
+      "labels_after": [
+        "area:milestone",
+        "phase:design",
+        "priority:P0",
+        "status:done",
+        "type:milestone"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "closed",
+      "state_after": "closed",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 9,
+      "record_id": "P1-LB-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/9",
+      "before_updated_at": "2026-09-09T11:59:15Z",
+      "after_updated_at": "2026-09-09T11:59:15Z",
+      "body_sha256_before": "43f83489672941dcc3652c2ca2366db2c8c4cacf90d77db8b023db2399c94201",
+      "body_sha256_after": "43f83489672941dcc3652c2ca2366db2c8c4cacf90d77db8b023db2399c94201",
+      "labels_before": [
+        "area:infrastructure",
+        "phase:phase-1",
+        "priority:P0",
+        "status:in-progress",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:infrastructure",
+        "phase:phase-1",
+        "priority:P0",
+        "status:in-progress",
+        "type:task"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 10,
+      "record_id": "P1-K8S-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/10",
+      "before_updated_at": "2026-09-09T11:59:28Z",
+      "after_updated_at": "2026-09-09T11:59:28Z",
+      "body_sha256_before": "53a74202b8c7efbc6848cc72f32c02fb895d05581a2f73936af2ffa33bc7f701",
+      "body_sha256_after": "53a74202b8c7efbc6848cc72f32c02fb895d05581a2f73936af2ffa33bc7f701",
+      "labels_before": [
+        "area:kubernetes",
+        "phase:phase-1",
+        "priority:P0",
+        "status:in-progress",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:kubernetes",
+        "phase:phase-1",
+        "priority:P0",
+        "status:in-progress",
+        "type:task"
+      ],
+      "assignees_before": [
+        "hayeounglee"
+      ],
+      "assignees_after": [
+        "hayeounglee"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 11,
+      "record_id": "P1-DB-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/11",
+      "before_updated_at": "2026-09-09T12:00:02Z",
+      "after_updated_at": "2026-09-09T12:00:02Z",
+      "body_sha256_before": "9e41b3b258970c162f93241088031579cf3cea5c014e2334226314876eae621e",
+      "body_sha256_after": "9e41b3b258970c162f93241088031579cf3cea5c014e2334226314876eae621e",
+      "labels_before": [
+        "area:data",
+        "phase:phase-1",
+        "priority:P0",
+        "status:in-progress",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:data",
+        "phase:phase-1",
+        "priority:P0",
+        "status:in-progress",
+        "type:task"
+      ],
+      "assignees_before": [
+        "supreme33-kr"
+      ],
+      "assignees_after": [
+        "supreme33-kr"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 12,
+      "record_id": "P1-DNS-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/12",
+      "before_updated_at": "2026-09-09T12:18:42Z",
+      "after_updated_at": "2026-09-09T12:18:42Z",
+      "body_sha256_before": "3551107b2a496f900fc34addef828fcaa5aed7fd6a7080b51038ff2827d7d2e3",
+      "body_sha256_after": "3551107b2a496f900fc34addef828fcaa5aed7fd6a7080b51038ff2827d7d2e3",
+      "labels_before": [
+        "area:dns",
+        "phase:phase-1",
+        "priority:P1",
+        "status:done",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:dns",
+        "phase:phase-1",
+        "priority:P1",
+        "status:done",
+        "type:task"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "closed",
+      "state_after": "closed",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 13,
+      "record_id": "P1-HBR-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/13",
+      "before_updated_at": "2026-09-09T12:00:20Z",
+      "after_updated_at": "2026-09-09T12:00:20Z",
+      "body_sha256_before": "e3f56a6f65f1c143436514c176aa941ccaa5cbd5e2503d9d594a96402eb4deb1",
+      "body_sha256_after": "e3f56a6f65f1c143436514c176aa941ccaa5cbd5e2503d9d594a96402eb4deb1",
+      "labels_before": [
+        "area:registry",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:registry",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "assignees_before": [
+        "hayeounglee"
+      ],
+      "assignees_after": [
+        "hayeounglee"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 14,
+      "record_id": "ICR-D-NET-01-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/14",
+      "before_updated_at": "2026-09-09T12:00:36Z",
+      "after_updated_at": "2026-09-09T12:00:36Z",
+      "body_sha256_before": "96d950877dbdba170fcf976b6e6161a742a11b6242a7ea57b50dc6569691a71a",
+      "body_sha256_after": "96d950877dbdba170fcf976b6e6161a742a11b6242a7ea57b50dc6569691a71a",
+      "labels_before": [
+        "area:network",
+        "phase:phase-1",
+        "priority:P0",
+        "status:in-progress",
+        "type:change-request"
+      ],
+      "labels_after": [
+        "area:network",
+        "phase:phase-1",
+        "priority:P0",
+        "status:in-progress",
+        "type:change-request"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 15,
+      "record_id": "P1-APP-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/15",
+      "before_updated_at": "2026-09-09T12:00:50Z",
+      "after_updated_at": "2026-09-09T12:00:50Z",
+      "body_sha256_before": "58a9bc9529bfd5180620d1a274bf9166f9b24d8c992ed504b560111984102581",
+      "body_sha256_after": "58a9bc9529bfd5180620d1a274bf9166f9b24d8c992ed504b560111984102581",
+      "labels_before": [
+        "area:application",
+        "phase:phase-1",
+        "priority:P0",
+        "status:in-progress",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:application",
+        "phase:phase-1",
+        "priority:P0",
+        "status:in-progress",
+        "type:task"
+      ],
+      "assignees_before": [
+        "supreme33-kr"
+      ],
+      "assignees_after": [
+        "supreme33-kr"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 16,
+      "record_id": "P1-CICD-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/16",
+      "before_updated_at": "2026-09-09T12:01:04Z",
+      "after_updated_at": "2026-09-09T12:01:04Z",
+      "body_sha256_before": "c92c109a2c44fc3fb9041c6a43eb3033d5f2f655cc30c697462ac767ff17a641",
+      "body_sha256_after": "c92c109a2c44fc3fb9041c6a43eb3033d5f2f655cc30c697462ac767ff17a641",
+      "labels_before": [
+        "area:cicd",
+        "phase:phase-1",
+        "priority:P0",
+        "status:in-progress",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:cicd",
+        "phase:phase-1",
+        "priority:P0",
+        "status:in-progress",
+        "type:task"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 17,
+      "record_id": "P1-MON-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/17",
+      "before_updated_at": "2026-09-09T12:01:19Z",
+      "after_updated_at": "2026-09-09T12:01:19Z",
+      "body_sha256_before": "0f3fc590d8ffd4522f39ba0c93e9798bb84fd42b08f6563cd42cee92e4138ce5",
+      "body_sha256_after": "0f3fc590d8ffd4522f39ba0c93e9798bb84fd42b08f6563cd42cee92e4138ce5",
+      "labels_before": [
+        "area:monitoring",
+        "phase:phase-1",
+        "priority:P0",
+        "status:in-progress",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:monitoring",
+        "phase:phase-1",
+        "priority:P0",
+        "status:in-progress",
+        "type:task"
+      ],
+      "assignees_before": [
+        "supreme33-kr"
+      ],
+      "assignees_after": [
+        "supreme33-kr"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 18,
+      "record_id": "MS-G1-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/18",
+      "before_updated_at": "2026-09-09T12:01:41Z",
+      "after_updated_at": "2026-09-09T12:01:41Z",
+      "body_sha256_before": "140f3ba18d54d6c98009204d6cc9f51b2a407e090606c5dbe985841b17a72fd5",
+      "body_sha256_after": "140f3ba18d54d6c98009204d6cc9f51b2a407e090606c5dbe985841b17a72fd5",
+      "labels_before": [
+        "area:milestone",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:milestone"
+      ],
+      "labels_after": [
+        "area:milestone",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:milestone"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 19,
+      "record_id": "P1-SEC-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/19",
+      "before_updated_at": "2026-09-09T12:01:54Z",
+      "after_updated_at": "2026-09-09T12:01:54Z",
+      "body_sha256_before": "f1e6f26c75ef96f47dd1b76d328a1828ba8606965910b35fbb26ebf8a4dd6b36",
+      "body_sha256_after": "f1e6f26c75ef96f47dd1b76d328a1828ba8606965910b35fbb26ebf8a4dd6b36",
+      "labels_before": [
+        "area:security",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:security",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "assignees_before": [
+        "hayeounglee"
+      ],
+      "assignees_after": [
+        "hayeounglee"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 20,
+      "record_id": "P1-E2E-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/20",
+      "before_updated_at": "2026-09-09T12:02:15Z",
+      "after_updated_at": "2026-09-09T12:02:15Z",
+      "body_sha256_before": "be9c6750be56d1f8ff84c4d56d437dcb6749af834b87774a5e7fea6d74cab856",
+      "body_sha256_after": "be9c6750be56d1f8ff84c4d56d437dcb6749af834b87774a5e7fea6d74cab856",
+      "labels_before": [
+        "area:qa",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:qa",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "assignees_before": [
+        "supreme33-kr"
+      ],
+      "assignees_after": [
+        "supreme33-kr"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 21,
+      "record_id": "P1-DR-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/21",
+      "before_updated_at": "2026-09-09T12:02:37Z",
+      "after_updated_at": "2026-09-09T12:02:37Z",
+      "body_sha256_before": "a2df04100634e4d73d5e8652897955597e211ca9dd59b43be1c4a92bba24be20",
+      "body_sha256_after": "a2df04100634e4d73d5e8652897955597e211ca9dd59b43be1c4a92bba24be20",
+      "labels_before": [
+        "area:dr",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:dr",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "assignees_before": [
+        "supreme33-kr"
+      ],
+      "assignees_after": [
+        "supreme33-kr"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 22,
+      "record_id": "P1-HA-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/22",
+      "before_updated_at": "2026-09-09T12:02:53Z",
+      "after_updated_at": "2026-09-09T12:02:53Z",
+      "body_sha256_before": "44c0eda0a3fce1cd1b0d2bf85c3ab74d3c36c24b2d85a78bba73461d373aed06",
+      "body_sha256_after": "44c0eda0a3fce1cd1b0d2bf85c3ab74d3c36c24b2d85a78bba73461d373aed06",
+      "labels_before": [
+        "area:ha",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:ha",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "assignees_before": [
+        "supreme33-kr"
+      ],
+      "assignees_after": [
+        "supreme33-kr"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 23,
+      "record_id": "MS-G2-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/23",
+      "before_updated_at": "2026-09-09T12:03:10Z",
+      "after_updated_at": "2026-09-09T12:03:10Z",
+      "body_sha256_before": "42e5d108012f998832d081c32720fc4aa4ace1a6cf465ee75ff5bd5bae73474d",
+      "body_sha256_after": "42e5d108012f998832d081c32720fc4aa4ace1a6cf465ee75ff5bd5bae73474d",
+      "labels_before": [
+        "area:milestone",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:milestone"
+      ],
+      "labels_after": [
+        "area:milestone",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:milestone"
+      ],
+      "assignees_before": [
+        "hayeounglee"
+      ],
+      "assignees_after": [
+        "hayeounglee"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 24,
+      "record_id": "P1-DOC-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/24",
+      "before_updated_at": "2026-09-09T12:03:33Z",
+      "after_updated_at": "2026-09-09T12:03:33Z",
+      "body_sha256_before": "6162bb43b787b524feb5f2bebbf9b188179ff6595bce70d23a6681d20dbfe23c",
+      "body_sha256_after": "6162bb43b787b524feb5f2bebbf9b188179ff6595bce70d23a6681d20dbfe23c",
+      "labels_before": [
+        "area:pmo",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:pmo",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 25,
+      "record_id": "P1-MON-02",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/25",
+      "before_updated_at": "2026-09-09T12:03:54Z",
+      "after_updated_at": "2026-09-09T12:03:54Z",
+      "body_sha256_before": "34d11a2cb5b53d4a510a21cabe02f92178b090320cd793e1d242529d8e6bcd69",
+      "body_sha256_after": "34d11a2cb5b53d4a510a21cabe02f92178b090320cd793e1d242529d8e6bcd69",
+      "labels_before": [
+        "area:monitoring",
+        "phase:phase-1",
+        "priority:P1",
+        "status:to-do",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:monitoring",
+        "phase:phase-1",
+        "priority:P1",
+        "status:to-do",
+        "type:task"
+      ],
+      "assignees_before": [
+        "supreme33-kr"
+      ],
+      "assignees_after": [
+        "supreme33-kr"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 26,
+      "record_id": "P1-DR-02",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/26",
+      "before_updated_at": "2026-09-09T12:04:10Z",
+      "after_updated_at": "2026-09-09T12:04:10Z",
+      "body_sha256_before": "5f057aae3883f8c55eeee5506535644ba2d3b6382a0f707f31322e59a73223eb",
+      "body_sha256_after": "5f057aae3883f8c55eeee5506535644ba2d3b6382a0f707f31322e59a73223eb",
+      "labels_before": [
+        "area:dr",
+        "phase:phase-1",
+        "priority:P1",
+        "status:to-do",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:dr",
+        "phase:phase-1",
+        "priority:P1",
+        "status:to-do",
+        "type:task"
+      ],
+      "assignees_before": [
+        "hayeounglee"
+      ],
+      "assignees_after": [
+        "hayeounglee"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 27,
+      "record_id": "P1-HA-02",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/27",
+      "before_updated_at": "2026-09-09T12:04:25Z",
+      "after_updated_at": "2026-09-09T12:04:25Z",
+      "body_sha256_before": "6208cea8d4738b3b94a75c359b63bb37e0c38d6f6ee7060c1f3f72a9ca0c83b8",
+      "body_sha256_after": "6208cea8d4738b3b94a75c359b63bb37e0c38d6f6ee7060c1f3f72a9ca0c83b8",
+      "labels_before": [
+        "area:ha",
+        "phase:phase-1",
+        "priority:P1",
+        "status:to-do",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:ha",
+        "phase:phase-1",
+        "priority:P1",
+        "status:to-do",
+        "type:task"
+      ],
+      "assignees_before": [
+        "hayeounglee"
+      ],
+      "assignees_after": [
+        "hayeounglee"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 28,
+      "record_id": "DEC-CAL-P1-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/28",
+      "before_updated_at": "2026-09-09T12:04:41Z",
+      "after_updated_at": "2026-09-09T12:04:41Z",
+      "body_sha256_before": "5c0a96479f2c518bf5dc42df24e19d4ef832767e9d15c72134114d24a0500ac5",
+      "body_sha256_after": "5c0a96479f2c518bf5dc42df24e19d4ef832767e9d15c72134114d24a0500ac5",
+      "labels_before": [
+        "area:schedule",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:decision"
+      ],
+      "labels_after": [
+        "area:schedule",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:decision"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 29,
+      "record_id": "MS-G3-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/29",
+      "before_updated_at": "2026-09-09T12:04:58Z",
+      "after_updated_at": "2026-09-09T12:04:58Z",
+      "body_sha256_before": "acf0b5122273e8164a07cfd8f40c6fbc372900e69cd415310f43235204c1e4e9",
+      "body_sha256_after": "acf0b5122273e8164a07cfd8f40c6fbc372900e69cd415310f43235204c1e4e9",
+      "labels_before": [
+        "area:milestone",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:milestone"
+      ],
+      "labels_after": [
+        "area:milestone",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:milestone"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 30,
+      "record_id": "P1-REV-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/30",
+      "before_updated_at": "2026-09-09T12:05:35Z",
+      "after_updated_at": "2026-09-09T12:05:35Z",
+      "body_sha256_before": "ab22fba19572a7416d9037e97c08a3ec0369ef17c46076595d245d1cdd6ef153",
+      "body_sha256_after": "ab22fba19572a7416d9037e97c08a3ec0369ef17c46076595d245d1cdd6ef153",
+      "labels_before": [
+        "area:pmo",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:pmo",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 31,
+      "record_id": "MS-P1-REVIEW-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/31",
+      "before_updated_at": "2026-09-09T12:05:57Z",
+      "after_updated_at": "2026-09-09T12:05:57Z",
+      "body_sha256_before": "25907c6b889b0e78f1ad6c0fe136a7016f65018c436417e7e4ec224973c0a731",
+      "body_sha256_after": "25907c6b889b0e78f1ad6c0fe136a7016f65018c436417e7e4ec224973c0a731",
+      "labels_before": [
+        "area:milestone",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:milestone"
+      ],
+      "labels_after": [
+        "area:milestone",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:milestone"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 32,
+      "record_id": "MS-P1-CLOSE-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/32",
+      "before_updated_at": "2026-09-09T12:06:14Z",
+      "after_updated_at": "2026-09-09T12:06:14Z",
+      "body_sha256_before": "0800a265f513d2bfb99459beb2d68dda17987938f60929c12ad719007df7b92f",
+      "body_sha256_after": "0800a265f513d2bfb99459beb2d68dda17987938f60929c12ad719007df7b92f",
+      "labels_before": [
+        "area:milestone",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:milestone"
+      ],
+      "labels_after": [
+        "area:milestone",
+        "phase:phase-1",
+        "priority:P0",
+        "status:to-do",
+        "type:milestone"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 33,
+      "record_id": "MS-P2-START-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/33",
+      "before_updated_at": "2026-09-09T12:06:31Z",
+      "after_updated_at": "2026-09-09T12:06:31Z",
+      "body_sha256_before": "58858eff646bb454f07faf37e9a49fb302c4622d14def7492960c5448bbf49fe",
+      "body_sha256_after": "58858eff646bb454f07faf37e9a49fb302c4622d14def7492960c5448bbf49fe",
+      "labels_before": [
+        "area:milestone",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:milestone"
+      ],
+      "labels_after": [
+        "area:milestone",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:milestone"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 34,
+      "record_id": "P2-ARC-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/34",
+      "before_updated_at": "2026-09-09T12:06:55Z",
+      "after_updated_at": "2026-09-09T12:06:55Z",
+      "body_sha256_before": "309fc769d79ad7301fa62d54a130bfc32c5ec6d0651b3fffceb7792fc43aa74c",
+      "body_sha256_after": "309fc769d79ad7301fa62d54a130bfc32c5ec6d0651b3fffceb7792fc43aa74c",
+      "labels_before": [
+        "area:architecture",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:architecture",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 35,
+      "record_id": "P2-IAC-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/35",
+      "before_updated_at": "2026-09-09T12:07:12Z",
+      "after_updated_at": "2026-09-09T12:07:12Z",
+      "body_sha256_before": "9cc1eb76ce9e15ce96e292c37d853167be22bd33d828294111030d372638aa17",
+      "body_sha256_after": "9cc1eb76ce9e15ce96e292c37d853167be22bd33d828294111030d372638aa17",
+      "labels_before": [
+        "area:cloud",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:cloud",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 36,
+      "record_id": "P2-OCI-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/36",
+      "before_updated_at": "2026-09-09T12:07:26Z",
+      "after_updated_at": "2026-09-09T12:07:26Z",
+      "body_sha256_before": "25fa85700fabf55d1988551283ccbfc3edeb3514646e3400da22b0b81b32048d",
+      "body_sha256_after": "25fa85700fabf55d1988551283ccbfc3edeb3514646e3400da22b0b81b32048d",
+      "labels_before": [
+        "area:milestone",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:decision"
+      ],
+      "labels_after": [
+        "area:milestone",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:decision"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 37,
+      "record_id": "P2-VPN-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/37",
+      "before_updated_at": "2026-09-09T12:07:41Z",
+      "after_updated_at": "2026-09-09T12:07:41Z",
+      "body_sha256_before": "14173d143f1eea5dc4bba86a9ea78c21ef53db02cd33d62741ce7ce604b5f8d9",
+      "body_sha256_after": "14173d143f1eea5dc4bba86a9ea78c21ef53db02cd33d62741ce7ce604b5f8d9",
+      "labels_before": [
+        "area:hybrid-network",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:hybrid-network",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 38,
+      "record_id": "P2-ROSA-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/38",
+      "before_updated_at": "2026-09-09T12:07:55Z",
+      "after_updated_at": "2026-09-09T12:07:55Z",
+      "body_sha256_before": "b2c7522323660decca74764404433f3ad0f5fcce26854c3f912c27c4f7f3b2a9",
+      "body_sha256_after": "b2c7522323660decca74764404433f3ad0f5fcce26854c3f912c27c4f7f3b2a9",
+      "labels_before": [
+        "area:openshift",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:openshift",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "assignees_before": [
+        "hayeounglee"
+      ],
+      "assignees_after": [
+        "hayeounglee"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 39,
+      "record_id": "MS-G4-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/39",
+      "before_updated_at": "2026-09-09T12:08:10Z",
+      "after_updated_at": "2026-09-09T12:08:10Z",
+      "body_sha256_before": "417394ef2aac1884c903e7a4f0e38332e6706f45a87906245ee5ea95baaa0af1",
+      "body_sha256_after": "417394ef2aac1884c903e7a4f0e38332e6706f45a87906245ee5ea95baaa0af1",
+      "labels_before": [
+        "area:milestone",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:milestone"
+      ],
+      "labels_after": [
+        "area:milestone",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:milestone"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 40,
+      "record_id": "DEC-P2-DNS-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/40",
+      "before_updated_at": "2026-09-09T12:08:24Z",
+      "after_updated_at": "2026-09-09T12:08:24Z",
+      "body_sha256_before": "435220556fff452886c9f9540bd90c868f859d20d9098b2d96610431f56019d5",
+      "body_sha256_after": "435220556fff452886c9f9540bd90c868f859d20d9098b2d96610431f56019d5",
+      "labels_before": [
+        "area:architecture",
+        "phase:phase-2",
+        "priority:P1",
+        "status:to-do",
+        "type:decision"
+      ],
+      "labels_after": [
+        "area:architecture",
+        "phase:phase-2",
+        "priority:P1",
+        "status:to-do",
+        "type:decision"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 41,
+      "record_id": "DEC-P2-OP-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/41",
+      "before_updated_at": "2026-09-09T12:08:39Z",
+      "after_updated_at": "2026-09-09T12:08:39Z",
+      "body_sha256_before": "0d6ac7cf62ac7952384509f17bc275eb083235493e9c1eb69e052582ea695621",
+      "body_sha256_after": "0d6ac7cf62ac7952384509f17bc275eb083235493e9c1eb69e052582ea695621",
+      "labels_before": [
+        "area:architecture",
+        "phase:phase-2",
+        "priority:P1",
+        "status:to-do",
+        "type:decision"
+      ],
+      "labels_after": [
+        "area:architecture",
+        "phase:phase-2",
+        "priority:P1",
+        "status:to-do",
+        "type:decision"
+      ],
+      "assignees_before": [
+        "hayeounglee"
+      ],
+      "assignees_after": [
+        "hayeounglee"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 42,
+      "record_id": "DEC-P2-REG-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/42",
+      "before_updated_at": "2026-09-09T12:08:53Z",
+      "after_updated_at": "2026-09-09T12:08:53Z",
+      "body_sha256_before": "6108be4c4e21c9bac3f9b38120edc7efb23a7b8242f84990a131ed895e856be2",
+      "body_sha256_after": "6108be4c4e21c9bac3f9b38120edc7efb23a7b8242f84990a131ed895e856be2",
+      "labels_before": [
+        "area:architecture",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:decision"
+      ],
+      "labels_after": [
+        "area:architecture",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:decision"
+      ],
+      "assignees_before": [
+        "hayeounglee"
+      ],
+      "assignees_after": [
+        "hayeounglee"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 43,
+      "record_id": "P2-APP-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/43",
+      "before_updated_at": "2026-09-09T12:09:08Z",
+      "after_updated_at": "2026-09-09T12:09:08Z",
+      "body_sha256_before": "bbd659b1920f9fe77c28706425a59f8fef2a69c858dda6ced8f752300cd71a6b",
+      "body_sha256_after": "bbd659b1920f9fe77c28706425a59f8fef2a69c858dda6ced8f752300cd71a6b",
+      "labels_before": [
+        "area:application",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:application",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "assignees_before": [
+        "supreme33-kr"
+      ],
+      "assignees_after": [
+        "supreme33-kr"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 44,
+      "record_id": "P2-OADP-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/44",
+      "before_updated_at": "2026-09-09T12:09:26Z",
+      "after_updated_at": "2026-09-09T12:09:26Z",
+      "body_sha256_before": "eb5c75848f6b874e8545241a1d6581a6513d097f2d40da012d3dcd7772b94481",
+      "body_sha256_after": "eb5c75848f6b874e8545241a1d6581a6513d097f2d40da012d3dcd7772b94481",
+      "labels_before": [
+        "area:backup",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:backup",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "assignees_before": [
+        "hayeounglee"
+      ],
+      "assignees_after": [
+        "hayeounglee"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 45,
+      "record_id": "MS-G5-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/45",
+      "before_updated_at": "2026-09-09T12:09:48Z",
+      "after_updated_at": "2026-09-09T12:09:48Z",
+      "body_sha256_before": "57a2fbb91a0dd566d996c387c7e58d917396f661e7750e04c9b390326bdb3a45",
+      "body_sha256_after": "57a2fbb91a0dd566d996c387c7e58d917396f661e7750e04c9b390326bdb3a45",
+      "labels_before": [
+        "area:milestone",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:milestone"
+      ],
+      "labels_after": [
+        "area:milestone",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:milestone"
+      ],
+      "assignees_before": [
+        "hayeounglee"
+      ],
+      "assignees_after": [
+        "hayeounglee"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 46,
+      "record_id": "P2-CICD-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/46",
+      "before_updated_at": "2026-09-09T12:10:04Z",
+      "after_updated_at": "2026-09-09T12:10:04Z",
+      "body_sha256_before": "3e46119cea0b0ccfb1cd63e2851679112f4c402c114f3091157b99950fff72cb",
+      "body_sha256_after": "3e46119cea0b0ccfb1cd63e2851679112f4c402c114f3091157b99950fff72cb",
+      "labels_before": [
+        "area:cicd",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:cicd",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 47,
+      "record_id": "P2-HYB-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/47",
+      "before_updated_at": "2026-09-09T12:10:20Z",
+      "after_updated_at": "2026-09-09T12:10:20Z",
+      "body_sha256_before": "9c307d8bde92285de567c7c4e95ec2968d93049782de215f11260e8bfc30898c",
+      "body_sha256_after": "9c307d8bde92285de567c7c4e95ec2968d93049782de215f11260e8bfc30898c",
+      "labels_before": [
+        "area:hybrid-integration",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:hybrid-integration",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "assignees_before": [
+        "supreme33-kr"
+      ],
+      "assignees_after": [
+        "supreme33-kr"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 48,
+      "record_id": "P2-DNS-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/48",
+      "before_updated_at": "2026-09-09T12:10:35Z",
+      "after_updated_at": "2026-09-09T12:10:35Z",
+      "body_sha256_before": "4e9f92ba12f798cf842b4a66f319a1c93fbcce6786b94230d8a863c1e5783d8c",
+      "body_sha256_after": "4e9f92ba12f798cf842b4a66f319a1c93fbcce6786b94230d8a863c1e5783d8c",
+      "labels_before": [
+        "area:dns",
+        "phase:phase-2",
+        "priority:P1",
+        "status:to-do",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:dns",
+        "phase:phase-2",
+        "priority:P1",
+        "status:to-do",
+        "type:task"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 49,
+      "record_id": "P2-DOC-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/49",
+      "before_updated_at": "2026-09-09T12:10:51Z",
+      "after_updated_at": "2026-09-09T12:10:51Z",
+      "body_sha256_before": "d835a47245541f063b4d449a22e9406b58e27cde76174cd745c8efdbd847e31b",
+      "body_sha256_after": "d835a47245541f063b4d449a22e9406b58e27cde76174cd745c8efdbd847e31b",
+      "labels_before": [
+        "area:pmo",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:pmo",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 50,
+      "record_id": "P2-E2E-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/50",
+      "before_updated_at": "2026-09-09T12:11:20Z",
+      "after_updated_at": "2026-09-09T12:11:20Z",
+      "body_sha256_before": "57312a6b53247777b56f4813edafac1b390e388a3669500c80b8b39e0c063414",
+      "body_sha256_after": "57312a6b53247777b56f4813edafac1b390e388a3669500c80b8b39e0c063414",
+      "labels_before": [
+        "area:qa",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:qa",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "assignees_before": [
+        "supreme33-kr"
+      ],
+      "assignees_after": [
+        "supreme33-kr"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 51,
+      "record_id": "P2-OP-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/51",
+      "before_updated_at": "2026-09-09T12:11:36Z",
+      "after_updated_at": "2026-09-09T12:11:36Z",
+      "body_sha256_before": "e5ebde7aca5d6454c9c2bacfa9cd6b1c98266d03bd3aad024dd07be1b1ae4b07",
+      "body_sha256_after": "e5ebde7aca5d6454c9c2bacfa9cd6b1c98266d03bd3aad024dd07be1b1ae4b07",
+      "labels_before": [
+        "area:operator-supply-chain",
+        "phase:phase-2",
+        "priority:P1",
+        "status:to-do",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:operator-supply-chain",
+        "phase:phase-2",
+        "priority:P1",
+        "status:to-do",
+        "type:task"
+      ],
+      "assignees_before": [
+        "hayeounglee"
+      ],
+      "assignees_after": [
+        "hayeounglee"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 52,
+      "record_id": "DEC-CAL-P2-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/52",
+      "before_updated_at": "2026-09-09T12:11:51Z",
+      "after_updated_at": "2026-09-09T12:11:51Z",
+      "body_sha256_before": "80b6b248e86e83d0b582e76106dede0423f322af368112f654666d56e602f2b5",
+      "body_sha256_after": "80b6b248e86e83d0b582e76106dede0423f322af368112f654666d56e602f2b5",
+      "labels_before": [
+        "area:schedule",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:decision"
+      ],
+      "labels_after": [
+        "area:schedule",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:decision"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 53,
+      "record_id": "MS-G6-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/53",
+      "before_updated_at": "2026-09-09T12:12:06Z",
+      "after_updated_at": "2026-09-09T12:12:06Z",
+      "body_sha256_before": "9c37e2e5ec49a0aabf5913b601e66a0b1c286f95c587e1c4dc278e76cbba06af",
+      "body_sha256_after": "9c37e2e5ec49a0aabf5913b601e66a0b1c286f95c587e1c4dc278e76cbba06af",
+      "labels_before": [
+        "area:milestone",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:milestone"
+      ],
+      "labels_after": [
+        "area:milestone",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:milestone"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 54,
+      "record_id": "MS-DELIVERABLE-FREEZE-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/54",
+      "before_updated_at": "2026-09-09T12:12:22Z",
+      "after_updated_at": "2026-09-09T12:12:22Z",
+      "body_sha256_before": "f3a8e456992e418d911ba1020bad3f22157c6350248f56ac43654b60391f3222",
+      "body_sha256_after": "f3a8e456992e418d911ba1020bad3f22157c6350248f56ac43654b60391f3222",
+      "labels_before": [
+        "area:milestone",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:milestone"
+      ],
+      "labels_after": [
+        "area:milestone",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:milestone"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 55,
+      "record_id": "P2-REV-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/55",
+      "before_updated_at": "2026-09-09T12:12:39Z",
+      "after_updated_at": "2026-09-09T12:12:39Z",
+      "body_sha256_before": "b0f0753203ae73d1733fe15bd9f25c9ef8ebe4ea596dfd7433bc0d592ad2bf58",
+      "body_sha256_after": "b0f0753203ae73d1733fe15bd9f25c9ef8ebe4ea596dfd7433bc0d592ad2bf58",
+      "labels_before": [
+        "area:pmo",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:pmo",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:task"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 56,
+      "record_id": "MS-P2-REVIEW-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/56",
+      "before_updated_at": "2026-09-09T12:12:58Z",
+      "after_updated_at": "2026-09-09T12:12:58Z",
+      "body_sha256_before": "a42ae300e67860e226ac8242e78f8ddbd6f1619401f85c1b679ab1db399fb06b",
+      "body_sha256_after": "a42ae300e67860e226ac8242e78f8ddbd6f1619401f85c1b679ab1db399fb06b",
+      "labels_before": [
+        "area:milestone",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:milestone"
+      ],
+      "labels_after": [
+        "area:milestone",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:milestone"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 57,
+      "record_id": "MS-PROJECT-CLOSE-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/57",
+      "before_updated_at": "2026-09-09T12:13:16Z",
+      "after_updated_at": "2026-09-09T12:13:16Z",
+      "body_sha256_before": "61e4b656efe32477a63fcd0988d0e305cbed60d1005d0573e5a3209addc458d1",
+      "body_sha256_after": "61e4b656efe32477a63fcd0988d0e305cbed60d1005d0573e5a3209addc458d1",
+      "labels_before": [
+        "area:milestone",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:milestone"
+      ],
+      "labels_after": [
+        "area:milestone",
+        "phase:phase-2",
+        "priority:P0",
+        "status:to-do",
+        "type:milestone"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "open",
+      "state_after": "open",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 58,
+      "record_id": "CR-P1-ANS-01-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/58",
+      "before_updated_at": "2026-09-09T12:14:54Z",
+      "after_updated_at": "2026-09-09T12:14:54Z",
+      "body_sha256_before": "1a6e1d8181675b046b1504b7b5af1fa5142596b0092948361526163c84eb289e",
+      "body_sha256_after": "1a6e1d8181675b046b1504b7b5af1fa5142596b0092948361526163c84eb289e",
+      "labels_before": [
+        "area:automation",
+        "phase:phase-1",
+        "priority:P1",
+        "status:done",
+        "type:change-request"
+      ],
+      "labels_after": [
+        "area:automation",
+        "phase:phase-1",
+        "priority:P1",
+        "status:done",
+        "type:change-request"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "closed",
+      "state_after": "closed",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 59,
+      "record_id": "D-ARC-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/59",
+      "before_updated_at": "2026-09-09T12:15:20Z",
+      "after_updated_at": "2026-09-09T12:15:20Z",
+      "body_sha256_before": "2e52c2bf4ef11f2c2fc28c2943f634d778a6ae6aff623dbe0a42772c1e6e8eb4",
+      "body_sha256_after": "2e52c2bf4ef11f2c2fc28c2943f634d778a6ae6aff623dbe0a42772c1e6e8eb4",
+      "labels_before": [
+        "metadata:needs-source",
+        "status:done"
+      ],
+      "labels_after": [
+        "metadata:needs-source",
+        "status:done"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "closed",
+      "state_after": "closed",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 60,
+      "record_id": "D-NET-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/60",
+      "before_updated_at": "2026-09-09T12:15:39Z",
+      "after_updated_at": "2026-09-09T12:15:39Z",
+      "body_sha256_before": "275771afc8b23ae2f5172c2d9545ba329158541e96916a2269eed3810bcedeea",
+      "body_sha256_after": "275771afc8b23ae2f5172c2d9545ba329158541e96916a2269eed3810bcedeea",
+      "labels_before": [
+        "area:network",
+        "phase:design",
+        "priority:P0",
+        "status:done",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:network",
+        "phase:design",
+        "priority:P0",
+        "status:done",
+        "type:task"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "closed",
+      "state_after": "closed",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 61,
+      "record_id": "D-WBS-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/61",
+      "before_updated_at": "2026-09-09T12:15:55Z",
+      "after_updated_at": "2026-09-09T12:15:55Z",
+      "body_sha256_before": "39a5dda49c91c1dab75ad44432e87b3016850a8676fb57e83ceec466c1937c43",
+      "body_sha256_after": "39a5dda49c91c1dab75ad44432e87b3016850a8676fb57e83ceec466c1937c43",
+      "labels_before": [
+        "metadata:needs-source",
+        "status:done"
+      ],
+      "labels_after": [
+        "metadata:needs-source",
+        "status:done"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "closed",
+      "state_after": "closed",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 62,
+      "record_id": "DEC-P1-ENTRY-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/62",
+      "before_updated_at": "2026-09-09T12:16:14Z",
+      "after_updated_at": "2026-09-09T12:16:14Z",
+      "body_sha256_before": "2dd6943eda081044ff0e7965469fc050d22ae7e51f51a3b538af05be11884780",
+      "body_sha256_after": "2dd6943eda081044ff0e7965469fc050d22ae7e51f51a3b538af05be11884780",
+      "labels_before": [
+        "area:architecture",
+        "phase:phase-1",
+        "priority:P0",
+        "status:done",
+        "type:decision"
+      ],
+      "labels_after": [
+        "area:architecture",
+        "phase:phase-1",
+        "priority:P0",
+        "status:done",
+        "type:decision"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "closed",
+      "state_after": "closed",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 63,
+      "record_id": "DEC-P1-MON-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/63",
+      "before_updated_at": "2026-09-09T12:16:31Z",
+      "after_updated_at": "2026-09-09T12:16:31Z",
+      "body_sha256_before": "3fdc68c69c34cad04a24546bc541ff101521942ef50ef42fdafbefb3f2e264d4",
+      "body_sha256_after": "3fdc68c69c34cad04a24546bc541ff101521942ef50ef42fdafbefb3f2e264d4",
+      "labels_before": [
+        "area:monitoring",
+        "phase:phase-1",
+        "priority:P0",
+        "status:done",
+        "type:decision"
+      ],
+      "labels_after": [
+        "area:monitoring",
+        "phase:phase-1",
+        "priority:P0",
+        "status:done",
+        "type:decision"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "closed",
+      "state_after": "closed",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 64,
+      "record_id": "DEC-P1-TLS-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/64",
+      "before_updated_at": "2026-09-09T12:17:08Z",
+      "after_updated_at": "2026-09-09T12:17:08Z",
+      "body_sha256_before": "e7af858767dce6618961e2c6b2d152e7423545f32ee3176533cdd174750fabc5",
+      "body_sha256_after": "e7af858767dce6618961e2c6b2d152e7423545f32ee3176533cdd174750fabc5",
+      "labels_before": [
+        "area:security",
+        "phase:phase-1",
+        "priority:P0",
+        "status:done",
+        "type:decision"
+      ],
+      "labels_after": [
+        "area:security",
+        "phase:phase-1",
+        "priority:P0",
+        "status:done",
+        "type:decision"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "closed",
+      "state_after": "closed",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 65,
+      "record_id": "P1-ANS-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/65",
+      "before_updated_at": "2026-09-09T12:17:28Z",
+      "after_updated_at": "2026-09-09T12:17:28Z",
+      "body_sha256_before": "aeec7da0ab9070e730a9e7caf60645b86048d59948e0756c28bdd0ae13a7b7d3",
+      "body_sha256_after": "aeec7da0ab9070e730a9e7caf60645b86048d59948e0756c28bdd0ae13a7b7d3",
+      "labels_before": [
+        "area:automation",
+        "phase:phase-1",
+        "priority:P0",
+        "status:done",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:automation",
+        "phase:phase-1",
+        "priority:P0",
+        "status:done",
+        "type:task"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "closed",
+      "state_after": "closed",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 66,
+      "record_id": "P1-LNX-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/66",
+      "before_updated_at": "2026-09-09T12:17:50Z",
+      "after_updated_at": "2026-09-09T12:17:50Z",
+      "body_sha256_before": "a11bcdd6143b38bea709ffbb7b1c2ea20ecd2f26422b275721ddedc5b4066500",
+      "body_sha256_after": "a11bcdd6143b38bea709ffbb7b1c2ea20ecd2f26422b275721ddedc5b4066500",
+      "labels_before": [
+        "area:linux",
+        "phase:phase-1",
+        "priority:P0",
+        "status:done",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:linux",
+        "phase:phase-1",
+        "priority:P0",
+        "status:done",
+        "type:task"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "closed",
+      "state_after": "closed",
+      "native_type": null,
+      "milestone": null
+    },
+    {
+      "issue": 67,
+      "record_id": "P1-NET-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/67",
+      "before_updated_at": "2026-09-09T12:18:08Z",
+      "after_updated_at": "2026-09-09T12:18:08Z",
+      "body_sha256_before": "7f5b7b7f6d6e38c92f0017ad4509921e5f3ad0f15a87b3145a71878aea34c396",
+      "body_sha256_after": "7f5b7b7f6d6e38c92f0017ad4509921e5f3ad0f15a87b3145a71878aea34c396",
+      "labels_before": [
+        "area:network",
+        "phase:phase-1",
+        "priority:P0",
+        "status:done",
+        "type:task"
+      ],
+      "labels_after": [
+        "area:network",
+        "phase:phase-1",
+        "priority:P0",
+        "status:done",
+        "type:task"
+      ],
+      "assignees_before": [
+        "GWONUK"
+      ],
+      "assignees_after": [
+        "GWONUK"
+      ],
+      "state_before": "closed",
+      "state_after": "closed",
+      "native_type": null,
+      "milestone": null
+    }
+  ],
+  "tests": {
+    "unit_tests": 18,
+    "result": "PASS",
+    "native_live_execution": "NOT RUN"
+  },
+  "main_unchanged": "2d93395a0e19ea67e5be199d7183a7edbaa6cf4c"
+}
+
