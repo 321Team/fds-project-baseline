@@ -72,3 +72,27 @@ python3 -m unittest discover -s tests -p 'test_ticket_sync.py'
 기본 흐름은 전체 조회 → Record ID/17개 속성 검증 → 차이 계획 → 명시적 Apply → 재조회다. 재실행 시 차이가 없으면 쓰지 않는다. 실제 Type·Milestone이 미설정이거나 원본 미확인 값이 남으면 결과는 `PARTIAL`이며 완전 동기화 PASS로 선언하지 않는다.
 
 README·정책 보완은 후보 PR의 변경이다. 독립 리뷰와 기존 배포 Gate 전까지 `main`, `CURRENT.md`, Release Tag, 정본/WBS 및 Runtime 완료 상태를 변경하지 않는다.
+
+## v3.1.18 통합 후보
+
+현재 발행 정본은 `CURRENT.md`의 v3.1.17이다. v3.1.18은 누적 이력 통합과 티켓 최신화를 준비한 후보이며 운영 완료 승인으로 사용하지 않는다.
+
+- [Baseline 후보](baseline/FDS_Project_Implementation_Baseline_v3.1.18.md)
+- [WBS/Gantt 55건](wbs/FDS_v3.1.18_WBS_and_Gantt_v1.0.xlsx)
+- [64개 티켓 Description 후보](tickets/FDS_v3.1.18_Canonical_Ticket_Update_Pack_v1.0.md)
+- [변경·출처·인수 조건 대장](releases/v3.1.18/FDS_Canonical_Consolidation_Record_v3.1.18.md)
+- [Release Notes](releases/v3.1.18/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.18.md)
+- [배포 Manifest](releases/v3.1.18/FDS_Document_Distribution_Manifest_v3.1.18.md)
+- [무결성 감사](audit/FDS_Canonical_Integrity_Audit_v3.1.18.md)
+
+순서는 정본 리뷰·명시적 merge 승인·발행 → 실제 티켓 Description 최신화 → 새 속성 map/plan 생성·적용이다. 현재 `governance/ticket-sync-map.json`은 이전 본문을 대상으로 만든 이력이며 v3.1.18 Description 적용 후 그대로 사용하지 않는다. `canonical-records.json`은 문서 원본이지 apply 계획이 아니다. 본문의 최신 실행 기록, 기존 migration marker, 댓글·AC·승인 기록은 후속 갱신에서도 보존한다.
+
+로컬 후보 검증과 ZIP 재생성:
+
+```bash
+python3 scripts/verify-v18-candidate.py
+python3 scripts/build-canonical-package.py v3.1.18 /tmp/fds-v18-package
+FDS_RELEASE_ZIP=/tmp/fds-v18-package/FDS_v3.1.18_Canonical_Baseline_Release_Package.zip RELEASE_VERSION=v3.1.18 bash scripts/verify-canonical-release.sh
+```
+
+이 명령들은 Release 발행이나 GitHub 티켓 변경을 수행하지 않는다. `governance/RELEASE_POLICY.md`의 독립 리뷰·정확한 HEAD 승인·최종 발행 Gate를 그대로 적용한다.

@@ -1,0 +1,562 @@
+[
+  {
+    "issue": 4,
+    "record_id": "DEC-P1-FDS-01",
+    "field": "Source",
+    "before": "Baseline v3.1.17; D-SEC-01 v1.0/D34; Issue #4~6 리드 의견; 2026-09-09 사용자 종결 지시; 통합 검토 v1.1",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #4 snapshot 2026-09-10T01:21:55Z"
+  },
+  {
+    "issue": 4,
+    "record_id": "DEC-P1-FDS-01",
+    "field": "Schedule Note",
+    "before": "현행 유지·신규 기능 유예 결정 종결. Priority는 결정 우선순위이며 신규 기능 G2 편입 아님. Runtime/정본 반영은 별도. Notion은 같은 Record ID로 수동 Upsert.",
+    "after": "현행 유지·신규 기능 확대 유예 결정 Done. 본 v3.1.18 후보에 통합하며 발행 전 운영 정본은 v3.1.17이다. 신규 기능 G2 편입·Runtime 승인은 아니다."
+  },
+  {
+    "issue": 5,
+    "record_id": "DEC-P1-TXN-01",
+    "field": "Source",
+    "before": "Baseline v3.1.17; D-SEC-01 v1.0/D34; Issue #4~6 리드 의견; 2026-09-09 사용자 종결 지시; 통합 검토 v1.1",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #5 snapshot 2026-09-10T01:22:10Z"
+  },
+  {
+    "issue": 5,
+    "record_id": "DEC-P1-TXN-01",
+    "field": "Schedule Note",
+    "before": "현행 유지·신규 기능 유예 결정 종결. Priority는 결정 우선순위이며 신규 기능 G2 편입 아님. Runtime/정본 반영은 별도. Notion은 같은 Record ID로 수동 Upsert.",
+    "after": "현행 유지·신규 기능 확대 유예 결정 Done. 본 v3.1.18 후보에 통합하며 발행 전 운영 정본은 v3.1.17이다. 신규 기능 G2 편입·Runtime 승인은 아니다."
+  },
+  {
+    "issue": 6,
+    "record_id": "DEC-P1-ADMIN-01",
+    "field": "Working Days",
+    "before": "2",
+    "after": "1"
+  },
+  {
+    "issue": 6,
+    "record_id": "DEC-P1-ADMIN-01",
+    "field": "Source",
+    "before": "Baseline v3.1.17; D-SEC-01 v1.0/D34; Issue #4~6 리드 의견; 2026-09-09 사용자 종결 지시; 통합 검토 v1.1",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #6 snapshot 2026-09-10T01:22:24Z"
+  },
+  {
+    "issue": 6,
+    "record_id": "DEC-P1-ADMIN-01",
+    "field": "Schedule Note",
+    "before": "현행 유지·신규 기능 유예 결정 종결. Priority는 결정 우선순위이며 신규 기능 G2 편입 아님. Runtime/정본 반영은 별도. Notion은 같은 Record ID로 수동 Upsert.",
+    "after": "현행 유지·신규 기능 확대 유예 결정 Done. 본 v3.1.18 후보에 통합하며 발행 전 운영 정본은 v3.1.17이다. 신규 기능 G2 편입·Runtime 승인은 아니다."
+  },
+  {
+    "issue": 7,
+    "record_id": "D-SEC-01",
+    "field": "Source",
+    "before": "2026-08-26 공통 검토 의견 및 담당자 정정; FDS_Project_Implementation_Baseline_v3.1.12; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #7 snapshot 2026-09-09T12:13:54Z"
+  },
+  {
+    "issue": 8,
+    "record_id": "MS-G0-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.15; D-SEC-01 Security Design Baseline v1.0; D35; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #8 snapshot 2026-09-09T12:14:17Z"
+  },
+  {
+    "issue": 9,
+    "record_id": "P1-LB-01",
+    "field": "Source",
+    "before": "Baseline v3.1.15; P1-LB Stage A Guide v1.3; D35 IF-11A Approval Record; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #9 snapshot 2026-09-10T02:09:13Z"
+  },
+  {
+    "issue": 10,
+    "record_id": "P1-K8S-01",
+    "field": "Exit Criteria",
+    "before": "LB Stage A 확인, 6개 Node firewalld OFF, containerd/kubelet·SELinux·identity·Port Matrix, BGP Disabled+VXLANCrossSubnet Calico, 6/6 Ready, CoreDNS, static local PV Evidence",
+    "after": "LB Stage A 확인, 6개 Node의 보호 공백 없는 firewalld→named HEP/GNP 전환, containerd/kubelet·SELinux·identity·Port Matrix, BGP Disabled+VXLANCrossSubnet Calico, 6/6 Ready, CoreDNS, static local PV Evidence"
+  },
+  {
+    "issue": 10,
+    "record_id": "P1-K8S-01",
+    "field": "Source",
+    "before": "Baseline v3.1.15; P1-K8S Preflight Review v1.1; D35 IF-11A Approval Record; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #10 snapshot 2026-09-10T05:03:27Z"
+  },
+  {
+    "issue": 10,
+    "record_id": "P1-K8S-01",
+    "field": "Schedule Note",
+    "before": "2026-09-03 착수. P1-LB-01 Stage A PASS를 인계받아 Gate 0~2 수행 중. SELinux Enforcing 유지, firewalld→Calico HostEndpoint 전환, D34 확정값 적용.",
+    "after": "승인 목표는 SELinux Enforcing·Calico named HEP/GNP 보호 전환이다. 실제 적용은 현행 Gate와 고정 변경안의 리뷰·실행 결정 후 노드별 검증으로 진행한다. CP1 준비/진단은 전체 6대 Runtime PASS가 아니며 날짜 재기준선화는 하지 않는다."
+  },
+  {
+    "issue": 11,
+    "record_id": "P1-DB-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #11 snapshot 2026-09-10T04:01:06Z"
+  },
+  {
+    "issue": 12,
+    "record_id": "P1-DNS-01",
+    "field": "Source",
+    "before": "Baseline v3.1.15; P1-DNS Description v1.1; P1-DNS Evidence Package v1.0; P1-LB Guide v1.3; D35; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #12 snapshot 2026-09-10T02:09:19Z"
+  },
+  {
+    "issue": 13,
+    "record_id": "P1-HBR-01",
+    "field": "Source",
+    "before": "Baseline v3.1.15; DEC-P1-TLS-01/D19; D-SEC-01 Security Design Baseline v1.0; D35; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #13 snapshot 2026-09-10T03:15:50Z"
+  },
+  {
+    "issue": 13,
+    "record_id": "P1-HBR-01",
+    "field": "Schedule Note",
+    "before": "이하영 08-28 휴가를 반영해 08-31 시작한다. TLS 결정 D19를 선행한다. Harbor HA는 P2, 실제 Backup/Restore는 P1-DR-02 범위다.",
+    "after": "D19 TLS와 Harbor 구현·6차 리뷰 보완 진행 중. 2026-09-08 이하영 개인 부재는 이권욱이 지원하며 Plan End는 유지한다. Harbor HA는 Phase 1 Scope Out/P2 검토, 실제 Backup/Restore는 P1-DR-02 범위다."
+  },
+  {
+    "issue": 14,
+    "record_id": "ICR-D-NET-01-01",
+    "field": "Exit Criteria",
+    "before": "Kubernetes 6개 Node firewalld 비활성화와 Calico named HEP/GNP 적용, 30080/9100/10250 최소 허용, 관리망 반환 경로와 IF-06B 정합화, Positive/Negative/Regression/Reboot/Rollback 및 무결성 Evidence 완료",
+    "after": "Kubernetes 6개 Node의 보호 공백 없는 firewalld→Calico named HEP/GNP 전환, 30080/9100/10250 최소 허용, 관리망 반환 경로와 IF-06B 정합화, Positive/Negative/Regression/Reboot/Rollback 및 무결성 Evidence 완료"
+  },
+  {
+    "issue": 14,
+    "record_id": "ICR-D-NET-01-01",
+    "field": "Source",
+    "before": "ICR-D-NET-01-01...v1.4.md`; `FDS_Project_Implementation_Baseline_v3.1.17.md`; Interface Register IF-06B/IF-16; 2026-09-08 연결된 321Team GitHub 검색 결과; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #14 snapshot 2026-09-10T05:03:39Z"
+  },
+  {
+    "issue": 14,
+    "record_id": "ICR-D-NET-01-01",
+    "field": "Schedule Note",
+    "before": "Read-only와 설계 승인은 완료됐으나 Runtime Evidence는 미확인이다. IF-06B는 Receiver/TLS/Auth·반환 경로·실제 Source 관찰이 미완료이고, IF-16은 edge/harbor/db 경로 Drift가 남아 있다. End와 기간은 추정하지 않고 `TBD`를 유지하며 Positive/Negative/Regression/Reboot/Rollback 증적과 독립 리뷰 후 완료를 판정한다.",
+    "after": "CP1 사전 진단 완료, 최소 CP 통신 canary 적용·독립 리뷰·운영 인수 대기. 6대 HEP/GNP·IF-06B·IF-16 및 NTP 목적지/Worker 검증은 잔여. End/기간 TBD 유지."
+  },
+  {
+    "issue": 15,
+    "record_id": "P1-APP-01",
+    "field": "Source",
+    "before": "Baseline v3.1.15; D-SEC-01 Security Design Baseline v1.0; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #15 snapshot 2026-09-10T04:01:11Z"
+  },
+  {
+    "issue": 16,
+    "record_id": "P1-CICD-01",
+    "field": "Source",
+    "before": "Baseline v3.1.17 §10/§15/§16; D-SEC-01 v1.0/D34; FDS_Notion_Remaining_Backlog_Manual_v1.9 §12; 사용자 2026-09-08 착수 지시; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #16 snapshot 2026-09-10T02:09:24Z"
+  },
+  {
+    "issue": 17,
+    "record_id": "P1-MON-01",
+    "field": "Exit Criteria",
+    "before": "In-cluster Prometheus·Alertmanager·Grafana·kube-state-metrics, monitoring-node node-exporter와 monitor01 External Watchdog을 배포하고 16개 Runtime Acceptance 및 구축·복구·Rollback Runbook Evidence를 Support Review에서 승인",
+    "after": "Hybrid Monitoring의 Runtime Acceptance 14개와 필수 보조통제 2개, 구축·복구·Rollback Runbook 및 Support Review 증적 확보"
+  },
+  {
+    "issue": 17,
+    "record_id": "P1-MON-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.14; D-SEC-01 Security Design Baseline v1.0; DEC-P1-MON-01/D33; D34; ICR-D-NET-01-01 v1.3; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #17 snapshot 2026-09-10T04:01:45Z"
+  },
+  {
+    "issue": 18,
+    "record_id": "MS-G1-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #18 snapshot 2026-09-09T12:01:41Z"
+  },
+  {
+    "issue": 19,
+    "record_id": "P1-SEC-01",
+    "field": "Working Days",
+    "before": "6",
+    "after": "5"
+  },
+  {
+    "issue": 19,
+    "record_id": "P1-SEC-01",
+    "field": "Source",
+    "before": "Baseline v3.1.15; D-SEC-01 Security Design Baseline v1.0; ICR v1.4; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #19 snapshot 2026-09-10T05:05:52Z"
+  },
+  {
+    "issue": 19,
+    "record_id": "P1-SEC-01",
+    "field": "Schedule Note",
+    "before": "09-04 이재환 지원 부재는 이권욱이 커버한다. Lead 이하영 일정은 유지하며 D34/D35 및 P1-K8S-01 Gate 결과를 반영한다.",
+    "after": "D17/D34 설계 승인 후 Manifest/Prework 착수. 09-08 이하영 개인 부재와 이권욱 지원을 기록하며 기존 일정은 유지한다. Runtime은 Platform Ready·보호 인계·Positive/Negative 증적 조건부다."
+  },
+  {
+    "issue": 20,
+    "record_id": "P1-E2E-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #20 snapshot 2026-09-10T04:08:25Z"
+  },
+  {
+    "issue": 21,
+    "record_id": "P1-DR-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #21 snapshot 2026-09-10T04:02:43Z"
+  },
+  {
+    "issue": 22,
+    "record_id": "P1-HA-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #22 snapshot 2026-09-10T04:08:14Z"
+  },
+  {
+    "issue": 23,
+    "record_id": "MS-G2-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #23 snapshot 2026-09-09T12:03:10Z"
+  },
+  {
+    "issue": 24,
+    "record_id": "P1-DOC-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #24 snapshot 2026-09-10T02:09:36Z"
+  },
+  {
+    "issue": 25,
+    "record_id": "P1-MON-02",
+    "field": "Exit Criteria",
+    "before": "거래·FDS·Node·Pod 상태 Dashboard와 최소 Alert Rule을 구성하고 정상·장애 시나리오 Evidence 확보",
+    "after": "Prometheus 2 Replica·Alertmanager 3 Replica, PDB/TopologySpread, Dashboard/Alert·장기보존 고도화와 장애·복구·P0 회귀 Evidence 및 Review"
+  },
+  {
+    "issue": 25,
+    "record_id": "P1-MON-02",
+    "field": "Related Decision IDs",
+    "before": "D25",
+    "after": "D25; D33"
+  },
+  {
+    "issue": 25,
+    "record_id": "P1-MON-02",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #25 snapshot 2026-09-10T04:08:35Z"
+  },
+  {
+    "issue": 25,
+    "record_id": "P1-MON-02",
+    "field": "Schedule Note",
+    "before": "P1-MON-01의 Metric 수집 완료 후 수행한다. Grafana 또는 Prometheus UI 중 승인된 최소 구현을 사용하며 Loki/SIEM은 Scope Out이다.",
+    "after": "P1-MON-01의 P0 기본 3 View·Alert·15일 Retention·Watchdog 인수 후 HA·Dashboard/Alert·장기보존을 고도화한다. P1 Non-blocking. 이재환 09-14~17 부재를 반영한 가용일 1일이며 범위/일정 재평가는 별도 Lead 결정이다."
+  },
+  {
+    "issue": 26,
+    "record_id": "P1-DR-02",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #26 snapshot 2026-09-10T02:09:39Z"
+  },
+  {
+    "issue": 27,
+    "record_id": "P1-HA-02",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #27 snapshot 2026-09-10T02:09:41Z"
+  },
+  {
+    "issue": 28,
+    "record_id": "DEC-CAL-P1-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; 2026 Calendar; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #28 snapshot 2026-09-09T12:04:41Z"
+  },
+  {
+    "issue": 29,
+    "record_id": "MS-G3-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #29 snapshot 2026-09-09T12:04:58Z"
+  },
+  {
+    "issue": 30,
+    "record_id": "P1-REV-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #30 snapshot 2026-09-10T04:08:08Z"
+  },
+  {
+    "issue": 31,
+    "record_id": "MS-P1-REVIEW-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #31 snapshot 2026-09-09T12:05:57Z"
+  },
+  {
+    "issue": 32,
+    "record_id": "MS-P1-CLOSE-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #32 snapshot 2026-09-09T12:06:14Z"
+  },
+  {
+    "issue": 33,
+    "record_id": "MS-P2-START-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Phase1_Logical_Architecture_v3.1.2; Phase 2 OCI/AWS/ROSA Design; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #33 snapshot 2026-09-09T12:06:31Z"
+  },
+  {
+    "issue": 34,
+    "record_id": "P2-ARC-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #34 snapshot 2026-09-10T02:09:45Z"
+  },
+  {
+    "issue": 35,
+    "record_id": "P2-IAC-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Phase1_Logical_Architecture_v3.1.2; Phase 2 OCI/AWS/ROSA Design; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #35 snapshot 2026-09-10T02:09:47Z"
+  },
+  {
+    "issue": 36,
+    "record_id": "P2-OCI-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Phase1_Logical_Architecture_v3.1.2; Phase 2 OCI/AWS/ROSA Design; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #36 snapshot 2026-09-09T12:07:26Z"
+  },
+  {
+    "issue": 37,
+    "record_id": "P2-VPN-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Phase1_Logical_Architecture_v3.1.2; Phase 2 OCI/AWS/ROSA Design; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #37 snapshot 2026-09-10T02:09:49Z"
+  },
+  {
+    "issue": 38,
+    "record_id": "P2-ROSA-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Phase1_Logical_Architecture_v3.1.2; Phase 2 OCI/AWS/ROSA Design; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #38 snapshot 2026-09-10T02:09:51Z"
+  },
+  {
+    "issue": 39,
+    "record_id": "MS-G4-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Phase1_Logical_Architecture_v3.1.2; Phase 2 OCI/AWS/ROSA Design; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #39 snapshot 2026-09-09T12:08:10Z"
+  },
+  {
+    "issue": 40,
+    "record_id": "DEC-P2-DNS-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Phase1_Logical_Architecture_v3.1.2; Phase 2 OCI/AWS/ROSA Design; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #40 snapshot 2026-09-09T12:08:24Z"
+  },
+  {
+    "issue": 41,
+    "record_id": "DEC-P2-OP-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #41 snapshot 2026-09-09T12:08:39Z"
+  },
+  {
+    "issue": 42,
+    "record_id": "DEC-P2-REG-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Phase1_Logical_Architecture_v3.1.2; Phase 2 OCI/AWS/ROSA Design; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #42 snapshot 2026-09-09T12:08:53Z"
+  },
+  {
+    "issue": 43,
+    "record_id": "P2-APP-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Phase1_Logical_Architecture_v3.1.2; Phase 2 OCI/AWS/ROSA Design; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #43 snapshot 2026-09-10T02:09:53Z"
+  },
+  {
+    "issue": 44,
+    "record_id": "P2-OADP-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Phase1_Logical_Architecture_v3.1.2; Phase 2 OCI/AWS/ROSA Design; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #44 snapshot 2026-09-10T02:09:55Z"
+  },
+  {
+    "issue": 45,
+    "record_id": "MS-G5-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Phase1_Logical_Architecture_v3.1.2; Phase 2 OCI/AWS/ROSA Design; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #45 snapshot 2026-09-09T12:09:48Z"
+  },
+  {
+    "issue": 46,
+    "record_id": "P2-CICD-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #46 snapshot 2026-09-10T02:09:57Z"
+  },
+  {
+    "issue": 47,
+    "record_id": "P2-HYB-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Phase1_Logical_Architecture_v3.1.2; Phase 2 OCI/AWS/ROSA Design; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #47 snapshot 2026-09-10T02:09:59Z"
+  },
+  {
+    "issue": 48,
+    "record_id": "P2-DNS-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #48 snapshot 2026-09-10T02:10:01Z"
+  },
+  {
+    "issue": 49,
+    "record_id": "P2-DOC-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Phase1_Logical_Architecture_v3.1.2; Phase 2 OCI/AWS/ROSA Design; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #49 snapshot 2026-09-10T02:10:03Z"
+  },
+  {
+    "issue": 50,
+    "record_id": "P2-E2E-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Phase1_Logical_Architecture_v3.1.2; Phase 2 OCI/AWS/ROSA Design; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #50 snapshot 2026-09-10T02:10:05Z"
+  },
+  {
+    "issue": 51,
+    "record_id": "P2-OP-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #51 snapshot 2026-09-10T02:10:07Z"
+  },
+  {
+    "issue": 52,
+    "record_id": "DEC-CAL-P2-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; 2026 Calendar; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #52 snapshot 2026-09-09T12:11:51Z"
+  },
+  {
+    "issue": 53,
+    "record_id": "MS-G6-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Phase1_Logical_Architecture_v3.1.2; Phase 2 OCI/AWS/ROSA Design; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #53 snapshot 2026-09-09T12:12:06Z"
+  },
+  {
+    "issue": 54,
+    "record_id": "MS-DELIVERABLE-FREEZE-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Phase1_Logical_Architecture_v3.1.2; Phase 2 OCI/AWS/ROSA Design; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #54 snapshot 2026-09-09T12:12:22Z"
+  },
+  {
+    "issue": 55,
+    "record_id": "P2-REV-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Phase1_Logical_Architecture_v3.1.2; Phase 2 OCI/AWS/ROSA Design; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #55 snapshot 2026-09-10T02:10:09Z"
+  },
+  {
+    "issue": 56,
+    "record_id": "MS-P2-REVIEW-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Phase1_Logical_Architecture_v3.1.2; Phase 2 OCI/AWS/ROSA Design; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #56 snapshot 2026-09-09T12:12:58Z"
+  },
+  {
+    "issue": 57,
+    "record_id": "MS-PROJECT-CLOSE-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Phase1_Logical_Architecture_v3.1.2; Phase 2 OCI/AWS/ROSA Design; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #57 snapshot 2026-09-09T12:13:16Z"
+  },
+  {
+    "issue": 58,
+    "record_id": "CR-P1-ANS-01-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.17.md`; `FDS_v3.1.17_Canonical_Ticket_Update_Pack_v1.0.md`; `321Team/infra-ansible` PR #1; HEAD `507d8882a04f53640b07251bcc234b7d6ee81c09`; Merge `4f9bdb7c08704eebb3d1b294751e51b0721b6af4; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #58 snapshot 2026-09-09T12:14:54Z"
+  },
+  {
+    "issue": 59,
+    "record_id": "D-ARC-01",
+    "field": "Source",
+    "before": "종결 Description v1.2; Baseline v3.1.17 §3.1/§16; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #59 snapshot 2026-09-09T12:15:20Z"
+  },
+  {
+    "issue": 60,
+    "record_id": "D-NET-01",
+    "field": "Source",
+    "before": "FDS_Network_Baseline_v2.3`, `FDS_Project_Implementation_Baseline_v3.1.2`, `D-NET-01_Closure_Report_v1.0`, `FDS_Notion_Network_Parameter_Patch_v1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #60 snapshot 2026-09-10T02:10:11Z"
+  },
+  {
+    "issue": 61,
+    "record_id": "D-WBS-01",
+    "field": "Source",
+    "before": "종결 Description v1.2; Baseline v3.1.17 §3.1/§16; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #61 snapshot 2026-09-09T12:15:55Z"
+  },
+  {
+    "issue": 62,
+    "record_id": "DEC-P1-ENTRY-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #62 snapshot 2026-09-09T12:16:14Z"
+  },
+  {
+    "issue": 63,
+    "record_id": "DEC-P1-MON-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.13; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.3; FDS_Phase1_Physical_Architecture_v3.1.3; FDS_D-SEC-01_Monitoring_System_Exception_Addendum_v1.0; FDS_Project_Implementation_Baseline_Release_Notes_v3.1.13; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #63 snapshot 2026-09-09T12:16:31Z"
+  },
+  {
+    "issue": 63,
+    "record_id": "DEC-P1-MON-01",
+    "field": "Schedule Note",
+    "before": "2026-08-31 사용자 승인으로 D33 Fixed/Done. 설계 종결만 의미하며 Runtime 14개 Acceptance는 P1-MON-01에 귀속한다. WBS v3.1.12에는 미등록이므로 차기 Roll-up에서 Closed Register와 Decision Register에 동기화한다.",
+    "after": "D33 Done/2026-08-31. 본 후보의 Closed/Decision Register에 연결. Runtime 14개 Acceptance는 P1-MON-01, P1 고도화는 P1-MON-02 책임이다."
+  },
+  {
+    "issue": 64,
+    "record_id": "DEC-P1-TLS-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #64 snapshot 2026-09-09T12:17:08Z"
+  },
+  {
+    "issue": 65,
+    "record_id": "P1-ANS-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #65 snapshot 2026-09-10T03:37:26Z"
+  },
+  {
+    "issue": 66,
+    "record_id": "P1-LNX-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.2`, `FDS_Network_Baseline_v2.3`, `D-NET-01_Closure_Report_v1.0`, `P1-LNX-01 Network Apply/Test Kit; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #66 snapshot 2026-09-10T02:10:15Z"
+  },
+  {
+    "issue": 67,
+    "record_id": "P1-NET-01",
+    "field": "Source",
+    "before": "FDS_Project_Implementation_Baseline_v3.1.5; FDS_Remaining_Backlog_WBS_v3.1.5; FDS_Network_Baseline_v2.3; D-NET-01_Closure_Report_v1.0; FDS_Notion_Network_Parameter_Patch_v1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c)",
+    "after": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #67 snapshot 2026-09-10T02:10:17Z"
+  }
+]

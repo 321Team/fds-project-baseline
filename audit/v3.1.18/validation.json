@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "scope": "local candidate consistency; no runtime or release approval",
+  "records": 64,
+  "planning": 55,
+  "historical_closed": 9,
+  "states": {
+    "Done": 16,
+    "In Progress": 9,
+    "To Do": 39
+  },
+  "protected_property_differences": 0,
+  "property_deltas": 80,
+  "new_checked_AC": 0,
+  "workbook_sheets": 8,
+  "workbook_formulas": 2101,
+  "workbook_errors": 0,
+  "working_day_mismatches": 0,
+  "description_property_mismatches": 0,
+  "milestone_decision_coverage": 25,
+  "ci": "NOT RUN",
+  "release_assets": "NOT RUN",
+  "live_issue_updates": "NOT RUN"
+}
