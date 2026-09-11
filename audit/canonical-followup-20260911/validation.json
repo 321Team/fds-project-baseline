@@ -1,6 +1,6 @@
 {
   "status": "PASS_FOR_REVIEW_CANDIDATE",
-  "checked_at": "2026-09-11T08:48:10.774183+00:00",
+  "checked_at": "2026-09-11T09:01:30.804674+00:00",
   "base_files": [
     {
       "path": "CURRENT.md",
@@ -15,18 +15,32 @@
     {
       "path": "governance/TICKET_SYNC_POLICY.md",
       "base_blob_verified": true,
-      "proposal_sha256": "f8f80cdad052fa752e27fe47454608c25d099a72f16557c3d2a2462edc0f63b1"
+      "proposal_sha256": "1fb3eb143864c1aaa307025e02cb6e966b43753939e075e22f84d60d0b58390b"
     }
   ],
   "restored_records": 2,
   "restored_properties_per_record": 17,
-  "milestone_assigned": 44,
-  "milestone_unresolved": 20,
+  "milestone_assigned": 45,
+  "milestone_unresolved": 19,
   "source_files_modified": 0,
-  "operational_mutations": 0,
+  "operational_mutations": 3,
   "proposal_applied": false,
   "ci": "NOT RUN",
   "runtime": "NOT RUN",
   "secret_pattern_hits": 0,
-  "patch_apply_check": "PASS"
+  "patch_apply_check": "PASS",
+  "initial_snapshot_milestone_assigned": 44,
+  "initial_snapshot_milestone_unresolved": 20,
+  "date_corrections": {
+    "status": "PASS",
+    "issues": [
+      59,
+      61,
+      46
+    ],
+    "period_recalculation": "3/3, 3/3, 1/1",
+    "body_and_metadata_readback": "PASS",
+    "historical_original_and_ac_preservation": "PASS"
+  },
+  "operational_mutation_scope": "Issue bodies 3; existing G5 milestone assignment on #46 only. No runtime changes."
 }
