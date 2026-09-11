@@ -1,0 +1,38 @@
+# v3.1.19 정본 발행 준비
+
+상태: **COLLECTING / DRAFT / NOT RELEASED**
+
+운영 정본은 v3.1.18이다. 이 브랜치는 v19를 발행하기 위한 변경 수집·통합 작업 공간이며 아직 배포 가능한 정본 묶음이 아니다.
+
+- 기준 main: `58f72f78faa237cbdc9ceae6460d25407550c1a7` (PR #72 병합)
+- 최초 수집: 2026-09-11T09:58:49.550Z
+- 사용자 요청: v19 정본 발행 PR을 먼저 생성하고 이후 변경을 수시 수집한다.
+- 검토 담당: 이하영 (`hayeounglee`). 최종 발행 판단: 이권욱. 과거 HEAD 승인은 후속 변경의 승인으로 복제하지 않는다.
+
+## 초기 수집
+
+- 승인된 PR #72의 게시 상태·WEB 배포 정책·일정 유연성 교정안.
+- #59 Plan End 2026-08-26, #61 Completed Date 2026-08-26 확정, #46 Plan End 2026-10-16 및 기간 1일.
+- 전체 64건의 현행 티켓 속성 및 Milestone 매핑. #25~27 구현 일정은 TBD이며 Phase 1 Close는 미결 사항 인계 추적이다.
+- 관련 증적·Ansible·Kubernetes·CI/CD·Harbor·DB 저장소 6곳의 PR 메타데이터. 수집된 자료가 모두 신규 변경 또는 승인된 사양이라는 뜻은 아니다.
+
+`intake/initial-snapshot.json`은 최초 입력 이력이다. 후속 갱신으로 덮어쓰지 않는다. `intake/repository-sources.json` 역시 최초 소스 카탈로그다. 변경이 있으면 `intake/updates/` 아래 별도 변경 기록을 추가하고 원문 URL·Commit·승인 범위와 출처 상태를 남긴다.
+
+## 통합 및 발행 전 완료할 작업
+
+- [ ] 승인 입력과 검토 대기 자료를 대조해 v19 반영 범위를 확정한다.
+- [ ] Baseline·WBS/Gantt·Ticket Pack·개별 Description·Interface/Decision/CR·완료 이력을 동기화한다.
+- [ ] GITHUB_MILESTONE_MAP을 64건 현행 매핑과 대조하고 수집 당시 미확정 수를 이력으로 구분한다.
+- [ ] CURRENT·Release Policy·Ticket Sync Policy의 PR #72 제안을 v19 문맥으로 통합한다.
+- [ ] WEB·편집 가능한 WBS/Gantt·Release Notes·Distribution Manifest·SHA-256·배포 ZIP 및 필요한 아키텍처를 같은 버전으로 생성한다.
+- [ ] 이권욱 영문 표기 GU LEE, 일정·담당·Gate 및 수식·해시·비밀정보 노출을 검증한다.
+- [ ] 이하영의 최종 HEAD 독립 리뷰와 이권욱의 병합·발행 승인을 확보한다.
+
+## 수집 원칙
+
+- 상세 절차는 `COLLECTION_POLICY.md`를 따른다. 자동 수집은 후보의 누적 기록만 갱신한다.
+- 설계 승인, 코드 병합, 증적 편입, 실제 Runtime 인수와 Gate 통과를 구분한다.
+- 일정은 조정 가능한 계획 목표이며 날짜 도래나 Milestone 배정으로 완료를 판정하지 않는다.
+- Work/Codex의 개인 도구 운영 지침을 Claude Code 사용 팀원의 공통 의무로 편입하지 않는다. 철회된 공통 지침 PR은 제외 이력이다.
+- 기존 v18 발행본·태그·Asset·SHA-256과 운영 CURRENT는 이 초기 수집에서 변경하지 않는다.
+- 전체 배포 묶음이 아직 없으므로 본 PR의 병합·발행 준비 판정은 **NOT READY**다.
