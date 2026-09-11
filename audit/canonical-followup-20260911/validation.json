@@ -1,0 +1,32 @@
+{
+  "status": "PASS_FOR_REVIEW_CANDIDATE",
+  "checked_at": "2026-09-11T08:48:10.774183+00:00",
+  "base_files": [
+    {
+      "path": "CURRENT.md",
+      "base_blob_verified": true,
+      "proposal_sha256": "2a5c287f93b228808f70c785d633cfe611fc2d0dd6f35f76634cf7199619a2db"
+    },
+    {
+      "path": "governance/RELEASE_POLICY.md",
+      "base_blob_verified": true,
+      "proposal_sha256": "a8292a143f4b77de04c17022d3d909c1074cccd5accf9d512b0e4127aae3d5fb"
+    },
+    {
+      "path": "governance/TICKET_SYNC_POLICY.md",
+      "base_blob_verified": true,
+      "proposal_sha256": "f8f80cdad052fa752e27fe47454608c25d099a72f16557c3d2a2462edc0f63b1"
+    }
+  ],
+  "restored_records": 2,
+  "restored_properties_per_record": 17,
+  "milestone_assigned": 44,
+  "milestone_unresolved": 20,
+  "source_files_modified": 0,
+  "operational_mutations": 0,
+  "proposal_applied": false,
+  "ci": "NOT RUN",
+  "runtime": "NOT RUN",
+  "secret_pattern_hits": 0,
+  "patch_apply_check": "PASS"
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "path": "CURRENT.md",
+    "git_blob_sha": "1331eebc6743d04105f46780987d2728402b61e4",
+    "base_ref": "72599ae49342b0fb8dbd3d8ee60314afb9f907bb"
+  },
+  {
+    "path": "governance/RELEASE_POLICY.md",
+    "git_blob_sha": "abc97a13c3b750f9ec4d0b5300a385ab36f4dd9b",
+    "base_ref": "72599ae49342b0fb8dbd3d8ee60314afb9f907bb"
+  },
+  {
+    "path": "governance/TICKET_SYNC_POLICY.md",
+    "git_blob_sha": "df24d53a024545f9ac11b8b15ffaa94f00c18a73",
+    "base_ref": "72599ae49342b0fb8dbd3d8ee60314afb9f907bb"
+  }
+]

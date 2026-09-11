@@ -1,0 +1,117 @@
+--- a/CURRENT.md
++++ b/CURRENT.md
+@@ -8,13 +8,21 @@
+ | Previous version | v3.1.17 / SUPERSEDED |
+ | Approved content merge SHA | `02be2150f7662319a3d796cdcb99f6d26aec5472` |
+ | Approved candidate HEAD | `04c1ca46dcf82f814d350b4d49539e3ba4d6a9b4` |
+-| Canonical release tag | `docs-v3.1.18` — create after finalization PR approval and merge |
+-| Published date | NOT PUBLISHED — confirm in GitHub Release after Tag/Asset verification |
++| Finalization merge / tag target | `72599ae49342b0fb8dbd3d8ee60314afb9f907bb` |
++| Canonical release tag | `docs-v3.1.18` |
++| Published date (UTC) | 2026-09-11T02:23:47Z |
++| Published date (KST) | 2026-09-11 11:23:47 +09:00 |
+ 
+-## Control note
++## Publication evidence
+ 
+-This is the proposed release metadata in the finalization branch. It takes effect after this finalization PR is independently approved and manually merged. Until then, `main/CURRENT.md` continues to identify v3.1.17.
++- [Published Release](https://github.com/321Team/fds-project-baseline/releases/tag/docs-v3.1.18): draft=false, prerelease=false, four uploaded assets.
++- [Content approval / PR #69](https://github.com/321Team/fds-project-baseline/pull/69#pullrequestreview-5168287548).
++- [Finalization approval / PR #70](https://github.com/321Team/fds-project-baseline/pull/70#pullrequestreview-5168785684).
++- The 2026-09-11 17:07 KST audit verified the Library distribution package against 104 internal SHA-256 entries, 105 tag Git blobs and four published asset digests.
++- Historical verification recorded GitHub Actions as NOT RUN. Local verification is not CI PASS.
+ 
+-PR #69 content was independently approved by `hayeounglee` at 2026-09-10T14:20:47Z for exact HEAD `04c1ca46dcf82f814d350b4d49539e3ba4d6a9b4` and merged as `02be2150f7662319a3d796cdcb99f6d26aec5472` following the user's merge instruction. GitHub Actions is `NOT RUN`; local candidate integrity and WBS/ZIP checks passed under the existing Free-plan compensating control. The approved finalization merge is the target of `docs-v3.1.18`; tag and published assets do not yet exist at preparation time.
++## Historical metadata and current state
+ 
+-The [finalization record](releases/v3.1.18/FDS_Release_Finalization_Record_v3.1.18.md) distinguishes approved content, publication gates, historical candidate snapshots and unresolved runtime work. A document release does not complete runtime gates or apply Issue metadata.
++The finalization record and original v3.1.18 tag/package retain their preparation-time statements, including NOT PUBLISHED and candidate/review-pending wording. Those statements describe their creation time. Current publication state is the published Release identified above.
++
++Publication does not complete operational gates, apply Issue metadata or prove runtime acceptance. Planning dates are adjustable targets; changes require consistent planning records and reasons, not invented completion or approval evidence.
+--- a/governance/RELEASE_POLICY.md
++++ b/governance/RELEASE_POLICY.md
+@@ -20,6 +20,7 @@
+ 7. Architecture source/export set when changed
+ 8. Integrity audit result
+ 9. Distribution ZIP and ZIP sidecar checksum when produced
++10. WEB canonical status snapshot (required for every canonical release)
+ 
+ ### 2.1 WBS/Gantt mandatory distribution control
+ 
+@@ -37,7 +38,14 @@
+ - GitHub Release가 발행되면 `canonical-integrity` Workflow가 `--published` 검증을 자동 실행한다. Actions가 실행되지 않거나 사용량 제한으로 중단되면 결과를 `NOT RUN`으로 기록하고 동일 스크립트의 로컬 PASS를 보상 증적으로 남긴다.
+ - v3.1.17은 WBS/Gantt가 저장소와 ZIP 내부에는 포함됐으나 독립 Release Asset으로는 제공되지 않았던 이력으로 보존한다. 과거 Tag나 Release Asset을 소급 변경하지 않고 v3.1.18부터 본 통제를 적용한다.
+ 
+-### 2.2 완료 변경 요청의 정본 동기화
++### 2.2 WEB 배포 통제
++
++- 모든 정본 버전에 같은 기준선의 WEB 상태 스냅샷을 포함한다.
++- WEB 파일은 저장소, Distribution Manifest, SHA256SUMS 및 정본 ZIP에서 식별하고 같은 바이트인지 검증한다.
++- WEB은 기준일·RELEASED 버전·계획 목표·실제 상태를 구분하며 단독 갱신을 새 정본 발행으로 해석하지 않는다.
++- 현재 v3.1.18 WEB은 기존 Tag/ZIP으로 보존하고 이 정책은 차기 정본 배포 검증에 반영한다.
++
++### 2.3 완료 변경 요청의 정본 동기화
+ 
+ - 직전 RELEASED 버전 이후 `Done` 또는 `Merged`로 승인된 모든 Change Request는 다음 정본 후보에 반드시 동기화한다.
+ - 동기화 대상은 Baseline, WBS/Gantt, Canonical Ticket Pack, `tickets/<Record-ID>_Notion_Description_*.md`, Milestone/Completion Record, Evidence 참조, Release Notes 및 적용되는 Manifest·`SHA256SUMS`이다.
+@@ -65,6 +73,16 @@
+ - Runtime evidence represented as complete when only design approval exists
+ - WBS/Gantt가 ZIP과 독립 GitHub Release Asset 중 어느 한쪽에서 누락되거나 SHA-256이 불일치함
+ 
++### 4.1 일정 유연성과 사실관계
++
++2026-09-11 사용자 지시에 따라 점검표 및 WBS/Gantt의 날짜는 필수 준수 기한이 아닌 조정 가능한 계획 목표로 관리한다.
++
++- 일정 변경·목표 미달 자체는 문서 승인 차단 또는 Runtime FAIL의 근거가 아니다.
++- 가용성·선행 작업·인계 상황에 따라 계획을 조정하고 Baseline·WBS/Gantt·티켓의 현행 값과 변경 근거를 일치시킨다.
++- 계획일과 실제 착수·완료일을 구분한다. 실제 날짜·기간의 모순은 원본 근거로 확인한다.
++- 대표 Milestone은 추적 목적에 따라 확정하거나 근거 있는 의도적 미배정으로 처리한다. 미확정 값을 승인 없이 N/A로 바꾸지 않는다.
++- Gate의 실제 선행조건·검증·증적·인수 요건은 일정 유연성과 별도로 충족해야 한다.
++
+ ## 5. Approval and traceability
+ 
+ - Review owners: `@GWONUK`, `@hayeounglee`
+@@ -90,4 +108,4 @@
+ - 배포용 ZIP은 정식 Release Tag 이후 GitHub Release Asset으로 제공하는 것을 기본으로 하며, 다음 버전부터 동일 ZIP을 Git 이력에 반복 추가하지 않는다.
+ - 현 저장소 이력은 재작성하지 않는다. 기존 v3.1.17 후보 ZIP은 해당 릴리즈의 감사 추적을 위해 유지한다.
+ - 단일 파일이 50 MiB에 접근하거나 저장소가 1 GiB에 접근하면 크기 점검을 수행하고 Release Asset 또는 Git LFS 전환을 결정한다.
+-- Git LFS는 실제 대용량 편집 원본이 발생하고 Free 사용량·대역폭 통제가 합의된 경우에만 도입한다.
+\ No newline at end of file
++- Git LFS는 실제 대용량 편집 원본이 발생하고 Free 사용량·대역폭 통제가 합의된 경우에만 도입한다.
+--- a/governance/TICKET_SYNC_POLICY.md
++++ b/governance/TICKET_SYNC_POLICY.md
+@@ -1,6 +1,6 @@
+ # Ticket Synchronization Policy
+ 
+-Version: 1.0 · 2026-09-10 · 후보 정책. 사용자 요청에 따른 이번 Issue 메타데이터 보정과 정본 발행 승인을 구분한다.
++Version: 1.1 · 2026-09-11 · 차기 정본 검토 후보. 운영 속성 보정과 정본 발행 승인을 구분한다.
+ 
+ ## 1. 필드별 권위와 충돌
+ 
+@@ -12,7 +12,7 @@
+ | 다음 정본 반영 | 후보 PR 및 RELEASE_POLICY | 이슈 동기화를 정본 발행으로 확대하지 않음 |
+ | Notion | 승인된 입력본 및 원격 반영 결과 | GitHub 갱신만으로 동기화 완료라고 하지 않음 |
+ 
+-Issue 본문 상단 17개 속성표만 메타데이터 입력으로 읽는다. 아래 `보관 입력본`은 역사적 기록이다. 본문 전체를 대충 검색하여 과거 상태를 현행 값으로 선택하지 않는다. 실행 상태 변경 근거는 해당 기록에 연결되어야 한다. 이번에는 본문·상태 변경이 없고 그 정합성만 확인한다.
++Issue 본문 상단 17개 속성표만 메타데이터 입력으로 읽는다. 아래 `보관 입력본`은 역사적 기록이다. 본문 전체를 대충 검색하여 과거 상태를 현행 값으로 선택하지 않는다. 실행 상태 변경 근거는 해당 기록에 연결되어야 한다. 각 실행의 변경 범위는 그 실행 계획과 전후 증적으로 확인한다.
+ 
+ 필수 속성: Record ID, Phase, Category, Type, Status, Priority, Start, End, Calendar Days, Working Days, Lead, Support, Exit Criteria, Related Decision IDs, Related Risk IDs, Source, Schedule Note.
+ 
+@@ -42,9 +42,9 @@
+ 
+ ## 4. 속성 예외
+ 
+-- `원본 속성 미확인`: `metadata:needs-source`를 유지하며 해당 필드는 쓰지 않는다. 현재 #59 D-ARC-01, #61 D-WBS-01.
++- `원본 속성 미확인`: 해당 필드는 추정하여 쓰지 않는다. #59 D-ARC-01·#61 D-WBS-01은 2026-09-11 첨부 원본으로 속성 복원이 완료됐다. 원본 날짜·기간의 모순 및 차기 정본 반영은 별도 잔여이며, 과거 미확인 표시는 이력으로 보존한다.
+ - 필드 존재와 값 확정을 구분한다. `TBD`인 승인 일정은 누락 값으로 임의 대체하지 않는다.
+-- Start/End는 계획일이다. Completed Date와 다를 수 있으며 이번에 재계산하지 않는다.
++- Start/End는 유연하게 조정 가능한 계획 목표이며 Completed Date와 구분한다. 날짜 변경 자체를 승인 차단이나 Runtime FAIL로 판정하지 않는다. 계획 변경 시 현행 문서와 티켓의 값·근거를 정합화하고 실제 완료일·기간은 원본 증적 없이 바꾸지 않는다.
+ - Category의 전체 의미는 본문에 보존하고 기존 대표 `area:*`만 유지한다. 임의 다중 라벨 대량 추가 없음.
+ - 단일 Milestone 매핑 미확정은 null을 확정 N/A로 해석하지 않는다. `HOLD`로 기록한다.
+ - 존재하지 않는 Label/Type/Milestone을 즉석 생성하지 않는다. 카탈로그 계획과 별도 명시적 적용으로 관리한다.
+@@ -68,4 +68,4 @@
+ 
+ ## 7. 정본 인계
+ 
+-현재 RELEASED v3.1.17과 미병합 v3.1.18 후보를 구분한다. 승인된 이번 운영 속성 보정은 다음 후보의 정책·감사 기록에 연결한다. README/정책의 정본 적용은 최소 1인의 독립 리뷰와 정확한 SHA 승인, 기존 Release 묶음 검증을 거친다. Ticket Pack/WBS/Release의 상태·기간·증적을 이번 메타데이터 작업만으로 재발행하지 않는다.
++현재 RELEASED v3.1.18과 후속 검토 후보를 구분한다. 승인된 이번 운영 속성 보정은 다음 후보의 정책·감사 기록에 연결한다. README/정책의 정본 적용은 최소 1인의 독립 리뷰와 정확한 SHA 승인, 기존 Release 묶음 검증을 거친다. Ticket Pack/WBS/Release의 상태·기간·증적을 이번 메타데이터 작업만으로 재발행하지 않는다.
