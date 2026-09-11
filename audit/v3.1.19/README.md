@@ -48,3 +48,9 @@
 [20260911T105810Z 기록](intake/updates/20260911T105810Z.json): #74 속성·Scope 보완과 신규 #75, 티켓별 리뷰 #10/#13/#19 및 #17 롤업을 수집했다. 현재 66건, Record ID 66개 유일, Milestone 66/66이며 #74·#75의 native Type은 미반영이다.
 
 두 CR의 G2는 추적용이다. 담당·계획·프록시 endpoint·변경권한·실제 selector·Secret/payload·Runtime과 기존 외부 미송신 계약 정합화가 남아 있으므로 발행 사양 승인으로 확대하지 않는다. WBS/Gantt·Ticket Pack·Interface/Decision/CR·전체 배포 묶음 편입도 대기다.
+
+## 최신 수집 — 2026-09-11T11:34:47Z
+
+[20260911T113447Z 기록](intake/updates/20260911T113447Z.json): #74·#75의 Lead 이하영·Support 이재환, Assignee `hayeounglee`, #74 Start 2026-09-11 및 두 건의 실제 GitHub Type `Change Request` 적용을 수집했다. 전체 66건, Record ID 66개 유일, Milestone 66/66, native Type 누락 0이다.
+
+메타데이터 동기화와 실행 증적 수신 범위는 완료됐지만 두 CR의 변경안 승인·Runtime 인수는 완료되지 않았다. #74 endpoint·변경권한, #75 실제 selector·Secret/payload와 Positive/Negative/복구 증적, 기존 Decision/Interface 및 WBS/Gantt·Ticket Pack·전체 배포 묶음 편입은 계속 대기다.

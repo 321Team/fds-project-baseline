@@ -41,3 +41,13 @@ Base: v3.1.18
 - 발행 전 차단: 두 CR의 native Type, 담당·계획, 프록시 endpoint/변경권한, 실제 selector/Secret/payload/Positive·Negative·복구 증적, 기존 외부 미송신 Decision·Interface 정합화 및 WBS/Ticket Pack/Release 묶음 편입.
 - 연결 저장소 default HEAD·기존 PR 메타데이터·신규 공식 리뷰/Commit 변화는 미검출. fds-msa는 계속 404로 직접 대조하지 못했다.
 - 상세: [수집 기록](../../audit/v3.1.19/intake/updates/20260911T105810Z.json). 새 후보 HEAD는 이하영의 독립 검토가 필요하다.
+
+## 2026-09-11T11:34:47Z 추가 수집 — 두 CR 담당·Type 확정
+
+- [CR-P1-MON-01-01 #74](https://github.com/321Team/fds-project-baseline/issues/74): Lead 이하영, Support 이재환, Start 2026-09-11, End/기간 TBD로 확정하고 Assignee를 `hayeounglee`로 적용했다.
+- [CR-P1-MON-01-02 #75](https://github.com/321Team/fds-project-baseline/issues/75): Lead 이하영, Support 이재환, Start/End/기간 TBD와 #74 프록시 endpoint 선행조건을 유지하며 Assignee를 `hayeounglee`로 적용했다.
+- 두 이슈의 실제 GitHub Issue Type은 `Change Request`(ID `864949231`)로 동기화됐다. [실행 증적 수신·검증 기록](https://github.com/321Team/fds-project-baseline/pull/73#issuecomment-5633784102)의 결과 SHA-256은 `c9c7b53028a5e2c72ac5ea2869844a84e0f5ace3c923ae175a5c2a6d4ba5b3b3`이다.
+- 이 변경은 **USER_AUTHORIZED_OPERATIONAL_DELTA**다. 다만 두 CR의 기술 변경안은 계속 **PENDING_REVIEW**, 실제 적용·Runtime 인수는 **NOT VERIFIED**다. G2는 추적용이며 CR의 End 또는 Gate PASS를 뜻하지 않는다.
+- 전체 **66건 / Record ID 66개 유일 / Milestone 66/66 / native Type 누락 0**. 프록시 endpoint·변경권한, 실제 selector·Secret/payload·허용/차단/복구 증적과 Decision/Interface 및 전체 v19 산출물 편입은 여전히 발행 전 검토 대상이다.
+- 관련 7개 저장소의 default HEAD·기존 PR 메타데이터·신규 공식 PR 리뷰/Commit 변화는 미검출했다. PR #73 자체 수집 Commit·댓글·본문 갱신은 새 프로젝트 변경에서 제외했다.
+- 상세: [수집 기록](../../audit/v3.1.19/intake/updates/20260911T113447Z.json). 새 후보 HEAD는 이하영의 독립 검토가 필요하다.
