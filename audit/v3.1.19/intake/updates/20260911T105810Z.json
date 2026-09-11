@@ -1,0 +1,1084 @@
+{
+  "schema_version": 1,
+  "target_version": "3.1.19",
+  "captured_at": "2026-09-11T10:58:10Z",
+  "previous_capture": "2026-09-11T10:31:50Z",
+  "parent_candidate_head": "693f809bd7d724faabe367f0a4a61ca5d1776782",
+  "status": "COLLECTED_MIXED_USER_AUTHORIZED_AND_PENDING_REVIEW",
+  "canonical_release": "3.1.18",
+  "summary": {
+    "new_change_requests": 1,
+    "updated_change_requests": 1,
+    "new_review_records": 3,
+    "new_rollup_records": 1,
+    "total_tickets": 66,
+    "record_ids": 66,
+    "record_id_duplicates": [],
+    "milestone_assigned": 66,
+    "milestone_unassigned": [],
+    "native_type_missing": [
+      75,
+      74
+    ],
+    "changed_known_prs": 0,
+    "new_pr_reviews": 0,
+    "new_pr_commits": 0,
+    "default_branch_commits_since_previous": 0,
+    "collection_errors": 0
+  },
+  "changes": [
+    {
+      "kind": "CHANGE_REQUEST_UPDATED",
+      "classification": "USER_AUTHORIZED_OPERATIONAL_DELTA_WITH_PENDING_REVIEW_CONTENT",
+      "record_id": "CR-P1-MON-01-01",
+      "source": "https://github.com/321Team/fds-project-baseline/issues/74",
+      "before": {
+        "assignees": [],
+        "description_status": "In Progress",
+        "end": "NOT_SPECIFIED",
+        "labels": [
+          "phase:phase-1",
+          "status:in-progress",
+          "type:change-request",
+          "area:monitoring",
+          "priority:P1"
+        ],
+        "lead": "TBD",
+        "milestone": null,
+        "native_type": "NOT_SET",
+        "priority": "P1",
+        "start": "NOT_SPECIFIED",
+        "state": "open",
+        "support": "TBD"
+      },
+      "after": {
+        "number": 74,
+        "record_id": "CR-P1-MON-01-01",
+        "url": "https://github.com/321Team/fds-project-baseline/issues/74",
+        "created_at": "2026-09-11T10:23:24Z",
+        "updated_at": "2026-09-11T10:52:44Z",
+        "state": "open",
+        "properties": {
+          "Record ID": "CR-P1-MON-01-01",
+          "Phase": "Phase 1",
+          "Category": "Monitoring / Alerting Egress Change Control",
+          "Type": "Change Request",
+          "Status": "In Progress",
+          "Priority": "P1",
+          "Start": "TBD — CR 계획 착수일 미확정",
+          "End": "TBD — 변경 범위·담당·선행조건 확정 후 계획",
+          "Calendar Days": "TBD — Start/End 확정 후 산정",
+          "Working Days": "TBD — 담당·계획일·휴가 확정 후 산정, 교육장 주말 작업 0",
+          "Lead": "TBD",
+          "Support": "TBD",
+          "Exit Criteria": "discord.com 아웃바운드 확인, 프록시 전용 VM 확정, Squid/Nginx 구성 및 discord.com allowlist 적용, 고정 IP·포트를 [Issue B(#75)](https://github.com/321Team/fds-project-baseline/issues/75)에 전달",
+          "Related Decision IDs": "D17; D33; D34; D35 — 현행 영향 기준. 신규 CR 승인·신규 D-ID/Interface ID는 미확정",
+          "Related Risk IDs": "RISK-04; RISK-07",
+          "Source": "[발행 v3.1.18](https://github.com/321Team/fds-project-baseline/releases/tag/docs-v3.1.18), 승인 SHA 72599ae49342b0fb8dbd3d8ee60314afb9f907bb; [P1-MON-01 #17](https://github.com/321Team/fds-project-baseline/issues/17); [방식·책임 논의 infra-kubernetes #5](https://github.com/321Team/infra-kubernetes/issues/5); [현황 보고 5632931284](https://github.com/321Team/infra-kubernetes/issues/5#issuecomment-5632931284); [후속 CR #75](https://github.com/321Team/fds-project-baseline/issues/75); 사용자 2026-09-11 속성 보완·추적 요청",
+          "Schedule Note": "프록시 배치·담당·고정 scheme/host/IP/port를 확정하여 #75에 인계한다. 계획일은 유연한 목표이며 현재 TBD다. 교육장 주말 작업은 배정하지 않는다. G2는 추적용 분류이며 기존 P0/G2 Acceptance에 필수 조건을 자동 추가하지 않는다."
+        },
+        "property_count": 17,
+        "labels": [
+          "phase:phase-1",
+          "status:in-progress",
+          "type:change-request",
+          "area:monitoring",
+          "priority:P1"
+        ],
+        "assignees": [],
+        "milestone": {
+          "number": 3,
+          "title": "G2 Security / Feature Ready",
+          "due_on": "2026-09-21T00:00:00Z"
+        },
+        "native_type": null,
+        "body_sha256": "00a8d28ca9e4e5e0965863b6270e88c35de9e88ecc5d7239b4bafd8e9c41ba27"
+      },
+      "approved_head": null,
+      "merge_commit": null,
+      "review": "PENDING_REVIEW",
+      "runtime": "NOT_VERIFIED",
+      "field_changes": [
+        "17-field property table completed",
+        "title/scope split to proxy server configuration",
+        "G2 tracking milestone assigned",
+        "v18/D17/D33/D34/D35/RISK-04/RISK-07/#75 sources linked",
+        "Lead/Support/Start/End/durations remain TBD",
+        "native GitHub Type remains unset"
+      ],
+      "gate_boundary": "G2 is tracking only; no P0/G2 mandatory AC added and G2 due is not this CR End."
+    },
+    {
+      "kind": "NEW_CHANGE_REQUEST",
+      "classification": "USER_AUTHORIZED_OPERATIONAL_DELTA_WITH_PENDING_REVIEW_CONTENT",
+      "record_id": "CR-P1-MON-01-02",
+      "source": "https://github.com/321Team/fds-project-baseline/issues/75",
+      "before": null,
+      "after": {
+        "number": 75,
+        "record_id": "CR-P1-MON-01-02",
+        "url": "https://github.com/321Team/fds-project-baseline/issues/75",
+        "created_at": "2026-09-11T10:34:16Z",
+        "updated_at": "2026-09-11T10:52:58Z",
+        "state": "open",
+        "properties": {
+          "Record ID": "CR-P1-MON-01-02",
+          "Phase": "Phase 1",
+          "Category": "Monitoring / Alerting Egress Change Control",
+          "Type": "Change Request",
+          "Status": "In Progress",
+          "Priority": "P1",
+          "Start": "TBD — CR 계획 착수일 미확정",
+          "End": "TBD — 변경 범위·담당·선행조건 확정 후 계획",
+          "Calendar Days": "TBD — Start/End 확정 후 산정",
+          "Working Days": "TBD — 담당·계획일·휴가 확정 후 산정, 교육장 주말 작업 0",
+          "Lead": "TBD",
+          "Support": "TBD",
+          "Exit Criteria": "Alertmanager 전용 NetworkPolicy(Egress) 작성·적용, podSelector 라벨 확정, Secret 주입·회전·폐기 절차 확정, 검증(허용/차단/알림 전송) 완료 및 Support Review 완료",
+          "Related Decision IDs": "D17; D33; D34; D35 — 현행 영향 기준. 신규 CR 승인·신규 D-ID/Interface ID는 미확정",
+          "Related Risk IDs": "RISK-04; RISK-07",
+          "Source": "[발행 v3.1.18](https://github.com/321Team/fds-project-baseline/releases/tag/docs-v3.1.18), 승인 SHA 72599ae49342b0fb8dbd3d8ee60314afb9f907bb; [P1-MON-01 #17](https://github.com/321Team/fds-project-baseline/issues/17); [방식·책임 논의 infra-kubernetes #5](https://github.com/321Team/infra-kubernetes/issues/5); [현황 보고 5632931284](https://github.com/321Team/infra-kubernetes/issues/5#issuecomment-5632931284); [선행 CR #74](https://github.com/321Team/fds-project-baseline/issues/74); 사용자 2026-09-11 속성 보완·추적 요청",
+          "Schedule Note": "#74의 고정 proxy endpoint를 인수하여 실제 selector·Secret·정책·시험에 반영한다. 초안 준비는 병행 가능하다. 계획일은 유연한 목표이며 현재 TBD다. 교육장 주말 작업은 배정하지 않는다. G2는 추적용 분류이며 기존 P0/G2 Acceptance에 필수 조건을 자동 추가하지 않는다."
+        },
+        "property_count": 17,
+        "labels": [
+          "phase:phase-1",
+          "status:in-progress",
+          "type:change-request",
+          "area:monitoring",
+          "priority:P1"
+        ],
+        "assignees": [],
+        "milestone": {
+          "number": 3,
+          "title": "G2 Security / Feature Ready",
+          "due_on": "2026-09-21T00:00:00Z"
+        },
+        "native_type": null,
+        "body_sha256": "d5debee93a41cc1bea628e1cb2962cb40f29fc6fb21ef0506d47f372a367a083"
+      },
+      "approved_head": null,
+      "merge_commit": null,
+      "review": "PENDING_REVIEW",
+      "runtime": "NOT_VERIFIED",
+      "dependency": "CR-P1-MON-01-01 #74 proxy endpoint → Kubernetes NetworkPolicy/selector/Secret controls",
+      "gate_boundary": "G2 is tracking only; no P0/G2 mandatory AC added and G2 due is not this CR End."
+    },
+    {
+      "kind": "ISSUE_REVIEW_RECORD",
+      "issue_number": 10,
+      "record_id": "P1-K8S-01",
+      "source": "https://github.com/321Team/fds-project-baseline/issues/10#issuecomment-5633333888",
+      "author": "GWONUK",
+      "created_at": "2026-09-11T10:50:13Z",
+      "updated_at": "2026-09-11T10:50:13Z",
+      "body_sha256": "df9d944415344474960230dfca0e31cc931fdb47641175a46ed5edea77de533c",
+      "classification": "USER_AUTHORIZED_REVIEW_RECORD",
+      "official_pr_review": false,
+      "runtime_approval": false,
+      "summary": "K8S 준비 지속·운영 인수 HOLD. K8S-F01~06, 정확한 HEAD 독립 승인과 실제 Runtime 인수 잔여."
+    },
+    {
+      "kind": "ISSUE_REVIEW_RECORD",
+      "issue_number": 13,
+      "record_id": "P1-HBR-01",
+      "source": "https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-5633336598",
+      "author": "GWONUK",
+      "created_at": "2026-09-11T10:50:26Z",
+      "updated_at": "2026-09-11T10:50:26Z",
+      "body_sha256": "24053617a8856da2e3c0e1373e68ff46e8c2a5bcfbb1209741b07b657d0655ab",
+      "classification": "USER_AUTHORIZED_REVIEW_RECORD",
+      "official_pr_review": false,
+      "runtime_approval": false,
+      "summary": "HBR-01~06 Revision Required 유지. 새 수정본·Runtime AC 근거 없음."
+    },
+    {
+      "kind": "ISSUE_REVIEW_RECORD",
+      "issue_number": 19,
+      "record_id": "P1-SEC-01",
+      "source": "https://github.com/321Team/fds-project-baseline/issues/19#issuecomment-5633339292",
+      "author": "GWONUK",
+      "created_at": "2026-09-11T10:50:38Z",
+      "updated_at": "2026-09-11T10:50:38Z",
+      "body_sha256": "4c271e17bc3ccb67e32f84beba1063491394d8ed63e7e8e65d41dde7a0b8c7e7",
+      "classification": "USER_AUTHORIZED_REVIEW_RECORD",
+      "official_pr_review": false,
+      "runtime_approval": false,
+      "summary": "SEC-01~08 Revision Required 유지. 신규 Discord egress는 별도 CR로 추적."
+    },
+    {
+      "kind": "ROLLUP_RECORD",
+      "issue_number": 17,
+      "record_id": "P1-MON-01",
+      "source": "https://github.com/321Team/fds-project-baseline/issues/17#issuecomment-5633394060",
+      "author": "GWONUK",
+      "created_at": "2026-09-11T10:55:17Z",
+      "updated_at": "2026-09-11T10:55:17Z",
+      "body_sha256": "d05abe67385ea645b87ed9a4bfa314fd479333003bafe2d321d958ce0655aaf6",
+      "classification": "USER_AUTHORIZED_ROLLUP_RECORD",
+      "official_pr_review": false,
+      "runtime_approval": false,
+      "summary": "#10/#13/#19 리뷰와 #74/#75 속성·연결을 요약. 공식 PR APPROVED나 Runtime 승인 아님."
+    }
+  ],
+  "relationships": {
+    "preserve": [
+      "#74 proxy configuration hands fixed scheme/host/IP/port to #75.",
+      "#75 owns Kubernetes NetworkPolicy, actual selector and Secret lifecycle; draft preparation may run before #74 but apply waits for the endpoint.",
+      "#17 P1-MON-01, #19 P1-SEC-01, #10 P1-K8S-01 and #14 ICR remain linked; #13 Harbor review is separately tracked and does not own Discord delivery.",
+      "Retired IF-24 Alertmanager→monitor01, current IF-06B Prometheus Remote Write, and new Discord proxy egress are distinct contracts.",
+      "B option, Discord channel, monitoring-api, Calico and CoreDNS UDP/TCP 53 decisions are historical agreed inputs; implementation/Runtime still requires evidence."
+    ],
+    "open_items": [
+      "Proxy VM, fixed IP/port and software/allowlist",
+      "change authority/owner and Lead/Support",
+      "actual fds-msa repository/manifest, pinned Alertmanager version and podSelector",
+      "Secret injection/rotation/revocation and leak response",
+      "payload minimization/masking and Positive/Negative/failure/recovery evidence",
+      "Decision/Interface exception reconciliation against #17 external-send-disabled rule",
+      "native GitHub Change Request Type for #74/#75",
+      "WBS/Gantt, Ticket Pack/Descriptions, Interface/Decision/CR registers and release artifacts integration"
+    ]
+  },
+  "review_boundaries": {
+    "reviews_10_13_19": "User-authorized issue review records; not GitHub PR APPROVED or execution approval.",
+    "worker_curl": "Report-only host connectivity; not Alertmanager Pod→proxy→Discord runtime evidence and not proof that change authority is unnecessary.",
+    "status": "Both CRs In Progress/Open and content PENDING_REVIEW. No actual implementation or Runtime acceptance."
+  },
+  "source_status": {
+    "fds_msa": {
+      "url": "https://github.com/321Team/fds-msa",
+      "status": "HTTP_404_ACCESS_UNCONFIRMED",
+      "impact": "actual manifest/selector/receiver/version/Secret reference not independently compared",
+      "interpretation": "do not infer repository absence"
+    },
+    "repositories": [
+      {
+        "repository": "321Team/fds-project-baseline",
+        "default_head": "58f72f78faa237cbdc9ceae6460d25407550c1a7",
+        "head_changed": false,
+        "known_pr_metadata_changes": [],
+        "comments_since_previous": [
+          {
+            "id": 5633333888,
+            "url": "https://github.com/321Team/fds-project-baseline/issues/10#issuecomment-5633333888",
+            "issue_number": 10,
+            "updated_at": "2026-09-11T10:50:13Z"
+          },
+          {
+            "id": 5633336598,
+            "url": "https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-5633336598",
+            "issue_number": 13,
+            "updated_at": "2026-09-11T10:50:26Z"
+          },
+          {
+            "id": 5633339292,
+            "url": "https://github.com/321Team/fds-project-baseline/issues/19#issuecomment-5633339292",
+            "issue_number": 19,
+            "updated_at": "2026-09-11T10:50:38Z"
+          },
+          {
+            "id": 5633394060,
+            "url": "https://github.com/321Team/fds-project-baseline/issues/17#issuecomment-5633394060",
+            "issue_number": 17,
+            "updated_at": "2026-09-11T10:55:17Z"
+          }
+        ],
+        "review_comments_since_previous": [],
+        "default_branch_commits_since_previous": []
+      },
+      {
+        "repository": "321Team/fds-project-evidence",
+        "default_head": "493c09e728b643d620debe29738f1b47b3cafa8a",
+        "head_changed": false,
+        "known_pr_metadata_changes": [],
+        "comments_since_previous": [],
+        "review_comments_since_previous": [],
+        "default_branch_commits_since_previous": []
+      },
+      {
+        "repository": "321Team/infra-ansible",
+        "default_head": "5cbf3b657014b32a20cb5816d90d3ea5fe4951ab",
+        "head_changed": false,
+        "known_pr_metadata_changes": [],
+        "comments_since_previous": [],
+        "review_comments_since_previous": [],
+        "default_branch_commits_since_previous": []
+      },
+      {
+        "repository": "321Team/infra-cicd",
+        "default_head": "be92fd00b269ff7d7abc124bb17f6d3e4c007851",
+        "head_changed": false,
+        "known_pr_metadata_changes": [],
+        "comments_since_previous": [],
+        "review_comments_since_previous": [],
+        "default_branch_commits_since_previous": []
+      },
+      {
+        "repository": "321Team/infra-db",
+        "default_head": "6a1925588e610de07a7a401a55ad9f1dc5f27a2c",
+        "head_changed": false,
+        "known_pr_metadata_changes": [],
+        "comments_since_previous": [],
+        "review_comments_since_previous": [],
+        "default_branch_commits_since_previous": []
+      },
+      {
+        "repository": "321Team/infra-harbor-trivy",
+        "default_head": "65e717ff82547cbcd45c2065af484f343c1a516f",
+        "head_changed": false,
+        "known_pr_metadata_changes": [],
+        "comments_since_previous": [],
+        "review_comments_since_previous": [],
+        "default_branch_commits_since_previous": []
+      },
+      {
+        "repository": "321Team/infra-kubernetes",
+        "default_head": "7d44afc3afff4d322cb4dbeff4433d61e23e111a",
+        "head_changed": false,
+        "known_pr_metadata_changes": [],
+        "comments_since_previous": [],
+        "review_comments_since_previous": [],
+        "default_branch_commits_since_previous": []
+      }
+    ],
+    "pagination": "all list pages consumed; every final page below 100",
+    "collection_errors": []
+  },
+  "issue_checkpoint": [
+    {
+      "number": 75,
+      "record_id": "CR-P1-MON-01-02",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/75",
+      "updated_at": "2026-09-11T10:52:58Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 3,
+      "native_type": null,
+      "body_sha256": "d5debee93a41cc1bea628e1cb2962cb40f29fc6fb21ef0506d47f372a367a083"
+    },
+    {
+      "number": 74,
+      "record_id": "CR-P1-MON-01-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/74",
+      "updated_at": "2026-09-11T10:52:44Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 3,
+      "native_type": null,
+      "body_sha256": "00a8d28ca9e4e5e0965863b6270e88c35de9e88ecc5d7239b4bafd8e9c41ba27"
+    },
+    {
+      "number": 67,
+      "record_id": "P1-NET-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/67",
+      "updated_at": "2026-09-11T09:20:10Z",
+      "state": "closed",
+      "comments": 0,
+      "milestone": 1,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 66,
+      "record_id": "P1-LNX-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/66",
+      "updated_at": "2026-09-11T05:00:05Z",
+      "state": "closed",
+      "comments": 0,
+      "milestone": 2,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 65,
+      "record_id": "P1-ANS-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/65",
+      "updated_at": "2026-09-11T05:00:03Z",
+      "state": "closed",
+      "comments": 0,
+      "milestone": 2,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 64,
+      "record_id": "DEC-P1-TLS-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/64",
+      "updated_at": "2026-09-11T05:00:01Z",
+      "state": "closed",
+      "comments": 0,
+      "milestone": 2,
+      "native_type": "Decision",
+      "body_sha256": null
+    },
+    {
+      "number": 63,
+      "record_id": "DEC-P1-MON-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/63",
+      "updated_at": "2026-09-11T09:19:56Z",
+      "state": "closed",
+      "comments": 0,
+      "milestone": 1,
+      "native_type": "Decision",
+      "body_sha256": null
+    },
+    {
+      "number": 62,
+      "record_id": "DEC-P1-ENTRY-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/62",
+      "updated_at": "2026-09-11T04:59:56Z",
+      "state": "closed",
+      "comments": 0,
+      "milestone": 3,
+      "native_type": "Decision",
+      "body_sha256": null
+    },
+    {
+      "number": 61,
+      "record_id": "D-WBS-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/61",
+      "updated_at": "2026-09-11T08:58:40Z",
+      "state": "closed",
+      "comments": 0,
+      "milestone": 1,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 60,
+      "record_id": "D-NET-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/60",
+      "updated_at": "2026-09-11T04:59:52Z",
+      "state": "closed",
+      "comments": 0,
+      "milestone": 1,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 59,
+      "record_id": "D-ARC-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/59",
+      "updated_at": "2026-09-11T08:58:28Z",
+      "state": "closed",
+      "comments": 0,
+      "milestone": 1,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 58,
+      "record_id": "CR-P1-ANS-01-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/58",
+      "updated_at": "2026-09-11T09:19:42Z",
+      "state": "closed",
+      "comments": 0,
+      "milestone": 2,
+      "native_type": "Change Request",
+      "body_sha256": null
+    },
+    {
+      "number": 57,
+      "record_id": "MS-PROJECT-CLOSE-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/57",
+      "updated_at": "2026-09-11T04:59:45Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 13,
+      "native_type": "Milestone",
+      "body_sha256": null
+    },
+    {
+      "number": 56,
+      "record_id": "MS-P2-REVIEW-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/56",
+      "updated_at": "2026-09-11T04:59:43Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 12,
+      "native_type": "Milestone",
+      "body_sha256": null
+    },
+    {
+      "number": 55,
+      "record_id": "P2-REV-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/55",
+      "updated_at": "2026-09-11T09:21:57Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 13,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 54,
+      "record_id": "MS-DELIVERABLE-FREEZE-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/54",
+      "updated_at": "2026-09-11T04:59:40Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 11,
+      "native_type": "Milestone",
+      "body_sha256": null
+    },
+    {
+      "number": 53,
+      "record_id": "MS-G6-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/53",
+      "updated_at": "2026-09-11T04:59:38Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 10,
+      "native_type": "Milestone",
+      "body_sha256": null
+    },
+    {
+      "number": 52,
+      "record_id": "DEC-CAL-P2-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/52",
+      "updated_at": "2026-09-11T04:59:36Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 12,
+      "native_type": "Decision",
+      "body_sha256": null
+    },
+    {
+      "number": 51,
+      "record_id": "P2-OP-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/51",
+      "updated_at": "2026-09-11T09:21:44Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 10,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 50,
+      "record_id": "P2-E2E-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/50",
+      "updated_at": "2026-09-11T04:59:33Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 10,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 49,
+      "record_id": "P2-DOC-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/49",
+      "updated_at": "2026-09-11T04:59:31Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 11,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 48,
+      "record_id": "P2-DNS-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/48",
+      "updated_at": "2026-09-11T09:21:14Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 10,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 47,
+      "record_id": "P2-HYB-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/47",
+      "updated_at": "2026-09-11T04:59:29Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 10,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 46,
+      "record_id": "P2-CICD-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/46",
+      "updated_at": "2026-09-11T08:58:54Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 9,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 45,
+      "record_id": "MS-G5-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/45",
+      "updated_at": "2026-09-11T04:59:27Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 9,
+      "native_type": "Milestone",
+      "body_sha256": null
+    },
+    {
+      "number": 44,
+      "record_id": "P2-OADP-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/44",
+      "updated_at": "2026-09-11T04:59:25Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 10,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 43,
+      "record_id": "P2-APP-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/43",
+      "updated_at": "2026-09-11T04:59:23Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 9,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 42,
+      "record_id": "DEC-P2-REG-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/42",
+      "updated_at": "2026-09-11T04:59:21Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 9,
+      "native_type": "Decision",
+      "body_sha256": null
+    },
+    {
+      "number": 41,
+      "record_id": "DEC-P2-OP-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/41",
+      "updated_at": "2026-09-11T09:21:01Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 9,
+      "native_type": "Decision",
+      "body_sha256": null
+    },
+    {
+      "number": 40,
+      "record_id": "DEC-P2-DNS-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/40",
+      "updated_at": "2026-09-11T09:20:48Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 9,
+      "native_type": "Decision",
+      "body_sha256": null
+    },
+    {
+      "number": 39,
+      "record_id": "MS-G4-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/39",
+      "updated_at": "2026-09-11T04:59:14Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 8,
+      "native_type": "Milestone",
+      "body_sha256": null
+    },
+    {
+      "number": 38,
+      "record_id": "P2-ROSA-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/38",
+      "updated_at": "2026-09-11T04:59:12Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 9,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 37,
+      "record_id": "P2-VPN-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/37",
+      "updated_at": "2026-09-11T04:59:10Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 8,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 36,
+      "record_id": "P2-OCI-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/36",
+      "updated_at": "2026-09-11T09:20:35Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 8,
+      "native_type": "Decision",
+      "body_sha256": null
+    },
+    {
+      "number": 35,
+      "record_id": "P2-IAC-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/35",
+      "updated_at": "2026-09-11T04:59:06Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 8,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 34,
+      "record_id": "P2-ARC-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/34",
+      "updated_at": "2026-09-11T09:20:23Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 7,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 33,
+      "record_id": "MS-P2-START-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/33",
+      "updated_at": "2026-09-11T04:59:03Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 7,
+      "native_type": "Milestone",
+      "body_sha256": null
+    },
+    {
+      "number": 32,
+      "record_id": "MS-P1-CLOSE-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/32",
+      "updated_at": "2026-09-11T04:59:01Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 6,
+      "native_type": "Milestone",
+      "body_sha256": null
+    },
+    {
+      "number": 31,
+      "record_id": "MS-P1-REVIEW-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/31",
+      "updated_at": "2026-09-11T04:58:59Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 5,
+      "native_type": "Milestone",
+      "body_sha256": null
+    },
+    {
+      "number": 30,
+      "record_id": "P1-REV-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/30",
+      "updated_at": "2026-09-11T09:33:15Z",
+      "state": "open",
+      "comments": 1,
+      "milestone": 6,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 29,
+      "record_id": "MS-G3-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/29",
+      "updated_at": "2026-09-11T04:58:56Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 4,
+      "native_type": "Milestone",
+      "body_sha256": null
+    },
+    {
+      "number": 28,
+      "record_id": "DEC-CAL-P1-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/28",
+      "updated_at": "2026-09-11T04:58:54Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 5,
+      "native_type": "Decision",
+      "body_sha256": null
+    },
+    {
+      "number": 27,
+      "record_id": "P1-HA-02",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/27",
+      "updated_at": "2026-09-11T09:32:57Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 6,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 26,
+      "record_id": "P1-DR-02",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/26",
+      "updated_at": "2026-09-11T09:32:39Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 6,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 25,
+      "record_id": "P1-MON-02",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/25",
+      "updated_at": "2026-09-11T09:32:22Z",
+      "state": "open",
+      "comments": 1,
+      "milestone": 6,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 24,
+      "record_id": "P1-DOC-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/24",
+      "updated_at": "2026-09-11T04:58:52Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 4,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 23,
+      "record_id": "MS-G2-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/23",
+      "updated_at": "2026-09-11T04:58:50Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 3,
+      "native_type": "Milestone",
+      "body_sha256": null
+    },
+    {
+      "number": 22,
+      "record_id": "P1-HA-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/22",
+      "updated_at": "2026-09-11T04:58:47Z",
+      "state": "open",
+      "comments": 1,
+      "milestone": 4,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 21,
+      "record_id": "P1-DR-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/21",
+      "updated_at": "2026-09-11T04:58:45Z",
+      "state": "open",
+      "comments": 2,
+      "milestone": 4,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 20,
+      "record_id": "P1-E2E-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/20",
+      "updated_at": "2026-09-11T04:58:43Z",
+      "state": "open",
+      "comments": 1,
+      "milestone": 4,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 19,
+      "record_id": "P1-SEC-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/19",
+      "updated_at": "2026-09-11T10:50:38Z",
+      "state": "open",
+      "comments": 4,
+      "milestone": 3,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 18,
+      "record_id": "MS-G1-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/18",
+      "updated_at": "2026-09-11T04:58:39Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 2,
+      "native_type": "Milestone",
+      "body_sha256": null
+    },
+    {
+      "number": 17,
+      "record_id": "P1-MON-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/17",
+      "updated_at": "2026-09-11T10:55:18Z",
+      "state": "open",
+      "comments": 2,
+      "milestone": 3,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 16,
+      "record_id": "P1-CICD-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/16",
+      "updated_at": "2026-09-11T04:58:33Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 3,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 15,
+      "record_id": "P1-APP-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/15",
+      "updated_at": "2026-09-11T04:58:31Z",
+      "state": "open",
+      "comments": 1,
+      "milestone": 3,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 14,
+      "record_id": "ICR-D-NET-01-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/14",
+      "updated_at": "2026-09-11T09:32:03Z",
+      "state": "open",
+      "comments": 2,
+      "milestone": 3,
+      "native_type": "Change Request",
+      "body_sha256": null
+    },
+    {
+      "number": 13,
+      "record_id": "P1-HBR-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/13",
+      "updated_at": "2026-09-11T10:50:26Z",
+      "state": "open",
+      "comments": 5,
+      "milestone": 2,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 12,
+      "record_id": "P1-DNS-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/12",
+      "updated_at": "2026-09-11T09:19:30Z",
+      "state": "closed",
+      "comments": 0,
+      "milestone": 2,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 11,
+      "record_id": "P1-DB-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/11",
+      "updated_at": "2026-09-11T04:58:24Z",
+      "state": "open",
+      "comments": 3,
+      "milestone": 2,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 10,
+      "record_id": "P1-K8S-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/10",
+      "updated_at": "2026-09-11T10:50:14Z",
+      "state": "open",
+      "comments": 1,
+      "milestone": 2,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 9,
+      "record_id": "P1-LB-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/9",
+      "updated_at": "2026-09-11T04:58:20Z",
+      "state": "open",
+      "comments": 0,
+      "milestone": 2,
+      "native_type": "Task",
+      "body_sha256": null
+    },
+    {
+      "number": 8,
+      "record_id": "MS-G0-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/8",
+      "updated_at": "2026-09-11T04:58:18Z",
+      "state": "closed",
+      "comments": 0,
+      "milestone": 1,
+      "native_type": "Milestone",
+      "body_sha256": null
+    },
+    {
+      "number": 7,
+      "record_id": "D-SEC-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/7",
+      "updated_at": "2026-09-11T04:58:15Z",
+      "state": "closed",
+      "comments": 0,
+      "milestone": 1,
+      "native_type": "Decision",
+      "body_sha256": null
+    },
+    {
+      "number": 6,
+      "record_id": "DEC-P1-ADMIN-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/6",
+      "updated_at": "2026-09-11T09:19:17Z",
+      "state": "closed",
+      "comments": 1,
+      "milestone": 3,
+      "native_type": "Decision",
+      "body_sha256": null
+    },
+    {
+      "number": 5,
+      "record_id": "DEC-P1-TXN-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/5",
+      "updated_at": "2026-09-11T09:19:05Z",
+      "state": "closed",
+      "comments": 1,
+      "milestone": 3,
+      "native_type": "Decision",
+      "body_sha256": null
+    },
+    {
+      "number": 4,
+      "record_id": "DEC-P1-FDS-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/4",
+      "updated_at": "2026-09-11T09:18:53Z",
+      "state": "closed",
+      "comments": 1,
+      "milestone": 3,
+      "native_type": "Decision",
+      "body_sha256": null
+    }
+  ],
+  "controls": {
+    "operational_issues_modified": false,
+    "main_modified": false,
+    "existing_release_modified": false,
+    "automatic_merge_or_publish": false,
+    "previous_approvals_reused": false,
+    "final_head_review_required": "hayeounglee"
+  }
+}

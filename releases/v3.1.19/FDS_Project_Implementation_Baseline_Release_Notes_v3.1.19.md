@@ -31,3 +31,13 @@ Base: v3.1.18
 - fds-msa 조회 404로 실제 배포 라벨·설정 대조는 미확인. 저장소 미존재로 단정하지 않는다.
 - 나머지 6개 관련 저장소 PR의 기존 HEAD·병합 상태 변경, 신규 PR 리뷰·Commit, 기준 시각 이후 default branch Commit은 미검출. 과거 리뷰 30개 PR의 조회 결과는 비교 기준으로 보존하며 신규 승인으로 취급하지 않는다.
 - 상세: [수집 기록](../../audit/v3.1.19/intake/updates/20260911T103150Z.json). 수집 후보의 새 HEAD는 이하영의 독립 검토가 필요하며 병합·발행은 별도 승인 대상이다.
+
+## 2026-09-11T10:58:10Z 추가 수집 — 두 Monitoring CR 추적 확장
+
+- [CR-P1-MON-01-01 #74](https://github.com/321Team/fds-project-baseline/issues/74): 프록시 서버 구성으로 Scope 분리, 17개 속성·G2 추적 Milestone 반영. Lead/Support·계획일은 TBD, 내용은 PENDING_REVIEW, Runtime NOT VERIFIED.
+- 신규 [CR-P1-MON-01-02 #75](https://github.com/321Team/fds-project-baseline/issues/75): #74 endpoint를 인수하는 NetworkPolicy·selector·Secret 통제. 17개 속성·G2 추적 Milestone 반영. Lead/Support·계획일은 TBD, 내용은 PENDING_REVIEW, Runtime NOT VERIFIED.
+- 전체 **66건 / Record ID 66개 유일 / Milestone 66건 배정**. 실제 GitHub Type은 #74·#75 두 건 미반영이다. G2 배정은 추적용이며 P0/G2 필수 AC 또는 확정 End를 추가하지 않는다.
+- 신규 리뷰 기록: [#10 K8S](https://github.com/321Team/fds-project-baseline/issues/10#issuecomment-5633333888) 운영 인수 HOLD, [#13 HBR](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-5633336598) HBR-01~06 Revision Required, [#19 SEC](https://github.com/321Team/fds-project-baseline/issues/19#issuecomment-5633339292) SEC-01~08 Revision Required. 이는 공식 PR APPROVED나 실행 승인으로 승격하지 않는다. [#17 롤업](https://github.com/321Team/fds-project-baseline/issues/17#issuecomment-5633394060)도 같은 경계를 유지한다.
+- 발행 전 차단: 두 CR의 native Type, 담당·계획, 프록시 endpoint/변경권한, 실제 selector/Secret/payload/Positive·Negative·복구 증적, 기존 외부 미송신 Decision·Interface 정합화 및 WBS/Ticket Pack/Release 묶음 편입.
+- 연결 저장소 default HEAD·기존 PR 메타데이터·신규 공식 리뷰/Commit 변화는 미검출. fds-msa는 계속 404로 직접 대조하지 못했다.
+- 상세: [수집 기록](../../audit/v3.1.19/intake/updates/20260911T105810Z.json). 새 후보 HEAD는 이하영의 독립 검토가 필요하다.
