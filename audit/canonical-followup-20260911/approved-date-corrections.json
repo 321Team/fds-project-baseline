@@ -1,0 +1,221 @@
+{
+  "status": "USER_CONFIRMED_AND_ISSUES_APPLIED",
+  "authorization_date": "2026-09-11",
+  "authorization_text": "59번 end date 26일로 정정. 61번도 26일로 정정. 2차는 계획안이라 g5계획안으로 우선 앞당겨줘.",
+  "published_baseline": "v3.1.18",
+  "published_baseline_modified": false,
+  "candidate_pr": 72,
+  "updates": [
+    {
+      "issue": 59,
+      "record_id": "D-ARC-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/59",
+      "before_updated_at": "2026-09-11T05:46:23Z",
+      "after_updated_at": "2026-09-11T08:58:28Z",
+      "before_properties": {
+        "Record ID": "D-ARC-01",
+        "Phase": "Design",
+        "Category": "Design / Planning",
+        "Type": "Task",
+        "Status": "Done",
+        "Priority": "P0",
+        "Start": "2026-08-24",
+        "End": "2026-08-24",
+        "Calendar Days": "3",
+        "Working Days": "3",
+        "Lead": "이권욱",
+        "Support": "이하영, 이재환",
+        "Exit Criteria": "Logical / Physical Architecture v3.1.2 Freeze, MSA / CI-CD / Monitoring / Security 경계 확정, IP·배치 정합성 확인, Release / Freeze / 승인 메타데이터 반영",
+        "Related Decision IDs": "D01`~`D09`, `D12`~`D16",
+        "Related Risk IDs": "RISK-02`, `RISK-04`, `RISK-06`, `RISK-07`, `RISK-08`, `RISK-09",
+        "Source": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #59 snapshot 2026-09-09T12:15:20Z; 2026-09-11 첨부 원본 속성 복원 D-ARC-01 (ZIP SHA-256: 5cb91902828ac0432493300632297a4703aaa98b7418b9cb1f0828bec68a1b5b)",
+        "Schedule Note": "2026-08-26 Architecture 설계 동결 완료. 본 티켓의 종결은 Phase 1 논리·물리 구조와 Interface 경계의 승인을 의미하며 개별 구성요소의 구현 완료를 의미하지 않는다. 이후 구조·배치·IP·포트·보안 경계 변경은 Change Request와 영향도 검토 후 신규 버전에 반영한다."
+      },
+      "after_properties": {
+        "Record ID": "D-ARC-01",
+        "Phase": "Design",
+        "Category": "Design / Planning",
+        "Type": "Task",
+        "Status": "Done",
+        "Priority": "P0",
+        "Start": "2026-08-24",
+        "End": "2026-08-26",
+        "Calendar Days": "3",
+        "Working Days": "3",
+        "Lead": "이권욱",
+        "Support": "이하영, 이재환",
+        "Exit Criteria": "Logical / Physical Architecture v3.1.2 Freeze, MSA / CI-CD / Monitoring / Security 경계 확정, IP·배치 정합성 확인, Release / Freeze / 승인 메타데이터 반영",
+        "Related Decision IDs": "D01`~`D09`, `D12`~`D16",
+        "Related Risk IDs": "RISK-02`, `RISK-04`, `RISK-06`, `RISK-07`, `RISK-08`, `RISK-09",
+        "Source": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #59 snapshot 2026-09-09T12:15:20Z; 2026-09-11 첨부 원본 속성 복원 D-ARC-01 (ZIP SHA-256: 5cb91902828ac0432493300632297a4703aaa98b7418b9cb1f0828bec68a1b5b); 2026-09-11 사용자 날짜 정정 — Issue #59 날짜 정정 기록 / PR #72 후속 편입",
+        "Schedule Note": "2026-08-26 Architecture 설계 동결 완료. 본 티켓의 종결은 Phase 1 논리·물리 구조와 Interface 경계의 승인을 의미하며 개별 구성요소의 구현 완료를 의미하지 않는다. 이후 구조·배치·IP·포트·보안 경계 변경은 Change Request와 영향도 검토 후 신규 버전에 반영한다. 2026-09-11 사용자 확인으로 계획 End를 2026-08-26으로 정정하여 3일 기간과 일치시켰다."
+      },
+      "completed_date": "2026-08-26",
+      "completion_resolution": "기존 실제 완료일 2026-08-26 유지",
+      "before_milestone": {
+        "number": 1,
+        "title": "G0 Design Freeze"
+      },
+      "after_milestone": {
+        "number": 1,
+        "title": "G0 Design Freeze"
+      },
+      "verified": {
+        "body": true,
+        "state": true,
+        "state_reason": true,
+        "closed_at": true,
+        "assignees": true,
+        "labels": true,
+        "type": true,
+        "ac_checkboxes": true,
+        "archived_original": true
+      }
+    },
+    {
+      "issue": 61,
+      "record_id": "D-WBS-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/61",
+      "before_updated_at": "2026-09-11T05:46:26Z",
+      "after_updated_at": "2026-09-11T08:58:40Z",
+      "before_properties": {
+        "Record ID": "D-WBS-01",
+        "Phase": "Design",
+        "Category": "Design / Planning",
+        "Type": "Task",
+        "Status": "Done",
+        "Priority": "P0",
+        "Start": "2026-08-24",
+        "End": "2026-08-26",
+        "Calendar Days": "3",
+        "Working Days": "3",
+        "Lead": "이권욱",
+        "Support": "이하영, 이재환",
+        "Exit Criteria": "3인 WBS, Backlog, Decision / Milestone, Interface Register, 의존성, Exit Criteria, 상태 및 변경통제 기준 Freeze; 최신 WBS와 Notion 수동 입력본 배포",
+        "Related Decision IDs": "D01`~`D24",
+        "Related Risk IDs": "RISK-05`, `RISK-13",
+        "Source": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #61 snapshot 2026-09-09T12:15:55Z; 2026-09-11 첨부 원본 속성 복원 D-WBS-01 (ZIP SHA-256: a1ce2edb3be5e63213fa51372ce4a8820572c6cd36c5496419d787e37b1980b1)",
+        "Schedule Note": "2026-08-26 WBS·Backlog·Decision·Milestone·Interface 관리체계 동결 완료. 종결 티켓은 Closed Register에 보존하고 Remaining Backlog에서 제외한다. 이후 백로그 변경은 D-WBS-01 재개가 아니라 동결된 Change Control에 따른 Version Update로 관리한다. D-SEC-01 및 D17의 후속 상태는 본 티켓 종결과 분리한다."
+      },
+      "after_properties": {
+        "Record ID": "D-WBS-01",
+        "Phase": "Design",
+        "Category": "Design / Planning",
+        "Type": "Task",
+        "Status": "Done",
+        "Priority": "P0",
+        "Start": "2026-08-24",
+        "End": "2026-08-26",
+        "Calendar Days": "3",
+        "Working Days": "3",
+        "Lead": "이권욱",
+        "Support": "이하영, 이재환",
+        "Exit Criteria": "3인 WBS, Backlog, Decision / Milestone, Interface Register, 의존성, Exit Criteria, 상태 및 변경통제 기준 Freeze; 최신 WBS와 Notion 수동 입력본 배포",
+        "Related Decision IDs": "D01`~`D24",
+        "Related Risk IDs": "RISK-05`, `RISK-13",
+        "Source": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #61 snapshot 2026-09-09T12:15:55Z; 2026-09-11 첨부 원본 속성 복원 D-WBS-01 (ZIP SHA-256: a1ce2edb3be5e63213fa51372ce4a8820572c6cd36c5496419d787e37b1980b1); 2026-09-11 사용자 날짜 정정 — Issue #61 날짜 정정 기록 / PR #72 후속 편입",
+        "Schedule Note": "2026-08-26 WBS·Backlog·Decision·Milestone·Interface 관리체계 동결 완료. 종결 티켓은 Closed Register에 보존하고 Remaining Backlog에서 제외한다. 이후 백로그 변경은 D-WBS-01 재개가 아니라 동결된 Change Control에 따른 Version Update로 관리한다. D-SEC-01 및 D17의 후속 상태는 본 티켓 종결과 분리한다. 2026-09-11 사용자 확인으로 실제 완료일을 2026-08-26으로 확정했다. 첨부 상단의 8/28은 정정 전 기록이다."
+      },
+      "completed_date": "2026-08-26",
+      "completion_resolution": "원본 상단 2026-08-28 대신 사용자 확정 2026-08-26 적용",
+      "before_milestone": {
+        "number": 1,
+        "title": "G0 Design Freeze"
+      },
+      "after_milestone": {
+        "number": 1,
+        "title": "G0 Design Freeze"
+      },
+      "verified": {
+        "body": true,
+        "state": true,
+        "state_reason": true,
+        "closed_at": true,
+        "assignees": true,
+        "labels": true,
+        "type": true,
+        "ac_checkboxes": true,
+        "archived_original": true
+      }
+    },
+    {
+      "issue": 46,
+      "record_id": "P2-CICD-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/46",
+      "before_updated_at": "2026-09-11T04:21:19Z",
+      "after_updated_at": "2026-09-11T08:58:54Z",
+      "before_properties": {
+        "Record ID": "P2-CICD-01",
+        "Phase": "Phase 2",
+        "Category": "CI/CD / OpenShift Delivery",
+        "Type": "Task",
+        "Status": "To Do",
+        "Priority": "P0",
+        "Start": "2026-10-16",
+        "End": "2026-10-19",
+        "Calendar Days": "4",
+        "Working Days": "2",
+        "Lead": "이권욱",
+        "Support": "이하영, 이재환",
+        "Exit Criteria": "GitHub→Self-hosted Runner→승인 Registry→ROSA Deploy→Health/Rule Smoke Test 흐름과 실패 시 배포차단 Evidence 확보",
+        "Related Decision IDs": "D22; D25",
+        "Related Risk IDs": "RISK-06; RISK-08; RISK-11; RISK-14",
+        "Source": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #46 snapshot 2026-09-10T02:09:57Z",
+        "Schedule Note": "P2-ROSA-01과 P2-APP-01의 Manifest/Image 계약을 사용하고 Registry는 D22 결과를 따른다. G5 ROSA Application Ready에 연결한다."
+      },
+      "after_properties": {
+        "Record ID": "P2-CICD-01",
+        "Phase": "Phase 2",
+        "Category": "CI/CD / OpenShift Delivery",
+        "Type": "Task",
+        "Status": "To Do",
+        "Priority": "P0",
+        "Start": "2026-10-16",
+        "End": "2026-10-16",
+        "Calendar Days": "1",
+        "Working Days": "1",
+        "Lead": "이권욱",
+        "Support": "이하영, 이재환",
+        "Exit Criteria": "GitHub→Self-hosted Runner→승인 Registry→ROSA Deploy→Health/Rule Smoke Test 흐름과 실패 시 배포차단 Evidence 확보",
+        "Related Decision IDs": "D22; D25",
+        "Related Risk IDs": "RISK-06; RISK-08; RISK-11; RISK-14",
+        "Source": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #46 snapshot 2026-09-10T02:09:57Z; 2026-09-11 사용자 날짜 정정 — Issue #46 날짜 정정 기록 / PR #72 후속 편입",
+        "Schedule Note": "P2-ROSA-01과 P2-APP-01의 Manifest/Image 계약을 사용하고 Registry는 D22 결과를 따른다. G5 ROSA Application Ready에 연결한다. 2026-09-11 사용자 지시에 따라 End를 G5 목표 2026-10-16으로 앞당겼다. Start 10/16 유지, Calendar Days/Working Days 1/1. 선행 작업과 가용성에 따라 조정 가능한 계획이며 Runtime 완료 판정은 아니다."
+      },
+      "completed_date": null,
+      "completion_resolution": "실제 완료일 미입력 유지",
+      "before_milestone": null,
+      "after_milestone": {
+        "number": 9,
+        "title": "G5 ROSA Application Ready"
+      },
+      "verified": {
+        "body": true,
+        "state": true,
+        "state_reason": true,
+        "closed_at": true,
+        "assignees": true,
+        "labels": true,
+        "type": true,
+        "ac_checkboxes": true,
+        "archived_original": true
+      }
+    }
+  ],
+  "milestone_resolution": {
+    "issue": 46,
+    "number": 9,
+    "title": "G5 ROSA Application Ready",
+    "plan_due": "2026-10-16",
+    "reason": "사용자가 G5 계획에 맞춘 일정 조정을 확정. 기존 Dependency의 G5 연결과 실제 Milestone을 일치시킴.",
+    "previous_unresolved": 20,
+    "current_unresolved": 19
+  },
+  "application_notes": [
+    "intake.json은 2026-09-11 최초 착수 시점의 20건 미결·정정 전 원본을 보존한다. 현행 편입값은 본 파일의 after_properties를 우선한다.",
+    "#59/#61은 계획 8/24~26, Calendar/Working Days 3/3. #46은 Start 10/16 유지와 End 10/16 조정으로 1/1.",
+    "차기 Baseline/Ticket Pack에는 세 레코드, WBS/Gantt에는 기존 계획 대상 #46의 End·기간·G5 매핑 변경을 반영한다. #59/#61을 종결 이력에서 진행중 계획으로 재편입하지 않는다.",
+    "발행된 v18 WBS/Gantt·Tag·Release·SHA256SUMS는 역사적 배포본으로 보존한다. 이번 변경은 Issue 적용 및 PR #72의 후속 편입 입력 갱신이다.",
+    "G5 실제 인수와 실행 선행조건을 해제하지 않으며 Phase 2 일정은 조정 가능한 계획이다."
+  ]
+}

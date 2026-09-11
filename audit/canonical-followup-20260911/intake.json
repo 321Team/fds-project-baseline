@@ -1,0 +1,283 @@
+{
+  "status": "FOLLOWUP_CANDIDATE_NOT_APPLIED",
+  "source_ref": "72599ae49342b0fb8dbd3d8ee60314afb9f907bb",
+  "observed_on": "2026-09-11",
+  "count": 64,
+  "actual_type_counts": {
+    "Task": 36,
+    "Decision": 13,
+    "Change Request": 2,
+    "Milestone": 13
+  },
+  "milestone_assigned": 44,
+  "restored": [
+    {
+      "issue": 61,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/61",
+      "updated_at": "2026-09-11T05:46:26Z",
+      "properties": {
+        "Record ID": "D-WBS-01",
+        "Phase": "Design",
+        "Category": "Design / Planning",
+        "Type": "Task",
+        "Status": "Done",
+        "Priority": "P0",
+        "Start": "2026-08-24",
+        "End": "2026-08-26",
+        "Calendar Days": "3",
+        "Working Days": "3",
+        "Lead": "이권욱",
+        "Support": "이하영, 이재환",
+        "Exit Criteria": "3인 WBS, Backlog, Decision / Milestone, Interface Register, 의존성, Exit Criteria, 상태 및 변경통제 기준 Freeze; 최신 WBS와 Notion 수동 입력본 배포",
+        "Related Decision IDs": "D01`~`D24",
+        "Related Risk IDs": "RISK-05`, `RISK-13",
+        "Source": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #61 snapshot 2026-09-09T12:15:55Z; 2026-09-11 첨부 원본 속성 복원 D-WBS-01 (ZIP SHA-256: a1ce2edb3be5e63213fa51372ce4a8820572c6cd36c5496419d787e37b1980b1)",
+        "Schedule Note": "2026-08-26 WBS·Backlog·Decision·Milestone·Interface 관리체계 동결 완료. 종결 티켓은 Closed Register에 보존하고 Remaining Backlog에서 제외한다. 이후 백로그 변경은 D-WBS-01 재개가 아니라 동결된 Change Control에 따른 Version Update로 관리한다. D-SEC-01 및 D17의 후속 상태는 본 티켓 종결과 분리한다."
+      },
+      "state": "closed",
+      "type": "Task",
+      "milestone": "G0 Design Freeze",
+      "assignees": [
+        "GWONUK"
+      ]
+    },
+    {
+      "issue": 59,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/59",
+      "updated_at": "2026-09-11T05:46:23Z",
+      "properties": {
+        "Record ID": "D-ARC-01",
+        "Phase": "Design",
+        "Category": "Design / Planning",
+        "Type": "Task",
+        "Status": "Done",
+        "Priority": "P0",
+        "Start": "2026-08-24",
+        "End": "2026-08-24",
+        "Calendar Days": "3",
+        "Working Days": "3",
+        "Lead": "이권욱",
+        "Support": "이하영, 이재환",
+        "Exit Criteria": "Logical / Physical Architecture v3.1.2 Freeze, MSA / CI-CD / Monitoring / Security 경계 확정, IP·배치 정합성 확인, Release / Freeze / 승인 메타데이터 반영",
+        "Related Decision IDs": "D01`~`D09`, `D12`~`D16",
+        "Related Risk IDs": "RISK-02`, `RISK-04`, `RISK-06`, `RISK-07`, `RISK-08`, `RISK-09",
+        "Source": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #59 snapshot 2026-09-09T12:15:20Z; 2026-09-11 첨부 원본 속성 복원 D-ARC-01 (ZIP SHA-256: 5cb91902828ac0432493300632297a4703aaa98b7418b9cb1f0828bec68a1b5b)",
+        "Schedule Note": "2026-08-26 Architecture 설계 동결 완료. 본 티켓의 종결은 Phase 1 논리·물리 구조와 Interface 경계의 승인을 의미하며 개별 구성요소의 구현 완료를 의미하지 않는다. 이후 구조·배치·IP·포트·보안 경계 변경은 Change Request와 영향도 검토 후 신규 버전에 반영한다."
+      },
+      "state": "closed",
+      "type": "Task",
+      "milestone": "G0 Design Freeze",
+      "assignees": [
+        "GWONUK"
+      ]
+    }
+  ],
+  "milestone_unresolved": [
+    {
+      "issue": 67,
+      "record_id": "P1-NET-01",
+      "state": "closed",
+      "lead": "이권욱",
+      "plan_start": "2026-08-27",
+      "plan_end": "2026-08-27",
+      "decision": "UNRESOLVED — assign after mapping review or document intentional non-assignment; flexible dates do not imply N/A"
+    },
+    {
+      "issue": 63,
+      "record_id": "DEC-P1-MON-01",
+      "state": "closed",
+      "lead": "이권욱",
+      "plan_start": "2026-08-31",
+      "plan_end": "2026-08-31",
+      "decision": "UNRESOLVED — assign after mapping review or document intentional non-assignment; flexible dates do not imply N/A"
+    },
+    {
+      "issue": 58,
+      "record_id": "CR-P1-ANS-01-01",
+      "state": "closed",
+      "lead": "이권욱",
+      "plan_start": "2026-09-04",
+      "plan_end": "2026-09-07",
+      "decision": "UNRESOLVED — assign after mapping review or document intentional non-assignment; flexible dates do not imply N/A"
+    },
+    {
+      "issue": 55,
+      "record_id": "P2-REV-01",
+      "state": "open",
+      "lead": "이권욱",
+      "plan_start": "2026-10-23",
+      "plan_end": "2026-10-26",
+      "decision": "UNRESOLVED — assign after mapping review or document intentional non-assignment; flexible dates do not imply N/A"
+    },
+    {
+      "issue": 51,
+      "record_id": "P2-OP-01",
+      "state": "open",
+      "lead": "이하영",
+      "plan_start": "2026-10-19",
+      "plan_end": "2026-10-20",
+      "decision": "UNRESOLVED — assign after mapping review or document intentional non-assignment; flexible dates do not imply N/A"
+    },
+    {
+      "issue": 48,
+      "record_id": "P2-DNS-01",
+      "state": "open",
+      "lead": "이권욱",
+      "plan_start": "2026-10-19",
+      "plan_end": "2026-10-20",
+      "decision": "UNRESOLVED — assign after mapping review or document intentional non-assignment; flexible dates do not imply N/A"
+    },
+    {
+      "issue": 46,
+      "record_id": "P2-CICD-01",
+      "state": "open",
+      "lead": "이권욱",
+      "plan_start": "2026-10-16",
+      "plan_end": "2026-10-19",
+      "decision": "UNRESOLVED — assign after mapping review or document intentional non-assignment; flexible dates do not imply N/A"
+    },
+    {
+      "issue": 41,
+      "record_id": "DEC-P2-OP-01",
+      "state": "open",
+      "lead": "이하영",
+      "plan_start": "2026-10-12",
+      "plan_end": "2026-10-16",
+      "decision": "UNRESOLVED — assign after mapping review or document intentional non-assignment; flexible dates do not imply N/A"
+    },
+    {
+      "issue": 40,
+      "record_id": "DEC-P2-DNS-01",
+      "state": "open",
+      "lead": "이권욱",
+      "plan_start": "2026-10-12",
+      "plan_end": "2026-10-16",
+      "decision": "UNRESOLVED — assign after mapping review or document intentional non-assignment; flexible dates do not imply N/A"
+    },
+    {
+      "issue": 36,
+      "record_id": "P2-OCI-01",
+      "state": "open",
+      "lead": "이권욱",
+      "plan_start": "2026-09-28",
+      "plan_end": "2026-10-02",
+      "decision": "UNRESOLVED — assign after mapping review or document intentional non-assignment; flexible dates do not imply N/A"
+    },
+    {
+      "issue": 34,
+      "record_id": "P2-ARC-01",
+      "state": "open",
+      "lead": "이권욱",
+      "plan_start": "2026-09-28",
+      "plan_end": "2026-09-28",
+      "decision": "UNRESOLVED — assign after mapping review or document intentional non-assignment; flexible dates do not imply N/A"
+    },
+    {
+      "issue": 30,
+      "record_id": "P1-REV-01",
+      "state": "open",
+      "lead": "이권욱",
+      "plan_start": "2026-09-22",
+      "plan_end": "2026-09-23",
+      "decision": "UNRESOLVED — assign after mapping review or document intentional non-assignment; flexible dates do not imply N/A"
+    },
+    {
+      "issue": 27,
+      "record_id": "P1-HA-02",
+      "state": "open",
+      "lead": "이하영",
+      "plan_start": "TBD — P0 인수 후 재계획",
+      "plan_end": "TBD — 구현 유예 권장",
+      "decision": "UNRESOLVED — assign after mapping review or document intentional non-assignment; flexible dates do not imply N/A"
+    },
+    {
+      "issue": 26,
+      "record_id": "P1-DR-02",
+      "state": "open",
+      "lead": "이하영",
+      "plan_start": "TBD — P0 인수 후 재계획",
+      "plan_end": "TBD — 구현 유예 권장",
+      "decision": "UNRESOLVED — assign after mapping review or document intentional non-assignment; flexible dates do not imply N/A"
+    },
+    {
+      "issue": 25,
+      "record_id": "P1-MON-02",
+      "state": "open",
+      "lead": "이재환",
+      "plan_start": "TBD — P0 인수 후 재계획",
+      "plan_end": "TBD — 구현 유예 권장",
+      "decision": "UNRESOLVED — assign after mapping review or document intentional non-assignment; flexible dates do not imply N/A"
+    },
+    {
+      "issue": 14,
+      "record_id": "ICR-D-NET-01-01",
+      "state": "open",
+      "lead": "이권욱",
+      "plan_start": "2026-09-01",
+      "plan_end": "2026-09-21",
+      "decision": "UNRESOLVED — assign after mapping review or document intentional non-assignment; flexible dates do not imply N/A"
+    },
+    {
+      "issue": 12,
+      "record_id": "P1-DNS-01",
+      "state": "closed",
+      "lead": "이권욱",
+      "plan_start": "2026-08-28",
+      "plan_end": "2026-09-03",
+      "decision": "UNRESOLVED — assign after mapping review or document intentional non-assignment; flexible dates do not imply N/A"
+    },
+    {
+      "issue": 6,
+      "record_id": "DEC-P1-ADMIN-01",
+      "state": "closed",
+      "lead": "이하영",
+      "plan_start": "2026-09-08",
+      "plan_end": "2026-09-09",
+      "decision": "UNRESOLVED — assign after mapping review or document intentional non-assignment; flexible dates do not imply N/A"
+    },
+    {
+      "issue": 5,
+      "record_id": "DEC-P1-TXN-01",
+      "state": "closed",
+      "lead": "이재환",
+      "plan_start": "2026-09-08",
+      "plan_end": "2026-09-09",
+      "decision": "UNRESOLVED — assign after mapping review or document intentional non-assignment; flexible dates do not imply N/A"
+    },
+    {
+      "issue": 4,
+      "record_id": "DEC-P1-FDS-01",
+      "state": "closed",
+      "lead": "이재환",
+      "plan_start": "2026-09-08",
+      "plan_end": "2026-09-09",
+      "decision": "UNRESOLVED — assign after mapping review or document intentional non-assignment; flexible dates do not imply N/A"
+    }
+  ],
+  "release": {
+    "tag": "docs-v3.1.18",
+    "published_at": "2026-09-11T02:23:47Z",
+    "assets": [
+      {
+        "name": "FDS_v3.1.18_Canonical_Baseline_Release_Package.zip",
+        "digest": "sha256:a966bfef81adb0fba65b0d14e4f34c079fdaaaa5ca4888b802363160e21126f6",
+        "state": "uploaded"
+      },
+      {
+        "name": "FDS_v3.1.18_Canonical_Baseline_Release_Package.zip.sha256",
+        "digest": "sha256:bfd78b0f59e5b53025b50bf33f82f6c7e12aef1a6bcbc460107839a10b0c7852",
+        "state": "uploaded"
+      },
+      {
+        "name": "FDS_v3.1.18_WBS_and_Gantt_v1.0.xlsx",
+        "digest": "sha256:73ad269ee2272f19ebe898b445f240ba652f40cf29326dffef590ee4f0ef1734",
+        "state": "uploaded"
+      },
+      {
+        "name": "SHA256SUMS",
+        "digest": "sha256:717a01a92668775028678fece8f23c02f11984bbec5e51f0679f70453149a689",
+        "state": "uploaded"
+      }
+    ]
+  }
+}
