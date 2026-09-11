@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "record_id": "",
+  "purpose": "",
+  "target": {"repository": "321Team/infra-ansible", "base_ref": "main"},
+  "allowed_paths": [],
+  "acceptance_criteria": [],
+  "checks": [],
+  "watch_repositories": [{"repository": "321Team/fds-project-evidence", "ref": "main"}],
+  "watch_issues": [],
+  "watch_prs": [],
+  "evidence": {"repository": "321Team/fds-project-evidence", "path": "", "receipt_commit": ""},
+  "runtime": "NOT_AUTHORIZED_BY_THIS_HANDOFF",
+  "notes": "watch_issues/watch_prs elements: repository + positive number. evidence.receipt_commit may be empty until receipt; never claim evidence received without its commit/hash."
+}

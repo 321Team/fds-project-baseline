@@ -1,0 +1,19 @@
+name: shared-context
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: ['release/**']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Context drift and deterministic kit tests
+        run: python3 -m unittest discover -s tests -p 'test_shared_context.py' -v
+      - name: Preserve published inputs
+        run: sha256sum --check releases/v3.1.18/SHA256SUMS
+      - name: Verify handoff kit inputs
+        run: python3 scripts/build-handoff-kit.py --out "$RUNNER_TEMP/handoff.zip"

@@ -1,0 +1,7 @@
+case,mode,status,record_id,source_commit,context_id,model,environment,setup_minutes,hands_on_minutes,elapsed_minutes,classroom_wait_minutes,rework_count,defects_found,escaped_defects,evidence
+kit-rebuild,Work,NOT_MEASURED,,,,,,,,,,,,,
+kit-rebuild,Cloud-Codex,NOT_MEASURED,,,,,,,,,,,,,
+ansible-yaml-change,Work,NOT_MEASURED,,,,,,,,,,,,,
+ansible-yaml-change,Cloud-Codex,NOT_MEASURED,,,,,,,,,,,,,
+evidence-check,Work,NOT_MEASURED,,,,,,,,,,,,,
+evidence-check,Cloud-Codex,NOT_MEASURED,,,,,,,,,,,,,

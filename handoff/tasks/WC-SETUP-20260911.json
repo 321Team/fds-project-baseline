@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "record_id": "P1-DOC-01",
+  "purpose": "Work와 Cloud Codex의 공통 기준·인계 지침 도입 준비 및 검증; 기존 티켓 완료·정본 변경 아님",
+  "target": {
+    "repository": "321Team/fds-project-baseline",
+    "base_ref": "main"
+  },
+  "allowed_paths": [
+    "AGENTS.md",
+    "WORK_START.md",
+    "handoff/",
+    "scripts/shared_context.py",
+    "scripts/build-handoff-kit.py",
+    "tests/test_shared_context.py",
+    ".github/workflows/shared-context.yml"
+  ],
+  "acceptance_criteria": [
+    "기존 발행 source 141개 Git blob 불변",
+    "사양/상태 불일치와 오프라인 receipt 실행 Gate 차단",
+    "같은 입력으로 동일 handoff ZIP 생성",
+    "독립 검토 전 운영 적용 완료로 표시하지 않음"
+  ],
+  "checks": [
+    "python -m unittest discover -s tests -p 'test_shared_context.py' -v",
+    "sha256sum --check releases/v3.1.18/SHA256SUMS",
+    "python scripts/build-handoff-kit.py --out /tmp/handoff.zip"
+  ],
+  "watch_repositories": [
+    {
+      "repository": "321Team/infra-ansible",
+      "ref": "main"
+    },
+    {
+      "repository": "321Team/infra-kubernetes",
+      "ref": "main"
+    },
+    {
+      "repository": "321Team/infra-cicd",
+      "ref": "main"
+    },
+    {
+      "repository": "321Team/fds-project-evidence",
+      "ref": "main"
+    }
+  ],
+  "watch_issues": [
+    {
+      "repository": "321Team/fds-project-baseline",
+      "number": 24
+    }
+  ],
+  "watch_prs": [
+    {
+      "repository": "321Team/fds-project-baseline",
+      "number": 68
+    }
+  ],
+  "evidence": {
+    "repository": "321Team/fds-project-evidence",
+    "path": "governance/shared-context/20260911",
+    "receipt_commit": ""
+  },
+  "runtime": "NOT_AUTHORIZED_BY_THIS_HANDOFF",
+  "notes": "이번 도입 준비의 재현용 Task. P1-DOC-01 완료 판정이나 실제 Cloud 설정 완료를 의미하지 않음. 새 작업은 task.template.json에서 작성. 후속 infra 코드 수정 시 해당 열린 PR을 watch_prs에 추가해야 함."
+}

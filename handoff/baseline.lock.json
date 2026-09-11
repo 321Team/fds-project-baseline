@@ -1,0 +1,755 @@
+{
+  "schema_version": 1,
+  "repository": "321Team/fds-project-baseline",
+  "version": "v3.1.18",
+  "tag": "docs-v3.1.18",
+  "tag_commit": "72599ae49342b0fb8dbd3d8ee60314afb9f907bb",
+  "release_id": 386739994,
+  "meaning": "Approved publication anchor; current operational state must be read separately. Asset hashes below are release API metadata, not a new byte-download verification.",
+  "assets": [
+    {
+      "id": 556291358,
+      "name": "FDS_v3.1.18_Canonical_Baseline_Release_Package.zip",
+      "sha256": "a966bfef81adb0fba65b0d14e4f34c079fdaaaa5ca4888b802363160e21126f6"
+    },
+    {
+      "id": 556291364,
+      "name": "FDS_v3.1.18_Canonical_Baseline_Release_Package.zip.sha256",
+      "sha256": "bfd78b0f59e5b53025b50bf33f82f6c7e12aef1a6bcbc460107839a10b0c7852"
+    },
+    {
+      "id": 556291362,
+      "name": "FDS_v3.1.18_WBS_and_Gantt_v1.0.xlsx",
+      "sha256": "73ad269ee2272f19ebe898b445f240ba652f40cf29326dffef590ee4f0ef1734"
+    },
+    {
+      "id": 556291361,
+      "name": "SHA256SUMS",
+      "sha256": "717a01a92668775028678fece8f23c02f11984bbec5e51f0679f70453149a689"
+    }
+  ],
+  "approval_prs": [
+    {
+      "number": 69,
+      "head": "04c1ca46dcf82f814d350b4d49539e3ba4d6a9b4",
+      "merge": "02be2150f7662319a3d796cdcb99f6d26aec5472",
+      "review_id": 5168287548,
+      "reviewer": "hayeounglee"
+    },
+    {
+      "number": 70,
+      "head": "b572cc859c9b7ade5627c0f5ce1c4aa94d7374b5",
+      "merge": "72599ae49342b0fb8dbd3d8ee60314afb9f907bb",
+      "review_id": 5168785684,
+      "reviewer": "hayeounglee"
+    }
+  ],
+  "protected_files": {
+    ".github/CODEOWNERS": {
+      "git_blob": "46cc727abfefee4363ec41e1ed6b1a2f3de5f1e4",
+      "mode": "100644",
+      "sha256": "303ebb0af1b31c1666c06157166695d6f51a5fbaa1a8218658a8f2c380cb7087"
+    },
+    ".github/workflows/canonical-integrity.yml": {
+      "git_blob": "4cf022142dd22cb3a1bfe63ab10425433ac1bd66",
+      "mode": "100644",
+      "sha256": "ff51d2595e1738db84604bad32ad11c10b216416dff8ccca7e63847bfe3aee68"
+    },
+    ".gitignore": {
+      "git_blob": "d5deb85f3a602c003a1911d2106c431e3c921cc8",
+      "mode": "100644",
+      "sha256": "3f25c0c30633ba031b093d7e2a20bf27257aeda3f2fdc8f33e3e31b4f08ff71d"
+    },
+    "CURRENT.md": {
+      "git_blob": "1331eebc6743d04105f46780987d2728402b61e4",
+      "mode": "100644",
+      "sha256": "0fceba12075f00a8fb6a62812a7035ac2e46a47027af976d67d716b28507c024"
+    },
+    "README.md": {
+      "git_blob": "f30f3d1ad116b38bee1164e47c438889bbe95172",
+      "mode": "100644",
+      "sha256": "dda8a70feddf9543e99c79ccc19c304852b9387700f2a04135e94aaf7b6bebc0"
+    },
+    "architecture/README.md": {
+      "git_blob": "e75018290a93af166eb012c06581d4fe811e7795",
+      "mode": "100644",
+      "sha256": "ece5d836bdcfdc6093635dd9cdfd4a966b014fb6c027a091f37d8fe1ddcddf48"
+    },
+    "audit/FDS_Canonical_Integrity_Audit_v3.1.17.md": {
+      "git_blob": "723d39fe032dcdb8c987bc77db3ad8cf7e3471c4",
+      "mode": "100644",
+      "sha256": "3a74992bd961f1b1067b06c0f3c776df2e4ceb5b75427cb5b6c750dde3b53c8c"
+    },
+    "audit/FDS_Canonical_Integrity_Audit_v3.1.18.md": {
+      "git_blob": "513c87fac9b40ac9435f5580374563d99c6ac056",
+      "mode": "100644",
+      "sha256": "c169a5729a8455ba010210ee7f92f833b2bd4d9b9ededc9c5b56005a0a46b349"
+    },
+    "audit/README.md": {
+      "git_blob": "e027629fb3e6ded348e963b00cc8b592a5d8015b",
+      "mode": "100644",
+      "sha256": "d30e6ec2e968e66cc75dd9608f0d803445922e7822bcfeca97b586861f61d7a5"
+    },
+    "audit/ticket-sync-20260910-followup/README.md": {
+      "git_blob": "99d6a8eccbb1a40f296b7e7515b8503767be093d",
+      "mode": "100644",
+      "sha256": "54086be5717b43b57797af7183c0c67d55a032d790ac416dddd1e452046060cc"
+    },
+    "audit/ticket-sync-20260910-followup/SHA256SUMS": {
+      "git_blob": "c81eba8035ecefb0bb9984f6f7b2c855cc818587",
+      "mode": "100644",
+      "sha256": "b91d6f4731b0c86cfdc72fb5c27c326574fd773cb6f126dcf445eb4410b82442"
+    },
+    "audit/ticket-sync-20260910/README.md": {
+      "git_blob": "8042cea4c303fd838627287155d2da98f8f42e5d",
+      "mode": "100644",
+      "sha256": "b8e8ec8aff545a1bc3645174e435d7fe9773f176d96c8fa4c5d641431081e4ce"
+    },
+    "audit/ticket-sync-20260910/SHA256SUMS": {
+      "git_blob": "73640c097804dca6319909c65336b47aab1a60c7",
+      "mode": "100644",
+      "sha256": "6c76f8c96a51a5908746427892748c44f9b728fcfeb8606c1c7e23c2416269bd"
+    },
+    "audit/ticket-sync-20260910/result.json": {
+      "git_blob": "3aa1969573a5f96bbff1cd106367f3f7d13be95f",
+      "mode": "100644",
+      "sha256": "ee63c65e895a24a66d769d46dadc9b861f1d36cd9b9870c92b286d4df38b2147"
+    },
+    "audit/v3.1.18/fast-track-plan.json": {
+      "git_blob": "2c32505c60bdf1403649f5126315159f7a11a6bc",
+      "mode": "100644",
+      "sha256": "ee757ce6102650b59cf367be3bf1ba8128768f4bb850cac81511f9c31b40a1d6"
+    },
+    "audit/v3.1.18/finalization-validation.json": {
+      "git_blob": "43a29c76a4bc06240395b294337aa9b150edb71f",
+      "mode": "100644",
+      "sha256": "a4558aca4445de5eb947147be7d72d89da1cd763c8e061d459a8e990ed777b6c"
+    },
+    "audit/v3.1.18/followup-20260910.json": {
+      "git_blob": "6fb571215ef3bf3af6bee544e7330ac10f53f6c5",
+      "mode": "100644",
+      "sha256": "10cb146fc4b2bcbf99129f88fdda9284c4fd8922eb1d1d45694c8b9b0e694102"
+    },
+    "audit/v3.1.18/k8s-intake-20260910.json": {
+      "git_blob": "7089b0290db2b28ab18f73fd36c262ba3deb237f",
+      "mode": "100644",
+      "sha256": "3fa7b0d26dbe2af31d610600d3c0111cbbb4044e35c843f7907534a1214858f7"
+    },
+    "audit/v3.1.18/k8s-intake-validation.json": {
+      "git_blob": "432ef35a35cb117999722bde76e37bbbe25bb0c1",
+      "mode": "100644",
+      "sha256": "df7bf23c276d10e13552b44fb29f63573bc18ab481e57cd97fd93c09f575fe24"
+    },
+    "audit/v3.1.18/property-delta.json": {
+      "git_blob": "7dfd74f02fd8f41be107249d52edb28552f68313",
+      "mode": "100644",
+      "sha256": "dd8d95d7b80a2cde9016bf9478432b752a0f5eec62f31bd00b7f55b29ff2dfde"
+    },
+    "audit/v3.1.18/release-approval-evidence.json": {
+      "git_blob": "5299ee2e7304f1daab6425683e77ffe0e96e766a",
+      "mode": "100644",
+      "sha256": "593a4736f4ea7b95d77297d39c228083badecb561cc1bcaf65662ec128901ccb"
+    },
+    "audit/v3.1.18/validation.json": {
+      "git_blob": "6ef89870cd14e5492054b76235c8a0dcc7f5511f",
+      "mode": "100644",
+      "sha256": "d89c4d3a637f163db05a6cae383c849a62a81943eabfe76d9a1a8c35bc61cc6a"
+    },
+    "baseline/FDS_Project_Implementation_Baseline_v3.1.17.md": {
+      "git_blob": "9090e23e62f9e59f74f1ce174d404fa6ead4db91",
+      "mode": "100644",
+      "sha256": "3b52486d9fb7f8d3458499a12ee5b92843467f52c30afb9dc151b45f1e014589"
+    },
+    "baseline/FDS_Project_Implementation_Baseline_v3.1.18.md": {
+      "git_blob": "3d5a86380414de6b162f04d31b0e64ba1492c6f1",
+      "mode": "100644",
+      "sha256": "d7b500ea29ea6ffc910f23dac6c7e59cac8bb0c1fd25d81ff13fa7aae8e9d36f"
+    },
+    "baseline/README.md": {
+      "git_blob": "d4facb18146b3ba00b75d8d2f89aa57b6b9e02e2",
+      "mode": "100644",
+      "sha256": "a24d48a1ea970c2b78d44b1e0ed939f5f647c4b992e974554365459eada573be"
+    },
+    "governance/GITHUB_IDENTITY_MAP.md": {
+      "git_blob": "de3c8bf2da1102023dd9af767a4e861ceb2fd5c1",
+      "mode": "100644",
+      "sha256": "162910ee52843352aa5a868cb79bc76bf7b6ea5ddde35f022d1a7ba34c3ba2bc"
+    },
+    "governance/GITHUB_LABEL_SCHEMA.md": {
+      "git_blob": "ee679e871764e931a1f010497b1b1f6f118f4d02",
+      "mode": "100644",
+      "sha256": "9d07c160d20b8e43b90ca1047b0c263ddcad2f3d2af968c3a583c6a69e9bd8ff"
+    },
+    "governance/GITHUB_MILESTONE_MAP.md": {
+      "git_blob": "df0a87c1c63831d71797e37dda4be85cc4fb5378",
+      "mode": "100644",
+      "sha256": "bfe9087c24df0938df1e0f777e26fb6c4f0f3444de7f257ab2b17e8e1757625b"
+    },
+    "governance/RELEASE_POLICY.md": {
+      "git_blob": "abc97a13c3b750f9ec4d0b5300a385ab36f4dd9b",
+      "mode": "100644",
+      "sha256": "dfe7643b67542724cdc904b957c64d7f5f8f345eb5c857498f8d42bf7b679ca6"
+    },
+    "governance/TICKET_SYNC_POLICY.md": {
+      "git_blob": "df24d53a024545f9ac11b8b15ffaa94f00c18a73",
+      "mode": "100644",
+      "sha256": "69cb9277e31b74358b6c6ea53e99251609186584e7289068310b91d8a60f3a68"
+    },
+    "governance/TICKET_SYNC_RUNBOOK.md": {
+      "git_blob": "8ca64d7b84025faec939215a02e04d6101f3bfab",
+      "mode": "100644",
+      "sha256": "eae4da7f455e01c52ed3a0ccee5e66334f4a7443240568da5cc25010728a073e"
+    },
+    "governance/ticket-sync-map.json": {
+      "git_blob": "89582782a7a9926d5c39f2cf60329d0074bab081",
+      "mode": "100644",
+      "sha256": "deae909490f3259120618ce1f2516ab8303ed54c94a2d6c78efdbaaa874a95e7"
+    },
+    "releases/README.md": {
+      "git_blob": "f9d3a280c1d661b287d945c892609ebf94c7d27f",
+      "mode": "100644",
+      "sha256": "e1ecee6da0df36486d500be210dbd8a3530b30d2be456252f25df7aee2fb066b"
+    },
+    "releases/v3.1.15/D35_Interface_Register_Correction_and_IF-11A_Approval_Record_v1.0.md": {
+      "git_blob": "ff338bb0f185b3b205c84a46dd6c4bdbc271c408",
+      "mode": "100644",
+      "sha256": "7e06dcc05642f36696bc6dbee6806e954a5145c0ea58d75823700aa4506510c7"
+    },
+    "releases/v3.1.15/FDS_Document_Distribution_Manifest_v3.1.15.md": {
+      "git_blob": "8230fe6e0cc8fe523a8db3f8ae2ccd1e38d2b011",
+      "mode": "100644",
+      "sha256": "48e0f889a6a0bf10f19f3e2ec57ed3014656945d646ccdb8959651ffa9f8c068"
+    },
+    "releases/v3.1.15/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.15.md": {
+      "git_blob": "132b7bf8c05a89f9fed53510bfbeb89a342da735",
+      "mode": "100644",
+      "sha256": "befc43c0bb5b427f4bff96ebcb4a652859882773c99a701f5021b2197b853cf3"
+    },
+    "releases/v3.1.15/FDS_Project_Implementation_Baseline_v3.1.15.md": {
+      "git_blob": "3f4d0faa8c5b8e6688c127efd90d9461041f017c",
+      "mode": "100644",
+      "sha256": "f61d4c433bbb876f156047fd73cb70afae0290f009dc25b4c939d0916b938588"
+    },
+    "releases/v3.1.15/FDS_v3.1.15_Canonical_Ticket_Update_Pack_v1.0.md": {
+      "git_blob": "f8e75a54cf0233badaec541dadf0804ce034373e",
+      "mode": "100644",
+      "sha256": "de3ab0871f13e34883a338ee5809972f4705839bb30ce90192e654902de9d5cf"
+    },
+    "releases/v3.1.16/D36_Team_Availability_and_Status_Update_Record_v1.0.md": {
+      "git_blob": "35c3b5c0e83886579ecfd56d6c73e021b3c6734a",
+      "mode": "100644",
+      "sha256": "99d9b51efd7f4d8a3b23a6d686cf6601ac8b934032365b396c1dcd3c4ae32b4e"
+    },
+    "releases/v3.1.16/FDS_Document_Distribution_Manifest_v3.1.16.md": {
+      "git_blob": "d5ab2f9405d8a5af57d94dfd3079b48105e98a60",
+      "mode": "100644",
+      "sha256": "dfb4e19ce7eadc32f3fc0a2bd70b3f1293ef7f6ccdceeed3e9a6590b881ef338"
+    },
+    "releases/v3.1.16/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.16.md": {
+      "git_blob": "6c7624214b24c722515aa9fbb2d16379c51d276e",
+      "mode": "100644",
+      "sha256": "56a703f87d53f2eefde73d112e20bbf3fef19ef1a2812b9f9acb6cb6f1655e4f"
+    },
+    "releases/v3.1.16/FDS_Project_Implementation_Baseline_v3.1.16.md": {
+      "git_blob": "29ed89bb2a6ac38f10c03d8a2494df1c3aec0916",
+      "mode": "100644",
+      "sha256": "623f37afee182befc79d88400574f0f49678d11d360a3dacfdcbcae2edaf8d38"
+    },
+    "releases/v3.1.16/FDS_v3.1.16_Canonical_Ticket_Update_Pack_v1.0.md": {
+      "git_blob": "b5fb0c4263f50d305acab1d5c6bb948c9dce1348",
+      "mode": "100644",
+      "sha256": "bd43a05118dbd37571eb984c58d1cc886e345a68f59be41b2c40906c167b0893"
+    },
+    "releases/v3.1.16/FDS_v3.1.16_WBS_and_Gantt_v1.0.xlsx": {
+      "git_blob": "92e3d6efbedfe23cc479c5f58d4ec769dc3f72a2",
+      "mode": "100644",
+      "sha256": "b7df98c051658c6be58a146ccf6eec2909a33eb1be80cb09f383b5e61d4ab306"
+    },
+    "releases/v3.1.17/D37_GitHub_Canonical_Baseline_Repository_and_v3.1.17_Release_Record_v1.0.md": {
+      "git_blob": "911e38b4b9f0d7536c29f441caa69c4e7af869f5",
+      "mode": "100644",
+      "sha256": "b9b28a4a189c0410c44c9cdbb36ac3ba429a2a664fe4fb03886085d1ae4dedec"
+    },
+    "releases/v3.1.17/FDS_Document_Distribution_Manifest_v3.1.17.md": {
+      "git_blob": "0afc4dde2c1b63f6c4b4f8b7e35ff53b777d50f4",
+      "mode": "100644",
+      "sha256": "2a94fcdd4c7b1c19fd65a1aec9e8b628eec3f8747ae827a5df530115fe2e27dd"
+    },
+    "releases/v3.1.17/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.17.md": {
+      "git_blob": "6c7487a7678435cc5d2487b0e4a75cfbc713f44e",
+      "mode": "100644",
+      "sha256": "43e2490363905dfeae8827a818f7a7b3ebffaab45539e8e7aa33a3b7bbcb8393"
+    },
+    "releases/v3.1.17/FDS_v3.1.17_Canonical_Baseline_Release_Package.zip": {
+      "git_blob": "1f24d4601e81c2f59a4f2c1f04e4d0db1a702bd6",
+      "mode": "100644",
+      "sha256": "e8354de4134fcf9fe3762df07ad0ef2750a228a24f7b8624e203943cbb374140"
+    },
+    "releases/v3.1.17/FDS_v3.1.17_Canonical_Baseline_Release_Package.zip.sha256": {
+      "git_blob": "a2ac7b928f8377344bcdb7a9a910678801477f20",
+      "mode": "100644",
+      "sha256": "4f6ab5a3dbccc3b474fd11eeb6f1dd9c179e45ea983fe2a1ceb4a585b962571c"
+    },
+    "releases/v3.1.17/SHA256SUMS": {
+      "git_blob": "e33fc604800a55ddf6c086fb507b80d2b1d7e582",
+      "mode": "100644",
+      "sha256": "629b7101c7e0bcf6dda21adc97fec84eb6ecb9f07e583a2f70c37e3aa8945f06"
+    },
+    "releases/v3.1.18/FDS_Canonical_Consolidation_Record_v3.1.18.md": {
+      "git_blob": "f0a337682b43708900910038e2900d7fb67e7dc7",
+      "mode": "100644",
+      "sha256": "77ae040ec8f46d4c44d31b4f589b9dd82dedf1e51ba6b02bd34a3f8601b1acaa"
+    },
+    "releases/v3.1.18/FDS_Document_Distribution_Manifest_v3.1.18.md": {
+      "git_blob": "3970fcdd0ac9b54fcdf4e29196f58fffd10e3fcd",
+      "mode": "100644",
+      "sha256": "5ed29bb8a1933ad20af808562d1701402ab8b8319f1b69031cbf32edaf6f561c"
+    },
+    "releases/v3.1.18/FDS_GitHub_Release_Body_v3.1.18.md": {
+      "git_blob": "247908d82b761364b407dcc93f745407ececec7c",
+      "mode": "100644",
+      "sha256": "f0ffcf61b9c1bc51b849b171dfad65304bf1f04bf6d6dfec8dc52ea0876b48ba"
+    },
+    "releases/v3.1.18/FDS_K8S_Candidate_Integration_20260910.md": {
+      "git_blob": "40e2c277ceba4538eaacfb74c1c12dc2874dea2a",
+      "mode": "100644",
+      "sha256": "e34b9717e21de0493df0c08daee6ada2ae84e7cceab26cb359b09282c6a5b2d6"
+    },
+    "releases/v3.1.18/FDS_Phase1_Fast_Track_Schedule_Recommendation_v1.0.md": {
+      "git_blob": "e6e3fd7cab53dd063e94073a50ae39da80b1f89d",
+      "mode": "100644",
+      "sha256": "54479010be0777e3e5743871bdf048a9bd09176bad8d22f7c16fc8cf35b3a023"
+    },
+    "releases/v3.1.18/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.18.md": {
+      "git_blob": "e49a1647b66e51da1c7f8bc71fa0ad8e8b106918",
+      "mode": "100644",
+      "sha256": "3f8e3557267b27a0dade62418abdedf6c4522ddf01788bf1bbb886b7d4569a84"
+    },
+    "releases/v3.1.18/FDS_Release_Finalization_Record_v3.1.18.md": {
+      "git_blob": "176e8b2b54d938f44b7750857769d3d10f84b354",
+      "mode": "100644",
+      "sha256": "fde645d44360b5f983bfdad24211e897767d5b4e4e6a66076580731a94f455af"
+    },
+    "releases/v3.1.18/SHA256SUMS": {
+      "git_blob": "8acaa17443c089249fbf281d87fbe8c69d5b701d",
+      "mode": "100644",
+      "sha256": "717a01a92668775028678fece8f23c02f11984bbec5e51f0679f70453149a689"
+    },
+    "scripts/build-canonical-package.py": {
+      "git_blob": "646f0aca8bc1b6d60ef67fd4cea1c46caf0f98a1",
+      "mode": "100644",
+      "sha256": "3cd8825ae9a84e680aae361728833c80f1e17bc60f70127d4f3d19f19a5cb299"
+    },
+    "scripts/publish-canonical-release-assets.sh": {
+      "git_blob": "83d2cb46e0defa7c26ad83894a802c5a83b4e6dd",
+      "mode": "100755",
+      "sha256": "509e61e15ee1a5681730f559838f36b0c3fdd0cbcf3b1f8cc43db15b2a72752a"
+    },
+    "scripts/ticket-sync.py": {
+      "git_blob": "e97b28a48da241ed1f27196365b55b8145599ddb",
+      "mode": "100755",
+      "sha256": "f4440607707cbb466f85903369cb3caede820983e11f6386a99cf8622278ae85"
+    },
+    "scripts/verify-canonical-release.sh": {
+      "git_blob": "a63f327ca340c321851fcfdddde384e6473eee8c",
+      "mode": "100755",
+      "sha256": "072a4296ec923edb676c1afeb81a5695fced25da0430e3903600241b0c45b3ad"
+    },
+    "scripts/verify-v18-candidate.py": {
+      "git_blob": "9988c03cd1d857ba50f12adbd39aa421357bd72a",
+      "mode": "100644",
+      "sha256": "aac7bf1e5f8ff117211be2981f269cb0c2f752fdc28e0ae01022da51caddc60a"
+    },
+    "scripts/verify-wbs-gantt-distribution.sh": {
+      "git_blob": "42cb5462f9b926a9bb3da4a9e7fc2aca5d17743d",
+      "mode": "100755",
+      "sha256": "139e45ba113d08df98bd58f7b4ad864822b459dd10e04422e6fe12ff63c7c774"
+    },
+    "tests/test_ticket_sync.py": {
+      "git_blob": "2fe9bb93fae0f2f2c5a6937febde8648aad1b697",
+      "mode": "100644",
+      "sha256": "e2d030151ade38c0e0506f2b0f64a69f19d7f561bbb8072a8d7b8c57a7ca1bef"
+    },
+    "tickets/CR-P1-ANS-01-01_Notion_Description_v1.0.md": {
+      "git_blob": "c4d2184f0e3a3061843db3f200b8ad90e1912008",
+      "mode": "100644",
+      "sha256": "95790441d93a2339779792ad9b4ae181bc2fd0050a826b5660d18e7ed645a141"
+    },
+    "tickets/CR-P1-ANS-01-01_Notion_Description_v1.1.md": {
+      "git_blob": "3a5325608955baa597e3453a35d810e536670859",
+      "mode": "100644",
+      "sha256": "bdfefae5c63040286b03810acefbeb2d94a02bb4da2eb54cee8a14bb0d249d64"
+    },
+    "tickets/FDS_v3.1.17_Canonical_Ticket_Update_Pack_v1.0.md": {
+      "git_blob": "c1418d11d3553d4e530e98605d874faa05e5e8e8",
+      "mode": "100644",
+      "sha256": "b93f02499be033a5052f28d3c1017201e3b6de451e3f0858cff1ee9aef751fad"
+    },
+    "tickets/FDS_v3.1.18_Canonical_Ticket_Update_Pack_v1.0.md": {
+      "git_blob": "84311ab5094a91d7bf895aae7a01a2ee6cc15653",
+      "mode": "100644",
+      "sha256": "3e2adbc5a1dda5756f9758106ad3e3176b8a8b20af741745bf9ca5a6c9388024"
+    },
+    "tickets/README.md": {
+      "git_blob": "34c5134e457d0d510068e4f62b525a0959d7be5e",
+      "mode": "100644",
+      "sha256": "40c34088f473e35d0bfa742374007fdf8e794107e197640ee0c1112869dd5a77"
+    },
+    "tickets/v3.1.18/canonical-records.json": {
+      "git_blob": "a0c88f48163d82ec59521ce6747f3aa162255331",
+      "mode": "100644",
+      "sha256": "4f624bfaabbb5dfd2b87f56f8757cdb1c77f6dc5a82bb28fd91ed75e5e74211e"
+    },
+    "tickets/v3.1.18/descriptions/CR-P1-ANS-01-01.md": {
+      "git_blob": "045d50af8e456bb2df1582c961e416bd9a61f796",
+      "mode": "100644",
+      "sha256": "7de7244faceb3e2701103b38efcc7db29db5e38516dea220d50e5115fa773b4f"
+    },
+    "tickets/v3.1.18/descriptions/D-ARC-01.md": {
+      "git_blob": "4b05a10e4066fe1a71966253f9c4d20855d766c9",
+      "mode": "100644",
+      "sha256": "e3a445a6e12c757cdc7b1bf4e9f1811a16c0ce1c317a73f41da1403538274aa3"
+    },
+    "tickets/v3.1.18/descriptions/D-NET-01.md": {
+      "git_blob": "ac70b7ba5f00c2493132c2f4e1767e79ce027d5d",
+      "mode": "100644",
+      "sha256": "208df5f4567473b735d2ee35930f216cb20c8b28e84330380a53bc389a1992d4"
+    },
+    "tickets/v3.1.18/descriptions/D-SEC-01.md": {
+      "git_blob": "7a9a892b4ab8f7122606c4bfcfa97c95b9c226cd",
+      "mode": "100644",
+      "sha256": "c2788ef64e060dbc2c78044f08f899ad5efc8867b95bfd8344a9c15639a5bb60"
+    },
+    "tickets/v3.1.18/descriptions/D-WBS-01.md": {
+      "git_blob": "ce8ede4fa4f75e7cff1cdf57bea81d4de6cc31a1",
+      "mode": "100644",
+      "sha256": "324f02659dc614644377110466917670bc20743059b925a272b7e0516e3f0a2e"
+    },
+    "tickets/v3.1.18/descriptions/DEC-CAL-P1-01.md": {
+      "git_blob": "7c56bb9050201ff10a0cd81723365aafb1e6238f",
+      "mode": "100644",
+      "sha256": "e61866e38932e5c5d3e03f100c27551125206e8d2e38360dbdbe5c1fb8fe562c"
+    },
+    "tickets/v3.1.18/descriptions/DEC-CAL-P2-01.md": {
+      "git_blob": "afb45ef4a50e5ca0abd5a3ca29918d5845021fe2",
+      "mode": "100644",
+      "sha256": "696f57e58cf760cffeecbbd037724b0401b85e18261c4fe8328bad2973c1ab97"
+    },
+    "tickets/v3.1.18/descriptions/DEC-P1-ADMIN-01.md": {
+      "git_blob": "624e78c6b25d37f1f7b83aceb51ec887aa2907a8",
+      "mode": "100644",
+      "sha256": "fcb8ccf03c6d9675f6fd678b68cc426b2f33b887458aeabe22f22b5eae59e86a"
+    },
+    "tickets/v3.1.18/descriptions/DEC-P1-ENTRY-01.md": {
+      "git_blob": "d6634e8ed5ab7c81bc4ae63d6125c574dde09fdf",
+      "mode": "100644",
+      "sha256": "a56a3e1e1632dfecc5883aa9b65af3ab7e66b8072f69314a7988f7aa988dad88"
+    },
+    "tickets/v3.1.18/descriptions/DEC-P1-FDS-01.md": {
+      "git_blob": "d0e008fb681b6ed4414a6a21e545cfb8c7d4c363",
+      "mode": "100644",
+      "sha256": "2c72437d61d0dfa684bc64483f279379f77ca527bfab142c6ca14f76adb7a40e"
+    },
+    "tickets/v3.1.18/descriptions/DEC-P1-MON-01.md": {
+      "git_blob": "ae7b5067a6cd7af62ebe571b165139787f62d109",
+      "mode": "100644",
+      "sha256": "bed9a5110b61d1112fb87c0c1d1dd5533bf14801f5a4d20877e8e3319b4db706"
+    },
+    "tickets/v3.1.18/descriptions/DEC-P1-TLS-01.md": {
+      "git_blob": "b59843635a22c97c84b703fd31d8cec6eba8cf49",
+      "mode": "100644",
+      "sha256": "3ab45a7ac66c24f3cec0d795f8d1d061dd2645263cde2645dd119cc47de47388"
+    },
+    "tickets/v3.1.18/descriptions/DEC-P1-TXN-01.md": {
+      "git_blob": "f94b08d73391b3b5f2907a797364fe0a647b3be0",
+      "mode": "100644",
+      "sha256": "a5f5ca661fa8cb531331ac2cb4847763073ee640c36cfb831d566be16ba179e2"
+    },
+    "tickets/v3.1.18/descriptions/DEC-P2-DNS-01.md": {
+      "git_blob": "584bc8e1004a2d7dc3f18b2c24c9c21cf134e310",
+      "mode": "100644",
+      "sha256": "5b0830b1ae42812f5f3f1203ed0eca070b4c5cf5b60f5a3b08f3701f8292266a"
+    },
+    "tickets/v3.1.18/descriptions/DEC-P2-OP-01.md": {
+      "git_blob": "06549f1b2c4815b896a442b65c862d379ef3e2f6",
+      "mode": "100644",
+      "sha256": "5c96b3dd6356564490cc6c20bb8137b59b472832ca26ef9a3ae01eb10f2fc778"
+    },
+    "tickets/v3.1.18/descriptions/DEC-P2-REG-01.md": {
+      "git_blob": "77a2e97aa39fa020f67a1b6a9e6973d39b55e234",
+      "mode": "100644",
+      "sha256": "a0aca1b92318e5b972504a9ee05b0759c154ce999327c9f43faab631007a9a22"
+    },
+    "tickets/v3.1.18/descriptions/ICR-D-NET-01-01.md": {
+      "git_blob": "e1f84a2851c03cc6fd785bd5e3fda5de1dd6c7d4",
+      "mode": "100644",
+      "sha256": "e7578d5f540ad0abbf3793008b42473c25f2187d378719a916ba8c12994827a5"
+    },
+    "tickets/v3.1.18/descriptions/MS-DELIVERABLE-FREEZE-01.md": {
+      "git_blob": "8a4696199362e3a79774702efa52d010b5a65f3d",
+      "mode": "100644",
+      "sha256": "3f7f150a643e37015138288513a3df780afe851a18c7028ab321b9c369388895"
+    },
+    "tickets/v3.1.18/descriptions/MS-G0-01.md": {
+      "git_blob": "61865c062e243c5dd780741aee8a75e95ba6aba8",
+      "mode": "100644",
+      "sha256": "46aefe8b2cb7187017614f2b61bb7f09ead82ea9ebe3f83493d5366eea753f10"
+    },
+    "tickets/v3.1.18/descriptions/MS-G1-01.md": {
+      "git_blob": "bc4c77e3a4e610d7b6b8c890bf288305231e48f1",
+      "mode": "100644",
+      "sha256": "c5f6dcde2da6560340d0d49d2e0230b7160c7f9d62901e65a941e2e913f56774"
+    },
+    "tickets/v3.1.18/descriptions/MS-G2-01.md": {
+      "git_blob": "ecf6c05ad2ea94be707db8a29be49b8eac919673",
+      "mode": "100644",
+      "sha256": "4b3a6d9d1b44c15ed0877ede85908a08e8d2daf12da60220ad2a1bca3aa281fb"
+    },
+    "tickets/v3.1.18/descriptions/MS-G3-01.md": {
+      "git_blob": "f9b839d806268b33f63fda46dc5c3fd39295ddd9",
+      "mode": "100644",
+      "sha256": "f9dcd8513c9838fb16f548cb89dfc6b0a7a3a1cf9be1c96c7c721a0c3630f893"
+    },
+    "tickets/v3.1.18/descriptions/MS-G4-01.md": {
+      "git_blob": "24eaa7a028fafb4d8aea1cbd398379fae06d5f18",
+      "mode": "100644",
+      "sha256": "68cdff098b24e11bb1e3bd5d312b8c801513284855885b07afc2ab7bfddd6fea"
+    },
+    "tickets/v3.1.18/descriptions/MS-G5-01.md": {
+      "git_blob": "0112f75dc22f0676dc0d885d5a78ac0a859d9fce",
+      "mode": "100644",
+      "sha256": "a77b5e2b864cad1b36bba3bb78e27bfdb258273f4c7768c7749109df22f414b8"
+    },
+    "tickets/v3.1.18/descriptions/MS-G6-01.md": {
+      "git_blob": "1e68ddd06650c988659f7806472ee308db8ee2d1",
+      "mode": "100644",
+      "sha256": "5d99113e6c9ac6bd5f226ab7880c2240d3d7434fd9298843dd1f3f9f37756359"
+    },
+    "tickets/v3.1.18/descriptions/MS-P1-CLOSE-01.md": {
+      "git_blob": "b02e7f652a6618fe5e343fb68d998868779625b5",
+      "mode": "100644",
+      "sha256": "f4c029ff4a1499f32e0f53f0a4c82aa56721e78182589a3bc04df8e00d6f8ca2"
+    },
+    "tickets/v3.1.18/descriptions/MS-P1-REVIEW-01.md": {
+      "git_blob": "16279b7fb61740b95b2b53142e649065585349fe",
+      "mode": "100644",
+      "sha256": "21b43a8f9d31468b74f7cbe11d03eef7f09276484d209a6ce436ff40706013bf"
+    },
+    "tickets/v3.1.18/descriptions/MS-P2-REVIEW-01.md": {
+      "git_blob": "e956a4a468b2954c614c301167bf4b429bf7c622",
+      "mode": "100644",
+      "sha256": "fda81eb9fb9218cf63dd198059d98ba78c4be168f5de9f685ebbe19bfba7b9ca"
+    },
+    "tickets/v3.1.18/descriptions/MS-P2-START-01.md": {
+      "git_blob": "afa5b3b0c3b98612881e96a1ebdef1c2a9197672",
+      "mode": "100644",
+      "sha256": "934a3a59ca99eb809de2b98cb4d837a791dfa6a4346483dfb794fac1f6af6930"
+    },
+    "tickets/v3.1.18/descriptions/MS-PROJECT-CLOSE-01.md": {
+      "git_blob": "ad4f80a3031b8f055dbeafacb2b30e93bbda6553",
+      "mode": "100644",
+      "sha256": "96ed6b0af1384c1e4abcec623f803c71c4c2383e4cf47752b8a432fb7b966b36"
+    },
+    "tickets/v3.1.18/descriptions/P1-ANS-01.md": {
+      "git_blob": "be9e4efaa4c19f4dd6bffbe8e2507dc324bf808e",
+      "mode": "100644",
+      "sha256": "93b74b6e27abb077d7839e10c6978722644668f08de1e031cfc3224518d700f5"
+    },
+    "tickets/v3.1.18/descriptions/P1-APP-01.md": {
+      "git_blob": "790cbef60adcef0070ecc8b926418925756e1cd3",
+      "mode": "100644",
+      "sha256": "163e1351847882bfbd85c58d002f1172339c06efac138bc45b24b9cc102c4f19"
+    },
+    "tickets/v3.1.18/descriptions/P1-CICD-01.md": {
+      "git_blob": "1a7a7a59f8b7213a0516bba6ea18ca4af4352538",
+      "mode": "100644",
+      "sha256": "a68bb4ae1a864a7e61828aea466348a1533d69273d5bceaa6a78354620858096"
+    },
+    "tickets/v3.1.18/descriptions/P1-DB-01.md": {
+      "git_blob": "e4aeb419c147e9cc142fd04a227e5a5f20f325db",
+      "mode": "100644",
+      "sha256": "536402077bd2be72e81141a54f1670d29154e0bcb2def334a4dd4585c85add80"
+    },
+    "tickets/v3.1.18/descriptions/P1-DNS-01.md": {
+      "git_blob": "52f6b91d0a7f07af1d80de005e9b9138a2293f33",
+      "mode": "100644",
+      "sha256": "5936ce5409e79a824ce94cb4552e3a118b76f5db5519d9bdf44192f6e600bc5c"
+    },
+    "tickets/v3.1.18/descriptions/P1-DOC-01.md": {
+      "git_blob": "d72ac0648e894eb7bedc222e05b223e6b72fef8a",
+      "mode": "100644",
+      "sha256": "c1524e6df8f59e6cc570e20f1f38a3f720e4e2452a67b1d71725c05a3c7276a5"
+    },
+    "tickets/v3.1.18/descriptions/P1-DR-01.md": {
+      "git_blob": "a81b2e8e2b54ecf91431fd34d492004063b8ea96",
+      "mode": "100644",
+      "sha256": "d8ca7f809919e94e18756706f2c6b81a7de9a9e5543d0b7c723bdde49307ac0a"
+    },
+    "tickets/v3.1.18/descriptions/P1-DR-02.md": {
+      "git_blob": "5f84bcb9c7da54db4d9261c36928ffb906e51be7",
+      "mode": "100644",
+      "sha256": "e296cd9ac234688463ebad562f537c532c78a1c8244fb4b2de0d76c8a9207d83"
+    },
+    "tickets/v3.1.18/descriptions/P1-E2E-01.md": {
+      "git_blob": "65dc554a1f856830fc42503c8d07e249ff5f8b76",
+      "mode": "100644",
+      "sha256": "9fd96bf5a175800a657f41cac11a475cd8a6bee549dc70bfe118f413de7372c3"
+    },
+    "tickets/v3.1.18/descriptions/P1-HA-01.md": {
+      "git_blob": "762061f26d58a453265a1e272819b609f058cab2",
+      "mode": "100644",
+      "sha256": "409c24c6794c69d187783773fd52427b6d37b00f698aee064a633e4781c2c3a0"
+    },
+    "tickets/v3.1.18/descriptions/P1-HA-02.md": {
+      "git_blob": "75717476f55ca3921c50eecff073d7a7563a9edd",
+      "mode": "100644",
+      "sha256": "6757ed92cfe9e7104015fad898abb774425bfd6e92f4523c0c66e7c9048545cb"
+    },
+    "tickets/v3.1.18/descriptions/P1-HBR-01.md": {
+      "git_blob": "9ea37baa2d3d30c326bfa7267d4731cab6b38381",
+      "mode": "100644",
+      "sha256": "ac61d9088d428764052d2addfb0f7719a17f3a5a7b0e61431b5aca0820f4643b"
+    },
+    "tickets/v3.1.18/descriptions/P1-K8S-01.md": {
+      "git_blob": "23945386dbfa29cd99d53a9ab2cc1efa0ccfae9f",
+      "mode": "100644",
+      "sha256": "604fe801857b3bb21583d26f91855b51becde07af16e58c3a228e0dc1d993fef"
+    },
+    "tickets/v3.1.18/descriptions/P1-LB-01.md": {
+      "git_blob": "731819d3adc1e5debd407070c652f65c1cc0fa58",
+      "mode": "100644",
+      "sha256": "f2ab959376b6bef6b24f11bc883ab60815aec15a13755170b691bf0d2c72f515"
+    },
+    "tickets/v3.1.18/descriptions/P1-LNX-01.md": {
+      "git_blob": "bf1d0eb77e6e9a2c9790153923a3382c2e00bdde",
+      "mode": "100644",
+      "sha256": "285152b947ac3ec15a1ef2d6da13ea43343a54e84c5012407b98a75b65d9d908"
+    },
+    "tickets/v3.1.18/descriptions/P1-MON-01.md": {
+      "git_blob": "022b5d22aaf859c7a4962dd3bab0f11b56d71446",
+      "mode": "100644",
+      "sha256": "5228564546d61ade4547a35ef8272b9396711c1c5e942d42f4bdbba576d7a597"
+    },
+    "tickets/v3.1.18/descriptions/P1-MON-02.md": {
+      "git_blob": "2436b14e0b79eb82de18b5c8e54999d94a1daf04",
+      "mode": "100644",
+      "sha256": "06e49a761bcc3b3fccc0c4159b4f68dada36623596cfab42da84691dc7958967"
+    },
+    "tickets/v3.1.18/descriptions/P1-NET-01.md": {
+      "git_blob": "150aa55586180ef016315736b65c92159e9b64bb",
+      "mode": "100644",
+      "sha256": "7bd048b9b528dda29d992706b7befcde882940dcaf18c45fd43cd2c924e2a39a"
+    },
+    "tickets/v3.1.18/descriptions/P1-REV-01.md": {
+      "git_blob": "90cefb5a2509427c54882bdf01df02573d19cf1a",
+      "mode": "100644",
+      "sha256": "869995fddc19b5fb7d06ad5a3c97b66a0e28b4109bf8ff132d8524ad5a338bc7"
+    },
+    "tickets/v3.1.18/descriptions/P1-SEC-01.md": {
+      "git_blob": "49fdb2662fd2ac883374b48a03da7a7160a6c803",
+      "mode": "100644",
+      "sha256": "7c16a6498d6b2c3051680c7da4efba5de3ed294fda2f96495ff9d182a4d5c46e"
+    },
+    "tickets/v3.1.18/descriptions/P2-APP-01.md": {
+      "git_blob": "09db81d9de663376e417848d3f02b5a4a412047c",
+      "mode": "100644",
+      "sha256": "25186f986668ef56e404ff5b6e88db96fd4fca502725f030ce806308975b70cb"
+    },
+    "tickets/v3.1.18/descriptions/P2-ARC-01.md": {
+      "git_blob": "76ce23781eb0891b1a281afa8a7a470960067c94",
+      "mode": "100644",
+      "sha256": "7ee5047c8062d904038811ba2906eb476af0aa4758ac5a97797a2b5dcf1d2587"
+    },
+    "tickets/v3.1.18/descriptions/P2-CICD-01.md": {
+      "git_blob": "819160b14ab2fbddccc1a476bdc1df3ca1c4fe2b",
+      "mode": "100644",
+      "sha256": "a7c3b16b491b416781479ba654f888a2a28995a68595e4d4e74b01e676d9ae83"
+    },
+    "tickets/v3.1.18/descriptions/P2-DNS-01.md": {
+      "git_blob": "655cbba464152d1ef65eb1ce6cfa6f1e229263fa",
+      "mode": "100644",
+      "sha256": "beb1650669b0884b4110a8a093b533c9028385b6f84e6d49c72db5a6a6a19bd0"
+    },
+    "tickets/v3.1.18/descriptions/P2-DOC-01.md": {
+      "git_blob": "c50851db7b28137cc8fa82701cff7b6d229426ab",
+      "mode": "100644",
+      "sha256": "07299af8ce2caf912e1addb42602e61b28618947b1506a05cd9235e195b16ed4"
+    },
+    "tickets/v3.1.18/descriptions/P2-E2E-01.md": {
+      "git_blob": "06dfd9f81d9e8b7739c0d39f0bee48b8e975a162",
+      "mode": "100644",
+      "sha256": "e5ea8e5af0fcc562ee337fb47d855833d54328b66b65ff09b16ac495728105d4"
+    },
+    "tickets/v3.1.18/descriptions/P2-HYB-01.md": {
+      "git_blob": "6f400b0ac88f02799d5450dabe83f0629fd5b317",
+      "mode": "100644",
+      "sha256": "fb43d9c80d52563e6b606ede22141eeee5b9acc3c4f82ca0f57589aa380d1ad4"
+    },
+    "tickets/v3.1.18/descriptions/P2-IAC-01.md": {
+      "git_blob": "461e369283f264171a65832f92a91ba00dadfd00",
+      "mode": "100644",
+      "sha256": "d7f778692ed8d8bdad8abc188c69d6d56b54e5d39128220bafb5ec58a8845691"
+    },
+    "tickets/v3.1.18/descriptions/P2-OADP-01.md": {
+      "git_blob": "e4dfac1007764fcf36769ade5107986c16a45ca3",
+      "mode": "100644",
+      "sha256": "5c310d6034498e2bb63faea02cc44e31518a267a56cd3da32397fc6cc21883d5"
+    },
+    "tickets/v3.1.18/descriptions/P2-OCI-01.md": {
+      "git_blob": "bf3b9def1e758fae1d8f63a6010615a1aa05a8fb",
+      "mode": "100644",
+      "sha256": "74feb615cd70660a4e2825d7e7d510f18b845c96e0c4c2984ceafa63f4193f97"
+    },
+    "tickets/v3.1.18/descriptions/P2-OP-01.md": {
+      "git_blob": "ada6804cb0b18e5632faf78eea6fa178251d6c35",
+      "mode": "100644",
+      "sha256": "e11ba2311a72c732e1bd5b9422fe5a5e0721b6a4d263a515972cc22bf2ed3c35"
+    },
+    "tickets/v3.1.18/descriptions/P2-REV-01.md": {
+      "git_blob": "7f03bdb7f6186e364348f1b5fd7741494fda0a65",
+      "mode": "100644",
+      "sha256": "20572a5a245aab419791a70477a89162e3649875cffb46e15e16574d00c8ba7b"
+    },
+    "tickets/v3.1.18/descriptions/P2-ROSA-01.md": {
+      "git_blob": "09702a6bdeb7c4d7f8abc0e9b9697c0270e51a20",
+      "mode": "100644",
+      "sha256": "cbbf361749b7c3ff4cb78a2ba004852907c56df410d24204a3391691a5f76463"
+    },
+    "tickets/v3.1.18/descriptions/P2-VPN-01.md": {
+      "git_blob": "b8f2fdd8ce9d10d0aaa2f68066a0d1cf6a42a0b8",
+      "mode": "100644",
+      "sha256": "856e5a8f7eee25bd24e27c37626694276a731eb7654f44a123e2488b6d659cc1"
+    },
+    "tickets/v3.1.18/source-snapshot.json": {
+      "git_blob": "bc0b2ba16fabe1b7bcfc2e05c93b9a2cdb050353",
+      "mode": "100644",
+      "sha256": "9afcc11674292dadc9ac6c1f58c8e39d99cd2abd5aae9220d4226f59d9bdaf8e"
+    },
+    "wbs/FDS_v3.1.17_WBS_and_Gantt_v1.0.xlsx": {
+      "git_blob": "b49a37e379925e0ab2533952366e6a515e70da53",
+      "mode": "100644",
+      "sha256": "68a75598da5ffdc8300b14c7ef2981252af7f713ddc5c11e79e75929be032c0b"
+    },
+    "wbs/FDS_v3.1.18_WBS_and_Gantt_v1.0.xlsx": {
+      "git_blob": "b4a1c39d44a9c016e6aef6730cc18c72f793e5d4",
+      "mode": "100644",
+      "sha256": "73ad269ee2272f19ebe898b445f240ba652f40cf29326dffef590ee4f0ef1734"
+    },
+    "wbs/README.md": {
+      "git_blob": "71f2b2a33d5d453758b468950030de76572d2064",
+      "mode": "100644",
+      "sha256": "df501bdc87015011d9e085678cb1402019bd0d1df7c4daad11d2598457798534"
+    },
+    "web/FDS_v3.1.17_Canonical_Status.html": {
+      "git_blob": "fa764169396f55bd0abf880b531b7fd56128325e",
+      "mode": "100644",
+      "sha256": "2b18c006bf99c730a39590d615c96c8ba2bb5fb658c0bfa3e2c2f47e281acf91"
+    },
+    "web/FDS_v3.1.18_Canonical_Status.html": {
+      "git_blob": "cb0ee958ddc77c5272ffacf826f0372222e85a89",
+      "mode": "100644",
+      "sha256": "cfbbd42b2bdf46fd364cd8eea8440ee2d9fd2584d63bdeab6ddddf0df86a574b"
+    }
+  },
+  "published_at": "2026-09-11T02:23:47Z"
+}
