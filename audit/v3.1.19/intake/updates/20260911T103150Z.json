@@ -1,0 +1,1850 @@
+{
+  "schema_version": 1,
+  "target_version": "3.1.19",
+  "captured_at": "2026-09-11T10:31:50Z",
+  "previous_capture": "2026-09-11T09:58:49.550Z",
+  "parent_candidate_head": "455fda686a670a18d726c525bdeae7d420f4af3c",
+  "status": "COLLECTED_PENDING_REVIEW",
+  "canonical_release": "3.1.18",
+  "summary": {
+    "new_change_requests": 1,
+    "new_supporting_comments": 1,
+    "changed_existing_ticket_properties": 0,
+    "changed_known_prs": 0,
+    "new_pr_reviews": 0,
+    "new_pr_commits": 0,
+    "default_branch_commits_since_previous": 0,
+    "total_tickets": 65,
+    "milestone_assigned": 64,
+    "milestone_unassigned": [
+      74
+    ],
+    "source_limitations": 1
+  },
+  "changes": [
+    {
+      "kind": "NEW_CHANGE_REQUEST",
+      "classification": "PENDING_REVIEW",
+      "record_id": "CR-P1-MON-01-01",
+      "source": "https://github.com/321Team/fds-project-baseline/issues/74",
+      "source_created_at": "2026-09-11T10:23:24Z",
+      "source_updated_at": "2026-09-11T10:23:24Z",
+      "author": "hayeounglee",
+      "before": null,
+      "after": {
+        "state": "open",
+        "description_status": "In Progress",
+        "priority": "P1",
+        "lead": "TBD",
+        "support": "TBD",
+        "start": "NOT_SPECIFIED",
+        "end": "NOT_SPECIFIED",
+        "milestone": null,
+        "native_type": "NOT_SET",
+        "assignees": [],
+        "labels": [
+          "phase:phase-1",
+          "status:in-progress",
+          "type:change-request",
+          "area:monitoring",
+          "priority:P1"
+        ]
+      },
+      "approved_head": null,
+      "merge_commit": null,
+      "review": "NOT_YET_REQUESTED_PER_SOURCE",
+      "runtime": "NOT_INDEPENDENTLY_VERIFIED",
+      "affected_records": [
+        "P1-MON-01 #17",
+        "P1-SEC-01 #19",
+        "P1-K8S-01 #10",
+        "ICR-D-NET-01-01 #14",
+        "DEC-P1-MON-01 #63",
+        "IF-24",
+        "IF-13A"
+      ],
+      "affected_artifacts": [
+        "Baseline",
+        "WBS/Gantt",
+        "Ticket Pack/Description",
+        "Interface Register",
+        "Decision/Change Register",
+        "Architecture if proxy host/IP/port changes",
+        "Release Notes/Manifest/SHA-256"
+      ],
+      "required_actions": [
+        "기존 P1-MON-01 외부 Webhook 미구성 원칙과 신규 Discord 외부 송신 예외 범위·Decision을 정합화한다.",
+        "Lead/Support·계획·Milestone을 담당자가 확정한다. 기존 64건 매핑을 되돌리지 않고 신규 #74만 별도 관리한다.",
+        "프록시 배치 VM·고정 IP·실제 포트·소프트웨어·목적지 allowlist와 Pod selector를 확정한다.",
+        "Secret 전달·주입·회전·폐기·유출 대응 및 Runtime 양성/음성·경유 증적을 독립 검토한다."
+      ],
+      "deadline": "v19 승인 사양 편입 및 실제 적용 전; 구체 일정 미확정, 자동 지정하지 않음",
+      "gate_boundary": "P1 P0 Gate AC를 변경하거나 자동 차단/완료하지 않음. 신규 예외의 승인 사양 편입은 검토 대기."
+    },
+    {
+      "kind": "NEW_SUPPORTING_COMMENT",
+      "classification": "PENDING_REVIEW",
+      "record_id": "CR-P1-MON-01-01",
+      "source": "https://github.com/321Team/infra-kubernetes/issues/5#issuecomment-5632931284",
+      "source_created_at": "2026-09-11T10:13:36Z",
+      "source_updated_at": "2026-09-11T10:13:36Z",
+      "author": "hayeounglee",
+      "reported_claims": [
+        "k8s-worker01 curl https://discord.com 연결·TLS 검증 성공 보고",
+        "기존 프록시 없음; 신규 VM 배치·소프트웨어·allowlist·selector·Secret 절차 미확정"
+      ],
+      "evidence": {
+        "raw_log": "NOT_ATTACHED_IN_COMMENT",
+        "sha256": "NOT_PROVIDED",
+        "runtime": "REPORT_ONLY_NOT_INDEPENDENTLY_VERIFIED"
+      },
+      "review_cautions": [
+        "Worker 직접 curl은 Alertmanager Pod→프록시→Discord 경로 검증이 아니다.",
+        "해당 호스트 접속 결과만으로 전체 VM/Pod의 경로·MITM 부재를 일반화하지 않는다.",
+        "네트워크 관리자 승인 불필요 문구는 작성자의 주장이다. 외부 통신 가능성과 변경 권한 승인을 구분하고 승인 범위를 확인한다."
+      ]
+    }
+  ],
+  "historical_context": {
+    "source": "https://github.com/321Team/infra-kubernetes/issues/5",
+    "classification": "FIRST_OBSERVED_HISTORICAL_CONTEXT_NOT_NEW_RELEASE_APPROVAL",
+    "records": [
+      {
+        "id": 5615984316,
+        "url": "https://github.com/321Team/infra-kubernetes/issues/5#issuecomment-5615984316",
+        "author": "hayeounglee",
+        "created_at": "2026-09-10T09:01:04Z",
+        "updated_at": "2026-09-10T09:01:04Z"
+      },
+      {
+        "id": 5616115949,
+        "url": "https://github.com/321Team/infra-kubernetes/issues/5#issuecomment-5616115949",
+        "author": "supreme33-kr",
+        "created_at": "2026-09-10T09:12:00Z",
+        "updated_at": "2026-09-10T09:12:00Z"
+      },
+      {
+        "id": 5616210439,
+        "url": "https://github.com/321Team/infra-kubernetes/issues/5#issuecomment-5616210439",
+        "author": "GWONUK",
+        "created_at": "2026-09-10T09:19:40Z",
+        "updated_at": "2026-09-10T09:19:40Z"
+      },
+      {
+        "id": 5616437944,
+        "url": "https://github.com/321Team/infra-kubernetes/issues/5#issuecomment-5616437944",
+        "author": "supreme33-kr",
+        "created_at": "2026-09-10T09:36:13Z",
+        "updated_at": "2026-09-10T09:36:13Z"
+      }
+    ],
+    "summary": "9/10 B안 프록시 방식 합의와 후속 정본 Namespace·DNS·프록시 포트 등 정정 이력이 존재. 초기 댓글의 fds/UDP-only/443 가정을 현행으로 복원하지 않는다. 이는 신규 #74의 구현·Runtime 승인이나 최신 Commit에 대한 독립 승인이 아니다."
+  },
+  "source_limitations": [
+    {
+      "repository": "321Team/fds-msa",
+      "source": "https://github.com/321Team/fds-msa",
+      "discovered_from": "https://github.com/321Team/infra-kubernetes/issues/5",
+      "status": "HTTP_404_ACCESS_UNCONFIRMED",
+      "impact": "실제 Alertmanager 배포 라벨·receiver 설정·고정 버전·Secret 참조를 직접 대조하지 못함",
+      "interpretation": "저장소 미존재로 단정하지 않음. 기존 7개 저장소 수집은 정상이며 부분 누락으로 유지."
+    }
+  ],
+  "source_checkpoint": {
+    "mode": "first reviews/comments/default-head observation; historical observations are not new approved changes",
+    "baseline_issues": [
+      {
+        "number": 74,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/74",
+        "updated_at": "2026-09-11T10:23:24Z",
+        "state": "open",
+        "milestone": null,
+        "comments": 0
+      },
+      {
+        "number": 67,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/67",
+        "updated_at": "2026-09-11T09:20:10Z",
+        "state": "closed",
+        "milestone": 1,
+        "comments": 0
+      },
+      {
+        "number": 66,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/66",
+        "updated_at": "2026-09-11T05:00:05Z",
+        "state": "closed",
+        "milestone": 2,
+        "comments": 0
+      },
+      {
+        "number": 65,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/65",
+        "updated_at": "2026-09-11T05:00:03Z",
+        "state": "closed",
+        "milestone": 2,
+        "comments": 0
+      },
+      {
+        "number": 64,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/64",
+        "updated_at": "2026-09-11T05:00:01Z",
+        "state": "closed",
+        "milestone": 2,
+        "comments": 0
+      },
+      {
+        "number": 63,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/63",
+        "updated_at": "2026-09-11T09:19:56Z",
+        "state": "closed",
+        "milestone": 1,
+        "comments": 0
+      },
+      {
+        "number": 62,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/62",
+        "updated_at": "2026-09-11T04:59:56Z",
+        "state": "closed",
+        "milestone": 3,
+        "comments": 0
+      },
+      {
+        "number": 61,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/61",
+        "updated_at": "2026-09-11T08:58:40Z",
+        "state": "closed",
+        "milestone": 1,
+        "comments": 0
+      },
+      {
+        "number": 60,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/60",
+        "updated_at": "2026-09-11T04:59:52Z",
+        "state": "closed",
+        "milestone": 1,
+        "comments": 0
+      },
+      {
+        "number": 59,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/59",
+        "updated_at": "2026-09-11T08:58:28Z",
+        "state": "closed",
+        "milestone": 1,
+        "comments": 0
+      },
+      {
+        "number": 58,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/58",
+        "updated_at": "2026-09-11T09:19:42Z",
+        "state": "closed",
+        "milestone": 2,
+        "comments": 0
+      },
+      {
+        "number": 57,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/57",
+        "updated_at": "2026-09-11T04:59:45Z",
+        "state": "open",
+        "milestone": 13,
+        "comments": 0
+      },
+      {
+        "number": 56,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/56",
+        "updated_at": "2026-09-11T04:59:43Z",
+        "state": "open",
+        "milestone": 12,
+        "comments": 0
+      },
+      {
+        "number": 55,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/55",
+        "updated_at": "2026-09-11T09:21:57Z",
+        "state": "open",
+        "milestone": 13,
+        "comments": 0
+      },
+      {
+        "number": 54,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/54",
+        "updated_at": "2026-09-11T04:59:40Z",
+        "state": "open",
+        "milestone": 11,
+        "comments": 0
+      },
+      {
+        "number": 53,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/53",
+        "updated_at": "2026-09-11T04:59:38Z",
+        "state": "open",
+        "milestone": 10,
+        "comments": 0
+      },
+      {
+        "number": 52,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/52",
+        "updated_at": "2026-09-11T04:59:36Z",
+        "state": "open",
+        "milestone": 12,
+        "comments": 0
+      },
+      {
+        "number": 51,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/51",
+        "updated_at": "2026-09-11T09:21:44Z",
+        "state": "open",
+        "milestone": 10,
+        "comments": 0
+      },
+      {
+        "number": 50,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/50",
+        "updated_at": "2026-09-11T04:59:33Z",
+        "state": "open",
+        "milestone": 10,
+        "comments": 0
+      },
+      {
+        "number": 49,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/49",
+        "updated_at": "2026-09-11T04:59:31Z",
+        "state": "open",
+        "milestone": 11,
+        "comments": 0
+      },
+      {
+        "number": 48,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/48",
+        "updated_at": "2026-09-11T09:21:14Z",
+        "state": "open",
+        "milestone": 10,
+        "comments": 0
+      },
+      {
+        "number": 47,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/47",
+        "updated_at": "2026-09-11T04:59:29Z",
+        "state": "open",
+        "milestone": 10,
+        "comments": 0
+      },
+      {
+        "number": 46,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/46",
+        "updated_at": "2026-09-11T08:58:54Z",
+        "state": "open",
+        "milestone": 9,
+        "comments": 0
+      },
+      {
+        "number": 45,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/45",
+        "updated_at": "2026-09-11T04:59:27Z",
+        "state": "open",
+        "milestone": 9,
+        "comments": 0
+      },
+      {
+        "number": 44,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/44",
+        "updated_at": "2026-09-11T04:59:25Z",
+        "state": "open",
+        "milestone": 10,
+        "comments": 0
+      },
+      {
+        "number": 43,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/43",
+        "updated_at": "2026-09-11T04:59:23Z",
+        "state": "open",
+        "milestone": 9,
+        "comments": 0
+      },
+      {
+        "number": 42,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/42",
+        "updated_at": "2026-09-11T04:59:21Z",
+        "state": "open",
+        "milestone": 9,
+        "comments": 0
+      },
+      {
+        "number": 41,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/41",
+        "updated_at": "2026-09-11T09:21:01Z",
+        "state": "open",
+        "milestone": 9,
+        "comments": 0
+      },
+      {
+        "number": 40,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/40",
+        "updated_at": "2026-09-11T09:20:48Z",
+        "state": "open",
+        "milestone": 9,
+        "comments": 0
+      },
+      {
+        "number": 39,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/39",
+        "updated_at": "2026-09-11T04:59:14Z",
+        "state": "open",
+        "milestone": 8,
+        "comments": 0
+      },
+      {
+        "number": 38,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/38",
+        "updated_at": "2026-09-11T04:59:12Z",
+        "state": "open",
+        "milestone": 9,
+        "comments": 0
+      },
+      {
+        "number": 37,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/37",
+        "updated_at": "2026-09-11T04:59:10Z",
+        "state": "open",
+        "milestone": 8,
+        "comments": 0
+      },
+      {
+        "number": 36,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/36",
+        "updated_at": "2026-09-11T09:20:35Z",
+        "state": "open",
+        "milestone": 8,
+        "comments": 0
+      },
+      {
+        "number": 35,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/35",
+        "updated_at": "2026-09-11T04:59:06Z",
+        "state": "open",
+        "milestone": 8,
+        "comments": 0
+      },
+      {
+        "number": 34,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/34",
+        "updated_at": "2026-09-11T09:20:23Z",
+        "state": "open",
+        "milestone": 7,
+        "comments": 0
+      },
+      {
+        "number": 33,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/33",
+        "updated_at": "2026-09-11T04:59:03Z",
+        "state": "open",
+        "milestone": 7,
+        "comments": 0
+      },
+      {
+        "number": 32,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/32",
+        "updated_at": "2026-09-11T04:59:01Z",
+        "state": "open",
+        "milestone": 6,
+        "comments": 0
+      },
+      {
+        "number": 31,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/31",
+        "updated_at": "2026-09-11T04:58:59Z",
+        "state": "open",
+        "milestone": 5,
+        "comments": 0
+      },
+      {
+        "number": 30,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/30",
+        "updated_at": "2026-09-11T09:33:15Z",
+        "state": "open",
+        "milestone": 6,
+        "comments": 1
+      },
+      {
+        "number": 29,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/29",
+        "updated_at": "2026-09-11T04:58:56Z",
+        "state": "open",
+        "milestone": 4,
+        "comments": 0
+      },
+      {
+        "number": 28,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/28",
+        "updated_at": "2026-09-11T04:58:54Z",
+        "state": "open",
+        "milestone": 5,
+        "comments": 0
+      },
+      {
+        "number": 27,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/27",
+        "updated_at": "2026-09-11T09:32:57Z",
+        "state": "open",
+        "milestone": 6,
+        "comments": 0
+      },
+      {
+        "number": 26,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/26",
+        "updated_at": "2026-09-11T09:32:39Z",
+        "state": "open",
+        "milestone": 6,
+        "comments": 0
+      },
+      {
+        "number": 25,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/25",
+        "updated_at": "2026-09-11T09:32:22Z",
+        "state": "open",
+        "milestone": 6,
+        "comments": 1
+      },
+      {
+        "number": 24,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/24",
+        "updated_at": "2026-09-11T04:58:52Z",
+        "state": "open",
+        "milestone": 4,
+        "comments": 0
+      },
+      {
+        "number": 23,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/23",
+        "updated_at": "2026-09-11T04:58:50Z",
+        "state": "open",
+        "milestone": 3,
+        "comments": 0
+      },
+      {
+        "number": 22,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/22",
+        "updated_at": "2026-09-11T04:58:47Z",
+        "state": "open",
+        "milestone": 4,
+        "comments": 1
+      },
+      {
+        "number": 21,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/21",
+        "updated_at": "2026-09-11T04:58:45Z",
+        "state": "open",
+        "milestone": 4,
+        "comments": 2
+      },
+      {
+        "number": 20,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/20",
+        "updated_at": "2026-09-11T04:58:43Z",
+        "state": "open",
+        "milestone": 4,
+        "comments": 1
+      },
+      {
+        "number": 19,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/19",
+        "updated_at": "2026-09-11T04:58:41Z",
+        "state": "open",
+        "milestone": 3,
+        "comments": 3
+      },
+      {
+        "number": 18,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/18",
+        "updated_at": "2026-09-11T04:58:39Z",
+        "state": "open",
+        "milestone": 2,
+        "comments": 0
+      },
+      {
+        "number": 17,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/17",
+        "updated_at": "2026-09-11T04:58:35Z",
+        "state": "open",
+        "milestone": 3,
+        "comments": 1
+      },
+      {
+        "number": 16,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/16",
+        "updated_at": "2026-09-11T04:58:33Z",
+        "state": "open",
+        "milestone": 3,
+        "comments": 0
+      },
+      {
+        "number": 15,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/15",
+        "updated_at": "2026-09-11T04:58:31Z",
+        "state": "open",
+        "milestone": 3,
+        "comments": 1
+      },
+      {
+        "number": 14,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/14",
+        "updated_at": "2026-09-11T09:32:03Z",
+        "state": "open",
+        "milestone": 3,
+        "comments": 2
+      },
+      {
+        "number": 13,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/13",
+        "updated_at": "2026-09-11T04:58:27Z",
+        "state": "open",
+        "milestone": 2,
+        "comments": 4
+      },
+      {
+        "number": 12,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/12",
+        "updated_at": "2026-09-11T09:19:30Z",
+        "state": "closed",
+        "milestone": 2,
+        "comments": 0
+      },
+      {
+        "number": 11,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/11",
+        "updated_at": "2026-09-11T04:58:24Z",
+        "state": "open",
+        "milestone": 2,
+        "comments": 3
+      },
+      {
+        "number": 10,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/10",
+        "updated_at": "2026-09-11T04:58:22Z",
+        "state": "open",
+        "milestone": 2,
+        "comments": 0
+      },
+      {
+        "number": 9,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/9",
+        "updated_at": "2026-09-11T04:58:20Z",
+        "state": "open",
+        "milestone": 2,
+        "comments": 0
+      },
+      {
+        "number": 8,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/8",
+        "updated_at": "2026-09-11T04:58:18Z",
+        "state": "closed",
+        "milestone": 1,
+        "comments": 0
+      },
+      {
+        "number": 7,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/7",
+        "updated_at": "2026-09-11T04:58:15Z",
+        "state": "closed",
+        "milestone": 1,
+        "comments": 0
+      },
+      {
+        "number": 6,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/6",
+        "updated_at": "2026-09-11T09:19:17Z",
+        "state": "closed",
+        "milestone": 3,
+        "comments": 1
+      },
+      {
+        "number": 5,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/5",
+        "updated_at": "2026-09-11T09:19:05Z",
+        "state": "closed",
+        "milestone": 3,
+        "comments": 1
+      },
+      {
+        "number": 4,
+        "url": "https://github.com/321Team/fds-project-baseline/issues/4",
+        "updated_at": "2026-09-11T09:18:53Z",
+        "state": "closed",
+        "milestone": 3,
+        "comments": 1
+      }
+    ],
+    "repositories": [
+      {
+        "repository": "321Team/fds-project-baseline",
+        "default_branch": "main",
+        "default_head": "58f72f78faa237cbdc9ceae6460d25407550c1a7",
+        "default_head_commit_at": "2026-09-11T09:50:00Z",
+        "comments_since_previous": [],
+        "review_comments_since_previous": [],
+        "pull_requests": [
+          {
+            "commits": [
+              {
+                "date": "2026-09-11T03:50:01Z",
+                "sha": "b7da6fc3980819eafb8274216b1e1e9a3c45ef8e"
+              }
+            ],
+            "head": "b7da6fc3980819eafb8274216b1e1e9a3c45ef8e",
+            "merge_commit_sha": "6b1040779363eb1870f70178a28db19ab3a70d11",
+            "merged_at": null,
+            "pr": 71,
+            "repository": "321Team/fds-project-baseline",
+            "reviews": [],
+            "updated_at": "2026-09-11T05:26:11Z",
+            "url": "https://github.com/321Team/fds-project-baseline/pull/71"
+          },
+          {
+            "commits": [
+              {
+                "date": "2026-09-10T14:57:53Z",
+                "sha": "b572cc859c9b7ade5627c0f5ce1c4aa94d7374b5"
+              }
+            ],
+            "head": "b572cc859c9b7ade5627c0f5ce1c4aa94d7374b5",
+            "merge_commit_sha": "72599ae49342b0fb8dbd3d8ee60314afb9f907bb",
+            "merged_at": "2026-09-10T15:04:36Z",
+            "pr": 70,
+            "repository": "321Team/fds-project-baseline",
+            "reviews": [
+              {
+                "commit_id": "b572cc859c9b7ade5627c0f5ce1c4aa94d7374b5",
+                "id": 5168785684,
+                "state": "APPROVED",
+                "submitted_at": "2026-09-10T15:03:33Z",
+                "url": "https://github.com/321Team/fds-project-baseline/pull/70#pullrequestreview-5168785684",
+                "user": "hayeounglee"
+              }
+            ],
+            "updated_at": "2026-09-10T15:04:36Z",
+            "url": "https://github.com/321Team/fds-project-baseline/pull/70"
+          },
+          {
+            "commits": [
+              {
+                "date": "2026-09-08T08:24:22Z",
+                "sha": "83ea8f4b6954ed4ec08d895434f1c1009c5bb8d4"
+              },
+              {
+                "date": "2026-09-08T10:09:06Z",
+                "sha": "15bdbac9b646f30c18d17b34fcf403fd12ef675c"
+              }
+            ],
+            "head": "15bdbac9b646f30c18d17b34fcf403fd12ef675c",
+            "merge_commit_sha": "77f02a94e7a8518c5f14c698f030e60451cbea78",
+            "merged_at": null,
+            "pr": 3,
+            "repository": "321Team/fds-project-baseline",
+            "reviews": [],
+            "updated_at": "2026-09-10T14:06:14Z",
+            "url": "https://github.com/321Team/fds-project-baseline/pull/3"
+          },
+          {
+            "commits": [
+              {
+                "date": "2026-09-11T08:49:41Z",
+                "sha": "f1fdc39cd4c261e189d084065cfa803cf2d72a96"
+              },
+              {
+                "date": "2026-09-11T09:02:19Z",
+                "sha": "ea6cbd80155102766927b2d5bff3e756eba7a77e"
+              }
+            ],
+            "head": "ea6cbd80155102766927b2d5bff3e756eba7a77e",
+            "merge_commit_sha": "58f72f78faa237cbdc9ceae6460d25407550c1a7",
+            "merged_at": "2026-09-11T09:50:00Z",
+            "pr": 72,
+            "repository": "321Team/fds-project-baseline",
+            "reviews": [
+              {
+                "commit_id": "ea6cbd80155102766927b2d5bff3e756eba7a77e",
+                "id": 5177300582,
+                "state": "APPROVED",
+                "submitted_at": "2026-09-11T09:48:35Z",
+                "url": "https://github.com/321Team/fds-project-baseline/pull/72#pullrequestreview-5177300582",
+                "user": "hayeounglee"
+              }
+            ],
+            "updated_at": "2026-09-11T09:50:01Z",
+            "url": "https://github.com/321Team/fds-project-baseline/pull/72"
+          },
+          {
+            "commits": [
+              {
+                "date": "2026-09-07T03:22:55Z",
+                "sha": "2b9967cf5528a12993d650b2b6f3984bb074d917"
+              }
+            ],
+            "head": "2b9967cf5528a12993d650b2b6f3984bb074d917",
+            "merge_commit_sha": "2d93395a0e19ea67e5be199d7183a7edbaa6cf4c",
+            "merged_at": "2026-09-07T03:49:47Z",
+            "pr": 2,
+            "repository": "321Team/fds-project-baseline",
+            "reviews": [
+              {
+                "commit_id": "2b9967cf5528a12993d650b2b6f3984bb074d917",
+                "id": 5127887380,
+                "state": "APPROVED",
+                "submitted_at": "2026-09-07T03:46:04Z",
+                "url": "https://github.com/321Team/fds-project-baseline/pull/2#pullrequestreview-5127887380",
+                "user": "hayeounglee"
+              }
+            ],
+            "updated_at": "2026-09-07T03:49:47Z",
+            "url": "https://github.com/321Team/fds-project-baseline/pull/2"
+          },
+          {
+            "commits": [
+              {
+                "date": "2026-09-10T01:32:13Z",
+                "sha": "78c1b3a71d85dad5468e30cd991e224cd2e5d1b2"
+              },
+              {
+                "date": "2026-09-10T03:24:34Z",
+                "sha": "573c18877a5b710a04ee50dae59fedf4e3552aea"
+              }
+            ],
+            "head": "573c18877a5b710a04ee50dae59fedf4e3552aea",
+            "merge_commit_sha": "82d5275621045f4dc67cf64bc034e706d8773dc9",
+            "merged_at": null,
+            "pr": 68,
+            "repository": "321Team/fds-project-baseline",
+            "reviews": [
+              {
+                "commit_id": "573c18877a5b710a04ee50dae59fedf4e3552aea",
+                "id": 5176621355,
+                "state": "APPROVED",
+                "submitted_at": "2026-09-11T08:43:35Z",
+                "url": "https://github.com/321Team/fds-project-baseline/pull/68#pullrequestreview-5176621355",
+                "user": "hayeounglee"
+              }
+            ],
+            "updated_at": "2026-09-11T08:51:26Z",
+            "url": "https://github.com/321Team/fds-project-baseline/pull/68"
+          },
+          {
+            "commits": [
+              {
+                "date": "2026-09-08T08:24:22Z",
+                "sha": "83ea8f4b6954ed4ec08d895434f1c1009c5bb8d4"
+              },
+              {
+                "date": "2026-09-08T10:09:06Z",
+                "sha": "15bdbac9b646f30c18d17b34fcf403fd12ef675c"
+              },
+              {
+                "date": "2026-09-10T01:32:13Z",
+                "sha": "78c1b3a71d85dad5468e30cd991e224cd2e5d1b2"
+              },
+              {
+                "date": "2026-09-10T03:24:34Z",
+                "sha": "573c18877a5b710a04ee50dae59fedf4e3552aea"
+              },
+              {
+                "date": "2026-09-10T06:25:10Z",
+                "sha": "46e0424bf614c8b5ae14ea5d93864d72c92e4ca0"
+              },
+              {
+                "date": "2026-09-10T07:05:00Z",
+                "sha": "e2992efa4e7e3659480fb209da874b01fa30dfb1"
+              },
+              {
+                "date": "2026-09-10T13:36:34Z",
+                "sha": "04c1ca46dcf82f814d350b4d49539e3ba4d6a9b4"
+              }
+            ],
+            "head": "04c1ca46dcf82f814d350b4d49539e3ba4d6a9b4",
+            "merge_commit_sha": "02be2150f7662319a3d796cdcb99f6d26aec5472",
+            "merged_at": "2026-09-10T14:38:32Z",
+            "pr": 69,
+            "repository": "321Team/fds-project-baseline",
+            "reviews": [
+              {
+                "commit_id": "04c1ca46dcf82f814d350b4d49539e3ba4d6a9b4",
+                "id": 5168287548,
+                "state": "APPROVED",
+                "submitted_at": "2026-09-10T14:20:47Z",
+                "url": "https://github.com/321Team/fds-project-baseline/pull/69#pullrequestreview-5168287548",
+                "user": "hayeounglee"
+              }
+            ],
+            "updated_at": "2026-09-10T14:38:32Z",
+            "url": "https://github.com/321Team/fds-project-baseline/pull/69"
+          },
+          {
+            "commits": [
+              {
+                "date": "2026-09-04T12:49:36Z",
+                "sha": "92047f3aa57432fb3ba687069e4750fa160ef9d9"
+              },
+              {
+                "date": "2026-09-05T05:45:54Z",
+                "sha": "662beaf8abf4265e081b2df92f099c31c4d6a189"
+              },
+              {
+                "date": "2026-09-05T05:49:32Z",
+                "sha": "e213eb66e976709730eae3b4efab98831951effc"
+              },
+              {
+                "date": "2026-09-05T08:08:05Z",
+                "sha": "deb0ac63aa49975841def014b308b5cf5718e14e"
+              },
+              {
+                "date": "2026-09-07T02:59:51Z",
+                "sha": "53ea99cc904a411f64b95d0e61fcef8533c5f6a7"
+              }
+            ],
+            "head": "53ea99cc904a411f64b95d0e61fcef8533c5f6a7",
+            "merge_commit_sha": "8515ecd97e69035f329032ba17206972c7b0739d",
+            "merged_at": "2026-09-07T03:13:48Z",
+            "pr": 1,
+            "repository": "321Team/fds-project-baseline",
+            "reviews": [
+              {
+                "commit_id": "deb0ac63aa49975841def014b308b5cf5718e14e",
+                "id": 5127567221,
+                "state": "COMMENTED",
+                "submitted_at": "2026-09-07T02:27:53Z",
+                "url": "https://github.com/321Team/fds-project-baseline/pull/1#pullrequestreview-5127567221",
+                "user": "hayeounglee"
+              },
+              {
+                "commit_id": "53ea99cc904a411f64b95d0e61fcef8533c5f6a7",
+                "id": 5127734828,
+                "state": "APPROVED",
+                "submitted_at": "2026-09-07T03:09:35Z",
+                "url": "https://github.com/321Team/fds-project-baseline/pull/1#pullrequestreview-5127734828",
+                "user": "hayeounglee"
+              }
+            ],
+            "updated_at": "2026-09-07T03:13:49Z",
+            "url": "https://github.com/321Team/fds-project-baseline/pull/1"
+          }
+        ]
+      },
+      {
+        "repository": "321Team/fds-project-evidence",
+        "default_branch": "main",
+        "default_head": "493c09e728b643d620debe29738f1b47b3cafa8a",
+        "default_head_commit_at": "2026-09-09T09:46:45Z",
+        "comments_since_previous": [],
+        "review_comments_since_previous": [],
+        "pull_requests": [
+          {
+            "commits": [
+              {
+                "date": "2026-09-11T03:56:37Z",
+                "sha": "62ecf670e50a148ba9c83872d0e772650cd5b4d9"
+              }
+            ],
+            "head": "62ecf670e50a148ba9c83872d0e772650cd5b4d9",
+            "merge_commit_sha": "e726cef95b0432d28e9c1eb627e663ee31120340",
+            "merged_at": null,
+            "pr": 9,
+            "repository": "321Team/fds-project-evidence",
+            "reviews": [],
+            "updated_at": "2026-09-11T05:27:13Z",
+            "url": "https://github.com/321Team/fds-project-evidence/pull/9"
+          },
+          {
+            "commits": [
+              {
+                "date": "2026-09-09T11:53:04Z",
+                "sha": "1324522e1b59244634033e619bc5ddafaf44fa60"
+              }
+            ],
+            "head": "1324522e1b59244634033e619bc5ddafaf44fa60",
+            "merge_commit_sha": "fafa811a2974dc84ab3bf269ba5266a39e0b3262",
+            "merged_at": null,
+            "pr": 7,
+            "repository": "321Team/fds-project-evidence",
+            "reviews": [],
+            "updated_at": "2026-09-09T11:54:16Z",
+            "url": "https://github.com/321Team/fds-project-evidence/pull/7"
+          },
+          {
+            "commits": [
+              {
+                "date": "2026-09-07T05:07:51Z",
+                "sha": "5422760f629f433c0a52f2037a4bed824a76744e"
+              },
+              {
+                "date": "2026-09-07T06:19:58Z",
+                "sha": "cfd848615fb5cde387f2f58838f0a5d2535f0930"
+              },
+              {
+                "date": "2026-09-07T06:55:49Z",
+                "sha": "e284d3435f665cb4faa25145c0b83b0b0bf189c0"
+              },
+              {
+                "date": "2026-09-07T07:09:59Z",
+                "sha": "7dfec0a042c6f833cb246bb89560ec3eb0af892b"
+              },
+              {
+                "date": "2026-09-08T07:15:38Z",
+                "sha": "d948fbb6bfc5e48bad19135034a1db35347e09e9"
+              },
+              {
+                "date": "2026-09-08T07:50:28Z",
+                "sha": "84d42a7921b0f2bdc9b4a0bfea9fd3898324f258"
+              },
+              {
+                "date": "2026-09-08T11:08:15Z",
+                "sha": "52e55541eea183f03421ee9eb3e0e0517a5ccbfc"
+              },
+              {
+                "date": "2026-09-08T11:31:11Z",
+                "sha": "3485aa628d362908491de46caa84400626f80b29"
+              },
+              {
+                "date": "2026-09-08T11:40:43Z",
+                "sha": "ce286134959a8ff4e5ca17f98da6d986de5a2665"
+              },
+              {
+                "date": "2026-09-08T11:47:22Z",
+                "sha": "61d9d41e318f5d41133dd3f9195f57597a913adf"
+              },
+              {
+                "date": "2026-09-08T12:04:39Z",
+                "sha": "fe673449c820fb0b988e0357148e6cdb0c152a35"
+              },
+              {
+                "date": "2026-09-08T12:32:45Z",
+                "sha": "d4c32fc2a4fc3896f8f73c694693a252bb42b329"
+              },
+              {
+                "date": "2026-09-08T12:40:36Z",
+                "sha": "c9a429487afb5279d0bbd9c034afa59f92b84ba4"
+              },
+              {
+                "date": "2026-09-08T12:55:12Z",
+                "sha": "69c88e835bd5287a76534a0cd2d1277ed7106b38"
+              },
+              {
+                "date": "2026-09-09T00:49:11Z",
+                "sha": "4863e532c00a9f758d1130cd1c8e7316e881ebcf"
+              }
+            ],
+            "head": "4863e532c00a9f758d1130cd1c8e7316e881ebcf",
+            "merge_commit_sha": "0f16942b2c0525a90fe75a1c17fd19c295352658",
+            "merged_at": "2026-09-09T04:25:11Z",
+            "pr": 1,
+            "repository": "321Team/fds-project-evidence",
+            "reviews": [
+              {
+                "commit_id": "84d42a7921b0f2bdc9b4a0bfea9fd3898324f258",
+                "id": 5140142355,
+                "state": "APPROVED",
+                "submitted_at": "2026-09-08T09:50:27Z",
+                "url": "https://github.com/321Team/fds-project-evidence/pull/1#pullrequestreview-5140142355",
+                "user": "hayeounglee"
+              },
+              {
+                "commit_id": "4863e532c00a9f758d1130cd1c8e7316e881ebcf",
+                "id": 5149477411,
+                "state": "APPROVED",
+                "submitted_at": "2026-09-09T03:38:27Z",
+                "url": "https://github.com/321Team/fds-project-evidence/pull/1#pullrequestreview-5149477411",
+                "user": "supreme33-kr"
+              }
+            ],
+            "updated_at": "2026-09-09T04:28:19Z",
+            "url": "https://github.com/321Team/fds-project-evidence/pull/1"
+          },
+          {
+            "commits": [
+              {
+                "date": "2026-09-09T08:44:22Z",
+                "sha": "0450108cecfe961557bb2b1a427a9bae5d93d722"
+              }
+            ],
+            "head": "0450108cecfe961557bb2b1a427a9bae5d93d722",
+            "merge_commit_sha": "493c09e728b643d620debe29738f1b47b3cafa8a",
+            "merged_at": "2026-09-09T09:46:45Z",
+            "pr": 6,
+            "repository": "321Team/fds-project-evidence",
+            "reviews": [
+              {
+                "commit_id": "0450108cecfe961557bb2b1a427a9bae5d93d722",
+                "id": 5152271791,
+                "state": "APPROVED",
+                "submitted_at": "2026-09-09T09:19:49Z",
+                "url": "https://github.com/321Team/fds-project-evidence/pull/6#pullrequestreview-5152271791",
+                "user": "supreme33-kr"
+              }
+            ],
+            "updated_at": "2026-09-09T09:48:41Z",
+            "url": "https://github.com/321Team/fds-project-evidence/pull/6"
+          },
+          {
+            "commits": [
+              {
+                "date": "2026-09-09T06:08:03Z",
+                "sha": "00d1080a1c8f44b133eef81dd2b58be31bf86d9d"
+              }
+            ],
+            "head": "00d1080a1c8f44b133eef81dd2b58be31bf86d9d",
+            "merge_commit_sha": "39ead0567327cf45ed9f8b81cecdf9848f542d5d",
+            "merged_at": "2026-09-09T06:36:13Z",
+            "pr": 3,
+            "repository": "321Team/fds-project-evidence",
+            "reviews": [
+              {
+                "commit_id": "00d1080a1c8f44b133eef81dd2b58be31bf86d9d",
+                "id": 5150486987,
+                "state": "APPROVED",
+                "submitted_at": "2026-09-09T06:20:34Z",
+                "url": "https://github.com/321Team/fds-project-evidence/pull/3#pullrequestreview-5150486987",
+                "user": "supreme33-kr"
+              }
+            ],
+            "updated_at": "2026-09-09T06:49:02Z",
+            "url": "https://github.com/321Team/fds-project-evidence/pull/3"
+          },
+          {
+            "commits": [
+              {
+                "date": "2026-09-09T06:45:53Z",
+                "sha": "0461d5c5736d5b24ccc8b282aefc7620701bdea7"
+              }
+            ],
+            "head": "0461d5c5736d5b24ccc8b282aefc7620701bdea7",
+            "merge_commit_sha": "d1ba547cd89b449303505e2e5d96dcb0147faf06",
+            "merged_at": "2026-09-09T09:08:59Z",
+            "pr": 5,
+            "repository": "321Team/fds-project-evidence",
+            "reviews": [
+              {
+                "commit_id": "0461d5c5736d5b24ccc8b282aefc7620701bdea7",
+                "id": 5151059436,
+                "state": "APPROVED",
+                "submitted_at": "2026-09-09T07:23:07Z",
+                "url": "https://github.com/321Team/fds-project-evidence/pull/5#pullrequestreview-5151059436",
+                "user": "supreme33-kr"
+              }
+            ],
+            "updated_at": "2026-09-09T09:10:58Z",
+            "url": "https://github.com/321Team/fds-project-evidence/pull/5"
+          },
+          {
+            "commits": [
+              {
+                "date": "2026-09-08T01:28:35Z",
+                "sha": "efee61da7ca06351872a5eb640494cda5035431f"
+              },
+              {
+                "date": "2026-09-08T02:23:51Z",
+                "sha": "327d542aaea054f5f3cce1f065bd430b580bea34"
+              },
+              {
+                "date": "2026-09-08T02:50:26Z",
+                "sha": "827649973ee8e49a1bcfa2ad8984ed18a73eba26"
+              },
+              {
+                "date": "2026-09-08T02:50:38Z",
+                "sha": "bd5683813a865a9b3ad5e684ff3d962857264b0f"
+              },
+              {
+                "date": "2026-09-08T03:24:10Z",
+                "sha": "e2ea2d676d7c8adafeebf9fdea6f5d5c9907d22a"
+              },
+              {
+                "date": "2026-09-08T07:20:34Z",
+                "sha": "51c3ed8b0c32110543bc08eb4128663ff75dbaa7"
+              }
+            ],
+            "head": "51c3ed8b0c32110543bc08eb4128663ff75dbaa7",
+            "merge_commit_sha": "36a65c64763077eabe680b81827b1c4dc6ad3fc5",
+            "merged_at": "2026-09-09T03:44:16Z",
+            "pr": 2,
+            "repository": "321Team/fds-project-evidence",
+            "reviews": [
+              {
+                "commit_id": "efee61da7ca06351872a5eb640494cda5035431f",
+                "id": 5136589074,
+                "state": "CHANGES_REQUESTED",
+                "submitted_at": "2026-09-08T02:15:50Z",
+                "url": "https://github.com/321Team/fds-project-evidence/pull/2#pullrequestreview-5136589074",
+                "user": "GWONUK"
+              },
+              {
+                "commit_id": "efee61da7ca06351872a5eb640494cda5035431f",
+                "id": 5136901228,
+                "state": "COMMENTED",
+                "submitted_at": "2026-09-08T03:06:36Z",
+                "url": "https://github.com/321Team/fds-project-evidence/pull/2#pullrequestreview-5136901228",
+                "user": "supreme33-kr"
+              },
+              {
+                "commit_id": "efee61da7ca06351872a5eb640494cda5035431f",
+                "id": 5136901485,
+                "state": "COMMENTED",
+                "submitted_at": "2026-09-08T03:06:38Z",
+                "url": "https://github.com/321Team/fds-project-evidence/pull/2#pullrequestreview-5136901485",
+                "user": "supreme33-kr"
+              },
+              {
+                "commit_id": "efee61da7ca06351872a5eb640494cda5035431f",
+                "id": 5136901689,
+                "state": "COMMENTED",
+                "submitted_at": "2026-09-08T03:06:40Z",
+                "url": "https://github.com/321Team/fds-project-evidence/pull/2#pullrequestreview-5136901689",
+                "user": "supreme33-kr"
+              },
+              {
+                "commit_id": "efee61da7ca06351872a5eb640494cda5035431f",
+                "id": 5136901866,
+                "state": "COMMENTED",
+                "submitted_at": "2026-09-08T03:06:43Z",
+                "url": "https://github.com/321Team/fds-project-evidence/pull/2#pullrequestreview-5136901866",
+                "user": "supreme33-kr"
+              },
+              {
+                "commit_id": "bd5683813a865a9b3ad5e684ff3d962857264b0f",
+                "id": 5136964124,
+                "state": "CHANGES_REQUESTED",
+                "submitted_at": "2026-09-08T03:18:24Z",
+                "url": "https://github.com/321Team/fds-project-evidence/pull/2#pullrequestreview-5136964124",
+                "user": "GWONUK"
+              },
+              {
+                "commit_id": "bd5683813a865a9b3ad5e684ff3d962857264b0f",
+                "id": 5136969066,
+                "state": "COMMENTED",
+                "submitted_at": "2026-09-08T03:19:08Z",
+                "url": "https://github.com/321Team/fds-project-evidence/pull/2#pullrequestreview-5136969066",
+                "user": "GWONUK"
+              },
+              {
+                "commit_id": "bd5683813a865a9b3ad5e684ff3d962857264b0f",
+                "id": 5136999835,
+                "state": "COMMENTED",
+                "submitted_at": "2026-09-08T03:25:09Z",
+                "url": "https://github.com/321Team/fds-project-evidence/pull/2#pullrequestreview-5136999835",
+                "user": "supreme33-kr"
+              },
+              {
+                "commit_id": "bd5683813a865a9b3ad5e684ff3d962857264b0f",
+                "id": 5137000942,
+                "state": "COMMENTED",
+                "submitted_at": "2026-09-08T03:25:26Z",
+                "url": "https://github.com/321Team/fds-project-evidence/pull/2#pullrequestreview-5137000942",
+                "user": "supreme33-kr"
+              },
+              {
+                "commit_id": "bd5683813a865a9b3ad5e684ff3d962857264b0f",
+                "id": 5137001016,
+                "state": "COMMENTED",
+                "submitted_at": "2026-09-08T03:25:28Z",
+                "url": "https://github.com/321Team/fds-project-evidence/pull/2#pullrequestreview-5137001016",
+                "user": "supreme33-kr"
+              },
+              {
+                "commit_id": "e2ea2d676d7c8adafeebf9fdea6f5d5c9907d22a",
+                "id": 5137029923,
+                "state": "COMMENTED",
+                "submitted_at": "2026-09-08T03:33:01Z",
+                "url": "https://github.com/321Team/fds-project-evidence/pull/2#pullrequestreview-5137029923",
+                "user": "GWONUK"
+              }
+            ],
+            "updated_at": "2026-09-09T03:44:16Z",
+            "url": "https://github.com/321Team/fds-project-evidence/pull/2"
+          }
+        ]
+      },
+      {
+        "repository": "321Team/infra-ansible",
+        "default_branch": "main",
+        "default_head": "5cbf3b657014b32a20cb5816d90d3ea5fe4951ab",
+        "default_head_commit_at": "2026-09-09T05:43:26Z",
+        "comments_since_previous": [],
+        "review_comments_since_previous": [],
+        "pull_requests": [
+          {
+            "commits": [
+              {
+                "date": "2026-09-11T03:52:56Z",
+                "sha": "4210f40fdf54b9180e01cb157c84fa389ab81fa9"
+              }
+            ],
+            "head": "4210f40fdf54b9180e01cb157c84fa389ab81fa9",
+            "merge_commit_sha": "70b00f7752f62ebf8276373ee846a21229591a0e",
+            "merged_at": null,
+            "pr": 11,
+            "repository": "321Team/infra-ansible",
+            "reviews": [],
+            "updated_at": "2026-09-11T05:26:33Z",
+            "url": "https://github.com/321Team/infra-ansible/pull/11"
+          },
+          {
+            "commits": [
+              {
+                "date": "2026-09-04T07:33:33Z",
+                "sha": "bfc29ac18201b631656bafbe72370eadd3ed9639"
+              },
+              {
+                "date": "2026-09-04T07:42:40Z",
+                "sha": "17e587fabdab71e1e0161907146d97d113af9dc9"
+              },
+              {
+                "date": "2026-09-04T07:59:05Z",
+                "sha": "3ebb8fc80d097a347ac5ad6e39a4bf10c631bd14"
+              },
+              {
+                "date": "2026-09-04T08:49:20Z",
+                "sha": "12412cd6beae7039de74be16258b8fb20c5d64b2"
+              },
+              {
+                "date": "2026-09-04T09:47:11Z",
+                "sha": "507d8882a04f53640b07251bcc234b7d6ee81c09"
+              }
+            ],
+            "head": "507d8882a04f53640b07251bcc234b7d6ee81c09",
+            "merge_commit_sha": "4f9bdb7c08704eebb3d1b294751e51b0721b6af4",
+            "merged_at": "2026-09-07T06:02:55Z",
+            "pr": 1,
+            "repository": "321Team/infra-ansible",
+            "reviews": [
+              {
+                "commit_id": "507d8882a04f53640b07251bcc234b7d6ee81c09",
+                "id": 5127492686,
+                "state": "APPROVED",
+                "submitted_at": "2026-09-07T02:13:58Z",
+                "url": "https://github.com/321Team/infra-ansible/pull/1#pullrequestreview-5127492686",
+                "user": "hayeounglee"
+              }
+            ],
+            "updated_at": "2026-09-07T06:04:16Z",
+            "url": "https://github.com/321Team/infra-ansible/pull/1"
+          },
+          {
+            "commits": [
+              {
+                "date": "2026-09-07T01:19:50Z",
+                "sha": "d9d2ebdfd1715db5e36bfe4178d9718cf514d0e2"
+              }
+            ],
+            "head": "d9d2ebdfd1715db5e36bfe4178d9718cf514d0e2",
+            "merge_commit_sha": "24db8953cbd1ae21701171f0772e183602be0ee1",
+            "merged_at": null,
+            "pr": 2,
+            "repository": "321Team/infra-ansible",
+            "reviews": [],
+            "updated_at": "2026-09-07T02:59:20Z",
+            "url": "https://github.com/321Team/infra-ansible/pull/2"
+          },
+          {
+            "commits": [
+              {
+                "date": "2026-09-07T07:18:46Z",
+                "sha": "d6caa02c4947d712ba76d20e03fbc85cebf05098"
+              },
+              {
+                "date": "2026-09-07T07:28:42Z",
+                "sha": "2b9554d06b5d5a7741a511ce051092bdfd0d2d87"
+              },
+              {
+                "date": "2026-09-08T10:27:22Z",
+                "sha": "e1671bd8fbea887d61b57a96dcafe77235f7571b"
+              },
+              {
+                "date": "2026-09-08T10:42:24Z",
+                "sha": "6780c60d7233150a018d52e8eb9bdd01a39a78c2"
+              },
+              {
+                "date": "2026-09-08T10:54:42Z",
+                "sha": "d34954e4f75f845d938478e164c4811d4bdcad74"
+              },
+              {
+                "date": "2026-09-09T00:23:19Z",
+                "sha": "22e62aec38028e3344c4ee5186de6f80ce6b0bdc"
+              },
+              {
+                "date": "2026-09-09T00:43:16Z",
+                "sha": "b18e2d042b9685a930d4ba8e4b2e94cd87ffdf3c"
+              },
+              {
+                "date": "2026-09-09T03:03:46Z",
+                "sha": "ef98fef209794c4288ba5ec3a193bcefb1811844"
+              },
+              {
+                "date": "2026-09-09T03:28:50Z",
+                "sha": "84e517094574e9cd187625ec38e46a98d891fe37"
+              },
+              {
+                "date": "2026-09-09T04:57:53Z",
+                "sha": "e6c65d6c04615b17bd9be950d572f96abe351027"
+              }
+            ],
+            "head": "e6c65d6c04615b17bd9be950d572f96abe351027",
+            "merge_commit_sha": "5cbf3b657014b32a20cb5816d90d3ea5fe4951ab",
+            "merged_at": "2026-09-09T05:43:26Z",
+            "pr": 3,
+            "repository": "321Team/infra-ansible",
+            "reviews": [
+              {
+                "commit_id": "2b9554d06b5d5a7741a511ce051092bdfd0d2d87",
+                "id": 5129483335,
+                "state": "CHANGES_REQUESTED",
+                "submitted_at": "2026-09-07T08:04:05Z",
+                "url": "https://github.com/321Team/infra-ansible/pull/3#pullrequestreview-5129483335",
+                "user": "GWONUK"
+              },
+              {
+                "commit_id": "d34954e4f75f845d938478e164c4811d4bdcad74",
+                "id": 5143456775,
+                "state": "CHANGES_REQUESTED",
+                "submitted_at": "2026-09-08T15:05:28Z",
+                "url": "https://github.com/321Team/infra-ansible/pull/3#pullrequestreview-5143456775",
+                "user": "GWONUK"
+              },
+              {
+                "commit_id": "22e62aec38028e3344c4ee5186de6f80ce6b0bdc",
+                "id": 5148440444,
+                "state": "CHANGES_REQUESTED",
+                "submitted_at": "2026-09-09T00:31:10Z",
+                "url": "https://github.com/321Team/infra-ansible/pull/3#pullrequestreview-5148440444",
+                "user": "GWONUK"
+              },
+              {
+                "commit_id": "22e62aec38028e3344c4ee5186de6f80ce6b0bdc",
+                "id": 5148441471,
+                "state": "COMMENTED",
+                "submitted_at": "2026-09-09T00:31:22Z",
+                "url": "https://github.com/321Team/infra-ansible/pull/3#pullrequestreview-5148441471",
+                "user": "GWONUK"
+              },
+              {
+                "commit_id": "b18e2d042b9685a930d4ba8e4b2e94cd87ffdf3c",
+                "id": 5148660471,
+                "state": "CHANGES_REQUESTED",
+                "submitted_at": "2026-09-09T01:11:56Z",
+                "url": "https://github.com/321Team/infra-ansible/pull/3#pullrequestreview-5148660471",
+                "user": "GWONUK"
+              },
+              {
+                "commit_id": "b18e2d042b9685a930d4ba8e4b2e94cd87ffdf3c",
+                "id": 5148661619,
+                "state": "COMMENTED",
+                "submitted_at": "2026-09-09T01:12:08Z",
+                "url": "https://github.com/321Team/infra-ansible/pull/3#pullrequestreview-5148661619",
+                "user": "GWONUK"
+              },
+              {
+                "commit_id": "ef98fef209794c4288ba5ec3a193bcefb1811844",
+                "id": 5149343393,
+                "state": "CHANGES_REQUESTED",
+                "submitted_at": "2026-09-09T03:13:27Z",
+                "url": "https://github.com/321Team/infra-ansible/pull/3#pullrequestreview-5149343393",
+                "user": "GWONUK"
+              },
+              {
+                "commit_id": "ef98fef209794c4288ba5ec3a193bcefb1811844",
+                "id": 5149348836,
+                "state": "COMMENTED",
+                "submitted_at": "2026-09-09T03:14:21Z",
+                "url": "https://github.com/321Team/infra-ansible/pull/3#pullrequestreview-5149348836",
+                "user": "GWONUK"
+              },
+              {
+                "commit_id": "84e517094574e9cd187625ec38e46a98d891fe37",
+                "id": 5149487758,
+                "state": "CHANGES_REQUESTED",
+                "submitted_at": "2026-09-09T03:40:40Z",
+                "url": "https://github.com/321Team/infra-ansible/pull/3#pullrequestreview-5149487758",
+                "user": "GWONUK"
+              },
+              {
+                "commit_id": "84e517094574e9cd187625ec38e46a98d891fe37",
+                "id": 5149492074,
+                "state": "COMMENTED",
+                "submitted_at": "2026-09-09T03:41:34Z",
+                "url": "https://github.com/321Team/infra-ansible/pull/3#pullrequestreview-5149492074",
+                "user": "GWONUK"
+              },
+              {
+                "commit_id": "84e517094574e9cd187625ec38e46a98d891fe37",
+                "id": 5149574230,
+                "state": "COMMENTED",
+                "submitted_at": "2026-09-09T03:58:44Z",
+                "url": "https://github.com/321Team/infra-ansible/pull/3#pullrequestreview-5149574230",
+                "user": "GWONUK"
+              },
+              {
+                "commit_id": "e6c65d6c04615b17bd9be950d572f96abe351027",
+                "id": 5150001943,
+                "state": "APPROVED",
+                "submitted_at": "2026-09-09T05:10:28Z",
+                "url": "https://github.com/321Team/infra-ansible/pull/3#pullrequestreview-5150001943",
+                "user": "GWONUK"
+              },
+              {
+                "commit_id": "e6c65d6c04615b17bd9be950d572f96abe351027",
+                "id": 5150025868,
+                "state": "COMMENTED",
+                "submitted_at": "2026-09-09T05:14:17Z",
+                "url": "https://github.com/321Team/infra-ansible/pull/3#pullrequestreview-5150025868",
+                "user": "GWONUK"
+              }
+            ],
+            "updated_at": "2026-09-09T09:18:47Z",
+            "url": "https://github.com/321Team/infra-ansible/pull/3"
+          },
+          {
+            "commits": [
+              {
+                "date": "2026-09-07T09:38:49Z",
+                "sha": "5a2c3786f6af9f107200654aa12c92c3b09700f0"
+              }
+            ],
+            "head": "5a2c3786f6af9f107200654aa12c92c3b09700f0",
+            "merge_commit_sha": "3a02dc8934adb1f80df48ec6763689c401a1e8d6",
+            "merged_at": "2026-09-08T07:46:14Z",
+            "pr": 4,
+            "repository": "321Team/infra-ansible",
+            "reviews": [
+              {
+                "commit_id": "5a2c3786f6af9f107200654aa12c92c3b09700f0",
+                "id": 5138096865,
+                "state": "COMMENTED",
+                "submitted_at": "2026-09-08T06:20:30Z",
+                "url": "https://github.com/321Team/infra-ansible/pull/4#pullrequestreview-5138096865",
+                "user": "supreme33-kr"
+              },
+              {
+                "commit_id": "5a2c3786f6af9f107200654aa12c92c3b09700f0",
+                "id": 5138764829,
+                "state": "APPROVED",
+                "submitted_at": "2026-09-08T07:42:21Z",
+                "url": "https://github.com/321Team/infra-ansible/pull/4#pullrequestreview-5138764829",
+                "user": "supreme33-kr"
+              }
+            ],
+            "updated_at": "2026-09-08T08:21:27Z",
+            "url": "https://github.com/321Team/infra-ansible/pull/4"
+          }
+        ]
+      },
+      {
+        "repository": "321Team/infra-cicd",
+        "default_branch": "main",
+        "default_head": "be92fd00b269ff7d7abc124bb17f6d3e4c007851",
+        "default_head_commit_at": "2026-09-09T09:52:21Z",
+        "comments_since_previous": [],
+        "review_comments_since_previous": [],
+        "pull_requests": [
+          {
+            "commits": [
+              {
+                "date": "2026-09-11T03:55:33Z",
+                "sha": "796e77b072d3e5b7c4888514d8ece6416f1c703f"
+              }
+            ],
+            "head": "796e77b072d3e5b7c4888514d8ece6416f1c703f",
+            "merge_commit_sha": "d3e1152750ce26b180b0590694a9bd7a262110b2",
+            "merged_at": null,
+            "pr": 4,
+            "repository": "321Team/infra-cicd",
+            "reviews": [],
+            "updated_at": "2026-09-11T05:26:59Z",
+            "url": "https://github.com/321Team/infra-cicd/pull/4"
+          },
+          {
+            "commits": [
+              {
+                "date": "2026-09-09T05:46:57Z",
+                "sha": "2b534a94a2644f54f6a88d4cf3ac1f44bbf93226"
+              },
+              {
+                "date": "2026-09-09T07:07:39Z",
+                "sha": "790105e390c529ee2fd50b23e709efe160a059c6"
+              },
+              {
+                "date": "2026-09-09T07:41:56Z",
+                "sha": "6eb79a30e046ae4ea9113c0720d609b30e906fc0"
+              },
+              {
+                "date": "2026-09-09T08:44:05Z",
+                "sha": "c04a672110e3f2b1df11db6e3bb2d496eadc4c44"
+              },
+              {
+                "date": "2026-09-09T08:56:32Z",
+                "sha": "009dd4530e10aa1427471df1bad88e3c77e75aa7"
+              },
+              {
+                "date": "2026-09-09T12:26:34Z",
+                "sha": "47d87b3b5d99db5205a2c1141f172d69d96b1c8c"
+              },
+              {
+                "date": "2026-09-10T07:45:49Z",
+                "sha": "baeda8850cf10b916ab2fe0b64ae45864d75e8c2"
+              },
+              {
+                "date": "2026-09-10T10:34:34Z",
+                "sha": "3a1a9a8d774eca2917ea62bbe184fea0e11724b2"
+              },
+              {
+                "date": "2026-09-10T10:51:52Z",
+                "sha": "5f575fc8bfbd68d29fc3995fe68bceb87f1b194b"
+              }
+            ],
+            "head": "5f575fc8bfbd68d29fc3995fe68bceb87f1b194b",
+            "merge_commit_sha": "6f3d40abbfa5016f84420db68012f27f7876cad2",
+            "merged_at": null,
+            "pr": 2,
+            "repository": "321Team/infra-cicd",
+            "reviews": [],
+            "updated_at": "2026-09-10T10:54:47Z",
+            "url": "https://github.com/321Team/infra-cicd/pull/2"
+          },
+          {
+            "commits": [
+              {
+                "date": "2026-09-09T05:16:10Z",
+                "sha": "7cdc9ca0a8af7eb4bc8696cc795e93ec451aea35"
+              },
+              {
+                "date": "2026-09-09T09:12:06Z",
+                "sha": "081b3dd947bbf04fbafe00f15d7cfdba25f3c0d1"
+              },
+              {
+                "date": "2026-09-09T09:16:07Z",
+                "sha": "98bb4413a076169105de45fe2be2b9d3392190ff"
+              }
+            ],
+            "head": "98bb4413a076169105de45fe2be2b9d3392190ff",
+            "merge_commit_sha": "be92fd00b269ff7d7abc124bb17f6d3e4c007851",
+            "merged_at": "2026-09-09T09:52:22Z",
+            "pr": 1,
+            "repository": "321Team/infra-cicd",
+            "reviews": [
+              {
+                "commit_id": "98bb4413a076169105de45fe2be2b9d3392190ff",
+                "id": 5152546386,
+                "state": "APPROVED",
+                "submitted_at": "2026-09-09T09:44:45Z",
+                "url": "https://github.com/321Team/infra-cicd/pull/1#pullrequestreview-5152546386",
+                "user": "hayeounglee"
+              }
+            ],
+            "updated_at": "2026-09-09T09:52:22Z",
+            "url": "https://github.com/321Team/infra-cicd/pull/1"
+          },
+          {
+            "commits": [
+              {
+                "date": "2026-09-10T09:14:58Z",
+                "sha": "1dfc01c579c3b7bebc60027a0811a58e1d2595d8"
+              },
+              {
+                "date": "2026-09-10T10:37:01Z",
+                "sha": "a3fdf9a2e121bfbf9a6a02a6b1c3ec8a004e12ba"
+              },
+              {
+                "date": "2026-09-10T10:53:44Z",
+                "sha": "9775f3ff61a04be73e179cb0808e5bd844fe0193"
+              }
+            ],
+            "head": "9775f3ff61a04be73e179cb0808e5bd844fe0193",
+            "merge_commit_sha": "8e5b0f0a622cfc2c56ed208c029fcdecd34f2d03",
+            "merged_at": null,
+            "pr": 3,
+            "repository": "321Team/infra-cicd",
+            "reviews": [],
+            "updated_at": "2026-09-10T10:55:01Z",
+            "url": "https://github.com/321Team/infra-cicd/pull/3"
+          }
+        ]
+      },
+      {
+        "repository": "321Team/infra-db",
+        "default_branch": "main",
+        "default_head": "6a1925588e610de07a7a401a55ad9f1dc5f27a2c",
+        "default_head_commit_at": "2026-09-08T08:34:17Z",
+        "comments_since_previous": [],
+        "review_comments_since_previous": [],
+        "pull_requests": []
+      },
+      {
+        "repository": "321Team/infra-harbor-trivy",
+        "default_branch": "main",
+        "default_head": "65e717ff82547cbcd45c2065af484f343c1a516f",
+        "default_head_commit_at": "2026-09-09T05:08:33Z",
+        "comments_since_previous": [],
+        "review_comments_since_previous": [],
+        "pull_requests": [
+          {
+            "commits": [
+              {
+                "date": "2026-09-09T03:20:37Z",
+                "sha": "94f9583765ca171938d15aecc3a6bff667164c36"
+              }
+            ],
+            "head": "94f9583765ca171938d15aecc3a6bff667164c36",
+            "merge_commit_sha": "65e717ff82547cbcd45c2065af484f343c1a516f",
+            "merged_at": "2026-09-09T05:08:34Z",
+            "pr": 1,
+            "repository": "321Team/infra-harbor-trivy",
+            "reviews": [
+              {
+                "commit_id": "94f9583765ca171938d15aecc3a6bff667164c36",
+                "id": 5149960057,
+                "state": "APPROVED",
+                "submitted_at": "2026-09-09T05:03:11Z",
+                "url": "https://github.com/321Team/infra-harbor-trivy/pull/1#pullrequestreview-5149960057",
+                "user": "hayeounglee"
+              }
+            ],
+            "updated_at": "2026-09-09T05:08:34Z",
+            "url": "https://github.com/321Team/infra-harbor-trivy/pull/1"
+          }
+        ]
+      },
+      {
+        "repository": "321Team/infra-kubernetes",
+        "default_branch": "main",
+        "default_head": "7d44afc3afff4d322cb4dbeff4433d61e23e111a",
+        "default_head_commit_at": "2026-09-10T11:06:31Z",
+        "comments_since_previous": [
+          {
+            "id": 5632931284,
+            "url": "https://github.com/321Team/infra-kubernetes/issues/5#issuecomment-5632931284",
+            "updated_at": "2026-09-11T10:13:36Z"
+          }
+        ],
+        "review_comments_since_previous": [],
+        "pull_requests": [
+          {
+            "commits": [
+              {
+                "date": "2026-09-10T03:01:57Z",
+                "sha": "8975ca0c45dd9aee6d4930b16315223f86215e1d"
+              },
+              {
+                "date": "2026-09-10T03:33:13Z",
+                "sha": "0325ee798ef7bdc4e6dc582362043d899c1f3641"
+              },
+              {
+                "date": "2026-09-10T03:56:23Z",
+                "sha": "068661e076de02669170d3582f3d596d6e1a8eb3"
+              },
+              {
+                "date": "2026-09-10T09:24:24Z",
+                "sha": "afc246d2db041c68de5014972107484dad122558"
+              },
+              {
+                "date": "2026-09-10T10:23:42Z",
+                "sha": "097ddb56d87b229a9eb465f72ea9f55d16524c51"
+              }
+            ],
+            "head": "097ddb56d87b229a9eb465f72ea9f55d16524c51",
+            "merge_commit_sha": "25e04fd24e61bf8d4cf0a7f5ca0b86c5ad553c30",
+            "merged_at": null,
+            "pr": 2,
+            "repository": "321Team/infra-kubernetes",
+            "reviews": [],
+            "updated_at": "2026-09-10T11:27:32Z",
+            "url": "https://github.com/321Team/infra-kubernetes/pull/2"
+          },
+          {
+            "commits": [
+              {
+                "date": "2026-09-10T07:45:18Z",
+                "sha": "de9a3a30fd691ac30a0e03c4212c21300653e088"
+              },
+              {
+                "date": "2026-09-10T11:54:21Z",
+                "sha": "75d476edc33d6368fe4ab07e78fc51759e81a6fc"
+              }
+            ],
+            "head": "75d476edc33d6368fe4ab07e78fc51759e81a6fc",
+            "merge_commit_sha": "c98660284b5108b45b415d0c3f7c2a75eb2329c2",
+            "merged_at": null,
+            "pr": 4,
+            "repository": "321Team/infra-kubernetes",
+            "reviews": [],
+            "updated_at": "2026-09-10T11:56:55Z",
+            "url": "https://github.com/321Team/infra-kubernetes/pull/4"
+          },
+          {
+            "commits": [
+              {
+                "date": "2026-09-11T03:54:41Z",
+                "sha": "b80c9136880230a459ca80b6cda33c44e036900d"
+              }
+            ],
+            "head": "b80c9136880230a459ca80b6cda33c44e036900d",
+            "merge_commit_sha": "614c9cd1a23d3f94d28eff031fdd48a58f215a67",
+            "merged_at": null,
+            "pr": 6,
+            "repository": "321Team/infra-kubernetes",
+            "reviews": [],
+            "updated_at": "2026-09-11T05:26:46Z",
+            "url": "https://github.com/321Team/infra-kubernetes/pull/6"
+          },
+          {
+            "commits": [
+              {
+                "date": "2026-09-10T06:04:39Z",
+                "sha": "e83524b9097cee52e254a40fbe3db238eed801a9"
+              },
+              {
+                "date": "2026-09-10T06:21:42Z",
+                "sha": "3309866766236bbdbe20b9e2ae1d8fd6f9233bcd"
+              }
+            ],
+            "head": "3309866766236bbdbe20b9e2ae1d8fd6f9233bcd",
+            "merge_commit_sha": "7d44afc3afff4d322cb4dbeff4433d61e23e111a",
+            "merged_at": "2026-09-10T11:06:31Z",
+            "pr": 3,
+            "repository": "321Team/infra-kubernetes",
+            "reviews": [],
+            "updated_at": "2026-09-10T11:08:45Z",
+            "url": "https://github.com/321Team/infra-kubernetes/pull/3"
+          },
+          {
+            "commits": [
+              {
+                "date": "2026-09-09T12:55:59Z",
+                "sha": "e3c633aef64717d022832eeaa73dbabcae59bdb6"
+              }
+            ],
+            "head": "e3c633aef64717d022832eeaa73dbabcae59bdb6",
+            "merge_commit_sha": "08b32e738c55337782705def321c1751dfc32016",
+            "merged_at": "2026-09-10T09:04:51Z",
+            "pr": 1,
+            "repository": "321Team/infra-kubernetes",
+            "reviews": [
+              {
+                "commit_id": "e3c633aef64717d022832eeaa73dbabcae59bdb6",
+                "id": 5164766166,
+                "state": "APPROVED",
+                "submitted_at": "2026-09-10T08:33:34Z",
+                "url": "https://github.com/321Team/infra-kubernetes/pull/1#pullrequestreview-5164766166",
+                "user": "hayeounglee"
+              }
+            ],
+            "updated_at": "2026-09-10T09:27:39Z",
+            "url": "https://github.com/321Team/infra-kubernetes/pull/1"
+          }
+        ]
+      }
+    ],
+    "pagination": "all list pages consumed, every final page < 100",
+    "collection_errors": []
+  },
+  "controls": {
+    "operational_issues_modified": false,
+    "main_modified": false,
+    "existing_release_modified": false,
+    "automatic_merge_or_publish": false,
+    "final_head_review_required": "hayeounglee",
+    "previous_approvals_reused": false
+  }
+}
