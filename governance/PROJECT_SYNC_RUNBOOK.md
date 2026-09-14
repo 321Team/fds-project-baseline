@@ -68,7 +68,7 @@
 - SYNC_VERIFIED: 그 실행 시점 전체 대상 원본과 프로젝트 필드 재검증 성공.
 - STOP: 인증/형식/충돌/동시 수정/API 문제. 성공으로 해석하지 않는다.
 - remote_write_state=PARTIAL_OR_UNKNOWN: 요청된 쓰기의 일부 또는 전부가 적용됐을 수 있음.
-- Actions의 `project-1-sync-...` artifact에 plan/journal/result 보존(14일).
+- Actions의 `project-1-sync-...` artifact에 plan/journal/result 보존(7일, 현재 저장소 상한과 동일).
   본문 전체는 저장하지 않지만 Support/계획/상태가 포함되므로 저장소 접근 범위 내에서 취급한다.
 - 앱 생성 단계에서 실패하면 결과 파일이 없을 수 있다. 해당 Actions 단계 오류를 확인한다.
 - 자동 동기화 중지: `FDS_PROJECT_SYNC_ENABLED=false`. 진행 중인 실행은 Actions에서 별도 취소.
@@ -83,3 +83,24 @@
 - https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/automating-projects-using-actions
 - https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/using-the-built-in-automations
 - https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows
+
+## Actions 경고 2건 보완
+
+- `actions/checkout`과 `actions/upload-artifact`는 각각 공식 `v7.0.1`의 전체 Commit SHA로 고정한다.
+  두 고정 Commit의 `action.yml`에서 `runs.using: node24`를 확인했다.
+  `actions/create-github-app-token`의 기존 고정 SHA와 권한은 유지한다.
+- Upload Artifact의 `archive: true`를 명시해 기존 ZIP 형식과 Artifact 이름을 유지한다.
+  `retention-days: 7`로 현재 저장소 보관 상한과 맞춘다. 기존 Artifact의 만료일을 연장하지 않는다.
+- checkout은 `persist-credentials: false`를 유지한다. 이 워크플로는
+  `issues`·`schedule`·`workflow_dispatch`에서 main 코드만 실행하므로,
+  v7의 fork PR checkout 허용 옵션을 추가할 필요가 없다.
+- 로컬 구조 검증만으로 경고 해소를 확정하지 않는다. 독립 리뷰·병합 후
+  새 main에서 `check`를 실행해 `CHECK_READY`, Node.js 20 경고 없음,
+  보관기간 상한 경고 없음, 결과 ZIP 다운로드 및 7일 보관을 확인한다.
+  기존 실행 기록의 경고는 소급 삭제하지 않는다.
+
+공식 버전 근거:
+- https://github.com/actions/checkout/releases/tag/v7.0.1
+- https://github.com/actions/checkout/blob/3d3c42e5aac5ba805825da76410c181273ba90b1/action.yml
+- https://github.com/actions/upload-artifact/releases/tag/v7.0.1
+- https://github.com/actions/upload-artifact/blob/043fb46d1a93c77aae656e7c1c64a875d1fc6a0a/action.yml
