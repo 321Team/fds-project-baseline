@@ -1,0 +1,64 @@
+name: FDS Project 1 Sync
+
+on:
+  issues:
+    types: [opened, edited, labeled, unlabeled, assigned, unassigned, closed, reopened, milestoned, demilestoned, transferred, deleted]
+  schedule:
+    - cron: '23 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'check = read only; apply = sync Project 1 fields'
+        required: true
+        default: check
+        type: choice
+        options: [check, apply]
+
+permissions:
+  contents: read
+
+# Each run reconciles all current issues, so superseded pending events are covered.
+concurrency:
+  group: fds-project-1-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.repository == '321Team/fds-project-baseline' && github.ref == 'refs/heads/main' && (github.event_name == 'workflow_dispatch' || vars.FDS_PROJECT_SYNC_ENABLED == 'true')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4 resolved 2026-09-12
+        with:
+          persist-credentials: false
+      - name: Local contract tests
+        run: python3 -m unittest discover -s tests -p 'test_project_sync.py' -v
+      - name: Create narrowly scoped installation token
+        id: app
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3 resolved 2026-09-12
+        with:
+          client-id: ${{ vars.FDS_PROJECT_APP_CLIENT_ID }}
+          private-key: ${{ secrets.FDS_PROJECT_APP_PRIVATE_KEY }}
+          owner: 321Team
+          repositories: fds-project-baseline
+          permission-issues: read
+          permission-organization-projects: write
+      - name: Validate and synchronize
+        env:
+          GH_TOKEN: ${{ steps.app.outputs.token }}
+          SYNC_EVENT: ${{ github.event_name }}
+          SYNC_MODE: ${{ inputs.mode }}
+        run: |
+          if [ "$SYNC_EVENT" = 'workflow_dispatch' ] && [ "$SYNC_MODE" = 'check' ]; then
+            python3 scripts/project_sync/run.py
+          else
+            python3 scripts/project_sync/run.py --apply
+          fi
+      - name: Preserve result and partial-write journal
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: project-1-sync-${{ github.run_id }}-${{ github.run_attempt }}
+          path: project-sync-result.json
+          if-no-files-found: warn
+          retention-days: 14
