@@ -2,9 +2,11 @@ d0bed331a4b8fa4e85f49607be9401f00c42fb85176844524ead745d6abc04a8  audit/v3.1.19/
 6abc42c99c6aab1dd5b53754e13b414815c29cc2dae6fb982df6b7e2ed762e88  audit/v3.1.19/README.md
 375b1553f9d69fa1c98e233d9c2e77ad0d659c0d127a2ef16334bbdb78b0506c  audit/v3.1.19/intake/initial-snapshot.json
 63a11f19570f58e0b3bc41b51b6afe6cc82e906b4bd8e68a3843e1893a2e98ec  audit/v3.1.19/intake/p1-cicd-trivy-update-policy-20260916.md
+4bbbf1d39a1fdc5c71f22c6a860862fc9464435c741853af08e6276f8327b4e9  audit/v3.1.19/intake/p1-k8s-mon-lead-inputs-20260916.md
 4b37aa14ca71599fb5af8c0fd63205194716b58c4d0643ac125d8897a9a99741  audit/v3.1.19/intake/repository-sources.json
 372ff7b004a3cf3e1ce42b00b5c1f1e5c988799f7b715a31280ffbed9b5216d0  audit/v3.1.19/intake/updates/20260911T103150Z.json
 37ddeab903c45e844e1fa6645f07cb55b5b27ba48fc645e4aa2035d335f815e2  audit/v3.1.19/intake/updates/20260911T105810Z.json
 25b2b77e1bf533466e996c292458ec13b71b3caa4b410b83af99bb4663d8ec32  audit/v3.1.19/intake/updates/20260911T113447Z.json
 ff199a876733192e66551454dfed9c567db36568ff12f372b33b1f1e8325175b  audit/v3.1.19/intake/updates/20260916T033933Z.json
+8551dc285c5cb8e8807e895d0f09c162a157b6dba4ca8e75daa3aad7e093e7e6  audit/v3.1.19/intake/updates/20260916T123819Z.json
 780f4b3ea16c0badb36117439afea064b4130ef5812b171516a51d9253cf1e6f  releases/v3.1.19/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.19.md
