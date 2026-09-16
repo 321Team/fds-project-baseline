@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "target_version": "3.1.19",
+  "captured_at": "2026-09-16T21:32:04Z",
+  "previous_capture": "2026-09-16T21:08:14Z",
+  "parent_candidate_head": "2c6fd117c76f334f1aaef7fbcb3da56756ec8e41",
+  "collection_scope": "TARGETED_P1_CICD_CONFIG_RUNTIME_AND_OFFLINE_BASE_CHECK",
+  "status": "METADATA_COLLECTION_PASS_OFFLINE_BASE_CHECK_PASS",
+  "canonical_release": "3.1.18",
+  "source": "https://github.com/321Team/infra-cicd/issues/11",
+  "source_updated_at": "2026-09-16T21:31:46Z",
+  "submitted_evidence": [
+    {
+      "filename": "base-metadata.tar.gz",
+      "archive_bytes": 3167,
+      "archive_sha256": "902b84c21a77b8a2970d6fcabfd6886f20dd1d1312e1caf589477153e9f3bebf",
+      "external_checksum": "MATCH",
+      "internal_checksum": "ALL_MATCH",
+      "members": {
+        "SHA256SUMS": {
+          "sha256": "12f7122e668cfa8d517ea099ccea8583f919b7d8e92b28f5ce89e30b52b476ad",
+          "size": 235
+        },
+        "index.json": {
+          "sha256": "78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+          "size": 10373
+        },
+        "manifest.json": {
+          "sha256": "2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79",
+          "size": 1746
+        },
+        "result.json": {
+          "sha256": "68ae2ca56dc26635ff2b6cdf596f1749e96d2e23200036b7020dd8751fc0edbd",
+          "size": 2324
+        }
+      },
+      "source_type": "USER_SUBMITTED_RUNTIME_ARCHIVE",
+      "github_evidence_archive": "NOT_INGESTED"
+    },
+    {
+      "filename": "base-config.tar.gz",
+      "archive_bytes": 3263,
+      "archive_sha256": "5b70aa9316e42fc73b7eb1132005ce9cb67ff322c7019a673c4d1b1438c9e27a",
+      "external_checksum": "MATCH",
+      "internal_checksum": "ALL_MATCH",
+      "members": {
+        "SHA256SUMS": {
+          "sha256": "560e4816803460df5bbb514e188a1a781f63af7d317aa3cec5efbc85d0e93c75",
+          "size": 156
+        },
+        "config.json": {
+          "sha256": "ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad",
+          "size": 5664
+        },
+        "result.json": {
+          "sha256": "6e7d40da4b5f113a560d3549596d0fc2064c1823e3deec39388313557bbd7696",
+          "size": 2458
+        }
+      },
+      "source_type": "USER_SUBMITTED_RUNTIME_ARCHIVE",
+      "github_evidence_archive": "NOT_INGESTED"
+    }
+  ],
+  "config_runtime": {
+    "receipt": {
+      "BASE_MANIFEST_CHECK": "NOT_EXECUTED",
+      "COLLECTION": "PASS",
+      "DELIVERY_GATE": "NOT_VERIFIED",
+      "IMAGE_LAYERS": "NOT_DOWNLOADED",
+      "IMAGE_SCAN": "NOT_EXECUTED",
+      "NETWORK_ENFORCEMENT": "NOT_VERIFIED",
+      "NETWORK_POLICY": "NOT_MODIFIED",
+      "approval": "P1-CICD-OID03-20260917-02",
+      "collector_sha256": "b78e2cffdfdff3379563adcf419d60f373e680348f6957f48a77405681a5f4b4",
+      "config_bytes": 5664,
+      "config_digest": "sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad",
+      "expected_config_bytes": 5664,
+      "expected_config_digest": "sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad",
+      "finished_at": "2026-09-16T21:25:27.598890+00:00",
+      "owner": "이권욱",
+      "parent_archive_sha256": "902b84c21a77b8a2970d6fcabfd6886f20dd1d1312e1caf589477153e9f3bebf",
+      "reference": "https://github.com/321Team/infra-cicd/issues/11",
+      "requests": [
+        {
+          "host": "auth.docker.io",
+          "http_status": 200,
+          "path": "/token",
+          "started_at": "2026-09-16T21:25:26.566777+00:00"
+        },
+        {
+          "host": "registry-1.docker.io",
+          "http_status": 307,
+          "path": "/v2/library/python/blobs/sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad",
+          "redirect_host": "production.cloudfront.docker.com",
+          "started_at": "2026-09-16T21:25:26.839658+00:00"
+        },
+        {
+          "finished_at": "2026-09-16T21:25:27.598726+00:00",
+          "host": "production.cloudfront.docker.com",
+          "http_status": 200,
+          "path": "[CONFIG_CDN_URL_REDACTED]",
+          "sha256": "sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad",
+          "size": 5664,
+          "started_at": "2026-09-16T21:25:27.466541+00:00"
+        }
+      ],
+      "reused_index_digest": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+      "reused_manifest_digest": "sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79",
+      "schema": "P1-CICD-base-config-1",
+      "started_at": "2026-09-16T21:25:26.561117+00:00",
+      "window": {
+        "approval": "P1-CICD-OID03-20260917-02",
+        "cdn": "production.cloudfront.docker.com",
+        "config_digest": "sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad",
+        "expires_epoch": 1789594826,
+        "owner": "이권욱",
+        "parent_archive_sha256": "902b84c21a77b8a2970d6fcabfd6886f20dd1d1312e1caf589477153e9f3bebf",
+        "reference": "https://github.com/321Team/infra-cicd/issues/11",
+        "started_epoch": 1789593926
+      }
+    },
+    "evidence_checks": "PASS",
+    "window_start_kst": "2026-09-17T06:25:26+09:00",
+    "window_expiry_kst": "2026-09-17T06:40:26+09:00",
+    "finished_kst": "2026-09-17T06:25:27.598890+09:00",
+    "duration_seconds": 1.037773,
+    "collector_commit": "8c3a4d32a799ede50cded2af50a571b3371374cf",
+    "collector_source_binding": "MATCH",
+    "original_result_unchanged": true,
+    "scope": "PINNED_CONFIG_ONLY"
+  },
+  "offline_verification": {
+    "BASE_MANIFEST_CHECK": "PASS",
+    "DELIVERY_GATE": "NOT_VERIFIED",
+    "IMAGE_SCAN": "NOT_EXECUTED",
+    "LAYER_BLOBS": "NOT_VERIFIED",
+    "NETWORK": "NOT_EXECUTED",
+    "REGISTRY_PROVENANCE": "NOT_VERIFIED",
+    "SUPPLY_APPROVAL": "NOT_VERIFIED",
+    "base_reference_candidate": "docker.io/library/python@sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79",
+    "config_digest": "sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad",
+    "expected_root_digest": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+    "index_digest": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+    "layer_count": 4,
+    "manifest_digest": "sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79",
+    "manifest_media_type": "application/vnd.oci.image.manifest.v1+json",
+    "platform": "linux/amd64",
+    "raw_sizes": {
+      "config": 5664,
+      "index": 10373,
+      "manifest": 1746
+    },
+    "repository_label": "docker.io/library/python",
+    "verification_location": "CODEX_OFFLINE",
+    "verified_at": "2026-09-16T21:30:32.244493+00:00",
+    "verifier_commit": "fb1493b4ef19686a2d050a5f14daad27e7cb3362",
+    "verifier_sha256": "5375b2dead68122b707096adaca9331c4b0ce9d67425841f58af4b377c4f560f",
+    "helper_sha256": "8001c623a96acb3535e752843dedb31d2dc8f4ec17218ba5746c2bb38773abd9",
+    "verifier_and_helper_remote_byte_comparison": "MATCH",
+    "input_archives": [
+      "902b84c21a77b8a2970d6fcabfd6886f20dd1d1312e1caf589477153e9f3bebf",
+      "5b70aa9316e42fc73b7eb1132005ce9cb67ff322c7019a673c4d1b1438c9e27a"
+    ]
+  },
+  "app_handoff": {
+    "repository": "supreme33-kr/fds-msa",
+    "observed_main_sha": "254b82231f8af79a06419b581174647bbccbe2bc",
+    "paths": [
+      "transaction-api/Dockerfile",
+      "fds-engine/Dockerfile"
+    ],
+    "observed_from": "python:3.12-slim",
+    "proposed_from": "docker.io/library/python@sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79",
+    "classification": "VERIFIED_METADATA_CANDIDATE_PENDING_APP_PIN_AND_SOURCE_APPROVAL",
+    "code_modified": false,
+    "complete_layer_supply": "NOT_APPROVED_NOT_DOWNLOADED",
+    "python_runtime_test_dependencies": "SUPPLY_PENDING",
+    "harbor_relabel_without_verification": false,
+    "final_source_approval": "PENDING"
+  },
+  "reviews": [
+    {
+      "pr": 16,
+      "repository": "321Team/infra-cicd",
+      "head": "fb1493b4ef19686a2d050a5f14daad27e7cb3362",
+      "requested_reviewer": "supreme33-kr",
+      "submitted_reviews": 0,
+      "review": "PENDING",
+      "merge": "NOT_MERGED"
+    },
+    {
+      "pr": 17,
+      "repository": "321Team/infra-cicd",
+      "head": "8c3a4d32a799ede50cded2af50a571b3371374cf",
+      "requested_reviewer": "supreme33-kr",
+      "submitted_reviews": 0,
+      "review": "PENDING",
+      "merge": "NOT_MERGED"
+    }
+  ],
+  "unchanged": {
+    "runtime_ac": "1/10",
+    "delivery_gate": "NOT_VERIFIED",
+    "image_scan": "NOT_EXECUTED",
+    "network_enforcement": "NOT_VERIFIED",
+    "v19_publication": "NOT_READY"
+  },
+  "resolved": [
+    "Missing pinned config metadata bytes",
+    "Index-to-manifest-to-config raw digest/size/platform profile validation"
+  ],
+  "remaining": [
+    "App owner applies reviewed FROM pin to both Dockerfiles and explicitly approves final 40-character Source SHA",
+    "Actual layer and Python dependency supply via approved pre-import or separately defined destination/owner/expiry",
+    "Independent latest-head review and approved internal Runner Test-Build-Scan"
+  ],
+  "collection_limits": [
+    "The first partial collection FAIL and collector BASE_MANIFEST_CHECK=NOT_EXECUTED remain original historical receipts",
+    "The later BASE_MANIFEST_CHECK PASS is Codex offline processing of real submitted metadata, not an internal Runner app test",
+    "Layer descriptor and diff_id format checks do not verify layer bytes",
+    "Submitted receipts and hashes are not remote attestation; raw Authorization headers were not captured",
+    "Client expiry does not demonstrate firewall policy enforcement or removal",
+    "The metadata-only 900-second authorization does not authorize image layers, PyPI, build, push or deploy",
+    "Other tickets and PRs not exhaustively recollected"
+  ]
+}
