@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "target_version": "3.1.19",
+  "captured_at": "2026-09-16T20:46:04Z",
+  "previous_capture": "2026-09-16T20:09:49Z",
+  "parent_candidate_head": "910b157b4b819a8dfef0d5ad00a9ef16c7c7318a",
+  "collection_scope": "TARGETED_P1_CICD_BASE_METADATA_RUNTIME_RECEIPT_ONLY",
+  "status": "PARTIAL_COLLECTION_CONFIG_REDIRECT_BLOCKED",
+  "canonical_release": "3.1.18",
+  "source": "https://github.com/321Team/infra-cicd/issues/11",
+  "source_updated_at": "2026-09-16T20:45:38Z",
+  "evidence": {
+    "filename": "base-metadata.tar.gz",
+    "archive_bytes": 3167,
+    "archive_sha256": "902b84c21a77b8a2970d6fcabfd6886f20dd1d1312e1caf589477153e9f3bebf",
+    "external_checksum": "MATCH",
+    "internal_checksums": "MATCH_ALL_3",
+    "members": [
+      "index.json",
+      "manifest.json",
+      "result.json",
+      "SHA256SUMS"
+    ],
+    "result_sha256": "68ae2ca56dc26635ff2b6cdf596f1749e96d2e23200036b7020dd8751fc0edbd",
+    "collector_commit": "1fb5ef3fdba0aa18aef16656c1ee736aaca3055b",
+    "collector_sha256": "5356bd4a0d9b924961e0b151b5921fd49d972a1e29d97f66fc16768a611ee187",
+    "source_binding": "MATCH",
+    "window_start": "2026-09-17T05:39:10+09:00",
+    "window_expiry": "2026-09-17T06:39:10+09:00",
+    "finished_at": "2026-09-17T05:39:13.254649+09:00",
+    "source_type": "USER_SUBMITTED_RUNTIME_ARCHIVE",
+    "github_evidence_archive": "NOT_INGESTED"
+  },
+  "observed": {
+    "auth_http": 200,
+    "index_http": 200,
+    "index_digest": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+    "index_bytes": 10373,
+    "manifest_http": 200,
+    "manifest_digest": "sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79",
+    "manifest_bytes": 1746,
+    "platform": {
+      "architecture": "amd64",
+      "os": "linux"
+    },
+    "partial_index_manifest_binding": "PASS",
+    "layer_descriptors": 4,
+    "layer_bytes": "NOT_DOWNLOADED",
+    "config_http": 307,
+    "redirect_host": "production.cloudfront.docker.com",
+    "redirect_followed": false,
+    "config_expected_digest": "sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad",
+    "config_expected_bytes": 5664,
+    "config_received": false,
+    "collector_status": "FAIL",
+    "error_code": "REDIRECT_STOPPED",
+    "full_base_manifest_check": "INCOMPLETE_CONFIG_MISSING"
+  },
+  "proposed_next_scope": {
+    "classification": "PENDING_USER_ADOPTION",
+    "owner": "이권욱",
+    "source": "cicd-runner01 / 10.250.10.20",
+    "additional_destination": "production.cloudfront.docker.com:443",
+    "resource": "only the observed config digest above",
+    "maximum_seconds": 900,
+    "starts_at": "FIRST_ACTUAL_COMPLETION_EXECUTION_AFTER_ADOPTION",
+    "actual_start": null,
+    "actual_expiry": null,
+    "old_window_extension": false,
+    "redirect_hops": 1,
+    "registry_bearer_forwarding": false,
+    "further_redirects": "STOP",
+    "layer_pypi_build_push_deploy": "EXCLUDED",
+    "network_policy_changes": "NONE",
+    "existing_index_manifest": "REUSE",
+    "official_host_reference": "https://docs.docker.com/desktop/setup/allow-list/"
+  },
+  "unchanged": {
+    "runtime_ac": "1/10",
+    "delivery_gate": "NOT_VERIFIED",
+    "code_review": "PENDING",
+    "code_merge": "NOT_MERGED",
+    "v19_publication": "NOT_READY"
+  },
+  "collection_limits": [
+    "Hashes demonstrate submitted-byte consistency, not remote attestation",
+    "No full base PASS or final application Source/pin approval",
+    "Official Docker host purpose does not grant project access",
+    "Candidate code and acquired bytes do not verify network enforcement",
+    "Other ticket/PR states not exhaustively recollected"
+  ]
+}
