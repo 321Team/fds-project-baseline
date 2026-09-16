@@ -68,3 +68,5 @@
 [수집 기록](intake/updates/20260916T135603Z.json) · [수용 범위와 운영 준비](intake/icr-cni-simplification-20260916.md). PR #11 추가 도구/VM 시험 보류, 운영 최소 보완안과 도구 qualification 분리, 증적 재사용·규칙/복구/인수/영수증 호환성 일괄 검토를 APPROVED_INPUT_WORKFLOW_ONLY로 수집했다.
 
 검증 생략·광역 cali/Pod 허용·CP1 인수·CP2/CP3 실행 예외는 PENDING_DECISION이다. Worker 준비는 병행하며 HEP/GNP 실제 적용은 기존 Lead 입력대로 6/6 Ready 이후다. v18·AC·Runtime·병합/발행 상태는 유지한다. 대상 한정 수집이며 전수 상태 갱신이 아니다.
+
+2026-09-16 후속: [같은 수집 문서의 인수 계약 준비](intake/icr-cni-simplification-20260916.md)에 배포 양식의 구 생산자 pin 수정, 관련 61/61 STATIC/MOCK PASS와 새 운영 상태/소비자 연계 명세를 기록했다. 실행 코드·policy·Runtime 인수는 변경하지 않았다. 운영 범위 결정이 남아 있으며 새 VM 반복 시험·인수 예외를 승인하지 않는다.
