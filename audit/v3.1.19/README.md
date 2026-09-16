@@ -62,3 +62,9 @@
 592개 파일 참조 0·바이너리 해시 일치의 보완 증적을 검증했지만 외부 자동화 부재는 UNKNOWN이다. 코드 독립 리뷰·새 DB 경로 Runtime·실제 이미지 Delivery Gate는 잔여이며 기존 AC·역할·일정·진척도를 상향하지 않는다.
 
 이번은 P1-CICD 입력에 한정한 수집이다. 기존 9/11의 티켓 수·다른 저장소 상태를 현재 전수 조사 결과로 재사용하지 않는다. v19 전체 묶음 NOT BUILT / 발행 NOT READY / 운영 정본 v3.1.18 유지.
+
+## 2026-09-16 ICR/CNI 범위 단순화 — 사용자 채택
+
+[수집 기록](intake/updates/20260916T135603Z.json) · [수용 범위와 운영 준비](intake/icr-cni-simplification-20260916.md). PR #11 추가 도구/VM 시험 보류, 운영 최소 보완안과 도구 qualification 분리, 증적 재사용·규칙/복구/인수/영수증 호환성 일괄 검토를 APPROVED_INPUT_WORKFLOW_ONLY로 수집했다.
+
+검증 생략·광역 cali/Pod 허용·CP1 인수·CP2/CP3 실행 예외는 PENDING_DECISION이다. Worker 준비는 병행하며 HEP/GNP 실제 적용은 기존 Lead 입력대로 6/6 Ready 이후다. v18·AC·Runtime·병합/발행 상태는 유지한다. 대상 한정 수집이며 전수 상태 갱신이 아니다.

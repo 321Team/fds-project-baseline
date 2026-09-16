@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "target_version": "3.1.19",
+  "collected_at": "2026-09-16T13:56:03Z",
+  "parent_candidate_head": "c66b077c41cc2f0ffd71d5c294a8ff9319f239e4",
+  "collection_scope": "TARGETED_ICR_CNI_WORKFLOW_SIMPLIFICATION",
+  "canonical_release": "3.1.18",
+  "canonical_commit": "72599ae49342b0fb8dbd3d8ee60314afb9f907bb",
+  "source_user_instruction": {
+    "text": "정본 및 후보 근거해서 수용 할 수 있는 부분을 적용하고 착수",
+    "origin": "CURRENT_USER_CONVERSATION",
+    "external_url": null,
+    "scope": "CANONICAL_AND_APPROVED_INPUT_ALIGNED_WORKFLOW_AND_PREPARATION"
+  },
+  "sources": [
+    {
+      "url": "https://github.com/321Team/infra-kubernetes/pull/11#issuecomment-5698266772",
+      "id": 5698266772,
+      "author": "hayeounglee",
+      "updated_at": "2026-09-16T13:38:37Z",
+      "classification": "SCHEDULE_AND_EXCEPTION_REQUEST_NOT_APPROVAL"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/10#issuecomment-5697547621",
+      "id": 5697547621,
+      "classification": "LEAD_APPROVED_INPUT_RUNTIME_SEPARATE"
+    },
+    {
+      "url": "https://github.com/321Team/infra-kubernetes/blob/447a26781a402bae12ebab820b8625e00e6c1dcc/docs/change/ICR-D-NET-01-01/CNI_SCOPE_SIMPLIFICATION_20260916.md",
+      "commit": "447a26781a402bae12ebab820b8625e00e6c1dcc",
+      "classification": "USER_ADOPTED_WORKFLOW_AND_PREPARATION_IMPLEMENTED"
+    }
+  ],
+  "changes": [
+    {
+      "record_id": "ICR-D-NET-01-01",
+      "classification": "APPROVED_INPUT_WORKFLOW_ONLY",
+      "adopted": [
+        "pause PR11 generic and daemon expansion plus additional lab runs/packages",
+        "preserve R5 evidence and R6 code",
+        "separate alternative operational repair acceptance from PR11 tool qualification",
+        "reuse evidence and consolidate rule/rollback/acceptance/consumer compatibility review"
+      ],
+      "runtime": "NOT_RUN",
+      "code_changed": false
+    },
+    {
+      "record_id": "P1-K8S-01",
+      "classification": "EXISTING_APPROVED_INPUT_PRESERVED",
+      "worker_preparation": "PARALLEL_WITH_OWN_PREREQUISITES",
+      "hep_gnp_runtime": "HOLD_UNTIL_6_OF_6_READY_AND_SEPARATE_EXECUTION_DECISION"
+    },
+    {
+      "record_id": "ICR-D-NET-01-01/CP1_OPERATIONAL_REPAIR",
+      "classification": "PREPARATION_STARTED_INPUT_INCOMPLETE",
+      "pending": [
+        "exact operational ingress/egress/address/port rules",
+        "runtime/permanent scope and lifetime",
+        "rollback/expiry final state",
+        "actual change acceptance and receipt/consumer compatibility"
+      ],
+      "execution_authorized": false
+    },
+    {
+      "record_id": "PR11_REVIEWER_EXCEPTION_REQUEST",
+      "classification": "PENDING_DECISION",
+      "not_adopted": [
+        "blanket cali or pod-subnet permit",
+        "5/5 positive implies CP1 acceptance",
+        "automatic CP2/CP3 execution",
+        "qualifications or receipt validation bypass"
+      ]
+    }
+  ],
+  "unchanged": {
+    "canonical_publication": "NOT_RELEASED",
+    "gate": "NOT_ADVANCED",
+    "runtime_acceptance": "NOT_ADVANCED",
+    "icr_ac_completed": 0,
+    "icr_ac_total": 20,
+    "pr11_execution_code_base": "1c9d17e3e581bc0ffd84d1c9ca511f59f831ded2"
+  },
+  "limitations": [
+    "targeted intake, not a full project census",
+    "no new runtime evidence or code approval",
+    "NTP control01 upstream remains incomplete"
+  ]
+}
