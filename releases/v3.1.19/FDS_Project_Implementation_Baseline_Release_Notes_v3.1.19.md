@@ -51,3 +51,11 @@ Base: v3.1.18
 - 전체 **66건 / Record ID 66개 유일 / Milestone 66/66 / native Type 누락 0**. 프록시 endpoint·변경권한, 실제 selector·Secret/payload·허용/차단/복구 증적과 Decision/Interface 및 전체 v19 산출물 편입은 여전히 발행 전 검토 대상이다.
 - 관련 7개 저장소의 default HEAD·기존 PR 메타데이터·신규 공식 PR 리뷰/Commit 변화는 미검출했다. PR #73 자체 수집 Commit·댓글·본문 갱신은 새 프로젝트 변경에서 제외했다.
 - 상세: [수집 기록](../../audit/v3.1.19/intake/updates/20260911T113447Z.json). 새 후보 HEAD는 이하영의 독립 검토가 필요하다.
+
+## 2026-09-16 P1-CICD Trivy 운영안 사용자 채택 — 대상 한정 수집
+
+[수집 기록](../../audit/v3.1.19/intake/updates/20260916T033933Z.json): 사용자 “권장안으로 정본 후보에 등록하고, 착수”에 따라 바이너리 버전/해시 통제 교체와 실제 이미지 Scan 전 DB 준비·검사, 기존 HIGH/CRITICAL 및 스캐너/DB 오류 Push·Deploy 차단 유지를 APPROVED_INPUT으로 수집했다.
+
+592개 파일 참조 0·바이너리 해시 일치의 보완 증적을 검증했지만 외부 자동화 부재는 UNKNOWN이다. 코드 독립 리뷰·새 DB 경로 Runtime·실제 이미지 Delivery Gate는 잔여이며 기존 AC·역할·일정·진척도를 상향하지 않는다.
+
+이번은 P1-CICD 입력에 한정한 수집이다. 기존 9/11의 티켓 수·다른 저장소 상태를 현재 전수 조사 결과로 재사용하지 않는다. v19 전체 묶음 NOT BUILT / 발행 NOT READY / 운영 정본 v3.1.18 유지.

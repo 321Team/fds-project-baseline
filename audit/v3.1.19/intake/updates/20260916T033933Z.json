@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "target_version": "3.1.19",
+  "captured_at": "2026-09-16T03:39:33Z",
+  "previous_capture": "2026-09-11T11:34:47Z",
+  "parent_candidate_head": "89a3dbc86ac3034f2e1c720f9828523980cc24ee",
+  "collection_scope": "TARGETED_P1_CICD_TRIVY_POLICY_ONLY",
+  "status": "COLLECTED_USER_ADOPTED_POLICY_RUNTIME_SEPARATE",
+  "canonical_release": "3.1.18",
+  "user_instruction": "권장안으로 정본 후보에 등록하고, 착수",
+  "changes": [
+    {
+      "record_id": "P1-CICD-01",
+      "classification": "APPROVED_INPUT",
+      "source": "https://github.com/321Team/infra-cicd/issues/8",
+      "source_updated_at": "2026-09-16T03:39:21Z",
+      "before": "PROPOSED",
+      "after": "ADOPTED_BY_USER",
+      "implementation": "IN_PROGRESS",
+      "technical_review": "PENDING",
+      "policy_file": "audit/v3.1.19/intake/p1-cicd-trivy-update-policy-20260916.md",
+      "policy_sha256": "63a11f19570f58e0b3bc41b51b6afe6cc82e906b4bd8e68a3843e1893a2e98ec"
+    }
+  ],
+  "evidence": {
+    "audit_archive_sha256": "93fa18aed7f464eadc311c648b8123aa8bb31a1ad297c99c25cff0ea374b746d",
+    "audit_json_sha256": "b5dbe23fa8abc4d8a4966df15658714dfc93405c7f0c9dcc074d4ab200aef294",
+    "files_scanned": 592,
+    "trivy_references": 0,
+    "external_automation": "UNKNOWN",
+    "path_run": "https://github.com/321Team/infra-cicd/actions/runs/35050018964",
+    "run_attempt": 1,
+    "workflow_sha": "80d6968b8cf5d145bb37b685d92b3cccf4ecffa7"
+  },
+  "unchanged": {
+    "scope_ac_schedule_roles": true,
+    "runtime_ac": "1/10",
+    "management_progress": "50%",
+    "delivery_gate": "NOT_VERIFIED",
+    "canonical_publication": "NOT_RELEASED"
+  },
+  "remaining": [
+    "DB preflight implementation independent review and runtime",
+    "Actual image Scan/Push/Deploy gate integration",
+    "v19 full baseline and release artifact integration"
+  ],
+  "collection_limits": [
+    "Other repositories, tickets, and 9/11-9/16 changes not exhaustively recollected in this targeted intake"
+  ]
+}

@@ -54,3 +54,11 @@
 [20260911T113447Z 기록](intake/updates/20260911T113447Z.json): #74·#75의 Lead 이하영·Support 이재환, Assignee `hayeounglee`, #74 Start 2026-09-11 및 두 건의 실제 GitHub Type `Change Request` 적용을 수집했다. 전체 66건, Record ID 66개 유일, Milestone 66/66, native Type 누락 0이다.
 
 메타데이터 동기화와 실행 증적 수신 범위는 완료됐지만 두 CR의 변경안 승인·Runtime 인수는 완료되지 않았다. #74 endpoint·변경권한, #75 실제 selector·Secret/payload와 Positive/Negative/복구 증적, 기존 Decision/Interface 및 WBS/Gantt·Ticket Pack·전체 배포 묶음 편입은 계속 대기다.
+
+## 2026-09-16 P1-CICD Trivy 운영안 사용자 채택 — 대상 한정 수집
+
+[수집 기록](intake/updates/20260916T033933Z.json): 사용자 “권장안으로 정본 후보에 등록하고, 착수”에 따라 바이너리 버전/해시 통제 교체와 실제 이미지 Scan 전 DB 준비·검사, 기존 HIGH/CRITICAL 및 스캐너/DB 오류 Push·Deploy 차단 유지를 APPROVED_INPUT으로 수집했다.
+
+592개 파일 참조 0·바이너리 해시 일치의 보완 증적을 검증했지만 외부 자동화 부재는 UNKNOWN이다. 코드 독립 리뷰·새 DB 경로 Runtime·실제 이미지 Delivery Gate는 잔여이며 기존 AC·역할·일정·진척도를 상향하지 않는다.
+
+이번은 P1-CICD 입력에 한정한 수집이다. 기존 9/11의 티켓 수·다른 저장소 상태를 현재 전수 조사 결과로 재사용하지 않는다. v19 전체 묶음 NOT BUILT / 발행 NOT READY / 운영 정본 v3.1.18 유지.
