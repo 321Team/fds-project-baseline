@@ -15,14 +15,10 @@ sha_file="${release_dir}/SHA256SUMS"
 test -f "${sha_file}"
 sha256sum -c "${sha_file}"
 
-if find baseline wbs tickets web audit releases -type f \( -iname '*.pem' -o -iname '*.key' -o -iname '*.p12' -o -iname '*.pfx' -o -iname '*.kubeconfig' \) -print -quit | grep -q .; then
-  echo "Forbidden credential-like file extension found" >&2
-  exit 1
-fi
+python3 scripts/verify-document-secrets.py baseline wbs tickets web audit releases governance scripts .github
 
-if rg -n --hidden --glob '!*.xlsx' --glob '!*.zip' --glob '!SHA256SUMS' '(-----BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY-----|gh[pousr]_[A-Za-z0-9_]{20,}|AKIA[0-9A-Z]{16}|Authorization:[[:space:]]*Bearer[[:space:]]+[A-Za-z0-9._-]{12,}|password[[:space:]]*[:=][[:space:]]*[^[:space:]#]{8,})' baseline tickets web audit releases governance scripts .github; then
-  echo "Credential-like content found" >&2
-  exit 1
+if [[ "${release_version}" == "v3.1.19" ]]; then
+  python3 scripts/verify-v19-candidate.py
 fi
 
 # v3.1.18부터 변경 유무와 관계없이 WBS/Gantt를 저장소·Manifest·SHA256SUMS·ZIP에서 검증한다.

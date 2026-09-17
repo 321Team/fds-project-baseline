@@ -1,0 +1,283 @@
+{
+  "schema_version": 1,
+  "target_version": "3.1.19",
+  "captured_at": "2026-09-11T11:34:47Z",
+  "previous_capture": "2026-09-11T10:58:10Z",
+  "parent_candidate_head": "0811b95f75cfaf661b2d6f3894b12a870b6687fc",
+  "status": "COLLECTED_USER_AUTHORIZED_METADATA_DELTA_WITH_CR_PENDING_REVIEW",
+  "canonical_release": "3.1.18",
+  "summary": {
+    "updated_change_requests": 2,
+    "metadata_deltas": 2,
+    "new_official_pr_reviews": 0,
+    "changed_known_prs": 0,
+    "new_default_branch_commits": 0,
+    "total_tickets": 66,
+    "record_ids": 66,
+    "record_id_duplicates": [],
+    "milestone_assigned": 66,
+    "milestone_unassigned": [],
+    "native_type_missing": [],
+    "collection_errors": 0
+  },
+  "changes": [
+    {
+      "kind": "CHANGE_REQUEST_METADATA_UPDATED",
+      "classification": "USER_AUTHORIZED_OPERATIONAL_DELTA",
+      "record_id": "CR-P1-MON-01-01",
+      "source": "https://github.com/321Team/fds-project-baseline/issues/74",
+      "updated_at": "2026-09-11T11:22:38Z",
+      "before": {
+        "lead": "TBD",
+        "support": "TBD",
+        "start": "TBD",
+        "end": "TBD",
+        "assignees": [],
+        "native_type": null
+      },
+      "after": {
+        "lead": "이하영",
+        "support": "이재환",
+        "start": "2026-09-11",
+        "end": "TBD",
+        "calendar_days": "TBD",
+        "working_days": "TBD",
+        "assignees": [
+          "hayeounglee"
+        ],
+        "native_type": {
+          "id": 864949231,
+          "name": "Change Request"
+        },
+        "state": "open",
+        "description_status": "In Progress",
+        "milestone": {
+          "number": 3,
+          "title": "G2 Security / Feature Ready",
+          "tracking_only": true
+        },
+        "body_sha256": "16f9b10a8841fbd7c955bf5265f89914129de7cdd7b9586bcdd64966595b1ec5"
+      },
+      "evidence": [
+        {
+          "id": 5633650352,
+          "url": "https://github.com/321Team/fds-project-baseline/pull/73#issuecomment-5633650352",
+          "created_at": "2026-09-11T11:18:49Z",
+          "body_sha256": "93767ae7fba0c0ddbffaa60d979ada250b86f11d9d2aef6d1d6280d61e5d00f5"
+        },
+        {
+          "id": 5633743556,
+          "url": "https://github.com/321Team/fds-project-baseline/pull/73#issuecomment-5633743556",
+          "created_at": "2026-09-11T11:27:58Z",
+          "body_sha256": "3a81fa31c8b105f8fb28642824e9e13cbf3bade0d8fc615348490b33ea788468"
+        },
+        {
+          "id": 5633784102,
+          "url": "https://github.com/321Team/fds-project-baseline/pull/73#issuecomment-5633784102",
+          "created_at": "2026-09-11T11:31:35Z",
+          "body_sha256": "50d4b863f0f0a73d5c56e1f9752c8336d05517e717740ad5baaea8158c7c838a",
+          "result_sha256": "c9c7b53028a5e2c72ac5ea2869844a84e0f5ace3c923ae175a5c2a6d4ba5b3b3",
+          "result_status": "COMPLETE",
+          "result_scope": "Issue Type synchronization only"
+        }
+      ],
+      "approval": {
+        "authorized_by": "user instruction recorded in PR #73 evidence",
+        "approved_head": null,
+        "merge_commit": null
+      },
+      "technical_change_review": "PENDING_REVIEW",
+      "runtime": "NOT_VERIFIED",
+      "gate": "NOT_PASSED"
+    },
+    {
+      "kind": "CHANGE_REQUEST_METADATA_UPDATED",
+      "classification": "USER_AUTHORIZED_OPERATIONAL_DELTA",
+      "record_id": "CR-P1-MON-01-02",
+      "source": "https://github.com/321Team/fds-project-baseline/issues/75",
+      "updated_at": "2026-09-11T11:22:40Z",
+      "before": {
+        "lead": "TBD",
+        "support": "TBD",
+        "start": "TBD",
+        "end": "TBD",
+        "assignees": [],
+        "native_type": null
+      },
+      "after": {
+        "lead": "이하영",
+        "support": "이재환",
+        "start": "TBD",
+        "end": "TBD",
+        "calendar_days": "TBD",
+        "working_days": "TBD",
+        "assignees": [
+          "hayeounglee"
+        ],
+        "native_type": {
+          "id": 864949231,
+          "name": "Change Request"
+        },
+        "state": "open",
+        "description_status": "In Progress",
+        "milestone": {
+          "number": 3,
+          "title": "G2 Security / Feature Ready",
+          "tracking_only": true
+        },
+        "dependency": "#74 proxy configuration and fixed scheme/host/IP/port handoff",
+        "body_sha256": "54bfcc1f8909e445f206e210e0cf36cba80d569a823b98d36ae4bd4f023516b1"
+      },
+      "evidence": [
+        {
+          "id": 5633650352,
+          "url": "https://github.com/321Team/fds-project-baseline/pull/73#issuecomment-5633650352",
+          "created_at": "2026-09-11T11:18:49Z",
+          "body_sha256": "93767ae7fba0c0ddbffaa60d979ada250b86f11d9d2aef6d1d6280d61e5d00f5"
+        },
+        {
+          "id": 5633743556,
+          "url": "https://github.com/321Team/fds-project-baseline/pull/73#issuecomment-5633743556",
+          "created_at": "2026-09-11T11:27:58Z",
+          "body_sha256": "3a81fa31c8b105f8fb28642824e9e13cbf3bade0d8fc615348490b33ea788468"
+        },
+        {
+          "id": 5633784102,
+          "url": "https://github.com/321Team/fds-project-baseline/pull/73#issuecomment-5633784102",
+          "created_at": "2026-09-11T11:31:35Z",
+          "body_sha256": "50d4b863f0f0a73d5c56e1f9752c8336d05517e717740ad5baaea8158c7c838a",
+          "result_sha256": "c9c7b53028a5e2c72ac5ea2869844a84e0f5ace3c923ae175a5c2a6d4ba5b3b3",
+          "result_status": "COMPLETE",
+          "result_scope": "Issue Type synchronization only"
+        }
+      ],
+      "approval": {
+        "authorized_by": "user instruction recorded in PR #73 evidence",
+        "approved_head": null,
+        "merge_commit": null
+      },
+      "technical_change_review": "PENDING_REVIEW",
+      "runtime": "NOT_VERIFIED",
+      "gate": "NOT_PASSED"
+    }
+  ],
+  "evidence_boundary": {
+    "type_sync": "COMPLETE for #74/#75 native Issue Type only",
+    "attachment_receipt": "result.json and SHA256SUMS receipt recorded and verified in PR comment 5633784102; secret-bearing payload was not copied",
+    "cr_approval": "NOT_GRANTED",
+    "runtime_acceptance": "NOT_VERIFIED",
+    "g2": "tracking-only Milestone; not CR End and not Gate PASS"
+  },
+  "relationships": {
+    "preserve": [
+      "#74 proxy configuration hands fixed scheme/host/IP/port to #75.",
+      "#75 owns Kubernetes NetworkPolicy, actual selector and Secret lifecycle; Start/End remain TBD until #74 handoff.",
+      "#17 P1-MON-01, #19 P1-SEC-01, #10 P1-K8S-01 and #14 ICR remain linked; infra-kubernetes #5 remains the discussion source.",
+      "Retired IF-24, current IF-06B Remote Write, and new Discord proxy egress remain distinct contracts."
+    ],
+    "open_items": [
+      "Proxy VM, fixed scheme/host/IP/port, software/allowlist and change authority",
+      "actual fds-msa manifest, pinned Alertmanager version and podSelector",
+      "Secret injection/rotation/revocation/leak response and payload minimization/masking",
+      "Positive/Negative/failure/recovery evidence and Runtime acceptance",
+      "Decision/Interface exception reconciliation against #17 external-send-disabled rule",
+      "WBS/Gantt, Ticket Pack/Descriptions, Interface/Decision/CR registers and full v19 release artifacts integration"
+    ]
+  },
+  "source_status": {
+    "repositories": [
+      {
+        "repository": "321Team/fds-project-baseline",
+        "default_head": "58f72f78faa237cbdc9ceae6460d25407550c1a7",
+        "head_changed": false,
+        "known_pr_metadata_changes": [],
+        "new_official_pr_reviews": [],
+        "new_default_branch_commits": []
+      },
+      {
+        "repository": "321Team/fds-project-evidence",
+        "default_head": "493c09e728b643d620debe29738f1b47b3cafa8a",
+        "head_changed": false,
+        "known_pr_metadata_changes": [],
+        "new_official_pr_reviews": [],
+        "new_default_branch_commits": []
+      },
+      {
+        "repository": "321Team/infra-ansible",
+        "default_head": "5cbf3b657014b32a20cb5816d90d3ea5fe4951ab",
+        "head_changed": false,
+        "known_pr_metadata_changes": [],
+        "new_official_pr_reviews": [],
+        "new_default_branch_commits": []
+      },
+      {
+        "repository": "321Team/infra-kubernetes",
+        "default_head": "7d44afc3afff4d322cb4dbeff4433d61e23e111a",
+        "head_changed": false,
+        "known_pr_metadata_changes": [],
+        "new_official_pr_reviews": [],
+        "new_default_branch_commits": []
+      },
+      {
+        "repository": "321Team/infra-cicd",
+        "default_head": "be92fd00b269ff7d7abc124bb17f6d3e4c007851",
+        "head_changed": false,
+        "known_pr_metadata_changes": [],
+        "new_official_pr_reviews": [],
+        "new_default_branch_commits": []
+      },
+      {
+        "repository": "321Team/infra-harbor-trivy",
+        "default_head": "65e717ff82547cbcd45c2065af484f343c1a516f",
+        "head_changed": false,
+        "known_pr_metadata_changes": [],
+        "new_official_pr_reviews": [],
+        "new_default_branch_commits": []
+      },
+      {
+        "repository": "321Team/infra-db",
+        "default_head": "6a1925588e610de07a7a401a55ad9f1dc5f27a2c",
+        "head_changed": false,
+        "known_pr_metadata_changes": [],
+        "new_official_pr_reviews": [],
+        "new_default_branch_commits": []
+      }
+    ],
+    "pr73": {
+      "excluded_from_project_delta": true,
+      "head": "0811b95f75cfaf661b2d6f3894b12a870b6687fc",
+      "state": "open",
+      "draft": true,
+      "reviewer": "hayeounglee"
+    },
+    "fds_msa": {
+      "url": "https://github.com/321Team/fds-msa",
+      "status": "HTTP_404_ACCESS_UNCONFIRMED",
+      "impact": "actual manifest/selector/receiver/version/Secret reference not independently compared",
+      "interpretation": "do not infer repository absence"
+    }
+  },
+  "secret_scan": {
+    "sources_checked": [
+      "#74 body",
+      "#75 body",
+      "PR #73 evidence comments 5633650352/5633743556/5633784102"
+    ],
+    "hits": [],
+    "secret_values_copied": false
+  },
+  "release_status": {
+    "current": "3.1.18",
+    "docs_v3_1_19_release": false,
+    "v19_bundle": "NOT_BUILT",
+    "publication": "NOT_READY"
+  },
+  "controls": {
+    "operational_issues_modified_by_this_collection": false,
+    "main_modified": false,
+    "existing_release_modified": false,
+    "automatic_merge_or_publish": false,
+    "previous_approvals_reused": false,
+    "final_head_review_required": "hayeounglee"
+  }
+}

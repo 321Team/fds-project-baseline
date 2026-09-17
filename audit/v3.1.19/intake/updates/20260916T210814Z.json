@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "target_version": "3.1.19",
+  "captured_at": "2026-09-16T21:08:14Z",
+  "previous_capture": "2026-09-16T20:46:04Z",
+  "parent_candidate_head": "df620634088f2e42b90ef07217a03b79ae09c4e3",
+  "collection_scope": "TARGETED_P1_CICD_CONFIG_COMPLETION_ADOPTION_ONLY",
+  "status": "APPROVED_INPUT_ADOPTED_BY_USER",
+  "canonical_release": "3.1.18",
+  "source": "https://github.com/321Team/infra-cicd/issues/11",
+  "source_updated_at": "2026-09-16T21:07:56Z",
+  "adoption": {
+    "actor": "이권욱",
+    "user_instruction": "권장안으로 채택 후 수행",
+    "scope_label": "P1-CICD-OID03-20260917-02",
+    "canonical_decision_id_created": false,
+    "source": "cicd-runner01 / 10.250.10.20",
+    "account": "server01_cicd-runner",
+    "uid": 1000,
+    "owner": "이권욱",
+    "destinations": [
+      "auth.docker.io:443",
+      "registry-1.docker.io:443",
+      "production.cloudfront.docker.com:443"
+    ],
+    "resource": "One observed config blob only",
+    "config_digest": "sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad",
+    "config_bytes": 5664,
+    "maximum_seconds": 900,
+    "starts_at": "FIRST_ACTUAL_COMPLETION_EXECUTION",
+    "actual_start": null,
+    "actual_expiry": null,
+    "window_record": "FDS_CICD_OID03_20260917_02.json",
+    "old_window_extension": false,
+    "redirect_hops": 1,
+    "redirect_status": 307,
+    "redirect_authority": "https://production.cloudfront.docker.com:443",
+    "registry_bearer_forwarding": false,
+    "further_redirects": "STOP",
+    "tag_index_manifest_recollection": false,
+    "layer_pypi_build_scan_push_deploy": "EXCLUDED",
+    "network_policy_changes": "NONE"
+  },
+  "reused_evidence": {
+    "archive": "base-metadata.tar.gz",
+    "archive_sha256": "902b84c21a77b8a2970d6fcabfd6886f20dd1d1312e1caf589477153e9f3bebf",
+    "index_digest": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+    "manifest_digest": "sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79",
+    "first_collector_commit": "1fb5ef3fdba0aa18aef16656c1ee736aaca3055b",
+    "first_collection_result": "FAIL_REDIRECT_STOPPED",
+    "github_evidence_archive": "NOT_INGESTED",
+    "previous_capture_is_historical": true
+  },
+  "implementation": {
+    "repository": "321Team/infra-cicd",
+    "pull_request": 17,
+    "head": "8c3a4d32a799ede50cded2af50a571b3371374cf",
+    "collector_sha256": "b78e2cffdfdff3379563adcf419d60f373e680348f6957f48a77405681a5f4b4",
+    "files": [
+      {
+        "path": "tools/delivery/collect_base_metadata.py",
+        "sha256": "b78e2cffdfdff3379563adcf419d60f373e680348f6957f48a77405681a5f4b4"
+      },
+      {
+        "path": "tools/delivery/test_collect_base_metadata.py",
+        "sha256": "a28e8eb02b44fe7b9c85eccaf726e3bc6e90864564dae7cfb5b12df408635c51"
+      },
+      {
+        "path": "docs/base-metadata-collection.md",
+        "sha256": "e3a24e9e5e174087d33feff4beb33621e2177ba263ff055094ea274defc0ae77"
+      }
+    ],
+    "command": "/usr/bin/python3 -I -B /home/server01_cicd-runner/collect_base_metadata.py --complete-config",
+    "remote_bytes": "MATCH_ALL_3",
+    "local_static_mock": {
+      "new_completion_tests": 11,
+      "total_delivery_tests": 47,
+      "status": "PASS"
+    },
+    "github_hosted_ci": {
+      "run_id": 35150466858,
+      "job_id": 104977186047,
+      "status": "SUCCESS",
+      "tests": 122,
+      "suites": [
+        17,
+        11,
+        47,
+        47
+      ],
+      "source_validation": "PASS",
+      "raw_log_checked": true
+    },
+    "review": {
+      "requested_reviewer": "supreme33-kr",
+      "submitted_reviews": 0,
+      "status": "PENDING"
+    },
+    "merge": "NOT_MERGED"
+  },
+  "completion_runtime": {
+    "status": "NOT_EXECUTED",
+    "config_received": false,
+    "expected_return": [
+      "base-config.tar.gz",
+      "base-config.tar.gz.sha256"
+    ],
+    "next_check": "Combine returned config with reused index/manifest using infra-cicd PR #16 offline verifier",
+    "full_base_manifest_check": "INCOMPLETE_CONFIG_MISSING"
+  },
+  "unchanged": {
+    "runtime_ac": "1/10",
+    "delivery_gate": "NOT_VERIFIED",
+    "network_enforcement": "NOT_VERIFIED",
+    "final_app_source": "NOT_APPROVED",
+    "v19_publication": "NOT_READY"
+  },
+  "collection_limits": [
+    "User adoption supplies the bounded manual completion scope; it is not independent code review or PR merge",
+    "The earlier captured proposal remains historical; this intake records the subsequent adoption",
+    "Original hashes identify submitted bytes, not remote attestation",
+    "Client destination/time limits do not prove firewall enforcement or policy expiry",
+    "No actual completion time or receipt is fabricated; runtime awaits server evidence",
+    "Other ticket/PR states not exhaustively recollected"
+  ]
+}

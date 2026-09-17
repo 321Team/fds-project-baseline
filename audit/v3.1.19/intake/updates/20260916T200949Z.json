@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "target_version": "3.1.19",
+  "captured_at": "2026-09-16T20:09:49Z",
+  "previous_capture": "2026-09-16T14:50:56Z",
+  "parent_candidate_head": "48b8d836e74a723ea145360f63456de0d4183f96",
+  "collection_scope": "TARGETED_P1_CICD_OID03_METADATA_AND_HOME_RECOVERY_ONLY",
+  "status": "COLLECTED_USER_ADOPTED_SCOPE_RUNTIME_SEPARATE",
+  "canonical_release": "3.1.18",
+  "user_instruction": "우리 정본 및 정본 후보를 기준으로 권장안은/ → 권장안 제시 → 착수",
+  "changes": [
+    {
+      "record_id": "P1-CICD-01",
+      "open_interface_decision": "OID-03",
+      "classification": "APPROVED_INPUT",
+      "source": "https://github.com/321Team/infra-cicd/issues/11",
+      "source_updated_at": "2026-09-16T20:07:23Z",
+      "before": "PROPOSED_METADATA_SUPPLY_SCOPE",
+      "after": "ADOPTED_BY_USER",
+      "owner": "이권욱",
+      "destinations": [
+        "auth.docker.io:443",
+        "registry-1.docker.io:443"
+      ],
+      "repository": "docker.io/library/python:3.12-slim",
+      "platform": "linux/amd64",
+      "operations": [
+        "root index/manifest GET",
+        "selected manifest GET",
+        "referenced config GET"
+      ],
+      "window": {
+        "maximum_seconds": 3600,
+        "starts_at": "FIRST_ACTUAL_SERVER_EXECUTION",
+        "actual_start": null,
+        "actual_expiry": null,
+        "automatic_extension": false
+      },
+      "policy_file": "audit/v3.1.19/intake/p1-cicd-base-metadata-supply-20260917.md",
+      "policy_sha256": "68f54cf459100af8a49a17f57ed4faabc844854665abfe17184b3741d6257d2e",
+      "technical_review": "PENDING",
+      "implementation_pr": "https://github.com/321Team/infra-cicd/pull/17",
+      "implementation_head": "1fb5ef3fdba0aa18aef16656c1ee736aaca3055b",
+      "runtime": "NOT_EXECUTED"
+    }
+  ],
+  "evidence": {
+    "local_delivery_tests": 36,
+    "new_tests": 14,
+    "ci_tests": 111,
+    "ci_run": "https://github.com/321Team/infra-cicd/actions/runs/35144412110",
+    "ci_job": 104956698464,
+    "ci_environment": "GitHub-hosted / synthetic HTTP",
+    "collector_sha256": "5356bd4a0d9b924961e0b151b5921fd49d972a1e29d97f66fc16768a611ee187",
+    "home_recovery": {
+      "observed_at": "2026-09-17T04:07:56+09:00",
+      "filename": "b3de09d3-7d59-4108-b94e-604f6261bb0e.png",
+      "sha256": "3a4fdf70b5138e89dbb26eb628e7e7bfe85230ac434958c37f37a48e72d7cef3",
+      "source_type": "USER_SUBMITTED_SCREENSHOT",
+      "local_check": "NO_ISSUE_OBSERVED_IN_TESTED_SCOPE",
+      "github_evidence_archive": "NOT_INGESTED",
+      "new_job_receipt": "NOT_VERIFIED"
+    }
+  },
+  "unchanged": {
+    "scope_ac_schedule_roles": true,
+    "runtime_ac": "1/10",
+    "management_progress": "50% provisional",
+    "delivery_gate": "NOT_VERIFIED",
+    "canonical_publication": "NOT_RELEASED"
+  },
+  "remaining": [
+    "Actual metadata collection and offline validation",
+    "Layer and PyPI supply scope",
+    "App digest pin and final Source/test mapping",
+    "Independent code review and approved operational Workflow",
+    "v19 full bundle integration and final review"
+  ],
+  "collection_limits": [
+    "No exhaustive refresh of other issues/PRs",
+    "Application HTTP scope does not prove firewall enforcement/expiry",
+    "No registry contacted by Codex or synthetic CI tests",
+    "No new actual window timestamps or image digests invented"
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "schema": "v19-intake-update-1",
+  "collected_at": "2026-09-17T03:59:02.563210+00:00",
+  "status": "APP_EVIDENCE_PREPARED_PR5_CONFLICT_RESOLVED_REVIEW_PENDING",
+  "authorization": "사용자 권장안으로 착수; 기존 v19 지속 수집 지시",
+  "candidate_parent": "31aa9a103f5317ed49ae8ebe13fcf881b33f7317",
+  "changes": [
+    {
+      "pr_url": "https://github.com/321Team/infra-cicd/pull/19",
+      "head": "dcf9fa232f0f4ec5f347dc5dc67a02668664d20b",
+      "pr_updated_at": "2026-09-17T03:57:50Z",
+      "body_sha256": "0749883211d58f73eed6f2b1f235944ba2011ea29845e48b596302cbb5e8ecc6",
+      "review": {
+        "requested": [
+          "supreme33-kr"
+        ],
+        "submitted": 0,
+        "merged": false,
+        "draft": false
+      },
+      "file_sha256": {
+        "tools/delivery/app_evidence.py": "7d2377d4e8d0878ff3413053ea1c0e78815b6b496cade0854ab26e08a822f019",
+        "tools/delivery/test_app_evidence.py": "689db07bd13060f247c1ed74e6ff12ad7bf1f02b78cffef71bd9b814c2539301",
+        "docs/app-evidence.md": "39ebb2c062ac2c2b8704c659815b954b1264af4f54cb0becf3acd7b12345a7d5",
+        "docs/app-workflow.md": "3e8b6c38313de5ad15870183e35dae520ed9d48b9f8568da650657801feb549f",
+        "config/app-evidence.expected.example.json": "8459ad87134d8ae2609a850f23d3e4c800c82c946b609e99caf81b46799cd99f"
+      },
+      "remote_file_bytes_verified": 5,
+      "ci": {
+        "run_id": 35180034060,
+        "job_id": 105069978424,
+        "url": "https://github.com/321Team/infra-cicd/actions/runs/35180034060",
+        "groups": [
+          17,
+          11,
+          47,
+          79
+        ],
+        "passed": 154,
+        "skipped": 0,
+        "SOURCE_VALIDATION": "PASS",
+        "raw_log_verified": true,
+        "raw_log_sha256": "514daa37021283e50c159713786f70f0d49c908c1936d587625c6d877eb39cfb",
+        "raw_log_embedded": false
+      },
+      "commits": [
+        "01c6e41738a16d309066b3cf4d84476f37350105",
+        "dcf9fa232f0f4ec5f347dc5dc67a02668664d20b"
+      ],
+      "new_receipt_tests": 15,
+      "app_executor_workflow_approval_config_changed": false,
+      "receipt_scope": [
+        "External Workflow/Source/Run/Attempt/config hash binding",
+        "Server raw log/source/OCI/report/DB byte checks",
+        "Allowed JSON/hash inventory export only; no raw payloads",
+        "PASS/BLOCK/FAIL and partial failure receipt separation",
+        "Tar decompressed size bounded before metadata parsing",
+        "No source overwrite, prior output replacement or automatic upload"
+      ]
+    },
+    {
+      "pr_url": "https://github.com/321Team/infra-cicd/pull/5",
+      "head": "6715fe58801c217b2ed7bc1221241eb134b88e05",
+      "pr_updated_at": "2026-09-17T03:54:42Z",
+      "body_sha256": "3af9ece003896198949072295311042591a4ba35d966b4e4d733378615f73d80",
+      "review": {
+        "requested": [
+          "supreme33-kr"
+        ],
+        "submitted": 0,
+        "merged": false,
+        "draft": true
+      },
+      "file_sha256": {
+        "README.md": "63a4f25b68c0dcdb0b779ef229994d800e86628ea9f243e8df3cd58adc51167b",
+        "config/p1-cicd-01.json": "16831f6f3a4e350ffe2a61508c24685f357b0dcd06b9c5e9e046fe422f34b362",
+        "docs/baseline-implementation.md": "604621e31750df53e04bbc2a8a0ce08d153dd90a2a2f1cd087ee1d4ad68af3c9",
+        "docs/harbor-formalization.md": "faf4f08f4b64b8ef635999905155664102e435f8ae2ed88003e4167b90da4889",
+        "docs/implementation-state-20260915.md": "d8c92bfe9312b333253d9e560be7cd015f910841fda82f5aa35783fab67fbd34",
+        "docs/pipeline-contract.md": "e7237bdee11f9b5cb02600335f440b3ffb8657649d0dc0f73eaf89a9d72a62e3",
+        "docs/readiness.md": "945ebe24f9e143779f2a3c24c64c5ae89bfe92cb23392d0cefd19d4e1a66e196",
+        "docs/runner-bootstrap.md": "64fd993f3f31dcb2170ec0284baa1235a537a81212d9a4a9726773b8659426e9",
+        "docs/runner-first-job-handoff.md": "82c67cee337a55560ee908525854a2332fce038cd9436961f143d1935eb74ece"
+      },
+      "remote_file_bytes_verified": 9,
+      "ci": {
+        "run_id": 35179805539,
+        "job_id": 105069311205,
+        "url": "https://github.com/321Team/infra-cicd/actions/runs/35179805539",
+        "groups": [
+          17,
+          11,
+          47,
+          22
+        ],
+        "passed": 97,
+        "skipped": 0,
+        "SOURCE_VALIDATION": "PASS",
+        "raw_log_verified": true,
+        "raw_log_sha256": "6ca90f0c3694c51e5e43fbdfd6b156df7b85c6f56d01f4e8b69fc356705d889b",
+        "raw_log_embedded": false
+      },
+      "parents": [
+        "0c3f01b46d2bc73ddae3b49ba47fa5d2313ea905",
+        "90f2f37d9e1ab77252b50e80bca339cfef48bd51"
+      ],
+      "mergeable": true,
+      "main_tree_preserved_except_listed_files": true,
+      "bash_blocks_syntax_checked": 10,
+      "history_reconciled": "09-09/09-15 observations preserved separately from 09-17 status; CA materials not regenerated"
+    }
+  ],
+  "issue_url": "https://github.com/321Team/infra-cicd/issues/11",
+  "issue_updated_at": "2026-09-17T03:57:54Z",
+  "issue_body_sha256": "696a26582b307a6f20d4e3df4ff6522c277f6bacd219f6f3b9c15a85797b8960",
+  "app": {
+    "repository": "supreme33-kr/fds-msa",
+    "main": "254b82231f8af79a06419b581174647bbccbe2bc",
+    "final_source_approval": "PENDING",
+    "api_unit_scope": "PENDING",
+    "changed_this_task": false
+  },
+  "state": {
+    "SUPPLY_RUNTIME": "PASS",
+    "BASE_PROBE_RUNTIME": "PASS",
+    "APP_TEST_BUILD_SCAN": "NOT_EXECUTED",
+    "Runtime_AC": "1/10",
+    "DELIVERY_GATE": "NOT_VERIFIED",
+    "PUBLICATION": "NOT_READY",
+    "canonical": "docs-v3.1.18"
+  },
+  "remaining": [
+    {
+      "owner": "이재환",
+      "work": "앱 pin/lock 반영 후 최종 Source SHA/승인/API Unit 범위 인계 및 최신 CICD PR 독립 리뷰"
+    },
+    {
+      "owner": "이권욱",
+      "work": "실제 인계 config 대조, 최신 리뷰·main 반영 후 중앙 수동 Runtime 실행 및 증적 검증"
+    }
+  ],
+  "limits": [
+    "New receipt tests use synthetic execution records and temporary real files/OCI/tar; not application runtime.",
+    "Submitted archive excludes raw payloads; receiving verification cannot independently recheck server bytes or prove approval authenticity.",
+    "No main merge, app runtime, Push/Deploy, CA or Harbor change.",
+    "Existing v19 candidate startup_failure cause not resolved by this collection."
+  ]
+}

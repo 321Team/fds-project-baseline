@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "target_version": "3.1.19",
+  "captured_at": "2026-09-17T02:39:56Z",
+  "previous_capture": "2026-09-17T02:13:43Z",
+  "parent_candidate_head": "a22877701be70c3ef3de688f4cee893326757718",
+  "collection_scope": "TARGETED_P1_CICD_PROBE_RELATIVE_ZIP_PATH_FIX",
+  "status": "CODE_FIX_CI_PASS_RUNTIME_RETRY_PENDING",
+  "canonical_release": "3.1.18",
+  "source": {
+    "url": "https://github.com/321Team/infra-cicd/pull/19",
+    "previous_head": "cefcaeaa74f6bb96de4df1d5bf915f2b00ebf24f",
+    "head": "602e376adb321190f9143c5358afd5c31ec7d7a9",
+    "updated_at": "2026-09-17T02:38:11Z",
+    "classification": "PENDING_REVIEW",
+    "requested_reviewers": [
+      "supreme33-kr"
+    ],
+    "review_count": 0,
+    "merged": false,
+    "body_sha256": "d01bce678233459851f2a1344cdcd9ca0cd00f0929e30950d3a7cd1436c5a529"
+  },
+  "issue": {
+    "url": "https://github.com/321Team/infra-cicd/issues/11",
+    "updated_at": "2026-09-17T02:38:13Z",
+    "body_sha256": "2fdf1319285a1710fdfe7c0b3ea326cf23bff2a947d701d8ab807977341057a9"
+  },
+  "evidence": {
+    "file": "33662bc1-7fe8-485e-a418-63b340f5580e.png",
+    "library_file_id": "libfile_4089431827a0819182049b22fb9a9201",
+    "sha256": "0b07418af9ce9959242e034c304c05784ac08e98989748cf04dfa7fee851d781",
+    "classification": "USER_SCREENSHOT_NOT_FULL_RUNTIME_ARCHIVE",
+    "facts": [
+      "old bundle sha256 PASS",
+      "OFFLINE_PROBE FAIL",
+      "PROBE_PREFLIGHT_OR_EXPORT_ERROR",
+      "no EVIDENCE_DIR shown"
+    ]
+  },
+  "reproduction": {
+    "old_dot_relative_input_read": "OSError reproduced",
+    "old_absolute_input_read": "PASS_2076_BYTES",
+    "cause": "Path(__file__) removes leading ./ so zipimporter.get_data cannot match its archive prefix",
+    "fix": "preserve prefix with os.path.dirname/join; dedicated input error and failure phase",
+    "tests": "actual zipapp input SHA with ./relative, plain relative and absolute paths"
+  },
+  "verification": {
+    "local_changed_module_tests": 21,
+    "ci_tests": 122,
+    "ci_groups": [
+      17,
+      11,
+      47,
+      47
+    ],
+    "run_id": 35175073989,
+    "job_id": 105054876044,
+    "run_url": "https://github.com/321Team/infra-cicd/actions/runs/35175073989",
+    "ci_merge": "fe0d45c",
+    "ci_base": "90f2f37d9e1ab77252b50e80bca339cfef48bd51",
+    "raw_log_verified": true,
+    "source_validation": "PASS",
+    "remote_files_byte_matched": 2
+  },
+  "bundles": {
+    "existing": {
+      "name": "offline_probe_cefcaea.pyz",
+      "sha256": "082d800be1b3e368809eb61349a1a66905da59a743607d8cf175a0c859a412e4",
+      "recovery_command": "/usr/bin/python3 -I -B /home/server01_cicd-runner/offline_probe_cefcaea.pyz --prepare",
+      "note": "absolute-path input read locally verified; server retry result pending"
+    },
+    "fixed": {
+      "name": "offline_probe_602e376.pyz",
+      "sha256": "47568a505023ada5aae749fdf24c914e9f8e6714ccec28922becd4673c7cd6fa",
+      "bytes": 28651
+    }
+  },
+  "runtime": {
+    "supply_collection": "PREVIOUS_PASS_PRESERVED_NO_RERUN",
+    "offline_probe": "FIRST_PREFLIGHT_FAIL_RETRY_RESULT_NOT_RECEIVED",
+    "app_test_build_scan": "NOT_EXECUTED",
+    "delivery_gate": "NOT_VERIFIED",
+    "runtime_ac": "1/10"
+  },
+  "unchanged": {
+    "source_approval": "PENDING",
+    "api_unit_scope": "PENDING",
+    "independent_review": "PENDING",
+    "main_merge": false,
+    "publication": "NOT_READY",
+    "canonical_release": "3.1.18"
+  },
+  "remaining": [
+    "actual probe receipt",
+    "final app pin/lock SHA and Unit approval",
+    "latest CICD review and main/Workflow integration",
+    "actual app Test-Build-Scan"
+  ],
+  "limitations": [
+    "Screenshot does not expose original exception traceback; path defect locally reproduced",
+    "Whole probe Runtime success not inferred from input read or CI"
+  ],
+  "changed_files": [
+    {
+      "path": "tools/delivery/probe_offline_supply.py",
+      "sha256": "1e4ce4f63d19c6ee7fe1c35f7871ace152aba3132b8eac4d68b8dbb47f430455"
+    },
+    {
+      "path": "tools/delivery/test_offline_supply.py",
+      "sha256": "4159d665d16a9d7a55da0318b1886ad9d7d45586d3ed33450cd38d2c81b3ee82"
+    }
+  ]
+}

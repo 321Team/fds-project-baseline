@@ -1,0 +1,6 @@
+STEP 1/2: FROM docker.io/library/python@sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79
+STEP 2/2: RUN ["/usr/local/bin/python", "-I", "-B", "-c", "print(123)"]
+123
+COMMIT
+--> 00a37c71f1eb
+00a37c71f1ebf1b0cdbdbd40e4e4c14b0a51f2c68458c8e2e658abfadda0c066

@@ -1,0 +1,263 @@
+[
+  {
+    "issue": 14,
+    "record_id": "ICR-D-NET-01-01",
+    "field": "Source",
+    "v18": "Baseline/Ticket Pack v3.1.18; GitHub #14; K8S PR #2 097ddb5, #3 merge 7d44afc, #4 75d476e; audit/v3.1.18/k8s-intake-20260910.json",
+    "observed": "Baseline/Ticket Pack v3.1.18; GitHub #14; PR #2/#3/#4/#8 병합 기록; PR #9 b3f3374 승인·merge c08b798; CP1 최종 재적용·CP2 inspect·CNI 준비 및 p3dmjivl 실측 FAIL 증적. 원 정본 수집 이력: audit/v3.1.18/k8s-intake-20260910.json",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/14",
+    "source_updated_at": "2026-09-17T08:44:15Z"
+  },
+  {
+    "issue": 28,
+    "record_id": "DEC-CAL-P1-01",
+    "field": "Status",
+    "v18": "To Do",
+    "observed": "Done",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/28",
+    "source_updated_at": "2026-09-16T08:54:53Z"
+  },
+  {
+    "issue": 28,
+    "record_id": "DEC-CAL-P1-01",
+    "field": "Source",
+    "v18": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #28 snapshot 2026-09-09T12:04:41Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청",
+    "observed": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #28 snapshot 2026-09-09T12:04:41Z; Fast Tracking 일정 권장안 2026-09-10; 발표자료 FDS_Mentoring_20260911_Script_and_Comparison_v1.4; 사용자 2026-09-16 Done 종결 확인",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/28",
+    "source_updated_at": "2026-09-16T08:54:53Z"
+  },
+  {
+    "issue": 28,
+    "record_id": "DEC-CAL-P1-01",
+    "field": "Schedule Note",
+    "v18": "교육장 주말 작업 불가를 반영해 Review 09-22 오후를 권장한다. 참석자·승인자는 아직 확정하지 않으며 To Do를 유지한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트.",
+    "observed": "2026-09-22 오후 평일 Review로 확정. 발표자료 담당자별 상세 일정에 이권욱·이하영·이재환 Review 역할이 배정되어 있고 #29/#30/#31 일정도 09-22로 정렬됨. 사용자 확인을 일정 결정 승인 근거로 삼아 Done 처리한다. 실제 G3 PASS·Review 결과·Phase 1 Close 승인은 #29/#30/#31에서 별도 판정한다. 교육장 주말 작업 0 원칙 유지.",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/28",
+    "source_updated_at": "2026-09-16T08:54:53Z"
+  },
+  {
+    "issue": 46,
+    "record_id": "P2-CICD-01",
+    "field": "End",
+    "v18": "2026-10-19",
+    "observed": "2026-10-16",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/46",
+    "source_updated_at": "2026-09-14T15:16:18Z"
+  },
+  {
+    "issue": 46,
+    "record_id": "P2-CICD-01",
+    "field": "Calendar Days",
+    "v18": "4",
+    "observed": "1",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/46",
+    "source_updated_at": "2026-09-14T15:16:18Z"
+  },
+  {
+    "issue": 46,
+    "record_id": "P2-CICD-01",
+    "field": "Working Days",
+    "v18": "2",
+    "observed": "1",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/46",
+    "source_updated_at": "2026-09-14T15:16:18Z"
+  },
+  {
+    "issue": 46,
+    "record_id": "P2-CICD-01",
+    "field": "Source",
+    "v18": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #46 snapshot 2026-09-10T02:09:57Z",
+    "observed": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #46 snapshot 2026-09-10T02:09:57Z; 2026-09-11 사용자 날짜 정정 — Issue #46 날짜 정정 기록 / PR #72 후속 편입",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/46",
+    "source_updated_at": "2026-09-14T15:16:18Z"
+  },
+  {
+    "issue": 46,
+    "record_id": "P2-CICD-01",
+    "field": "Schedule Note",
+    "v18": "P2-ROSA-01과 P2-APP-01의 Manifest/Image 계약을 사용하고 Registry는 D22 결과를 따른다. G5 ROSA Application Ready에 연결한다.",
+    "observed": "P2-ROSA-01과 P2-APP-01의 Manifest/Image 계약을 사용하고 Registry는 D22 결과를 따른다. G5 ROSA Application Ready에 연결한다. 2026-09-11 사용자 지시에 따라 End를 G5 목표 2026-10-16으로 앞당겼다. Start 10/16 유지, Calendar Days/Working Days 1/1. 선행 작업과 가용성에 따라 조정 가능한 계획이며 Runtime 완료 판정은 아니다.",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/46",
+    "source_updated_at": "2026-09-14T15:16:18Z"
+  },
+  {
+    "issue": 59,
+    "record_id": "D-ARC-01",
+    "field": "Phase",
+    "v18": "원본 속성 미확인",
+    "observed": "Design",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/59",
+    "source_updated_at": "2026-09-14T15:17:09Z"
+  },
+  {
+    "issue": 59,
+    "record_id": "D-ARC-01",
+    "field": "Category",
+    "v18": "원본 속성 미확인",
+    "observed": "Design / Planning",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/59",
+    "source_updated_at": "2026-09-14T15:17:09Z"
+  },
+  {
+    "issue": 59,
+    "record_id": "D-ARC-01",
+    "field": "Type",
+    "v18": "원본 속성 미확인",
+    "observed": "Task",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/59",
+    "source_updated_at": "2026-09-14T15:17:09Z"
+  },
+  {
+    "issue": 59,
+    "record_id": "D-ARC-01",
+    "field": "Priority",
+    "v18": "원본 속성 미확인",
+    "observed": "P0",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/59",
+    "source_updated_at": "2026-09-14T15:17:09Z"
+  },
+  {
+    "issue": 59,
+    "record_id": "D-ARC-01",
+    "field": "Start",
+    "v18": "원본 속성 미확인",
+    "observed": "2026-08-24",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/59",
+    "source_updated_at": "2026-09-14T15:17:09Z"
+  },
+  {
+    "issue": 59,
+    "record_id": "D-ARC-01",
+    "field": "End",
+    "v18": "원본 속성 미확인",
+    "observed": "2026-08-26",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/59",
+    "source_updated_at": "2026-09-14T15:17:09Z"
+  },
+  {
+    "issue": 59,
+    "record_id": "D-ARC-01",
+    "field": "Calendar Days",
+    "v18": "원본 속성 미확인",
+    "observed": "3",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/59",
+    "source_updated_at": "2026-09-14T15:17:09Z"
+  },
+  {
+    "issue": 59,
+    "record_id": "D-ARC-01",
+    "field": "Working Days",
+    "v18": "원본 속성 미확인",
+    "observed": "3",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/59",
+    "source_updated_at": "2026-09-14T15:17:09Z"
+  },
+  {
+    "issue": 59,
+    "record_id": "D-ARC-01",
+    "field": "Source",
+    "v18": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #59 snapshot 2026-09-09T12:15:20Z",
+    "observed": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #59 snapshot 2026-09-09T12:15:20Z; 2026-09-11 첨부 원본 속성 복원 D-ARC-01 (ZIP SHA-256: 5cb91902828ac0432493300632297a4703aaa98b7418b9cb1f0828bec68a1b5b); 2026-09-11 사용자 날짜 정정 — Issue #59 날짜 정정 기록 / PR #72 후속 편입",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/59",
+    "source_updated_at": "2026-09-14T15:17:09Z"
+  },
+  {
+    "issue": 59,
+    "record_id": "D-ARC-01",
+    "field": "Schedule Note",
+    "v18": "원본 속성 미확인",
+    "observed": "2026-08-26 Architecture 설계 동결 완료. 본 티켓의 종결은 Phase 1 논리·물리 구조와 Interface 경계의 승인을 의미하며 개별 구성요소의 구현 완료를 의미하지 않는다. 이후 구조·배치·IP·포트·보안 경계 변경은 Change Request와 영향도 검토 후 신규 버전에 반영한다. 2026-09-11 사용자 확인으로 계획 End를 2026-08-26으로 정정하여 3일 기간과 일치시켰다.",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/59",
+    "source_updated_at": "2026-09-14T15:17:09Z"
+  },
+  {
+    "issue": 61,
+    "record_id": "D-WBS-01",
+    "field": "Phase",
+    "v18": "원본 속성 미확인",
+    "observed": "Design",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/61",
+    "source_updated_at": "2026-09-14T15:17:15Z"
+  },
+  {
+    "issue": 61,
+    "record_id": "D-WBS-01",
+    "field": "Category",
+    "v18": "원본 속성 미확인",
+    "observed": "Design / Planning",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/61",
+    "source_updated_at": "2026-09-14T15:17:15Z"
+  },
+  {
+    "issue": 61,
+    "record_id": "D-WBS-01",
+    "field": "Type",
+    "v18": "원본 속성 미확인",
+    "observed": "Task",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/61",
+    "source_updated_at": "2026-09-14T15:17:15Z"
+  },
+  {
+    "issue": 61,
+    "record_id": "D-WBS-01",
+    "field": "Priority",
+    "v18": "원본 속성 미확인",
+    "observed": "P0",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/61",
+    "source_updated_at": "2026-09-14T15:17:15Z"
+  },
+  {
+    "issue": 61,
+    "record_id": "D-WBS-01",
+    "field": "Start",
+    "v18": "원본 속성 미확인",
+    "observed": "2026-08-24",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/61",
+    "source_updated_at": "2026-09-14T15:17:15Z"
+  },
+  {
+    "issue": 61,
+    "record_id": "D-WBS-01",
+    "field": "End",
+    "v18": "원본 속성 미확인",
+    "observed": "2026-08-26",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/61",
+    "source_updated_at": "2026-09-14T15:17:15Z"
+  },
+  {
+    "issue": 61,
+    "record_id": "D-WBS-01",
+    "field": "Calendar Days",
+    "v18": "원본 속성 미확인",
+    "observed": "3",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/61",
+    "source_updated_at": "2026-09-14T15:17:15Z"
+  },
+  {
+    "issue": 61,
+    "record_id": "D-WBS-01",
+    "field": "Working Days",
+    "v18": "원본 속성 미확인",
+    "observed": "3",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/61",
+    "source_updated_at": "2026-09-14T15:17:15Z"
+  },
+  {
+    "issue": 61,
+    "record_id": "D-WBS-01",
+    "field": "Source",
+    "v18": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #61 snapshot 2026-09-09T12:15:55Z",
+    "observed": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #61 snapshot 2026-09-09T12:15:55Z; 2026-09-11 첨부 원본 속성 복원 D-WBS-01 (ZIP SHA-256: a1ce2edb3be5e63213fa51372ce4a8820572c6cd36c5496419d787e37b1980b1); 2026-09-11 사용자 날짜 정정 — Issue #61 날짜 정정 기록 / PR #72 후속 편입",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/61",
+    "source_updated_at": "2026-09-14T15:17:15Z"
+  },
+  {
+    "issue": 61,
+    "record_id": "D-WBS-01",
+    "field": "Schedule Note",
+    "v18": "원본 속성 미확인",
+    "observed": "2026-08-26 WBS·Backlog·Decision·Milestone·Interface 관리체계 동결 완료. 종결 티켓은 Closed Register에 보존하고 Remaining Backlog에서 제외한다. 이후 백로그 변경은 D-WBS-01 재개가 아니라 동결된 Change Control에 따른 Version Update로 관리한다. D-SEC-01 및 D17의 후속 상태는 본 티켓 종결과 분리한다. 2026-09-11 사용자 확인으로 실제 완료일을 2026-08-26으로 확정했다. 첨부 상단의 8/28은 정정 전 기록이다.",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/61",
+    "source_updated_at": "2026-09-14T15:17:15Z"
+  }
+]

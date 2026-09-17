@@ -1,0 +1,130 @@
+{
+  "schema": "P1-CICD-runner-git-preflight-1",
+  "started_at": "2026-09-17T04:53:10.008292+00:00",
+  "OVERALL": "PASS",
+  "execution_context": "RUNNER_ACCOUNT_LOGIN_NOT_ACTIONS_JOB",
+  "host": "cicd-runner01",
+  "uid": 1000,
+  "user": "server01_cicd-runner",
+  "tool_sha256": "ffb7bfde5f122a664fe45d21bae362f32a0499724a5f1e6798aaa2f12c0f3c61",
+  "reference_cicd_sha": "dcf9fa232f0f4ec5f347dc5dc67a02668664d20b",
+  "origin": "https://github.com/supreme33-kr/fds-msa.git",
+  "observed_sha": "254b82231f8af79a06419b581174647bbccbe2bc",
+  "observed_tree": "6ee93b5a5788288aa9be71c3c62589abc27dde0c",
+  "source_basis": "OBSERVED_TRANSPORT_TARGET_NOT_APPROVED_APP_SOURCE",
+  "steps": [
+    {
+      "name": "git-version",
+      "exit_code": 0,
+      "timeout": false,
+      "log_sha256": "1b5be440c77a69dc59d5bf55542e2e2f71cb2c6f721bd6b2ad216897fd59283c",
+      "raw_log_exported": false
+    },
+    {
+      "name": "git-init",
+      "exit_code": 0,
+      "timeout": false,
+      "log_sha256": "1b329df88f43f0d5e87ddcf1b97c012984d98a862dabed36f4902750a8257b36",
+      "raw_log_exported": false
+    },
+    {
+      "name": "git-origin",
+      "exit_code": 0,
+      "timeout": false,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_log_exported": false
+    },
+    {
+      "name": "git-fetch",
+      "exit_code": 0,
+      "timeout": false,
+      "log_sha256": "758fe4c2e74383bd388ced03f128920ae3092e7dd5fdc6f1cabeeccec1eeebae",
+      "raw_log_exported": false
+    },
+    {
+      "name": "git-commit",
+      "exit_code": 0,
+      "timeout": false,
+      "log_sha256": "abc9e2e706e35825985bd4f60f2b276b524b8adaf556f85c3166cff9718da258",
+      "raw_log_exported": false
+    },
+    {
+      "name": "git-tree",
+      "exit_code": 0,
+      "timeout": false,
+      "log_sha256": "04d6f911cec041c2e2b11b4e4913aee9274f860816c4aa9c3da35bd1bf81a3bc",
+      "raw_log_exported": false
+    },
+    {
+      "name": "git-bare",
+      "exit_code": 0,
+      "timeout": false,
+      "log_sha256": "a17fcf0a2f50e2d495e4f90ce263410edc183add6c62699a2facbccf60410f74",
+      "raw_log_exported": false
+    }
+  ],
+  "errors": {},
+  "APP_TEST_BUILD_SCAN": "NOT_EXECUTED",
+  "PUSH": "NOT_EXECUTED",
+  "DEPLOY": "NOT_EXECUTED",
+  "DELIVERY_GATE": "NOT_VERIFIED",
+  "phase": "finished",
+  "capacity": {
+    "available_bytes": 76041506816,
+    "available_inodes": 42691023,
+    "app_existing_start_minimum_bytes": 4294967296,
+    "APP_START_MINIMUM": "MEETS_MINIMUM",
+    "APP_COMPLETION_CAPACITY": "NOT_PROVEN"
+  },
+  "supply": {
+    "SUPPLY_ACCESS": "PASS",
+    "directory": "/home/server01_cicd-runner/FDS_CICD_Supply.20260917T010757Z.974fb972",
+    "profiles": {
+      "transaction-api-runtime": {
+        "metadata_hashes": {
+          "roots_sha256": "0b8f3430a64f4b81429277bf651b2e1b62a68084f8d79b36a63d09d065b76947",
+          "lock_sha256": "3a71d0d227415f3f818642b5370920f02a23a9bcb28f4dd31aac1d59d96c756e",
+          "inventory_sha256": "b5ddd2595efad3a48dc6d09bb963515ab5cb8bfcd38604116ea2329d819640a4"
+        },
+        "readable_wheels": 25
+      },
+      "transaction-api-test": {
+        "metadata_hashes": {
+          "roots_sha256": "dc9cf9fa2bfb10708504fc283835f8f7e138d115f83de8b94eededa9ef6eceb0",
+          "lock_sha256": "72137816616e16e2b88f86630c507800414c3b37c14c7f624b9042fd66a8ef85",
+          "inventory_sha256": "acf41ad32fc8aed812f545b5b3e60d74250d5c37b88c30530c95bb0d410d26e9"
+        },
+        "readable_wheels": 29
+      },
+      "fds-engine-runtime": {
+        "metadata_hashes": {
+          "roots_sha256": "11b1f940e83bded8fa8e901005f0467c4652bfac332657b11c118ee8f9b80ca3",
+          "lock_sha256": "c9d6138da341b431f0b7fdaf4aee78d59f9207e9d3f2bf4636b0505681c1f80b",
+          "inventory_sha256": "6bf41b600e46f61d8c7e1a7886c411938da44fdd9dc65ea5d25127e7df2b80a5"
+        },
+        "readable_wheels": 18
+      },
+      "fds-engine-test": {
+        "metadata_hashes": {
+          "roots_sha256": "3f6aee59d8afee889d56f97bfef08830ce94d630d05097fb2dfa3e8b9bf2d16c",
+          "lock_sha256": "3a51dbbb6dd56d09658f0d2343e4b4847394f006f1f2aa082886bc468e797b65",
+          "inventory_sha256": "56ec48ee8d9827d90b9e2281ddae125be2f3b8760656404e5f9daa5490f60acb"
+        },
+        "readable_wheels": 26
+      }
+    },
+    "observed_oci_and_wheel_bytes": 101080963,
+    "RAW_PAYLOAD_HASHES": "NOT_RECHECKED",
+    "BASE_LOAD_BUILD": "NOT_EXECUTED"
+  },
+  "git_version": "git version 2.52.0",
+  "git": {
+    "GIT_INTAKE": "PASS",
+    "commit": "254b82231f8af79a06419b581174647bbccbe2bc",
+    "tree": "6ee93b5a5788288aa9be71c3c62589abc27dde0c",
+    "bare": true,
+    "SOURCE_APPROVAL": "NOT_GRANTED_HERE",
+    "WORKTREE_APP_EXECUTION": "NOT_EXECUTED"
+  },
+  "finished_at": "2026-09-17T04:53:10.808892+00:00"
+}

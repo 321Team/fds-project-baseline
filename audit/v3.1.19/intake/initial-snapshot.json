@@ -1,0 +1,1822 @@
+{
+  "schema_version": 1,
+  "target_version": "3.1.19",
+  "status": "COLLECTING_NOT_RELEASED",
+  "captured_at": "2026-09-11T09:58:49.550Z",
+  "base_release": "3.1.18",
+  "base_main_sha": "58f72f78faa237cbdc9ceae6460d25407550c1a7",
+  "approved_inputs": [
+    {
+      "id": "PR72",
+      "kind": "APPROVED_INPUT",
+      "source": "https://github.com/321Team/fds-project-baseline/pull/72",
+      "review": "https://github.com/321Team/fds-project-baseline/pull/72#pullrequestreview-5177300582",
+      "approved_head": "ea6cbd80155102766927b2d5bff3e756eba7a77e",
+      "merge": "58f72f78faa237cbdc9ceae6460d25407550c1a7",
+      "scope": "CURRENT 게시 사실 교정 입력, WEB 포함 배포 정책, 일정 유연성, #59/#61/#46 날짜 정정; 실제 정본 통합은 대기"
+    },
+    {
+      "id": "MILESTONE-19",
+      "kind": "USER_AUTHORIZED_OPERATIONAL_DELTA",
+      "sources": [
+        "https://github.com/321Team/fds-project-baseline/pull/72#issuecomment-5632352726",
+        "https://github.com/321Team/fds-project-baseline/pull/72#issuecomment-5632473246"
+      ],
+      "scope": "후속 19건 배정으로 전체 64/64건 Milestone 연결. #25~27은 Close 인계 추적이며 구현 TBD 유지."
+    }
+  ],
+  "issues": [
+    {
+      "number": 4,
+      "record_id": "DEC-P1-FDS-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/4",
+      "updated_at": "2026-09-11T09:18:53Z",
+      "status": "Done",
+      "state": "closed",
+      "closed_at": "2026-09-09T06:37:02Z",
+      "start": "2026-09-08",
+      "end": "2026-09-09",
+      "calendar_days": "2",
+      "working_days": "2",
+      "lead": "이재환",
+      "support": "이하영, 이권욱",
+      "native_type": "Decision",
+      "assignees": [
+        "supreme33-kr"
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "G2 Security / Feature Ready",
+        "due_on": "2026-09-21T00:00:00Z"
+      },
+      "schedule_note": "현행 유지·신규 기능 확대 유예 결정 Done. 본 v3.1.18 후보에 통합하며 발행 전 운영 정본은 v3.1.17이다. 신규 기능 G2 편입·Runtime 승인은 아니다.",
+      "v18_description": true,
+      "milestone_delta": true,
+      "date_delta": false
+    },
+    {
+      "number": 5,
+      "record_id": "DEC-P1-TXN-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/5",
+      "updated_at": "2026-09-11T09:19:05Z",
+      "status": "Done",
+      "state": "closed",
+      "closed_at": "2026-09-09T06:37:13Z",
+      "start": "2026-09-08",
+      "end": "2026-09-09",
+      "calendar_days": "2",
+      "working_days": "2",
+      "lead": "이재환",
+      "support": "이하영, 이권욱",
+      "native_type": "Decision",
+      "assignees": [
+        "supreme33-kr"
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "G2 Security / Feature Ready",
+        "due_on": "2026-09-21T00:00:00Z"
+      },
+      "schedule_note": "현행 유지·신규 기능 확대 유예 결정 Done. 본 v3.1.18 후보에 통합하며 발행 전 운영 정본은 v3.1.17이다. 신규 기능 G2 편입·Runtime 승인은 아니다.",
+      "v18_description": true,
+      "milestone_delta": true,
+      "date_delta": false
+    },
+    {
+      "number": 6,
+      "record_id": "DEC-P1-ADMIN-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/6",
+      "updated_at": "2026-09-11T09:19:17Z",
+      "status": "Done",
+      "state": "closed",
+      "closed_at": "2026-09-09T06:37:24Z",
+      "start": "2026-09-08",
+      "end": "2026-09-09",
+      "calendar_days": "2",
+      "working_days": "1",
+      "lead": "이하영",
+      "support": "이권욱, 이재환",
+      "native_type": "Decision",
+      "assignees": [
+        "hayeounglee"
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "G2 Security / Feature Ready",
+        "due_on": "2026-09-21T00:00:00Z"
+      },
+      "schedule_note": "현행 유지·신규 기능 확대 유예 결정 Done. 본 v3.1.18 후보에 통합하며 발행 전 운영 정본은 v3.1.17이다. 신규 기능 G2 편입·Runtime 승인은 아니다.",
+      "v18_description": true,
+      "milestone_delta": true,
+      "date_delta": false
+    },
+    {
+      "number": 7,
+      "record_id": "D-SEC-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/7",
+      "updated_at": "2026-09-11T04:58:15Z",
+      "status": "Done",
+      "state": "closed",
+      "closed_at": "2026-09-09T09:39:09Z",
+      "start": "2026-08-26",
+      "end": "2026-09-01",
+      "calendar_days": "7",
+      "working_days": "4",
+      "lead": "이하영",
+      "support": "이권욱, 이재환",
+      "native_type": "Decision",
+      "assignees": [
+        "hayeounglee"
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "G0 Design Freeze",
+        "due_on": "2026-09-01T00:00:00Z"
+      },
+      "schedule_note": "v3.1.14 최종 승인·정본 반영 완료. 구현은 P1-SEC-01로 이관.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 8,
+      "record_id": "MS-G0-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/8",
+      "updated_at": "2026-09-11T04:58:18Z",
+      "status": "Done",
+      "state": "closed",
+      "closed_at": "2026-09-09T09:40:02Z",
+      "start": "2026-08-26",
+      "end": "2026-09-01",
+      "calendar_days": "7",
+      "working_days": "5",
+      "lead": "이권욱",
+      "support": "이하영, 이재환",
+      "native_type": "Milestone",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "G0 Design Freeze",
+        "due_on": "2026-09-01T00:00:00Z"
+      },
+      "schedule_note": "G0 Design Freeze FULL PASS (2026-09-01).",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 9,
+      "record_id": "P1-LB-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/9",
+      "updated_at": "2026-09-11T04:58:20Z",
+      "status": "In Progress",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-08-27",
+      "end": "2026-09-17",
+      "calendar_days": "22",
+      "working_days": "16",
+      "lead": "이권욱",
+      "support": "이하영",
+      "native_type": "Task",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "G1 Infrastructure Ready",
+        "due_on": "2026-09-17T00:00:00Z"
+      },
+      "schedule_note": "Stage B는 3CP API 기동 후 검증하며 09-17 G1 인수에 연결한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 10,
+      "record_id": "P1-K8S-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/10",
+      "updated_at": "2026-09-11T04:58:22Z",
+      "status": "In Progress",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-08-27",
+      "end": "2026-09-17",
+      "calendar_days": "22",
+      "working_days": "13",
+      "lead": "이하영",
+      "support": "이권욱",
+      "native_type": "Task",
+      "assignees": [
+        "hayeounglee"
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "G1 Infrastructure Ready",
+        "due_on": "2026-09-17T00:00:00Z"
+      },
+      "schedule_note": "09-11 CP1, 09-14 CP2/3·Worker, 09-15 NTP·Calico, 09-17 증적 인수를 조건부 목표로 둔다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 11,
+      "record_id": "P1-DB-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/11",
+      "updated_at": "2026-09-11T04:58:24Z",
+      "status": "In Progress",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-08-28",
+      "end": "2026-09-17",
+      "calendar_days": "21",
+      "working_days": "10",
+      "lead": "이재환",
+      "support": "이권욱",
+      "native_type": "Task",
+      "assignees": [
+        "supreme33-kr"
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "G1 Infrastructure Ready",
+        "due_on": "2026-09-17T00:00:00Z"
+      },
+      "schedule_note": "09-11 이재환의 고정 Source·Schema·검증/복구 절차 인계가 선행돼야 한다. 기존 Support 이권욱이 부재 중 검증을 지원하며 실제 인수 권한은 기존 통제를 따른다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 12,
+      "record_id": "P1-DNS-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/12",
+      "updated_at": "2026-09-11T09:19:30Z",
+      "status": "Done",
+      "state": "closed",
+      "closed_at": "2026-09-09T09:41:10Z",
+      "start": "2026-08-28",
+      "end": "2026-09-03",
+      "calendar_days": "7",
+      "working_days": "5",
+      "lead": "이권욱",
+      "support": "이하영",
+      "native_type": "Task",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "G1 Infrastructure Ready",
+        "due_on": "2026-09-17T00:00:00Z"
+      },
+      "schedule_note": "기술 검증·Support Review·.109 ACL/Resolver/Failover Delta 확인 완료. 2026-09-03 Done 승인.",
+      "v18_description": true,
+      "milestone_delta": true,
+      "date_delta": false
+    },
+    {
+      "number": 13,
+      "record_id": "P1-HBR-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/13",
+      "updated_at": "2026-09-11T04:58:27Z",
+      "status": "In Progress",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-08-31",
+      "end": "2026-09-17",
+      "calendar_days": "18",
+      "working_days": "12",
+      "lead": "이하영",
+      "support": "이권욱",
+      "native_type": "Task",
+      "assignees": [
+        "hayeounglee"
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "G1 Infrastructure Ready",
+        "due_on": "2026-09-17T00:00:00Z"
+      },
+      "schedule_note": "Harbor 준비는 CP 후속과 병행하고 09-16 CI Scan Digest까지 4/4 대조 후 09-17 인수 목표다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 14,
+      "record_id": "ICR-D-NET-01-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/14",
+      "updated_at": "2026-09-11T09:32:03Z",
+      "status": "In Progress",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-09-01",
+      "end": "2026-09-21",
+      "calendar_days": "21",
+      "working_days": "15",
+      "lead": "이권욱",
+      "support": "이하영, 이재환",
+      "native_type": "Change Request",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "G2 Security / Feature Ready",
+        "due_on": "2026-09-21T00:00:00Z"
+      },
+      "schedule_note": "09-21은 권장 Plan End이며 실제 종료일 확정이나 AC 완료가 아니다. 기존 End TBD 이력은 보존한다. CP→Worker·NTP·IF-16을 먼저, IF-06B·Negative/Reboot/Rollback·보호 인계를 후속 검증한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트.",
+      "v18_description": true,
+      "milestone_delta": true,
+      "date_delta": false
+    },
+    {
+      "number": 15,
+      "record_id": "P1-APP-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/15",
+      "updated_at": "2026-09-11T04:58:31Z",
+      "status": "In Progress",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-09-01",
+      "end": "2026-09-18",
+      "calendar_days": "18",
+      "working_days": "9",
+      "lead": "이재환",
+      "support": "이하영",
+      "native_type": "Task",
+      "assignees": [
+        "supreme33-kr"
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "G2 Security / Feature Ready",
+        "due_on": "2026-09-21T00:00:00Z"
+      },
+      "schedule_note": "09-11 인계 및 사전 검증, 09-18 복귀 후 정본 Runtime 통합. 휴가 중 미승인 업무 계약·Schema 변경은 중단한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 16,
+      "record_id": "P1-CICD-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/16",
+      "updated_at": "2026-09-11T04:58:33Z",
+      "status": "In Progress",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-09-01",
+      "end": "2026-09-18",
+      "calendar_days": "18",
+      "working_days": "14",
+      "lead": "이권욱",
+      "support": "이하영",
+      "native_type": "Task",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "G2 Security / Feature Ready",
+        "due_on": "2026-09-21T00:00:00Z"
+      },
+      "schedule_note": "Runner/Workflow·Negative Gate 준비를 플랫폼 구축과 병행하고 승인된 플랫폼·Harbor가 준비된 뒤 배포한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 17,
+      "record_id": "P1-MON-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/17",
+      "updated_at": "2026-09-11T04:58:35Z",
+      "status": "In Progress",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-09-07",
+      "end": "2026-09-18",
+      "calendar_days": "12",
+      "working_days": "6",
+      "lead": "이재환",
+      "support": "이권욱",
+      "native_type": "Task",
+      "assignees": [
+        "supreme33-kr"
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "G2 Security / Feature Ready",
+        "due_on": "2026-09-21T00:00:00Z"
+      },
+      "schedule_note": "09-11 Monitoring 인계, 부재 중 기존 Support의 준비·구현, 09-18 복귀 후 14개 AC+2개 보조통제 검증을 목표로 한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 18,
+      "record_id": "MS-G1-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/18",
+      "updated_at": "2026-09-11T04:58:39Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-09-17",
+      "end": "2026-09-17",
+      "calendar_days": "1",
+      "working_days": "1",
+      "lead": "이권욱",
+      "support": "이하영, 이재환",
+      "native_type": "Milestone",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "G1 Infrastructure Ready",
+        "due_on": "2026-09-17T00:00:00Z"
+      },
+      "schedule_note": "09-17 오후 조건부 인수 목표. 6대·API/LB·Calico·DB·Harbor·Runner 증적 미충족이면 PASS 불가. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 19,
+      "record_id": "P1-SEC-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/19",
+      "updated_at": "2026-09-11T04:58:41Z",
+      "status": "In Progress",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-09-04",
+      "end": "2026-09-21",
+      "calendar_days": "18",
+      "working_days": "10",
+      "lead": "이하영",
+      "support": "이권욱, 이재환",
+      "native_type": "Task",
+      "assignees": [
+        "hayeounglee"
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "G2 Security / Feature Ready",
+        "due_on": "2026-09-21T00:00:00Z"
+      },
+      "schedule_note": "09-10 휴가 추가 후 기존 09-04~11 가용일은 4일. 권장 종료 09-21로 확장한 전체 계획창의 가용일은 10일이며 잔여 공수를 뜻하지 않는다. Runtime 검증은 플랫폼·앱 인수와 연계한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 20,
+      "record_id": "P1-E2E-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/20",
+      "updated_at": "2026-09-11T04:58:43Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-09-11",
+      "end": "2026-09-22",
+      "calendar_days": "12",
+      "working_days": "4",
+      "lead": "이재환",
+      "support": "이권욱, 이하영",
+      "native_type": "Task",
+      "assignees": [
+        "supreme33-kr"
+      ],
+      "milestone": {
+        "number": 4,
+        "title": "G3 Review Ready",
+        "due_on": "2026-09-22T00:00:00Z"
+      },
+      "schedule_note": "09-11은 케이스·명령·판정 기준 준비일, Runtime은 09-18 이후, 최종 회귀는 09-22 오전이다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 21,
+      "record_id": "P1-DR-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/21",
+      "updated_at": "2026-09-11T04:58:45Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-09-11",
+      "end": "2026-09-21",
+      "calendar_days": "11",
+      "working_days": "3",
+      "lead": "이재환",
+      "support": "이권욱",
+      "native_type": "Task",
+      "assignees": [
+        "supreme33-kr"
+      ],
+      "milestone": {
+        "number": 4,
+        "title": "G3 Review Ready",
+        "due_on": "2026-09-22T00:00:00Z"
+      },
+      "schedule_note": "09-11 복구 절차·격리 대상 준비, 실제 Restore 및 후속 E2E는 09-21 오후 전용 창에서 수행한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 22,
+      "record_id": "P1-HA-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/22",
+      "updated_at": "2026-09-11T04:58:47Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-09-11",
+      "end": "2026-09-21",
+      "calendar_days": "11",
+      "working_days": "3",
+      "lead": "이재환",
+      "support": "이하영",
+      "native_type": "Task",
+      "assignees": [
+        "supreme33-kr"
+      ],
+      "milestone": {
+        "number": 4,
+        "title": "G3 Review Ready",
+        "due_on": "2026-09-22T00:00:00Z"
+      },
+      "schedule_note": "09-11 Drain 케이스 준비, 3Worker 및 서비스 분산 확인 후 09-21 오전 전용 창에서 수행한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 23,
+      "record_id": "MS-G2-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/23",
+      "updated_at": "2026-09-11T04:58:50Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-09-21",
+      "end": "2026-09-21",
+      "calendar_days": "1",
+      "working_days": "1",
+      "lead": "이하영",
+      "support": "이권욱, 이재환",
+      "native_type": "Milestone",
+      "assignees": [
+        "hayeounglee"
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "G2 Security / Feature Ready",
+        "due_on": "2026-09-21T00:00:00Z"
+      },
+      "schedule_note": "09-21 오후 종료 시점 목표. 앱/보안/CI/Monitoring·초기 E2E/Negative/Drain 준비도와 해당 증적이 선행한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 24,
+      "record_id": "P1-DOC-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/24",
+      "updated_at": "2026-09-11T04:58:52Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-09-11",
+      "end": "2026-09-22",
+      "calendar_days": "12",
+      "working_days": "8",
+      "lead": "이권욱",
+      "support": "이하영, 이재환",
+      "native_type": "Task",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 4,
+        "title": "G3 Review Ready",
+        "due_on": "2026-09-22T00:00:00Z"
+      },
+      "schedule_note": "구축 시 증적·Runbook을 병행 축적하고 09-22 오전 Final Evidence와 함께 동결한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 25,
+      "record_id": "P1-MON-02",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/25",
+      "updated_at": "2026-09-11T09:32:22Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "TBD — P0 인수 후 재계획",
+      "end": "TBD — 구현 유예 권장",
+      "calendar_days": "TBD",
+      "working_days": "TBD",
+      "lead": "이재환",
+      "support": "이권욱, 이하영",
+      "native_type": "Task",
+      "assignees": [
+        "supreme33-kr"
+      ],
+      "milestone": {
+        "number": 6,
+        "title": "Phase 1 Close",
+        "due_on": "2026-09-23T00:00:00Z"
+      },
+      "schedule_note": "P0 마감 보호를 위해 신규 구현을 유예하는 권장안이다. 기존 Lead·Type·Priority·AC·To Do는 유지한다. 09-23은 Known Issue/Owner 인계 기한, 09-28은 차기 착수·납기 결정 기한이며 구현 완료일은 TBD다. Phase 2 공수를 자동 배정하지 않는다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트.",
+      "v18_description": true,
+      "milestone_delta": true,
+      "date_delta": false
+    },
+    {
+      "number": 26,
+      "record_id": "P1-DR-02",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/26",
+      "updated_at": "2026-09-11T09:32:39Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "TBD — P0 인수 후 재계획",
+      "end": "TBD — 구현 유예 권장",
+      "calendar_days": "TBD",
+      "working_days": "TBD",
+      "lead": "이하영",
+      "support": "이권욱, 이재환",
+      "native_type": "Task",
+      "assignees": [
+        "hayeounglee"
+      ],
+      "milestone": {
+        "number": 6,
+        "title": "Phase 1 Close",
+        "due_on": "2026-09-23T00:00:00Z"
+      },
+      "schedule_note": "P0 마감 보호를 위해 신규 구현을 유예하는 권장안이다. 기존 Lead·Type·Priority·AC·To Do는 유지한다. 09-23은 Known Issue/Owner 인계 기한, 09-28은 차기 착수·납기 결정 기한이며 구현 완료일은 TBD다. Phase 2 공수를 자동 배정하지 않는다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트.",
+      "v18_description": true,
+      "milestone_delta": true,
+      "date_delta": false
+    },
+    {
+      "number": 27,
+      "record_id": "P1-HA-02",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/27",
+      "updated_at": "2026-09-11T09:32:57Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "TBD — P0 인수 후 재계획",
+      "end": "TBD — 구현 유예 권장",
+      "calendar_days": "TBD",
+      "working_days": "TBD",
+      "lead": "이하영",
+      "support": "이권욱, 이재환",
+      "native_type": "Task",
+      "assignees": [
+        "hayeounglee"
+      ],
+      "milestone": {
+        "number": 6,
+        "title": "Phase 1 Close",
+        "due_on": "2026-09-23T00:00:00Z"
+      },
+      "schedule_note": "P0 마감 보호를 위해 신규 구현을 유예하는 권장안이다. 기존 Lead·Type·Priority·AC·To Do는 유지한다. 09-23은 Known Issue/Owner 인계 기한, 09-28은 차기 착수·납기 결정 기한이며 구현 완료일은 TBD다. Phase 2 공수를 자동 배정하지 않는다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트.",
+      "v18_description": true,
+      "milestone_delta": true,
+      "date_delta": false
+    },
+    {
+      "number": 28,
+      "record_id": "DEC-CAL-P1-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/28",
+      "updated_at": "2026-09-11T04:58:54Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-09-11",
+      "end": "2026-09-11",
+      "calendar_days": "1",
+      "working_days": "1",
+      "lead": "이권욱",
+      "support": "이하영, 이재환",
+      "native_type": "Decision",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 5,
+        "title": "Phase 1 Review",
+        "due_on": "2026-09-22T00:00:00Z"
+      },
+      "schedule_note": "교육장 주말 작업 불가를 반영해 Review 09-22 오후를 권장한다. 참석자·승인자는 아직 확정하지 않으며 To Do를 유지한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 29,
+      "record_id": "MS-G3-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/29",
+      "updated_at": "2026-09-11T04:58:56Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-09-22",
+      "end": "2026-09-22",
+      "calendar_days": "1",
+      "working_days": "1",
+      "lead": "이권욱",
+      "support": "이하영, 이재환",
+      "native_type": "Milestone",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 4,
+        "title": "G3 Review Ready",
+        "due_on": "2026-09-22T00:00:00Z"
+      },
+      "schedule_note": "09-22 오전 최종 회귀·Drain·Restore 증적·Critical Issue 0과 산출물 동결이 모두 충족될 때 인수한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 30,
+      "record_id": "P1-REV-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/30",
+      "updated_at": "2026-09-11T09:33:15Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-09-22",
+      "end": "2026-09-23",
+      "calendar_days": "2",
+      "working_days": "2",
+      "lead": "이권욱",
+      "support": "이하영, 이재환",
+      "native_type": "Task",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 6,
+        "title": "Phase 1 Close",
+        "due_on": "2026-09-23T00:00:00Z"
+      },
+      "schedule_note": "09-22 오후 Review, 09-23 오전 보완·재시험, 오후 Close를 권장한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트.",
+      "v18_description": true,
+      "milestone_delta": true,
+      "date_delta": false
+    },
+    {
+      "number": 31,
+      "record_id": "MS-P1-REVIEW-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/31",
+      "updated_at": "2026-09-11T04:58:59Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-09-22",
+      "end": "2026-09-22",
+      "calendar_days": "1",
+      "working_days": "1",
+      "lead": "이권욱",
+      "support": "이하영, 이재환",
+      "native_type": "Milestone",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 5,
+        "title": "Phase 1 Review",
+        "due_on": "2026-09-22T00:00:00Z"
+      },
+      "schedule_note": "기존 09-20 일요일 대신 09-22 화요일 오후. G3 통과와 참석자 확정이 필요하다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 32,
+      "record_id": "MS-P1-CLOSE-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/32",
+      "updated_at": "2026-09-11T04:59:01Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-09-23",
+      "end": "2026-09-23",
+      "calendar_days": "1",
+      "working_days": "1",
+      "lead": "이권욱",
+      "support": "이하영, 이재환",
+      "native_type": "Milestone",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 6,
+        "title": "Phase 1 Close",
+        "due_on": "2026-09-23T00:00:00Z"
+      },
+      "schedule_note": "09-24~09-25 비근무 전에 종결한다.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 33,
+      "record_id": "MS-P2-START-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/33",
+      "updated_at": "2026-09-11T04:59:03Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-09-28",
+      "end": "2026-09-28",
+      "calendar_days": "1",
+      "working_days": "1",
+      "lead": "이권욱",
+      "support": "이하영, 이재환",
+      "native_type": "Milestone",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 7,
+        "title": "Phase 2 Start",
+        "due_on": "2026-09-28T00:00:00Z"
+      },
+      "schedule_note": "09-24~09-25 비근무 후 첫 작업일에 착수한다.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 34,
+      "record_id": "P2-ARC-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/34",
+      "updated_at": "2026-09-11T09:20:23Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-09-28",
+      "end": "2026-09-28",
+      "calendar_days": "1",
+      "working_days": "1",
+      "lead": "이권욱",
+      "support": "이하영, 이재환",
+      "native_type": "Task",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 7,
+        "title": "Phase 2 Start",
+        "due_on": "2026-09-28T00:00:00Z"
+      },
+      "schedule_note": "MS-P2-START-01 직후 완료하며 Phase 2 모든 구현 티켓이 참조하는 Phase 2 OCI/AWS/ROSA Design의 권위 Source를 생성한다.",
+      "v18_description": true,
+      "milestone_delta": true,
+      "date_delta": false
+    },
+    {
+      "number": 35,
+      "record_id": "P2-IAC-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/35",
+      "updated_at": "2026-09-11T04:59:06Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-09-28",
+      "end": "2026-10-08",
+      "calendar_days": "11",
+      "working_days": "8",
+      "lead": "이권욱",
+      "support": "이하영",
+      "native_type": "Task",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 8,
+        "title": "G4 Cloud / VPN Ready",
+        "due_on": "2026-10-08T00:00:00Z"
+      },
+      "schedule_note": "10-05는 비근무일이다. OCI Go/No-Go 결과에 따라 VPN 입력과 경로를 갱신한다.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 36,
+      "record_id": "P2-OCI-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/36",
+      "updated_at": "2026-09-11T09:20:35Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-09-28",
+      "end": "2026-10-02",
+      "calendar_days": "5",
+      "working_days": "5",
+      "lead": "이권욱",
+      "support": "이하영",
+      "native_type": "Decision",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 8,
+        "title": "G4 Cloud / VPN Ready",
+        "due_on": "2026-10-08T00:00:00Z"
+      },
+      "schedule_note": "10-02 Go/No-Go를 넘기지 않는다. No-Go 시 Vendor Endpoint→AWS EC2+EIP Relay→Overlay 순으로 승인된 Fallback을 선택한다.",
+      "v18_description": true,
+      "milestone_delta": true,
+      "date_delta": false
+    },
+    {
+      "number": 37,
+      "record_id": "P2-VPN-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/37",
+      "updated_at": "2026-09-11T04:59:10Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-10-01",
+      "end": "2026-10-08",
+      "calendar_days": "8",
+      "working_days": "5",
+      "lead": "이권욱",
+      "support": "이하영",
+      "native_type": "Task",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 8,
+        "title": "G4 Cloud / VPN Ready",
+        "due_on": "2026-10-08T00:00:00Z"
+      },
+      "schedule_note": "10-05는 비근무일이다. OCI No-Go 시 D21에서 승인된 Fallback만 사용한다.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 38,
+      "record_id": "P2-ROSA-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/38",
+      "updated_at": "2026-09-11T04:59:12Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-10-06",
+      "end": "2026-10-16",
+      "calendar_days": "11",
+      "working_days": "8",
+      "lead": "이하영",
+      "support": "이권욱",
+      "native_type": "Task",
+      "assignees": [
+        "hayeounglee"
+      ],
+      "milestone": {
+        "number": 9,
+        "title": "G5 ROSA Application Ready",
+        "due_on": "2026-10-16T00:00:00Z"
+      },
+      "schedule_note": "10-09는 비근무일이다. 계정·Quota·리전 전제는 G4 이전에 확인하고 Cluster 범위를 최소화한다.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 39,
+      "record_id": "MS-G4-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/39",
+      "updated_at": "2026-09-11T04:59:14Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-10-08",
+      "end": "2026-10-08",
+      "calendar_days": "1",
+      "working_days": "1",
+      "lead": "이권욱",
+      "support": "이하영",
+      "native_type": "Milestone",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 8,
+        "title": "G4 Cloud / VPN Ready",
+        "due_on": "2026-10-08T00:00:00Z"
+      },
+      "schedule_note": "10-05 비근무를 반영한다. OCI No-Go 시 승인 Fallback 기준으로 판정한다.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 40,
+      "record_id": "DEC-P2-DNS-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/40",
+      "updated_at": "2026-09-11T09:20:48Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-10-12",
+      "end": "2026-10-16",
+      "calendar_days": "5",
+      "working_days": "5",
+      "lead": "이권욱",
+      "support": "이하영",
+      "native_type": "Decision",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 9,
+        "title": "G5 ROSA Application Ready",
+        "due_on": "2026-10-16T00:00:00Z"
+      },
+      "schedule_note": "Hybrid P0 E2E는 IP Endpoint를 허용하므로 본 P1 결정 미완료가 G5/G6를 자동 차단하지 않는다.",
+      "v18_description": true,
+      "milestone_delta": true,
+      "date_delta": false
+    },
+    {
+      "number": 41,
+      "record_id": "DEC-P2-OP-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/41",
+      "updated_at": "2026-09-11T09:21:01Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-10-12",
+      "end": "2026-10-16",
+      "calendar_days": "5",
+      "working_days": "5",
+      "lead": "이하영",
+      "support": "이권욱, 이재환",
+      "native_type": "Decision",
+      "assignees": [
+        "hayeounglee"
+      ],
+      "milestone": {
+        "number": 9,
+        "title": "G5 ROSA Application Ready",
+        "due_on": "2026-10-16T00:00:00Z"
+      },
+      "schedule_note": "D26에서 Direct Catalog 선택 시 P2-OP-01은 Cancelled 처리하고, Mirror 선택 시 P2-OP-01을 활성화한다.",
+      "v18_description": true,
+      "milestone_delta": true,
+      "date_delta": false
+    },
+    {
+      "number": 42,
+      "record_id": "DEC-P2-REG-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/42",
+      "updated_at": "2026-09-11T04:59:21Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-10-12",
+      "end": "2026-10-16",
+      "calendar_days": "5",
+      "working_days": "5",
+      "lead": "이하영",
+      "support": "이권욱, 이재환",
+      "native_type": "Decision",
+      "assignees": [
+        "hayeounglee"
+      ],
+      "milestone": {
+        "number": 9,
+        "title": "G5 ROSA Application Ready",
+        "due_on": "2026-10-16T00:00:00Z"
+      },
+      "schedule_note": "기준선의 ROSA→Harbor는 Optional이다. P2-APP-01 최종 Image 경로 전 10-16까지 확정한다.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 43,
+      "record_id": "P2-APP-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/43",
+      "updated_at": "2026-09-11T04:59:23Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-10-12",
+      "end": "2026-10-16",
+      "calendar_days": "5",
+      "working_days": "5",
+      "lead": "이재환",
+      "support": "이하영",
+      "native_type": "Task",
+      "assignees": [
+        "supreme33-kr"
+      ],
+      "milestone": {
+        "number": 9,
+        "title": "G5 ROSA Application Ready",
+        "due_on": "2026-10-16T00:00:00Z"
+      },
+      "schedule_note": "Image Source는 D22 결정에 따르며 Harbor 사용을 사전 가정하지 않는다. Manifest/Image 계약은 P2-CICD-01의 Runner 기반 ROSA Delivery에 연결한다.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 44,
+      "record_id": "P2-OADP-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/44",
+      "updated_at": "2026-09-11T04:59:25Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-10-15",
+      "end": "2026-10-22",
+      "calendar_days": "8",
+      "working_days": "6",
+      "lead": "이하영",
+      "support": "이권욱",
+      "native_type": "Task",
+      "assignees": [
+        "hayeounglee"
+      ],
+      "milestone": {
+        "number": 10,
+        "title": "G6 Hybrid Integration Ready",
+        "due_on": "2026-10-22T00:00:00Z"
+      },
+      "schedule_note": "Backup 생성만으로 DONE 처리하지 않고 Restore 또는 승인된 복구 검증이 필요하다.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 45,
+      "record_id": "MS-G5-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/45",
+      "updated_at": "2026-09-11T04:59:27Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-10-16",
+      "end": "2026-10-16",
+      "calendar_days": "1",
+      "working_days": "1",
+      "lead": "이하영",
+      "support": "이권욱, 이재환",
+      "native_type": "Milestone",
+      "assignees": [
+        "hayeounglee"
+      ],
+      "milestone": {
+        "number": 9,
+        "title": "G5 ROSA Application Ready",
+        "due_on": "2026-10-16T00:00:00Z"
+      },
+      "schedule_note": "Registry는 D22, Hybrid DNS는 D23을 따른다. D23 미적용은 P0 IP Endpoint 사용 시 Non-blocker다.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 46,
+      "record_id": "P2-CICD-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/46",
+      "updated_at": "2026-09-11T08:58:54Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-10-16",
+      "end": "2026-10-16",
+      "calendar_days": "1",
+      "working_days": "1",
+      "lead": "이권욱",
+      "support": "이하영, 이재환",
+      "native_type": "Task",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 9,
+        "title": "G5 ROSA Application Ready",
+        "due_on": "2026-10-16T00:00:00Z"
+      },
+      "schedule_note": "P2-ROSA-01과 P2-APP-01의 Manifest/Image 계약을 사용하고 Registry는 D22 결과를 따른다. G5 ROSA Application Ready에 연결한다. 2026-09-11 사용자 지시에 따라 End를 G5 목표 2026-10-16으로 앞당겼다. Start 10/16 유지, Calendar Days/Working Days 1/1. 선행 작업과 가용성에 따라 조정 가능한 계획이며 Runtime 완료 판정은 아니다.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": true
+    },
+    {
+      "number": 47,
+      "record_id": "P2-HYB-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/47",
+      "updated_at": "2026-09-11T04:59:29Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-10-16",
+      "end": "2026-10-22",
+      "calendar_days": "7",
+      "working_days": "5",
+      "lead": "이재환",
+      "support": "이권욱, 이하영",
+      "native_type": "Task",
+      "assignees": [
+        "supreme33-kr"
+      ],
+      "milestone": {
+        "number": 10,
+        "title": "G6 Hybrid Integration Ready",
+        "due_on": "2026-10-22T00:00:00Z"
+      },
+      "schedule_note": "Harbor는 D22에 따라 사용 또는 Cancelled 처리한다. Hybrid DNS는 D23에 따라 적용 또는 IP Endpoint로 검증한다.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 48,
+      "record_id": "P2-DNS-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/48",
+      "updated_at": "2026-09-11T09:21:14Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-10-19",
+      "end": "2026-10-20",
+      "calendar_days": "2",
+      "working_days": "2",
+      "lead": "이권욱",
+      "support": "이하영, 이재환",
+      "native_type": "Task",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 10,
+        "title": "G6 Hybrid Integration Ready",
+        "due_on": "2026-10-22T00:00:00Z"
+      },
+      "schedule_note": "DEC-P2-DNS-01 / D23 결정 결과가 미구현이면 Status=Cancelled와 결정 근거를 기록한다. 구현 시 Hybrid E2E IP Endpoint에 대한 영향을 검증한다.",
+      "v18_description": true,
+      "milestone_delta": true,
+      "date_delta": false
+    },
+    {
+      "number": 49,
+      "record_id": "P2-DOC-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/49",
+      "updated_at": "2026-09-11T04:59:31Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-10-19",
+      "end": "2026-10-23",
+      "calendar_days": "5",
+      "working_days": "5",
+      "lead": "이권욱",
+      "support": "이하영, 이재환",
+      "native_type": "Task",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 11,
+        "title": "Deliverable Freeze",
+        "due_on": "2026-10-23T00:00:00Z"
+      },
+      "schedule_note": "10-23 Deliverable Freeze와 DEC-CAL-P2-01을 함께 완료한다.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 50,
+      "record_id": "P2-E2E-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/50",
+      "updated_at": "2026-09-11T04:59:33Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-10-19",
+      "end": "2026-10-22",
+      "calendar_days": "4",
+      "working_days": "4",
+      "lead": "이재환",
+      "support": "이권욱, 이하영",
+      "native_type": "Task",
+      "assignees": [
+        "supreme33-kr"
+      ],
+      "milestone": {
+        "number": 10,
+        "title": "G6 Hybrid Integration Ready",
+        "due_on": "2026-10-22T00:00:00Z"
+      },
+      "schedule_note": "IP Endpoint와 Registry N/A 여부는 승인 Decision 결과를 Expected에 반영한다.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 51,
+      "record_id": "P2-OP-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/51",
+      "updated_at": "2026-09-11T09:21:44Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-10-19",
+      "end": "2026-10-20",
+      "calendar_days": "2",
+      "working_days": "2",
+      "lead": "이하영",
+      "support": "이권욱, 이재환",
+      "native_type": "Task",
+      "assignees": [
+        "hayeounglee"
+      ],
+      "milestone": {
+        "number": 10,
+        "title": "G6 Hybrid Integration Ready",
+        "due_on": "2026-10-22T00:00:00Z"
+      },
+      "schedule_note": "DEC-P2-OP-01 / D26에서 Direct Catalog를 선택하면 Status=Cancelled와 결정 근거를 기록한다. Mirror 선택 시 구현을 진행한다.",
+      "v18_description": true,
+      "milestone_delta": true,
+      "date_delta": false
+    },
+    {
+      "number": 52,
+      "record_id": "DEC-CAL-P2-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/52",
+      "updated_at": "2026-09-11T04:59:36Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-10-22",
+      "end": "2026-10-22",
+      "calendar_days": "1",
+      "working_days": "1",
+      "lead": "이권욱",
+      "support": "이하영, 이재환",
+      "native_type": "Decision",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 12,
+        "title": "Phase 2 Review",
+        "due_on": "2026-10-23T00:00:00Z"
+      },
+      "schedule_note": "교육장 주말 작업 불가를 반영해 10-22까지 평일 10-23 오후 Review의 참석자·시간을 확정한다. 상태는 To Do다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 53,
+      "record_id": "MS-G6-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/53",
+      "updated_at": "2026-09-11T04:59:38Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-10-22",
+      "end": "2026-10-22",
+      "calendar_days": "1",
+      "working_days": "1",
+      "lead": "이권욱",
+      "support": "이하영, 이재환",
+      "native_type": "Milestone",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 10,
+        "title": "G6 Hybrid Integration Ready",
+        "due_on": "2026-10-22T00:00:00Z"
+      },
+      "schedule_note": "Hybrid DNS와 Operator 공급망은 D23/D26 결과에 따라 구현 또는 Cancelled 처리한다. 같은 날 DEC-CAL-P2-01 검토를 시작해 Review 일정을 10-23까지 확정한다.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 54,
+      "record_id": "MS-DELIVERABLE-FREEZE-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/54",
+      "updated_at": "2026-09-11T04:59:40Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-10-23",
+      "end": "2026-10-23",
+      "calendar_days": "1",
+      "working_days": "1",
+      "lead": "이권욱",
+      "support": "이하영, 이재환",
+      "native_type": "Milestone",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 11,
+        "title": "Deliverable Freeze",
+        "due_on": "2026-10-23T00:00:00Z"
+      },
+      "schedule_note": "Freeze 이후 변경은 Review Action 또는 Change Request로만 허용한다.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 55,
+      "record_id": "P2-REV-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/55",
+      "updated_at": "2026-09-11T09:21:57Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-10-23",
+      "end": "2026-10-26",
+      "calendar_days": "4",
+      "working_days": "2",
+      "lead": "이권욱",
+      "support": "이하영, 이재환",
+      "native_type": "Task",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 13,
+        "title": "Project Close",
+        "due_on": "2026-10-26T00:00:00Z"
+      },
+      "schedule_note": "Review 실행일은 D24 결과를 따른다. 최종 Close 목표는 10-26이다.",
+      "v18_description": true,
+      "milestone_delta": true,
+      "date_delta": false
+    },
+    {
+      "number": 56,
+      "record_id": "MS-P2-REVIEW-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/56",
+      "updated_at": "2026-09-11T04:59:43Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-10-23",
+      "end": "2026-10-23",
+      "calendar_days": "1",
+      "working_days": "1",
+      "lead": "이권욱",
+      "support": "이하영, 이재환",
+      "native_type": "Milestone",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 12,
+        "title": "Phase 2 Review",
+        "due_on": "2026-10-23T00:00:00Z"
+      },
+      "schedule_note": "교육장 주말 작업 불가로 기존 10-24 토요일 대신 10-23 금요일 오후를 권장한다. G6/Deliverable Freeze 후 진행하고 참석자는 별도 확정한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 57,
+      "record_id": "MS-PROJECT-CLOSE-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/57",
+      "updated_at": "2026-09-11T04:59:45Z",
+      "status": "To Do",
+      "state": "open",
+      "closed_at": null,
+      "start": "2026-10-26",
+      "end": "2026-10-26",
+      "calendar_days": "1",
+      "working_days": "1",
+      "lead": "이권욱",
+      "support": "이하영, 이재환",
+      "native_type": "Milestone",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 13,
+        "title": "Project Close",
+        "due_on": "2026-10-26T00:00:00Z"
+      },
+      "schedule_note": "D24가 Review를 10-26 이후로 이동시키면 Project Close도 Change Request 대상이다.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 58,
+      "record_id": "CR-P1-ANS-01-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/58",
+      "updated_at": "2026-09-11T09:19:42Z",
+      "status": "Done",
+      "state": "closed",
+      "closed_at": "2026-09-09T09:52:36Z",
+      "start": "2026-09-04",
+      "end": "2026-09-07",
+      "calendar_days": "4",
+      "working_days": "2",
+      "lead": "이권욱",
+      "support": "이하영",
+      "native_type": "Change Request",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "G1 Infrastructure Ready",
+        "due_on": "2026-09-17T00:00:00Z"
+      },
+      "schedule_note": "2026-09-07 Runtime·멱등성·회귀·Rollback·무결성 증적과 이하영 승인 리뷰를 완료하고 이권욱 수동 승인으로 PR #1을 병합했다. GitHub Actions 실행은 0건이므로 CI PASS로 기록하지 않는다. v3.1.17의 `In Review` 표시는 발행 시점 스냅샷이며 다음 정본에서 `Done`으로 동기화한다.",
+      "v18_description": true,
+      "milestone_delta": true,
+      "date_delta": false
+    },
+    {
+      "number": 59,
+      "record_id": "D-ARC-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/59",
+      "updated_at": "2026-09-11T08:58:28Z",
+      "status": "Done",
+      "state": "closed",
+      "closed_at": "2026-09-09T09:53:09Z",
+      "start": "2026-08-24",
+      "end": "2026-08-26",
+      "calendar_days": "3",
+      "working_days": "3",
+      "lead": "이권욱",
+      "support": "이하영, 이재환",
+      "native_type": "Task",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "G0 Design Freeze",
+        "due_on": "2026-09-01T00:00:00Z"
+      },
+      "schedule_note": "2026-08-26 Architecture 설계 동결 완료. 본 티켓의 종결은 Phase 1 논리·물리 구조와 Interface 경계의 승인을 의미하며 개별 구성요소의 구현 완료를 의미하지 않는다. 이후 구조·배치·IP·포트·보안 경계 변경은 Change Request와 영향도 검토 후 신규 버전에 반영한다. 2026-09-11 사용자 확인으로 계획 End를 2026-08-26으로 정정하여 3일 기간과 일치시켰다.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": true
+    },
+    {
+      "number": 60,
+      "record_id": "D-NET-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/60",
+      "updated_at": "2026-09-11T04:59:52Z",
+      "status": "Done",
+      "state": "closed",
+      "closed_at": "2026-09-09T09:53:40Z",
+      "start": "2026-08-24",
+      "end": "2026-08-26",
+      "calendar_days": "3",
+      "working_days": "3",
+      "lead": "이권욱",
+      "support": "이하영",
+      "native_type": "Task",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "G0 Design Freeze",
+        "due_on": "2026-09-01T00:00:00Z"
+      },
+      "schedule_note": "2026-08-26 실제 완료. 기존 계획보다 Closure가 1일 연장되었으나 Network Design/Implementation/Evidence를 포함해 DONE 처리. 후속 구축 범위는 P1-K8S-01 및 P1-DNS-01로 이관한다.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 61,
+      "record_id": "D-WBS-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/61",
+      "updated_at": "2026-09-11T08:58:40Z",
+      "status": "Done",
+      "state": "closed",
+      "closed_at": "2026-09-09T09:54:09Z",
+      "start": "2026-08-24",
+      "end": "2026-08-26",
+      "calendar_days": "3",
+      "working_days": "3",
+      "lead": "이권욱",
+      "support": "이하영, 이재환",
+      "native_type": "Task",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "G0 Design Freeze",
+        "due_on": "2026-09-01T00:00:00Z"
+      },
+      "schedule_note": "2026-08-26 WBS·Backlog·Decision·Milestone·Interface 관리체계 동결 완료. 종결 티켓은 Closed Register에 보존하고 Remaining Backlog에서 제외한다. 이후 백로그 변경은 D-WBS-01 재개가 아니라 동결된 Change Control에 따른 Version Update로 관리한다. D-SEC-01 및 D17의 후속 상태는 본 티켓 종결과 분리한다. 2026-09-11 사용자 확인으로 실제 완료일을 2026-08-26으로 확정했다. 첨부 상단의 8/28은 정정 전 기록이다.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": true
+    },
+    {
+      "number": 62,
+      "record_id": "DEC-P1-ENTRY-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/62",
+      "updated_at": "2026-09-11T04:59:56Z",
+      "status": "Done",
+      "state": "closed",
+      "closed_at": "2026-09-09T09:54:41Z",
+      "start": "2026-08-27",
+      "end": "2026-08-31",
+      "calendar_days": "5",
+      "working_days": "3",
+      "lead": "이권욱",
+      "support": "이하영, 이재환",
+      "native_type": "Decision",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 3,
+        "title": "G2 Security / Feature Ready",
+        "due_on": "2026-09-21T00:00:00Z"
+      },
+      "schedule_note": "D18 PASS(2026-08-31). P1-APP-01 External Exposure와 P1-SEC-01 Allowlist/NetworkPolicy에 승인 결정을 전달한다. P1-LB-01 API LB와 P1-K8S-01 Cluster Bootstrap에는 Non-blocking이다.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 63,
+      "record_id": "DEC-P1-MON-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/63",
+      "updated_at": "2026-09-11T09:19:56Z",
+      "status": "Done",
+      "state": "closed",
+      "closed_at": "2026-09-09T09:55:13Z",
+      "start": "2026-08-31",
+      "end": "2026-08-31",
+      "calendar_days": "1",
+      "working_days": "1",
+      "lead": "이권욱",
+      "support": "이하영, 이재환",
+      "native_type": "Decision",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "G0 Design Freeze",
+        "due_on": "2026-09-01T00:00:00Z"
+      },
+      "schedule_note": "D33 Done/2026-08-31. 본 후보의 Closed/Decision Register에 연결. Runtime 14개 Acceptance는 P1-MON-01, P1 고도화는 P1-MON-02 책임이다.",
+      "v18_description": true,
+      "milestone_delta": true,
+      "date_delta": false
+    },
+    {
+      "number": 64,
+      "record_id": "DEC-P1-TLS-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/64",
+      "updated_at": "2026-09-11T05:00:01Z",
+      "status": "Done",
+      "state": "closed",
+      "closed_at": "2026-09-09T09:55:52Z",
+      "start": "2026-08-27",
+      "end": "2026-08-31",
+      "calendar_days": "5",
+      "working_days": "3",
+      "lead": "이권욱",
+      "support": "이하영",
+      "native_type": "Decision",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "G1 Infrastructure Ready",
+        "due_on": "2026-09-17T00:00:00Z"
+      },
+      "schedule_note": "D19 PASS(2026-08-31). Private CA + 서비스별 Leaf + Consumer CA Trust를 고정한다. Robot Account 설계·발급은 병행 가능하나 실제 로그인·Push/Pull Runtime Test는 CA Trust 적용 후 수행한다.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 65,
+      "record_id": "P1-ANS-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/65",
+      "updated_at": "2026-09-11T05:00:03Z",
+      "status": "Done",
+      "state": "closed",
+      "closed_at": "2026-09-09T09:56:22Z",
+      "start": "2026-08-27",
+      "end": "2026-09-01",
+      "calendar_days": "6",
+      "working_days": "4",
+      "lead": "이권욱",
+      "support": "이하영, 이재환",
+      "native_type": "Task",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "G1 Infrastructure Ready",
+        "due_on": "2026-09-17T00:00:00Z"
+      },
+      "schedule_note": "2026-08-28 TECHNICAL PASS 후 2026-08-31 이하영 Reviewer PASS·Approver APPROVED를 기록했다. HO-ANS-08·09는 PASS이며 P1-ANS-01은 Done으로 종결한다. HO-ANS-01~04는 후속 Ticket Acceptance로 이관하고 미완료 상태를 유지한다.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 66,
+      "record_id": "P1-LNX-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/66",
+      "updated_at": "2026-09-11T05:00:05Z",
+      "status": "Done",
+      "state": "closed",
+      "closed_at": "2026-09-09T09:56:50Z",
+      "start": "2026-08-24",
+      "end": "2026-08-26",
+      "calendar_days": "3",
+      "working_days": "3",
+      "lead": "이권욱",
+      "support": "이하영",
+      "native_type": "Task",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 2,
+        "title": "G1 Infrastructure Ready",
+        "due_on": "2026-09-17T00:00:00Z"
+      },
+      "schedule_note": "설계·사전구축 구간에서 2026-08-26 조기 완료. P1-LNX-01 완료판정은 Linux 필수조건과 Network Verify 기준이며 containerd/kubelet/kubeadm/API/Calico 동작은 포함하지 않는다. 해당 Role Check는 P1-K8S-01로 이관한다.",
+      "v18_description": true,
+      "milestone_delta": false,
+      "date_delta": false
+    },
+    {
+      "number": 67,
+      "record_id": "P1-NET-01",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/67",
+      "updated_at": "2026-09-11T09:20:10Z",
+      "status": "Done",
+      "state": "closed",
+      "closed_at": "2026-09-09T09:57:19Z",
+      "start": "2026-08-27",
+      "end": "2026-08-27",
+      "calendar_days": "1",
+      "working_days": "1",
+      "lead": "이권욱",
+      "support": "이하영",
+      "native_type": "Task",
+      "assignees": [
+        "GWONUK"
+      ],
+      "milestone": {
+        "number": 1,
+        "title": "G0 Design Freeze",
+        "due_on": "2026-09-01T00:00:00Z"
+      },
+      "schedule_note": "최초 계획은 2026-08-27 1일이었으나 D-NET-01 및 P1-LNX-01 통합 검증 증적이 2026-08-26 확보되어 조기 종결했다. Remaining Backlog에는 재등록하지 않고 Closed Ticket로 관리한다.",
+      "v18_description": true,
+      "milestone_delta": true,
+      "date_delta": false
+    }
+  ]
+}

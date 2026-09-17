@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "target_version": "3.1.19",
+  "source_decision_at": "2026-09-16T12:38:19Z",
+  "parent_candidate_head": "14876f4d59caeef096f6caf2a76d9957546eea4d",
+  "collection_scope": "TARGETED_P1_K8S_MON_LEAD_INPUTS_WITH_PR7_PENDING_REVIEW",
+  "status": "COLLECTED_APPROVED_INPUT_RUNTIME_SEPARATE_PR7_PENDING",
+  "canonical_release": "3.1.18",
+  "changes": [
+    {
+      "record_id": "P1-K8S-01",
+      "classification": "APPROVED_INPUT",
+      "source": "https://github.com/321Team/fds-project-baseline/issues/10#issuecomment-5697547621",
+      "approved": {
+        "oid01": {
+          "source": "10.250.10.10/32",
+          "identity": "svc_ansible",
+          "destination": "K8S Nodes TCP22",
+          "snat": "PROHIBITED",
+          "runtime_apply": "HOLD_UNTIL_6_OF_6_READY"
+        },
+        "storage_worker": "k8s-worker03 (10.1.93.108)",
+        "storage_paths": [
+          "/home/fds-local-pv/prometheus",
+          "/home/fds-local-pv/grafana",
+          "/home/fds-local-pv/alertmanager"
+        ],
+        "pvc_defaults": {
+          "prometheus": "20Gi",
+          "grafana": "5Gi",
+          "alertmanager": "2Gi",
+          "prometheus_retention": "15d",
+          "prometheus_retention_size_max": "16GB"
+        }
+      },
+      "runtime": "NOT_RUN"
+    },
+    {
+      "record_id": "ICR-D-NET-01-01",
+      "classification": "APPROVED_DECISION_INPUT_INCOMPLETE",
+      "source": "https://github.com/321Team/fds-project-baseline/issues/10#issuecomment-5697547621",
+      "approved": {
+        "ntp_source_for_nodes": "control01",
+        "transport": "UDP/123 internal",
+        "offset_max": "100ms",
+        "measurement": "60s x 6",
+        "sync_lost_fail": "5m",
+        "reboot_resync": "within 5m"
+      },
+      "pending": [
+        "control01 upstream/time authority",
+        "final HEP/GNP UDP123 rules bound to upstream design"
+      ],
+      "runtime": "NOT_RUN"
+    },
+    {
+      "record_id": "P1-MON-01",
+      "classification": "APPROVED_CONFIG_DEFAULT",
+      "source": "https://github.com/321Team/fds-project-baseline/issues/10#issuecomment-5697547621",
+      "storage": {
+        "worker": "k8s-worker03",
+        "pvc": {
+          "prometheus": "20Gi",
+          "grafana": "5Gi",
+          "alertmanager": "2Gi"
+        },
+        "adjustable_by_runtime_usage": true
+      },
+      "runtime": "NOT_RUN"
+    },
+    {
+      "record_id": "P1-SEC-01/infra-kubernetes#7",
+      "classification": "PENDING_REVIEW",
+      "source": "https://github.com/321Team/infra-kubernetes/pull/7",
+      "reason": [
+        "existing SEC-01/02/07/08 blockers not proven resolved",
+        "NTP control01 decision not yet fully reflected",
+        "current-head independent approval pending",
+        "CI NOT RUN",
+        "Runtime NOT RUN"
+      ]
+    }
+  ],
+  "evidence": {
+    "worker03_user_supplied_file": "server07_worker03.txt",
+    "worker03_file_sha256": "d7bef0ef1c413dd7e85a221fe8db1563de2b48f2aae4bf4a0e23b812df12287a",
+    "worker03_home_available": "~163G XFS",
+    "evidence_boundary": "USER_SUPPLIED_SOURCE_NOT_YET_GITHUB_EVIDENCE_ARCHIVE"
+  },
+  "unchanged": {
+    "canonical_publication": "NOT_RELEASED",
+    "gate": "NOT_ADVANCED",
+    "runtime_acceptance": "NOT_ADVANCED"
+  },
+  "remaining": [
+    "Resolve PR #7 current-head blockers and obtain independent review",
+    "Define control01 NTP upstream/time authority before final NTP runtime configuration",
+    "Perform storage preapply owner/mode/SELinux and Bound/restart persistence runtime evidence",
+    "Integrate approved inputs into v19 Baseline/Ticket Pack/Interface/Release artifacts"
+  ]
+}

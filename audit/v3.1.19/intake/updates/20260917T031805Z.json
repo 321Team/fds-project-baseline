@@ -1,0 +1,140 @@
+{
+  "schema": "v19-intake-update-1",
+  "collected_at": "2026-09-17T03:18:05Z",
+  "status": "CENTRAL_APP_WORKFLOW_PREPARED_RUNTIME_PENDING",
+  "authorization": "사용자: 우리가 할 수 있는 권장안으로 착수; v19 후보 지속 수집 기존 지시",
+  "canonical": "docs-v3.1.18",
+  "candidate_branch": "release/v3.1.19",
+  "sources": {
+    "infra_cicd_pr19": {
+      "url": "https://github.com/321Team/infra-cicd/pull/19",
+      "previous_head": "602e376adb321190f9143c5358afd5c31ec7d7a9",
+      "head": "65d2cc8aca147b0b9929905b27c7189becd4cbc8",
+      "base_sha": "90f2f37d9e1ab77252b50e80bca339cfef48bd51",
+      "updated_at": "2026-09-17T03:17:51Z",
+      "body_sha256": "6302659a5f6cc5285f78f46a2372b57f702f006aa31e7834acd507c690dad3a4",
+      "merged": false,
+      "state": "open",
+      "requested_reviewer": "supreme33-kr",
+      "submitted_reviews": 0
+    },
+    "infra_cicd_issue11": {
+      "url": "https://github.com/321Team/infra-cicd/issues/11",
+      "updated_at": "2026-09-17T03:17:53Z",
+      "body_sha256": "262287738cd79ff0d97a6f7d98ab4de7c7877c8f3744795e5a6304c414c3f127"
+    },
+    "app_repository": {
+      "url": "https://github.com/supreme33-kr/fds-msa",
+      "observed_main": "254b82231f8af79a06419b581174647bbccbe2bc",
+      "private": false,
+      "visibility": "public",
+      "source_execution_approval": "PENDING_FINAL_HANDOFF",
+      "visibility_change_performed": false
+    }
+  },
+  "change": {
+    "workflow": "main workflow_dispatch only; contents:read; dedicated Runner; fresh per-Run/Attempt CICD checkout; no dispatch input override",
+    "checkout": "anonymous HTTPS exact40SHA fetch into new bare Git; no app worktree/hooks/filters/submodules/LFS; TLS verification; redirects and inherited credentials disabled",
+    "handoff": "committed Dockerfile2 exact candidate bytes, lock4 supply hashes, requirements4 original hashes, declared Unit/Contract scope; fail before app execution on mismatch",
+    "execution": "existing schema2 Test→Build→Scan; handoff/config/Run/Attempt binding; preserve PASS0/BLOCK10/FAIL; no Push/Deploy",
+    "files": [
+      {
+        "path": ".github/workflows/app-test-build-scan.yml",
+        "sha256": "85e9f293e78cb5944a507286a99cf3ce72f06b9ff78db90f491fb8b962b6454d"
+      },
+      {
+        "path": "tools/delivery/app_workflow.py",
+        "sha256": "a4bab9d99940a41a62f8177805383f512548ab921c50be83e1b706b4f7161a55"
+      },
+      {
+        "path": "tools/delivery/test_app_workflow.py",
+        "sha256": "df92b3af3dfc7adcb1b8ca3c477036aa7cb7366f2d54a1766a728195406f4f03"
+      },
+      {
+        "path": "docs/app-workflow.md",
+        "sha256": "561579611247d5471e38790c270cbb5a2d38398f4a7ae9af1e2546e2dc5093f2"
+      },
+      {
+        "path": "docs/offline-build-scan.md",
+        "sha256": "2645b153620f0925e180b805def9ba5bcbf03b31c7070def6a2b8c059ecbaf8d"
+      },
+      {
+        "path": "docs/app-build-scan.md",
+        "sha256": "ac5c4bb2ffb26a5d1a3873396d383a512fb0ac33c3b9df079ff5933853739a60"
+      }
+    ],
+    "remote_bytes_verified": 6,
+    "config_modified": false,
+    "app_repository_modified": false
+  },
+  "validation": {
+    "local_tests": {
+      "passed": 139,
+      "groups": [
+        17,
+        11,
+        47,
+        64
+      ],
+      "new_tests": 17,
+      "skipped": 0
+    },
+    "static": [
+      "YAML structure",
+      "bash syntax",
+      "smoke template equality",
+      "whitespace check"
+    ],
+    "ci": {
+      "run_id": 35177513645,
+      "job_id": 105062360112,
+      "url": "https://github.com/321Team/infra-cicd/actions/runs/35177513645",
+      "passed": 139,
+      "groups": [
+        17,
+        11,
+        47,
+        64
+      ],
+      "skipped": 0,
+      "source_validation": "PASS",
+      "tested_head": "65d2cc8aca147b0b9929905b27c7189becd4cbc8",
+      "merge_abbrev": "11ba1ec",
+      "raw_log_sha256": "294901ab78e0a27d74058e6d26a8efe0365cd38987ac722a85313c6c920028bc",
+      "raw_log_verified": true,
+      "raw_log_embedded": false
+    },
+    "scope": "real temporary Git Commit/bare fetch/object-file checks; transport uses local fixture; downstream Build/Scan uses mocks; no Runner app Runtime",
+    "default_config_cli": "APP_HANDOFF_PENDING; exit1; before app fetch"
+  },
+  "remaining": [
+    {
+      "owner": "이재환",
+      "work": "후보 Dockerfile/lock 반영 및 최종40자리 SHA/실행 승인/API Unit 범위 인계"
+    },
+    {
+      "owner": "이권욱",
+      "work": "최종 인계 config 반영과 대조; 전체 변경 리뷰 및 main 병합 후 중앙 수동 Runtime 실행"
+    },
+    {
+      "owner": "이재환",
+      "work": "PR19 최신 전체 HEAD 독립 리뷰"
+    }
+  ],
+  "limits": [
+    "Actual Runner anonymous GitHub fetch not executed; public API metadata is not network runtime evidence.",
+    "Private SCM target and currently public app repo differ; no visibility approval/change. Private conversion needs separately reviewed read-only authentication.",
+    "Secrets endpoint unsupported by connector; no inference of absent credentials.",
+    "Existing supply/base probe Runtime PASS does not prove actual app execution.",
+    "No main/release/tag publication or operational workflow dispatch.",
+    "Candidate prior CI startup_failure cause remains unverified; this update does not claim it resolved."
+  ],
+  "state": {
+    "SUPPLY_RUNTIME": "PASS",
+    "BASE_PROBE_RUNTIME": "PASS",
+    "APP_TEST_BUILD_SCAN": "NOT_EXECUTED",
+    "Runtime_AC": "1/10",
+    "DELIVERY_GATE": "NOT_VERIFIED",
+    "PUBLICATION": "NOT_READY"
+  }
+}

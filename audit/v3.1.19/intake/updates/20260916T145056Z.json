@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "target_version": "3.1.19",
+  "collected_at": "2026-09-16T14:50:56.747837+00:00",
+  "parent_candidate_head": "b16db0e0f9a0496cb71e58945cb1c2c8de363ead",
+  "collection_scope": "TARGETED_CP1_HANDOFF_PREPARATION_FOLLOWUP",
+  "source_commit": "ed53205fb142c86715281cbe4eca6a44b0171c90",
+  "source_url": "https://github.com/321Team/infra-kubernetes/commit/ed53205fb142c86715281cbe4eca6a44b0171c90",
+  "user_instruction": "착수",
+  "classification": "PREPARATION_FIX_IMPLEMENTED_NOT_RUNTIME_APPROVAL",
+  "changes": [
+    "align distributed acceptance template with existing producer contract",
+    "test the distributed artifact, not only copied validator constants",
+    "refresh changed source manifest entries",
+    "specify original receipt/new change/acceptance/consumer/expiry linkage"
+  ],
+  "verification": {
+    "scope": "STATIC_MOCK_ONLY",
+    "test_files": 2,
+    "passed": 61,
+    "runtime": false,
+    "ci": false
+  },
+  "unchanged": {
+    "runtime_executables": true,
+    "firewall_policy": true,
+    "receipt_state_gate": true,
+    "canonical_release": "3.1.18",
+    "runtime_acceptance": "NOT_ADVANCED",
+    "icr_ac_completed": 0,
+    "icr_ac_total": 20
+  },
+  "pending": [
+    "exact operational rule scope and protection/lifetime/rollback end state",
+    "implementation of the new-state receipt consumer after scope determination",
+    "actual independent review and runtime acceptance"
+  ],
+  "no_new_lab_run_or_upload_requested": true
+}
