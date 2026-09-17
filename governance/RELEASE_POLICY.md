@@ -1,5 +1,7 @@
 # Canonical Document Release Policy
 
+2026-09-18 승인 절차 개정: [코드 병합 독립 리뷰와 Lead 위임 정책](REVIEW_AUTHORITY_POLICY.md)을 적용한다. 독립 리뷰는 코드/혼합 PR 병합에 한정하며, 문서만 변경한 PR·최종화·발행은 정본 Lead가 검토·결정한다.
+
 ## 1. Branch model
 
 - `main`: approved canonical documents only.
@@ -85,7 +87,8 @@ A release must not be merged when any of the following remains unresolved:
 
 ## 5. Approval and traceability
 
-- Review owners: `@GWONUK`, `@hayeounglee`
+- 정본 Lead는 기존 배정을 유지한다. 코드 변경 Reviewer 경로는 `@GWONUK`, `@hayeounglee`를 유지하되 작성자 자신의 독립 승인은 인정하지 않는다.
+- 문서 전용 PR은 Lead가 직접 검토·병합할 수 있다. 독립 리뷰가 불필요해도 정확한 HEAD, 필수 산출물·무결성 확인과 결정 기록은 유지한다.
 - The PR must record scope, changed artifacts, validation results, and known limitations.
 - The approved candidate HEAD and its content-merge commit are recorded as review evidence.
 - A version tag such as `docs-v3.1.17` fixes the finalization merge commit as the published canonical release point. This avoids recursive commits made only to record their own SHA.
@@ -95,9 +98,9 @@ A release must not be merged when any of the following remains unresolved:
 GitHub Free에서 Private 저장소 Ruleset 또는 Branch Protection을 적용할 수 없으면 다음 보상 통제를 사용한다.
 
 - 저장소를 Public으로 전환하지 않는다.
-- 모든 변경은 release branch와 Pull Request로 제출한다.
-- 최소 1인의 독립 Reviewer 승인을 기록한다.
-- 승인 운영자가 검토 대상 Head Commit SHA와 SHA-256 검증 결과를 확인한 뒤 수동 Merge한다.
+- 정본 후보는 release branch와 Pull Request로 제출한다. 운영 정책만 변경하는 경우 별도 docs branch의 PR을 사용할 수 있으며 main 직접 Push는 금지한다.
+- 코드/실행 설정 변경을 포함한 PR에만 최소 1인의 작성자 외 독립 Reviewer 검토·승인을 기록한다. 문서 전용 PR은 Lead의 검토·결정 기록으로 처리한다.
+- 정본 Lead가 검토 대상 Head Commit SHA와 SHA-256 검증 결과를 확인한 뒤 권한 있는 운영자가 수동 Merge한다. 같은 문서의 최종화·Tag·발행에 독립 승인을 반복 요구하지 않는다.
 - 직접 `main` Push, 자동 Merge, CI 직후 자동 정본 배포를 금지한다.
 - GitHub Actions 실행이 없으면 로컬 검증 결과만 기록하며 CI PASS로 오인 표시하지 않는다.
 - Merge 후 `CURRENT.md`, Release 상태 및 Tag를 별도 finalization 변경으로 확정한다.
