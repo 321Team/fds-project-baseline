@@ -1,6 +1,6 @@
 # FDS v3.1.19 Canonical Ticket Update Pack
 
-상태: CANDIDATE / NOT RELEASED. 기준 2026-09-17 20:28 KST.
+상태: RELEASED / FINALIZATION. 내용 승인·병합 완료; 최종화 승인·게시 별도. 기준 2026-09-17 20:28 KST.
 
 전체 67건 / 일정관리 58건 / 역사적 종결 9건 / Milestone 67/67건. 상태 집계: Done 18, In Progress 11, To Do 38.
 

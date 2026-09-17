@@ -2,7 +2,7 @@
 # On-Premises / Hybrid FDS 프로젝트 Implementation Baseline v3.1.19
 
 > **Release:** v3.1.19  
-> **Status:** CANDIDATE / NOT RELEASED — 최종 HEAD 독립 리뷰 대기  
+> **Status:** RELEASED / FINALIZATION — 내용 승인·병합 완료; 최종화 승인·게시 별도  
 > **팀 프로젝트 착수일:** 2026-08-24  
 > **팀 구성:** 3인  
 > **1차 부제:** MSA 기반 거래 시스템 구축 및 FDS 모니터링  
@@ -16,7 +16,7 @@
 
 기준 2026-09-17 20:28 KST. 전체 67건 / 일정관리 58건 / 역사적 종결 9건 / Milestone 67/67건. 상태 집계: Done 18, In Progress 11, To Do 38.
 
-운영 정본은 발행 v3.1.18이다. 이 문서는 승인 입력·현재 티켓 속성·후속 증적을 통합한 v19 후보이며 이하영의 최종 HEAD 독립 승인과 내용 병합·최종화·발행이 필요하다. 아래 §0의 승인 변경과 §16의 현행 상태가 과거 버전의 당시 상태보다 우선한다. 과거 버전 명칭·날짜는 이력으로 보존한다.
+v19 내용은 이하영의 독립 승인 후 PR #73으로 병합됐다. 이 변경은 배포 메타데이터 최종화이며 최종화 PR 승인·병합과 GitHub Tag/Asset 게시 검증이 필요하다. 실제 발행 여부는 CURRENT와 Release API를 따른다. 아래 §0의 승인 변경과 §16의 현행 상태가 과거 버전의 당시 상태보다 우선한다. 과거 버전 명칭·날짜는 이력으로 보존한다.
 
 ## 승인 입력과 적용 경계
 
@@ -83,13 +83,13 @@ v3.1.17은 GitHub Canonical Baseline Repository / Integrity Correction Release C
 
 | Deliverable | Version | Status | Freeze Ticket |
 |---|---|---|---|
-| `FDS_Project_Implementation_Baseline_v3.1.19.md` | v3.1.19 | CANDIDATE / REVIEW PENDING | v3.1.19 누적 변경 통합 / PR #73 최종 HEAD 검토 대기 |
+| `FDS_Project_Implementation_Baseline_v3.1.19.md` | v3.1.19 | RELEASED / FINALIZATION | v3.1.19 누적 변경 통합 / PR #73 승인·내용 병합 완료 |
 | `D37_GitHub_Canonical_Baseline_Repository_and_v3.1.17_Release_Record_v1.0.md` | v1.0 | APPROVED / RELEASED | PR #1 approved and merged; finalization metadata synchronized |
-| `FDS_v3.1.19_WBS_and_Gantt_v1.0.xlsx` | v1.0 | CANDIDATE / REVIEW PENDING | v3.1.19 상태·58건 집계·가용일 정합성 |
-| `FDS_v3.1.19_Canonical_Ticket_Update_Pack_v1.0.md` | v1.0 | CANDIDATE / REVIEW PENDING | v3.1.19 Description 후보 / 발행 후 적용 |
-| `FDS_Project_Implementation_Baseline_Release_Notes_v3.1.19.md` | v3.1.19 | CANDIDATE / REVIEW PENDING | v3.1.19 통합 변경 |
-| `FDS_Document_Distribution_Manifest_v3.1.19.md` | v3.1.19 | CANDIDATE / REVIEW PENDING | v3.1.19 배포 무결성 |
-| `FDS_v3.1.19_Canonical_Status.html` | v3.1.19 | CANDIDATE / REVIEW PENDING | v3.1.19 현재 상태 스냅샷 |
+| `FDS_v3.1.19_WBS_and_Gantt_v1.0.xlsx` | v1.0 | RELEASED / FINALIZATION | v3.1.19 상태·58건 집계·가용일 정합성 |
+| `FDS_v3.1.19_Canonical_Ticket_Update_Pack_v1.0.md` | v1.0 | RELEASED / FINALIZATION | v3.1.19 Description 후보 / 발행 후 적용 |
+| `FDS_Project_Implementation_Baseline_Release_Notes_v3.1.19.md` | v3.1.19 | RELEASED / FINALIZATION | v3.1.19 통합 변경 |
+| `FDS_Document_Distribution_Manifest_v3.1.19.md` | v3.1.19 | RELEASED / FINALIZATION | v3.1.19 배포 무결성 |
+| `FDS_v3.1.19_Canonical_Status.html` | v3.1.19 | RELEASED / FINALIZATION | v3.1.19 현재 상태 스냅샷 |
 | `FDS_Project_Implementation_Baseline_v3.1.16.md` | v3.1.16 | SUPERSEDED | D36 / Team Availability / Phase 1 Schedule & Status Update |
 | `D36_Team_Availability_and_Status_Update_Record_v1.0.md` | v1.0 | APPROVED | 09-04 이재환 개인 휴가 / 연동 일정 / 상태 동기화 |
 | `FDS_v3.1.16_WBS_and_Gantt_v1.0.xlsx` | v1.0 | RELEASED | D36 / WBS·Gantt·Team Calendar |

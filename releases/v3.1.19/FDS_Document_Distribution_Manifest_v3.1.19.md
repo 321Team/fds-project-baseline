@@ -1,6 +1,6 @@
 # FDS v3.1.19 Distribution Manifest
 
-CANDIDATE / REVIEW_PENDING / NOT_RELEASED. 운영 정본은 docs-v3.1.18이다.
+RELEASED / FINALIZATION. 내용 PR #73 승인·병합 완료. 최종화 PR 승인·병합 후 적용할 메타데이터이며 실제 GitHub 게시 상태는 Release API로 확인한다.
 
 Baseline·Ticket Pack·67개 Description/원문·58행 WBS/Gantt·WEB·아키텍처·Release Notes·Interface/Decision/CR·Milestone·검증 도구와 입력 이력을 포함한다. WBS 원본은 ZIP과 독립 Release Asset에서 같은 바이트로 제공한다.
 
@@ -11,12 +11,13 @@ Baseline·Ticket Pack·67개 Description/원문·58행 WBS/Gantt·WEB·아키텍
 | `.github/CODEOWNERS` | 179 | `303ebb0af1b31c1666c06157166695d6f51a5fbaa1a8218658a8f2c380cb7087` |
 | `.github/workflows/canonical-integrity.yml` | 825 | `ff51d2595e1738db84604bad32ad11c10b216416dff8ccca7e63847bfe3aee68` |
 | `.github/workflows/project-sync.yml` | 2435 | `f62cf13be64ec93d402a5c9c532b8dbc6fefd0f95e60f9a730a541639cfdb249` |
-| `CURRENT.md` | 2149 | `c0c3a60c33d00fee193233874e4f2226d93f603068f7c2c36341c11cc4e5942d` |
+| `CURRENT.md` | 2466 | `19a02d809d564436fa0edae561032a04951abeb6e3f047d6f4f3643e3128b0a2` |
 | `architecture/v3.1.19/Approved_Change_View.md` | 1962 | `cc0904d7ac4c518ba6f8dacbf36c1e70b1a29ad3e2a05ef8a4c1d2c1fbce42c2` |
 | `architecture/v3.1.19/Approved_Change_View.svg` | 1533 | `460f682d79f383c8f0a02418752eb55afbacc7deab091e9374f4169650d433d1` |
 | `audit/v3.1.19/COLLECTION_POLICY.md` | 3128 | `d0bed331a4b8fa4e85f49607be9401f00c42fb85176844524ead745d6abc04a8` |
-| `audit/v3.1.19/INTAKE_SHA256SUMS` | 8655 | `2d32b9950668106dd71c8f01dc28be82680d81b9016fabf9834ec67bfbae4b21` |
-| `audit/v3.1.19/README.md` | 1477 | `20312c35de95c97ecaf2e02298ae00e7a34b960c3de6b0ef7fb3b044f55aefab` |
+| `audit/v3.1.19/INTAKE_SHA256SUMS` | 8655 | `a2983dacb5dd39e16f7971260e30e630289fb19364b6a5ff34f4a8481a0d6c44` |
+| `audit/v3.1.19/README.md` | 1702 | `931d8315174403332ababb2afc477e567cf4c2757e56caf87f06e33c3355de36` |
+| `audit/v3.1.19/finalization-validation.json` | 5106 | `e5e615ef37549f2a378cb5da4663f1d316715f67f334bf51eef6cd1ddc93e89f` |
 | `audit/v3.1.19/intake/icr-cni-simplification-20260916.md` | 6334 | `2bfbd0aa19884a063ee21fc8198f9712a05578f669d0e3b260ca93717f4d248b` |
 | `audit/v3.1.19/intake/initial-snapshot.json` | 62775 | `375b1553f9d69fa1c98e233d9c2e77ad0d659c0d127a2ef16334bbdb78b0506c` |
 | `audit/v3.1.19/intake/p1-cicd-base-metadata-supply-20260917.md` | 5725 | `68f54cf459100af8a49a17f57ed4faabc844854665abfe17184b3741d6257d2e` |
@@ -81,7 +82,7 @@ Baseline·Ticket Pack·67개 Description/원문·58행 WBS/Gantt·WEB·아키텍
 | `audit/v3.1.19/integration/review-response.md` | 2734 | `b31b9c4296d1560d66f2a8bc20c186481320d8ee4d062148d9f08646ef71c329` |
 | `audit/v3.1.19/integration/source-index.json` | 14813 | `15174aeb3afff830a598752c783f1e90c92b2fcafb16f4e8adbdd9ca17750474` |
 | `audit/v3.1.19/integration/verification.json` | 622 | `e756887baeeb353f670505080bfa04f84a243279712b932cf169a26653f163e2` |
-| `baseline/FDS_Project_Implementation_Baseline_v3.1.19.md` | 114027 | `624de7a27a5df46da6693ee6abb249719a2c8cdb914d9a7e1fc384d3275aaac9` |
+| `baseline/FDS_Project_Implementation_Baseline_v3.1.19.md` | 114079 | `b887b1df699cb8d0962b862594c4069336ff3e21a17203e559aa2ce0cbb270b9` |
 | `governance/GITHUB_IDENTITY_MAP.md` | 1411 | `162910ee52843352aa5a868cb79bc76bf7b6ea5ddde35f022d1a7ba34c3ba2bc` |
 | `governance/GITHUB_LABEL_SCHEMA.md` | 4529 | `9d07c160d20b8e43b90ca1047b0c263ddcad2f3d2af968c3a583c6a69e9bd8ff` |
 | `governance/GITHUB_MILESTONE_MAP.md` | 8753 | `fa661d2afd3b35585c62bd32c0170d17ba41a01d74b332bb39d274348af1a6f7` |
@@ -91,9 +92,11 @@ Baseline·Ticket Pack·67개 Description/원문·58행 WBS/Gantt·WEB·아키텍
 | `governance/TICKET_SYNC_RUNBOOK.md` | 4359 | `eae4da7f455e01c52ed3a0ccee5e66334f4a7443240568da5cc25010728a073e` |
 | `governance/ticket-sync-map.json` | 107196 | `deae909490f3259120618ce1f2516ab8303ed54c94a2d6c78efdbaaa874a95e7` |
 | `releases/v3.1.19/FDS_Canonical_Consolidation_Record_v3.1.19.md` | 3521 | `e5f1922696a2e63d08ce109de31f8675a31fe2c3a3d6fa76d5d405fef645a8a0` |
-| `releases/v3.1.19/FDS_Interface_Decision_CR_Register_v3.1.19.md` | 19214 | `9fd0e8f37f2ead658c8422396794b4081338089a72cb963b800ae92d4897db95` |
-| `releases/v3.1.19/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.19.md` | 3693 | `52fbe07f663a8339dd97790d76cecd6580f2993760b74b848fa9c37df4eaf407` |
-| `releases/v3.1.19/FDS_Release_Finalization_Plan_v3.1.19.md` | 1327 | `b62f52fa48eb5ae13ddd7f459e18cba3a0fee88edf62c38624bd184dfa89f440` |
+| `releases/v3.1.19/FDS_GitHub_Release_Body_v3.1.19.md` | 1287 | `06bae8f1ca1eccb2b92b32eeab9f86544bf1390775dec0ed4c60f81688b6cc48` |
+| `releases/v3.1.19/FDS_Interface_Decision_CR_Register_v3.1.19.md` | 19329 | `fa975dacaef7a63ae1d6d8aede1be5115d19f8c503915151a8b3dacabae15971` |
+| `releases/v3.1.19/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.19.md` | 3906 | `ec4dec45ec3a5349a49f16ca3fdd692921b53ae2e51fef2f865a883969a326c0` |
+| `releases/v3.1.19/FDS_Release_Finalization_Plan_v3.1.19.md` | 1353 | `831bf6a832cca54fbe8c62182ca794d244cb7153883e81cfefde51b22de98202` |
+| `releases/v3.1.19/FDS_Release_Finalization_Record_v3.1.19.md` | 3273 | `6fb436551a8e9e9fd932653ba2c338e291b98d55fa77e96f746d949d5cab0e2a` |
 | `releases/v3.1.19/FDS_Repository_Integration_Status_v3.1.19.md` | 11644 | `3ef576802bc535c6ffcd167a6f85e35bed3796baef98dc6a1e2f848a04076e3a` |
 | `scripts/build-canonical-package.py` | 1322 | `3cd8825ae9a84e680aae361728833c80f1e17bc60f70127d4f3d19f19a5cb299` |
 | `scripts/project_sync/core.py` | 13140 | `59371d592a1468354719421b6c31bc76483f95f77bfe437a4f4b6ac6ef305211` |
@@ -103,13 +106,13 @@ Baseline·Ticket Pack·67개 Description/원문·58행 WBS/Gantt·WEB·아키텍
 | `scripts/verify-canonical-release.sh` | 1258 | `8ce9d4c4dd5a5ace016c6a43c702c581155c27219d832ffc05374cce95c14706` |
 | `scripts/verify-document-secrets.py` | 1825 | `f4178dacf14e7b9056a4029c80cc58b695d8cbb55453edcd69536b6fecf56cbb` |
 | `scripts/verify-v18-candidate.py` | 9796 | `aac7bf1e5f8ff117211be2981f269cb0c2f752fdc28e0ae01022da51caddc60a` |
-| `scripts/verify-v19-candidate.py` | 6585 | `920bfccbfbc25426137d9ee36b5af4f7143b7f1c1bba5e1e717b2b2e611eba60` |
+| `scripts/verify-v19-candidate.py` | 6827 | `088a8222b2cfa934f3f29863352625254e825227bc8d6a2f47eb31028df911e6` |
 | `scripts/verify-wbs-gantt-distribution.sh` | 3259 | `139e45ba113d08df98bd58f7b4ad864822b459dd10e04422e6fe12ff63c7c774` |
 | `tests/test_canonical_secret_gate.py` | 2366 | `7b119026cc6ad765bf8c81fee08812a2b8cbfeb4c4c5889b43a199e996c10d50` |
 | `tests/test_document_secrets.py` | 1476 | `8a3acca4da0e208968e6446f3e94c887d4ed6bf83df001ab1a75cab624f8891d` |
 | `tests/test_project_sync.py` | 11598 | `f16b4129056e03a36ff113b60d528e18e632ed431e4fd47fe573a02dd614c19b` |
 | `tests/test_ticket_sync.py` | 6171 | `e2d030151ade38c0e0506f2b0f64a69f19d7f561bbb8072a8d7b8c57a7ca1bef` |
-| `tickets/FDS_v3.1.19_Canonical_Ticket_Update_Pack_v1.0.md` | 25043 | `4b867920629f9a27831a3e9f18b8271896ad2a844dd13294fefebe6515d6897e` |
+| `tickets/FDS_v3.1.19_Canonical_Ticket_Update_Pack_v1.0.md` | 25105 | `6be9490695003bf4e85acdecefd7706e37e17911951d6ebfa00fb54bf3645dc0` |
 | `tickets/v3.1.19/canonical-records.json` | 209411 | `f3cb3d068dbcd3e9822be44dc25a1e26a9bed7fe4f615b6d7e00f1958b74cd2c` |
 | `tickets/v3.1.19/descriptions/CR-P1-ANS-01-01.md` | 25471 | `845df9242cef2e536f627742c035ec14e790218ebed3c0824ec28ca416e9db33` |
 | `tickets/v3.1.19/descriptions/CR-P1-MON-01-01.md` | 26228 | `d4d4898c5b1fc62690aab5775fde6ed7d9ac6134b32a47fd7feb5db1c4154800` |
@@ -245,5 +248,5 @@ Baseline·Ticket Pack·67개 Description/원문·58행 WBS/Gantt·WEB·아키텍
 | `tickets/v3.1.19/sources/issue-78.json` | 123565 | `aa1b3da38b799731941b2d4ce1d231572e165aa009f0cf1f5cb4aab0fc45246c` |
 | `tickets/v3.1.19/sources/issue-8.json` | 15374 | `0033580e20232a48abf6e6df33f07a69bfe2614e198f0c017d39e711a23274ea` |
 | `tickets/v3.1.19/sources/issue-9.json` | 36217 | `cf07c5528ada52afdf3c7a5b6e608b7f12be43ad5b9a54ff7d1c42c0b7ff8be3` |
-| `wbs/FDS_v3.1.19_WBS_and_Gantt_v1.0.xlsx` | 90512 | `5678213f977768f5da5674e2bfc4634cc97c04ef3408dccc9f4584df8b4e084c` |
-| `web/FDS_v3.1.19_Canonical_Status.html` | 21400 | `8af361ff2952f0dbe32a314f1b3d77174154b89263775932f2f15eb8bc24f4b6` |
+| `wbs/FDS_v3.1.19_WBS_and_Gantt_v1.0.xlsx` | 90588 | `9284e19bc13225337e20263121250aedc22af39158bfb3c46f85d43bf7866637` |
+| `web/FDS_v3.1.19_Canonical_Status.html` | 21508 | `4b6906818dfd87bee1e1a21ca1a8040acaa9cb32d269457d9e5e540163958023` |

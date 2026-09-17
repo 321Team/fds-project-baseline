@@ -1,6 +1,6 @@
 # v3.1.19 발행 절차
 
-현재 상태: CANDIDATE / REVIEW_PENDING. 사용자 배포 지시는 수신했다. 이하영의 최신 HEAD 독립 승인 전 병합·발행하지 않는다.
+내용 PR #73의 이하영 APPROVED·병합은 완료됐다. 현재 단계는 FINALIZATION_REVIEW_PENDING이다. 아래 1~2단계는 완료 기록이며 3단계 이후를 진행한다.
 
 1. 최종 HEAD의 v19 verifier, SHA256SUMS, Workbook/ZIP 및 원본 보존 검증 결과를 리뷰한다.
 2. 독립 APPROVED가 정확한 HEAD에 적용되고 차단 의견이 해소됐는지 재조회한 뒤 수동 병합한다.

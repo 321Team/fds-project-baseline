@@ -1,6 +1,6 @@
 # FDS v3.1.19 Release Notes
 
-상태: CANDIDATE / NOT RELEASED · 2026-09-17 20:28 KST
+상태: RELEASED / FINALIZATION · 2026-09-17 20:28 KST
 
 전체 67건 / 일정관리 58건 / 역사적 종결 9건 / Milestone 67/67건. 상태 집계: Done 18, In Progress 11, To Do 38.
 
@@ -31,4 +31,6 @@ Baseline, 67개 Description/원문 source, Ticket Pack, WBS/Gantt 9개 탭, Inte
 
 ## 발행 잔여
 
-최종 HEAD 독립 승인 → 내용 병합 → CURRENT/발행 상태 최종화 검토 → Tag/Release Asset 업로드와 검증 → Publish. 현재 승인/발행 완료를 선언하지 않는다.
+내용 HEAD `ce3f0c9704dc8316c078c0c427928a97b08e4408` 이하영 APPROVED 및 merge `f759d2d72cd4f943b19cbb3b46952f75ed0b8b09` 확인. 최종화 HEAD 독립 승인·병합 → Tag/Release Asset 업로드와 검증 → Publish가 남았다. 내용 승인과 실제 게시 완료를 구분한다.
+
+배포 상태의 효력과 작성 시점은 `FDS_Release_Finalization_Record_v3.1.19.md` 및 CURRENT를 따른다.
