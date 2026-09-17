@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "target_version": "3.1.19",
+  "captured_at": "2026-09-17T01:04:28Z",
+  "previous_capture": "2026-09-16T21:50:41Z",
+  "parent_candidate_head": "8d1073c76bef314157db44fae1a64e9cfca6c9eb",
+  "collection_scope": "TARGETED_P1_CICD_RUNNER_SUPPLY_ADOPTION",
+  "status": "ADOPTED_INPUT_IMPLEMENTATION_READY",
+  "canonical_release": "3.1.18",
+  "source": "https://github.com/321Team/infra-cicd/issues/11",
+  "source_updated_at": "2026-09-17T01:03:04Z",
+  "user_instruction": "우리 자원에서 권장 추천 → 권장안 제시 → 착수",
+  "adopted_scope": {
+    "id": "P1-CICD-OID03-20260917-03",
+    "method": "BOUNDED_RUNNER_SUPPLY_THEN_OFFLINE_CI",
+    "producer_host": "cicd-runner01",
+    "producer_address": "10.250.10.20",
+    "account": "server01_cicd-runner",
+    "uid": 1000,
+    "owner": "이권욱",
+    "policy_lead": "이하영",
+    "https_hosts": [
+      "auth.docker.io",
+      "registry-1.docker.io",
+      "production.cloudfront.docker.com",
+      "pypi.org",
+      "files.pythonhosted.org"
+    ],
+    "port": 443,
+    "window_seconds": 3600,
+    "start": "FIRST_ACTUAL_DOWNLOAD",
+    "actual_start": null,
+    "automatic_extension": false,
+    "prior_scope_01_02_modified": false
+  },
+  "implementation": {
+    "repository": "321Team/infra-cicd",
+    "pull_request": 18,
+    "head": "73db58f21711bc4712c2bd3b8a16599fe498995f",
+    "files": [
+      {
+        "path": "docs/offline-app-supply.md",
+        "sha256": "31abbada9de8cb6cdccc2a7f4f1a5c512450c196658b1727fa089ef8e6682dde"
+      },
+      {
+        "path": "docs/offline-supply-plan.json",
+        "sha256": "f557c2a45199c87792391e36590c5edfcece5f65c4c8ffd955a79e4a0deef0f3"
+      },
+      {
+        "path": "docs/runner-supply.md",
+        "sha256": "34f74901f754dd738a61671b072e0a89a57c327030e4ee7e9d8201b8e569d00b"
+      },
+      {
+        "path": "tools/delivery/supply_inputs.py",
+        "sha256": "3925dcda3a77c09237589a77672a9793f89dd4a223ffe6943223d7695616cd6e"
+      },
+      {
+        "path": "tools/delivery/supply_transport.py",
+        "sha256": "8ebb4fd8f2ae62b2aedef147c05026db73fc7da62edabf09d3cef2dfe07e3bf7"
+      },
+      {
+        "path": "tools/delivery/supply_wheels.py",
+        "sha256": "a35f20c0d252b0687d19aacccee61f15720e8568ad95a89af94023df3a01b336"
+      },
+      {
+        "path": "tools/delivery/supply_pip_bridge.py",
+        "sha256": "5e5c4e9fb4a9504c1cd97b3cc3e94afb467bc035b0377b363c2006dfac224c10"
+      },
+      {
+        "path": "tools/delivery/collect_runner_supply.py",
+        "sha256": "5e754145016796e673724e0b342a89ac7bff6b00bd26dbf937f0a08a9c2269eb"
+      },
+      {
+        "path": "tools/delivery/build_supply_bundle.py",
+        "sha256": "3ecf6a94aaf8405f3996aef5b182afcab8dad0078970f8a5c41cea6fd82af797"
+      },
+      {
+        "path": "tools/delivery/test_runner_supply.py",
+        "sha256": "a6e8c11b3cbb1b9b4e97c66401c6a5f64ad18904f7d8ca515ea3a6704c7b2e48"
+      }
+    ],
+    "remote_bytes": "MATCH_ALL_10",
+    "new_tests": 18,
+    "local_pass": 127,
+    "local_skip": 1,
+    "local_skip_reason": "Execution environment denies socket creation",
+    "ci": {
+      "run_id": 35168869240,
+      "job_id": 105035966586,
+      "conclusion": "success",
+      "tests": 128,
+      "suites": [
+        17,
+        11,
+        47,
+        53
+      ],
+      "skipped": 0,
+      "raw_log_verified": true,
+      "source_validation": "PASS",
+      "scope": "SYNTHETIC_HTTPS_OCI_WHEELS_AND_REAL_PIP_OVER_LOCAL_UNIX_RELAY"
+    },
+    "bundle": {
+      "filename": "runner_supply_73db58f.pyz",
+      "sha256": "940423265a28382ffffd29e6f70d76804e85c09dcc60ef15a1e8017f0dc4dc09"
+    },
+    "review": {
+      "requested": "supreme33-kr",
+      "submitted_reviews": 0,
+      "state": "PENDING"
+    },
+    "merge": "NOT_MERGED"
+  },
+  "observed_inputs": {
+    "app_requirements_source": "254b82231f8af79a06419b581174647bbccbe2bc",
+    "approved_app_source": null,
+    "manifest_digest": "sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79",
+    "config_digest": "sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad",
+    "layer_count": 4,
+    "compressed_layer_bytes": 46175163,
+    "native_profiles": 4
+  },
+  "runtime": {
+    "supply_download": "NOT_EXECUTED",
+    "image_import": "NOT_EXECUTED",
+    "python_install": "NOT_EXECUTED",
+    "app_test_build_scan": "NOT_EXECUTED",
+    "network_policy_changes": "NONE",
+    "network_enforcement": "NOT_FIREWALL_ATTESTED",
+    "delivery_gate": "NOT_VERIFIED"
+  },
+  "next_steps": [
+    "Server checksum-verified execution and supply-evidence.tar.gz plus sidecar submission",
+    "Review actual base/wheel/lock/native target/offline install receipts",
+    "App pin/lock commit and final app Source approval",
+    "Integrate supplied artifacts into actual isolated Runner storage/build context/offline host setup; independently review latest code",
+    "Execute authorized internal app Test→Build→Scan"
+  ],
+  "unchanged": {
+    "prior_metadata_check": "PASS",
+    "runtime_ac": "1/10",
+    "delivery_gate": "NOT_VERIFIED",
+    "v19_publication": "NOT_READY"
+  },
+  "limits": [
+    "Runtime success is not inferred from CI; actual rootless Podman/native pip behavior awaits server receipt",
+    "All supply containers use network=none; local Unix relay sends upstream requests through client scope checks",
+    "Client destination/deadline checks do not attest firewall rules or packet enforcement",
+    "Runner.Worker idle observation is not a scheduler reservation",
+    "Loading config ID for supply containers does not establish repository@manifest digest resolution in the eventual app build storage",
+    "Actual app build_scan still requires offline supply integration"
+  ]
+}
