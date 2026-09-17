@@ -1,0 +1,30 @@
+{
+  "archive_sha256": "8bcd7f5688bccf86e8c672e33a606d4edeed602e8e65ea3545d30091067a6338",
+  "archive_bytes": 2267,
+  "result_sha256": "d5c3de6df89f240cdfac9baaa639ce7bae822ca0a6882dfbb7fee9ec712d0a59",
+  "tool_sha256": "ffb7bfde5f122a664fe45d21bae362f32a0499724a5f1e6798aaa2f12c0f3c61",
+  "internal_checksum": "PASS_1_OF_1",
+  "receipt_binding": "PASS",
+  "reported_commands_passed": 7,
+  "predictable_output_hashes_matched": 5,
+  "raw_logs_included": false,
+  "supply_metadata_hashes_matched": 12,
+  "profiles": {
+    "transaction-api-runtime": 25,
+    "transaction-api-test": 29,
+    "fds-engine-runtime": 18,
+    "fds-engine-test": 26
+  },
+  "available_gib": 70.82,
+  "available_bytes": 76041506816,
+  "available_inodes": 42691023,
+  "started_kst": "2026-09-17T13:53:10.008292+09:00",
+  "finished_kst": "2026-09-17T13:53:10.808892+09:00",
+  "elapsed_seconds": 0.8006,
+  "git_version": "git version 2.52.0",
+  "scope": "LOGIN_CONTEXT_RECEIPT_VERIFIED_RAW_LOGS_NOT_SUBMITTED",
+  "RUNNER_GIT_PREFLIGHT": "PASS_SUBMITTED_RECEIPT",
+  "APP_TEST_BUILD_SCAN": "NOT_EXECUTED",
+  "Runtime_AC": "1/10",
+  "DELIVERY_GATE": "NOT_VERIFIED"
+}
