@@ -1,6 +1,6 @@
 # Interface / Decision / CR Register — v3.1.19
 
-CANDIDATE / NOT RELEASED.
+RELEASED / FINALIZATION.
 
 ## 승인 입력과 적용 경계
 
@@ -121,3 +121,5 @@ v19 추가/구체화: IF-07의 관리 Source/identity는 .10/32 + svc_ansible이
 
 ---
 
+
+배포 상태의 효력과 작성 시점은 `FDS_Release_Finalization_Record_v3.1.19.md` 및 CURRENT를 따른다.

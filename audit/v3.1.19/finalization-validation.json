@@ -1,0 +1,207 @@
+{
+  "status": "PASS",
+  "scope": "finalization metadata only; publication not executed",
+  "approved_content_head": "ce3f0c9704dc8316c078c0c427928a97b08e4408",
+  "content_merge": "f759d2d72cd4f943b19cbb3b46952f75ed0b8b09",
+  "workbook_value_changes": [
+    {
+      "sheet": "Executive Summary",
+      "cell": "A1",
+      "before": {
+        "v": "FDS v3.1.19 · Executive Schedule Summary (CANDIDATE)",
+        "f": null
+      },
+      "after": {
+        "v": "FDS v3.1.19 · Executive Schedule Summary (RELEASED)",
+        "f": null
+      }
+    },
+    {
+      "sheet": "Executive Summary",
+      "cell": "B5",
+      "before": {
+        "v": "3.1.19 CANDIDATE",
+        "f": null
+      },
+      "after": {
+        "v": "3.1.19 RELEASED",
+        "f": null
+      }
+    },
+    {
+      "sheet": "WBS",
+      "cell": "A1",
+      "before": {
+        "v": "FDS v3.1.19 · WBS (CANDIDATE)",
+        "f": null
+      },
+      "after": {
+        "v": "FDS v3.1.19 · WBS (RELEASED)",
+        "f": null
+      }
+    },
+    {
+      "sheet": "Phase 1 Gantt",
+      "cell": "A1",
+      "before": {
+        "v": "FDS v3.1.19 · Phase 1 Gantt (CANDIDATE)",
+        "f": null
+      },
+      "after": {
+        "v": "FDS v3.1.19 · Phase 1 Gantt (RELEASED)",
+        "f": null
+      }
+    },
+    {
+      "sheet": "Phase 2 Gantt",
+      "cell": "A1",
+      "before": {
+        "v": "FDS v3.1.19 · Phase 2 Gantt (CANDIDATE)",
+        "f": null
+      },
+      "after": {
+        "v": "FDS v3.1.19 · Phase 2 Gantt (RELEASED)",
+        "f": null
+      }
+    },
+    {
+      "sheet": "Milestones & Decisions",
+      "cell": "A1",
+      "before": {
+        "v": "FDS v3.1.19 · Milestones & Decision Calendar (CANDIDATE)",
+        "f": null
+      },
+      "after": {
+        "v": "FDS v3.1.19 · Milestones & Decision Calendar (RELEASED)",
+        "f": null
+      }
+    },
+    {
+      "sheet": "Risks & Assumptions",
+      "cell": "A1",
+      "before": {
+        "v": "FDS v3.1.19 · Risks, Assumptions & Lead Decisions (CANDIDATE)",
+        "f": null
+      },
+      "after": {
+        "v": "FDS v3.1.19 · Risks, Assumptions & Lead Decisions (RELEASED)",
+        "f": null
+      }
+    },
+    {
+      "sheet": "Sources & Change Log",
+      "cell": "B33",
+      "before": {
+        "v": "docs-v3.1.18 remains published",
+        "f": null
+      },
+      "after": {
+        "v": "docs-v3.1.19; see CURRENT.md / Release API",
+        "f": null
+      }
+    },
+    {
+      "sheet": "Sources & Change Log",
+      "cell": "D33",
+      "before": {
+        "v": "CANDIDATE",
+        "f": null
+      },
+      "after": {
+        "v": "Content approved",
+        "f": null
+      }
+    },
+    {
+      "sheet": "Sources & Change Log",
+      "cell": "A5",
+      "before": {
+        "v": "Canonical candidate",
+        "f": null
+      },
+      "after": {
+        "v": "Canonical ticket pack",
+        "f": null
+      }
+    },
+    {
+      "sheet": "Sources & Change Log",
+      "cell": "C4",
+      "before": {
+        "v": "v3.1.19 CANDIDATE",
+        "f": null
+      },
+      "after": {
+        "v": "v3.1.19 RELEASED",
+        "f": null
+      }
+    },
+    {
+      "sheet": "Sources & Change Log",
+      "cell": "A1",
+      "before": {
+        "v": "FDS v3.1.19 · Sources & Change Log (CANDIDATE)",
+        "f": null
+      },
+      "after": {
+        "v": "FDS v3.1.19 · Sources & Change Log (RELEASED)",
+        "f": null
+      }
+    },
+    {
+      "sheet": "Sources & Change Log",
+      "cell": "E33",
+      "before": {
+        "v": "Latest HEAD independent approval pending",
+        "f": null
+      },
+      "after": {
+        "v": "PR73 approved/merged. Publication requires finalization approval, Tag and matching Assets. Source notes retain snapshot-time wording.",
+        "f": null
+      }
+    },
+    {
+      "sheet": "Sources & Change Log",
+      "cell": "E4",
+      "before": {
+        "v": "Current candidate scope / release review pending",
+        "f": null
+      },
+      "after": {
+        "v": "Approved content; finalization metadata subject to review/merge",
+        "f": null
+      }
+    },
+    {
+      "sheet": "Sources & Change Log",
+      "cell": "A4",
+      "before": {
+        "v": "Canonical candidate",
+        "f": null
+      },
+      "after": {
+        "v": "Canonical baseline",
+        "f": null
+      }
+    },
+    {
+      "sheet": "Team Calendar",
+      "cell": "A1",
+      "before": {
+        "v": "FDS v3.1.19 · Team Availability Calendar (CANDIDATE)",
+        "f": null
+      },
+      "after": {
+        "v": "FDS v3.1.19 · Team Availability Calendar (RELEASED)",
+        "f": null
+      }
+    }
+  ],
+  "unchanged_formula_cells": 2323,
+  "unchanged_charts": 2,
+  "unchanged_tabs": 9,
+  "cell_styles_validation_conditional_formatting_and_drawing_semantics": "MATCH",
+  "serialization_note": "Chart relationship IDs may differ; chart XML and resolved targets/anchors match. Conditional solid fills restored through authoring API; dxf IDs and absolute priority numbers may change, with identical rules, ranges and relative priority order.",
+  "publication": "NOT_EXECUTED",
+  "finalization_review": "PENDING"
+}
