@@ -1,0 +1,292 @@
+{
+  "schema": "v19-intake-update-1",
+  "status": "PENDING_REVIEW",
+  "authorization": "사용자 차단 없는 PR 병합 지시 후 우리 측 보완 착수; 기존 v19 지속 수집 지시",
+  "candidate_parent": "57a97a82f1cf9c6a175bb2f35ca260bb1faae0d7",
+  "source_change_this_update": true,
+  "change": {
+    "pr": 19,
+    "previous_head": "dcdb36c0f09b28e7b2accc098e32c3dc41f6607c",
+    "head": "20474c3d671fa19f8a2c718d6d10d429cc190994",
+    "finding": "app evidence opens FIFO before regular-file check and can wait for writer",
+    "fix": "O_NONBLOCK retained alongside O_NOFOLLOW; non-regular inputs rejected",
+    "regression": {
+      "before": "4 CLI cases timed out after 3 seconds each",
+      "after": "expected/archive/receipt/payload FIFO rejected with rc1 and no export directory"
+    },
+    "files": [
+      "tools/delivery/app_evidence.py",
+      "tools/delivery/test_app_evidence.py",
+      "docs/reviews/pr-18-19-followup-20260917.md"
+    ],
+    "file_sha256": {
+      "tools/delivery/app_evidence.py": "d68456745dd40ead9f837987bafed00ff0e81a93d7c5220c157f2ddcd17c4173",
+      "tools/delivery/test_app_evidence.py": "a15008e5cc32c7da69751b0f239ece6c6573c10cde51d22c4f5f11424e33b30c",
+      "docs/reviews/pr-18-19-followup-20260917.md": "9353c3d649e7583b9f01d009e1d95db9bd55f7f45ffe325390ccce156e8b56dc"
+    }
+  },
+  "validation": {
+    "local_pr19": {
+      "passed": 91,
+      "skipped": 0
+    },
+    "ci_pr19": {
+      "job": 105167523809,
+      "run": 35210784201,
+      "sha": "20474c3d671fa19f8a2c718d6d10d429cc190994",
+      "total": 166,
+      "passed": 166,
+      "skipped": 0,
+      "source_validation": "PASS",
+      "merge_ref": "d58a5dd"
+    },
+    "local_pr18": {
+      "passed": 52,
+      "skipped": 1,
+      "reason": "socket creation denied in execution environment"
+    },
+    "ci_pr18": {
+      "run": 35168869240,
+      "job": 105035966586,
+      "passed": 128,
+      "skipped": 0,
+      "head": "73db58f21711bc4712c2bd3b8a16599fe498995f"
+    },
+    "remote_changed_files": "EXACT_BYTES_MATCHED"
+  },
+  "review_response_url": "https://github.com/321Team/infra-cicd/blob/20474c3d671fa19f8a2c718d6d10d429cc190994/docs/reviews/pr-18-19-followup-20260917.md",
+  "prs": [
+    {
+      "number": 19,
+      "url": "https://github.com/321Team/infra-cicd/pull/19",
+      "head": "20474c3d671fa19f8a2c718d6d10d429cc190994",
+      "updated_at": "2026-09-17T10:31:39Z",
+      "requested_reviewers": [
+        "supreme33-kr"
+      ],
+      "draft": false,
+      "state": "open",
+      "review_record": [
+        {
+          "id": 5232871477,
+          "url": "https://github.com/321Team/infra-cicd/pull/19#pullrequestreview-5232871477",
+          "commit_id": "dcdb36c0f09b28e7b2accc098e32c3dc41f6607c",
+          "state": "COMMENTED",
+          "submitted_at": "2026-09-17T08:09:28Z",
+          "body_sha256": "62397fda629cd5048c68676652edf8cd6b2fab001825092272f28b53db1e2f95"
+        }
+      ],
+      "response_comment_id": null,
+      "body_sha256": "739e372060939c2397e536a014d177162de8b18a13c7ede74dfc6aaf88f7b5af"
+    },
+    {
+      "number": 18,
+      "url": "https://github.com/321Team/infra-cicd/pull/18",
+      "head": "73db58f21711bc4712c2bd3b8a16599fe498995f",
+      "updated_at": "2026-09-17T10:31:35Z",
+      "requested_reviewers": [
+        "supreme33-kr"
+      ],
+      "draft": false,
+      "state": "open",
+      "review_record": [
+        {
+          "id": 5232841597,
+          "url": "https://github.com/321Team/infra-cicd/pull/18#pullrequestreview-5232841597",
+          "commit_id": "73db58f21711bc4712c2bd3b8a16599fe498995f",
+          "state": "COMMENTED",
+          "submitted_at": "2026-09-17T08:05:57Z",
+          "body_sha256": "8e15ea095c68b588b8a85213a8801abfe38587f4c77c08a4752dff367a8e9cc1"
+        }
+      ],
+      "response_comment_id": 5712893324,
+      "body_sha256": "8348b5cebc65db6098244e47ed6ce8c263c1ea8141134db5cec83c4c61c8f224"
+    },
+    {
+      "number": 17,
+      "url": "https://github.com/321Team/infra-cicd/pull/17",
+      "head": "8c3a4d32a799ede50cded2af50a571b3371374cf",
+      "updated_at": "2026-09-17T10:32:32Z",
+      "requested_reviewers": [
+        "supreme33-kr"
+      ],
+      "draft": false,
+      "state": "open",
+      "review_record": [
+        {
+          "id": 5232836204,
+          "url": "https://github.com/321Team/infra-cicd/pull/17#pullrequestreview-5232836204",
+          "commit_id": "8c3a4d32a799ede50cded2af50a571b3371374cf",
+          "state": "COMMENTED",
+          "submitted_at": "2026-09-17T08:05:22Z",
+          "body_sha256": "00551d77c5675b0b84a5738593406778795ca3fb6c1f1f6910f16a1541ca17af"
+        }
+      ],
+      "response_comment_id": 5712904619,
+      "body_sha256": "f2b986b4f4f012db9b4a2da5c033793c6e8d89bb00ebfec4206da18b3ad0d9cd"
+    },
+    {
+      "number": 16,
+      "url": "https://github.com/321Team/infra-cicd/pull/16",
+      "head": "fb1493b4ef19686a2d050a5f14daad27e7cb3362",
+      "updated_at": "2026-09-17T10:32:29Z",
+      "requested_reviewers": [
+        "supreme33-kr"
+      ],
+      "draft": false,
+      "state": "open",
+      "review_record": [
+        {
+          "id": 5232831239,
+          "url": "https://github.com/321Team/infra-cicd/pull/16#pullrequestreview-5232831239",
+          "commit_id": "fb1493b4ef19686a2d050a5f14daad27e7cb3362",
+          "state": "COMMENTED",
+          "submitted_at": "2026-09-17T08:04:48Z",
+          "body_sha256": "5b3460bb4df909d010030173620bf6da080d701b0fe7c0e057703bb0b5c5a13f"
+        }
+      ],
+      "response_comment_id": 5712904134,
+      "body_sha256": "bd9404a7c498d890b98f76392b74025470df1416b2da2486377ca2f5b2424f34"
+    },
+    {
+      "number": 15,
+      "url": "https://github.com/321Team/infra-cicd/pull/15",
+      "head": "5bc38b3aa41b2b32eab535ef317e033c42e8f1a1",
+      "updated_at": "2026-09-17T10:32:27Z",
+      "requested_reviewers": [
+        "supreme33-kr"
+      ],
+      "draft": false,
+      "state": "open",
+      "review_record": [
+        {
+          "id": 5232826704,
+          "url": "https://github.com/321Team/infra-cicd/pull/15#pullrequestreview-5232826704",
+          "commit_id": "5bc38b3aa41b2b32eab535ef317e033c42e8f1a1",
+          "state": "COMMENTED",
+          "submitted_at": "2026-09-17T08:04:18Z",
+          "body_sha256": "4be1838c1df6ec8cd65f7deb5db1f890c5e3ae3ce03dc447d713bda7bd0e7702"
+        }
+      ],
+      "response_comment_id": 5712903644,
+      "body_sha256": "5b8a90052c12bee2bbdb31ecd751c203bfb0ab71952dfdbc1df8585bfb13788d"
+    },
+    {
+      "number": 14,
+      "url": "https://github.com/321Team/infra-cicd/pull/14",
+      "head": "41488e8e4b1762fe010b0e5a2ddf646f1b2caa69",
+      "updated_at": "2026-09-17T10:32:24Z",
+      "requested_reviewers": [
+        "supreme33-kr"
+      ],
+      "draft": false,
+      "state": "open",
+      "review_record": [
+        {
+          "id": 5229135838,
+          "url": "https://github.com/321Team/infra-cicd/pull/14#pullrequestreview-5229135838",
+          "commit_id": "41488e8e4b1762fe010b0e5a2ddf646f1b2caa69",
+          "state": "COMMENTED",
+          "submitted_at": "2026-09-16T22:51:29Z",
+          "body_sha256": "534bf101c033504567a4a262dae481ce98c29969d19397e81d4d14064667fe2f"
+        }
+      ],
+      "response_comment_id": 5712903245,
+      "body_sha256": "17441c5d97679ccac1cc89fa6b9b98bb69fb17bb17a9db2233dcb7b68e6b28ad"
+    },
+    {
+      "number": 13,
+      "url": "https://github.com/321Team/infra-cicd/pull/13",
+      "head": "a2dabc489a9ee5e4d5ebdf8d26b777a0357870d5",
+      "updated_at": "2026-09-17T10:32:22Z",
+      "requested_reviewers": [
+        "supreme33-kr"
+      ],
+      "draft": false,
+      "state": "open",
+      "review_record": [
+        {
+          "id": 5229132611,
+          "url": "https://github.com/321Team/infra-cicd/pull/13#pullrequestreview-5229132611",
+          "commit_id": "a2dabc489a9ee5e4d5ebdf8d26b777a0357870d5",
+          "state": "COMMENTED",
+          "submitted_at": "2026-09-16T22:50:52Z",
+          "body_sha256": "9b73db64ff0dd488d65f4e6b5e60dfd381c2188655235356b49784df80fa61c7"
+        }
+      ],
+      "response_comment_id": 5712902744,
+      "body_sha256": "66261303ab36d35d86a4ae1d5448107e3f4f5687ab30667adbd7fb49c1c60d3c"
+    },
+    {
+      "number": 5,
+      "url": "https://github.com/321Team/infra-cicd/pull/5",
+      "head": "6715fe58801c217b2ed7bc1221241eb134b88e05",
+      "updated_at": "2026-09-17T10:32:33Z",
+      "requested_reviewers": [
+        "supreme33-kr"
+      ],
+      "draft": true,
+      "state": "open",
+      "review_record": [],
+      "response_comment_id": 5712905212,
+      "body_sha256": "3af9ece003896198949072295311042591a4ba35d966b4e4d733378615f73d80"
+    }
+  ],
+  "issue": {
+    "number": 11,
+    "url": "https://github.com/321Team/infra-cicd/issues/11",
+    "updated_at": "2026-09-17T10:33:21Z",
+    "body_sha256": "296cb991b23d8f800f75d0b7fc131d42315d40b9b9b3b514a6ddb786a6bbfc58"
+  },
+  "review_state": {
+    "old": "no submitted PR19 reviews at prior snapshot",
+    "current": "COMMENTED on old dcdb36c; person confirmation PENDING; remaining scope and FIFO fix require independent review",
+    "reviewer": "supreme33-kr",
+    "re_requested_prs": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "pr5": "Existing requested reviewer retained; document remainder comment added",
+    "pr3": "Draft preserved"
+  },
+  "app_handoff": {
+    "repository": "supreme33-kr/fds-msa",
+    "main": "254b82231f8af79a06419b581174647bbccbe2bc",
+    "final_source_approval": "PENDING",
+    "api_unit_scope": "PENDING",
+    "config_status": "PENDING_APP_HANDOFF"
+  },
+  "state": {
+    "canonical": "docs-v3.1.18",
+    "main": "90f2f37d9e1ab77252b50e80bca339cfef48bd51",
+    "merged_this_update": false,
+    "APP_TEST_BUILD_SCAN": "NOT_EXECUTED",
+    "SUPPLY_RUNTIME": "PASS_PREVIOUS_EVIDENCE",
+    "BASE_PROBE_RUNTIME": "PASS_PREVIOUS_EVIDENCE",
+    "RUNNER_GIT_PREFLIGHT": "PASS_SUBMITTED_RECEIPT_PREVIOUS_EVIDENCE",
+    "Runtime_AC": "1/10",
+    "DELIVERY_GATE": "NOT_VERIFIED",
+    "PUSH": "NOT_EXECUTED",
+    "DEPLOY": "NOT_EXECUTED",
+    "PUBLICATION": "NOT_READY"
+  },
+  "remaining": [
+    "Independent reviewer person confirmation and final opinion for unchanged PR13-17",
+    "Independent remaining-scope review for PR18 and new PR19 HEAD",
+    "App final pin/lock Source SHA, execution approval and API Unit scope",
+    "Actual config update and independent review, merge decision, then central app Runtime",
+    "Candidate canonical-integrity startup_failure remains unresolved"
+  ],
+  "limits": [
+    "Author CODEX_ASSISTED inspection and source CI are not independent human review",
+    "No server commands, renewed supply window, application run, merge or publication performed",
+    "Prior Runtime results are scoped to their original source/execution receipts",
+    "This is a scoped CICD intake, not a complete rescan of all project repositories"
+  ],
+  "collected_at": "2026-09-17T10:34:44.971973+00:00"
+}
