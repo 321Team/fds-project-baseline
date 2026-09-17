@@ -1,61 +1,34 @@
-# FDS v3.1.19 Release Notes — 수집 초안
+# FDS v3.1.19 Release Notes
 
-Status: **DRAFT / NOT RELEASED**
-Base: v3.1.18
+상태: CANDIDATE / NOT RELEASED · 2026-09-17 20:28 KST
 
-이 문서는 발행 준비를 위한 수집 초안이며 구현·검증·발행 완료 선언이 아니다.
+전체 67건 / 일정관리 58건 / 역사적 종결 9건 / Milestone 67/67건. 상태 집계: Done 18, In Progress 11, To Do 38.
 
-## 승인 입력 — 통합 대기
+## 승인 입력과 적용 경계
 
-| 입력 | 적용할 내용 | 근거 |
-| --- | --- | --- |
-| 게시·배포 정책 | CURRENT 게시 사실 교정, WEB 필수 배포, 일정 유연성 | [PR #72](https://github.com/321Team/fds-project-baseline/pull/72) |
-| #59 / #61 | 계획 End 및 실제 완료일 2026-08-26 정정 | PR #72 approved-date-corrections.json |
-| #46 | G5 목표 2026-10-16, 계획 기간 1일 | PR #72 및 실제 티켓 |
-| Milestone | 64건 전체 매핑, 후속 19건의 근거·인계 조건 보존 | PR #72 댓글 5632352726, 5632473246 |
+| 항목 | 반영한 값·결정 | 유지되는 경계 |
+|---|---|---|
+| PR #72 | v18 게시 사실·WEB 필수 배포·일정 유연성·#59/#61 08-26·#46 10-16·Milestone 배정 | 기존 v18 태그와 Asset 소급 변경 없음 |
+| DEC-CAL-P1-01 #28 | 09-22 오후 평일 Review 일정 결정 Done | 실제 Review/G3/Close 승인 아님 |
+| DEC-P1-EGRESS-01 #78 | server08 / egress-proxy01 / .56:3128, 2vCPU·2GiB·30GiB, .57 예비 유지 | #74 Squid·#75 NetworkPolicy/Secret Runtime 별도 |
+| OID-01 | ansible01 10.250.10.10/32 + svc_ansible, 내부 SNAT 금지·기존 Return Route | HEP/GNP 실제 적용은 6/6 Ready 이후 별도 실행창 |
+| Monitoring storage | worker03(.108), /home/fds-local-pv/{prometheus,grafana,alertmanager}; static local PV/WFFC/Retain/nodeAffinity | 단일 Worker non-HA, 경로·SELinux·공간 검증 및 Runtime 미완료 |
+| PVC 초기값 | Prometheus 20Gi / Grafana 5Gi / Alertmanager 2Gi, Prometheus 15d·retention.size≤16GB | 사용률에 따른 조정 가능한 초기값 |
+| NTP 결정 | control01 내부 chronyd, UDP123, offset≤100ms, 60초×6, sync lost≥5m FAIL, reboot≤5m 재동기화 | control01 upstream/time authority 미정; INPUT_INCOMPLETE/RUNTIME_HOLD |
+| Harbor/CI 정책 | Worker pull-only 분리, Robot 유한 30일 결정·Never 미채택, Harbor Scanner 유지, HIGH/CRITICAL·Scanner/DB 오류 차단 | 실제 계정·소비자별 인수 별도 |
+| Trivy 운영 | 검토 버전/SHA 고정·관리자 교체, Scan 전 DB 갱신 필요·유효성 검사, 오류 fail-closed | latest 자기 갱신·오래된 DB fallback·임의 유예기간 도입 없음 |
+| ICR 단순화 | 기존 증적 재사용, 도구 qualification과 운영 보완 분리, 인수/영수증 연결 | 추가 VM 반복 시험·광역 허용·CP1/CP2/CP3 인수 예외 자동 승인 없음 |
 
-## 검토 대기·잔여
+근거: [PR72](https://github.com/321Team/fds-project-baseline/pull/72), [#28](https://github.com/321Team/fds-project-baseline/issues/28), [#78](https://github.com/321Team/fds-project-baseline/issues/78), [Lead 결정](https://github.com/321Team/fds-project-baseline/issues/10#issuecomment-5697547621), [Harbor 결정](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-5659049448), [CI 결정](https://github.com/321Team/fds-project-baseline/issues/16#issuecomment-5659051242). 세부 수집 문서 및 원문은 audit/v3.1.19/intake와 tickets/v3.1.19/sources에 보존한다.
 
-관련 저장소의 미병합 PR과 미검증 증적은 `audit/v3.1.19/intake/repository-sources.json`에서 추적한다. OID/NTP/egress, IF-16, FUP-04/05, Stage A/LB-A-01 및 개별 Runtime 인수는 책임 티켓의 실제 최신 근거로 판단한다.
+## 승인·관측·보류 분류
 
-## 발행 검증
+APPROVED_INPUT은 확인된 사용자/Lead 결정의 명시 범위만 뜻한다. GitHub의 Merged는 코드 편입 사실이며 Runtime 인수가 아니다. PENDING_REVIEW/INPUT_INCOMPLETE 및 합성 시험·제출 영수증 검증은 그대로 표시한다. GitHub ticket lifecycle과 원문 체크상태를 보존했으며 이번 작업에서 운영 AC를 새로 체크하지 않았다. 새 D/IF 순번은 임의 발급하지 않고 DEC-P1-EGRESS-01·CR Record ID로 추적한다.
 
-전체 묶음: NOT BUILT. v19 발행 검증: NOT RUN. 기존 v18 정본을 유지한다.
+## 배포 구성
 
-## 2026-09-11T10:31:50Z 추가 수집 — 승인 사양 미편입
+Baseline, 67개 Description/원문 source, Ticket Pack, WBS/Gantt 9개 탭, Interface/Decision/CR Register, Milestone Map, 아키텍처, WEB, Manifest, SHA256SUMS 및 ZIP 검증 결과를 함께 제공한다. 기존 v18 Release 및 태그는 보존한다.
 
-- 신규 [CR-P1-MON-01-01 #74](https://github.com/321Team/fds-project-baseline/issues/74): Alertmanager Discord 외부 송신 예외. **PENDING_REVIEW**.
-- [infra-kubernetes #5 확인 댓글](https://github.com/321Team/infra-kubernetes/issues/5#issuecomment-5632931284): Worker 외부 연결 성공 보고는 원본 로그·해시 없는 보고이며 Pod/프록시 Runtime PASS를 뜻하지 않는다.
-- 총 티켓 **65건 / Milestone 64건 배정 / 신규 #74 1건 미배정**. 기존 64건의 매핑 변경은 없다.
-- 검토 필요: 기존 #17 외부 미송신 원칙과 Decision/Interface 정합화, Lead/Support·계획·프록시 배치·selector·Secret 수명주기. 네트워크 관리자 승인 불필요 주장은 별도 권한 근거로 확인해야 한다.
-- fds-msa 조회 404로 실제 배포 라벨·설정 대조는 미확인. 저장소 미존재로 단정하지 않는다.
-- 나머지 6개 관련 저장소 PR의 기존 HEAD·병합 상태 변경, 신규 PR 리뷰·Commit, 기준 시각 이후 default branch Commit은 미검출. 과거 리뷰 30개 PR의 조회 결과는 비교 기준으로 보존하며 신규 승인으로 취급하지 않는다.
-- 상세: [수집 기록](../../audit/v3.1.19/intake/updates/20260911T103150Z.json). 수집 후보의 새 HEAD는 이하영의 독립 검토가 필요하며 병합·발행은 별도 승인 대상이다.
+## 발행 잔여
 
-## 2026-09-11T10:58:10Z 추가 수집 — 두 Monitoring CR 추적 확장
-
-- [CR-P1-MON-01-01 #74](https://github.com/321Team/fds-project-baseline/issues/74): 프록시 서버 구성으로 Scope 분리, 17개 속성·G2 추적 Milestone 반영. Lead/Support·계획일은 TBD, 내용은 PENDING_REVIEW, Runtime NOT VERIFIED.
-- 신규 [CR-P1-MON-01-02 #75](https://github.com/321Team/fds-project-baseline/issues/75): #74 endpoint를 인수하는 NetworkPolicy·selector·Secret 통제. 17개 속성·G2 추적 Milestone 반영. Lead/Support·계획일은 TBD, 내용은 PENDING_REVIEW, Runtime NOT VERIFIED.
-- 전체 **66건 / Record ID 66개 유일 / Milestone 66건 배정**. 실제 GitHub Type은 #74·#75 두 건 미반영이다. G2 배정은 추적용이며 P0/G2 필수 AC 또는 확정 End를 추가하지 않는다.
-- 신규 리뷰 기록: [#10 K8S](https://github.com/321Team/fds-project-baseline/issues/10#issuecomment-5633333888) 운영 인수 HOLD, [#13 HBR](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-5633336598) HBR-01~06 Revision Required, [#19 SEC](https://github.com/321Team/fds-project-baseline/issues/19#issuecomment-5633339292) SEC-01~08 Revision Required. 이는 공식 PR APPROVED나 실행 승인으로 승격하지 않는다. [#17 롤업](https://github.com/321Team/fds-project-baseline/issues/17#issuecomment-5633394060)도 같은 경계를 유지한다.
-- 발행 전 차단: 두 CR의 native Type, 담당·계획, 프록시 endpoint/변경권한, 실제 selector/Secret/payload/Positive·Negative·복구 증적, 기존 외부 미송신 Decision·Interface 정합화 및 WBS/Ticket Pack/Release 묶음 편입.
-- 연결 저장소 default HEAD·기존 PR 메타데이터·신규 공식 리뷰/Commit 변화는 미검출. fds-msa는 계속 404로 직접 대조하지 못했다.
-- 상세: [수집 기록](../../audit/v3.1.19/intake/updates/20260911T105810Z.json). 새 후보 HEAD는 이하영의 독립 검토가 필요하다.
-
-## 2026-09-11T11:34:47Z 추가 수집 — 두 CR 담당·Type 확정
-
-- [CR-P1-MON-01-01 #74](https://github.com/321Team/fds-project-baseline/issues/74): Lead 이하영, Support 이재환, Start 2026-09-11, End/기간 TBD로 확정하고 Assignee를 `hayeounglee`로 적용했다.
-- [CR-P1-MON-01-02 #75](https://github.com/321Team/fds-project-baseline/issues/75): Lead 이하영, Support 이재환, Start/End/기간 TBD와 #74 프록시 endpoint 선행조건을 유지하며 Assignee를 `hayeounglee`로 적용했다.
-- 두 이슈의 실제 GitHub Issue Type은 `Change Request`(ID `864949231`)로 동기화됐다. [실행 증적 수신·검증 기록](https://github.com/321Team/fds-project-baseline/pull/73#issuecomment-5633784102)의 결과 SHA-256은 `c9c7b53028a5e2c72ac5ea2869844a84e0f5ace3c923ae175a5c2a6d4ba5b3b3`이다.
-- 이 변경은 **USER_AUTHORIZED_OPERATIONAL_DELTA**다. 다만 두 CR의 기술 변경안은 계속 **PENDING_REVIEW**, 실제 적용·Runtime 인수는 **NOT VERIFIED**다. G2는 추적용이며 CR의 End 또는 Gate PASS를 뜻하지 않는다.
-- 전체 **66건 / Record ID 66개 유일 / Milestone 66/66 / native Type 누락 0**. 프록시 endpoint·변경권한, 실제 selector·Secret/payload·허용/차단/복구 증적과 Decision/Interface 및 전체 v19 산출물 편입은 여전히 발행 전 검토 대상이다.
-- 관련 7개 저장소의 default HEAD·기존 PR 메타데이터·신규 공식 PR 리뷰/Commit 변화는 미검출했다. PR #73 자체 수집 Commit·댓글·본문 갱신은 새 프로젝트 변경에서 제외했다.
-- 상세: [수집 기록](../../audit/v3.1.19/intake/updates/20260911T113447Z.json). 새 후보 HEAD는 이하영의 독립 검토가 필요하다.
-
-## 2026-09-16 P1-CICD Trivy 운영안 사용자 채택 — 대상 한정 수집
-
-[수집 기록](../../audit/v3.1.19/intake/updates/20260916T033933Z.json): 사용자 “권장안으로 정본 후보에 등록하고, 착수”에 따라 바이너리 버전/해시 통제 교체와 실제 이미지 Scan 전 DB 준비·검사, 기존 HIGH/CRITICAL 및 스캐너/DB 오류 Push·Deploy 차단 유지를 APPROVED_INPUT으로 수집했다.
-
-592개 파일 참조 0·바이너리 해시 일치의 보완 증적을 검증했지만 외부 자동화 부재는 UNKNOWN이다. 코드 독립 리뷰·새 DB 경로 Runtime·실제 이미지 Delivery Gate는 잔여이며 기존 AC·역할·일정·진척도를 상향하지 않는다.
-
-이번은 P1-CICD 입력에 한정한 수집이다. 기존 9/11의 티켓 수·다른 저장소 상태를 현재 전수 조사 결과로 재사용하지 않는다. v19 전체 묶음 NOT BUILT / 발행 NOT READY / 운영 정본 v3.1.18 유지.
+최종 HEAD 독립 승인 → 내용 병합 → CURRENT/발행 상태 최종화 검토 → Tag/Release Asset 업로드와 검증 → Publish. 현재 승인/발행 완료를 선언하지 않는다.

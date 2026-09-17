@@ -1,0 +1,410 @@
+{
+  "captured_at": "2026-09-17T11:28:19.173337+00:00",
+  "pagination_complete": true,
+  "issue_count": 67,
+  "comment_threads": 20,
+  "sources": [
+    {
+      "issue": 4,
+      "updated_at": "2026-09-14T15:13:36Z",
+      "body_sha256": "acda3f2663c7b6bac2e1ae3a1926a78723f69a6765633769bedf576e260254f3",
+      "path": "tickets/v3.1.19/sources/issue-4.json"
+    },
+    {
+      "issue": 5,
+      "updated_at": "2026-09-14T15:13:39Z",
+      "body_sha256": "a0bf1b5b35f70b5525ff29365ea1af7c69d18fe8dc5d581115c223a845faf78b",
+      "path": "tickets/v3.1.19/sources/issue-5.json"
+    },
+    {
+      "issue": 6,
+      "updated_at": "2026-09-14T15:13:42Z",
+      "body_sha256": "2e84b06c6de790bbdc142a1556a938fdfd485babe8314202f83b2d0836b36464",
+      "path": "tickets/v3.1.19/sources/issue-6.json"
+    },
+    {
+      "issue": 7,
+      "updated_at": "2026-09-14T15:13:45Z",
+      "body_sha256": "a7e7904d43762d29dc0aaadcc4d810a7b1aec7e047433f45cdef7534b310161a",
+      "path": "tickets/v3.1.19/sources/issue-7.json"
+    },
+    {
+      "issue": 8,
+      "updated_at": "2026-09-14T15:14:15Z",
+      "body_sha256": "cb5f383d932b993d6c30cd36410463680c9f6f69d0fff5d5997982fd7b1a6ea6",
+      "path": "tickets/v3.1.19/sources/issue-8.json"
+    },
+    {
+      "issue": 9,
+      "updated_at": "2026-09-17T08:44:20Z",
+      "body_sha256": "0df165f18ea6ff74cce2bfa16a69eb669720d71df4471e98c9b2a1bfc88a4d73",
+      "path": "tickets/v3.1.19/sources/issue-9.json"
+    },
+    {
+      "issue": 10,
+      "updated_at": "2026-09-17T08:44:22Z",
+      "body_sha256": "0030ee947834d9a2ba55ec4d0b742efd25a35cddeb0ee13287b1fee5f1e2ea09",
+      "path": "tickets/v3.1.19/sources/issue-10.json"
+    },
+    {
+      "issue": 11,
+      "updated_at": "2026-09-14T15:14:24Z",
+      "body_sha256": "17784c995796adc2283782a4164eb7483b781ffe7eaff7a9ef02fe4f5d48563f",
+      "path": "tickets/v3.1.19/sources/issue-11.json"
+    },
+    {
+      "issue": 12,
+      "updated_at": "2026-09-14T15:14:27Z",
+      "body_sha256": "7aeb1f0922e47a785a81ec918bc76ba8a7a022e7d47bf81fe6a08f812584ccf3",
+      "path": "tickets/v3.1.19/sources/issue-12.json"
+    },
+    {
+      "issue": 13,
+      "updated_at": "2026-09-17T08:44:13Z",
+      "body_sha256": "8a5159fa6aecafdb1c61652bd0be2a234fa3b9792c53e910eeb39d6a17b400ff",
+      "path": "tickets/v3.1.19/sources/issue-13.json"
+    },
+    {
+      "issue": 14,
+      "updated_at": "2026-09-17T08:44:15Z",
+      "body_sha256": "8781857eee4de81d8e5c0df4360ace9516045ba3cf86a9d38ec69af4797b564e",
+      "path": "tickets/v3.1.19/sources/issue-14.json"
+    },
+    {
+      "issue": 15,
+      "updated_at": "2026-09-16T12:26:02Z",
+      "body_sha256": "e7b0418c77b3b4455545b008aef8d19e8d27147e78677e180d73bc4130760917",
+      "path": "tickets/v3.1.19/sources/issue-15.json"
+    },
+    {
+      "issue": 16,
+      "updated_at": "2026-09-17T08:44:17Z",
+      "body_sha256": "77b26fbce951175bf3da77a99e4fcb8227d14e2a0f2cf59f3a4237f015b9565b",
+      "path": "tickets/v3.1.19/sources/issue-16.json"
+    },
+    {
+      "issue": 17,
+      "updated_at": "2026-09-16T12:50:32Z",
+      "body_sha256": "5b95f4290282cf14a8af0da8dec7bf7a648332bdb6e0c64cd8fd58933595642e",
+      "path": "tickets/v3.1.19/sources/issue-17.json"
+    },
+    {
+      "issue": 18,
+      "updated_at": "2026-09-14T15:14:51Z",
+      "body_sha256": "513c1a8a72b7ba95790a2fed4d9748026a332ccca08a282de9acb31940f5eed9",
+      "path": "tickets/v3.1.19/sources/issue-18.json"
+    },
+    {
+      "issue": 19,
+      "updated_at": "2026-09-17T08:49:24Z",
+      "body_sha256": "bc1c13636ad25242c9f46f327fc249a002ac59ee76201720d2da2373558066f6",
+      "path": "tickets/v3.1.19/sources/issue-19.json"
+    },
+    {
+      "issue": 20,
+      "updated_at": "2026-09-14T15:14:57Z",
+      "body_sha256": "a6879b278d497d2146296ca2e5d6c8be19a8c6e845d924fb6430572760d28e31",
+      "path": "tickets/v3.1.19/sources/issue-20.json"
+    },
+    {
+      "issue": 21,
+      "updated_at": "2026-09-15T09:19:21Z",
+      "body_sha256": "ee17f2e8693273a8fdc5c1a458980466593a05b98e148cc70e1e2e65d4faf0df",
+      "path": "tickets/v3.1.19/sources/issue-21.json"
+    },
+    {
+      "issue": 22,
+      "updated_at": "2026-09-14T15:15:03Z",
+      "body_sha256": "b9e32448870557ab98a7d2f9c540a8de45af194f8660562790d6a7dd92d77068",
+      "path": "tickets/v3.1.19/sources/issue-22.json"
+    },
+    {
+      "issue": 23,
+      "updated_at": "2026-09-14T15:15:06Z",
+      "body_sha256": "d79911f0261e4296fa0e1c91c01c6a0f4e4865e5584ca784052a0f8136b33723",
+      "path": "tickets/v3.1.19/sources/issue-23.json"
+    },
+    {
+      "issue": 24,
+      "updated_at": "2026-09-17T08:44:24Z",
+      "body_sha256": "8e5048acc49c8621747036729d3f1cba21a1fd040b2c7771222c415932539ae3",
+      "path": "tickets/v3.1.19/sources/issue-24.json"
+    },
+    {
+      "issue": 25,
+      "updated_at": "2026-09-14T15:15:08Z",
+      "body_sha256": "1c8a92a08ff1bf1bf9193a528dcc9f970ef4c40cf7c9c61b6969d708cc339a2a",
+      "path": "tickets/v3.1.19/sources/issue-25.json"
+    },
+    {
+      "issue": 26,
+      "updated_at": "2026-09-14T15:15:11Z",
+      "body_sha256": "65585e25ed4bbc7cd1968eaadfbbd9a48097e65eeabdde4b3a881a1463157573",
+      "path": "tickets/v3.1.19/sources/issue-26.json"
+    },
+    {
+      "issue": 27,
+      "updated_at": "2026-09-14T15:15:14Z",
+      "body_sha256": "3f243abe0bb2eced4f876e2756206e406d6390714c10409f76c85436e9381580",
+      "path": "tickets/v3.1.19/sources/issue-27.json"
+    },
+    {
+      "issue": 28,
+      "updated_at": "2026-09-16T08:54:53Z",
+      "body_sha256": "81a47c25b09c6175e151b142265762956bddaeab4f10930fc748214d7a7304d7",
+      "path": "tickets/v3.1.19/sources/issue-28.json"
+    },
+    {
+      "issue": 29,
+      "updated_at": "2026-09-14T15:15:22Z",
+      "body_sha256": "d82b22f9cf75291a30f506f7e59c2d016492f3862193ed8172ba23ac0699c474",
+      "path": "tickets/v3.1.19/sources/issue-29.json"
+    },
+    {
+      "issue": 30,
+      "updated_at": "2026-09-14T15:15:25Z",
+      "body_sha256": "9c22804b34493327e1daef2d034a498fb99ba78defe91cb5f6c5e95168040c9c",
+      "path": "tickets/v3.1.19/sources/issue-30.json"
+    },
+    {
+      "issue": 31,
+      "updated_at": "2026-09-14T15:15:28Z",
+      "body_sha256": "c388605f2028cf5b045547f8b05794248715ee3753abab74c2f3fd128d1d6515",
+      "path": "tickets/v3.1.19/sources/issue-31.json"
+    },
+    {
+      "issue": 32,
+      "updated_at": "2026-09-14T15:15:30Z",
+      "body_sha256": "6ae822c3cf0b10c5b579b953c7d607a9f34969d42089ab2d944e7de9807d7957",
+      "path": "tickets/v3.1.19/sources/issue-32.json"
+    },
+    {
+      "issue": 33,
+      "updated_at": "2026-09-14T15:15:33Z",
+      "body_sha256": "f9fd7a95b69a364a5b1dc954b197cabf29b6dbe9337282ea155b607b199e9785",
+      "path": "tickets/v3.1.19/sources/issue-33.json"
+    },
+    {
+      "issue": 34,
+      "updated_at": "2026-09-14T15:15:36Z",
+      "body_sha256": "2b361e897ae214d597819d32cb3de78a9bf0ae64216b72e445fade98b9d66b42",
+      "path": "tickets/v3.1.19/sources/issue-34.json"
+    },
+    {
+      "issue": 35,
+      "updated_at": "2026-09-14T15:15:38Z",
+      "body_sha256": "fb3b50f9fea2ed7839727d3344f8fd4bad140494c4742b11f691a8184374fc4b",
+      "path": "tickets/v3.1.19/sources/issue-35.json"
+    },
+    {
+      "issue": 36,
+      "updated_at": "2026-09-14T15:15:41Z",
+      "body_sha256": "881d1f812737a44351ad4458f5cd4481292bca2a67995b19e7dbf8924b246dc9",
+      "path": "tickets/v3.1.19/sources/issue-36.json"
+    },
+    {
+      "issue": 37,
+      "updated_at": "2026-09-14T15:15:53Z",
+      "body_sha256": "698549141e45179e3dbf96bdbf00e111389c5c2ecb638bbaf9f437c6a01088af",
+      "path": "tickets/v3.1.19/sources/issue-37.json"
+    },
+    {
+      "issue": 38,
+      "updated_at": "2026-09-14T15:15:56Z",
+      "body_sha256": "94b4cf7a0206bdf9bb85c13d88434aba6d85aaaa0f937b0f9c8b0ca96317b23c",
+      "path": "tickets/v3.1.19/sources/issue-38.json"
+    },
+    {
+      "issue": 39,
+      "updated_at": "2026-09-14T15:15:59Z",
+      "body_sha256": "da91eba10aaff1215756c47166b417fb9db5e8a2f3b2c02a521eda46cfc03678",
+      "path": "tickets/v3.1.19/sources/issue-39.json"
+    },
+    {
+      "issue": 40,
+      "updated_at": "2026-09-14T15:16:01Z",
+      "body_sha256": "d29aacd62e8bd35e1b58dbd297df8f90d4de6fbc9714b8aac755cb1ce7b80764",
+      "path": "tickets/v3.1.19/sources/issue-40.json"
+    },
+    {
+      "issue": 41,
+      "updated_at": "2026-09-14T15:16:05Z",
+      "body_sha256": "3e577219e0152a0479e401536b93ed11a5b8cbdcb446d607c40828af3d273671",
+      "path": "tickets/v3.1.19/sources/issue-41.json"
+    },
+    {
+      "issue": 42,
+      "updated_at": "2026-09-14T15:16:08Z",
+      "body_sha256": "e298f5f1f627691b53a4c4defb616b4de51a19bf84c3f266a72ce53d1e064946",
+      "path": "tickets/v3.1.19/sources/issue-42.json"
+    },
+    {
+      "issue": 43,
+      "updated_at": "2026-09-14T15:16:10Z",
+      "body_sha256": "8f9a4b3cb6e9e4cdf0ef17c02160188128cb4abdb8ddbded5a56709384a59833",
+      "path": "tickets/v3.1.19/sources/issue-43.json"
+    },
+    {
+      "issue": 44,
+      "updated_at": "2026-09-14T15:16:13Z",
+      "body_sha256": "51838e60735400e25e8889c7429e3ba94c45d5a4f97556784c816e944b979985",
+      "path": "tickets/v3.1.19/sources/issue-44.json"
+    },
+    {
+      "issue": 45,
+      "updated_at": "2026-09-14T15:16:16Z",
+      "body_sha256": "c9d4c633346e9ba4a5b928c4018a6fef3b4b3538230b53e0ab1428d7d2352176",
+      "path": "tickets/v3.1.19/sources/issue-45.json"
+    },
+    {
+      "issue": 46,
+      "updated_at": "2026-09-14T15:16:18Z",
+      "body_sha256": "d73f5371664fef8dabafc147cff4ee75c82922af32193830a8790a0d19d4aec8",
+      "path": "tickets/v3.1.19/sources/issue-46.json"
+    },
+    {
+      "issue": 47,
+      "updated_at": "2026-09-14T15:16:27Z",
+      "body_sha256": "87dc8388d6c1c608b8d9d4c63637610bb1d34ea039a7590ab5cedb1a02384855",
+      "path": "tickets/v3.1.19/sources/issue-47.json"
+    },
+    {
+      "issue": 48,
+      "updated_at": "2026-09-14T15:16:30Z",
+      "body_sha256": "6a4ed28552fe391f506a98af5208954fe219a649aac6a5e832ed1b5fdc35b508",
+      "path": "tickets/v3.1.19/sources/issue-48.json"
+    },
+    {
+      "issue": 49,
+      "updated_at": "2026-09-14T15:16:33Z",
+      "body_sha256": "abf07d500e0330c59ad2d869fb3f5f6fbb34279351d8808031ff92a0b218b0ea",
+      "path": "tickets/v3.1.19/sources/issue-49.json"
+    },
+    {
+      "issue": 50,
+      "updated_at": "2026-09-14T15:16:35Z",
+      "body_sha256": "2408cf935fc01a752a2d75da6b1092c8c4562e094345a8117528e6bac96f37b2",
+      "path": "tickets/v3.1.19/sources/issue-50.json"
+    },
+    {
+      "issue": 51,
+      "updated_at": "2026-09-14T15:16:38Z",
+      "body_sha256": "4d9218092e64e4acb498a26d84a0000e2dce35664b81912d3c20f4fc294ab205",
+      "path": "tickets/v3.1.19/sources/issue-51.json"
+    },
+    {
+      "issue": 52,
+      "updated_at": "2026-09-14T15:16:41Z",
+      "body_sha256": "aff13887a7efdd9e8500ca6516596cdd59c195f04295b6e23671721f51b24102",
+      "path": "tickets/v3.1.19/sources/issue-52.json"
+    },
+    {
+      "issue": 53,
+      "updated_at": "2026-09-14T15:16:44Z",
+      "body_sha256": "f8a29d1e2741c88c08571ad1eed1fa04d7e8a450283875cc88b12aadeb80130e",
+      "path": "tickets/v3.1.19/sources/issue-53.json"
+    },
+    {
+      "issue": 54,
+      "updated_at": "2026-09-14T15:16:47Z",
+      "body_sha256": "b253a6ee6486f74fc0446c5c86172181a7f9064638461a42988f227ef07bdedc",
+      "path": "tickets/v3.1.19/sources/issue-54.json"
+    },
+    {
+      "issue": 55,
+      "updated_at": "2026-09-14T15:16:58Z",
+      "body_sha256": "b9922557e3fbb70f84135d408c8bf335719d20ea53b65022674f36f8dd387f77",
+      "path": "tickets/v3.1.19/sources/issue-55.json"
+    },
+    {
+      "issue": 56,
+      "updated_at": "2026-09-14T15:17:00Z",
+      "body_sha256": "15d1cddcab4c399f8134542955d85b9f07796f964f3e949742f23492b2223a80",
+      "path": "tickets/v3.1.19/sources/issue-56.json"
+    },
+    {
+      "issue": 57,
+      "updated_at": "2026-09-14T15:17:03Z",
+      "body_sha256": "bdd0fccd1338fa5143c2cec57faf5f8dd10706e11897ad8e82b1008bf0989c85",
+      "path": "tickets/v3.1.19/sources/issue-57.json"
+    },
+    {
+      "issue": 58,
+      "updated_at": "2026-09-14T15:17:06Z",
+      "body_sha256": "78d737be847179ed25742e3d64f00164ec4dba42d4b6433e35f13e716ab15361",
+      "path": "tickets/v3.1.19/sources/issue-58.json"
+    },
+    {
+      "issue": 59,
+      "updated_at": "2026-09-14T15:17:09Z",
+      "body_sha256": "7c47de8bf1bfd523019c8f7087b91f0866873b41b8f6227f509e77829e37f8c7",
+      "path": "tickets/v3.1.19/sources/issue-59.json"
+    },
+    {
+      "issue": 60,
+      "updated_at": "2026-09-14T15:17:12Z",
+      "body_sha256": "12fc533830f7cc062862768be009c2430c34088abcdea06b10e23a9c351823a6",
+      "path": "tickets/v3.1.19/sources/issue-60.json"
+    },
+    {
+      "issue": 61,
+      "updated_at": "2026-09-14T15:17:15Z",
+      "body_sha256": "96c57e393e13771ea5ae6dd75a5add57ee6a215a8f8b7e09ef839454a8b5a2da",
+      "path": "tickets/v3.1.19/sources/issue-61.json"
+    },
+    {
+      "issue": 62,
+      "updated_at": "2026-09-14T15:17:18Z",
+      "body_sha256": "6e5540a88b7c89af97faf7761bcdc5d16eaea0006b9570ac60812881ca6d04c7",
+      "path": "tickets/v3.1.19/sources/issue-62.json"
+    },
+    {
+      "issue": 63,
+      "updated_at": "2026-09-14T15:17:21Z",
+      "body_sha256": "3bcaeb41d8344f5afb50f3e4dee7698c55b7a5d4399112cb8913341b31b59868",
+      "path": "tickets/v3.1.19/sources/issue-63.json"
+    },
+    {
+      "issue": 64,
+      "updated_at": "2026-09-14T15:17:24Z",
+      "body_sha256": "447bda8e3c8b923aca01cbabfbe497dd1a2d1a7906ce25e52de49e0e4c6aa432",
+      "path": "tickets/v3.1.19/sources/issue-64.json"
+    },
+    {
+      "issue": 65,
+      "updated_at": "2026-09-14T15:17:33Z",
+      "body_sha256": "b96e7c6b8d3b79c183c552f314d9e8f9943a3d3e3e3109a477237592284916e9",
+      "path": "tickets/v3.1.19/sources/issue-65.json"
+    },
+    {
+      "issue": 66,
+      "updated_at": "2026-09-14T15:17:42Z",
+      "body_sha256": "aaaa46cb8d3a194ec754f793b45fce655113adab92ae6f1db28a94ad9b6735b7",
+      "path": "tickets/v3.1.19/sources/issue-66.json"
+    },
+    {
+      "issue": 67,
+      "updated_at": "2026-09-14T15:17:45Z",
+      "body_sha256": "f2a697e7cf8955a825367cfb28a86fdc8bccca3c5213a73b0233cbb244903b2b",
+      "path": "tickets/v3.1.19/sources/issue-67.json"
+    },
+    {
+      "issue": 74,
+      "updated_at": "2026-09-16T07:39:50Z",
+      "body_sha256": "7b9b6167d505143485ed1a5a3d5e4f89770465a9e753f9aaf09e61479580b7c9",
+      "path": "tickets/v3.1.19/sources/issue-74.json"
+    },
+    {
+      "issue": 75,
+      "updated_at": "2026-09-16T07:39:51Z",
+      "body_sha256": "2077d1b6558f3468cdecb825ff6b85aeecad070c1dd0ee465d2a6722d095151f",
+      "path": "tickets/v3.1.19/sources/issue-75.json"
+    },
+    {
+      "issue": 78,
+      "updated_at": "2026-09-16T09:59:18Z",
+      "body_sha256": "c0c2cb91bc64ffee04373a656451d5e941e7f855ab0e00416fe1667c4a756692",
+      "path": "tickets/v3.1.19/sources/issue-78.json"
+    }
+  ]
+}

@@ -20,6 +20,7 @@ Every canonical version must contain all applicable items:
 7. Architecture source/export set when changed
 8. Integrity audit result
 9. Distribution ZIP and ZIP sidecar checksum when produced
+10. WEB canonical status snapshot (required for every canonical release)
 
 ### 2.1 WBS/Gantt mandatory distribution control
 
@@ -37,7 +38,14 @@ Every canonical version must contain all applicable items:
 - GitHub Release가 발행되면 `canonical-integrity` Workflow가 `--published` 검증을 자동 실행한다. Actions가 실행되지 않거나 사용량 제한으로 중단되면 결과를 `NOT RUN`으로 기록하고 동일 스크립트의 로컬 PASS를 보상 증적으로 남긴다.
 - v3.1.17은 WBS/Gantt가 저장소와 ZIP 내부에는 포함됐으나 독립 Release Asset으로는 제공되지 않았던 이력으로 보존한다. 과거 Tag나 Release Asset을 소급 변경하지 않고 v3.1.18부터 본 통제를 적용한다.
 
-### 2.2 완료 변경 요청의 정본 동기화
+### 2.2 WEB 배포 통제
+
+- 모든 정본 버전에 같은 기준선의 WEB 상태 스냅샷을 포함한다.
+- WEB 파일은 저장소, Distribution Manifest, SHA256SUMS 및 정본 ZIP에서 식별하고 같은 바이트인지 검증한다.
+- WEB은 기준일·RELEASED 버전·계획 목표·실제 상태를 구분하며 단독 갱신을 새 정본 발행으로 해석하지 않는다.
+- 현재 v3.1.18 WEB은 기존 Tag/ZIP으로 보존하고 이 정책은 차기 정본 배포 검증에 반영한다.
+
+### 2.3 완료 변경 요청의 정본 동기화
 
 - 직전 RELEASED 버전 이후 `Done` 또는 `Merged`로 승인된 모든 Change Request는 다음 정본 후보에 반드시 동기화한다.
 - 동기화 대상은 Baseline, WBS/Gantt, Canonical Ticket Pack, `tickets/<Record-ID>_Notion_Description_*.md`, Milestone/Completion Record, Evidence 참조, Release Notes 및 적용되는 Manifest·`SHA256SUMS`이다.
@@ -64,6 +72,16 @@ A release must not be merged when any of the following remains unresolved:
 - Secret, token, private key, password, or unmasked credential exposure
 - Runtime evidence represented as complete when only design approval exists
 - WBS/Gantt가 ZIP과 독립 GitHub Release Asset 중 어느 한쪽에서 누락되거나 SHA-256이 불일치함
+
+### 4.1 일정 유연성과 사실관계
+
+2026-09-11 사용자 지시에 따라 점검표 및 WBS/Gantt의 날짜는 필수 준수 기한이 아닌 조정 가능한 계획 목표로 관리한다.
+
+- 일정 변경·목표 미달 자체는 문서 승인 차단 또는 Runtime FAIL의 근거가 아니다.
+- 가용성·선행 작업·인계 상황에 따라 계획을 조정하고 Baseline·WBS/Gantt·티켓의 현행 값과 변경 근거를 일치시킨다.
+- 계획일과 실제 착수·완료일을 구분한다. 실제 날짜·기간의 모순은 원본 근거로 확인한다.
+- 대표 Milestone은 추적 목적에 따라 확정하거나 근거 있는 의도적 미배정으로 처리한다. 미확정 값을 승인 없이 N/A로 바꾸지 않는다.
+- Gate의 실제 선행조건·검증·증적·인수 요건은 일정 유연성과 별도로 충족해야 한다.
 
 ## 5. Approval and traceability
 
