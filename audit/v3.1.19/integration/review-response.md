@@ -13,3 +13,13 @@
 기존 CI는 startup_failure이며 Jobs 0개였다. 로컬 검증을 CI PASS로 기록하지 않는다. 새 HEAD의 CI 결과는 PR에서 재조회한다.
 
 REVIEW_PENDING: governance/RELEASE_POLICY.md §6의 최소 1인 독립 Reviewer 승인과 검토 HEAD 확인 후 수동 병합한다. 사용자 배포 지시는 수신했고 추가 사용자 허가는 요청하지 않는다. 내용 병합 후 CURRENT/발행 상태를 별도 최종화한다.
+
+## 2026-09-17 후속 코드 리뷰 반영
+
+원문: https://github.com/321Team/fds-project-baseline/pull/73#issuecomment-5714100834 · 이하영 · 21:09:19 KST.
+
+- `verify-canonical-release.sh`의 통합 비밀정보 검사에 `wbs`를 복원했다. XLSX는 기존 정책대로 내용 패턴 검사에서 제외하지만, 해당 경로의 credential 확장자와 텍스트 파일은 검사한다.
+- 실제 shell entrypoint를 호출하는 합성 회귀 테스트를 추가했다. 수정 전 wbs의 금지 확장자 5종 및 합성 토큰 1건이 모두 rc=0/PASS로 통과하는 결함을 재현했다. 수정 후 6건 모두 rc!=0이며 canonical-integrity PASS 출력이 없고, 정상 입력은 PASS다.
+- 영문 이름 검증의 오류 메시지를 `incorrect KW LEE found; expected GU LEE`로 명확히 했다. 검증 동작·사용자 이름 값은 변경하지 않았다.
+- 로컬 테스트 38개 PASS(확장자 5종은 1개 메서드의 subTest). 문서/Workbook 67개 속성·58개 WBS·수식 및 상태는 유지한다.
+- reviewer의 non-blocking 코드 의견을 정식 GitHub APPROVED로 바꾸어 해석하지 않는다. 수정된 최종 HEAD 독립 승인은 별도다.

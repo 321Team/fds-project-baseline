@@ -77,6 +77,6 @@ for r in records:
  for target in [f'tickets/FDS_{V}_Canonical_Ticket_Update_Pack_v1.0.md',f'baseline/FDS_Project_Implementation_Baseline_{V}.md','governance/GITHUB_MILESTONE_MAP.md',f'web/FDS_{V}_Canonical_Status.html']:require(r['record_id'] in read(target),'document coverage')
 require('NOT PUBLISHED' not in read('CURRENT.md').split('## Historical')[0],'CURRENT actual publication')
 require('2026-09-11' in read('CURRENT.md') and 'v3.1.18' in read('CURRENT.md'),'published v18 preserved')
-for s in sheets.values():require(not any('KW LEE' in str(c['v']) for c in s.values()),'GU LEE naming')
+for s in sheets.values():require(not any('KW LEE' in str(c['v']) for c in s.values()),'incorrect KW LEE found; expected GU LEE')
 result={'status':'PASS','scope':'STATIC document/source/workbook consistency; no Runtime or approval','records':67,'planning_records':58,'historical_closed_records':9,'milestone_coverage':67,'source_body_hash_matches':67,'description_properties_matches':67,'new_checked_AC':0,'workbook_sheets':9,'workbook_charts':charts,'workbook_formula_cells':fc,'workbook_formula_errors':0,'states':dict(collections.Counter(r['properties']['Status'] for r in records)),'REVIEW':'PENDING','MERGE':'NOT_EXECUTED','PUBLICATION':'NOT_EXECUTED','RUNTIME':'NOT_EXECUTED_IN_THIS_REVIEW'}
 print(json.dumps(result,ensure_ascii=False,indent=2))

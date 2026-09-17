@@ -15,7 +15,7 @@ sha_file="${release_dir}/SHA256SUMS"
 test -f "${sha_file}"
 sha256sum -c "${sha_file}"
 
-python3 scripts/verify-document-secrets.py baseline tickets web audit releases governance scripts .github
+python3 scripts/verify-document-secrets.py baseline wbs tickets web audit releases governance scripts .github
 
 if [[ "${release_version}" == "v3.1.19" ]]; then
   python3 scripts/verify-v19-candidate.py

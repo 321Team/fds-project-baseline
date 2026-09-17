@@ -15,7 +15,7 @@ Baseline·Ticket Pack·67개 Description/원문·58행 WBS/Gantt·WEB·아키텍
 | `architecture/v3.1.19/Approved_Change_View.md` | 1962 | `cc0904d7ac4c518ba6f8dacbf36c1e70b1a29ad3e2a05ef8a4c1d2c1fbce42c2` |
 | `architecture/v3.1.19/Approved_Change_View.svg` | 1533 | `460f682d79f383c8f0a02418752eb55afbacc7deab091e9374f4169650d433d1` |
 | `audit/v3.1.19/COLLECTION_POLICY.md` | 3128 | `d0bed331a4b8fa4e85f49607be9401f00c42fb85176844524ead745d6abc04a8` |
-| `audit/v3.1.19/INTAKE_SHA256SUMS` | 8655 | `7f8c5f720aa81fc3de309776fb0f93aae6923ce99b5d5fa602262c8407bba896` |
+| `audit/v3.1.19/INTAKE_SHA256SUMS` | 8655 | `2d32b9950668106dd71c8f01dc28be82680d81b9016fabf9834ec67bfbae4b21` |
 | `audit/v3.1.19/README.md` | 1477 | `20312c35de95c97ecaf2e02298ae00e7a34b960c3de6b0ef7fb3b044f55aefab` |
 | `audit/v3.1.19/intake/icr-cni-simplification-20260916.md` | 6334 | `2bfbd0aa19884a063ee21fc8198f9712a05578f669d0e3b260ca93717f4d248b` |
 | `audit/v3.1.19/intake/initial-snapshot.json` | 62775 | `375b1553f9d69fa1c98e233d9c2e77ad0d659c0d127a2ef16334bbdb78b0506c` |
@@ -78,7 +78,7 @@ Baseline·Ticket Pack·67개 Description/원문·58행 WBS/Gantt·WEB·아키텍
 | `audit/v3.1.19/integration/history/releases__v3.1.19__FDS_Project_Implementation_Baseline_Release_Notes_v3.1.19.md` | 7275 | `780f4b3ea16c0badb36117439afea064b4130ef5812b171516a51d9253cf1e6f` |
 | `audit/v3.1.19/integration/property-delta.json` | 11386 | `30b1acdb41dd295b2005391581d23decee6fb506b42ddc2bdfb7460b6d73e918` |
 | `audit/v3.1.19/integration/repository-status.json` | 664910 | `098f4eb40997b7e18e76dc0ebf23c339fe6d0b2ada2da87d20afb6e6132ecbc5` |
-| `audit/v3.1.19/integration/review-response.md` | 1548 | `b6274dd01c9c86f6f8f9d0d6369772515e9365ffe3093d8f406bbe357bc1c497` |
+| `audit/v3.1.19/integration/review-response.md` | 2734 | `b31b9c4296d1560d66f2a8bc20c186481320d8ee4d062148d9f08646ef71c329` |
 | `audit/v3.1.19/integration/source-index.json` | 14813 | `15174aeb3afff830a598752c783f1e90c92b2fcafb16f4e8adbdd9ca17750474` |
 | `audit/v3.1.19/integration/verification.json` | 622 | `e756887baeeb353f670505080bfa04f84a243279712b932cf169a26653f163e2` |
 | `baseline/FDS_Project_Implementation_Baseline_v3.1.19.md` | 114027 | `624de7a27a5df46da6693ee6abb249719a2c8cdb914d9a7e1fc384d3275aaac9` |
@@ -100,11 +100,12 @@ Baseline·Ticket Pack·67개 Description/원문·58행 WBS/Gantt·WEB·아키텍
 | `scripts/project_sync/run.py` | 7654 | `e6f209fc239c8b723e892ac19e8d322cbed03d7236e125d17688c74c9bd0e3bc` |
 | `scripts/publish-canonical-release-assets.sh` | 1487 | `509e61e15ee1a5681730f559838f36b0c3fdd0cbcf3b1f8cc43db15b2a72752a` |
 | `scripts/ticket-sync.py` | 16929 | `f4440607707cbb466f85903369cb3caede820983e11f6386a99cf8622278ae85` |
-| `scripts/verify-canonical-release.sh` | 1253 | `f481b0b2a055a2cbb5acab6d7018ec733ec36d4e728e513a39fb340bf8641788` |
+| `scripts/verify-canonical-release.sh` | 1258 | `8ce9d4c4dd5a5ace016c6a43c702c581155c27219d832ffc05374cce95c14706` |
 | `scripts/verify-document-secrets.py` | 1825 | `f4178dacf14e7b9056a4029c80cc58b695d8cbb55453edcd69536b6fecf56cbb` |
 | `scripts/verify-v18-candidate.py` | 9796 | `aac7bf1e5f8ff117211be2981f269cb0c2f752fdc28e0ae01022da51caddc60a` |
-| `scripts/verify-v19-candidate.py` | 6559 | `ccedb25739219b411ee4a0a8aa5fd1d5f92986399f5d5c7cafd2ae620a980b44` |
+| `scripts/verify-v19-candidate.py` | 6585 | `920bfccbfbc25426137d9ee36b5af4f7143b7f1c1bba5e1e717b2b2e611eba60` |
 | `scripts/verify-wbs-gantt-distribution.sh` | 3259 | `139e45ba113d08df98bd58f7b4ad864822b459dd10e04422e6fe12ff63c7c774` |
+| `tests/test_canonical_secret_gate.py` | 2366 | `7b119026cc6ad765bf8c81fee08812a2b8cbfeb4c4c5889b43a199e996c10d50` |
 | `tests/test_document_secrets.py` | 1476 | `8a3acca4da0e208968e6446f3e94c887d4ed6bf83df001ab1a75cab624f8891d` |
 | `tests/test_project_sync.py` | 11598 | `f16b4129056e03a36ff113b60d528e18e632ed431e4fd47fe573a02dd614c19b` |
 | `tests/test_ticket_sync.py` | 6171 | `e2d030151ade38c0e0506f2b0f64a69f19d7f561bbb8072a8d7b8c57a7ca1bef` |
