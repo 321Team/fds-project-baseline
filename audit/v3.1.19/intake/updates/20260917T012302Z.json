@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "target_version": "3.1.19",
+  "captured_at": "2026-09-17T01:23:02Z",
+  "previous_capture": "2026-09-17T01:04:28Z",
+  "parent_candidate_head": "f282927ffd10b1221b74d1e8cd621f948ff49ce0",
+  "collection_scope": "TARGETED_P1_CICD_SUPPLY_RUNTIME_RECEIPT",
+  "status": "SUPPLY_RUNTIME_RECEIPT_VERIFIED_OFFLINE_INTEGRATION_PENDING",
+  "canonical_release": "3.1.18",
+  "source": "https://github.com/321Team/infra-cicd/issues/11",
+  "source_updated_at": "2026-09-17T01:21:09Z",
+  "change": {
+    "before": "ADOPTED_INPUT_IMPLEMENTATION_READY; supply Runtime NOT_EXECUTED",
+    "after": "SUPPLY_RUNTIME PASS from verified submitted receipt; app integration NOT_EXECUTED"
+  },
+  "verification": {
+    "APP_TEST_BUILD_SCAN": "NOT_EXECUTED",
+    "DELIVERY_GATE": "NOT_VERIFIED",
+    "NETWORK_ENFORCEMENT": "NOT_INDEPENDENTLY_VERIFIED",
+    "RAW_OCI_WHEEL_BYTES": "RETAINED_ON_RUNNER_NOT_SUBMITTED",
+    "SUPPLY_RECEIPT_CHECK": "PASS",
+    "SUPPLY_RUNTIME": "PASS_FROM_VERIFIED_SUBMITTED_RECEIPT",
+    "archive_bytes": 36315,
+    "archive_sha256": "6ae2fe28d2ab8eef0d4cf2e92a48b469b7a60fed3b59b8070461e61db2367403",
+    "base": {
+      "archive_sha256_reported": "c8fa45563815bd6a3de3a8b115103cbb3c838229bcda68ca255b70a9f2202d8c",
+      "config_digest": "sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad",
+      "imported_digest_match": true,
+      "layer_bytes": 46175163,
+      "layers": 4,
+      "manifest_digest": "sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79",
+      "raw_oci_submitted": false,
+      "repo_digests": [],
+      "repo_tags": [],
+      "server_blob_and_diffid_check": "PASS"
+    },
+    "commands": 22,
+    "commands_rc0": 22,
+    "duration_seconds": 71.78714609146118,
+    "evidence_directory": "/home/server01_cicd-runner/FDS_CICD_Supply.20260917T010757Z.974fb972",
+    "executable_sha256": "940423265a28382ffffd29e6f70d76804e85c09dcc60ef15a1e8017f0dc4dc09",
+    "finished_epoch": 1789607349.5947585,
+    "internal_checksums": 59,
+    "member_count": 60,
+    "profile_wheel_entries": 98,
+    "profiles": {
+      "fds-engine-runtime": {
+        "install_log_matches_inventory": true,
+        "inventory_sha256": "6bf41b600e46f61d8c7e1a7886c411938da44fdd9dc65ea5d25127e7df2b80a5",
+        "lock_sha256": "c9d6138da341b431f0b7fdaf4aee78d59f9207e9d3f2bf4636b0505681c1f80b",
+        "pip_check": "PASS",
+        "roots_match": true,
+        "tags_compatible": true,
+        "wheel_count": 18
+      },
+      "fds-engine-test": {
+        "install_log_matches_inventory": true,
+        "inventory_sha256": "56ec48ee8d9827d90b9e2281ddae125be2f3b8760656404e5f9daa5490f60acb",
+        "lock_sha256": "3a51dbbb6dd56d09658f0d2343e4b4847394f006f1f2aa082886bc468e797b65",
+        "pip_check": "PASS",
+        "roots_match": true,
+        "tags_compatible": true,
+        "wheel_count": 26
+      },
+      "transaction-api-runtime": {
+        "install_log_matches_inventory": true,
+        "inventory_sha256": "b5ddd2595efad3a48dc6d09bb963515ab5cb8bfcd38604116ea2329d819640a4",
+        "lock_sha256": "3a71d0d227415f3f818642b5370920f02a23a9bcb28f4dd31aac1d59d96c756e",
+        "pip_check": "PASS",
+        "roots_match": true,
+        "tags_compatible": true,
+        "wheel_count": 25
+      },
+      "transaction-api-test": {
+        "install_log_matches_inventory": true,
+        "inventory_sha256": "acf41ad32fc8aed812f545b5b3e60d74250d5c37b88c30530c95bb0d410d26e9",
+        "lock_sha256": "72137816616e16e2b88f86630c507800414c3b37c14c7f624b9042fd66a8ef85",
+        "pip_check": "PASS",
+        "roots_match": true,
+        "tags_compatible": true,
+        "wheel_count": 29
+      }
+    },
+    "request_count": 67,
+    "request_hosts": {
+      "auth.docker.io": 1,
+      "files.pythonhosted.org": 29,
+      "production.cloudfront.docker.com": 4,
+      "pypi.org": 29,
+      "registry-1.docker.io": 4
+    },
+    "result_sha256": "64ec3fe96f551e9f97dc6a417914177fefbd562c17fbd3100affdfa56f1f1828",
+    "schema": "P1-CICD-supply-receipt-verification-1",
+    "scope": "P1-CICD-OID03-20260917-03",
+    "source_head": "73db58f21711bc4712c2bd3b8a16599fe498995f",
+    "started_epoch": 1789607277.8076124,
+    "unique_wheels": 29,
+    "window": {
+      "duration_seconds": 3600,
+      "expires_epoch": 1789610879,
+      "hosts": [
+        "auth.docker.io",
+        "registry-1.docker.io",
+        "production.cloudfront.docker.com",
+        "pypi.org",
+        "files.pythonhosted.org"
+      ],
+      "manifest": "sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79",
+      "owner": "이권욱",
+      "requirements_source": "254b82231f8af79a06419b581174647bbccbe2bc",
+      "scope": "P1-CICD-OID03-20260917-03",
+      "started_epoch": 1789607279
+    }
+  },
+  "handoff_files": [
+    {
+      "path": "audit/v3.1.19/intake/p1-cicd-supply-20260917T010757Z/transaction-api-runtime/roots.txt",
+      "sha256": "0b8f3430a64f4b81429277bf651b2e1b62a68084f8d79b36a63d09d065b76947"
+    },
+    {
+      "path": "audit/v3.1.19/intake/p1-cicd-supply-20260917T010757Z/transaction-api-runtime/requirements.lock",
+      "sha256": "3a71d0d227415f3f818642b5370920f02a23a9bcb28f4dd31aac1d59d96c756e"
+    },
+    {
+      "path": "audit/v3.1.19/intake/p1-cicd-supply-20260917T010757Z/transaction-api-runtime/inventory.json",
+      "sha256": "b5ddd2595efad3a48dc6d09bb963515ab5cb8bfcd38604116ea2329d819640a4"
+    },
+    {
+      "path": "audit/v3.1.19/intake/p1-cicd-supply-20260917T010757Z/transaction-api-test/roots.txt",
+      "sha256": "dc9cf9fa2bfb10708504fc283835f8f7e138d115f83de8b94eededa9ef6eceb0"
+    },
+    {
+      "path": "audit/v3.1.19/intake/p1-cicd-supply-20260917T010757Z/transaction-api-test/requirements.lock",
+      "sha256": "72137816616e16e2b88f86630c507800414c3b37c14c7f624b9042fd66a8ef85"
+    },
+    {
+      "path": "audit/v3.1.19/intake/p1-cicd-supply-20260917T010757Z/transaction-api-test/inventory.json",
+      "sha256": "acf41ad32fc8aed812f545b5b3e60d74250d5c37b88c30530c95bb0d410d26e9"
+    },
+    {
+      "path": "audit/v3.1.19/intake/p1-cicd-supply-20260917T010757Z/fds-engine-runtime/roots.txt",
+      "sha256": "11b1f940e83bded8fa8e901005f0467c4652bfac332657b11c118ee8f9b80ca3"
+    },
+    {
+      "path": "audit/v3.1.19/intake/p1-cicd-supply-20260917T010757Z/fds-engine-runtime/requirements.lock",
+      "sha256": "c9d6138da341b431f0b7fdaf4aee78d59f9207e9d3f2bf4636b0505681c1f80b"
+    },
+    {
+      "path": "audit/v3.1.19/intake/p1-cicd-supply-20260917T010757Z/fds-engine-runtime/inventory.json",
+      "sha256": "6bf41b600e46f61d8c7e1a7886c411938da44fdd9dc65ea5d25127e7df2b80a5"
+    },
+    {
+      "path": "audit/v3.1.19/intake/p1-cicd-supply-20260917T010757Z/fds-engine-test/roots.txt",
+      "sha256": "3f6aee59d8afee889d56f97bfef08830ce94d630d05097fb2dfa3e8b9bf2d16c"
+    },
+    {
+      "path": "audit/v3.1.19/intake/p1-cicd-supply-20260917T010757Z/fds-engine-test/requirements.lock",
+      "sha256": "3a51dbbb6dd56d09658f0d2343e4b4847394f006f1f2aa082886bc468e797b65"
+    },
+    {
+      "path": "audit/v3.1.19/intake/p1-cicd-supply-20260917T010757Z/fds-engine-test/inventory.json",
+      "sha256": "56ec48ee8d9827d90b9e2281ddae125be2f3b8760656404e5f9daa5490f60acb"
+    }
+  ],
+  "implementation": {
+    "pr": 18,
+    "head": "73db58f21711bc4712c2bd3b8a16599fe498995f",
+    "source_changed": false,
+    "prior_ci": {
+      "run_id": 35168869240,
+      "job_id": 105035966586,
+      "tests": 128,
+      "conclusion": "success"
+    },
+    "review": {
+      "requested": "supreme33-kr",
+      "submitted": 0,
+      "status": "PENDING"
+    },
+    "merged": false
+  },
+  "artifacts": {
+    "raw_archive_ingested_into_github_evidence": false,
+    "selected_handoff_files_copied_verbatim": 12,
+    "raw_oci_and_wheels_submitted": false,
+    "original_source_requirements": "254b82231f8af79a06419b581174647bbccbe2bc",
+    "approved_final_app_source": null
+  },
+  "open_items": [
+    "repository@manifest digest local resolution in each build storage",
+    "offline supply integration into build_scan and app Dockerfiles",
+    "app pin/lock commit and explicit final Source approval",
+    "independent latest-head review followed by real app Test/Build/Scan"
+  ],
+  "unchanged": {
+    "runtime_ac": "1/10",
+    "delivery_gate": "NOT_VERIFIED",
+    "v19_publication": "NOT_READY",
+    "canonical_release": "3.1.18"
+  }
+}
