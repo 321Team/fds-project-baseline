@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "target_version": "3.1.19",
+  "captured_at": "2026-09-17T02:46:54Z",
+  "previous_capture": "2026-09-17T02:39:56Z",
+  "parent_candidate_head": "608be6356e836eeb14f1e1dc9e0fc238d82d720c",
+  "collection_scope": "TARGETED_P1_CICD_OFFLINE_PROBE_RUNTIME_RECEIPT",
+  "status": "OFFLINE_PROBE_RUNTIME_PASS_APP_EXECUTION_PENDING",
+  "canonical_release": "3.1.18",
+  "source": {
+    "url": "https://github.com/321Team/infra-cicd/issues/11",
+    "updated_at": "2026-09-17T02:45:44Z",
+    "body_sha256": "6f99d3dc49b16f6c2757e639fa093c197a7bc59b1ddb46a956931da1a9aa43dc"
+  },
+  "implementation": {
+    "url": "https://github.com/321Team/infra-cicd/pull/19",
+    "head": "602e376adb321190f9143c5358afd5c31ec7d7a9",
+    "updated_at": "2026-09-17T02:45:46Z",
+    "source_changed_this_turn": false,
+    "requested_reviewers": [
+      "supreme33-kr"
+    ],
+    "reviews": [],
+    "merged": false,
+    "ci_previously_verified": {
+      "tests": 122,
+      "run_id": 35175073989,
+      "job_id": 105054876044
+    },
+    "body_sha256": "6d261866665461eed749670533be98cd23d4d9294c3cb3a6b39e965f36a0057c"
+  },
+  "evidence": {
+    "archive": "offline-probe-evidence.tar.gz",
+    "library_file_id": "libfile_0c59064a097c8191b0e8bea279e4626d",
+    "sidecar_library_file_id": "libfile_b4b912ab03f48191aea6f6ad54544a48",
+    "original_archive_uploaded_to_github": false,
+    "verbatim_receipt_directory": "audit/v3.1.19/intake/p1-cicd-offline-probe-20260917T024125Z/",
+    "verbatim_files": 8
+  },
+  "verification": {
+    "APP_TEST_BUILD_SCAN": "NOT_EXECUTED",
+    "DELIVERY_GATE": "NOT_VERIFIED",
+    "PASS_SCOPE": [
+      "SUPPLY_COPY_SERVER_CHECKS",
+      "REPOSITORY_DIGEST_RESOLUTION",
+      "BASE_DIGEST_MINIMUM_BUILD"
+    ],
+    "archive_bytes": 5158,
+    "archive_sha256": "db6c4a18857aa5ecb1f9a923888268193d7653932b9b0eeb0174116fe07f7831",
+    "base_archive_sha256": "c8fa45563815bd6a3de3a8b115103cbb3c838229bcda68ca255b70a9f2202d8c",
+    "commands_exact_match": true,
+    "commands_rc0": 6,
+    "config_digest": "sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad",
+    "duration_seconds": 4.522847,
+    "evidence_directory": "/home/server01_cicd-runner/FDS_CICD_OfflineProbe.9r4g0goy",
+    "finished_at": "2026-09-17T02:41:30.409717+00:00",
+    "finished_at_kst": "2026-09-17T11:41:30.409717+09:00",
+    "input_sha256": "0cdf9165e7473fdc495cd374e55e6a626faf175ecc0020c7f44d854e6f1e02f4",
+    "internal_checksum_count": 7,
+    "limitations": [
+      "Raw OCI/wheels and probe image bytes remain on server, not in receipt",
+      "No new app pip install, app tests, app build or scan in this probe",
+      "No packet/firewall or remote attestation claim"
+    ],
+    "member_count": 8,
+    "probe_image_id": "sha256:00a37c71f1ebf1b0cdbdbd40e4e4c14b0a51f2c68458c8e2e658abfadda0c066",
+    "repo_digests": [
+      "docker.io/library/python@sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79"
+    ],
+    "repo_tags": [
+      "docker.io/library/python:cicd-offline-2fe5997d249a808b"
+    ],
+    "repository_digest": "docker.io/library/python@sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79",
+    "result_sha256": "70a387894c8678076ee5711c0e015bebea29704f8bf8c0b466847a386414caf4",
+    "started_at": "2026-09-17T02:41:25.886870+00:00",
+    "started_at_kst": "2026-09-17T11:41:25.886870+09:00",
+    "tool_sha256": "082d800be1b3e368809eb61349a1a66905da59a743607d8cf175a0c859a412e4",
+    "tool_source_commit": "cefcaeaa74f6bb96de4df1d5bf915f2b00ebf24f"
+  },
+  "change": {
+    "before": "Initial preflight FAIL; absolute-path retry result not received; repository@digest Runtime unverified",
+    "after": "Submitted receipt verifies supply-copy checks, repository@digest lookup and minimum base Build PASS"
+  },
+  "open_items": [
+    {
+      "owner": "이재환 / 앱 담당",
+      "task": "Review and commit Dockerfile2/lock4 candidates; hand off final SHA, approval and API Unit scope"
+    },
+    {
+      "owner": "이재환 / 독립 리뷰",
+      "task": "Review latest CICD PR19 602e376 and inherited Unit scope changes"
+    },
+    {
+      "owner": "이권욱 / CICD",
+      "task": "Bind final approved inputs and central manual workflow/read-only checkout; run actual app Test-Build-Scan"
+    }
+  ],
+  "unchanged": {
+    "app_main": "254b82231f8af79a06419b581174647bbccbe2bc",
+    "approved_source_sha": null,
+    "app_test_build_scan": "NOT_EXECUTED",
+    "runtime_ac": "1/10",
+    "delivery_gate": "NOT_VERIFIED",
+    "publication": "NOT_READY",
+    "network_policy_changed": false,
+    "main_merge": false
+  },
+  "scope_limits": [
+    "Probe contains no new app dependency installation, app tests/build/scan",
+    "Archive preserves logs and receipt, not OCI/wheel or probe image payload",
+    "No signed attestation or independent packet/firewall enforcement claim",
+    "Current PR19 code602e376 and runtime bundle sourcecefcaeaa are distinct"
+  ],
+  "preserved_files": [
+    {
+      "path": "audit/v3.1.19/intake/p1-cicd-offline-probe-20260917T024125Z/offline-base-build.log",
+      "sha256": "af19e81e93029a499202f25eeb60ea3c8d888a2e6d0fdfca65f8ed26344ba46a"
+    },
+    {
+      "path": "audit/v3.1.19/intake/p1-cicd-offline-probe-20260917T024125Z/offline-base-load.log",
+      "sha256": "f19d9afc242b1c12fc97004a0cbfbff933ca98ffac6e63071a33330e1dcc2d28"
+    },
+    {
+      "path": "audit/v3.1.19/intake/p1-cicd-offline-probe-20260917T024125Z/offline-base-resolve.log",
+      "sha256": "159d5ba6c4991c1685e17f4f951ac00195d131edbefb1dd1fb66bf3b6e7bb436"
+    },
+    {
+      "path": "audit/v3.1.19/intake/p1-cicd-offline-probe-20260917T024125Z/offline-base-tag.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "audit/v3.1.19/intake/p1-cicd-offline-probe-20260917T024125Z/podman-rootless.log",
+      "sha256": "a17fcf0a2f50e2d495e4f90ce263410edc183add6c62699a2facbccf60410f74"
+    },
+    {
+      "path": "audit/v3.1.19/intake/p1-cicd-offline-probe-20260917T024125Z/podman-version.log",
+      "sha256": "5d57fcc5763930d5e2152569c0ff545dccef532baf0b320d221a17e66db8f590"
+    },
+    {
+      "path": "audit/v3.1.19/intake/p1-cicd-offline-probe-20260917T024125Z/result.json",
+      "sha256": "70a387894c8678076ee5711c0e015bebea29704f8bf8c0b466847a386414caf4"
+    },
+    {
+      "path": "audit/v3.1.19/intake/p1-cicd-offline-probe-20260917T024125Z/SHA256SUMS",
+      "sha256": "5d97701659f33574790e313e9df790a334a7d41b4f508737c1113b75eea70af8"
+    },
+    {
+      "path": "audit/v3.1.19/intake/p1-cicd-offline-probe-20260917T024125Z/README.md",
+      "sha256": "13716b793f39eb158124681d78c6f8b50eb2cd81a39917f2af9ebb975c0f37be"
+    }
+  ]
+}
