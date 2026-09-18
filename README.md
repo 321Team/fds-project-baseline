@@ -6,7 +6,7 @@ Private canonical repository for the FDS hybrid cloud project's approved baselin
 
 - `main` contains only approved `RELEASED` document baselines.
 - `release/vX.Y.Z` prepares one candidate release through review.
-- A release is canonical only after independent PR approval, the exact-HEAD review gate, manual merge by an approved operator, manifest verification and SHA-256 verification. If technical branch protection or Actions is unavailable, use the approved Free-plan compensating controls in `governance/RELEASE_POLICY.md`; do not claim protected `main` or CI PASS.
+- A release is canonical after the responsible Lead's exact-HEAD decision, manual merge by an authorized operator, manifest verification and SHA-256 verification. Independent review is required only when the PR includes code or executable configuration changes; documentation-only PRs, finalization and publication are delegated to the canonical Lead. Follow [REVIEW_AUTHORITY_POLICY](governance/REVIEW_AUTHORITY_POLICY.md) and the compensating controls in `governance/RELEASE_POLICY.md`; do not claim protected `main` or CI PASS when unavailable.
 - Working branches, local files and development repositories are not document canonical sources.
 - `CURRENT.md` identifies the active release and its immutable merge commit SHA.
 
@@ -95,7 +95,7 @@ python3 scripts/build-canonical-package.py v3.1.18 /tmp/fds-v18-package
 FDS_RELEASE_ZIP=/tmp/fds-v18-package/FDS_v3.1.18_Canonical_Baseline_Release_Package.zip RELEASE_VERSION=v3.1.18 bash scripts/verify-canonical-release.sh
 ```
 
-이 명령들은 Release 발행이나 GitHub 티켓 변경을 수행하지 않는다. `governance/RELEASE_POLICY.md`의 독립 리뷰·정확한 HEAD 승인·최종 발행 Gate를 그대로 적용한다.
+이 명령들은 Release 발행이나 GitHub 티켓 변경을 수행하지 않는다. 현재 승인 절차는 [Lead 위임 정책](governance/REVIEW_AUTHORITY_POLICY.md)을 적용한다. 코드 포함 PR은 독립 리뷰, 문서만 변경한 PR과 발행은 정본 Lead 판단이며 정확한 HEAD·배포물 무결성 검증은 유지한다.
 
 추가 유입: 이하영 09-10 면접 휴가(09-08 유지), P1-SEC 기존 계획창 가용 작업일 4일(권장 종료 09-21 창은 10일), ICR/K8S Worker·NTP 검토 및 PR #2 리뷰 요청 상태를 후보에 반영했다. 상세 원문은 `audit/v3.1.18/followup-20260910.json`을 참조한다.
 
