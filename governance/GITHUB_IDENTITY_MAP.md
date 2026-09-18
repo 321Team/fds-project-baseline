@@ -16,4 +16,4 @@
 
 ## 2026-09-18 절차 변경의 적용
 
-위 정본 역할 제한은 업무 Lead의 자체 실행·검증·인수·종결을 금지한다는 뜻이 아니다. 이재환도 기존 Application/Data/Monitoring/QA 티켓의 Lead 범위에서 코드 외 절차를 결정한다. 정본 발행 담당과 계정 권한은 기존 범위를 유지한다. 독립 리뷰는 코드 병합 시에만 필수이며, 코드 외 절차에서 Support의 별도 승인을 의무화하지 않는다. 문서 전용 PR은 해당 문서 Lead가 결정하고, 정본 파일의 판단은 기존 정본 Lead가 맡는다. 이 개정으로 Assignee·CODEOWNERS·GitHub 권한을 변경하지 않는다.
+위 정본 역할 제한은 업무 Lead의 자체 실행·검증·인수·종결을 금지한다는 뜻이 아니다. 이재환도 기존 Application/Data/Monitoring/QA 티켓의 Lead 범위에서 코드 외 절차를 결정한다. 정본 발행 담당과 계정 권한은 기존 범위를 유지한다. 독립 리뷰는 코드 병합과 `fds-project-evidence`의 PR에 필수이며, 그 밖의 코드 외 절차에서 Support의 별도 승인을 의무화하지 않는다. 문서 전용 PR은 해당 문서 Lead가 결정하고, 정본 파일의 판단은 기존 정본 Lead가 맡는다. 이 개정으로 Assignee·CODEOWNERS·GitHub 권한을 변경하지 않는다.
