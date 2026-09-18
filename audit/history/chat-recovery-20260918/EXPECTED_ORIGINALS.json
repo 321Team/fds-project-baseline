@@ -1,0 +1,21 @@
+{
+  "schema": "fds.historical-recovery.v1",
+  "status": "ORIGINAL_TRANSFER_PENDING",
+  "classification": "HISTORICAL_REFERENCE_ONLY",
+  "files": [
+    {"name":"FDS_All_Issues_AC_Baseline_Audit_20260912_v1.0.md","size":30324,"sha256":"acdfce4299e09f11c8c39e0d11537fa51cf950cf5d52f53442e61f9f955fac07","git_blob":"c22d22fc97d957a77b72d97875a93830d2ce3fae","library_file_id":"file_00000000143c820bb50d55281d6453ba"},
+    {"name":"FDS_All_Ticket_Spec_Record_Audit_20260914_v1.0.md","size":54478,"sha256":"d14788aa314215f4cb818356e90a26d91c28855f81350945099775e9f2da90fc","git_blob":"cca02d3b2424d9ab79b06301354f1f6389e8a9d0","library_file_id":"file_00000000f0c481f59c92f5461038ad95"},
+    {"name":"FDS_Ticket_Spec_Update_Result_20260915_v1.0.md","size":16668,"sha256":"d6415721f104dbcbbe16eb996cd52ecf504626095dab74eff53449cd27d9d9b0","git_blob":"a4b0a17b658956efb979956cf165913724430cf0","library_file_id":"file_000000008afc820bb2b7b64f8f19985a"},
+    {"name":"FDS_Ticket_Spec_Update_Evidence_20260915_v1.0.zip","size":632622,"sha256":"62a31d966ce6be89196bc63dab6c3d7bd5ec0dbeafc6c785e37f2acbcb61691b","git_blob":"252924dfc287d075d677caa9cf15011bcfcca5b4","library_file_id":"file_000000000ad4820ba4debd6885c2fe8b"},
+    {"name":"FDS_Canonical_Alignment_and_Followup_Review_20260910_v1.0.md","size":15557,"sha256":"a6c1910059a0f0fc6096f04c64fcc6a16afdfdf5db2c026b192b6d47097390ab","git_blob":"8eb179065ec756f4f01a7e416afa0431b7584460","library_file_id":"file_000000007de4820e817952ce0e056842"}
+  ],
+  "dns_originals_registered_separately": {
+    "repository":"321Team/infra-dns",
+    "pr":2,
+    "head":"18d12deac26a628d29ad5058800ac1cb07083fb5",
+    "path":"docs/archive/P1-DNS-01/20260903",
+    "status":"REGISTERED_PR_OPEN_NOT_MERGED"
+  },
+  "runtime":"NOT_RUN",
+  "live_issue_changes":"NONE"
+}
