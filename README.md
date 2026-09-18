@@ -7,6 +7,7 @@ Private canonical repository for the FDS hybrid cloud project's approved baselin
 - `main` contains only approved `RELEASED` document baselines.
 - `release/vX.Y.Z` prepares one candidate release through review.
 - A release is canonical after the responsible Lead's exact-HEAD decision, manual merge by an authorized operator, manifest verification and SHA-256 verification. Independent review is required only when the PR includes code or executable configuration changes; documentation-only PRs, finalization and publication are delegated to the canonical Lead. Follow [REVIEW_AUTHORITY_POLICY](governance/REVIEW_AUTHORITY_POLICY.md) and the compensating controls in `governance/RELEASE_POLICY.md`; do not claim protected `main` or CI PASS when unavailable.
+- Project-wide exception: every PR in `fds-project-evidence` retains independent review, including documentation/evidence-only changes. This does not add independent approval to each Runtime step in other repositories.
 - Working branches, local files and development repositories are not document canonical sources.
 - `CURRENT.md` identifies the active release and its immutable merge commit SHA.
 
