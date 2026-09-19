@@ -2,6 +2,46 @@
 
 Private canonical repository for the FDS hybrid cloud project's approved baseline, WBS/Gantt, ticket pack, release records, WEB snapshot and integrity audits.
 
+이 저장소는 **비공개 정본**이다. 공개 팀 소개는 Organization 프로필(`321Team/.github`의 `profile/README.md`)을 사용한다. 이 README는 내부 개발·문서 정책을 찾는 입구이며, 정책 본문은 `governance/`와 승인된 Release Tag가 정본이다.
+
+## 프로젝트와 팀 (내부)
+
+321Team은 [코오롱 베니트] 하이브리드 클라우드 컨테이너 플랫폼 설계 및 구현 9기 과정 팀이다. 대상 서비스는 On-prem 가상화 + Kubernetes 기반 하이브리드 컨테이너 플랫폼 위의 FDS(`transaction-api`, `fds-engine`)이다.
+
+현재 발행 문서 정본은 `CURRENT.md`와 태그 `docs-v3.1.19`를 우선한다. `main` HEAD가 태그보다 앞설 수 있으며, 문서 인용은 태그/Release를 기준으로 한다.
+
+| 실명 | GitHub | 업무 | 정본 권한 경계 |
+|---|---|---|---|
+| 이하영 | `hayeounglee` | 정본 리뷰·독립 승인, 품질 검증 | 정본 리뷰·승인 규칙 적용 |
+| 이재환 | `supreme33-kr` | Application / Data / Monitoring / QA | 정본 승인·리뷰·병합·발행 역할 제외 |
+| 이권욱 | `GWONUK` | PMO·인프라 구현, 정본 운영 | 정본 운영·승인 규칙 적용 |
+
+근거: `governance/GITHUB_IDENTITY_MAP.md` (정본 태그 `docs-v3.1.19`). Issue Assignee가 있다고 정본 파일 승인 권한이 생기지는 않는다.
+
+## 개발·문서 정책 색인
+
+정책 원문은 아래 파일을 수정하지 않고 인용한다. README 요약과 원문이 다르면 원문과 최신 승인 변경이 우선한다.
+
+| 주제 | 정본 위치 |
+|---|---|
+| 정본 브랜치·발행·checksum | [RELEASE_POLICY.md](governance/RELEASE_POLICY.md) |
+| 리뷰 권한·독립 승인 범위 | [REVIEW_AUTHORITY_POLICY.md](governance/REVIEW_AUTHORITY_POLICY.md) |
+| 실명·GitHub 계정·권한 경계 | [GITHUB_IDENTITY_MAP.md](governance/GITHUB_IDENTITY_MAP.md) |
+| 티켓 속성 동기화 | [TICKET_SYNC_POLICY.md](governance/TICKET_SYNC_POLICY.md) |
+| 라벨·Issue Type | [GITHUB_LABEL_SCHEMA.md](governance/GITHUB_LABEL_SCHEMA.md) |
+| Milestone 매핑 | [GITHUB_MILESTONE_MAP.md](governance/GITHUB_MILESTONE_MAP.md) |
+| 티켓 동기화 실행 | [TICKET_SYNC_RUNBOOK.md](governance/TICKET_SYNC_RUNBOOK.md) |
+| Projects 보드 동기화 | [PROJECT_SYNC_RUNBOOK.md](governance/PROJECT_SYNC_RUNBOOK.md) |
+| 현재 발행 메타데이터 | [CURRENT.md](CURRENT.md) |
+
+핵심 운영 규칙(요약, 원문 대체 아님):
+
+- `main`에는 승인된 RELEASED 문서만 둔다. 직접 `main` push를 금지한다.
+- 변경은 release/작업 브랜치와 Pull Request로만 제출한다.
+- 문서 정본 발행과 Runtime/Gate 인수는 별개다. CI 미실행을 CI PASS로 쓰지 않는다.
+- 비밀·개인키·비밀번호를 저장소와 산출물에 넣지 않는다.
+- 계획일과 실제 완료일, STATIC/MOCK/CI/RUNTIME/REVIEW/MERGE/PUBLICATION을 구분한다.
+
 ## Source-of-truth rule
 
 - `main` contains only approved `RELEASED` document baselines.
