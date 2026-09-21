@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-09-21",
+  "purpose": "RELEASE_POLICY.md §2.3 완료 변경 요청의 정본 동기화 — 차기 정본 후보에 반영할 SHA256 목록. v3.1.19의 releases/v3.1.19/SHA256SUMS는 이 파일로 수정하지 않는다.",
+  "baseline_release": "v3.1.19",
+  "baseline_sha256sums_path": "releases/v3.1.19/SHA256SUMS",
+  "main_head_at_check": "ba8a22f9adc25e52cf3e4d841f7e7357b5a79da1",
+  "pr82_head_checked": "251838142271c5d7e52c516b24f79fba94673290",
+  "entries": [
+    {
+      "path": "governance/GITHUB_IDENTITY_MAP.md",
+      "registered_sha256_v3_1_19": "162910ee52843352aa5a868cb79bc76bf7b6ea5ddde35f022d1a7ba34c3ba2bc",
+      "current_sha256_main": "be013eb1de24ef6a53010e354bcff189dac8cb641161a27569de92f27bfb3e1e",
+      "current_blob_main": "b9eb0dd96795652e0b3e210f7785fec8ca17108a",
+      "drift_origin": "main HEAD (기존 상태, PR #82와 무관). #80/#81 병합 이후 정본 SHA256SUMS 미동기화로 추정 — 정확한 유발 커밋은 별도 git bisect 미수행",
+      "caused_by_pr82": false
+    },
+    {
+      "path": "governance/RELEASE_POLICY.md",
+      "registered_sha256_v3_1_19": "a8292a143f4b77de04c17022d3d909c1074cccd5accf9d512b0e4127aae3d5fb",
+      "current_sha256_main": "424c31557b5e8b49447bdfadb88fc989c8d914ace3f9ea645850de5f17be7a69",
+      "current_blob_main": "155f2bea32feb151069c06c8e9fe3296443161ea",
+      "drift_origin": "main HEAD (기존 상태, PR #82와 무관, PR #82는 이 파일을 변경하지 않음)",
+      "caused_by_pr82": false
+    },
+    {
+      "path": "governance/TICKET_SYNC_POLICY.md",
+      "registered_sha256_v3_1_19": "1fb3eb143864c1aaa307025e02cb6e966b43753939e075e22f84d60d0b58390b",
+      "current_sha256_main": "53d7d1e7666d7498adf7d68ee33c38435a8db6116b75fd3c305b10ddf9e9ae4f",
+      "current_blob_main": "6672b4dfdadb8bcc7fe74189dbb5bc3854e3bac1",
+      "drift_origin": "main HEAD (기존 상태, PR #82와 무관, PR #82는 이 파일을 변경하지 않음)",
+      "caused_by_pr82": false
+    },
+    {
+      "path": ".github/workflows/canonical-integrity.yml",
+      "registered_sha256_v3_1_19": "ff51d2595e1738db84604bad32ad11c10b216416dff8ccca7e63847bfe3aee68",
+      "current_sha256_main": "ff51d2595e1738db84604bad32ad11c10b216416dff8ccca7e63847bfe3aee68",
+      "current_sha256_pr82_head": "8a28df4738ae7e24b4de0cee4d072eb5b2a5a9c7fd0cd72af78f4f2bf0da60ba",
+      "current_blob_main": "4cf022142dd22cb3a1bfe63ab10425433ac1bd66",
+      "current_blob_pr82_head": "8ca85399c329ef14dd7b06b512f9f60c08be7314",
+      "note": "main 상태는 v3.1.19 SHA256SUMS와 일치. PR #82의 1줄 checkout SHA 고정 변경이 이 파일 자체의 해시를 바꾸므로, #82가 병합되면 이 항목이 새로 drift 상태가 된다.",
+      "caused_by_pr82": true
+    }
+  ],
+  "summary": {
+    "drifted_before_pr82": ["governance/GITHUB_IDENTITY_MAP.md", "governance/RELEASE_POLICY.md", "governance/TICKET_SYNC_POLICY.md"],
+    "would_drift_after_pr82_merge": [".github/workflows/canonical-integrity.yml"]
+  }
+}
