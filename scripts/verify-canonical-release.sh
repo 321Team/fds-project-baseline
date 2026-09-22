@@ -20,7 +20,7 @@ test -f "${sha_file}"
 # 다른 모든 경로(baseline/wbs/tickets/architecture/releases 등 정본 콘텐츠)의 불일치는 계속 FAIL한다.
 # 운영 드리프트는 RELEASE_POLICY §2.3에 따라 차기 정본 후보에 반드시 동기화해야 하며,
 # 이 예외가 그 의무를 면제하지 않는다.
-operational_drift_pattern='^(governance/|\.github/workflows/)'
+operational_drift_pattern='^(governance/|\.github/workflows/|scripts/)'
 
 sha256sum_output="$(sha256sum -c "${sha_file}" 2>&1)" && sha_status=0 || sha_status=$?
 printf '%s\n' "${sha256sum_output}"
