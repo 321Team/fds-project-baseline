@@ -11,7 +11,7 @@ def scan(roots):
    if path.is_symlink():errors.append((str(path),'symlink input'));continue
    if not path.is_file():continue
    if path.suffix.lower() in FORBIDDEN:errors.append((str(path),'credential-like extension'));continue
-   if path.suffix.lower() in {'.xlsx','.zip','.png','.jpg','.pdf','.pyc'}:continue
+   if path.suffix.lower() in {'.xlsx','.docx','.zip','.png','.jpg','.pdf','.pyc'}:continue
    try:text=path.read_text(encoding='utf-8')
    except (OSError,UnicodeError):errors.append((str(path),'unreadable text'));continue
    count+=1
