@@ -19,6 +19,32 @@ PR #86(`audit/canonical-followup-20260921/`)에서 수행한 전수 감사 결�
   - `.github/workflows/canonical-integrity.yml` — [PR #82](https://github.com/321Team/fds-project-baseline/pull/82) 병합 시 추가 drift 예정 (미병합)
 - 각 파일의 등록 해시 대 현재 해시 비교는 `audit/canonical-followup-20260921/checksum-drift.json`(PR #86)을 기준으로 한다.
 
+## 2026-09-22 재감사 (PR #82·#86·#88 병합 반영 후)
+
+main HEAD `639811197242979416b69b3fab4808a52e9eca1e` 기준 재확인 결과:
+
+- v3.1.19 태그 이후 **종결 Issue 여전히 0건**, **`status:done` 라벨 Open Issue 여전히 0건**(전체 Open 49건 라벨 재확인) — WBS/Ticket Pack/Baseline/Architecture 동기화 대상은 하루 전과 동일하게 없다.
+- `releases/v3.1.19/SHA256SUMS` 대비 실제 drift 5건(로컬 sha256sum 재계산으로 확인):
+
+| 경로 | 등록 해시(v3.1.19) | 현재 해시 |
+|---|---|---|
+| `governance/GITHUB_IDENTITY_MAP.md` | `162910ee...` | `be013eb1...` |
+| `governance/RELEASE_POLICY.md` | `a8292a14...` | `cce6d6b0...` |
+| `governance/TICKET_SYNC_POLICY.md` | `1fb3eb14...` | `53d7d1e7...` |
+| `.github/workflows/canonical-integrity.yml` | `ff51d259...` | `8a28df47...` |
+| `scripts/verify-canonical-release.sh` | (등재된 원본 해시) | `8ce9d4c4...` |
+
+- SHA256SUMS에 아직 미등재된 신규 파일 3건(체크섬 검사 영향 없음, §2.3상 차기 후보에 추가 등재 필요):
+
+| 경로 | 현재 해시 |
+|---|---|
+| `governance/REVIEW_AUTHORITY_POLICY.md` | `3a6a2eb8...` |
+| `.github/workflows/pr-review.yml` | `42985f93...` |
+| `README.md` | `4e5bd6be...` |
+
+- 원인: PR #80/#81(governance 정책 개정), PR #82(checkout SHA 고정), PR #88(WARN/FAIL 분리 로직). 전부 §2.4가 신설한 "운영 경로 드리프트" 범주이며 하드 FAIL 대상은 아니다.
+- 결론: 하루 전 감사와 실질적으로 동일 — governance/tooling 드리프트만 누적되고 있고, 정식 발행을 지금 강행할 실익은 여전히 낮다.
+
 ## 이 커밋이 수행하지 않는 것
 
 - v3.1.19의 어떤 파일·Tag·SHA256SUMS·GitHub Release도 수정하지 않는다.
