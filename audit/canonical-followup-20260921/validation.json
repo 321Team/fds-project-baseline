@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-09-21",
+  "checked_by": "Claude Code session (catchmeupnow@gmail.com 요청)",
+  "method": "로컬 git worktree에서 origin/main(ba8a22f9adc25e52cf3e4d841f7e7357b5a79da1)과 origin/fix/canonical-ci-checkout-pin-20260918(251838142271c5d7e52c516b24f79fba94673290)의 대상 4개 파일을 sha256sum으로 직접 재계산하고 releases/v3.1.19/SHA256SUMS 등록값과 대조했다.",
+  "confirmed": [
+    "governance/GITHUB_IDENTITY_MAP.md, RELEASE_POLICY.md, TICKET_SYNC_POLICY.md 3건은 PR #82 브랜치가 아니라 main HEAD 자체에서 이미 v3.1.19 SHA256SUMS와 불일치한다 (main과 PR #82 브랜치의 실제 해시가 동일하므로 PR #82가 원인이 아니다).",
+    ".github/workflows/canonical-integrity.yml은 main에서는 SHA256SUMS와 일치하고, PR #82 브랜치에서만 불일치한다 (PR #82의 1줄 변경이 직접 유발).",
+    "canonical-integrity 워크플로는 origin/main에 대해 실행 이력이 0건이다 (mcp__github__actions_list list_workflow_runs, branch=main, total_count=0). 즉 v3.1.19 발행 이후 이 검증이 main에서 실제로 성공한 적이 없다."
+  ],
+  "not_performed": [
+    "governance 문서 3건 drift의 정확한 유발 커밋(예: #80 대 #81)에 대한 git bisect/커밋별 대조는 수행하지 않았다.",
+    "releases/v3.1.19/SHA256SUMS 자체를 수정하거나 canonical-integrity 워크플로를 재실행하지 않았다 — 발행된 릴리스에 대한 소급 수정은 RELEASE_POLICY §4/6 위반이므로 시도하지 않았다.",
+    "차기 정본 후보(v3.1.20 등)의 정식 발행, WBS/Gantt·Ticket Pack·Manifest 갱신, Tag 생성은 수행하지 않았다. 이는 사용자가 선택한 '최소 동기화' 범위를 벗어난다.",
+    "PR #82의 실제 병합 여부 및 canonical-integrity 재실행 결과는 확인하지 않았다 — 이 기록은 병합 이전 시점의 참고 자료다."
+  ],
+  "scope_limit": "이 디렉터리는 §2.3 동기화 의무의 근거 자료(현재 실제 해시값)만 기록한다. 정본 Lead가 차기 정본 후보를 공식 발행할 때 이 값을 SHA256SUMS/Manifest에 반영할지 최종 결정한다."
+}
