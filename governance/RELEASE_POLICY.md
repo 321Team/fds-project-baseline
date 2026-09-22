@@ -59,7 +59,8 @@ Every canonical version must contain all applicable items:
 ### 2.4 운영 경로(governance/.github workflows) 드리프트 처리
 
 - §6에 따라 문서·Workflow 전용 PR은 release 브랜치 없이 main에 직접 병합될 수 있다. 그 결과 governance/와 .github/workflows/ 하위 파일이 마지막 발행 버전의 SHA256SUMS와 달라지는 것은 위변조가 아니라 예상된 운영 드리프트다.
-- scripts/verify-canonical-release.sh는 이 두 경로의 체크섬 불일치를 WARN으로 보고하고 canonical-integrity를 계속 PASS 처리한다. 그 외 모든 경로(Baseline·WBS/Gantt·Ticket Pack·Architecture·Release 산출물 등 정본 콘텐츠)의 불일치는 계속 FAIL로 차단한다.
+- scripts/verify-canonical-release.sh는 이 두 경로에 더해 자기 자신의 체크섬 불일치도 WARN으로 처리한다. 이 스크립트를 수정하는 PR은 수정 즉시 자신의 SHA256SUMS 등록값과 달라지는 자기참조 문제가 있기 때문이며, 이 예외는 scripts/verify-canonical-release.sh 파일 하나로 한정한다. verify-document-secrets.py 등 scripts/ 하위 다른 보안·검증 스크립트는 이 예외에 포함하지 않고 계속 하드 FAIL로 보호한다.
+- 위 대상 경로의 체크섬 불일치는 WARN으로 보고하고 canonical-integrity를 계속 PASS 처리한다. 그 외 모든 경로(Baseline·WBS/Gantt·Ticket Pack·Architecture·Release 산출물 등 정본 콘텐츠)의 불일치는 계속 FAIL로 차단한다.
 - 이 예외는 §2.3의 차기 정본 후보 동기화 의무를 면제하지 않는다. WARN이 발생하면 다음 정본 후보 발행 시 해당 경로를 SHA256SUMS/Manifest에 반드시 반영한다.
 - 이 예외 범위를 넘는 파일(정본 콘텐츠)까지 WARN으로 취급하도록 패턴을 넓히려면 이 절의 개정과 독립 리뷰를 거친다.
 
