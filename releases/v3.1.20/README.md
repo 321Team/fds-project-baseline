@@ -46,6 +46,26 @@ main HEAD `639811197242979416b69b3fab4808a52e9eca1e` 기준 재확인 결과:
 - 원인: PR #80/#81(governance 정책 개정), PR #82(checkout SHA 고정), PR #88(WARN/FAIL 분리 로직). 전부 §2.4가 신설한 "운영 경로 드리프트" 범주이며 하드 FAIL 대상은 아니다.
 - 결론: 하루 전 감사와 실질적으로 동일 — governance/tooling 드리프트만 누적되고 있고, 정식 발행을 지금 강행할 실익은 여전히 낮다.
 
+## 2026-09-22 진행 중 티켓 사양 갱신 (Lead 이재환 요청, 미종결 진행 기록)
+
+이 절은 §2.3 정본 동기화 기준(종결 Issue 또는 `status:done` 라벨)에는 아직 해당하지 않는다. 아래 티켓은 여전히 `In Progress`/`To Do` 상태이며 Baseline/WBS/Architecture 공식 동기화 대상이 아니다. 다만 Lead 이재환의 요청에 따라 v3.1.20 후보 수집 시점에 진행 상황과 발견된 사양 편차를 기록해 둔다.
+
+### 체크리스트 갱신 (Gate2 실행테스트 근거, 이재환 직접 확인)
+
+- [P1-APP-01 #15](https://github.com/321Team/fds-project-baseline/issues/15): "업무 API와 metrics Listener/Service를 분리한다", "업무·메트릭 Port 분리", "R01/R02/R04/R07와 DB 저장 PASS" 체크 — 정본 클러스터 실배포 기준 재검증(이슈 내 2026-09-22 코멘트 참고)
+- [P1-DB-01 #11](https://github.com/321Team/fds-project-baseline/issues/11): "transaction-api 저장·조회가 성공한다" 체크
+- [P1-E2E-01 #20](https://github.com/321Team/fds-project-baseline/issues/20): "정상 거래 E2E가 성공한다", "R01/R02/R04/R07 기대결과가 일치한다" 체크
+- [P1-MON-01 #17](https://github.com/321Team/fds-project-baseline/issues/17): 핵심요구사항 §1 "Kubernetes 내부 배치" 중 3개("monitoring-api 배치 범위", "monitoring-node 배치 범위", "Service는 ClusterIP만 사용") + Acceptance Criteria "Grafana Service는 ClusterIP이며 Ingress·NodePort·LoadBalancer가 0건이다" 체크
+
+각 항목은 티켓 자체 종결이 아니라 개별 체크리스트 항목 단위 확인이며, 티켓 Status·Result·Reviewer/Approver 등 종결 필드는 변경하지 않았다.
+
+### 발견된 사양/구현 편차 (Known Limitation 후보 — 정본 사양 변경 아님)
+
+- **Harbor 이미지 Digest 미고정**: P1-MON-01 사양은 "모든 Image는 Harbor 승인 Repository의 Digest로 고정"을 요구하나, 2026-09-22 실제 배포는 태그 기준(`10.1.93.54/fds/prometheus:latest` 등)으로 진행됐다. Digest 고정은 미완료로 남아 있다.
+- **kubelet/node-exporter 크로스노드 스크레이프 실패**: Prometheus가 자신이 위치한 노드 외 나머지 노드의 kubelet(10250)/node-exporter(9100) Target에 도달하지 못한다(TLS SAN 오류·timeout 혼재). GNP가 Pod CIDR(10.244.0.0/16) 발신 트래픽의 노드 간 통과를 허용하는지 재검토가 필요하다. P1-MON-01 AC "App metrics·kube-state-metrics·node-exporter·kubelet·Prometheus self Target이 모두 UP이다" 미충족의 직접 사유다.
+
+위 두 항목은 아직 Decision이나 Change Request로 승인되지 않은 관찰 사실이며, 이 기록 자체가 Baseline/Interface 정본 사양을 변경하지 않는다. 실제 정책 변경이 필요하면 별도 Change Request를 발행한다.
+
 ## 이 커밋이 수행하지 않는 것
 
 - v3.1.19의 어떤 파일·Tag·SHA256SUMS·GitHub Release도 수정하지 않는다.
