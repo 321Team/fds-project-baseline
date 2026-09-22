@@ -12,7 +12,7 @@ Baseline·Ticket Pack·WBS/Gantt·WEB·Release Notes를 v3.1.19 대비 실제 �
 
 아래 경로·크기·SHA-256은 패키지 입력이다. 이 Manifest 자체는 별도 `SHA256SUMS`에 기록한다(v3.1.19와 동일 관례). ZIP은 순환 해시를 피하기 위해 목록 외부에서 해시를 기록하며 Git에는 중복 저장하지 않는다. 생성 명령: `python3 scripts/build-canonical-package.py v3.1.20 /tmp/fds-v20-package`(SHA256SUMS 검토·승인 후 실행 예정). CI와 Runtime 인수는 이 정적 무결성 판정과 별개다.
 
-`releases/v3.1.20/reports/FDS_Interim_Deliverable_Report_v3.1.20.docx`(중간 산출물 보고서)는 이 Manifest/SHA256SUMS에 아직 포함하지 않았다. `scripts/verify-document-secrets.py`가 `.xlsx`는 스킵하면서 동일한 OOXML 컨테이너인 `.docx`는 스킵하지 않아, 이 파일을 포함하면 시크릿 스캐너가 내용과 무관하게 100% "unreadable text"로 오탐 FAIL한다. 스캐너 수정 PR이 별도로 반영된 뒤 후속 커밋으로 포함할 예정이다.
+`releases/v3.1.20/reports/FDS_Interim_Deliverable_Report_v3.1.20.docx`(중간 산출물 보고서)는 RELEASE_POLICY §2의 10개 필수 산출물에 포함되지 않는 별도 보고 문서이나, 이 후보의 실제 배포 대상이므로 다른 항목과 동일하게 SHA256SUMS 무결성 판정에 포함했다. (`scripts/verify-document-secrets.py`가 `.docx`를 `.xlsx`와 동일하게 바이너리로 스킵하도록 수정된 뒤 포함했다.)
 
 | Path | Bytes | SHA-256 |
 |---|---:|---|
@@ -22,7 +22,7 @@ Baseline·Ticket Pack·WBS/Gantt·WEB·Release Notes를 v3.1.19 대비 실제 �
 | `CURRENT.md` | 2466 | `19a02d809d564436fa0edae561032a04951abeb6e3f047d6f4f3643e3128b0a2` |
 | `architecture/v3.1.19/Approved_Change_View.md` | 1962 | `cc0904d7ac4c518ba6f8dacbf36c1e70b1a29ad3e2a05ef8a4c1d2c1fbce42c2` |
 | `architecture/v3.1.19/Approved_Change_View.svg` | 1533 | `460f682d79f383c8f0a02418752eb55afbacc7deab091e9374f4169650d433d1` |
-| `audit/FDS_Canonical_Integrity_Audit_v3.1.20.md` | 6199 | `7054dbd7a811475f3821171d1bf502456cf2ae2cbfe507b2a525c33561ee3383` |
+| `audit/FDS_Canonical_Integrity_Audit_v3.1.20.md` | 5633 | `1a673b47695ac2d76fa105d283ca4c47bdf7fbbe5cba1e06d7d01237be3373b9` |
 | `audit/canonical-followup-20260921/README.md` | 3878 | `df3d175e3d7dbb476cc6ff56e09f14441abc5f5f6342365484bac8b43a5a088a` |
 | `audit/canonical-followup-20260921/checksum-drift.json` | 3009 | `186fe15cf50c6abfa39ae2b0ded10def5f8654850f16f5bc7206fb8d612993f9` |
 | `audit/canonical-followup-20260921/validation.json` | 2178 | `87512cce66b84d3b92ec1f246ca0bec59ef8c1b6babd88c57e9599cd48ea54ed` |
@@ -38,13 +38,14 @@ Baseline·Ticket Pack·WBS/Gantt·WEB·Release Notes를 v3.1.19 대비 실제 �
 | `governance/ticket-sync-map.json` | 107196 | `deae909490f3259120618ce1f2516ab8303ed54c94a2d6c78efdbaaa874a95e7` |
 | `releases/v3.1.20/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.20.md` | 4855 | `6ef04c2fa7e38383355a5add47e003ded92649ba17a523c863e34bba25582950` |
 | `releases/v3.1.20/README.md` | 8940 | `f0511340cbba5fee3936feb539338000f15f0b6391d2df80432017998418cc9c` |
+| `releases/v3.1.20/reports/FDS_Interim_Deliverable_Report_v3.1.20.docx` | 13624 | `337fa275a33f3196b51adcfac9befdee9c9b9fba4571a904a3f5e2705c5935c3` |
 | `scripts/build-canonical-package.py` | 1322 | `3cd8825ae9a84e680aae361728833c80f1e17bc60f70127d4f3d19f19a5cb299` |
 | `scripts/project_sync/core.py` | 13140 | `59371d592a1468354719421b6c31bc76483f95f77bfe437a4f4b6ac6ef305211` |
 | `scripts/project_sync/run.py` | 7654 | `e6f209fc239c8b723e892ac19e8d322cbed03d7236e125d17688c74c9bd0e3bc` |
 | `scripts/publish-canonical-release-assets.sh` | 1487 | `509e61e15ee1a5681730f559838f36b0c3fdd0cbcf3b1f8cc43db15b2a72752a` |
 | `scripts/ticket-sync.py` | 16929 | `f4440607707cbb466f85903369cb3caede820983e11f6386a99cf8622278ae85` |
 | `scripts/verify-canonical-release.sh` | 3832 | `8418b343d074649bdb07f8c66839dae6638a0213c211e0ff14d4a40afb38e541` |
-| `scripts/verify-document-secrets.py` | 1825 | `f4178dacf14e7b9056a4029c80cc58b695d8cbb55453edcd69536b6fecf56cbb` |
+| `scripts/verify-document-secrets.py` | 1833 | `a79f0c7ec6c40e762c80457f5706233dee8a9c1db3328b910ec04961a3553861` |
 | `scripts/verify-v18-candidate.py` | 9796 | `aac7bf1e5f8ff117211be2981f269cb0c2f752fdc28e0ae01022da51caddc60a` |
 | `scripts/verify-v19-candidate.py` | 6827 | `088a8222b2cfa934f3f29863352625254e825227bc8d6a2f47eb31028df911e6` |
 | `scripts/verify-wbs-gantt-distribution.sh` | 3259 | `139e45ba113d08df98bd58f7b4ad864822b459dd10e04422e6fe12ff63c7c774` |
