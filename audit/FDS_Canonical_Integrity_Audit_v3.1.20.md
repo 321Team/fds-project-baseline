@@ -20,8 +20,8 @@ RELEASE_POLICY §2 item 8. 이 문서는 **실제로 수행한 검증만** 기�
 | DOCX(중간 산출물 보고서) 구조 | `scripts/office/validate.py` XSD 스키마 검증 PASS (Paragraphs: 169) |
 | WBS 수식 재계산(LibreOffice) | **NOT RUN** — 샌드박스에서 `soffice` 타임아웃(120s/180s 모두 실패, 환경 전역 문제로 별도 확인). 셀 diff로 수식이 편집되지 않았음만 확인했고, 재계산 결과 자체는 검증하지 못했다 |
 | DOCX 렌더링(PDF 변환 후 육안 확인) | **NOT RUN** — 동일 `soffice` 환경 장애. XSD 통과만 확인, 실제 페이지 레이아웃·표 렌더링은 미검증 |
-| GitHub Actions `canonical-integrity` 워크플로 실행 | **NOT RUN** — 로컬 재현만 수행, 실제 CI 실행·결과는 push 후 Actions 탭에서 별도 확인 필요 |
-| 독립 리뷰어 승인 | **NOT RUN** — PR #87 이재환 리뷰 진행 중, 미승인 |
+| GitHub Actions `canonical-integrity` 워크플로 실행 | HEAD `9fa13f8` 기준 실제 Actions 실행 확인(run #94 push / #95 pull_request) — 둘 다 `conclusion: success` |
+| 독립 리뷰어 승인 | PR #87, supreme33-kr(이재환, AI 보조·사람 확인 CONFIRMED 명시) APPROVED 3회, 최신 2건이 HEAD `9fa13f8` 기준. CHANGES_REQUESTED 없음, 미해결 리뷰 스레드 0건 |
 | 실제 Excel/Word 프로그램에서 열람 확인 | **NOT RUN** — 사용자가 실제 프로그램에서 최종 확인 권장 |
 | 실제 GitHub Issue 재수집(`ticket-sync.py`) | **NOT RUN** — 일정 변경은 Issue 코멘트로만 기록했고, `tickets/v3.1.19/{canonical-records.json,descriptions,sources}`는 v3.1.19 시점 스냅샷을 그대로 참조한다(Manifest에 명시) |
 | Distribution ZIP 생성(`build-canonical-package.py`) | 스크립트 자체가 SHA256SUMS의 175개 경로(docx 포함) 각각을 재해시해 대조한 뒤에만 ZIP을 작성하도록 되어 있어, 실행 성공 자체가 175/175 일치의 추가 증거다. 생성물은 Git에 커밋하지 않고(§2.1·v3.1.19 관례와 동일) 로컬 산출물로 사용자에게 전달했다 |

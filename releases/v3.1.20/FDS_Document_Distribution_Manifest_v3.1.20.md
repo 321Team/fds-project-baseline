@@ -22,7 +22,7 @@ Baseline·Ticket Pack·WBS/Gantt·WEB·Release Notes를 v3.1.19 대비 실제 �
 | `CURRENT.md` | 2466 | `19a02d809d564436fa0edae561032a04951abeb6e3f047d6f4f3643e3128b0a2` |
 | `architecture/v3.1.19/Approved_Change_View.md` | 1962 | `cc0904d7ac4c518ba6f8dacbf36c1e70b1a29ad3e2a05ef8a4c1d2c1fbce42c2` |
 | `architecture/v3.1.19/Approved_Change_View.svg` | 1533 | `460f682d79f383c8f0a02418752eb55afbacc7deab091e9374f4169650d433d1` |
-| `audit/FDS_Canonical_Integrity_Audit_v3.1.20.md` | 5633 | `1a673b47695ac2d76fa105d283ca4c47bdf7fbbe5cba1e06d7d01237be3373b9` |
+| `audit/FDS_Canonical_Integrity_Audit_v3.1.20.md` | 5758 | `b03547a7369b292953a5cfd621138534a17d809e3ab37a8d36511a9b30e74f92` |
 | `audit/canonical-followup-20260921/README.md` | 3878 | `df3d175e3d7dbb476cc6ff56e09f14441abc5f5f6342365484bac8b43a5a088a` |
 | `audit/canonical-followup-20260921/checksum-drift.json` | 3009 | `186fe15cf50c6abfa39ae2b0ded10def5f8654850f16f5bc7206fb8d612993f9` |
 | `audit/canonical-followup-20260921/validation.json` | 2178 | `87512cce66b84d3b92ec1f246ca0bec59ef8c1b6babd88c57e9599cd48ea54ed` |
