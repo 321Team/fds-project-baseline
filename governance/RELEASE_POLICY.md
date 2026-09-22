@@ -56,6 +56,13 @@ Every canonical version must contain all applicable items:
 - 변경 요청 완료는 별도 티켓·ICR·Milestone·Runtime Gate를 자동 완료하거나 승인하지 않는다.
 - 완료 변경 요청이 누락되거나 상호 상태가 불일치하면 정본 병합과 Release 발행을 중단한다.
 
+### 2.4 운영 경로(governance/.github workflows) 드리프트 처리
+
+- §6에 따라 문서·Workflow 전용 PR은 release 브랜치 없이 main에 직접 병합될 수 있다. 그 결과 governance/와 .github/workflows/ 하위 파일이 마지막 발행 버전의 SHA256SUMS와 달라지는 것은 위변조가 아니라 예상된 운영 드리프트다.
+- scripts/verify-canonical-release.sh는 이 두 경로의 체크섬 불일치를 WARN으로 보고하고 canonical-integrity를 계속 PASS 처리한다. 그 외 모든 경로(Baseline·WBS/Gantt·Ticket Pack·Architecture·Release 산출물 등 정본 콘텐츠)의 불일치는 계속 FAIL로 차단한다.
+- 이 예외는 §2.3의 차기 정본 후보 동기화 의무를 면제하지 않는다. WARN이 발생하면 다음 정본 후보 발행 시 해당 경로를 SHA256SUMS/Manifest에 반드시 반영한다.
+- 이 예외 범위를 넘는 파일(정본 콘텐츠)까지 WARN으로 취급하도록 패턴을 넓히려면 이 절의 개정과 독립 리뷰를 거친다.
+
 ## 3. Version and status rules
 
 - `CANDIDATE`: exists only on a release branch and is not canonical.
