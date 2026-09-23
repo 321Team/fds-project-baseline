@@ -15,6 +15,7 @@
 - Support는 필요한 기술 지원·보안 및 타 영역 영향 확인에 참여한다. 코드 병합 및 증적 저장소 독립 검토 외 단계에서 Support의 별도 서명·승인 대기를 일률적 필수 조건으로 두지 않는다.
 - 기존 Baseline §3.4·§17, Release/Ticket 정책, 개별 Runbook의 일반적인 “Support Review/독립 승인 후 실행·Done” 문구와 충돌하면 사람 간 승인 절차에 한해 이 정책을 우선한다. AC, 시험, 선행조건, 증적, 보안 통제는 유지한다.
 - 과거 승인·리뷰·발행 이력과 불변 Tag/배포 묶음은 보존한다. 차기 정본에는 이 변경결정과 적용 범위를 동기화한다.
+- 적용 대상 저장소(2026-09-23 사용자 확인): `fds-project-baseline`, `fds-project-evidence`, `fds-msa`, `infra-ansible`, `infra-cicd`, `infra-db`, `infra-dns`, `infra-harbor-trivy`, `infra-kubernetes`, `infra-lb`, `infra-monitoring`, `infra-pki`. 대상 외: `.github`(Organization public/private view 소개 페이지 게시용), `fds-project-architecture`, 보관 처리된 `fds-msa-legacy`, 개인 계정 저장소.
 
 ## 2. 코드와 문서의 구분
 
