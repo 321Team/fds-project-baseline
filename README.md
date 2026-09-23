@@ -63,6 +63,7 @@ Private canonical repository for the FDS hybrid cloud project's approved baselin
 | `releases/` | Immutable version history, release notes, manifest, checksums and package |
 | `audit/` | Read-only integrity and consistency audit results |
 | `governance/` | Release and document-control rules |
+| `retrospectives/` | Team retrospective records (Action Items; not canonical policy or baseline) |
 | `scripts/` | Local and CI integrity verification |
 
 ## Candidate verification
