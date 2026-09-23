@@ -31,4 +31,4 @@
 
 ## 검증 상태
 
-STATIC: 45개 본문 파일 SHA-256 = `plan.json` 확인, 스크립트 ASCII 확인. 스크립트 실행은 NOT RUN(작성 환경에 PowerShell 없음). 첫 실행은 점검 모드로 한다. 반영 후 결과 확인(깨진 링크 0건, 보관 원문 해시 일치, 계획 본문과 일치)은 별도로 수행해 상위 `evidence-path-result.json`에 기록한다.
+STATIC: 45개 본문 파일 SHA-256 = `plan.json` 확인, 스크립트 ASCII 확인. 2026-09-23 이권욱 PC에서 실행: 점검 모드 `DRY RUN ready=45`, 반영 `DONE applied=45`(12:28:56Z~12:30:56Z). 세션에서 재조회로 검증: 45건 모두 계획 본문과 일치, 깨진 링크 0, footer 없음, 현행 영역 구 경로 0, 보관 원문 해시 일치 44건(보관 원문 없음 1건). 결과는 상위 `evidence-path-result.json`에 기록했다.
