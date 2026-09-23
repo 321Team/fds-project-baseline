@@ -8,7 +8,9 @@ Private canonical repository for the FDS hybrid cloud project's approved baselin
 
 321Team은 [코오롱 베니트] 하이브리드 클라우드 컨테이너 플랫폼 설계 및 구현 9기 과정 팀이다. 대상 서비스는 On-prem 가상화 + Kubernetes 기반 하이브리드 컨테이너 플랫폼 위의 FDS(`transaction-api`, `fds-engine`)이다.
 
-현재 발행 문서 정본은 `CURRENT.md`와 태그 `docs-v3.1.19`를 우선한다. `main` HEAD가 태그보다 앞설 수 있으며, 문서 인용은 태그/Release를 기준으로 한다.
+현재 발행 문서 정본은 **v3.1.20**이며 `CURRENT.md`와 태그 `docs-v3.1.20`을 우선한다. `main` HEAD가 태그보다 앞설 수 있으며, 문서 인용은 태그/Release를 기준으로 한다.
+
+> v3.1.20 태그 주의: `docs-v3.1.20`은 최종화 병합이 아니라 내용 병합 `3364465`(PR #87)를 가리킨다. 그래서 태그 시점의 `CURRENT.md`에는 v3.1.19가 표시된다. v3.1.20 발행 메타데이터는 최종화 `9f57e69`(PR #91) 이후 main의 `CURRENT.md`를 기준으로 한다. 발행 후 정정 사항은 [v3.1.20 발행 후 정정 기록](audit/canonical-followup-20260923/README.md)을 따른다.
 
 | 실명 | GitHub | 업무 | 정본 권한 경계 |
 |---|---|---|---|
@@ -16,7 +18,7 @@ Private canonical repository for the FDS hybrid cloud project's approved baselin
 | 이재환 | `supreme33-kr` | Application / Data / Monitoring / QA | 정본 승인·리뷰·병합·발행 역할 제외 |
 | 이권욱 | `GWONUK` | PMO·인프라 구현, 정본 운영 | 정본 운영·승인 규칙 적용 |
 
-근거: `governance/GITHUB_IDENTITY_MAP.md` (정본 태그 `docs-v3.1.19`). Issue Assignee가 있다고 정본 파일 승인 권한이 생기지는 않는다.
+근거: `governance/GITHUB_IDENTITY_MAP.md` (정본 태그 `docs-v3.1.20`). Issue Assignee가 있다고 정본 파일 승인 권한이 생기지는 않는다.
 
 ## 개발·문서 정책 색인
 
@@ -62,6 +64,7 @@ Private canonical repository for the FDS hybrid cloud project's approved baselin
 | `web/` | Static distribution snapshot; not live Runtime evidence |
 | `releases/` | Immutable version history, release notes, manifest, checksums and package |
 | `audit/` | Read-only integrity and consistency audit results |
+| `retrospectives/` | 팀 회고·강사 피드백 기록. 정본 체크섬 대상 편입은 차기 후보(v3.1.21)에서 결정 |
 | `governance/` | Release and document-control rules |
 | `scripts/` | Local and CI integrity verification |
 
@@ -114,36 +117,23 @@ python3 -m unittest discover -s tests -p 'test_ticket_sync.py'
 
 README·정책 보완은 PR #69의 승인·내용 병합에 포함됐다. 최종화 PR·Tag·배포 Asset 검증을 거쳐 문서 정본을 발행하며 Runtime 완료 상태는 해당 증적으로 별도 판정한다.
 
-## v3.1.18 통합 후보
+## 발행 이력
 
-현재 발행 정본은 `CURRENT.md`의 v3.1.17이다. v3.1.18은 누적 이력 통합과 티켓 최신화를 준비한 후보이며 운영 완료 승인으로 사용하지 않는다.
+| 버전 | Tag | 핵심 기록 |
+|---|---|---|
+| v3.1.20 (현재) | `docs-v3.1.20` → `3364465` (내용 병합 PR #87; 최종화 PR #91 `9f57e69`는 태그 이후) | [Release 디렉터리](releases/v3.1.20/), [Release Notes](releases/v3.1.20/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.20.md), [Manifest](releases/v3.1.20/FDS_Document_Distribution_Manifest_v3.1.20.md), [무결성 감사](audit/FDS_Canonical_Integrity_Audit_v3.1.20.md), [발행 후 정정 기록](audit/canonical-followup-20260923/README.md) |
+| v3.1.19 | `docs-v3.1.19` → `966fc53` (최종화 PR #79) | [최종화 기록](releases/v3.1.19/FDS_Release_Finalization_Record_v3.1.19.md), [Release Notes](releases/v3.1.19/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.19.md) |
+| v3.1.18 | `docs-v3.1.18` → `72599ae` | [최종화 기록](releases/v3.1.18/FDS_Release_Finalization_Record_v3.1.18.md). PR #69 승인 HEAD `04c1ca46dcf82f814d350b4d49539e3ba4d6a9b4`, 내용 병합 `02be2150f7662319a3d796cdcb99f6d26aec5472` |
+| v3.1.17 | `docs-v3.1.17` → `2d93395` | [Release Notes](releases/v3.1.17/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.17.md) |
 
-- [Baseline 후보](baseline/FDS_Project_Implementation_Baseline_v3.1.18.md)
-- [WBS/Gantt 55건](wbs/FDS_v3.1.18_WBS_and_Gantt_v1.0.xlsx)
-- [64개 티켓 Description 후보](tickets/FDS_v3.1.18_Canonical_Ticket_Update_Pack_v1.0.md)
-- [변경·출처·인수 조건 대장](releases/v3.1.18/FDS_Canonical_Consolidation_Record_v3.1.18.md)
-- [Release Notes](releases/v3.1.18/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.18.md)
-- [배포 Manifest](releases/v3.1.18/FDS_Document_Distribution_Manifest_v3.1.18.md)
-- [무결성 감사](audit/FDS_Canonical_Integrity_Audit_v3.1.18.md)
+각 버전의 후보 원문·감사·Description 적용 입력은 당시 기록으로 보존한다. 그 안의 CANDIDATE/미발행 표시는 해당 수집·작성 시점의 상태다.
 
-순서는 정본 리뷰·명시적 merge 승인·발행 → 실제 티켓 Description 최신화 → 새 속성 map/plan 생성·적용이다. 현재 `governance/ticket-sync-map.json`은 이전 본문을 대상으로 만든 이력이며 v3.1.18 Description 적용 후 그대로 사용하지 않는다. `canonical-records.json`은 문서 원본이지 apply 계획이 아니다. 본문의 최신 실행 기록, 기존 migration marker, 댓글·AC·승인 기록은 후속 갱신에서도 보존한다.
-
-로컬 후보 검증과 ZIP 재생성:
+후보 로컬 검증과 ZIP 재생성(버전은 대상 후보로 바꾼다):
 
 ```bash
-python3 scripts/verify-v18-candidate.py
-python3 scripts/build-canonical-package.py v3.1.18 /tmp/fds-v18-package
-FDS_RELEASE_ZIP=/tmp/fds-v18-package/FDS_v3.1.18_Canonical_Baseline_Release_Package.zip RELEASE_VERSION=v3.1.18 bash scripts/verify-canonical-release.sh
+bash scripts/verify-canonical-release.sh
+python3 scripts/build-canonical-package.py vX.Y.Z /tmp/fds-package
+FDS_RELEASE_ZIP=/tmp/fds-package/FDS_vX.Y.Z_Canonical_Baseline_Release_Package.zip RELEASE_VERSION=vX.Y.Z bash scripts/verify-canonical-release.sh
 ```
 
-이 명령들은 Release 발행이나 GitHub 티켓 변경을 수행하지 않는다. 현재 승인 절차는 [Lead 위임 정책](governance/REVIEW_AUTHORITY_POLICY.md)을 적용한다. 코드 포함 PR은 독립 리뷰, 문서만 변경한 PR과 발행은 정본 Lead 판단이며 정확한 HEAD·배포물 무결성 검증은 유지한다.
-
-추가 유입: 이하영 09-10 면접 휴가(09-08 유지), P1-SEC 기존 계획창 가용 작업일 4일(권장 종료 09-21 창은 10일), ICR/K8S Worker·NTP 검토 및 PR #2 리뷰 요청 상태를 후보에 반영했다. 상세 원문은 `audit/v3.1.18/followup-20260910.json`을 참조한다.
-
-Fast Tracking 권장안은 [일정 변경안](releases/v3.1.18/FDS_Phase1_Fast_Track_Schedule_Recommendation_v1.0.md)과 WBS의 `Fast Track Plan` 시트에 반영했다. 주말 작업 가용량 0, 개인 부재 반영, 총 23인일 중 1.5인일 버퍼다. 이는 metadata 자동 동기화의 일정 변경 금지 규칙과 별개인 사용자 요청 기반의 계획 변경 후보다. 문서 내용은 PR #69에서 승인·병합됐다. 정식 게시와 실제 실행 승인은 별도 절차로 추적한다.
-
-K8S 최신 이력은 [후보 통합 기록](releases/v3.1.18/FDS_K8S_Candidate_Integration_20260910.md)을 참조한다. Worker 보완·PR #3 병합, PR #2 현장 모의/읽기 전용 검증, PR #4 Runtime 전용 보완을 동기화했으며 전체 Runtime 인수는 미완료다.
-
-## v3.1.18 발행 이력
-
-[릴리즈 최종화 기록](releases/v3.1.18/FDS_Release_Finalization_Record_v3.1.18.md)과 `CURRENT.md`에서 현재 발행 단계를 확인한다. PR #69 승인 HEAD `04c1ca46dcf82f814d350b4d49539e3ba4d6a9b4`와 내용 병합 `02be2150f7662319a3d796cdcb99f6d26aec5472`를 고정했다. 후보 원문·감사·Description 적용 입력은 당시 기록으로 보존하며, 그 안의 CANDIDATE/미발행 표시는 해당 수집·작성 시점의 상태다.
+이 명령들은 Release 발행이나 GitHub 티켓 변경을 수행하지 않는다. 현재 승인 절차는 [Lead 위임 정책](governance/REVIEW_AUTHORITY_POLICY.md)을 적용한다.
