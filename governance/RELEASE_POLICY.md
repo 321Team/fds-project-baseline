@@ -2,6 +2,8 @@
 
 2026-09-18 승인 절차 개정: [코드 병합 독립 리뷰와 Lead 위임 정책](REVIEW_AUTHORITY_POLICY.md)을 적용한다. 독립 리뷰는 코드/혼합 PR 병합에 한정하며, 문서만 변경한 PR·최종화·발행은 정본 Lead가 검토·결정한다.
 
+2026-09-23 개정: 사전 검증(Pre-check) 코드는 담당 Lead 권한으로 코드 리뷰 없이 병합할 수 있고, 운영 서버 Runtime 적용 전에 코드 리뷰가 필수다([REVIEW_AUTHORITY_POLICY §3.2](REVIEW_AUTHORITY_POLICY.md)). 이 저장소의 병합·Release 게이트 CI workflow, 시크릿·무결성 검사기는 Pre-check 예외에 포함하지 않는다.
+
 ## 1. Branch model
 
 - `main`: approved canonical documents only.
