@@ -35,7 +35,7 @@
 | ROSA를 infra-kubernetes와 분리 | 확인 | infra-kubernetes 범위가 On-Prem 전용 |
 | RHOAI 저장소 필요 여부 | 보류 유지. DEC-P2-RHOAI-01 결정(10-16) 전에는 구현 없음 | #95 Out of Scope "결정 전 RHOAI 설치·구성" |
 
-## 3. Issue 증적 경로 일괄 변경 — 부분 수행
+## 3. Issue 증적 경로 일괄 변경 — 49/49 완료
 
 - **대상:** Issue 본문 현행 영역(`<details>` 보관 원문 제외)에 `docs/evidence/<ID>/` Evidence Path가 있는 49건
 - **변경:** 해당 줄의 값만 `` `321Team/fds-project-evidence:evidence/<ID>/` ``로 바꾸고, 본문 상단에 `fds-evidence-path:20260923:v1` 마커 절을 추가한다. Status·AC·Lead·일정·라벨·state는 바꾸지 않는다.
@@ -62,9 +62,10 @@
 
 **복구 방법:** GitHub 웹 UI(프록시 미경유)에서 해당 Issue 본문을 `repair/repair-issue-<번호>.md` 전체 내용으로 교체한다. 또는 편집 화면에서 ``` ``https ```의 ``` `` ```와 링크 끝 ``` ``) ```의 ``` `` ```를 지운다(#11 5곳, #16 2곳). 복구 후 확인 기준은 두 가지다. 첫째, 보관 원문 해시 표기와 LF 정규화 원문 해시가 일치해야 한다. 둘째, 본문에 ``` ``https ```가 0건이어야 한다.
 
-## 4. 신규 저장소 준비 — 생성 차단
+## 4. 신규 저장소 준비
 
-- `infra-terraform`·`infra-rosa` 생성 시도 결과 GitHub MCP와 API 모두 **403**이었다. 이 세션은 연결된 저장소에만 쓸 수 있어 조직 단위 저장소 생성이 불가하다.
+- 세션에서의 생성 시도는 GitHub MCP와 API 모두 **403**이었다(연결 저장소 전용 세션). 2026-09-23 21:08 KST 이권욱이 웹 UI로 두 저장소를 생성했다(Private, main, 권장 설명 문구).
+- 초기 구성 PR: [infra-terraform#1](https://github.com/321Team/infra-terraform/pull/1)(HEAD `de87019`, Lead 이권욱 판단) · [infra-rosa#1](https://github.com/321Team/infra-rosa/pull/1)(HEAD `5733e5a`, Lead 이하영 리뷰 요청). 문서·설정 전용, 제안본과 동일, 비밀정보 검사 0건. 병합은 각 Lead 판단
 - 초기 구성 파일은 `proposed/<저장소>/`에 준비했다. 정책은 기존 저장소와 동일하게 맞췄다:
   - `docs/REVIEW_POLICY.md` = infra-dns 최신본(PR #93 병합 반영) 그대로
   - `.github/PULL_REQUEST_TEMPLATE.md` = infra-pki와 동일
@@ -89,9 +90,9 @@
 |---|---|---|---|
 | 1 | #11·#16 본문 복구 | 이권욱 | #11 복구 확인(2026-09-23 11:58:53Z, 깨진 링크 0·보관 원문 해시 일치). #16은 웹 UI 한도 65,536자 초과(원래 69,662자)로 이권욱 로컬 `gh api` PATCH로 교체, 복구 확인(2026-09-23 12:06:10Z, 복구 본문과 바이트 일치·깨진 링크 0·보관 원문 해시 일치). **완료** |
 | 2 | 나머지 45건 증적 경로 반영 | 이권욱(로컬 `gh`) | **완료.** 45/45 반영. 재조회 결과: 계획 본문과 일치, 깨진 링크 0, footer 없음, 현행 영역 구 경로 0, 보관 원문 해시 일치 44건(보관 원문 없음 1건) |
-| 3 | `infra-terraform`·`infra-rosa` 생성(Private, README 초기화) | 조직 Owner(웹 UI) | 생성 후 세션에 연결하면 `proposed/` 파일을 작업 브랜치 PR로 올릴 수 있음(문서·설정 전용 → Lead 판단) |
+| 3 | `infra-terraform`·`infra-rosa` 초기 구성 PR 병합 | 이권욱 / 이하영 | 저장소 생성·PR 등록 완료. 병합 판단 대기 |
 | 4 | 권한·Branch 보호 적용 | 조직 Owner | §4 권장안 |
 | 5 | Ticket Pack·Baseline의 증적 경로 정본 반영 | 정본 Lead | v3.1.21 후보에서 처리. 발행 v3.1.20 문구는 이력 |
 | 6 | infra-ansible·infra-db·infra-harbor-trivy `REVIEW_POLICY.md` 갱신 | 각 저장소 Lead | §1 공통 정책 문구 불일치 |
 
-STATIC=로컬 대조 수행 / RUNTIME=해당 없음 / Issue 쓰기=49/49 완료(세션 2건·손상 후 복구 2건·로컬 gh 45건) / 저장소 생성=차단(403) / 권한 변경=미수행 / PUBLICATION=NOT_DONE
+STATIC=로컬 대조 수행 / RUNTIME=해당 없음 / Issue 쓰기=49/49 완료(세션 2건·손상 후 복구 2건·로컬 gh 45건) / 저장소 생성=완료(웹 UI)·초기 구성 PR 병합 대기 / 권한 변경=미수행 / PUBLICATION=NOT_DONE
