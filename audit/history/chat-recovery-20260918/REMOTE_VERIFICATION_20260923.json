@@ -1,0 +1,102 @@
+{
+  "schema": "fds.historical-recovery.remote-verification.v1",
+  "checked_at_kst": "2026-09-23T20:00:21+09:00",
+  "originals_commit": "f87a4088d62196d5dcf68fc303a521c2e71db731",
+  "classification": "HISTORICAL_REFERENCE_ONLY",
+  "status": "PASS",
+  "files": [
+    {
+      "name": "FDS_All_Issues_AC_Baseline_Audit_20260912_v1.0.md",
+      "size": 30324,
+      "sha256": "acdfce4299e09f11c8c39e0d11537fa51cf950cf5d52f53442e61f9f955fac07",
+      "git_blob": "c22d22fc97d957a77b72d97875a93830d2ce3fae",
+      "source_file_id": "file_00000000143c820bb50d55281d6453ba",
+      "source_library_file_id": "libfile_04b85a02a8748191894812a4117710d3",
+      "remote_size_match": true,
+      "remote_blob_match": true,
+      "remote_sha256_match": true,
+      "method": "GitHub blob fetch; UTF-8 bytes SHA-256 recalculation"
+    },
+    {
+      "name": "FDS_All_Ticket_Spec_Record_Audit_20260914_v1.0.md",
+      "size": 54478,
+      "sha256": "d14788aa314215f4cb818356e90a26d91c28855f81350945099775e9f2da90fc",
+      "git_blob": "cca02d3b2424d9ab79b06301354f1f6389e8a9d0",
+      "source_file_id": "file_00000000f0c481f59c92f5461038ad95",
+      "source_library_file_id": "libfile_7bda89a37aa481918e83675e6fa019aa",
+      "remote_size_match": true,
+      "remote_blob_match": true,
+      "remote_sha256_match": true,
+      "method": "GitHub blob fetch; UTF-8 bytes SHA-256 recalculation"
+    },
+    {
+      "name": "FDS_Ticket_Spec_Update_Result_20260915_v1.0.md",
+      "size": 16668,
+      "sha256": "d6415721f104dbcbbe16eb996cd52ecf504626095dab74eff53449cd27d9d9b0",
+      "git_blob": "a4b0a17b658956efb979956cf165913724430cf0",
+      "source_file_id": "file_000000008afc820bb2b7b64f8f19985a",
+      "source_library_file_id": "libfile_9ca744c802748191b44a27d995b0e1b5",
+      "remote_size_match": true,
+      "remote_blob_match": true,
+      "remote_sha256_match": true,
+      "method": "GitHub blob fetch; UTF-8 bytes SHA-256 recalculation"
+    },
+    {
+      "name": "FDS_Ticket_Spec_Update_Evidence_20260915_v1.0.zip",
+      "size": 632622,
+      "sha256": "62a31d966ce6be89196bc63dab6c3d7bd5ec0dbeafc6c785e37f2acbcb61691b",
+      "git_blob": "252924dfc287d075d677caa9cf15011bcfcca5b4",
+      "source_file_id": "file_000000000ad4820ba4debd6885c2fe8b",
+      "source_library_file_id": "libfile_16c449cde7188191b1daf24ab2dbf537",
+      "remote_size_match": true,
+      "remote_blob_match": true,
+      "remote_sha256_match": true,
+      "method": "Authenticated GitHub raw-file download; byte-for-byte equality and SHA-256 recalculation"
+    },
+    {
+      "name": "FDS_Canonical_Alignment_and_Followup_Review_20260910_v1.0.md",
+      "size": 15557,
+      "sha256": "a6c1910059a0f0fc6096f04c64fcc6a16afdfdf5db2c026b192b6d47097390ab",
+      "git_blob": "8eb179065ec756f4f01a7e416afa0431b7584460",
+      "source_file_id": "file_000000007de4820e817952ce0e056842",
+      "source_library_file_id": "libfile_6f3fc65a79448191aea3527571c3b766",
+      "remote_size_match": true,
+      "remote_blob_match": true,
+      "remote_sha256_match": true,
+      "method": "GitHub blob fetch; UTF-8 bytes SHA-256 recalculation"
+    }
+  ],
+  "zip": {
+    "recompressed": false,
+    "crc": "PASS",
+    "exact_members": 8,
+    "internal_sha256_matches": 7
+  },
+  "historical_snapshots": {
+    "unique_ids": 78,
+    "original_bodies_preserved": 78,
+    "protected_fields_unchanged": 78,
+    "fields": [
+      "title",
+      "state",
+      "locked",
+      "labels",
+      "assignees",
+      "milestone",
+      "type",
+      "state_reason",
+      "closed_at",
+      "comments",
+      "issue_field_values"
+    ]
+  },
+  "credential_screen": {
+    "classes": 6,
+    "files": 12,
+    "matches": 0,
+    "scope": "Limited concrete patterns, not a guarantee that every possible secret is absent"
+  },
+  "runtime": "NOT_RUN",
+  "live_issue_changes": "NONE",
+  "release_changes": "NONE"
+}

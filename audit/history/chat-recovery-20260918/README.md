@@ -1,14 +1,14 @@
 # Historical audit recovery — 2026-09-18
 
-Status: ORIGINAL_TRANSFER_PENDING. This directory currently records recovery/verification metadata; the five original files below are not yet committed here. Do not mark the recovery complete or merge this staging PR until their remote bytes have been checked.
+Status: ORIGINALS_REMOTE_VERIFIED (2026-09-23). All five originals are committed byte-for-byte under originals/. Remote SHA-256, size and Git blob checks passed 5/5; the ZIP was downloaded again from GitHub and compared byte-for-byte. See REMOTE_VERIFICATION_20260923.json and SHA256SUMS.
 
 ## Scope
 
 The user requested verification of the recovered P1-K8S v4.0 reference and preservation of seven historical audit/review artifacts. Five cross-project originals belong here; the two DNS review records are handled separately in infra-dns.
 
-Current published baseline used only as context: docs-v3.1.19, target 966fc5365874b1d259a9810fc876b57c3bfa0e08, published 2026-09-18 09:20:13 KST. No released baseline, CURRENT, WBS, tag, issue AC/status, or server setting is changed.
+Current published baseline used only as context: [docs-v3.1.20](https://github.com/321Team/fds-project-baseline/releases/tag/docs-v3.1.20), tag commit 336446500ef9a71c4796e6cfc8bc4db18daceb09, published 2026-09-23 02:37:13 KST. The 2026-09-18 recovery originally referred to v3.1.19; that historical context is not rewritten inside the originals. No released baseline, CURRENT, WBS, tag, issue AC/status, or server setting is changed.
 
-## Recovered originals awaiting transfer
+## Preserved originals
 
 | File | Bytes | SHA-256 |
 |---|---:|---|
@@ -31,9 +31,19 @@ The exact Project Library bytes were recovered to the analysis workspace. No rec
 
 The earlier review used selected filenames against main and selected issue/PR references. Filename absence from main does not prove that equivalent content is absent from every branch, PR, release asset, or extracted evidence registry. This recovery does not certify a project-wide SHA-to-evidence inventory audit.
 
-## Remaining action
+## Review resolution — 2026-09-23
 
-Transfer the original five files with their exact bytes into originals/, verify remote SHA-256 and Git blob IDs, update this status and the PR body, then obtain the applicable Lead review/merge decision. The current connector supports text writes but has no mounted-file binary upload action; a bounded gh-API transfer procedure is being supplied for the existing ansible01 account. Do not rebuild or reformat the ZIP to bypass this limitation.
+- The five original files were recovered again from their retained file identities; local size/SHA-256/Git blob matched the 2026-09-18 manifest 5/5. No ZIP regeneration or Markdown normalization was used.
+- Exact binary/text blobs were uploaded and bound to originals/ in commit f87a4088d62196d5dcf68fc303a521c2e71db731. GitHub tree blob IDs and sizes matched 5/5.
+- The four Markdown blobs were fetched again and their UTF-8 bytes hashed. The binary ZIP was downloaded through the authenticated GitHub file page and its 632,622 bytes matched the recovered ZIP exactly. Remote SHA-256 verification passed 5/5.
+- ZIP CRC, eight-file exact member set, internal SHA256SUMS 7/7, and historical before/after body preservation and protected-field equality 78/78 were rechecked. This remains a historical snapshot audit, not present-day AC acceptance.
+- SHA256SUMS covers the five originals and the four metadata/verification documents; it excludes itself.
+- The DNS originals were already merged through infra-dns PR #2. Their historical HEAD/path remain in EXPECTED_ORIGINALS.json together with the checked merge metadata.
+- V4_REFERENCE_CHECK.json remains the original dated reference check; this update does not claim a new ansible01 or K8S Runtime validation.
+
+## Merge classification
+
+This baseline PR contains archival records only; no recovered content is installed, executed, or consumed as operating input. Under governance/REVIEW_AUTHORITY_POLICY.md §2, the document Lead may decide the manual merge after checking these resolved findings. The separate fds-project-evidence independent-review rule is unchanged. AI-assisted checks are not represented as another person's independent approval.
 
 Rollback is a reviewed repository revert; no server rollback is involved.
 
