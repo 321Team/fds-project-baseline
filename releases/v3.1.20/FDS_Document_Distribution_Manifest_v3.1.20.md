@@ -38,7 +38,7 @@ Baseline·Ticket Pack·WBS/Gantt·WEB·Release Notes를 v3.1.19 대비 실제 �
 | `governance/ticket-sync-map.json` | 107196 | `deae909490f3259120618ce1f2516ab8303ed54c94a2d6c78efdbaaa874a95e7` |
 | `releases/v3.1.20/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.20.md` | 4855 | `6ef04c2fa7e38383355a5add47e003ded92649ba17a523c863e34bba25582950` |
 | `releases/v3.1.20/README.md` | 8940 | `f0511340cbba5fee3936feb539338000f15f0b6391d2df80432017998418cc9c` |
-| `releases/v3.1.20/reports/FDS_Interim_Deliverable_Report_v3.1.20.docx` | 13624 | `337fa275a33f3196b51adcfac9befdee9c9b9fba4571a904a3f5e2705c5935c3` |
+| `releases/v3.1.20/reports/FDS_Interim_Deliverable_Report_v3.1.20.docx` | 13674 | `04b8daf58efb4fdfb7947d6b4635c4be4e3bd237ec2b466daa70962bba777735` |
 | `scripts/build-canonical-package.py` | 1322 | `3cd8825ae9a84e680aae361728833c80f1e17bc60f70127d4f3d19f19a5cb299` |
 | `scripts/project_sync/core.py` | 13140 | `59371d592a1468354719421b6c31bc76483f95f77bfe437a4f4b6ac6ef305211` |
 | `scripts/project_sync/run.py` | 7654 | `e6f209fc239c8b723e892ac19e8d322cbed03d7236e125d17688c74c9bd0e3bc` |
