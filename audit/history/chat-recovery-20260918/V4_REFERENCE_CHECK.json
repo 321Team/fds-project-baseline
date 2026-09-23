@@ -1,0 +1,32 @@
+{
+  "checked_date_kst": "2026-09-18",
+  "scope": "Analysis-workspace original bytes and GitHub object metadata; not ansible01 live files",
+  "reference_pr": "https://github.com/321Team/infra-kubernetes/pull/20",
+  "reference_head": "b5ce592655baf02d19f613aa36ef0a023241ec81",
+  "zip": {
+    "bytes": 67773,
+    "sha256": "f7a50e2ccbbbd5537bf6969baa451d699db284438c10760ece2b03f98df8de5f",
+    "git_blob": "baa73dfccc17c8d972d3321af379571bba747a9b",
+    "github_blob_and_size_match": true,
+    "files": 43,
+    "uncompressed_bytes": 155218,
+    "crc": "PASS",
+    "internal_sha256_entries": 42,
+    "internal_sha256_matches": 42,
+    "missing_or_unlisted_files": 0
+  },
+  "markdown": {
+    "bytes": 153409,
+    "sha256": "b8d5e8b3fb63c3b1d80de9d96eeb7b0fec289331e6995c0f9ab4dea07c08325d",
+    "git_blob": "067f2bddd8a23d6dd9ec379d7acecf240e81452f",
+    "github_blob_and_size_match": true
+  },
+  "syntax_only": {"python_ast_files":9,"bash_files":1,"bash_exit_code":0},
+  "original_package_code_executed": false,
+  "remote_download_sha256_recalculation": "NOT_RUN: direct binary network retrieval unavailable in this workspace; GitHub object metadata was checked instead",
+  "ansible01_live_file_verification": "PENDING_ONSITE_RESULT",
+  "screenshot_observation": "ZIP listing and extraction/listing shown; no SHA-256 result shown. find -maxdepth 2 does not list deeper code/config members.",
+  "runtime_input": "Original template has null cluster_uid, MTU, image mode/digest, node interfaces and evidence bindings. No values filled.",
+  "runtime": "NOT_RUN",
+  "approval": "NONE_GRANTED_BY_THIS_CHECK"
+}
