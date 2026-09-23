@@ -73,7 +73,7 @@
   - `.gitattributes`·`.gitignore` = fds-msa/infra-pki 기준에 Terraform State·tfvars, OpenShift 자격증명 차단을 추가
   - README = 책임 티켓(2026-09-23 Issue 속성표 기준 Lead/Support)·저장소 경계·비밀정보·변경 절차
 
-### 권한 권장안 (미적용)
+### 권한 권장안 (역할 표기 — 2026-09-23 현행 유지 결정으로 미적용)
 
 | 저장소 | GWONUK (이권욱) | hayeounglee (이하영) | supreme33-kr (이재환) | 근거 |
 |---|---|---|---|---|
@@ -90,8 +90,8 @@
 |---|---|---|---|
 | 1 | #11·#16 본문 복구 | 이권욱 | #11 복구 확인(2026-09-23 11:58:53Z, 깨진 링크 0·보관 원문 해시 일치). #16은 웹 UI 한도 65,536자 초과(원래 69,662자)로 이권욱 로컬 `gh api` PATCH로 교체, 복구 확인(2026-09-23 12:06:10Z, 복구 본문과 바이트 일치·깨진 링크 0·보관 원문 해시 일치). **완료** |
 | 2 | 나머지 45건 증적 경로 반영 | 이권욱(로컬 `gh`) | **완료.** 45/45 반영. 재조회 결과: 계획 본문과 일치, 깨진 링크 0, footer 없음, 현행 영역 구 경로 0, 보관 원문 해시 일치 44건(보관 원문 없음 1건) |
-| 3 | `infra-terraform`·`infra-rosa` 초기 구성 PR 병합 | 이권욱 / 이하영 | infra-terraform #1 병합(`1c5ce75`). infra-rosa #1은 Lead 이하영 판단 대기 |
-| 4 | 권한·Branch 보호 적용 | 조직 Owner | §4 권장안. 2026-09-23 확인: 비공개 저장소 ruleset API가 "Upgrade to GitHub Pro or make this repository public"로 응답했다. 현 요금제에서는 main 보호를 강제할 수 없어 수동 통제를 유지한다 |
+| 3 | `infra-terraform`·`infra-rosa` 초기 구성 PR 병합 | 이권욱 / 이하영 | **완료.** infra-terraform #1 병합(`1c5ce75`, Lead 이권욱). infra-rosa #1은 Lead 이하영이 HEAD `5733e5a`를 APPROVED(2026-09-23T14:03:13Z)한 뒤 병합(`d5e6226`). 승인 의견의 비차단 참고: `.gitignore` 범위(`*cloud-credentials*`·`*kubeconfig*`·`pull-secret*`·`auth/`→`/auth/`·`*.crt`/`*.pem`)는 manifest·Runbook 추가 시 조정 |
+| 4 | 권한·Branch 보호 | 이권욱 결정 | **현행 유지(2026-09-23 사용자 결정).** 비공개 저장소 ruleset API가 "Upgrade to GitHub Pro or make this repository public"로 응답해 현 요금제에서 main 보호를 강제할 수 없다. 기존 저장소와 같이 PR 필수·직접 push 금지·수동 병합 기록으로 통제한다. 권한은 신규 2개 포함 확인한 저장소 모두 3인 `admin`(조직 수준 상속으로 보이며 Owner 여부는 미확인)으로 유지하고, §4 권장안은 역할 표기로 둔다 |
 | 5 | Ticket Pack·Baseline의 증적 경로 정본 반영 | 정본 Lead | §6 표로 이력 관리, v3.1.21 후보에서 처리 |
 | 6 | 저장소 정책 문서의 Pre-check 절 "제안 상태" 정정 | 이권욱 | **완료.** 전수 검색 결과 9개 저장소: fds-msa #6, infra-cicd #31, infra-kubernetes #24, infra-harbor-trivy #5, infra-ansible #46, infra-lb #9, infra-db #5, infra-pki #6, infra-monitoring #8. 병합 후 12개 저장소 main에서 잔존 0건 |
 
@@ -109,4 +109,4 @@
 
 이 표는 반영 계획이며, v3.1.21 후보(release branch) 생성이나 정본 발행이 아니다.
 
-STATIC=로컬 대조 수행 / RUNTIME=해당 없음 / Issue 쓰기=49/49 완료(세션 2건·손상 후 복구 2건·로컬 gh 45건) / 저장소 생성=완료(웹 UI)·초기 구성 PR 병합 대기 / 권한 변경=미수행 / PUBLICATION=NOT_DONE
+STATIC=로컬 대조 수행 / RUNTIME=해당 없음 / Issue 쓰기=49/49 완료(세션 2건·손상 후 복구 2건·로컬 gh 45건) / 저장소 생성=완료(웹 UI)·초기 구성 PR 2건 병합 / 권한·보호=현행 유지(결정) / PUBLICATION=NOT_DONE
