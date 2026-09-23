@@ -1,0 +1,87 @@
+--- a/governance/GITHUB_MILESTONE_MAP.md
++++ b/governance/GITHUB_MILESTONE_MAP.md
+@@ -33,13 +33,13 @@
+ | P1-REV-01 | https://github.com/321Team/fds-project-baseline/issues/30 | Phase 1 Close | 2026-09-22 | 2026-09-23 |
+ | MS-P1-REVIEW-01 | https://github.com/321Team/fds-project-baseline/issues/31 | Phase 1 Review | 2026-09-22 | 2026-09-22 |
+ | MS-P1-CLOSE-01 | https://github.com/321Team/fds-project-baseline/issues/32 | Phase 1 Close | 2026-09-23 | 2026-09-23 |
+-| MS-P2-START-01 | https://github.com/321Team/fds-project-baseline/issues/33 | Phase 2 Start | 2026-09-28 | 2026-09-28 |
+-| P2-ARC-01 | https://github.com/321Team/fds-project-baseline/issues/34 | Phase 2 Start | 2026-09-28 | 2026-09-28 |
+-| P2-IAC-01 | https://github.com/321Team/fds-project-baseline/issues/35 | G4 Cloud / VPN Ready | 2026-09-28 | 2026-10-08 |
+-| P2-OCI-01 | https://github.com/321Team/fds-project-baseline/issues/36 | G4 Cloud / VPN Ready | 2026-09-28 | 2026-10-02 |
+-| P2-VPN-01 | https://github.com/321Team/fds-project-baseline/issues/37 | G4 Cloud / VPN Ready | 2026-10-01 | 2026-10-08 |
++| MS-P2-START-01 | https://github.com/321Team/fds-project-baseline/issues/33 | Phase 2 Start | 2026-10-06 | 2026-10-06 |
++| P2-ARC-01 | https://github.com/321Team/fds-project-baseline/issues/34 | Phase 2 Start | 2026-10-06 | 2026-10-06 |
++| P2-IAC-01 | https://github.com/321Team/fds-project-baseline/issues/35 | G4 Cloud / VPN Ready | 2026-10-06 | 2026-10-13 |
++| P2-OCI-01 | https://github.com/321Team/fds-project-baseline/issues/36 | G4 Cloud / VPN Ready | 2026-10-06 | 2026-10-08 |
++| P2-VPN-01 | https://github.com/321Team/fds-project-baseline/issues/37 | G4 Cloud / VPN Ready | 2026-10-08 | 2026-10-13 |
+ | P2-ROSA-01 | https://github.com/321Team/fds-project-baseline/issues/38 | G5 ROSA Application Ready | 2026-10-06 | 2026-10-16 |
+-| MS-G4-01 | https://github.com/321Team/fds-project-baseline/issues/39 | G4 Cloud / VPN Ready | 2026-10-08 | 2026-10-08 |
++| MS-G4-01 | https://github.com/321Team/fds-project-baseline/issues/39 | G4 Cloud / VPN Ready | 2026-10-13 | 2026-10-13 |
+ | DEC-P2-DNS-01 | https://github.com/321Team/fds-project-baseline/issues/40 | G5 ROSA Application Ready | 2026-10-12 | 2026-10-16 |
+ | DEC-P2-OP-01 | https://github.com/321Team/fds-project-baseline/issues/41 | G5 ROSA Application Ready | 2026-10-12 | 2026-10-16 |
+ | DEC-P2-REG-01 | https://github.com/321Team/fds-project-baseline/issues/42 | G5 ROSA Application Ready | 2026-10-12 | 2026-10-16 |
+--- a/baseline/FDS_Project_Implementation_Baseline_v3.1.20.md
++++ b/baseline/FDS_Project_Implementation_Baseline_v3.1.20.md
+@@ -262,9 +262,9 @@
+ | G3 Review Ready Freeze | 09-22 오전 — 권장안 |
+ | Phase 1 Review | 09-22 오후 — 평일 권장안 |
+ | Phase 1 Close | 09-23 |
+-| Phase 2 Start | 09-28 |
+-| OCI Go/No-Go | 10-02 |
+-| G4 Cloud / VPN Ready | 10-08 |
++| Phase 2 Start | 10-06 |
++| OCI Go/No-Go | 10-08 |
++| G4 Cloud / VPN Ready | 10-13 |
+ | G5 ROSA Application Ready | 10-16 |
+ | G6 Hybrid Integration Ready | 10-22 |
+ | Deliverable Freeze | 10-23 |
+@@ -907,7 +907,8 @@
+ - ROSA → Harbor `10.1.93.54:443` 필요 시
+ - OADP → S3 `443`
+ - GitHub Actions / Runner → 승인 Registry → ROSA Delivery (`P2-CICD-01`)
+-- 10-02 OCI Go/No-Go
++- 10-08 OCI Go/No-Go
++- 2026-09-24 일정 정합화: OCI 검증 10-06~08(가용 3일), VPN 10-08은 준비 목표이며 P2-OCI-01·P2-IAC-01 선행조건 충족 후 경로 적용. G4 10-13은 증적 기반 판정 목표로 유지한다.
+ 
+ Hybrid P1 / Conditional:
+ 
+@@ -1021,7 +1022,7 @@
+ | D18 | edge01→transaction-api 노출 방식 | Fixed / PASS — 2026-08-31 |
+ | D19 | Harbor/edge TLS 인증서·Trust 배포 방식 | Fixed / PASS — 2026-08-31 |
+ | D20 | 2026-09-20 일요일 Phase 1 Review 일정 | Decision Required — 2026-09-18 |
+-| D21 | OCI Relay Go/No-Go 및 Fallback | Scheduled — 2026-10-02 |
++| D21 | OCI Relay Go/No-Go 및 Fallback | Scheduled — 2026-10-08 |
+ | D22 | ROSA Image Source: Harbor 또는 Cloud Registry | Decision Required — 2026-10-16 |
+ | D23 | Hybrid DNS P1 적용 또는 P0 IP Endpoint 유지 | Decision Required — 2026-10-16 |
+ | D24 | 2026-10-24 토요일 Phase 2 Review 일정 | Decision Required — 2026-10-23 |
+@@ -1158,13 +1159,13 @@
+ | [P1-REV-01](https://github.com/321Team/fds-project-baseline/issues/30) | To Do | 2026-09-22 | 2026-09-23 | 이권욱 | Phase 1 Close | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
+ | [MS-P1-REVIEW-01](https://github.com/321Team/fds-project-baseline/issues/31) | To Do | 2026-09-22 | 2026-09-22 | 이권욱 | Phase 1 Review | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
+ | [MS-P1-CLOSE-01](https://github.com/321Team/fds-project-baseline/issues/32) | To Do | 2026-09-23 | 2026-09-23 | 이권욱 | Phase 1 Close | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
+-| [MS-P2-START-01](https://github.com/321Team/fds-project-baseline/issues/33) | To Do | 2026-09-28 | 2026-09-28 | 이권욱 | Phase 2 Start | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
+-| [P2-ARC-01](https://github.com/321Team/fds-project-baseline/issues/34) | To Do | 2026-09-28 | 2026-09-28 | 이권욱 | Phase 2 Start | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
+-| [P2-IAC-01](https://github.com/321Team/fds-project-baseline/issues/35) | To Do | 2026-09-28 | 2026-10-08 | 이권욱 | G4 Cloud / VPN Ready | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
+-| [P2-OCI-01](https://github.com/321Team/fds-project-baseline/issues/36) | To Do | 2026-09-28 | 2026-10-02 | 이권욱 | G4 Cloud / VPN Ready | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
+-| [P2-VPN-01](https://github.com/321Team/fds-project-baseline/issues/37) | To Do | 2026-10-01 | 2026-10-08 | 이권욱 | G4 Cloud / VPN Ready | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
++| [MS-P2-START-01](https://github.com/321Team/fds-project-baseline/issues/33) | To Do | 2026-10-06 | 2026-10-06 | 이권욱 | Phase 2 Start | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
++| [P2-ARC-01](https://github.com/321Team/fds-project-baseline/issues/34) | To Do | 2026-10-06 | 2026-10-06 | 이권욱 | Phase 2 Start | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
++| [P2-IAC-01](https://github.com/321Team/fds-project-baseline/issues/35) | To Do | 2026-10-06 | 2026-10-13 | 이권욱 | G4 Cloud / VPN Ready | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
++| [P2-OCI-01](https://github.com/321Team/fds-project-baseline/issues/36) | To Do | 2026-10-06 | 2026-10-08 | 이권욱 | G4 Cloud / VPN Ready | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
++| [P2-VPN-01](https://github.com/321Team/fds-project-baseline/issues/37) | To Do | 2026-10-08 | 2026-10-13 | 이권욱 | G4 Cloud / VPN Ready | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
+ | [P2-ROSA-01](https://github.com/321Team/fds-project-baseline/issues/38) | To Do | 2026-10-06 | 2026-10-16 | 이하영 | G5 ROSA Application Ready | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
+-| [MS-G4-01](https://github.com/321Team/fds-project-baseline/issues/39) | To Do | 2026-10-08 | 2026-10-08 | 이권욱 | G4 Cloud / VPN Ready | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
++| [MS-G4-01](https://github.com/321Team/fds-project-baseline/issues/39) | To Do | 2026-10-13 | 2026-10-13 | 이권욱 | G4 Cloud / VPN Ready | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
+ | [DEC-P2-DNS-01](https://github.com/321Team/fds-project-baseline/issues/40) | To Do | 2026-10-12 | 2026-10-16 | 이권욱 | G5 ROSA Application Ready | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
+ | [DEC-P2-OP-01](https://github.com/321Team/fds-project-baseline/issues/41) | To Do | 2026-10-12 | 2026-10-16 | 이하영 | G5 ROSA Application Ready | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
+ | [DEC-P2-REG-01](https://github.com/321Team/fds-project-baseline/issues/42) | To Do | 2026-10-12 | 2026-10-16 | 이하영 | G5 ROSA Application Ready | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
+--- a/tickets/FDS_v3.1.20_Canonical_Ticket_Update_Pack_v1.0.md
++++ b/tickets/FDS_v3.1.20_Canonical_Ticket_Update_Pack_v1.0.md
+@@ -40,7 +40,7 @@
+ | [MS-P2-START-01](https://github.com/321Team/fds-project-baseline/issues/33) | To Do | 2026-10-06 | 2026-10-06 | 이권욱 | Phase 2 Start | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
+ | [P2-ARC-01](https://github.com/321Team/fds-project-baseline/issues/34) | To Do | 2026-10-06 | 2026-10-06 | 이권욱 | Phase 2 Start | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
+ | [P2-IAC-01](https://github.com/321Team/fds-project-baseline/issues/35) | To Do | 2026-10-06 | 2026-10-13 | 이권욱 | G4 Cloud / VPN Ready | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
+-| [P2-OCI-01](https://github.com/321Team/fds-project-baseline/issues/36) | To Do | 2026-10-06 | 2026-10-09 | 이권욱 | G4 Cloud / VPN Ready | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
++| [P2-OCI-01](https://github.com/321Team/fds-project-baseline/issues/36) | To Do | 2026-10-06 | 2026-10-08 | 이권욱 | G4 Cloud / VPN Ready | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
+ | [P2-VPN-01](https://github.com/321Team/fds-project-baseline/issues/37) | To Do | 2026-10-08 | 2026-10-13 | 이권욱 | G4 Cloud / VPN Ready | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
+ | [P2-ROSA-01](https://github.com/321Team/fds-project-baseline/issues/38) | To Do | 2026-10-11 | 2026-10-18 | 이하영 | G5 ROSA Application Ready | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |
+ | [MS-G4-01](https://github.com/321Team/fds-project-baseline/issues/39) | To Do | 2026-10-13 | 2026-10-13 | 이권욱 | G4 Cloud / VPN Ready | 현재 티켓 속성·AC·종결 이력을 수집했다. 이번 문서 통합에서 새로운 Runtime 시험이나 완료 승인을 수행하지 않았다. |

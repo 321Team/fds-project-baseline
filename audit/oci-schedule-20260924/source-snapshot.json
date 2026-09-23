@@ -1,0 +1,188 @@
+{
+  "captured_at_kst": "2026-09-24T05:54:58.635209+09:00",
+  "baseline_main": "8bbe706c5339d77819f9db75bb7ed9a226c76087",
+  "release": "docs-v3.1.20",
+  "user_instruction": "일정 불일치부터 해소",
+  "issues": {
+    "33": {
+      "number": 33,
+      "html_url": "https://github.com/321Team/fds-project-baseline/issues/33",
+      "title": "[MS-P2-START-01] Phase 2 Start",
+      "state": "open",
+      "updated_at": "2026-09-23T16:37:39Z",
+      "assignees": [
+        "GWONUK"
+      ],
+      "labels": [
+        "priority:P0",
+        "status:to-do",
+        "type:milestone",
+        "area:milestone",
+        "phase:phase-2"
+      ],
+      "milestone": {
+        "number": 7,
+        "title": "Phase 2 Start",
+        "due_on": "2026-09-28T00:00:00Z",
+        "description": "Record ID: MS-P2-START-01\n계획일(KST): 2026-09-28\n근거: https://github.com/321Team/fds-project-baseline/issues/33\nGate 판정은 해당 Issue와 증적을 따릅니다.\n\n## 2026-09-18 마일스톤 현황 갱신\n\n현황 평가: Phase 2 Start 계획 2026-09-28은 유지한다. 현시점 착수 승인이나 P1 미완료 항목의 자동 이관을 뜻하지 않는다.\n선행: Phase 1 Close, P2 계정/권한·일정·P0 범위·OCI Go/No-Go 계획 확인. P1 인수/Close 지연이 확정되면 P2 착수 및 G4~G6 영향을 함께 재판정한다.\n현재 G4 10/08, G5 10/16, G6 10/22 및 후속 Freeze/Review/Close의 새 날짜를 만들 근거는 없다. 기존 계획과 조건을 보존한다.\n\n근거: https://github.com/321Team/fds-project-baseline/issues/33\n기준: 발행 docs-v3.1.19 및 이후 Lead 위임 정책. 화면의 Issue 종결률은 실제 구축률/AC 충족률/Gate 인수율이 아니다. 기존 계획일·AC·과거 승인 이력은 보존한다."
+      },
+      "body_sha256_before": "7a696f8b00103da47dba708935a99efa99f5e15c245fb051b70596a999ba2759",
+      "body_sha256_after": "37e036299357cbd6b4037117e8926f8a6a2a50de69c9a54517818d2e7acd3219",
+      "record_id": "MS-P2-START-01",
+      "plan_start": "2026-10-06",
+      "plan_end": "2026-10-06",
+      "calendar_days": 1,
+      "working_days": 1
+    },
+    "34": {
+      "number": 34,
+      "html_url": "https://github.com/321Team/fds-project-baseline/issues/34",
+      "title": "[P2-ARC-01] Hybrid / OCI / AWS / ROSA Architecture Freeze",
+      "state": "open",
+      "updated_at": "2026-09-23T16:37:10Z",
+      "assignees": [
+        "GWONUK"
+      ],
+      "labels": [
+        "priority:P0",
+        "type:task",
+        "status:to-do",
+        "phase:phase-2",
+        "area:architecture"
+      ],
+      "milestone": {
+        "number": 7,
+        "title": "Phase 2 Start",
+        "due_on": "2026-09-28T00:00:00Z",
+        "description": "Record ID: MS-P2-START-01\n계획일(KST): 2026-09-28\n근거: https://github.com/321Team/fds-project-baseline/issues/33\nGate 판정은 해당 Issue와 증적을 따릅니다.\n\n## 2026-09-18 마일스톤 현황 갱신\n\n현황 평가: Phase 2 Start 계획 2026-09-28은 유지한다. 현시점 착수 승인이나 P1 미완료 항목의 자동 이관을 뜻하지 않는다.\n선행: Phase 1 Close, P2 계정/권한·일정·P0 범위·OCI Go/No-Go 계획 확인. P1 인수/Close 지연이 확정되면 P2 착수 및 G4~G6 영향을 함께 재판정한다.\n현재 G4 10/08, G5 10/16, G6 10/22 및 후속 Freeze/Review/Close의 새 날짜를 만들 근거는 없다. 기존 계획과 조건을 보존한다.\n\n근거: https://github.com/321Team/fds-project-baseline/issues/33\n기준: 발행 docs-v3.1.19 및 이후 Lead 위임 정책. 화면의 Issue 종결률은 실제 구축률/AC 충족률/Gate 인수율이 아니다. 기존 계획일·AC·과거 승인 이력은 보존한다."
+      },
+      "body_sha256_before": "df619161c1c7a55019d6eb5eec0f3e30e5958d166118d7c74afc4531a52dfd7b",
+      "body_sha256_after": "8b5a95ed7c7297d8a52c0b07c944fc6522e50e5f531578abcf02e35d6bd1491a",
+      "record_id": "P2-ARC-01",
+      "plan_start": "2026-10-06",
+      "plan_end": "2026-10-06",
+      "calendar_days": 1,
+      "working_days": 1
+    },
+    "35": {
+      "number": 35,
+      "html_url": "https://github.com/321Team/fds-project-baseline/issues/35",
+      "title": "[P2-IAC-01] AWS / ROSA Terraform IaC",
+      "state": "open",
+      "updated_at": "2026-09-23T16:37:22Z",
+      "assignees": [
+        "GWONUK"
+      ],
+      "labels": [
+        "priority:P0",
+        "type:task",
+        "status:to-do",
+        "phase:phase-2",
+        "area:cloud"
+      ],
+      "milestone": {
+        "number": 8,
+        "title": "G4 Cloud / VPN Ready",
+        "due_on": "2026-10-08T00:00:00Z",
+        "description": "Record ID: MS-G4-01\n계획일(KST): 2026-10-08\n근거: https://github.com/321Team/fds-project-baseline/issues/39\nGate 판정은 해당 Issue와 증적을 따릅니다."
+      },
+      "body_sha256_before": "b5b06be14f5d2a0f0a16582f75022345dd3e7b944059756d5c2d92279d2fe2ee",
+      "body_sha256_after": "7e3fe1eb4384bfe498b3bfa0740d22e8648ca5c467f43249241570840f0b6d01",
+      "record_id": "P2-IAC-01",
+      "plan_start": "2026-10-06",
+      "plan_end": "2026-10-13",
+      "calendar_days": 8,
+      "working_days": 5
+    },
+    "36": {
+      "number": 36,
+      "html_url": "https://github.com/321Team/fds-project-baseline/issues/36",
+      "title": "[P2-OCI-01] OCI Relay Go / No-Go",
+      "state": "open",
+      "updated_at": "2026-09-23T12:29:39Z",
+      "assignees": [
+        "GWONUK"
+      ],
+      "labels": [
+        "type:decision",
+        "priority:P0",
+        "status:to-do",
+        "area:milestone",
+        "phase:phase-2"
+      ],
+      "milestone": {
+        "number": 8,
+        "title": "G4 Cloud / VPN Ready",
+        "due_on": "2026-10-08T00:00:00Z",
+        "description": "Record ID: MS-G4-01\n계획일(KST): 2026-10-08\n근거: https://github.com/321Team/fds-project-baseline/issues/39\nGate 판정은 해당 Issue와 증적을 따릅니다."
+      },
+      "body_sha256_before": "d849b4583c5dda1eea926cd689716813deb05b04d00fbc0368099b1da6a20063",
+      "body_sha256_after": "29c0b380b4568f3fe1e2888255e0abbed7ce308f32d53a52cc5f12e5bfad1b0e",
+      "record_id": "P2-OCI-01",
+      "plan_start": "2026-10-06",
+      "plan_end": "2026-10-08",
+      "calendar_days": 3,
+      "working_days": 3
+    },
+    "37": {
+      "number": 37,
+      "html_url": "https://github.com/321Team/fds-project-baseline/issues/37",
+      "title": "[P2-VPN-01] OCI Relay / AWS Site-to-Site VPN",
+      "state": "open",
+      "updated_at": "2026-09-23T12:29:42Z",
+      "assignees": [
+        "GWONUK"
+      ],
+      "labels": [
+        "priority:P0",
+        "type:task",
+        "status:to-do",
+        "phase:phase-2",
+        "area:hybrid-network"
+      ],
+      "milestone": {
+        "number": 8,
+        "title": "G4 Cloud / VPN Ready",
+        "due_on": "2026-10-08T00:00:00Z",
+        "description": "Record ID: MS-G4-01\n계획일(KST): 2026-10-08\n근거: https://github.com/321Team/fds-project-baseline/issues/39\nGate 판정은 해당 Issue와 증적을 따릅니다."
+      },
+      "body_sha256_before": "eb3ae6ed4c25c4ee6314f416973170717b4a52d0ba19045abfe6157f2ada2e32",
+      "body_sha256_after": "c7c3feb53fc8bfa8bf9aeaa81a469b52241f7baf238962c06102cb7aded192a8",
+      "record_id": "P2-VPN-01",
+      "plan_start": "2026-10-08",
+      "plan_end": "2026-10-13",
+      "calendar_days": 6,
+      "working_days": 3
+    },
+    "39": {
+      "number": 39,
+      "html_url": "https://github.com/321Team/fds-project-baseline/issues/39",
+      "title": "[MS-G4-01] G4 Cloud / VPN Ready",
+      "state": "open",
+      "updated_at": "2026-09-23T12:29:47Z",
+      "assignees": [
+        "GWONUK"
+      ],
+      "labels": [
+        "priority:P0",
+        "status:to-do",
+        "type:milestone",
+        "area:milestone",
+        "phase:phase-2"
+      ],
+      "milestone": {
+        "number": 8,
+        "title": "G4 Cloud / VPN Ready",
+        "due_on": "2026-10-08T00:00:00Z",
+        "description": "Record ID: MS-G4-01\n계획일(KST): 2026-10-08\n근거: https://github.com/321Team/fds-project-baseline/issues/39\nGate 판정은 해당 Issue와 증적을 따릅니다."
+      },
+      "body_sha256_before": "9275fe59f60201ee52308635d205e26346634643299d7ae14d3174536e6284ce",
+      "body_sha256_after": "d744ecb3d811a09fd7c42411e6de863f07493427c4f16a25a1201399e2ff003e",
+      "record_id": "MS-G4-01",
+      "plan_start": "2026-10-13",
+      "plan_end": "2026-10-13",
+      "calendar_days": 1,
+      "working_days": 1
+    }
+  }
+}
