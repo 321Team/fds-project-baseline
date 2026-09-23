@@ -19,10 +19,10 @@ Baseline·Ticket Pack·WBS/Gantt·WEB·Release Notes를 v3.1.19 대비 실제 �
 | `.github/CODEOWNERS` | 179 | `303ebb0af1b31c1666c06157166695d6f51a5fbaa1a8218658a8f2c380cb7087` |
 | `.github/workflows/canonical-integrity.yml` | 889 | `8a28df4738ae7e24b4de0cee4d072eb5b2a5a9c7fd0cd72af78f4f2bf0da60ba` |
 | `.github/workflows/project-sync.yml` | 2435 | `f62cf13be64ec93d402a5c9c532b8dbc6fefd0f95e60f9a730a541639cfdb249` |
-| `CURRENT.md` | 2466 | `19a02d809d564436fa0edae561032a04951abeb6e3f047d6f4f3643e3128b0a2` |
+| `CURRENT.md` | 3398 | `f112bf439a83e22b2f507cb014d4e1e0a69ad69f8539aa6e04af32838cc3c48f` |
 | `architecture/v3.1.19/Approved_Change_View.md` | 1962 | `cc0904d7ac4c518ba6f8dacbf36c1e70b1a29ad3e2a05ef8a4c1d2c1fbce42c2` |
 | `architecture/v3.1.19/Approved_Change_View.svg` | 1533 | `460f682d79f383c8f0a02418752eb55afbacc7deab091e9374f4169650d433d1` |
-| `audit/FDS_Canonical_Integrity_Audit_v3.1.20.md` | 5758 | `b03547a7369b292953a5cfd621138534a17d809e3ab37a8d36511a9b30e74f92` |
+| `audit/FDS_Canonical_Integrity_Audit_v3.1.20.md` | 6159 | `fa438222ae0469fecffe44f16aa342031bce7a982c3489d3552485b22b95cf6b` |
 | `audit/canonical-followup-20260921/README.md` | 3878 | `df3d175e3d7dbb476cc6ff56e09f14441abc5f5f6342365484bac8b43a5a088a` |
 | `audit/canonical-followup-20260921/checksum-drift.json` | 3009 | `186fe15cf50c6abfa39ae2b0ded10def5f8654850f16f5bc7206fb8d612993f9` |
 | `audit/canonical-followup-20260921/validation.json` | 2178 | `87512cce66b84d3b92ec1f246ca0bec59ef8c1b6babd88c57e9599cd48ea54ed` |

@@ -25,7 +25,7 @@ RELEASE_POLICY §2 item 8. 이 문서는 **실제로 수행한 검증만** 기�
 | 실제 Excel/Word 프로그램에서 열람 확인 | **NOT RUN** — 사용자가 실제 프로그램에서 최종 확인 권장 |
 | 실제 GitHub Issue 재수집(`ticket-sync.py`) | **NOT RUN** — 일정 변경은 Issue 코멘트로만 기록했고, `tickets/v3.1.19/{canonical-records.json,descriptions,sources}`는 v3.1.19 시점 스냅샷을 그대로 참조한다(Manifest에 명시) |
 | Distribution ZIP 생성(`build-canonical-package.py`) | 스크립트 자체가 SHA256SUMS의 175개 경로(docx 포함) 각각을 재해시해 대조한 뒤에만 ZIP을 작성하도록 되어 있어, 실행 성공 자체가 175/175 일치의 추가 증거다. 생성물은 Git에 커밋하지 않고(§2.1·v3.1.19 관례와 동일) 로컬 산출물로 사용자에게 전달했다 |
-| WBS/Gantt 배포 통제(§2.1, 5곳 중 4곳) | `scripts/verify-wbs-gantt-distribution.sh v3.1.20 --candidate` PASS — 저장소 원본·Manifest·SHA256SUMS·ZIP 내부 4곳에서 동일 SHA-256(`e0b32416...`) 확인. 5번째(GitHub Release 독립 Asset)는 Tag/발행 전이라 해당 없음(`--published` 모드는 발행 후 별도 실행 필요) |
+| WBS/Gantt 배포 통제(§2.1, 5곳 전부) | Tag `docs-v3.1.20`·GitHub Release·Asset 4종 업로드는 정본 Lead가 웹 UI에서 직접 수행(이 세션의 git tag push는 HTTP 403, GitHub MCP 도구셋에 Release 쓰기 기능 없음). 발행 후 5번째 위치(GitHub Release Asset)를 GitHub가 보고하는 asset `digest` 필드로 대조 — WBS `e0b324161d07b0d46db93065d9c3334c36459d0d84b2b7c4e81ff6799e210479`, ZIP `9a1044d5c84273ca54ecdf577395c1c45d4813b18a26a1192e68dac4305230d4` 모두 저장소 원본·Manifest·SHA256SUMS·ZIP 내부 값과 일치. `gh` CLI 부재로 `--published` 모드 자동 검증은 수행하지 못했고 수동 대조로 대체했다 |
 
 ## 범위와 한계
 
@@ -37,4 +37,4 @@ RELEASE_POLICY §2 item 8. 이 문서는 **실제로 수행한 검증만** 기�
 
 ## 승인 경계
 
-이 감사는 정본 Lead(이재환)의 PR #87 리뷰·승인을 대신하지 않는다. `CURRENT.md`는 v3.1.19를 유지한다. Tag 생성·GitHub Release 발행·Asset 업로드는 §6에 따라 권한 있는 운영자의 별도 결정·실행 사항이며 이 감사 결과가 그 결정을 선취하지 않는다.
+이 감사는 정본 Lead(이재환)의 PR #87 리뷰·승인을 대신하지 않았으며, 실제로 PR #87은 이재환(`supreme33-kr`) APPROVED 3회로 병합됐다. Tag(`docs-v3.1.20`) 생성·GitHub Release 발행·Asset 업로드는 §6에 따라 권한 있는 운영자(정본 Lead)가 직접 실행했다. `CURRENT.md`는 이 발행을 반영해 v3.1.20으로 갱신했다(별도 PR).
