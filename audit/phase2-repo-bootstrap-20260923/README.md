@@ -90,9 +90,23 @@
 |---|---|---|---|
 | 1 | #11·#16 본문 복구 | 이권욱 | #11 복구 확인(2026-09-23 11:58:53Z, 깨진 링크 0·보관 원문 해시 일치). #16은 웹 UI 한도 65,536자 초과(원래 69,662자)로 이권욱 로컬 `gh api` PATCH로 교체, 복구 확인(2026-09-23 12:06:10Z, 복구 본문과 바이트 일치·깨진 링크 0·보관 원문 해시 일치). **완료** |
 | 2 | 나머지 45건 증적 경로 반영 | 이권욱(로컬 `gh`) | **완료.** 45/45 반영. 재조회 결과: 계획 본문과 일치, 깨진 링크 0, footer 없음, 현행 영역 구 경로 0, 보관 원문 해시 일치 44건(보관 원문 없음 1건) |
-| 3 | `infra-terraform`·`infra-rosa` 초기 구성 PR 병합 | 이권욱 / 이하영 | 저장소 생성·PR 등록 완료. 병합 판단 대기 |
-| 4 | 권한·Branch 보호 적용 | 조직 Owner | §4 권장안 |
-| 5 | Ticket Pack·Baseline의 증적 경로 정본 반영 | 정본 Lead | v3.1.21 후보에서 처리. 발행 v3.1.20 문구는 이력 |
-| 6 | infra-ansible·infra-db·infra-harbor-trivy `REVIEW_POLICY.md` 갱신 | 각 저장소 Lead | §1 공통 정책 문구 불일치 |
+| 3 | `infra-terraform`·`infra-rosa` 초기 구성 PR 병합 | 이권욱 / 이하영 | infra-terraform #1 병합(`1c5ce75`). infra-rosa #1은 Lead 이하영 판단 대기 |
+| 4 | 권한·Branch 보호 적용 | 조직 Owner | §4 권장안. 2026-09-23 확인: 비공개 저장소 ruleset API가 "Upgrade to GitHub Pro or make this repository public"로 응답했다. 현 요금제에서는 main 보호를 강제할 수 없어 수동 통제를 유지한다 |
+| 5 | Ticket Pack·Baseline의 증적 경로 정본 반영 | 정본 Lead | §6 표로 이력 관리, v3.1.21 후보에서 처리 |
+| 6 | 저장소 정책 문서의 Pre-check 절 "제안 상태" 정정 | 이권욱 | **완료.** 전수 검색 결과 9개 저장소: fds-msa #6, infra-cicd #31, infra-kubernetes #24, infra-harbor-trivy #5, infra-ansible #46, infra-lb #9, infra-db #5, infra-pki #6, infra-monitoring #8. 병합 후 12개 저장소 main에서 잔존 0건 |
+
+## 6. 차기 정본(v3.1.21) 반영 항목 — 이력 관리
+
+2026-09-23 사용자 결정: 증적 경로 변경과 Ticket Pack·Baseline 반영은 후보 PR로 이력을 관리한다. 발행된 v3.1.20 Tag·Release Asset과 체크섬 대상 파일은 수정하지 않는다(RELEASE_POLICY §2.3·§2.4, [2026-09-23 발행 후 정정 기록](../canonical-followup-20260923/README.md)과 같은 A안).
+
+| # | 대상 | 현재 상태 (v3.1.20) | v3.1.21 반영 내용 |
+|---|---|---|---|
+| 1 | Ticket Pack의 티켓별 Description | Ticket Pack은 `tickets/v3.1.19/descriptions/`를 참조한다. 67개 중 56개 파일에 `docs/evidence/<ID>/`가 남아 있다(보관 원문 포함) | 2026-09-23 이후 Issue 본문으로 Description 스냅샷을 새로 만든다. 현행 영역 Evidence Path는 `321Team/fds-project-evidence:evidence/<ID>/`. v3.1.19 스냅샷은 이력으로 보존 |
+| 2 | Baseline 증적 관리 기준 | Baseline·Ticket Pack 본문에는 `docs/evidence` 표기가 없다. 증적 경로 규칙이 정본에 명시되지 않았다 | "티켓 증적은 `fds-project-evidence`의 `evidence/<Record ID>/`에 둔다"를 증적 관리 절 또는 Decision Register에 추가한다. 근거: 2026-09-23 사용자 결정, 이 기록 §3 |
+| 3 | 신규 Record | DEC-P2-RHOAI-01(#95)은 v3.1.20 Ticket Pack·WBS에 없다 | Ticket Pack·WBS 편입 |
+| 4 | 신규 저장소 | infra-terraform·infra-rosa는 v3.1.20 문서에 없다 | 저장소 책임 경계 표에 추가(§4) |
+| 5 | 체크섬 동기화 | `audit/phase2-repo-bootstrap-20260923/`는 SHA256SUMS·Manifest 대상이 아니다 | 정본 체크섬 대상 편입 여부를 결정한다 |
+
+이 표는 반영 계획이며, v3.1.21 후보(release branch) 생성이나 정본 발행이 아니다.
 
 STATIC=로컬 대조 수행 / RUNTIME=해당 없음 / Issue 쓰기=49/49 완료(세션 2건·손상 후 복구 2건·로컬 gh 45건) / 저장소 생성=완료(웹 UI)·초기 구성 PR 병합 대기 / 권한 변경=미수행 / PUBLICATION=NOT_DONE
