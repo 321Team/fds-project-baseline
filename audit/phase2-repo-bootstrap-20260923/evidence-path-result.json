@@ -41,9 +41,10 @@
    ],
    "before_sha256": "371876a972d5c4a14123c7eb937b28d543a2f1920e2c475a53eec828ecaf5889",
    "planned_after_sha256_lf": "42fa6d60384615964c678f2d4a32f437770ef6adc9e2859092081153217769ad",
-   "result": "PROXY_MANGLED_PENDING_REPAIR",
-   "observed_after_sha256": "e1ba9c0be7d5f8586d3f18b3d4361855d920a050f51dcfa3a84229b5a23d469e",
-   "observed_updated_at": "2026-09-23T11:01:19Z"
+   "result": "REPAIRED_VIA_GH_API",
+   "observed_after_sha256": "42fa6d60384615964c678f2d4a32f437770ef6adc9e2859092081153217769ad",
+   "observed_updated_at": "2026-09-23T12:06:10Z",
+   "verification": "byte-identical to repair body, wrapped-links 0, archive hash OK"
   },
   {
    "number": 17,
