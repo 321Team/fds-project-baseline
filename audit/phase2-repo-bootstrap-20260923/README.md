@@ -47,7 +47,8 @@
 | 결과 | 건수 | Issue |
 |---|---|---|
 | APPLIED | 2 | #7, #35 |
-| 손상, 복구 대기 | 2 | #11, #16 |
+| 손상 후 웹 UI로 복구 확인 | 1 | #11 (2026-09-23 11:58:53Z) |
+| 손상, 복구 대기 | 1 | #16 (웹 UI 길이 한도 초과 → `gh api` 필요) |
 | NOT_APPLIED | 45 | 나머지 |
 
 **경위와 손상:**
@@ -93,4 +94,4 @@
 | 5 | Ticket Pack·Baseline의 증적 경로 정본 반영 | 정본 Lead | v3.1.21 후보에서 처리. 발행 v3.1.20 문구는 이력 |
 | 6 | infra-ansible·infra-db·infra-harbor-trivy `REVIEW_POLICY.md` 갱신 | 각 저장소 Lead | §1 공통 정책 문구 불일치 |
 
-STATIC=로컬 대조 수행 / RUNTIME=해당 없음 / Issue 쓰기=2건 반영·2건 손상·45건 미반영 / 저장소 생성=차단(403) / 권한 변경=미수행 / PUBLICATION=NOT_DONE
+STATIC=로컬 대조 수행 / RUNTIME=해당 없음 / Issue 쓰기=2건 반영·1건 손상 후 복구(#11)·1건 손상 복구 대기(#16)·45건 미반영 / 저장소 생성=차단(403) / 권한 변경=미수행 / PUBLICATION=NOT_DONE
