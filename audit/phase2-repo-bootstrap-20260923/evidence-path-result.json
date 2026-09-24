@@ -1,0 +1,693 @@
+{
+ "schema_version": 1,
+ "captured_at": "2026-09-23",
+ "scope": "fds-project-baseline Issue 본문의 현행 Evidence Path 문구만. <details> 보관 원문 제외",
+ "target_format": "321Team/fds-project-evidence:evidence/<Record ID>/",
+ "marker": "fds-evidence-path:20260923:v1",
+ "issues": [
+  {
+   "number": 7,
+   "title": "[D-SEC-01] Security Design Scope / Approval Review",
+   "state": "closed",
+   "record_ids": [
+    "D-SEC-01"
+   ],
+   "before_sha256": "a7e7904d43762d29dc0aaadcc4d810a7b1aec7e047433f45cdef7534b310161a",
+   "planned_after_sha256_lf": "48565c445dda38e6534e2576787c475a16b6c4581016060734b8ea1a7b32ae3f",
+   "result": "APPLIED",
+   "observed_after_sha256": "58280aebf288327a6a0d7e85effad51419f81e2a898076f979a231573522c59b",
+   "observed_updated_at": "2026-09-23T10:54:51Z"
+  },
+  {
+   "number": 11,
+   "title": "[P1-DB-01] PostgreSQL External VM",
+   "state": "open",
+   "record_ids": [
+    "P1-DB-01"
+   ],
+   "before_sha256": "e8021780fa117e3e2ebf88bb8fa2d1eb1219491db7deccaa1a16a5ab7d944c59",
+   "planned_after_sha256_lf": "b704f5886d5a045f631b3c188ad9e7a4dc5ed4891f04d3bb959a98f377d78d7b",
+   "result": "REPAIRED_VIA_WEB_UI",
+   "observed_after_sha256": "c1f7cd6b8d1c5df65fc8e2ae359b6d40cb870fd7e6343731d1422210d358f211",
+   "observed_updated_at": "2026-09-23T11:58:53Z",
+   "verification": "wrapped-links 0, archive hash OK, equals repair body except trailing newline"
+  },
+  {
+   "number": 16,
+   "title": "[P1-CICD-01] GitHub Actions / Self-hosted Runner Delivery",
+   "state": "open",
+   "record_ids": [
+    "P1-CICD-01"
+   ],
+   "before_sha256": "371876a972d5c4a14123c7eb937b28d543a2f1920e2c475a53eec828ecaf5889",
+   "planned_after_sha256_lf": "42fa6d60384615964c678f2d4a32f437770ef6adc9e2859092081153217769ad",
+   "result": "REPAIRED_VIA_GH_API",
+   "observed_after_sha256": "42fa6d60384615964c678f2d4a32f437770ef6adc9e2859092081153217769ad",
+   "observed_updated_at": "2026-09-23T12:06:10Z",
+   "verification": "byte-identical to repair body, wrapped-links 0, archive hash OK"
+  },
+  {
+   "number": 17,
+   "title": "[P1-MON-01] Kubernetes-Integrated Hybrid Monitoring 구축 및 검증",
+   "state": "open",
+   "record_ids": [
+    "P1-MON-01"
+   ],
+   "before_sha256": "e12240ecc84a9911b05fc0757012d3fbc32a57b432e4cfc0cd0e421d94807070",
+   "planned_after_sha256_lf": "8fddd65d6ba2699031198399870ea5b988e0d2eff3f7661c18315a4a1e2d607d",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:28:56Z",
+   "replanned_before_sha256_lf": "ddfdb3919dc754d97ed6ebca2a95c9c392c03bedbb9edc1cf00547ba336f4fd6",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 18,
+   "title": "[MS-G1-01] G1 Infrastructure Ready",
+   "state": "open",
+   "record_ids": [
+    "MS-G1-01"
+   ],
+   "before_sha256": "513c1a8a72b7ba95790a2fed4d9748026a332ccca08a282de9acb31940f5eed9",
+   "planned_after_sha256_lf": "a8f05134f709256307c889a1e1d652afb3deee02cf0a01172eba56ca0e9022ec",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:28:59Z",
+   "replanned_before_sha256_lf": "513c1a8a72b7ba95790a2fed4d9748026a332ccca08a282de9acb31940f5eed9",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 20,
+   "title": "[P1-E2E-01] Initial / Final E2E & Regression",
+   "state": "open",
+   "record_ids": [
+    "P1-E2E-01"
+   ],
+   "before_sha256": "eb8002f5fdcf24f45930d1230f2c7ff7b7dfeae7c508574683edef0cdb7a90d7",
+   "planned_after_sha256_lf": "6b483b6e9ecf1d8ced54fa94b87593f751ba3eeb68d17427114644fe09c46eaf",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:29:01Z",
+   "replanned_before_sha256_lf": "356c37e71738e260ca2648326b7895c099838615ebfdd0732f608d1db58ca1b9",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 21,
+   "title": "[P1-DR-01] PostgreSQL Backup / Restore",
+   "state": "open",
+   "record_ids": [
+    "P1-DR-01"
+   ],
+   "before_sha256": "479af4cf681e61ec99c1365246613afb578474a3dd7c5b972dc9c1bd30f5fa0b",
+   "planned_after_sha256_lf": "955c8e0d314db0d1f9df0274a5f0a69ca31d6d81c219df44977428e85f3b29cd",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:29:04Z",
+   "replanned_before_sha256_lf": "479af4cf681e61ec99c1365246613afb578474a3dd7c5b972dc9c1bd30f5fa0b",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 22,
+   "title": "[P1-HA-01] Worker Drain Continuity",
+   "state": "open",
+   "record_ids": [
+    "P1-HA-01"
+   ],
+   "before_sha256": "b9e32448870557ab98a7d2f9c540a8de45af194f8660562790d6a7dd92d77068",
+   "planned_after_sha256_lf": "11a2cf6ca4c1f8e6c783cf70408e8447b8532dac8d4b28d288e244e8555fb76e",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:29:07Z",
+   "replanned_before_sha256_lf": "b9e32448870557ab98a7d2f9c540a8de45af194f8660562790d6a7dd92d77068",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 23,
+   "title": "[MS-G2-01] G2 Security / Feature Ready",
+   "state": "open",
+   "record_ids": [
+    "MS-G2-01"
+   ],
+   "before_sha256": "d79911f0261e4296fa0e1c91c01c6a0f4e4865e5584ca784052a0f8136b33723",
+   "planned_after_sha256_lf": "fe25e34bdeedbec1693929c54558dcdc87deb8996c34fd84ea32b74a597f81d9",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:29:10Z",
+   "replanned_before_sha256_lf": "d79911f0261e4296fa0e1c91c01c6a0f4e4865e5584ca784052a0f8136b33723",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 24,
+   "title": "[P1-DOC-01] Architecture / Test / Runbook Freeze",
+   "state": "open",
+   "record_ids": [
+    "P1-DOC-01"
+   ],
+   "before_sha256": "b1e1cf7370be417affdf909305669d133826db26a88227fdf484fe22e17382b2",
+   "planned_after_sha256_lf": "1901f057f6b2c841fe84eb4732c26f059e54fb6116b948edf46739c8d73a4941",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:29:12Z",
+   "replanned_before_sha256_lf": "b1e1cf7370be417affdf909305669d133826db26a88227fdf484fe22e17382b2",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 26,
+   "title": "[P1-DR-02] Harbor / etcd Backup and Restore",
+   "state": "open",
+   "record_ids": [
+    "P1-DR-02"
+   ],
+   "before_sha256": "65585e25ed4bbc7cd1968eaadfbbd9a48097e65eeabdde4b3a881a1463157573",
+   "planned_after_sha256_lf": "978197bef597fe787e8fee309525f3a2fd61a3a667f362e9db6b279496adb5dd",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:29:16Z",
+   "replanned_before_sha256_lf": "65585e25ed4bbc7cd1968eaadfbbd9a48097e65eeabdde4b3a881a1463157573",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 27,
+   "title": "[P1-HA-02] Platform Resilience P1 Validation",
+   "state": "open",
+   "record_ids": [
+    "P1-HA-02"
+   ],
+   "before_sha256": "3f243abe0bb2eced4f876e2756206e406d6390714c10409f76c85436e9381580",
+   "planned_after_sha256_lf": "1301dd575eaf2904fab5f55c13118a1b2772d2f3f03fee0cbda9063f25a4f585",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:29:18Z",
+   "replanned_before_sha256_lf": "3f243abe0bb2eced4f876e2756206e406d6390714c10409f76c85436e9381580",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 28,
+   "title": "[DEC-CAL-P1-01] Phase 1 Weekend Review Decision",
+   "state": "closed",
+   "record_ids": [
+    "DEC-CAL-P1-01"
+   ],
+   "before_sha256": "81a47c25b09c6175e151b142265762956bddaeab4f10930fc748214d7a7304d7",
+   "planned_after_sha256_lf": "cb5a2e7faa95c1ec3835ddf6ca15f5d57be813a5029e5631b7890184c095c9fc",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:29:21Z",
+   "replanned_before_sha256_lf": "81a47c25b09c6175e151b142265762956bddaeab4f10930fc748214d7a7304d7",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 29,
+   "title": "[MS-G3-01] G3 Review Ready",
+   "state": "open",
+   "record_ids": [
+    "MS-G3-01"
+   ],
+   "before_sha256": "d82b22f9cf75291a30f506f7e59c2d016492f3862193ed8172ba23ac0699c474",
+   "planned_after_sha256_lf": "0b45e31679f9a90ec62fe2df393b21d63ffc50b51640e5894d7bb945961b37db",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:29:23Z",
+   "replanned_before_sha256_lf": "d82b22f9cf75291a30f506f7e59c2d016492f3862193ed8172ba23ac0699c474",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 30,
+   "title": "[P1-REV-01] Phase 1 Review / Close Execution",
+   "state": "open",
+   "record_ids": [
+    "P1-REV-01"
+   ],
+   "before_sha256": "50e891a4fbb5ea11706ab5d537f3a6fe88002342434ef6c80eb7e5e4379f13aa",
+   "planned_after_sha256_lf": "48628c6b6cb5fc021fbdf47d32948525b85b178f56b5ed179a713362ef267674",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:29:26Z",
+   "replanned_before_sha256_lf": "50e891a4fbb5ea11706ab5d537f3a6fe88002342434ef6c80eb7e5e4379f13aa",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 31,
+   "title": "[MS-P1-REVIEW-01] Phase 1 Review",
+   "state": "open",
+   "record_ids": [
+    "MS-P1-REVIEW-01"
+   ],
+   "before_sha256": "56e99cb5e1765af6a4ca237d423f4fc8d5dd8ed0d1ce82fcc6cb84e45da47754",
+   "planned_after_sha256_lf": "6e238239351d2129d9f25e893c488b89282e0ae6dfc463e4e0318b9bed68acfa",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:29:28Z",
+   "replanned_before_sha256_lf": "56e99cb5e1765af6a4ca237d423f4fc8d5dd8ed0d1ce82fcc6cb84e45da47754",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 32,
+   "title": "[MS-P1-CLOSE-01] Phase 1 Close",
+   "state": "open",
+   "record_ids": [
+    "MS-P1-CLOSE-01"
+   ],
+   "before_sha256": "fcb532b8fba91044202c8c4a464ac51329fc44d5902e8a5a8847f8c290796347",
+   "planned_after_sha256_lf": "c4c4eb798f795145fb16483b778705850fb8d9a41a8f56b0b3487b117e6b4db2",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:29:31Z",
+   "replanned_before_sha256_lf": "fcb532b8fba91044202c8c4a464ac51329fc44d5902e8a5a8847f8c290796347",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 33,
+   "title": "[MS-P2-START-01] Phase 2 Start",
+   "state": "open",
+   "record_ids": [
+    "MS-P2-START-01"
+   ],
+   "before_sha256": "3e9a7743178ae96509b57c9ff73cd3727b27a1ac5ce159f954b1f8e5c9edce92",
+   "planned_after_sha256_lf": "7a696f8b00103da47dba708935a99efa99f5e15c245fb051b70596a999ba2759",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:29:34Z",
+   "replanned_before_sha256_lf": "3e9a7743178ae96509b57c9ff73cd3727b27a1ac5ce159f954b1f8e5c9edce92",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 34,
+   "title": "[P2-ARC-01] Hybrid / OCI / AWS / ROSA Architecture Freeze",
+   "state": "open",
+   "record_ids": [
+    "P2-ARC-01"
+   ],
+   "before_sha256": "dec30742fff9a1aa92eeab1b361afb5d43a7d7338534b00ddcc9b1628e93754c",
+   "planned_after_sha256_lf": "df619161c1c7a55019d6eb5eec0f3e30e5958d166118d7c74afc4531a52dfd7b",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:29:36Z",
+   "replanned_before_sha256_lf": "dec30742fff9a1aa92eeab1b361afb5d43a7d7338534b00ddcc9b1628e93754c",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 35,
+   "title": "[P2-IAC-01] AWS / ROSA Terraform IaC",
+   "state": "open",
+   "record_ids": [
+    "P2-IAC-01"
+   ],
+   "before_sha256": "323cfbc4d05274e290f314b5dd73cea633bac9b925d1c241c97db0f9e108ffe0",
+   "planned_after_sha256_lf": "7bf0c83ca488d226cca30927df9b0b573149270f0682b3a629e55f329b7a6da6",
+   "result": "APPLIED",
+   "observed_after_sha256": "b5b06be14f5d2a0f0a16582f75022345dd3e7b944059756d5c2d92279d2fe2ee",
+   "observed_updated_at": "2026-09-23T10:54:00Z"
+  },
+  {
+   "number": 36,
+   "title": "[P2-OCI-01] OCI Relay Go / No-Go",
+   "state": "open",
+   "record_ids": [
+    "P2-OCI-01"
+   ],
+   "before_sha256": "71469dc31c9857902036d60bc37254dfe1556a4afdd9395794f58f43cc40002b",
+   "planned_after_sha256_lf": "d849b4583c5dda1eea926cd689716813deb05b04d00fbc0368099b1da6a20063",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:29:39Z",
+   "replanned_before_sha256_lf": "71469dc31c9857902036d60bc37254dfe1556a4afdd9395794f58f43cc40002b",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 37,
+   "title": "[P2-VPN-01] OCI Relay / AWS Site-to-Site VPN",
+   "state": "open",
+   "record_ids": [
+    "P2-VPN-01"
+   ],
+   "before_sha256": "5a8dc1f3aabdd10a51c89c72e7a27ff9525c134ab05ca4e9d5c2e99c766fa05c",
+   "planned_after_sha256_lf": "eb3ae6ed4c25c4ee6314f416973170717b4a52d0ba19045abfe6157f2ada2e32",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:29:42Z",
+   "replanned_before_sha256_lf": "5a8dc1f3aabdd10a51c89c72e7a27ff9525c134ab05ca4e9d5c2e99c766fa05c",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 38,
+   "title": "[P2-ROSA-01] ROSA Platform / Security",
+   "state": "open",
+   "record_ids": [
+    "P2-ROSA-01"
+   ],
+   "before_sha256": "6fb5c1d9c6384cd2089a222e19e4cae6eb1c10a0de0e54ee774fe22d13dda9ee",
+   "planned_after_sha256_lf": "4717949d460651481edc564b2c1348b9fa26b4119b803421fb06609e11a11d11",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:29:44Z",
+   "replanned_before_sha256_lf": "6fb5c1d9c6384cd2089a222e19e4cae6eb1c10a0de0e54ee774fe22d13dda9ee",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 39,
+   "title": "[MS-G4-01] G4 Cloud / VPN Ready",
+   "state": "open",
+   "record_ids": [
+    "MS-G4-01"
+   ],
+   "before_sha256": "f641409660c500c15ac77ad6e518db394a1c15fe1063e604fcc95ef2edb20ff6",
+   "planned_after_sha256_lf": "9275fe59f60201ee52308635d205e26346634643299d7ae14d3174536e6284ce",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:29:47Z",
+   "replanned_before_sha256_lf": "f641409660c500c15ac77ad6e518db394a1c15fe1063e604fcc95ef2edb20ff6",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 40,
+   "title": "[DEC-P2-DNS-01] Hybrid DNS Scope Decision",
+   "state": "open",
+   "record_ids": [
+    "DEC-P2-DNS-01"
+   ],
+   "before_sha256": "d29aacd62e8bd35e1b58dbd297df8f90d4de6fbc9714b8aac755cb1ce7b80764",
+   "planned_after_sha256_lf": "66327fdf85da3704bf51800b9204517663a968541f191942d97513286859699a",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:29:49Z",
+   "replanned_before_sha256_lf": "d29aacd62e8bd35e1b58dbd297df8f90d4de6fbc9714b8aac755cb1ce7b80764",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 41,
+   "title": "[DEC-P2-OP-01] Operator Supply Chain Scope Decision",
+   "state": "open",
+   "record_ids": [
+    "DEC-P2-OP-01"
+   ],
+   "before_sha256": "3e577219e0152a0479e401536b93ed11a5b8cbdcb446d607c40828af3d273671",
+   "planned_after_sha256_lf": "8668aad669ec86b5b61b1d9f48fa889e3f7a47bc7d0d78d37d36c2cf495a869c",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:29:52Z",
+   "replanned_before_sha256_lf": "3e577219e0152a0479e401536b93ed11a5b8cbdcb446d607c40828af3d273671",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 42,
+   "title": "[DEC-P2-REG-01] ROSA Image Registry Source Decision",
+   "state": "open",
+   "record_ids": [
+    "DEC-P2-REG-01"
+   ],
+   "before_sha256": "e298f5f1f627691b53a4c4defb616b4de51a19bf84c3f266a72ce53d1e064946",
+   "planned_after_sha256_lf": "02babac73fbbd70b7448f70cafb5630fa09b5dc997a3f2402b2e73cab539556c",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:29:55Z",
+   "replanned_before_sha256_lf": "e298f5f1f627691b53a4c4defb616b4de51a19bf84c3f266a72ce53d1e064946",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 43,
+   "title": "[P2-APP-01] ROSA Application Deployment",
+   "state": "open",
+   "record_ids": [
+    "P2-APP-01"
+   ],
+   "before_sha256": "5615b70cea84d205a5110ddaa0ea22adb2407f29745031968b1a200cb09fe68d",
+   "planned_after_sha256_lf": "66c2f4242cbe549276e7dbb1548308c86c50bca9c2b803fe0e6b260bed2ec129",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:29:57Z",
+   "replanned_before_sha256_lf": "5615b70cea84d205a5110ddaa0ea22adb2407f29745031968b1a200cb09fe68d",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 44,
+   "title": "[P2-OADP-01] OADP / S3 Backup",
+   "state": "open",
+   "record_ids": [
+    "P2-OADP-01"
+   ],
+   "before_sha256": "c8782664b56f32f25054c0452ee73c08520775f646869adf05d0f272822659e0",
+   "planned_after_sha256_lf": "da36359cf3dce2acdbc3fcb183fa9b39b8738a84e2f5caf12b0da733c275a69b",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:30:00Z",
+   "replanned_before_sha256_lf": "c8782664b56f32f25054c0452ee73c08520775f646869adf05d0f272822659e0",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 45,
+   "title": "[MS-G5-01] G5 ROSA Application Ready",
+   "state": "open",
+   "record_ids": [
+    "MS-G5-01"
+   ],
+   "before_sha256": "f83cf9b1871a4f1153838a589b5eb29f3e22c9f19a27e831a6eb19523c202e5c",
+   "planned_after_sha256_lf": "a0e1f8a9937d9b9fda1d1ee634ca233a426981a830e5e1cf8da15dac5dd97d87",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:30:03Z",
+   "replanned_before_sha256_lf": "f83cf9b1871a4f1153838a589b5eb29f3e22c9f19a27e831a6eb19523c202e5c",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 46,
+   "title": "[P2-CICD-01] Runner to ROSA Delivery",
+   "state": "open",
+   "record_ids": [
+    "P2-CICD-01"
+   ],
+   "before_sha256": "5c3b22d3cd6eb15216cb1f22d40d521529570cfd8fbb6ab04bab4ff8c6beefc2",
+   "planned_after_sha256_lf": "f36338a30ca00eb2bbcc67a50f2d6c34366a9719117084da2decd2d202542e80",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:30:05Z",
+   "replanned_before_sha256_lf": "5c3b22d3cd6eb15216cb1f22d40d521529570cfd8fbb6ab04bab4ff8c6beefc2",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 47,
+   "title": "[P2-HYB-01] Hybrid DB / Registry Integration",
+   "state": "open",
+   "record_ids": [
+    "P2-HYB-01"
+   ],
+   "before_sha256": "cb6997c684cbcff6d132eac35c145901ae5a9802952d2f2abe587d57d6a323a8",
+   "planned_after_sha256_lf": "6f35f72f47ef3ec6b200ae7b468ee365a367ac0efe8e24e201051ce879c95e4d",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:30:08Z",
+   "replanned_before_sha256_lf": "cb6997c684cbcff6d132eac35c145901ae5a9802952d2f2abe587d57d6a323a8",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 48,
+   "title": "[P2-DNS-01] Hybrid DNS Implementation Conditional",
+   "state": "open",
+   "record_ids": [
+    "P2-DNS-01"
+   ],
+   "before_sha256": "b7b267087a3fea06348186ea312c14a42cc8e0f64928a87d7c143290a4e20573",
+   "planned_after_sha256_lf": "9c479b14957f59da7e94d8c0abded9324ab98930a445a370003b3dc1a2c95652",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:30:11Z",
+   "replanned_before_sha256_lf": "b7b267087a3fea06348186ea312c14a42cc8e0f64928a87d7c143290a4e20573",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 49,
+   "title": "[P2-DOC-01] Cloud / Hybrid Deliverable Freeze",
+   "state": "open",
+   "record_ids": [
+    "P2-DOC-01"
+   ],
+   "before_sha256": "dddbd0db76de7c682192e23ffa4649fdc79d74e64daba5bcc7ac7fd0748e85d1",
+   "planned_after_sha256_lf": "ab852588db3af813e59dacbe4c3141d6df3021f7a3c0c36fb57ce6e43f393524",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:30:14Z",
+   "replanned_before_sha256_lf": "dddbd0db76de7c682192e23ffa4649fdc79d74e64daba5bcc7ac7fd0748e85d1",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 50,
+   "title": "[P2-E2E-01] Hybrid E2E / Regression",
+   "state": "open",
+   "record_ids": [
+    "P2-E2E-01"
+   ],
+   "before_sha256": "a6d60495db8688c1788d0c06e16af3ab6981abde56ee673689a310054a3772cd",
+   "planned_after_sha256_lf": "82567a471045ac9a55c5763315b536ed8115a11ed412b8417f315b3343a4ac7a",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:30:17Z",
+   "replanned_before_sha256_lf": "a6d60495db8688c1788d0c06e16af3ab6981abde56ee673689a310054a3772cd",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 51,
+   "title": "[P2-OP-01] Operator Supply Chain Implementation Conditional",
+   "state": "open",
+   "record_ids": [
+    "P2-OP-01"
+   ],
+   "before_sha256": "03250df539b0e59bb514e04eb8136342cea20af5f246dbb533a559cf69774e45",
+   "planned_after_sha256_lf": "71a512fa4672d38c64f9cf07584238cb34a0dc123f34e3578e5d93272e9659bb",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:30:19Z",
+   "replanned_before_sha256_lf": "03250df539b0e59bb514e04eb8136342cea20af5f246dbb533a559cf69774e45",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 52,
+   "title": "[DEC-CAL-P2-01] Phase 2 Weekend Review Decision",
+   "state": "open",
+   "record_ids": [
+    "DEC-CAL-P2-01"
+   ],
+   "before_sha256": "aff13887a7efdd9e8500ca6516596cdd59c195f04295b6e23671721f51b24102",
+   "planned_after_sha256_lf": "9cede4f7cb67c738f14ccdc9aabb8fe186172325e60905755328ccbb1fc7cc93",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:30:22Z",
+   "replanned_before_sha256_lf": "aff13887a7efdd9e8500ca6516596cdd59c195f04295b6e23671721f51b24102",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 53,
+   "title": "[MS-G6-01] G6 Hybrid Integration Ready",
+   "state": "open",
+   "record_ids": [
+    "MS-G6-01"
+   ],
+   "before_sha256": "f8a29d1e2741c88c08571ad1eed1fa04d7e8a450283875cc88b12aadeb80130e",
+   "planned_after_sha256_lf": "26568c89b1fad47940ddcdfcf5570ac62f920b4c155ee47f113f0c376cfefb01",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:30:25Z",
+   "replanned_before_sha256_lf": "f8a29d1e2741c88c08571ad1eed1fa04d7e8a450283875cc88b12aadeb80130e",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 54,
+   "title": "[MS-DELIVERABLE-FREEZE-01] Deliverable Freeze",
+   "state": "open",
+   "record_ids": [
+    "MS-DELIVERABLE-FREEZE-01"
+   ],
+   "before_sha256": "b253a6ee6486f74fc0446c5c86172181a7f9064638461a42988f227ef07bdedc",
+   "planned_after_sha256_lf": "7efc82f017c9c2b9067368f5c8a25ac7e06922f9967b6aa0c2de974b3e83bf7c",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:30:28Z",
+   "replanned_before_sha256_lf": "b253a6ee6486f74fc0446c5c86172181a7f9064638461a42988f227ef07bdedc",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 55,
+   "title": "[P2-REV-01] Phase 2 Review / Project Close Execution",
+   "state": "open",
+   "record_ids": [
+    "P2-REV-01"
+   ],
+   "before_sha256": "b9922557e3fbb70f84135d408c8bf335719d20ea53b65022674f36f8dd387f77",
+   "planned_after_sha256_lf": "56037ce6a83bd84c8e8fb6b7415a09fced79f210cb7f5457f42ce30356949b28",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:30:31Z",
+   "replanned_before_sha256_lf": "b9922557e3fbb70f84135d408c8bf335719d20ea53b65022674f36f8dd387f77",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 56,
+   "title": "[MS-P2-REVIEW-01] Phase 2 Review",
+   "state": "open",
+   "record_ids": [
+    "MS-P2-REVIEW-01"
+   ],
+   "before_sha256": "15d1cddcab4c399f8134542955d85b9f07796f964f3e949742f23492b2223a80",
+   "planned_after_sha256_lf": "215e8b1446a8a4bd40f9f46925caca3a00423513073c3e7311b15fbd9a9f8139",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:30:34Z",
+   "replanned_before_sha256_lf": "15d1cddcab4c399f8134542955d85b9f07796f964f3e949742f23492b2223a80",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 57,
+   "title": "[MS-PROJECT-CLOSE-01] Project Close",
+   "state": "open",
+   "record_ids": [
+    "MS-PROJECT-CLOSE-01"
+   ],
+   "before_sha256": "bdd0fccd1338fa5143c2cec57faf5f8dd10706e11897ad8e82b1008bf0989c85",
+   "planned_after_sha256_lf": "bca4f7b5bd059eda118e7bcd03f2bf3fa669a2e90e4f9ad3e5fab04c1f47de5b",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:30:36Z",
+   "replanned_before_sha256_lf": "bdd0fccd1338fa5143c2cec57faf5f8dd10706e11897ad8e82b1008bf0989c85",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 60,
+   "title": "[D-NET-01] Physical / Management Network Design Freeze",
+   "state": "closed",
+   "record_ids": [
+    "D-NET-01"
+   ],
+   "before_sha256": "12fc533830f7cc062862768be009c2430c34088abcdea06b10e23a9c351823a6",
+   "planned_after_sha256_lf": "85b9aa0f7166a206fba4b07dfd76ba8effceb07c2bdd2cb1690c958e894c0446",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:30:39Z",
+   "replanned_before_sha256_lf": "12fc533830f7cc062862768be009c2430c34088abcdea06b10e23a9c351823a6",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 62,
+   "title": "[DEC-P1-ENTRY-01] Edge Service Exposure Decision",
+   "state": "closed",
+   "record_ids": [
+    "DEC-P1-ENTRY-01"
+   ],
+   "before_sha256": "6e5540a88b7c89af97faf7761bcdc5d16eaea0006b9570ac60812881ca6d04c7",
+   "planned_after_sha256_lf": "cd0a9ddd1160cb4f85f3eeeb2fb06e024a7af1ace35b372b40f086b58a79d084",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:30:42Z",
+   "replanned_before_sha256_lf": "6e5540a88b7c89af97faf7761bcdc5d16eaea0006b9570ac60812881ca6d04c7",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 64,
+   "title": "[DEC-P1-TLS-01] Harbor / Edge TLS Trust Decision",
+   "state": "closed",
+   "record_ids": [
+    "DEC-P1-TLS-01"
+   ],
+   "before_sha256": "447bda8e3c8b923aca01cbabfbe497dd1a2d1a7906ce25e52de49e0e4c6aa432",
+   "planned_after_sha256_lf": "6b3871b0c3dc327ee585b431b8ffdae7794661d0aeb34921fff531bc19e7fcfa",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:30:45Z",
+   "replanned_before_sha256_lf": "447bda8e3c8b923aca01cbabfbe497dd1a2d1a7906ce25e52de49e0e4c6aa432",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 65,
+   "title": "[P1-ANS-01] Ansible Inventory / OS-Node Bootstrap — Closed Update",
+   "state": "closed",
+   "record_ids": [
+    "P1-ANS-01"
+   ],
+   "before_sha256": "b96e7c6b8d3b79c183c552f314d9e8f9943a3d3e3e3109a477237592284916e9",
+   "planned_after_sha256_lf": "b3ec094f4a268d8a049b2f62b958c5793302aa517fdb9344291a2a833d12ae91",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:30:48Z",
+   "replanned_before_sha256_lf": "b96e7c6b8d3b79c183c552f314d9e8f9943a3d3e3e3109a477237592284916e9",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 66,
+   "title": "[P1-LNX-01] CentOS Stream 10 Linux / Network Baseline",
+   "state": "closed",
+   "record_ids": [
+    "P1-LNX-01"
+   ],
+   "before_sha256": "aaaa46cb8d3a194ec754f793b45fce655113adab92ae6f1db28a94ad9b6735b7",
+   "planned_after_sha256_lf": "7b3a5ea95ec8a2900625be5702a0ef1e1e69febdef4c2a58f9d15b2e9157ce05",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:30:51Z",
+   "replanned_before_sha256_lf": "aaaa46cb8d3a194ec754f793b45fce655113adab92ae6f1db28a94ad9b6735b7",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 67,
+   "title": "[P1-NET-01] Bridged Multi-MAC Smoke Test / Source Preservation",
+   "state": "closed",
+   "record_ids": [
+    "D-NET-01"
+   ],
+   "before_sha256": "f2a697e7cf8955a825367cfb28a86fdc8bccca3c5213a73b0233cbb244903b2b",
+   "planned_after_sha256_lf": "f0cf55f12b383ac865f6a24aec81c2aa3c940a82358f739fbb484cff320b0c84",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:30:53Z",
+   "replanned_before_sha256_lf": "f2a697e7cf8955a825367cfb28a86fdc8bccca3c5213a73b0233cbb244903b2b",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash OK"
+  },
+  {
+   "number": 95,
+   "title": "[DEC-P2-RHOAI-01] RHOAI(Red Hat OpenShift AI) 도입 범위 결정",
+   "state": "open",
+   "record_ids": [
+    "DEC-P2-RHOAI-01"
+   ],
+   "before_sha256": "1b446aa36ebd8f6cea73d2ac8808916faf08740d400092f14f5cd7b3dd0ce354",
+   "planned_after_sha256_lf": "1bf1d1e800dca9958b77268bd9dd61221d3cf235d1779edf31edcfe1e2722b70",
+   "result": "APPLIED_VIA_LOCAL_GH",
+   "observed_updated_at": "2026-09-23T12:30:56Z",
+   "replanned_before_sha256_lf": "1b446aa36ebd8f6cea73d2ac8808916faf08740d400092f14f5cd7b3dd0ce354",
+   "verification": "equals planned body, wrapped-links 0, no footer, old path 0 in current section, archive hash N/A"
+  }
+ ]
+}

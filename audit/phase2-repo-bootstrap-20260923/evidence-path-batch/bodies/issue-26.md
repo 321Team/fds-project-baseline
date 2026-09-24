@@ -1,0 +1,308 @@
+<!-- fds-evidence-path:20260923:v1:start -->
+## 증적 경로 일괄 변경 — 2026-09-23
+
+사용자 지시(“티켓에 대한 내용은 fds-project-evidence로 일괄 변경”)에 따라 현행 본문의 Evidence Path를 증적 저장소 [`321Team/fds-project-evidence`](https://github.com/321Team/fds-project-evidence)로 변경했다. 경로 구조는 기존 편입 관례(`evidence/<Record ID>/`)를 따른다.
+
+- 변경 전: `docs/evidence/P1-DR-02/` → 변경 후: `321Team/fds-project-evidence` `evidence/P1-DR-02/`
+- 이 변경은 증적 보관 위치의 지정이다. 해당 경로에 증적이 편입됐거나 AC가 충족됐다는 뜻이 아니다. 편입은 증적 저장소 PR의 독립 리뷰([EVIDENCE_POLICY](https://github.com/321Team/fds-project-evidence/blob/main/governance/EVIDENCE_POLICY.md))로 별도 판단한다.
+- Status·AC 체크·Lead/Support·일정·승인/종결은 변경하지 않았다. 아래 `<details>` 보관 원문과 서버 수집 경로 표기는 당시 기록으로 그대로 둔다.
+- 정본(Ticket Pack) 반영은 차기 정본 후보에서 처리한다. 발행 docs-v3.1.20의 기존 경로 문구는 이력이다.
+<!-- fds-evidence-path:20260923:v1:end -->
+
+---
+
+<!-- fds-spec-audit:20260914:v1:start -->
+## 사양·기록 전수 점검 후속 — 2026-09-14 점검 반영
+
+사용자 “각 티켓에 내용 갱신” 지시에 따른 기록 보완. 재대조: `2026-09-14T15:11:45+00:00`. 발행 [docs-v3.1.18](https://github.com/321Team/fds-project-baseline/releases/tag/docs-v3.1.18)과 후속 결정·현재 Issue/PR를 기준으로 한다.
+
+**이 티켓의 점검 결과:** Harbor/etcd 격리 복구 후속 유예. 대상/버전·원본·복구 결과는 착수 전 고정; P0 자동 차단 아님.
+
+- 기존 유예 계획을 유지한다. 9/23 Known Issue/Owner 인계·9/28 차기 착수/납기 결정 목표를 구현 완료일로 사용하지 않는다. 실제 격리 Harbor/etcd Restore의 source·버전·허용 검증 방식은 착수 전에 고정한다.
+
+**인계·관련 티켓:** [#13](https://github.com/321Team/fds-project-baseline/issues/13) · [#27](https://github.com/321Team/fds-project-baseline/issues/27).
+
+점검 항목 A01~A07/R01~R06의 전체 대응은 [P1-DOC-01 #24](https://github.com/321Team/fds-project-baseline/issues/24)에서 추적한다. 미완료 티켓의 기록/시험값은 해당 실행·인수 전에 확정할 후속이며, 유예·조건부 P1/P2 항목을 현재 P0 차단으로 추가하지 않는다.
+
+이번 내용 갱신은 기존 AC 체크·Status·Lead/Support·계획 일정·사람의 승인/종결을 변경하지 않는다. 아래 작성 당시의 미병합·검토대기 표현은 위 최신 확인 및 연결된 근거와 구분한다. 기존 본문·보관 원문·댓글은 보존한다.
+<!-- fds-spec-audit:20260914:v1:end -->
+
+---
+
+<!-- fds-milestone-assignment:2026-09-11 issue:26 -->
+## 대표 Milestone 배정 — 2026-09-11
+
+- **추적 Milestone:** Phase 1 Close (GitHub #6)
+- **배정 성격:** WBS 기반 대표 추적 항목 · 이권욱 사용자 지시에 따른 지정.
+- **배정 근거:** WBS의 Phase 1 P1 / Close Tracking 및 09-23 Known Issue·Owner 인계 계획에 따라 Phase 1 Close에 배정한다. Harbor·etcd 복구 구현의 완료일로 해석하지 않는다.
+- **출처:** [발행 정본 v3.1.18 WBS · WBS/Fast Track Plan 시트](https://github.com/321Team/fds-project-baseline/blob/72599ae49342b0fb8dbd3d8ee60314afb9f907bb/wbs/FDS_v3.1.18_WBS_and_Gantt_v1.0.xlsx)
+- **유예 처리:** Start/End TBD와 To Do를 유지한다. 09-23은 Known Issue·Owner 인계 계획, 09-28은 차기 착수·납기 결정 계획이며 구현 완료일이 아니다. P0 인수 후 재계획하며 Phase 2 공수를 자동 배정하지 않는다.
+- **일정 원칙:** 일정은 고정된 필수 기한이 아닌 조정 가능한 계획 목표다. 선행조건과 영향 확인 후 유연하게 조정하며 실제 완료일·승인·Runtime 증적 요건과 구분한다.
+- **적용 범위:** 대표 Milestone 연결과 근거 기록. 기존 상태·AC·담당·Start/End·Gate 요건과 보관 이력을 유지하며 새로운 Gate 필수조건을 추가하지 않는다.
+
+---
+
+<!-- fds-notion-migration:2026-09-09 record-id:P1-DR-02 -->
+<!-- fds-canonical-description:v3.1.18 record-id:P1-DR-02 -->
+# P1-DR-02 — Harbor / etcd Backup and Restore
+
+> 적용 기준: [발행 정본 v3.1.18](https://github.com/321Team/fds-project-baseline/releases/tag/docs-v3.1.18) · 2026-09-11 11:23:47 KST 게시.
+> 승인 소스: `72599ae49342b0fb8dbd3d8ee60314afb9f907bb`. 문서의 작성 당시 후보·미발행·이전 상태 표현은 이력이며, 현재 적용 기준은 이 머리말과 최신 운영 기록을 따른다. 계획 갱신으로 실제 AC·승인·종결을 상향하지 않는다.
+
+## 티켓 속성
+
+| Property | 입력값 |
+| --- | --- |
+| Record ID | P1-DR-02 |
+| Phase | Phase 1 |
+| Category | DR / Platform Recovery |
+| Type | Task |
+| Status | To Do |
+| Priority | P1 |
+| Start | TBD — P0 인수 후 재계획 |
+| End | TBD — 구현 유예 권장 |
+| Calendar Days | TBD |
+| Working Days | TBD |
+| Lead | 이하영 |
+| Support | 이권욱, 이재환 |
+| Exit Criteria | Harbor Backup/Restore와 etcd Snapshot/Restore를 격리 대상에서 수행하고 무결성·복구·Runbook Evidence 확보 |
+| Related Decision IDs | D04; D25 |
+| Related Risk IDs | RISK-05; RISK-06; RISK-08; RISK-14 |
+| Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #26 snapshot 2026-09-10T02:09:39Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청 |
+| Schedule Note | P0 마감 보호를 위해 신규 구현을 유예하는 권장안이다. 기존 Lead·Type·Priority·AC·To Do는 유지한다. 09-23은 Known Issue/Owner 인계 기한, 09-28은 차기 착수·납기 결정 기한이며 구현 완료일은 TBD다. Phase 2 공수를 자동 배정하지 않는다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트. |
+
+
+## 최신 운영 기록의 보존
+
+- 이관 직전 Issue 상태: **To Do / open**. 원본 갱신 시각: `2026-09-10T02:09:39Z`.
+- 담당·라벨·실제 Type·Milestone·댓글·AC 판정은 이 Description 단계에서 변경하지 않는다.
+- 현행 설계·Scope·계획은 상단 v3.1.18을 따른다. 아래 원문 보관의 과거 사양·상태를 현재 값으로 다시 적용하지 않는다.
+
+## 정본에 반영된 실행·검토 상태 — 작성 시점 기록
+
+기준 시점의 To Do 상태와 기존 Acceptance를 유지한다. 이번 정본 정리에서는 서버 실행·새 Runtime 판정을 수행하지 않았다. 현재 후보 Plan: TBD — P0 인수 후 재계획 ~ TBD — 구현 유예 권장 (권장안; 실제 완료일·Gate 승인은 미확정).
+
+근거: [Issue #26](https://github.com/321Team/fds-project-baseline/issues/26), Issue 갱신 시각 `2026-09-10T02:09:39Z`. 댓글·승인 기록과 본문 보관본은 [정본 수집 원문](https://github.com/321Team/fds-project-baseline/blob/72599ae49342b0fb8dbd3d8ee60314afb9f907bb/tickets/v3.1.18/source-snapshot.json)에 보존하고 실제 Gate는 해당 증적·승인 범위로 판정한다.
+
+## 일정 권장안
+
+Start/End는 이번 Fast Tracking 후보의 계획값이다. 기존 승인 일정은 `audit/v3.1.18/fast-track-plan.json`에 전후 값으로 보존한다. 실제 착수·완료·Status·AC·승인을 변경한 것이 아니다. 교육장 주말 작업은 없으며 세부 AM/PM 배정과 선행 조건을 따른다.
+
+## 적용 기준
+
+- Baseline v3.1.18의 현행 설계·Interface·Gate와 아래 Scope/Acceptance를 함께 적용한다.
+- 이력의 당시 PASS·Done은 원래 범위에 한정한다. 후속 Runtime 또는 승인자를 새로 생성하지 않는다.
+
+---
+
+# User Story
+
+플랫폼 담당자 이하영으로서 Harbor와 etcd의 Backup/Restore 가능성을 검증한다. 이를 통해 PostgreSQL 외 플랫폼 구성과 Registry Artifact의 최소 복구 절차를 확보한다.
+
+---
+
+# Scope
+
+## In Scope
+
+- Harbor Backup/Restore
+- etcd Snapshot/Restore
+- Checksum·Version 기록
+- 격리 복구 대상
+- Runbook·Evidence
+
+## Out of Scope
+
+- Harbor HA
+- 다중 Site DR
+- 운영 원본 파괴 복구시험
+
+---
+
+# 핵심 요구사항
+
+- [ ] Backup 대상과 Version을 기록한다.
+- [ ] 원본을 덮어쓰지 않는 격리 복구 환경을 사용한다.
+- [ ] Credential과 Backup 파일 접근권한을 통제한다.
+- [ ] 복구 후 Registry Pull 또는 Cluster 상태를 검증한다.
+
+---
+
+# Acceptance Criteria
+
+- [ ] Harbor Backup이 생성되고 무결성이 확인된다.
+- [ ] 격리 Harbor Restore 후 승인 Image Pull이 성공한다.
+- [ ] etcd Snapshot이 생성되고 상태가 검증된다.
+- [ ] 승인 절차로 Restore 또는 복구 검증이 재현된다.
+
+---
+
+# 검증 및 증적
+
+- Backup Command/Checksum
+- Harbor Restore/Pull Log
+- etcd Snapshot Status
+- Recovery Runbook
+- Evidence Path: `321Team/fds-project-evidence:evidence/P1-DR-02/`
+
+---
+
+# Dependency
+
+- **Blocked By:** P1-HBR-01; P1-K8S-01
+- **Blocks / Next:** P1-DOC-01 또는 Known Issue 이관
+- **Related Ticket:** P1-DR-01
+- **Milestone:** Phase 1 P1 / Close Tracking
+
+---
+
+# Decision / Risk Control
+
+- **Related Decision IDs:** D04; D25
+- **Decision Control:** 관련 Decision은 이권욱·이하영·이재환이 확인할 수 있는 기록으로 남기며, 승인 전 조건부 작업을 시작하지 않는다.
+- **Related Risk IDs:** RISK-05; RISK-06; RISK-08; RISK-14
+- **Risk Control:** 예방·탐지·복구 통제를 Acceptance Criteria와 Evidence에 연결한다.
+
+---
+
+# Completion Record
+
+- **Result:** TBD
+- **Status:** To Do
+- **Exit Criteria:** Harbor Backup/Restore와 etcd Snapshot/Restore를 격리 대상에서 수행하고 무결성·복구·Runbook Evidence 확보
+- **Completed Date:** 미입력
+- **Reviewer / Approver:** 미입력 — 입력 시 풀네임 사용
+
+## 갱신 전 원문 보관
+
+<details>
+<summary>이전 본문·승인·검토·AC 이력 원문 — 당시 기록</summary>
+
+원문 SHA-256: `5f057aae3883f8c55eeee5506535644ba2d3b6382a0f707f31322e59a73223eb`. 원문은 아래 문자 그대로 보존하며 현재 속성표로 사용하지 않는다.
+
+````text
+<!-- fds-notion-migration:2026-09-09 record-id:P1-DR-02 -->
+# P1-DR-02 — Harbor / etcd Backup and Restore
+
+> 이관일: 2026-09-09 · 정본 및 보관 Notion 입력본 기준. Notion 실시간 원문·댓글·첨부의 완전 복제를 확인한 결과는 아니다.
+
+## Notion 데이터 속성
+
+| Property | 입력값 |
+|---|---|
+| Record ID | P1-DR-02 |
+| Phase | Phase 1 |
+| Category | DR / Platform Recovery |
+| Type | Task |
+| Status | To Do |
+| Priority | P1 |
+| Start | 2026-09-14 |
+| End | 2026-09-18 |
+| Calendar Days | 5 |
+| Working Days | 5 |
+| Lead | 이하영 |
+| Support | 이권욱, 이재환 |
+| Exit Criteria | Harbor Backup/Restore와 etcd Snapshot/Restore를 격리 대상에서 수행하고 무결성·복구·Runbook Evidence 확보 |
+| Related Decision IDs | D04; D25 |
+| Related Risk IDs | RISK-05; RISK-06; RISK-08; RISK-14 |
+| Source | FDS_Project_Implementation_Baseline_v3.1.12; FDS_Network_Baseline_v2.3; FDS_Phase1_Logical_Architecture_v3.1.2; 이관 대조: Baseline/WBS v3.1.17 (commit 2d93395a0e19ea67e5be199d7183a7edbaa6cf4c) |
+| Schedule Note | 기존 P1-DR-02와 기준선의 etcd Snapshot/Restore P1 범위를 통합한다. Harbor HA는 Scope Out이며 미완료 시 Known Issue로 이관한다. |
+
+## 이관 기준 및 확인 사항
+
+- 속성의 일정·담당·상태는 RELEASED v3.1.17 WBS(기준일 2026-09-04)를 우선 반영했다. 이후 별도 근거가 있는 변경만 아래에 명시한다.
+- [현행 정본 v3.1.17](https://github.com/321Team/fds-project-baseline/blob/2d93395a0e19ea67e5be199d7183a7edbaa6cf4c/baseline/FDS_Project_Implementation_Baseline_v3.1.17.md) · [정본 WBS](https://github.com/321Team/fds-project-baseline/blob/2d93395a0e19ea67e5be199d7183a7edbaa6cf4c/wbs/FDS_v3.1.17_WBS_and_Gantt_v1.0.xlsx).
+- 본문은 아래에 적힌 원본 버전의 기록이다. 위 속성·후속 승인과 다른 과거 상태는 현재 판정으로 사용하지 않는다. 이관 자체로 미실행 AC를 체크하거나 새 승인을 부여하지 않는다.
+- Lead/Support의 풀네임은 본문 속성으로 보존한다. GitHub 계정 대응이 확인되지 않은 사람에게 자동 배정하지 않았다.
+
+## 원본 및 변경 출처
+
+- `FDS_Notion_Remaining_Backlog_Manual_v1.9.md`
+- `FDS_v3.1.17_WBS_and_Gantt_v1.0.xlsx`
+
+---
+
+## Description — 보관 입력본
+
+> 원본: `FDS_Notion_Remaining_Backlog_Manual_v1.9.md`. 원본의 완료/미완료 체크와 당시 이력을 보존했다.
+
+# 🎯 User Story
+
+플랫폼 담당자 이하영으로서 Harbor와 etcd의 Backup/Restore 가능성을 검증한다. 이를 통해 PostgreSQL 외 플랫폼 구성과 Registry Artifact의 최소 복구 절차를 확보한다.
+
+---
+
+# 📌 Scope
+
+## In Scope
+
+- Harbor Backup/Restore
+- etcd Snapshot/Restore
+- Checksum·Version 기록
+- 격리 복구 대상
+- Runbook·Evidence
+
+## Out of Scope
+
+- Harbor HA
+- 다중 Site DR
+- 운영 원본 파괴 복구시험
+
+---
+
+# 📋 핵심 요구사항
+
+- [ ] Backup 대상과 Version을 기록한다.
+- [ ] 원본을 덮어쓰지 않는 격리 복구 환경을 사용한다.
+- [ ] Credential과 Backup 파일 접근권한을 통제한다.
+- [ ] 복구 후 Registry Pull 또는 Cluster 상태를 검증한다.
+
+---
+
+# ✅ Acceptance Criteria
+
+- [ ] Harbor Backup이 생성되고 무결성이 확인된다.
+- [ ] 격리 Harbor Restore 후 승인 Image Pull이 성공한다.
+- [ ] etcd Snapshot이 생성되고 상태가 검증된다.
+- [ ] 승인 절차로 Restore 또는 복구 검증이 재현된다.
+
+---
+
+# 🧪 검증 및 증적
+
+- Backup Command/Checksum
+- Harbor Restore/Pull Log
+- etcd Snapshot Status
+- Recovery Runbook
+- Evidence Path: docs/evidence/P1-DR-02/
+
+---
+
+# 🔗 Dependency
+
+- **Blocked By:** P1-HBR-01; P1-K8S-01
+- **Blocks / Next:** P1-DOC-01 또는 Known Issue 이관
+- **Related Ticket:** P1-DR-01
+- **Milestone:** Phase 1 P1 / Close Tracking
+
+---
+
+# ⚖️ Decision / Risk Control
+
+- **Related Decision IDs:** D04; D25
+- **Decision Control:** 관련 Decision은 이권욱·이하영·이재환이 확인할 수 있는 기록으로 남기며, 승인 전 조건부 작업을 시작하지 않는다.
+- **Related Risk IDs:** RISK-05; RISK-06; RISK-08; RISK-14
+- **Risk Control:** 예방·탐지·복구 통제를 Acceptance Criteria와 Evidence에 연결한다.
+
+---
+
+# 📝 Completion Record
+
+- **Result:** TBD
+- **Status:** To Do
+- **Exit Criteria:** Harbor Backup/Restore와 etcd Snapshot/Restore를 격리 대상에서 수행하고 무결성·복구·Runbook Evidence 확보
+- **Completed Date:** 미입력
+- **Reviewer / Approver:** 미입력 — 입력 시 풀네임 사용
+````
+
+</details>
