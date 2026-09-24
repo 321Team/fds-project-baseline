@@ -1,4 +1,4 @@
-1c7f5af73e087a21d6870360f255a61b22d33f5bb649f09927b1a022701d17a0  README.md
+250214b66afca5b8121ec47266b6728b7252171995981f2fdc5d724598b66b39  README.md
 4939ccb08b384c5b51ef3782fc72971584d4ddbbdfec9e39f944f762c33b24b8  evidence-path-batch/README.md
 574488ec6ec48f9ed468ebc5f4d6bed5e65d64763e4d197c551c8b7ea045fb3c  evidence-path-batch/apply-evidence-path.ps1
 8fddd65d6ba2699031198399870ea5b988e0d2eff3f7661c18315a4a1e2d607d  evidence-path-batch/bodies/issue-17.md
@@ -73,3 +73,11 @@ af9743b30e3f08d0614534445b54a9fd533510cf3ee9f4ade39be96b711c44c4  evidence-path-
 42361eec683258818de58a101f371919e8a79883c9ff02212d97280998e5e715  evidence-path-followup-20260925/bodies/issue-8.md
 0880f11cd10ab2c61475a40eca40803c823427573b0324f78d8c2f38f18089be  evidence-path-followup-20260925/plan.json
 27c1d4a1a8a4d4c6e36deb4d6202aee4ddbd262ca34199d0f2e1f1cbd2bbee82  evidence-path-followup-20260925/result.json
+3cad11974db5c55da077c77ff722b998eb9d76aec5680eecf8a9d6ec891e38cb  issue-body-repair-20260925/README.md
+a787ca0806640490c3ff16d0ccac0a45ab4a2d5741d1afa1562bdf01b139b7cd  issue-body-repair-20260925/analyze-edits.py
+5b1cd56c7dbdaaaf50ac08a6e29daab214f54232f478b03d8be7ecb573d992b7  issue-body-repair-20260925/fetch-edit-history.ps1
+d8ce6408e83c846f053de3bcfa21b7e5055cdca48ee88731ff80c113edfda6a7  issue-body-repair-20260925/kit/REPAIR_GUIDE_issue-9-74-75.md
+611cd8ea58879ec2c4e04c568830b7aad684848dbe7399442f6c14a5ee4a04fd  issue-body-repair-20260925/kit/candidates.json
+3ef0a47786463c9bc3cd3c9cc1810bde608838f85e2c5541ddc30fc3820649b1  issue-body-repair-20260925/kit/candidates/issue-74.repair-candidate.md
+ef53343b48ca0d4cd4fe15de9d596999f721223c75dbae0f5a81a3fb02dc6087  issue-body-repair-20260925/kit/candidates/issue-75.repair-candidate.md
+9a8da1a045850b5535405464a884c4a5d387a724bfa47e3d29b9c804c1d64dd3  issue-body-repair-20260925/kit/candidates/issue-9.repair-candidate.md
