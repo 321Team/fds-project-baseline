@@ -1,0 +1,75 @@
+{
+ "schema_version": 1,
+ "generated_at": "2026-09-25",
+ "repo": "321Team/fds-project-baseline",
+ "apply": {
+  "by": "GWONUK local gh",
+  "script": "apply-evidence-path.ps1",
+  "dry_run": "DRY RUN ready=3",
+  "result": "DONE applied=3"
+ },
+ "verification": {
+  "source": "fetch-edit-history.ps1 re-run (read-only) ZIP sha256 c54418b401e2988964cba1ea731c3dc8b2e38a7c3dbd64952409c6ed6936ace0, inner SHA256SUMS 6/6 OK; GitHub MCP list_issues after apply",
+  "other_issues_changed_in_window": 0,
+  "note": "list_issues (updated desc) after apply: only #9/#74/#75 updated after 2026-09-24T18:37:24Z"
+ },
+ "issues": [
+  {
+   "number": 9,
+   "record_ids": [
+    "P1-LB-01"
+   ],
+   "status": "APPLIED_VERIFIED",
+   "before_sha256_lf": "c8b3a9e8460e231bdf47e5b58172c812387d93fea2f173b1369e11d2fd0e54c4",
+   "applied_updated_at": "2026-09-24T19:01:49Z",
+   "after_sha256_lf": "66e540bb56dcf6ed90e44a8e795e5cb1b3f27dbbf409ac338494156a83ab6458",
+   "body_matches_plan": true,
+   "new_revision_editor": "GWONUK",
+   "escaped_lt": 0,
+   "escaped_gt": 0,
+   "stray_double_backticks": 0,
+   "footer": 0,
+   "crlf": false,
+   "archive_sha256_ok": true,
+   "title_state_labels_unchanged": true
+  },
+  {
+   "number": 74,
+   "record_ids": [
+    "CR-P1-MON-01-01"
+   ],
+   "status": "APPLIED_VERIFIED",
+   "before_sha256_lf": "de777be149529e2ae790634d20607fbf462b4dba55fc0b6593b9014f1525945d",
+   "applied_updated_at": "2026-09-24T19:01:52Z",
+   "after_sha256_lf": "3ef0a47786463c9bc3cd3c9cc1810bde608838f85e2c5541ddc30fc3820649b1",
+   "body_matches_plan": true,
+   "new_revision_editor": "GWONUK",
+   "escaped_lt": 0,
+   "escaped_gt": 0,
+   "stray_double_backticks": 0,
+   "footer": 0,
+   "crlf": false,
+   "archive_sha256_ok": null,
+   "title_state_labels_unchanged": true
+  },
+  {
+   "number": 75,
+   "record_ids": [
+    "CR-P1-MON-01-02"
+   ],
+   "status": "APPLIED_VERIFIED",
+   "before_sha256_lf": "956174a2f97a360b2b4bb878815192477d8c945d9ceb97c7df05331bdccc7cc1",
+   "applied_updated_at": "2026-09-24T19:01:55Z",
+   "after_sha256_lf": "ef53343b48ca0d4cd4fe15de9d596999f721223c75dbae0f5a81a3fb02dc6087",
+   "body_matches_plan": true,
+   "new_revision_editor": "GWONUK",
+   "escaped_lt": 0,
+   "escaped_gt": 0,
+   "stray_double_backticks": 0,
+   "footer": 0,
+   "crlf": false,
+   "archive_sha256_ok": null,
+   "title_state_labels_unchanged": true
+  }
+ ]
+}
