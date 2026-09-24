@@ -134,7 +134,7 @@ STATIC=로컬 대조 수행 / RUNTIME=해당 없음 / Issue 쓰기=49/49 완료(
 이 저장소의 운영 기록으로 다음을 적용한다.
 
 - **Issue 본문 교체는 Lead 로컬 `gh`로만 한다.** 절차는 교체 본문 파일(LF)과 plan(`updated_at`·변경 전 SHA-256·파일 SHA-256)을 준비하고, `apply-evidence-path.ps1` 점검 뒤 `-Apply`로 반영한 다음, 읽기 전용으로 재조회해 대조하는 것이다.
-- Claude 세션은 Issue 본문을 쓰지 않는다. 세션은 교체 본문과 plan 준비, 읽기 전용 대조만 한다. 코멘트는 이번 조사에서 본문 손상 유형이 관찰되지 않았다. 다만 세션 경로 코멘트에는 footer가 붙는다.
+- AI 도구는 Issue 본문을 쓰지 않는다. 대상은 Claude·GPT(ChatGPT·Codex)·Grok·Cursor 등이며, 쓰기 경로를 가리지 않는다. 손상은 Claude 세션 경로에서만 관찰됐고, 다른 도구에는 예방 차원에서 적용한다. AI 도구는 교체 본문과 plan 준비, 읽기 전용 대조만 한다. 코멘트는 이번 조사에서 본문 손상 유형이 관찰되지 않았다. 다만 Claude 세션 경로 코멘트에는 footer가 붙는다.
 - Issue 본문 편집이 필요한 세션 작업은 결과를 코멘트로 남기거나 교체 본문 파일로 넘긴다. 본문 반영은 위 절차로 한다.
 
-이 항목은 운영 기록이다. `governance/TICKET_SYNC_POLICY.md`에 정책으로 반영할지는 정본 Lead가 별도 PR로 판단한다. §5는 자동 동기화의 본문 쓰기만 금지하고, 세션 수동 편집은 다루지 않는다.
+이 항목은 운영 기록이다. 정책 반영안은 [PR #107](https://github.com/321Team/fds-project-baseline/pull/107)에 있다. 내용은 `TICKET_SYNC_POLICY` 1.3 §5.1, `AGENTS.md`, `CLAUDE.md`이며, 정본 Lead가 판단한다. §5는 자동 동기화의 본문 쓰기만 금지하고, 세션 수동 편집은 다루지 않는다.
