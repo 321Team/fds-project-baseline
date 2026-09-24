@@ -40,7 +40,7 @@
 
 ## 3.1 증적 저장소 예외
 
-- `fds-project-evidence`는 [EVIDENCE_POLICY](https://github.com/321Team/fds-project-evidence/blob/454dcbdbc16451836c5118fb99a4a4ca8ead9d2b/governance/EVIDENCE_POLICY.md)의 독립 검토·정확한 HEAD 확인·수동 병합 원칙을 유지한다. 문서나 로그만 포함됐다는 이유로 독립 검토를 생략하지 않는다.
+- `fds-project-evidence`는 [EVIDENCE_POLICY](https://github.com/321Team/fds-project-evidence/blob/2acd4ea1d7a94acf0e51d634d022d20ec54e81f8/governance/EVIDENCE_POLICY.md)의 독립 검토·정확한 HEAD 확인·수동 병합 원칙을 유지한다. 문서나 로그만 포함됐다는 이유로 독립 검토를 생략하지 않는다.
 - Lead의 자체 Runtime 판정과 증적 저장소 편입 심사는 구분한다. 작성자·실행자의 자체 검토만으로 독립 증적 검토를 완료했다고 표시하지 않는다. 기존 증적 저장소의 담당자·병합 책임을 새로 배정하지 않는다.
 - 독립 검토는 원본 출처, 수신 바이트·해시, 실제 실행 여부, AC와 판정의 대응, 누락·오표기·민감정보, 정정 이유를 확인한다. 원본과 과거 승인 이력은 보존하고 정정은 새 기록으로 남긴다.
 - 증적 PR의 독립 검토 완료만으로 별도 업무 티켓을 자동 Done 처리하지 않는다. 해당 Lead는 필수 AC·남은 작업을 근거로 종결을 판단한다.
