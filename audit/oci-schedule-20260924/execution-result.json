@@ -1,0 +1,54 @@
+{
+  "verified_at_utc": "2026-09-23T20:55:52.371Z",
+  "issues": [
+    {
+      "number": 33,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/33",
+      "body_verified": true,
+      "metadata_unchanged": true,
+      "updated_at": "2026-09-23T20:55:21Z"
+    },
+    {
+      "number": 34,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/34",
+      "body_verified": true,
+      "metadata_unchanged": true,
+      "updated_at": "2026-09-23T20:55:22Z"
+    },
+    {
+      "number": 35,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/35",
+      "body_verified": true,
+      "metadata_unchanged": true,
+      "updated_at": "2026-09-23T20:55:24Z"
+    },
+    {
+      "number": 36,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/36",
+      "body_verified": true,
+      "metadata_unchanged": true,
+      "updated_at": "2026-09-23T20:55:25Z"
+    },
+    {
+      "number": 37,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/37",
+      "body_verified": true,
+      "metadata_unchanged": true,
+      "updated_at": "2026-09-23T20:55:26Z"
+    },
+    {
+      "number": 39,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/39",
+      "body_verified": true,
+      "metadata_unchanged": true,
+      "updated_at": "2026-09-23T20:55:28Z"
+    }
+  ],
+  "scope": "body-only schedule correction; no gate/status/assignee/AC updates",
+  "remaining": [
+    "Issue #36 native Target date 2026-10-09 -> 2026-10-08",
+    "Milestone #7 due_on/current description 2026-09-28 -> 2026-10-06",
+    "Milestone #8 due_on/current description 2026-10-08 -> 2026-10-13",
+    "PR merge and next canonical release"
+  ]
+}
