@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-25",
+  "repo": "321Team/fds-project-baseline",
+  "marker": "fds-evidence-path:20260923:v1",
+  "issues": [
+    {
+      "number": 8,
+      "record_ids": [
+        "MS-G0-01"
+      ],
+      "updated_at": "2026-09-14T15:14:15Z",
+      "before_sha256_lf": "cb5f383d932b993d6c30cd36410463680c9f6f69d0fff5d5997982fd7b1a6ea6",
+      "file": "bodies/issue-8.md",
+      "file_sha256": "42361eec683258818de58a101f371919e8a79883c9ff02212d97280998e5e715",
+      "length": 8148,
+      "current_area_changes": 1,
+      "archive_hash_ok_before": true,
+      "archive_unchanged": true,
+      "crlf_before": false
+    },
+    {
+      "number": 10,
+      "record_ids": [
+        "P1-K8S-01"
+      ],
+      "updated_at": "2026-09-24T15:55:49Z",
+      "before_sha256_lf": "5bd9c4db6fa4ac6661654d0334775ba83be8982c1878a76a2f5d8bef56cd1f25",
+      "file": "bodies/issue-10.md",
+      "file_sha256": "b343ebf77ebdbd19c465f28bc0290e5e179c657c9cae78343e66a306f20e8863",
+      "length": 68592,
+      "current_area_changes": 1,
+      "archive_hash_ok_before": true,
+      "archive_unchanged": true,
+      "crlf_before": false
+    },
+    {
+      "number": 12,
+      "record_ids": [
+        "P1-DNS-01"
+      ],
+      "updated_at": "2026-09-24T17:58:31Z",
+      "before_sha256_lf": "7aeb1f0922e47a785a81ec918bc76ba8a7a022e7d47bf81fe6a08f812584ccf3",
+      "file": "bodies/issue-12.md",
+      "file_sha256": "da725fd08eaf446ec066f2f752e4d513fe47fad3fbd29e2cfd9a9b575dcf309e",
+      "length": 16003,
+      "current_area_changes": 1,
+      "archive_hash_ok_before": true,
+      "archive_unchanged": true,
+      "crlf_before": false
+    },
+    {
+      "number": 13,
+      "record_ids": [
+        "P1-HBR-01"
+      ],
+      "updated_at": "2026-09-24T14:24:53Z",
+      "before_sha256_lf": "e94f78374bd90eba1a20a432f35c49d730e5274357c1ce35c7b6813c25ccc943",
+      "file": "bodies/issue-13.md",
+      "file_sha256": "83b42ed18daff7b18a3e3ed5a9b347e5642798086921a8bffe922215464cd8c0",
+      "length": 20148,
+      "current_area_changes": 1,
+      "archive_hash_ok_before": true,
+      "archive_unchanged": true,
+      "crlf_before": false
+    },
+    {
+      "number": 15,
+      "record_ids": [
+        "P1-APP-01"
+      ],
+      "updated_at": "2026-09-23T04:20:02Z",
+      "before_sha256_lf": "e8b56beeb3df0e9df69926e85bdea83dea695d3bb1355b61b20929697d07c39b",
+      "file": "bodies/issue-15.md",
+      "file_sha256": "f50797a35c8de072bc35f04232f84befb0599bc37dfe3fb1dabdebf190906db8",
+      "length": 13262,
+      "current_area_changes": 1,
+      "archive_hash_ok_before": true,
+      "archive_unchanged": true,
+      "crlf_before": true
+    },
+    {
+      "number": 19,
+      "record_ids": [
+        "P1-SEC-01"
+      ],
+      "updated_at": "2026-09-24T15:55:54Z",
+      "before_sha256_lf": "6893225b1cd74fc3bb3fff28c07ccb35ea3bd7b14aa210d2b906fe273a1ef6c0",
+      "file": "bodies/issue-19.md",
+      "file_sha256": "af9743b30e3f08d0614534445b54a9fd533510cf3ee9f4ade39be96b711c44c4",
+      "length": 34407,
+      "current_area_changes": 1,
+      "archive_hash_ok_before": false,
+      "archive_unchanged": true,
+      "crlf_before": false
+    },
+    {
+      "number": 25,
+      "record_ids": [
+        "P1-MON-02"
+      ],
+      "updated_at": "2026-09-22T15:41:37Z",
+      "before_sha256_lf": "1c8a92a08ff1bf1bf9193a528dcc9f970ef4c40cf7c9c61b6969d708cc339a2a",
+      "file": "bodies/issue-25.md",
+      "file_sha256": "753e4e4d2641d457a22406a8fe3414c90060a1eb1d965b7dabf5e05b6ad7cc55",
+      "length": 11536,
+      "current_area_changes": 1,
+      "archive_hash_ok_before": true,
+      "archive_unchanged": true,
+      "crlf_before": false
+    }
+  ]
+}
