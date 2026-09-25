@@ -2,15 +2,44 @@
 
 이 저장소에서 작업하는 모든 AI 도구가 따르는 규칙이다. 대상은 Claude(Claude Code), GPT(ChatGPT·Codex), Grok, Cursor 등이다. 정책 원문이 우선한다.
 
-## GitHub Issue 본문 쓰기 금지
+## GitHub Issue 본문 쓰기 규칙
 
-- **Issue 본문(body)을 쓰지 않는다.** 근거는 [TICKET_SYNC_POLICY §5.1](governance/TICKET_SYNC_POLICY.md)이다.
-  - 쓰기 경로를 가리지 않는다. GitHub MCP·커넥터, 도구가 대신 실행하는 `gh`/API, 에이전트 모드의 브라우저 조작이 모두 해당한다.
-  - 2026-09-22~24에 AI 세션 경로로 쓴 본문에서 손상이 반복 확인됐다. 손상 유형은 `&lt;`·`&gt;` 엔티티화, 링크 ``` `` ``` 삽입, 따옴표 변환, footer 추가다.
-- **본문 갱신이 필요하면** 다음 두 가지만 한다.
-  1. 교체 본문 파일(UTF-8, LF)과 plan을 저장소 audit 경로에 준비한다. plan에는 `number`, `updated_at`, 변경 전 SHA-256, 파일 SHA-256을 적는다. 반영은 담당자가 로컬 `gh`로 직접 실행한다.
-  2. 또는 결과를 Issue 코멘트로 남긴다. 코멘트에는 AI 사용 표기를 남긴다(예: `AI 사용: CODEX_ASSISTED`).
-- 조회·대조(읽기)와 코멘트는 허용된다. 제목·라벨·상태 변경은 [TICKET_SYNC_POLICY](governance/TICKET_SYNC_POLICY.md)와 [REVIEW_AUTHORITY_POLICY](governance/REVIEW_AUTHORITY_POLICY.md)를 따른다.
+근거는 [TICKET_SYNC_POLICY §5.1](governance/TICKET_SYNC_POLICY.md)이다. 쓰기 경로를 가리지 않는다. GitHub MCP·커넥터, 도구가 대신 실행하는 `gh`/API, 에이전트 모드의 브라우저 조작이 모두 해당한다.
+
+### 금지 — 본문 직접 수정
+
+다음 편집은 하지 않는다.
+- 본문 전체 재작성
+- 절·문단·표의 추가·삭제·수정
+- 링크·관리 마커(`<!-- … -->`)·보관 원문 편집
+
+이런 변경이 필요하면 교체 본문 파일(UTF-8, LF)과 plan을 audit 경로에 준비한다. plan에는 `number`, `updated_at`, 변경 전 SHA-256, 파일 SHA-256을 적는다. 반영은 담당자가 로컬 `gh`로 직접 실행한다.
+
+### 허용 — 필수 속성과 잔여 항목 갱신
+
+대상:
+- 상단 필수 속성표(17개)의 값
+- AC·Exit Criteria 체크 상태(`[ ]`↔`[x]`)
+- 잔여 항목 표기
+
+조건(모두 지킨다):
+1. **대상 줄만 문자열 치환한다.** 조회한 원문에서 해당 줄만 바꿔 올린다. 본문 전체를 다시 출력해 쓰지 않는다.
+2. **쓰기 직전에 `updated_at`을 다시 확인한다.**
+3. **쓰기 뒤에 재조회한다.** 바뀐 줄 외 차이 0, 손상 신호(`&lt;`·`&gt;`·단독 ``` `` ```·footer) 증가 0을 확인한다. 어긋나면 즉시 멈추고 코멘트로 보고한다.
+4. **근거를 코멘트로 남긴다.** 바꾼 항목, 전→후 값, 근거 링크, AI 사용 표기를 적는다.
+5. **재조회 대조를 할 수 없는 도구는 쓰지 않는다.** 예를 들어 웹 채팅이 해당한다. 이런 도구는 변경안을 코멘트로 남긴다.
+
+판단 권한은 그대로다. Status·AC 인수·종결은 담당 Lead가 결정한다. AI 도구는 결정과 근거를 반영할 뿐이며, 스스로 충족을 판정하지 않는다.
+
+**주의:** 9/22 #74·#75 손상은 속성표 Start/End 값만 바꾼 편집에서 일어났다. 조건 1·3을 생략하면 같은 사고가 난다.
+
+### 항상 허용
+
+- 읽기 전용 조회와 대조: 필수 속성 누락, AC 잔여 항목, 증적 연결 점검
+- 교체 본문과 plan 준비
+- 코멘트(AI 사용 표기 포함)
+
+제목·라벨·상태 변경은 [TICKET_SYNC_POLICY](governance/TICKET_SYNC_POLICY.md)와 [REVIEW_AUTHORITY_POLICY](governance/REVIEW_AUTHORITY_POLICY.md)를 따른다.
 
 ## 문제 사례 (2026-09-22~24)
 

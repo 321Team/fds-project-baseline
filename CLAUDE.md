@@ -4,4 +4,7 @@
 
 @AGENTS.md
 
-핵심 규칙: **GitHub Issue 본문(body)을 쓰지 않는다.** GitHub MCP(`issue_write` 등)와 세션 프록시를 거치는 `gh`/API가 모두 해당한다. 본문 갱신은 교체 본문 파일과 plan으로 넘기고, 반영은 담당자가 로컬 `gh`로 한다. 근거는 [TICKET_SYNC_POLICY §5.1](governance/TICKET_SYNC_POLICY.md)이다.
+핵심 규칙:
+- **Issue 본문은 직접 수정하지 않는다.** 본문 전체 재작성과 절·문단·링크·마커 편집이 해당한다. 이런 변경은 교체 본문 파일과 plan으로 넘기고, 담당자가 로컬 `gh`로 반영한다.
+- **필수 속성값과 AC·잔여 항목 체크 상태는 갱신할 수 있다.** 대상 줄만 문자열로 치환하고, `updated_at`을 재확인한다. 쓰기 뒤에 재조회해 다른 줄 변경 0, 손상 신호 증가 0을 확인하고, 근거를 코멘트로 남긴다.
+- 근거: [TICKET_SYNC_POLICY §5.1](governance/TICKET_SYNC_POLICY.md)
