@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-25",
+  "repo": "321Team/fds-project-baseline",
+  "apply": {
+    "by": "GWONUK local gh",
+    "dry_run": "DRY RUN ready=1",
+    "result": "DONE applied=1",
+    "zip_sha256": "8d6b8385820c25269ffe691f0c73127f20232b41bb360679eed5ba138820aa9b"
+  },
+  "verification": {
+    "source": "fetch-edit-history.ps1 re-run (read-only) ZIP sha256 22ab8d06f3c4a8fe93fbf229535c238016b64cba11fe653a77767178075cdcdc, inner SHA256SUMS 6/6 OK; GitHub MCP list_issues after apply",
+    "other_issues_changed_in_window": 0
+  },
+  "issues": [
+    {
+      "number": 9,
+      "record_ids": [
+        "P1-LB-01"
+      ],
+      "status": "APPLIED_VERIFIED",
+      "before_sha256_lf": "66e540bb56dcf6ed90e44a8e795e5cb1b3f27dbbf409ac338494156a83ab6458",
+      "applied_updated_at": "2026-09-24T23:42:10Z",
+      "after_sha256_lf": "2e098bbba3759c2c8b86d3b714f73da3b2b9e6283b7257341f31612aef944832",
+      "body_matches_plan": true,
+      "new_revision_editor": "GWONUK",
+      "current_area_old_path": 0,
+      "current_area_new_path": 1,
+      "archive_old_path_kept": 1,
+      "archive_sha256_ok": true,
+      "escaped_lt": 0,
+      "escaped_gt": 0,
+      "stray_double_backticks": 0,
+      "footer": 0,
+      "crlf": false,
+      "title_state_labels_unchanged": true
+    }
+  ]
+}

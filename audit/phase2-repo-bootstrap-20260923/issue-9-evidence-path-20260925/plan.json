@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-25",
+  "repo": "321Team/fds-project-baseline",
+  "marker": "fds-evidence-path:20260923:v1",
+  "issues": [
+    {
+      "number": 9,
+      "record_ids": [
+        "P1-LB-01"
+      ],
+      "updated_at": "2026-09-24T19:01:49Z",
+      "before_sha256_lf": "66e540bb56dcf6ed90e44a8e795e5cb1b3f27dbbf409ac338494156a83ab6458",
+      "file": "bodies/issue-9.md",
+      "file_sha256": "2e098bbba3759c2c8b86d3b714f73da3b2b9e6283b7257341f31612aef944832",
+      "length": 41326,
+      "current_area_changes": 1,
+      "archive_hash_ok_before": true,
+      "archive_unchanged": true,
+      "crlf_before": false
+    }
+  ]
+}
