@@ -26,10 +26,14 @@ Milestone 기한을 짝 Issue(MS-* 티켓)의 현행 End와 대조했다. 이 En
 - 그 밖의 8개 Milestone은 변경이 없다(`milestones-before.json`·`milestones-after.json` 대조).
 - 이 사례에 따라 [TICKET_SYNC_POLICY §5.1](../../governance/TICKET_SYNC_POLICY.md) 5)·6)을 추가했다.
 
-## 3. 남은 조치 (사람이 웹 UI에서)
+## 3. 설명 정리 — 사람이 웹 UI에서 완료 (2026-09-26)
 
-1. #5 설명 끝의 footer 3줄 삭제
-2. #6~#9 설명의 `계획일(KST):` 날짜를 새 기한으로 정정(선택: 정정 절 추가)
+이권욱이 웹 UI에서 #5의 footer를 삭제했다. #6~#9의 `계획일(KST)` 줄을 정정하고 정정 절을 추가했다(01:59~02:10Z). 중간에 틀 문구(`<번호>` 등)가 그대로 들어가거나 날짜 오타(#6 10-16)가 생긴 적이 있었고, 재조회로 발견해 고쳤다.
+
+최종 재조회(`milestones-final.json`):
+- #5~#9: 기한, 계획일 줄, 정정 문장이 짝 Issue End와 일치한다. 틀 문구와 footer는 0건이고, 정정 절은 1개씩이다.
+- #8·#9는 이전 현황 갱신 절이 없어서 "위 이전 현황 갱신…" 문장을 뺐다.
+- 나머지 8개 Milestone은 수정 전과 같다.
 
 ## 4. 파일
 
@@ -38,5 +42,6 @@ Milestone 기한을 짝 Issue(MS-* 티켓)의 현행 End와 대조했다. 이 En
 | `milestones-before.json` | 수정 전 Milestone 13개 |
 | `milestones-after.json` | 수정 후 Milestone 13개(#5 footer 포함, 사람 수정 전) |
 | `result.json` | 요청 필드와 건별 재조회 결과 |
+| `milestones-final.json` | 사람 설명 정리 후 최종 Milestone 13개 |
 
-STATIC=REST 재조회 대조 / 쓰기=Milestone 기한 5건(세션 REST), #5 설명 1건(footer 추가 발생) / 설명 정리=사람 수정 대기
+STATIC=REST 재조회 대조 / 쓰기=Milestone 기한 5건(세션 REST), #5 설명 1건(footer 추가 발생) / 설명 정리=사람 웹 UI 완료, 최종 재조회 일치
