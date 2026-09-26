@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-09-25",
+  "scope": "plan.json 7건의 로컬 gh 반영 결과와 재조회 검증",
+  "applied_by": "이권욱(로컬 gh, apply-evidence-path.ps1 -Apply)",
+  "dry_run": "DRY RUN ready=7",
+  "apply": "DONE applied=7",
+  "verification": "GitHub MCP list_issues(since 2026-09-24T18:36:00Z)로 재조회: 반환 7건, 다른 Issue 변경 0",
+  "issues": [
+    {
+      "number": 8,
+      "record_ids": [
+        "MS-G0-01"
+      ],
+      "result": "APPLIED",
+      "observed_updated_at": "2026-09-24T18:37:06Z",
+      "observed_body_equals_plan_lf": true,
+      "observed_sha256_lf": "42361eec683258818de58a101f371919e8a79883c9ff02212d97280998e5e715",
+      "crlf": false,
+      "broken_links": 0,
+      "footer": false,
+      "old_path_in_current_area": 0,
+      "archive_block_unchanged": true,
+      "archive_hash_ok": true,
+      "state_title_unchanged": true
+    },
+    {
+      "number": 10,
+      "record_ids": [
+        "P1-K8S-01"
+      ],
+      "result": "APPLIED",
+      "observed_updated_at": "2026-09-24T18:37:09Z",
+      "observed_body_equals_plan_lf": true,
+      "observed_sha256_lf": "b343ebf77ebdbd19c465f28bc0290e5e179c657c9cae78343e66a306f20e8863",
+      "crlf": false,
+      "broken_links": 0,
+      "footer": false,
+      "old_path_in_current_area": 0,
+      "archive_block_unchanged": true,
+      "archive_hash_ok": true,
+      "state_title_unchanged": true
+    },
+    {
+      "number": 12,
+      "record_ids": [
+        "P1-DNS-01"
+      ],
+      "result": "APPLIED",
+      "observed_updated_at": "2026-09-24T18:37:12Z",
+      "observed_body_equals_plan_lf": true,
+      "observed_sha256_lf": "da725fd08eaf446ec066f2f752e4d513fe47fad3fbd29e2cfd9a9b575dcf309e",
+      "crlf": false,
+      "broken_links": 0,
+      "footer": false,
+      "old_path_in_current_area": 0,
+      "archive_block_unchanged": true,
+      "archive_hash_ok": true,
+      "state_title_unchanged": true
+    },
+    {
+      "number": 13,
+      "record_ids": [
+        "P1-HBR-01"
+      ],
+      "result": "APPLIED",
+      "observed_updated_at": "2026-09-24T18:37:15Z",
+      "observed_body_equals_plan_lf": true,
+      "observed_sha256_lf": "83b42ed18daff7b18a3e3ed5a9b347e5642798086921a8bffe922215464cd8c0",
+      "crlf": false,
+      "broken_links": 0,
+      "footer": false,
+      "old_path_in_current_area": 0,
+      "archive_block_unchanged": true,
+      "archive_hash_ok": true,
+      "state_title_unchanged": true
+    },
+    {
+      "number": 15,
+      "record_ids": [
+        "P1-APP-01"
+      ],
+      "result": "APPLIED",
+      "observed_updated_at": "2026-09-24T18:37:18Z",
+      "observed_body_equals_plan_lf": true,
+      "observed_sha256_lf": "f50797a35c8de072bc35f04232f84befb0599bc37dfe3fb1dabdebf190906db8",
+      "crlf": false,
+      "broken_links": 0,
+      "footer": false,
+      "old_path_in_current_area": 0,
+      "archive_block_unchanged": true,
+      "archive_hash_ok": true,
+      "state_title_unchanged": true
+    },
+    {
+      "number": 19,
+      "record_ids": [
+        "P1-SEC-01"
+      ],
+      "result": "APPLIED",
+      "observed_updated_at": "2026-09-24T18:37:21Z",
+      "observed_body_equals_plan_lf": true,
+      "observed_sha256_lf": "af9743b30e3f08d0614534445b54a9fd533510cf3ee9f4ade39be96b711c44c4",
+      "crlf": false,
+      "broken_links": 0,
+      "footer": false,
+      "old_path_in_current_area": 0,
+      "archive_block_unchanged": true,
+      "archive_hash_ok": false,
+      "state_title_unchanged": true,
+      "note": "보관 원문 해시 불일치는 반영 전부터 있던 상태(변경 없음)"
+    },
+    {
+      "number": 25,
+      "record_ids": [
+        "P1-MON-02"
+      ],
+      "result": "APPLIED",
+      "observed_updated_at": "2026-09-24T18:37:24Z",
+      "observed_body_equals_plan_lf": true,
+      "observed_sha256_lf": "753e4e4d2641d457a22406a8fe3414c90060a1eb1d965b7dabf5e05b6ad7cc55",
+      "crlf": false,
+      "broken_links": 0,
+      "footer": false,
+      "old_path_in_current_area": 0,
+      "archive_block_unchanged": true,
+      "archive_hash_ok": true,
+      "state_title_unchanged": true
+    }
+  ]
+}

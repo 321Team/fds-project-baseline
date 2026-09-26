@@ -1,0 +1,69 @@
+{
+ "schema_version": 1,
+ "generated_at": "2026-09-25",
+ "repo": "321Team/fds-project-baseline",
+ "purpose": "issue body repair (#9, #74, #75): entity escape / link backtick / quote damage",
+ "source": "userContentEdits last clean revision + legitimate additions of the damaging edit (edit-history-analysis.json)",
+ "issues": [
+  {
+   "number": 9,
+   "record_ids": [
+    "P1-LB-01"
+   ],
+   "updated_at": "2026-09-24T18:02:47Z",
+   "before_sha256_lf": "c8b3a9e8460e231bdf47e5b58172c812387d93fea2f173b1369e11d2fd0e54c4",
+   "file": "bodies/issue-9.md",
+   "file_sha256": "66e540bb56dcf6ed90e44a8e795e5cb1b3f27dbbf409ac338494156a83ab6458",
+   "length": 40218,
+   "title": "[P1-LB-01] Kubernetes API Load Balancer",
+   "state": "open",
+   "labels": [
+    "area:infrastructure",
+    "phase:phase-1",
+    "priority:P0",
+    "status:in-progress",
+    "type:task"
+   ]
+  },
+  {
+   "number": 74,
+   "record_ids": [
+    "CR-P1-MON-01-01"
+   ],
+   "updated_at": "2026-09-23T11:14:20Z",
+   "before_sha256_lf": "de777be149529e2ae790634d20607fbf462b4dba55fc0b6593b9014f1525945d",
+   "file": "bodies/issue-74.md",
+   "file_sha256": "3ef0a47786463c9bc3cd3c9cc1810bde608838f85e2c5541ddc30fc3820649b1",
+   "length": 18154,
+   "title": "[CR-P1-MON-01-01] Alertmanager Egress 프록시 서버 구성",
+   "state": "open",
+   "labels": [
+    "area:monitoring",
+    "phase:phase-1",
+    "priority:P1",
+    "status:in-progress",
+    "type:change-request"
+   ]
+  },
+  {
+   "number": 75,
+   "record_ids": [
+    "CR-P1-MON-01-02"
+   ],
+   "updated_at": "2026-09-24T17:54:53Z",
+   "before_sha256_lf": "956174a2f97a360b2b4bb878815192477d8c945d9ceb97c7df05331bdccc7cc1",
+   "file": "bodies/issue-75.md",
+   "file_sha256": "ef53343b48ca0d4cd4fe15de9d596999f721223c75dbae0f5a81a3fb02dc6087",
+   "length": 14227,
+   "title": "[CR-P1-MON-01-02] Alertmanager Egress Kubernetes 보안 설정 (NetworkPolicy)",
+   "state": "open",
+   "labels": [
+    "area:monitoring",
+    "phase:phase-1",
+    "priority:P1",
+    "status:in-progress",
+    "type:change-request"
+   ]
+  }
+ ]
+}
