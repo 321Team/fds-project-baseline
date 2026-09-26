@@ -1,0 +1,85 @@
+{
+ "checked_via": "REST GET (read-only)",
+ "issues": {
+  "9": {
+   "state": "open",
+   "updated_at": "2026-09-26T04:20:00Z",
+   "labels": [
+    "area:infrastructure",
+    "phase:phase-1",
+    "priority:P0",
+    "status:in-progress",
+    "type:task"
+   ],
+   "current_sha256_lf": "1ddbd3111d555e5cae299c3e9978c2d2e1866654b94b447fe9188107439193f2",
+   "file_sha256_lf": "1ddbd3111d555e5cae299c3e9978c2d2e1866654b94b447fe9188107439193f2",
+   "match": true,
+   "damage": {
+    "lt": 0,
+    "gt": 0,
+    "tick_links": 0,
+    "footer": 0
+   }
+  },
+  "20": {
+   "state": "open",
+   "updated_at": "2026-09-26T05:50:52Z",
+   "labels": [
+    "area:qa",
+    "phase:phase-1",
+    "priority:P0",
+    "status:in-progress",
+    "type:task"
+   ],
+   "current_sha256_lf": "41192331b14978933dd00f5065583ad5f6ec9231a0d5855c73274dbc315bdd37",
+   "file_sha256_lf": "41192331b14978933dd00f5065583ad5f6ec9231a0d5855c73274dbc315bdd37",
+   "match": true,
+   "damage": {
+    "lt": 0,
+    "gt": 0,
+    "tick_links": 0,
+    "footer": 0
+   }
+  },
+  "21": {
+   "state": "open",
+   "updated_at": "2026-09-26T05:51:02Z",
+   "labels": [
+    "area:dr",
+    "phase:phase-1",
+    "priority:P0",
+    "status:in-progress",
+    "type:task"
+   ],
+   "current_sha256_lf": "1be0976d886f829119f5c31fc1e614b46f9b5687f660bd254a95d5637924dcf1",
+   "file_sha256_lf": "1be0976d886f829119f5c31fc1e614b46f9b5687f660bd254a95d5637924dcf1",
+   "match": true,
+   "damage": {
+    "lt": 0,
+    "gt": 0,
+    "tick_links": 0,
+    "footer": 0
+   }
+  },
+  "74": {
+   "state": "closed",
+   "updated_at": "2026-09-26T05:54:51Z",
+   "labels": [
+    "area:monitoring",
+    "phase:phase-1",
+    "priority:P1",
+    "status:done",
+    "type:change-request"
+   ],
+   "current_sha256_lf": "55c5fa61248578203803e8494b02b95acbd2e60d72194e702f0fcb859f42d9c7",
+   "file_sha256_lf": "55c5fa61248578203803e8494b02b95acbd2e60d72194e702f0fcb859f42d9c7",
+   "match": true,
+   "damage": {
+    "lt": 0,
+    "gt": 0,
+    "tick_links": 0,
+    "footer": 0
+   }
+  }
+ }
+}
