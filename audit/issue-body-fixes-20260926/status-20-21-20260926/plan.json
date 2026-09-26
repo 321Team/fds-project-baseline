@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-26",
+  "repo": "321Team/fds-project-baseline",
+  "purpose": "Status To Do -> In Progress (label status:in-progress already set 2026-09-25)",
+  "issues": [
+    {
+      "number": 20,
+      "record_ids": [
+        "P1-E2E-01"
+      ],
+      "updated_at": "2026-09-26T02:23:34Z",
+      "before_sha256_lf": "917171a01b6bc81c5a4e6327790b61d91b519ead9621d7c99575a6b45c0620c8",
+      "file": "bodies/issue-20.md",
+      "file_sha256": "100938e49ee99cfab3cce4c647bd072115c8cd8a4709a4d6c85522cdb132791f",
+      "length": 12566,
+      "crlf_before": true,
+      "changed_lines": [
+        50,
+        171
+      ],
+      "lead": "이재환",
+      "labels": [
+        "area:qa",
+        "phase:phase-1",
+        "priority:P0",
+        "status:in-progress",
+        "type:task"
+      ]
+    },
+    {
+      "number": 21,
+      "record_ids": [
+        "P1-DR-01"
+      ],
+      "updated_at": "2026-09-26T02:23:35Z",
+      "before_sha256_lf": "955c8e0d314db0d1f9df0274a5f0a69ca31d6d81c219df44977428e85f3b29cd",
+      "file": "bodies/issue-21.md",
+      "file_sha256": "1be0976d886f829119f5c31fc1e614b46f9b5687f660bd254a95d5637924dcf1",
+      "length": 12181,
+      "crlf_before": false,
+      "changed_lines": [
+        58,
+        179
+      ],
+      "lead": "이재환",
+      "labels": [
+        "area:dr",
+        "phase:phase-1",
+        "priority:P0",
+        "status:in-progress",
+        "type:task"
+      ]
+    }
+  ]
+}

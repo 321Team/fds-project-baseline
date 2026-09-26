@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-26",
+  "repo": "321Team/fds-project-baseline",
+  "purpose": "#9 body re-repair after 2026-09-26T04:05Z damage (link backticks, 1 sentence rewrite)",
+  "issues": [
+    {
+      "number": 9,
+      "record_ids": [
+        "P1-LB-01"
+      ],
+      "updated_at": "2026-09-26T04:10:59Z",
+      "before_sha256_lf": "0dcf4e8371a63fc9a7ffbe16fa415152b59c0e7ea483920a2da5db722ca3b253",
+      "file": "bodies/issue-9.md",
+      "file_sha256": "1ddbd3111d555e5cae299c3e9978c2d2e1866654b94b447fe9188107439193f2",
+      "length": 42776,
+      "basis": "new PR10 section from 04:05Z edit (damage-free) + last verified body 2e098bbb (2nd pass)",
+      "restored_lines": 10
+    }
+  ]
+}
