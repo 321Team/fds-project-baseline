@@ -1,0 +1,250 @@
+{
+ "generated_at": "2026-09-26",
+ "repo": "321Team/fds-project-baseline",
+ "method": "GitHub MCP issue_write update, issue_fields만 전송(본문·제목 미전송)",
+ "instruction": "사용자(이권욱) 2026-09-26 '필드로 옮겨줘'",
+ "policy": "TICKET_SYNC_POLICY §5.1 6) 텍스트 없는 메타데이터 변경 (PR #107 안)",
+ "field_value_check": "GitHub MCP list_issues(OPEN, field_values) 재조회 24/24 계획값 일치",
+ "rows": [
+  {
+   "number": 9,
+   "start_date": "2026-08-27",
+   "target_date": "2026-09-17",
+   "source": "본문 상단 속성표 Start/End",
+   "before_fields": "없음",
+   "other_fields_unchanged": true,
+   "updated_at_before": "2026-09-24T23:42:10Z",
+   "updated_at_after": "2026-09-26T02:23:05Z"
+  },
+  {
+   "number": 10,
+   "start_date": "2026-08-27",
+   "target_date": "2026-09-17",
+   "source": "본문 상단 속성표 Start/End",
+   "before_fields": "없음",
+   "other_fields_unchanged": true,
+   "updated_at_before": "2026-09-24T18:37:09Z",
+   "updated_at_after": "2026-09-26T02:23:07Z"
+  },
+  {
+   "number": 11,
+   "start_date": "2026-08-28",
+   "target_date": "2026-09-17",
+   "source": "본문 상단 속성표 Start/End",
+   "before_fields": "없음",
+   "other_fields_unchanged": true,
+   "updated_at_before": "2026-09-25T10:35:36Z",
+   "updated_at_after": "2026-09-26T02:23:08Z"
+  },
+  {
+   "number": 13,
+   "start_date": "2026-08-31",
+   "target_date": "2026-09-17",
+   "source": "본문 상단 속성표 Start/End",
+   "before_fields": "없음",
+   "other_fields_unchanged": true,
+   "updated_at_before": "2026-09-24T18:37:15Z",
+   "updated_at_after": "2026-09-26T02:23:10Z"
+  },
+  {
+   "number": 14,
+   "start_date": "2026-09-01",
+   "target_date": "2026-09-21",
+   "source": "본문 상단 속성표 Start/End",
+   "before_fields": "없음",
+   "other_fields_unchanged": true,
+   "updated_at_before": "2026-09-25T05:16:18Z",
+   "updated_at_after": "2026-09-26T02:23:13Z"
+  },
+  {
+   "number": 15,
+   "start_date": "2026-09-01",
+   "target_date": "2026-09-18",
+   "source": "본문 상단 속성표 Start/End",
+   "before_fields": "없음",
+   "other_fields_unchanged": true,
+   "updated_at_before": "2026-09-24T18:37:18Z",
+   "updated_at_after": "2026-09-26T02:23:15Z"
+  },
+  {
+   "number": 16,
+   "start_date": "2026-09-01",
+   "target_date": "2026-09-18",
+   "source": "본문 상단 속성표 Start/End",
+   "before_fields": "없음",
+   "other_fields_unchanged": true,
+   "updated_at_before": "2026-09-23T21:42:01Z",
+   "updated_at_after": "2026-09-26T02:23:27Z"
+  },
+  {
+   "number": 17,
+   "start_date": "2026-09-07",
+   "target_date": "2026-09-18",
+   "source": "본문 상단 속성표 Start/End",
+   "before_fields": "없음",
+   "other_fields_unchanged": true,
+   "updated_at_before": "2026-09-25T12:03:49Z",
+   "updated_at_after": "2026-09-26T02:23:29Z"
+  },
+  {
+   "number": 18,
+   "start_date": "2026-09-17",
+   "target_date": "2026-09-17",
+   "source": "본문 상단 속성표 Start/End",
+   "before_fields": "없음",
+   "other_fields_unchanged": true,
+   "updated_at_before": "2026-09-23T12:28:59Z",
+   "updated_at_after": "2026-09-26T02:23:30Z"
+  },
+  {
+   "number": 19,
+   "start_date": "2026-09-04",
+   "target_date": "2026-09-21",
+   "source": "본문 상단 속성표 Start/End",
+   "before_fields": "없음",
+   "other_fields_unchanged": true,
+   "updated_at_before": "2026-09-25T02:46:26Z",
+   "updated_at_after": "2026-09-26T02:23:32Z"
+  },
+  {
+   "number": 20,
+   "start_date": "2026-09-11",
+   "target_date": "2026-09-22",
+   "source": "본문 상단 속성표 Start/End",
+   "before_fields": "없음",
+   "other_fields_unchanged": true,
+   "updated_at_before": "2026-09-25T13:42:05Z",
+   "updated_at_after": "2026-09-26T02:23:34Z"
+  },
+  {
+   "number": 21,
+   "start_date": "2026-09-11",
+   "target_date": "2026-09-21",
+   "source": "본문 상단 속성표 Start/End",
+   "before_fields": "없음",
+   "other_fields_unchanged": true,
+   "updated_at_before": "2026-09-25T10:31:35Z",
+   "updated_at_after": "2026-09-26T02:23:35Z"
+  },
+  {
+   "number": 22,
+   "start_date": "2026-09-11",
+   "target_date": "2026-09-21",
+   "source": "본문 상단 속성표 Start/End",
+   "before_fields": "없음",
+   "other_fields_unchanged": true,
+   "updated_at_before": "2026-09-23T12:29:07Z",
+   "updated_at_after": "2026-09-26T02:23:37Z"
+  },
+  {
+   "number": 23,
+   "start_date": "2026-09-21",
+   "target_date": "2026-09-21",
+   "source": "본문 상단 속성표 Start/End",
+   "before_fields": "없음",
+   "other_fields_unchanged": true,
+   "updated_at_before": "2026-09-23T12:29:10Z",
+   "updated_at_after": "2026-09-26T02:23:39Z"
+  },
+  {
+   "number": 24,
+   "start_date": "2026-09-11",
+   "target_date": "2026-09-22",
+   "source": "본문 상단 속성표 Start/End",
+   "before_fields": "없음",
+   "other_fields_unchanged": true,
+   "updated_at_before": "2026-09-23T12:29:12Z",
+   "updated_at_after": "2026-09-26T02:23:41Z"
+  },
+  {
+   "number": 29,
+   "start_date": "2026-09-22",
+   "target_date": "2026-09-22",
+   "source": "본문 상단 속성표 Start/End",
+   "before_fields": "없음",
+   "other_fields_unchanged": true,
+   "updated_at_before": "2026-09-23T12:29:23Z",
+   "updated_at_after": "2026-09-26T02:23:43Z"
+  },
+  {
+   "number": 41,
+   "start_date": "2026-10-12",
+   "target_date": "2026-10-16",
+   "source": "본문 상단 속성표 Start/End",
+   "before_fields": "없음",
+   "other_fields_unchanged": true,
+   "updated_at_before": "2026-09-23T16:37:31Z",
+   "updated_at_after": "2026-09-26T02:23:57Z"
+  },
+  {
+   "number": 42,
+   "start_date": "2026-10-12",
+   "target_date": "2026-10-16",
+   "source": "본문 상단 속성표 Start/End",
+   "before_fields": "없음",
+   "other_fields_unchanged": true,
+   "updated_at_before": "2026-09-23T16:37:35Z",
+   "updated_at_after": "2026-09-26T02:23:58Z"
+  },
+  {
+   "number": 52,
+   "start_date": "2026-10-22",
+   "target_date": "2026-10-22",
+   "source": "본문 상단 속성표 Start/End",
+   "before_fields": "없음",
+   "other_fields_unchanged": true,
+   "updated_at_before": "2026-09-23T12:30:22Z",
+   "updated_at_after": "2026-09-26T02:24:00Z"
+  },
+  {
+   "number": 53,
+   "start_date": "2026-10-22",
+   "target_date": "2026-10-22",
+   "source": "본문 상단 속성표 Start/End",
+   "before_fields": "없음",
+   "other_fields_unchanged": true,
+   "updated_at_before": "2026-09-23T12:30:25Z",
+   "updated_at_after": "2026-09-26T02:24:03Z"
+  },
+  {
+   "number": 54,
+   "start_date": "2026-10-23",
+   "target_date": "2026-10-23",
+   "source": "본문 상단 속성표 Start/End",
+   "before_fields": "없음",
+   "other_fields_unchanged": true,
+   "updated_at_before": "2026-09-23T12:30:28Z",
+   "updated_at_after": "2026-09-26T02:24:05Z"
+  },
+  {
+   "number": 55,
+   "start_date": "2026-10-23",
+   "target_date": "2026-10-26",
+   "source": "본문 상단 속성표 Start/End",
+   "before_fields": "없음",
+   "other_fields_unchanged": true,
+   "updated_at_before": "2026-09-23T12:30:31Z",
+   "updated_at_after": "2026-09-26T02:24:06Z"
+  },
+  {
+   "number": 56,
+   "start_date": "2026-10-23",
+   "target_date": "2026-10-23",
+   "source": "본문 상단 속성표 Start/End",
+   "before_fields": "없음",
+   "other_fields_unchanged": true,
+   "updated_at_before": "2026-09-23T12:30:34Z",
+   "updated_at_after": "2026-09-26T02:24:08Z"
+  },
+  {
+   "number": 57,
+   "start_date": "2026-10-26",
+   "target_date": "2026-10-26",
+   "source": "본문 상단 속성표 Start/End",
+   "before_fields": "없음",
+   "other_fields_unchanged": true,
+   "updated_at_before": "2026-09-23T12:30:36Z",
+   "updated_at_after": "2026-09-26T02:22:48Z"
+  }
+ ]
+}
