@@ -1,0 +1,362 @@
+{
+ "57": {
+  "updated_at": "2026-09-26T02:22:48Z",
+  "title": "[MS-PROJECT-CLOSE-01] Project Close",
+  "state": "open",
+  "labels": [
+   "area:milestone",
+   "phase:phase-2",
+   "priority:P0",
+   "status:to-do",
+   "type:milestone"
+  ],
+  "milestone": 13,
+  "body_sha256": "bca4f7b5bd059eda118e7bcd03f2bf3fa669a2e90e4f9ad3e5fab04c1f47de5b",
+  "body_len": 8977
+ },
+ "9": {
+  "updated_at": "2026-09-26T02:23:05Z",
+  "title": "[P1-LB-01] Kubernetes API Load Balancer",
+  "state": "open",
+  "labels": [
+   "area:infrastructure",
+   "phase:phase-1",
+   "priority:P0",
+   "status:in-progress",
+   "type:task"
+  ],
+  "milestone": 2,
+  "body_sha256": "2e098bbba3759c2c8b86d3b714f73da3b2b9e6283b7257341f31612aef944832",
+  "body_len": 41326
+ },
+ "10": {
+  "updated_at": "2026-09-26T02:23:07Z",
+  "title": "[P1-K8S-01] kubeadm 3CP + 3Worker / Calico",
+  "state": "open",
+  "labels": [
+   "area:kubernetes",
+   "phase:phase-1",
+   "priority:P0",
+   "status:in-progress",
+   "type:task"
+  ],
+  "milestone": 2,
+  "body_sha256": "b343ebf77ebdbd19c465f28bc0290e5e179c657c9cae78343e66a306f20e8863",
+  "body_len": 68592
+ },
+ "11": {
+  "updated_at": "2026-09-26T02:23:08Z",
+  "title": "[P1-DB-01] PostgreSQL External VM",
+  "state": "open",
+  "labels": [
+   "area:data",
+   "phase:phase-1",
+   "priority:P0",
+   "status:in-progress",
+   "type:task"
+  ],
+  "milestone": 2,
+  "body_sha256": "1d2b0d345a59149b9f37772e0c962f9a5b5ae8da58b31cc7f7818ccca0748a94",
+  "body_len": 15515
+ },
+ "13": {
+  "updated_at": "2026-09-26T02:23:10Z",
+  "title": "[P1-HBR-01] Harbor / Trivy Registry",
+  "state": "open",
+  "labels": [
+   "area:registry",
+   "phase:phase-1",
+   "priority:P0",
+   "status:in-progress",
+   "type:task"
+  ],
+  "milestone": 2,
+  "body_sha256": "83b42ed18daff7b18a3e3ed5a9b347e5642798086921a8bffe922215464cd8c0",
+  "body_len": 20148
+ },
+ "14": {
+  "updated_at": "2026-09-26T02:23:13Z",
+  "title": "[ICR-D-NET-01-01] Kubernetes Node Host Firewall / Monitoring Route",
+  "state": "open",
+  "labels": [
+   "area:network",
+   "phase:phase-1",
+   "priority:P0",
+   "status:in-progress",
+   "type:change-request"
+  ],
+  "milestone": 3,
+  "body_sha256": "ee1231dcc51d037344892648971c9c1ad092b482f7b506a520e30135ea27da3f",
+  "body_len": 97240
+ },
+ "15": {
+  "updated_at": "2026-09-26T02:23:15Z",
+  "title": "[P1-APP-01] transaction-api / fds-engine",
+  "state": "open",
+  "labels": [
+   "area:application",
+   "phase:phase-1",
+   "priority:P0",
+   "status:in-progress",
+   "type:task"
+  ],
+  "milestone": 3,
+  "body_sha256": "f50797a35c8de072bc35f04232f84befb0599bc37dfe3fb1dabdebf190906db8",
+  "body_len": 13262
+ },
+ "16": {
+  "updated_at": "2026-09-26T02:23:27Z",
+  "title": "[P1-CICD-01] GitHub Actions / Self-hosted Runner Delivery",
+  "state": "open",
+  "labels": [
+   "area:cicd",
+   "phase:phase-1",
+   "priority:P0",
+   "status:in-progress",
+   "type:task"
+  ],
+  "milestone": 3,
+  "body_sha256": "16fee69df49d1b2e72019a1003c869a75d4f8cff2fe5f4a73d4d38ac8d3f591f",
+  "body_len": 74169
+ },
+ "17": {
+  "updated_at": "2026-09-26T02:23:29Z",
+  "title": "[P1-MON-01] Kubernetes-Integrated Hybrid Monitoring 구축 및 검증",
+  "state": "open",
+  "labels": [
+   "area:monitoring",
+   "phase:phase-1",
+   "priority:P0",
+   "status:in-progress",
+   "type:task"
+  ],
+  "milestone": 3,
+  "body_sha256": "bf543e1e037dff262742bc17d4dbf4abbd961f336665e97d5312e8b746f397cf",
+  "body_len": 61845
+ },
+ "18": {
+  "updated_at": "2026-09-26T02:23:30Z",
+  "title": "[MS-G1-01] G1 Infrastructure Ready",
+  "state": "open",
+  "labels": [
+   "area:milestone",
+   "phase:phase-1",
+   "priority:P0",
+   "status:to-do",
+   "type:milestone"
+  ],
+  "milestone": 2,
+  "body_sha256": "a8f05134f709256307c889a1e1d652afb3deee02cf0a01172eba56ca0e9022ec",
+  "body_len": 9729
+ },
+ "19": {
+  "updated_at": "2026-09-26T02:23:32Z",
+  "title": "[P1-SEC-01] Kubernetes Security Controls",
+  "state": "open",
+  "labels": [
+   "area:security",
+   "phase:phase-1",
+   "priority:P0",
+   "status:in-progress",
+   "type:task"
+  ],
+  "milestone": 3,
+  "body_sha256": "af9743b30e3f08d0614534445b54a9fd533510cf3ee9f4ade39be96b711c44c4",
+  "body_len": 34407
+ },
+ "20": {
+  "updated_at": "2026-09-26T02:23:34Z",
+  "title": "[P1-E2E-01] Initial / Final E2E & Regression",
+  "state": "open",
+  "labels": [
+   "area:qa",
+   "phase:phase-1",
+   "priority:P0",
+   "status:in-progress",
+   "type:task"
+  ],
+  "milestone": 4,
+  "body_sha256": "0394566d86c0b828522f062beb7a147b23ea577edc3c2c45752a6f2a48945f45",
+  "body_len": 12554
+ },
+ "21": {
+  "updated_at": "2026-09-26T02:23:35Z",
+  "title": "[P1-DR-01] PostgreSQL Backup / Restore",
+  "state": "open",
+  "labels": [
+   "area:dr",
+   "phase:phase-1",
+   "priority:P0",
+   "status:in-progress",
+   "type:task"
+  ],
+  "milestone": 4,
+  "body_sha256": "955c8e0d314db0d1f9df0274a5f0a69ca31d6d81c219df44977428e85f3b29cd",
+  "body_len": 12169
+ },
+ "22": {
+  "updated_at": "2026-09-26T02:23:37Z",
+  "title": "[P1-HA-01] Worker Drain Continuity",
+  "state": "open",
+  "labels": [
+   "area:ha",
+   "phase:phase-1",
+   "priority:P0",
+   "status:to-do",
+   "type:task"
+  ],
+  "milestone": 4,
+  "body_sha256": "11a2cf6ca4c1f8e6c783cf70408e8447b8532dac8d4b28d288e244e8555fb76e",
+  "body_len": 9791
+ },
+ "23": {
+  "updated_at": "2026-09-26T02:23:39Z",
+  "title": "[MS-G2-01] G2 Security / Feature Ready",
+  "state": "open",
+  "labels": [
+   "area:milestone",
+   "phase:phase-1",
+   "priority:P0",
+   "status:to-do",
+   "type:milestone"
+  ],
+  "milestone": 3,
+  "body_sha256": "fe25e34bdeedbec1693929c54558dcdc87deb8996c34fd84ea32b74a597f81d9",
+  "body_len": 9656
+ },
+ "24": {
+  "updated_at": "2026-09-26T02:23:41Z",
+  "title": "[P1-DOC-01] Architecture / Test / Runbook Freeze",
+  "state": "open",
+  "labels": [
+   "area:pmo",
+   "phase:phase-1",
+   "priority:P0",
+   "status:to-do",
+   "type:task"
+  ],
+  "milestone": 4,
+  "body_sha256": "1901f057f6b2c841fe84eb4732c26f059e54fb6116b948edf46739c8d73a4941",
+  "body_len": 21514
+ },
+ "29": {
+  "updated_at": "2026-09-26T02:23:43Z",
+  "title": "[MS-G3-01] G3 Review Ready",
+  "state": "open",
+  "labels": [
+   "area:milestone",
+   "phase:phase-1",
+   "priority:P0",
+   "status:to-do",
+   "type:milestone"
+  ],
+  "milestone": 4,
+  "body_sha256": "0b45e31679f9a90ec62fe2df393b21d63ffc50b51640e5894d7bb945961b37db",
+  "body_len": 9286
+ },
+ "41": {
+  "updated_at": "2026-09-26T02:23:57Z",
+  "title": "[DEC-P2-OP-01] Operator Supply Chain Scope Decision",
+  "state": "open",
+  "labels": [
+   "area:architecture",
+   "phase:phase-2",
+   "priority:P1",
+   "status:to-do",
+   "type:decision"
+  ],
+  "milestone": 9,
+  "body_sha256": "8668aad669ec86b5b61b1d9f48fa889e3f7a47bc7d0d78d37d36c2cf495a869c",
+  "body_len": 9333
+ },
+ "42": {
+  "updated_at": "2026-09-26T02:23:58Z",
+  "title": "[DEC-P2-REG-01] ROSA Image Registry Source Decision",
+  "state": "open",
+  "labels": [
+   "area:architecture",
+   "phase:phase-2",
+   "priority:P0",
+   "status:to-do",
+   "type:decision"
+  ],
+  "milestone": 9,
+  "body_sha256": "02babac73fbbd70b7448f70cafb5630fa09b5dc997a3f2402b2e73cab539556c",
+  "body_len": 8785
+ },
+ "52": {
+  "updated_at": "2026-09-26T02:24:00Z",
+  "title": "[DEC-CAL-P2-01] Phase 2 Weekend Review Decision",
+  "state": "open",
+  "labels": [
+   "area:schedule",
+   "phase:phase-2",
+   "priority:P0",
+   "status:to-do",
+   "type:decision"
+  ],
+  "milestone": 12,
+  "body_sha256": "9cede4f7cb67c738f14ccdc9aabb8fe186172325e60905755328ccbb1fc7cc93",
+  "body_len": 8801
+ },
+ "53": {
+  "updated_at": "2026-09-26T02:24:03Z",
+  "title": "[MS-G6-01] G6 Hybrid Integration Ready",
+  "state": "open",
+  "labels": [
+   "area:milestone",
+   "phase:phase-2",
+   "priority:P0",
+   "status:to-do",
+   "type:milestone"
+  ],
+  "milestone": 10,
+  "body_sha256": "26568c89b1fad47940ddcdfcf5570ac62f920b4c155ee47f113f0c376cfefb01",
+  "body_len": 8973
+ },
+ "54": {
+  "updated_at": "2026-09-26T02:24:05Z",
+  "title": "[MS-DELIVERABLE-FREEZE-01] Deliverable Freeze",
+  "state": "open",
+  "labels": [
+   "area:milestone",
+   "phase:phase-2",
+   "priority:P0",
+   "status:to-do",
+   "type:milestone"
+  ],
+  "milestone": 11,
+  "body_sha256": "7efc82f017c9c2b9067368f5c8a25ac7e06922f9967b6aa0c2de974b3e83bf7c",
+  "body_len": 9026
+ },
+ "55": {
+  "updated_at": "2026-09-26T02:24:06Z",
+  "title": "[P2-REV-01] Phase 2 Review / Project Close Execution",
+  "state": "open",
+  "labels": [
+   "area:pmo",
+   "phase:phase-2",
+   "priority:P0",
+   "status:to-do",
+   "type:task"
+  ],
+  "milestone": 13,
+  "body_sha256": "56037ce6a83bd84c8e8fb6b7415a09fced79f210cb7f5457f42ce30356949b28",
+  "body_len": 9766
+ },
+ "56": {
+  "updated_at": "2026-09-26T02:24:08Z",
+  "title": "[MS-P2-REVIEW-01] Phase 2 Review",
+  "state": "open",
+  "labels": [
+   "area:milestone",
+   "phase:phase-2",
+   "priority:P0",
+   "status:to-do",
+   "type:milestone"
+  ],
+  "milestone": 12,
+  "body_sha256": "215e8b1446a8a4bd40f9f46925caca3a00423513073c3e7311b15fbd9a9f8139",
+  "body_len": 9091
+ }
+}
