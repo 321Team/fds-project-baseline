@@ -1,0 +1,145 @@
+[
+ {
+  "number": 1,
+  "title": "G0 Design Freeze",
+  "state": "closed",
+  "due_on": "2026-09-01T00:00:00Z",
+  "description": "Record ID: MS-G0-01\n계획일(KST): 2026-09-01\n근거: https://github.com/321Team/fds-project-baseline/issues/8\nGate 판정은 해당 Issue와 증적을 따릅니다.\n\n## 2026-09-18 마일스톤 현황 갱신\n\n현황: G0는 2026-09-01 FULL PASS로 기록되어 있으며, 근거 Issue #8은 Done/closed다. 미종결 소속 Issue가 없음을 확인했다.\n조치: 기존 인수 기록에 맞춰 native milestone의 Open 표시를 Closed로 정합화한다. 이번 표시 정리는 새 설계 승인이나 G1/G2 Runtime 인수가 아니다.\n계획일/실제 완료일은 2026-09-01로 보존한다. 이번 native 상태 정리일과 기존 완료일을 구분한다.\n\n근거: https://github.com/321Team/fds-project-baseline/issues/8\n기준: 발행 docs-v3.1.19 및 이후 Lead 위임 정책. 화면의 Issue 종결률은 실제 구축률/AC 충족률/Gate 인수율이 아니다. 기존 계획일·AC·과거 승인 이력은 보존한다.",
+  "open_issues": 0,
+  "closed_issues": 5,
+  "updated_at": "2026-09-18T03:37:05Z",
+  "html_url": "https://github.com/321Team/fds-project-baseline/milestone/1"
+ },
+ {
+  "number": 2,
+  "title": "G1 Infrastructure Ready",
+  "state": "open",
+  "due_on": "2026-09-17T00:00:00Z",
+  "description": "Record ID: MS-G1-01\n계획일(KST): 2026-09-17\n근거: https://github.com/321Team/fds-project-baseline/issues/18\nGate 판정은 해당 Issue와 증적을 따릅니다.\n\n## 2026-09-18 마일스톤 현황 갱신 — 신규 실행 증적 반영\n\n현황 평가: 2026-09-17 오후 목표는 경과했고 G1은 아직 미인수다. 새 완료 예측일은 미확정이다. 계획일·필수 AC·Gate 상태는 유지한다.\n확보된 진전: 승인 소스 bab9608557205b3bf5294b729d0960517d7a2847의 CP2·CP3 Join 실행 결과가 등록됐다. RESULT.json과 최종 AFTER.json을 대조하여 2026-09-18 12:33:36.720 KST 관측의 3CP Ready·etcd 3 voter/learner 0·endpoint health 3/3를 확인했다. 기존 CP2·CP3 미가입 차단은 해소됐다.\n타이머·자격정보: 원본 TRANSFER_BEFORE/TRANSFER에서 인계 단계의 기존 15:15 자동 회수 타이머 active→inactive 및 Runtime 해시 동일을 확인했다. CREDENTIAL_REVOCATION은 승인 helper의 REVOKED 반환이다. 현재 서버 재조회·개별 삭제 API 재확인·reboot/reload 지속성을 뜻하지 않는다.\n직접 잔여: Worker 가입과 전체 6노드, cross-node Calico/통신, LB Stage B의 backend 3/3·인증 API/TLS·전환/복구, Harbor/DB 인계, Runner G1 Checkpoint 및 Node Connectivity·Push/Pull 증적. 제한된 CP 성공으로 G1 또는 전체 ICR을 인수하지 않는다.\n리뷰 구분: 동일 HEAD 코드 APPROVED는 확인됐으며, 실행 결과의 independent_acceptance=PENDING·cp1_accepted=false는 유지한다. 기존 CP 정리/Join·방화벽/CP1 시험을 반복 선행조건으로 추가하지 않는다.\n금요일 9/18은 중간 점검이다. 담당자 공수·작업/리뷰·검증/복구창을 확인해 새 전망을 판단한다. 전체 CI/CD 최종 AC 또는 전체 ICR AC를 G1의 새 전역 조건으로 확대하지 않는다.\n증적: https://github.com/321Team/infra-kubernetes/blob/5e9e09e7a1820c230bb5724ce05897c7689ef065/ops/cp-join-20260918/results/20260918T033022Z_16219c68779b3d13/README.md\n사후 결과 검토: https://github.com/321Team/infra-kubernetes/pull/16#issuecomment-5724813354\n조회 기준: 2026-09-18 12:46:58 KST. 원 실행은 12:30:22–12:33:37 KST다. 원본 JSON 5개를 SHA256SUMS와 대조했다. 실제 서버 접속·명령 실행은 이번 마일스톤 갱신 범위가 아니다.\n\n<details>\n<summary>12:28 조회 기준 승인안 — 과거 상태 보존</summary>\n\n## 2026-09-18 마일스톤 현황 갱신\n\n현황 평가: 2026-09-17 오후 조건부 목표가 경과했으며 G1은 아직 미인수다. 신규 완료 예측일은 미확정이다.\n확보: 기존 Linux/Ansible/DNS 인수와 CP 방화벽 준비, 9/18 11:22 사전관측의 CP2/CP3→LB TCP 연결을 보존한다. 해당 관측의 Node/etcd member는 각각 1개이며 Join 완료 증거가 아니다.\n직접 잔여: 3CP+3Worker/Calico, API LB Stage B, Harbor/DB 인계, Runner의 G1 Checkpoint와 Node Connectivity·Push/Pull 증적.\n최신 준비: infra-kubernetes PR16(bab9608557205b3bf5294b729d0960517d7a2847)은 CP2 잔여 manifest 처리·CP2/CP3 Join·타이머/회수 계약 변경 소스다. 동일 HEAD에 hayeounglee의 APPROVED(2026-09-18 12:22:34 KST)를 확인하여 코드 리뷰 대기는 해소됐다. 38/38 STATIC/MOCK는 등록 보고이며 실제 Join·타이머 전환은 미실행이다. 운영자 유지 정책 연결은 별도 등록 기록이고, 현장 OLD_PINS·현재 타이머·sudo 접근은 실행 시 확인 대상으로 남는다. PR은 open/미병합이다. 기존 방화벽/CP1 시험을 반복 선행으로 추가하지 않는다.\n승인 근거: https://github.com/321Team/infra-kubernetes/pull/16#pullrequestreview-5243927101\n현장 미실행·운영 조건: https://github.com/321Team/infra-kubernetes/pull/16#issuecomment-5724697399\n금요일 9/18 종료는 중간 재판정 시점이다. 담당자 공수·작업/리뷰/복구창 확인 후 G1 전망을 갱신한다. 전체 CI/CD 최종 AC 또는 전체 ICR AC를 G1의 새 전역 조건으로 확대하지 않는다.\n최신 근거: https://github.com/321Team/fds-project-baseline/issues/10#issuecomment-5724542314\n\n근거: https://github.com/321Team/fds-project-baseline/issues/18\n기준: 발행 docs-v3.1.19 및 이후 Lead 위임 정책. 화면의 Issue 종결률은 실제 구축률/AC 충족률/Gate 인수율이 아니다. 기존 계획일·AC·과거 승인 이력은 보존한다.\n\n</details>",
+  "open_issues": 5,
+  "closed_issues": 3,
+  "updated_at": "2026-09-18T03:49:17Z",
+  "html_url": "https://github.com/321Team/fds-project-baseline/milestone/2"
+ },
+ {
+  "number": 3,
+  "title": "G2 Security / Feature Ready",
+  "state": "open",
+  "due_on": "2026-09-21T00:00:00Z",
+  "description": "Record ID: MS-G2-01\n계획일(KST): 2026-09-21\n근거: https://github.com/321Team/fds-project-baseline/issues/23\nGate 판정은 해당 Issue와 증적을 따릅니다.\n\n## 2026-09-18 마일스톤 현황 갱신\n\n현황 평가: 2026-09-21 오후 목표는 유지하되, 기반 인계와 실제 통합 시험이 남아 일정 위험 상태다. G2 인수나 새로운 확정 납기를 선언하지 않는다.\n직접 잔여: APP 두 서비스/DB 계약·최종 Source 및 Unit/Contract 인계, 실제 CI/CD Delivery, Security P0, Monitoring, Initial E2E/Negative Test 및 Worker Drain.\n변경분: CI/CD 책임 기록에 Repository Secret 등록 완료가 보고되어 '미등록' 차단은 해소된 것으로 구분한다. 실제 권한·만료·조직 승인 상태와 Runner Private fetch는 미검증이다. 코드 잔여 리뷰·앱 인계·실제 Test/Build/Scan·배포가 남는다.\n주말 9/19~20 현장/Runtime 0. 월요일 작업·리뷰·검증·복구 시간을 확인해 재판정한다. 선택/유예 P1을 새 G2 필수조건으로 추가하지 않는다.\n최신 근거: https://github.com/321Team/infra-cicd/issues/11#issuecomment-5724270967\n\n근거: https://github.com/321Team/fds-project-baseline/issues/23\n기준: 발행 docs-v3.1.19 및 이후 Lead 위임 정책. 화면의 Issue 종결률은 실제 구축률/AC 충족률/Gate 인수율이 아니다. 기존 계획일·AC·과거 승인 이력은 보존한다.",
+  "open_issues": 8,
+  "closed_issues": 5,
+  "updated_at": "2026-09-22T11:29:40Z",
+  "html_url": "https://github.com/321Team/fds-project-baseline/milestone/3"
+ },
+ {
+  "number": 4,
+  "title": "G3 Review Ready",
+  "state": "open",
+  "due_on": "2026-09-22T00:00:00Z",
+  "description": "Record ID: MS-G3-01\n계획일(KST): 2026-09-22\n근거: https://github.com/321Team/fds-project-baseline/issues/29\nGate 판정은 해당 Issue와 증적을 따릅니다.\n\n## 2026-09-18 마일스톤 현황 갱신\n\n현황 평가: 2026-09-22 오전 목표 유지. G1/G2 잔여의 후속 영향이 있어 실제 완료 가능성은 아직 확정할 자료가 부족하다.\n필수 확인: Final E2E/Regression, Worker Drain, PostgreSQL Restore 후 서비스 검증, Critical Issue 0, Architecture/Test/Runbook 및 증적 동결.\n9/22 오후 Review 시작 전에 필요한 증적을 확보해야 한다. Review 준비·참석과 복구/재시험 시간을 별도 확보하며 정확한 시작 시각·개인별 순가용시간은 미확인이다.\n기존 승인 범위와 필수 AC를 유지한다. 평균 종결률이나 코드 CI 성공으로 G3 PASS를 대체하지 않는다.\n\n근거: https://github.com/321Team/fds-project-baseline/issues/29\n기준: 발행 docs-v3.1.19 및 이후 Lead 위임 정책. 화면의 Issue 종결률은 실제 구축률/AC 충족률/Gate 인수율이 아니다. 기존 계획일·AC·과거 승인 이력은 보존한다.",
+  "open_issues": 5,
+  "closed_issues": 0,
+  "updated_at": "2026-09-18T03:42:20Z",
+  "html_url": "https://github.com/321Team/fds-project-baseline/milestone/4"
+ },
+ {
+  "number": 5,
+  "title": "Phase 1 Review",
+  "state": "open",
+  "due_on": "2026-09-22T00:00:00Z",
+  "description": "Record ID: MS-P1-REVIEW-01\n계획일(KST): 2026-09-22\n근거: https://github.com/321Team/fds-project-baseline/issues/31\nGate 판정은 해당 Issue와 증적을 따릅니다.\n\n## 2026-09-18 마일스톤 현황 갱신\n\n현황 평가: 공식 Phase 1 Review 계획은 2026-09-22 화요일 오후로 유지한다. 강사 진도점검 회의와 구분하며 실제 개최·인수는 미완료다.\n필수 조건: G3 증적, Demo/산출물/Known Issue와 실제 Review 판정·Action 기록. 정확한 시작 시각·길이 및 준비/참석 차감시간은 미확인이다.\n9/18 사실 기준판과 9/21~22 변경분을 분리해 인계한다. 9/19~20은 스크립트 작성 예약이며 현장/Runtime 작업에 중복 배정하지 않는다.\n필수 증적이 Review 전까지 확보되지 않으면 실제 미충족과 일정 변경 필요를 별도 결정한다. 미실행 시험을 성공으로 선기록하지 않는다.\n\n근거: https://github.com/321Team/fds-project-baseline/issues/31\n기준: 발행 docs-v3.1.19 및 이후 Lead 위임 정책. 화면의 Issue 종결률은 실제 구축률/AC 충족률/Gate 인수율이 아니다. 기존 계획일·AC·과거 승인 이력은 보존한다.",
+  "open_issues": 2,
+  "closed_issues": 0,
+  "updated_at": "2026-09-18T03:43:06Z",
+  "html_url": "https://github.com/321Team/fds-project-baseline/milestone/5"
+ },
+ {
+  "number": 6,
+  "title": "Phase 1 Close",
+  "state": "open",
+  "due_on": "2026-09-23T00:00:00Z",
+  "description": "Record ID: MS-P1-CLOSE-01\n계획일(KST): 2026-09-23\n근거: https://github.com/321Team/fds-project-baseline/issues/32\nGate 판정은 해당 Issue와 증적을 따릅니다.\n\n## 2026-09-18 마일스톤 현황 갱신\n\n현황 평가: 공식 Phase 1 Close 계획 2026-09-23은 유지한다. Review Action 처리, P0 승인, P1/Known Issue Owner·Due 이관 및 Close Sign-off가 필요하다.\n현재 사용자 지시의 현장 작업 가용 범위는 9/22까지다. 기존 계획의 9/23 재시험/Runtime을 확보된 작업시간으로 가정하지 않는다.\n기술 인수·복구·재시험은 실제 확보된 9/22 이내 작업창에서 충족 여부를 판단한다. 9/23은 기존 행정 종결 계획과 분리하고, 미충족 시 날짜 자동 이동이나 조건 완화 없이 해당 Lead의 후속 결정을 기록한다.\n\n근거: https://github.com/321Team/fds-project-baseline/issues/32\n기준: 발행 docs-v3.1.19 및 이후 Lead 위임 정책. 화면의 Issue 종결률은 실제 구축률/AC 충족률/Gate 인수율이 아니다. 기존 계획일·AC·과거 승인 이력은 보존한다.",
+  "open_issues": 1,
+  "closed_issues": 0,
+  "updated_at": "2026-09-18T03:44:03Z",
+  "html_url": "https://github.com/321Team/fds-project-baseline/milestone/6"
+ },
+ {
+  "number": 7,
+  "title": "Phase 2 Start",
+  "state": "open",
+  "due_on": "2026-09-28T00:00:00Z",
+  "description": "Record ID: MS-P2-START-01\n계획일(KST): 2026-09-28\n근거: https://github.com/321Team/fds-project-baseline/issues/33\nGate 판정은 해당 Issue와 증적을 따릅니다.\n\n## 2026-09-18 마일스톤 현황 갱신\n\n현황 평가: Phase 2 Start 계획 2026-09-28은 유지한다. 현시점 착수 승인이나 P1 미완료 항목의 자동 이관을 뜻하지 않는다.\n선행: Phase 1 Close, P2 계정/권한·일정·P0 범위·OCI Go/No-Go 계획 확인. P1 인수/Close 지연이 확정되면 P2 착수 및 G4~G6 영향을 함께 재판정한다.\n현재 G4 10/08, G5 10/16, G6 10/22 및 후속 Freeze/Review/Close의 새 날짜를 만들 근거는 없다. 기존 계획과 조건을 보존한다.\n\n근거: https://github.com/321Team/fds-project-baseline/issues/33\n기준: 발행 docs-v3.1.19 및 이후 Lead 위임 정책. 화면의 Issue 종결률은 실제 구축률/AC 충족률/Gate 인수율이 아니다. 기존 계획일·AC·과거 승인 이력은 보존한다.",
+  "open_issues": 1,
+  "closed_issues": 0,
+  "updated_at": "2026-09-18T03:44:50Z",
+  "html_url": "https://github.com/321Team/fds-project-baseline/milestone/7"
+ },
+ {
+  "number": 8,
+  "title": "G4 Cloud / VPN Ready",
+  "state": "open",
+  "due_on": "2026-10-08T00:00:00Z",
+  "description": "Record ID: MS-G4-01\n계획일(KST): 2026-10-08\n근거: https://github.com/321Team/fds-project-baseline/issues/39\nGate 판정은 해당 Issue와 증적을 따릅니다.",
+  "open_issues": 3,
+  "closed_issues": 0,
+  "updated_at": "2026-09-11T09:20:35Z",
+  "html_url": "https://github.com/321Team/fds-project-baseline/milestone/8"
+ },
+ {
+  "number": 9,
+  "title": "G5 ROSA Application Ready",
+  "state": "open",
+  "due_on": "2026-10-16T00:00:00Z",
+  "description": "Record ID: MS-G5-01\n계획일(KST): 2026-10-16\n근거: https://github.com/321Team/fds-project-baseline/issues/45\nGate 판정은 해당 Issue와 증적을 따릅니다.",
+  "open_issues": 8,
+  "closed_issues": 0,
+  "updated_at": "2026-09-23T05:41:42Z",
+  "html_url": "https://github.com/321Team/fds-project-baseline/milestone/9"
+ },
+ {
+  "number": 10,
+  "title": "G6 Hybrid Integration Ready",
+  "state": "open",
+  "due_on": "2026-10-22T00:00:00Z",
+  "description": "Record ID: MS-G6-01\n계획일(KST): 2026-10-22\n근거: https://github.com/321Team/fds-project-baseline/issues/53\nGate 판정은 해당 Issue와 증적을 따릅니다.",
+  "open_issues": 4,
+  "closed_issues": 0,
+  "updated_at": "2026-09-11T09:21:44Z",
+  "html_url": "https://github.com/321Team/fds-project-baseline/milestone/10"
+ },
+ {
+  "number": 11,
+  "title": "Deliverable Freeze",
+  "state": "open",
+  "due_on": "2026-10-23T00:00:00Z",
+  "description": "Record ID: MS-DELIVERABLE-FREEZE-01\n계획일(KST): 2026-10-23\n근거: https://github.com/321Team/fds-project-baseline/issues/54\nGate 판정은 해당 Issue와 증적을 따릅니다.",
+  "open_issues": 2,
+  "closed_issues": 0,
+  "updated_at": "2026-09-11T04:59:41Z",
+  "html_url": "https://github.com/321Team/fds-project-baseline/milestone/11"
+ },
+ {
+  "number": 12,
+  "title": "Phase 2 Review",
+  "state": "open",
+  "due_on": "2026-10-23T00:00:00Z",
+  "description": "Record ID: MS-P2-REVIEW-01\n계획일(KST): 2026-10-23\n근거: https://github.com/321Team/fds-project-baseline/issues/56\nGate 판정은 해당 Issue와 증적을 따릅니다.",
+  "open_issues": 2,
+  "closed_issues": 0,
+  "updated_at": "2026-09-11T04:59:43Z",
+  "html_url": "https://github.com/321Team/fds-project-baseline/milestone/12"
+ },
+ {
+  "number": 13,
+  "title": "Project Close",
+  "state": "open",
+  "due_on": "2026-10-26T00:00:00Z",
+  "description": "Record ID: MS-PROJECT-CLOSE-01\n계획일(KST): 2026-10-26\n근거: https://github.com/321Team/fds-project-baseline/issues/57\nGate 판정은 해당 Issue와 증적을 따릅니다.",
+  "open_issues": 1,
+  "closed_issues": 0,
+  "updated_at": "2026-09-11T09:21:57Z",
+  "html_url": "https://github.com/321Team/fds-project-baseline/milestone/13"
+ }
+]
