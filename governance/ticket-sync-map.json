@@ -217,6 +217,9 @@
     ],
     "Security / PKI": [
       "area:security"
+    ],
+    "Application / Container Supply Chain / Security": [
+      "area:application"
     ]
   },
   "identities": {
@@ -2174,7 +2177,40 @@
       "milestone_status": "HOLD",
       "milestone_basis": "G0 근거 / G1 선행조건. 단일 대표 Milestone 확정 필요.",
       "native_type_status": "LABEL_FALLBACK_NATIVE_NOT_APPLIED"
+    },
+    {
+      "issue_number": 110,
+      "record_id": "DEC-P1-IMG-01",
+      "source_url": "https://github.com/321Team/fds-project-baseline/issues/110",
+      "source_updated_at": "2026-09-26T19:09:13Z",
+      "properties": {
+        "Record ID": "DEC-P1-IMG-01",
+        "Phase": "Phase 1",
+        "Category": "Application / Container Supply Chain / Security",
+        "Type": "Decision",
+        "Status": "To Do",
+        "Priority": "P0",
+        "Start": "2026-09-27",
+        "End": "2026-10-06",
+        "Calendar Days": "10",
+        "Working Days": "7",
+        "Lead": "이재환",
+        "Support": "이하영, 이권욱",
+        "Review Owner": "이하영",
+        "Milestone": "G2 Security / Feature Ready",
+        "Exit Criteria": "P1 애플리케이션 런타임 공급망 선택안, signed attestation 처리 방식, 운영 Dockerfile·Harbor·Kubernetes 후속 게이트 및 롤백 조건을 명시적으로 승인",
+        "Related Tickets": "P1-APP-01 #15; P1-HBR-01 #13; P1-CICD-01 #16; P1-SEC-01 #19",
+        "Related PR": "`321Team/fds-msa#9`",
+        "Related Decision IDs": "D12; D17; D18; D19; D34; DEC-P1-TLS-01",
+        "Related Risk IDs": "RISK-06; RISK-07; RISK-08; RISK-09",
+        "Evidence Path": "`321Team/fds-project-evidence:evidence/DEC-P1-IMG-01/`",
+        "Source": "Baseline v3.1.20; `321Team/fds-msa#9` exact HEAD `88b494c58d057303672cc1502021ab4655a4e916`; Source validation Run `36261976339`; attestation probe Run `36261976189`",
+        "Schedule Note": "기존 G2 계획일은 경과했다. 본 Decision은 2026-10-06 Phase 1 Review / Close 전 공급망 방향을 확정하기 위한 후속 게이트이며, 일정 입력만으로 승인 또는 런타임 완료 상태를 상향하지 않는다."
+      },
+      "milestone_record_id": null,
+      "milestone_status": "HOLD",
+      "milestone_basis": "기존 G2 Milestone은 수동 메타데이터로 유지한다. 이번 변경은 Native Issue Type 동기화만 대상으로 하며 Milestone 재매핑은 별도 검토한다.",
+      "native_type_status": "LABEL_FALLBACK_NATIVE_NOT_APPLIED"
     }
   ]
 }
-
