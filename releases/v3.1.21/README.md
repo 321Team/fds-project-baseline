@@ -12,7 +12,7 @@
 - v3.1.20 발행 후 main 및 관련 저장소의 Merged 변경 이력 수집.
 - v3.1.20 발행 후 정정 기록에서 지정한 v3.1.21 이월 항목 수집.
 - 현행 계획 입력 `DEC-P1-IMG-01`(#110)을 **To Do / 승인 대기 상태 그대로** 후보 데이터로 기록.
-- `wbs/FDS_v3.1.21_WBS_and_Gantt_v1.0.xlsx` 후보 생성.
+- `audit/canonical-candidate-20260927/proposed/FDS_v3.1.21_WBS_and_Gantt_v1.0.xlsx` 후보 생성.
   - 2026-09-28 이재환: 개인 사정으로 인한 휴가
   - 2026-09-29 이하영: 채용설명회 및 직무테스트로 인한 휴가
   - 개인 부재 계산 범위를 Team Calendar 12행 → 14행으로 확장.
@@ -20,6 +20,10 @@
   - 영향 창: `DEC-P1-IMG-01`, `CR-P1-MON-01-01`, `CR-P1-MON-01-02`.
 
 상세 수집 근거는 `audit/canonical-candidate-20260927/`을 따른다.
+
+## 후보 WBS 위치와 Gate 경계
+
+사전 수집 단계에서는 WBS를 `audit/canonical-candidate-20260927/proposed/` 아래에 둔다. `wbs/FDS_v3.1.21_...` 경로는 Manifest/SHA256SUMS/ZIP/WEB 등 전체 릴리즈 세트가 준비될 때 승격한다. 이는 `canonical-integrity`가 불완전한 릴리즈 후보를 차단하는 현행 Gate와 일치한다.
 
 ## 아직 정본 후보 완성으로 판정하지 않는 항목
 
