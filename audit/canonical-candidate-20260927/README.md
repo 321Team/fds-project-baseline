@@ -5,6 +5,7 @@
 - 정본 기준: `v3.1.20 / RELEASED`
 - 발행 시각: 2026-09-23 02:37:13 KST
 - 수집 기준 main: `2084182f97b593b3950194f44c071a88c0dfc4da`
+- 최신 상태 재수집: `2026-09-27 17:43:36 KST`
 - 후보 브랜치: `release/v3.1.21`
 - 목적: 차기 정본 제작 전에 변경 입력과 미결 항목을 먼저 고정해 누락·중복 수집을 줄인다.
 - 경계: 이 기록은 **CANDIDATE intake**이며 Runtime 완료, Gate 승인, 열린 PR 병합, 정본 발행을 새로 부여하지 않는다.
@@ -24,19 +25,19 @@
 
 ### fds-project-evidence
 
-`#7 #13 #16 #17 #19 #20 #21 #22 #23 #24 #25 #26 #27 #30 #31 #32 #33 #35 #36 #38 #39 #42`
+`#7 #13 #16 #17 #19 #20 #21 #22 #23 #24 #25 #26 #27 #30 #31 #32 #33 #35 #36 #38 #39 #42 #49 #50 #52 #53`
 
 증적 원본의 존재를 수집 대상으로 삼되, 각 증적이 해당 Runtime/Gate 전체 완료를 의미한다고 확대하지 않는다.
 
 ### infra-ansible
 
-`#42 #45 #46 #47 #48 #49 #50 #52 #54`
+`#42 #45 #46 #47 #48 #49 #50 #52 #54 #56`
 
 주요 기능 입력: 일반 CI 준비/승인 기록, NTP 후속 검증기, injected facts 수정, LB Stage B 보조 inventory.
 
 ### infra-kubernetes
 
-`#11 #14 #15 #20 #22 #24 #25 #27 #28 #29 #30 #31 #32 #33 #34 #36 #37 #38 #39 #42 #43 #48`
+`#7 #11 #14 #15 #20 #22 #24 #25 #27 #28 #29 #30 #31 #32 #33 #34 #36 #37 #38 #39 #42 #43 #48`
 
 주요 기능 입력: ICR/HEP-GNP·9100/10250 경로, kubelet serving TLS 후보/인수 입력, NodePort 30080 GNP, audit-window 정정, CP kubelet 10250 Worker source 허용.
 
@@ -54,7 +55,7 @@ Trivy/오프라인 수집·Runtime BLOCK 기록 및 검증 절차 정합화. BLO
 
 ### infra-monitoring
 
-`#6 #7 #8 #9 #10 #11`
+`#6 #7 #8 #9 #10 #11 #20 #21 #22`
 
 fds-app namespace 정정, monitor01 입력, Grafana namespace 정정, Alertmanager Discord receiver/KSM probe 반영.
 
@@ -63,20 +64,24 @@ fds-app namespace 정정, monitor01 입력, Grafana namespace 정정, Alertmanag
 - infra-db: `#4 #5`
 - infra-pki: `#5 #6`
 - infra-harbor-trivy: `#4 #5`
-- fds-msa: `#4 #5 #6`
+- fds-msa: `#4 #5 #6 #8 #9`
 
 ## 3. 현재 계획 입력
 
 ### DEC-P1-IMG-01 (#110)
 
-- Status: **To Do / 승인 대기**
+- Issue/Project 메타데이터 Status: **To Do / Todo 유지**
+- Decision 판단: **APPROVED** — Review Owner `hayeounglee`가 DEC-01~04 및 7개 HOLD 조건을 제안대로 승인
 - Start/End: 2026-09-27 ~ 2026-10-06
 - Lead: 이재환
 - Support: 이하영, 이권욱
 - Review Owner: 이하영
-- Related PR: `321Team/fds-msa#9`
-- 후보 기술 검증 통과와 공급망 채택 승인을 구분한다.
-- `fds-msa#9`이 Open이므로 운영 Dockerfile/Harbor/Kubernetes 적용 및 PR 병합을 완료로 기록하지 않는다.
+- Related PR: `321Team/fds-msa#9` — **MERGED**, merge SHA `1c7f3651504097096c3a3fe4a86ac1973e169688`
+- 승인된 방향: Wolfi + apko Python 3.13, P1 증적 계약, signed attestation Option A, 승인 후 구현 Gate
+- Source/code 병합과 Delivery Runtime을 구분한다. `fds-msa#9` 병합으로 공급망 Source가 정본화됐지만 on-prem Test→Build→Scan, Harbor Push, Kubernetes Deploy, Runtime AC는 별도이며 현재 완료로 기록하지 않는다.
+- 승인 후 Lead가 제안한 담당 분배·10/5 현장 전환 등의 추가 조건은 Review Owner 확인 전 기존 승인 범위에 자동 포함하지 않는다.
+- Native GitHub Issue Type `Decision`은 아직 미적용이며 별도 ticket-sync 후속이 필요하다.
+- 따라서 **Decision 승인 완료 / 메타데이터 drift 존재 / Delivery Runtime NOT_VERIFIED**로 기록한다.
 
 ## 4. WBS Team Calendar 반영
 
@@ -93,13 +98,16 @@ fds-app namespace 정정, monitor01 입력, Grafana namespace 정정, Alertmanag
 
 ## 5. Open / excluded — Merged 입력으로 승격 금지
 
-- `fds-project-evidence#50` — LB Stage B NFT readiness receipt
+- `fds-project-evidence#51` — P1-MON-01 Target 21/21·KSM Probe·monitor01 LB Probe 증적 (main sync 후 exact-head 재리뷰 중)
+- `fds-project-evidence#54` — P1-SEC-01 B1/B2 증적 편입 (evidence-layout 수정 필요)
 - `infra-ansible#53` — NTP Runtime sample kubeconfig
 - `infra-ansible#55` — kubelet serving TLS 6-node 영구 형상화
 - `infra-kubernetes#49` — NodePort 32085 read-only drift precheck
-- `fds-msa#9` — Wolfi/apko Python 3.13 운영 이미지 계약 전환
+- `infra-cicd#38` — Wolfi/apko 2-stage offline delivery contract
 
-위 PR은 상태 변화가 생기면 차기 intake refresh에서 다시 판정한다.
+이미 병합된 `fds-project-evidence#50`, `fds-msa#9`, `infra-kubernetes#7`, `infra-monitoring#20/#21/#22`, `infra-ansible#56`, `fds-project-evidence#52/#53`은 Open 제외 목록에서 제거하고 Merged 입력으로 승격했다.
+
+위 Open PR은 상태 변화가 생기면 차기 intake refresh에서 다시 판정한다.
 
 ## 6. v3.1.21 필수 이월 사항
 
@@ -119,7 +127,7 @@ fds-app namespace 정정, monitor01 입력, Grafana namespace 정정, Alertmanag
 
 ## 8. 완료/미완료 판정
 
-- SOURCE COLLECTION: **DONE (snapshot 기준)**
+- SOURCE COLLECTION: **REFRESHED (2026-09-27 17:43:36 KST 기준)**
 - CANDIDATE BRANCH: **CREATED**
 - WBS AVAILABILITY UPDATE: **APPLIED**
 - FULL CANONICAL REGENERATION: **NOT RUN**
