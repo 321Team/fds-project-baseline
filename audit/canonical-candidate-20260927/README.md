@@ -25,7 +25,7 @@
 
 ### fds-project-evidence
 
-`#7 #13 #16 #17 #19 #20 #21 #22 #23 #24 #25 #26 #27 #30 #31 #32 #33 #35 #36 #38 #39 #42 #49 #50 #52 #53`
+`#7 #13 #16 #17 #19 #20 #21 #22 #23 #24 #25 #26 #27 #30 #31 #32 #33 #35 #36 #38 #39 #42 #49 #50 #51 #52 #53`
 
 증적 원본의 존재를 수집 대상으로 삼되, 각 증적이 해당 Runtime/Gate 전체 완료를 의미한다고 확대하지 않는다.
 
@@ -98,14 +98,14 @@ fds-app namespace 정정, monitor01 입력, Grafana namespace 정정, Alertmanag
 
 ## 5. Open / excluded — Merged 입력으로 승격 금지
 
-- `fds-project-evidence#51` — P1-MON-01 Target 21/21·KSM Probe·monitor01 LB Probe 증적 (main sync 후 exact-head 재리뷰 중)
 - `fds-project-evidence#54` — P1-SEC-01 B1/B2 증적 편입 (evidence-layout 수정 필요)
 - `infra-ansible#53` — NTP Runtime sample kubeconfig
 - `infra-ansible#55` — kubelet serving TLS 6-node 영구 형상화
 - `infra-kubernetes#49` — NodePort 32085 read-only drift precheck
 - `infra-cicd#38` — Wolfi/apko 2-stage offline delivery contract
+- `fds-msa#10` — Wolfi/apko exact offline base supply export
 
-이미 병합된 `fds-project-evidence#50`, `fds-msa#9`, `infra-kubernetes#7`, `infra-monitoring#20/#21/#22`, `infra-ansible#56`, `fds-project-evidence#52/#53`은 Open 제외 목록에서 제거하고 Merged 입력으로 승격했다.
+이미 병합된 `fds-project-evidence#50/#51`, `fds-msa#9`, `infra-kubernetes#7`, `infra-monitoring#20/#21/#22`, `infra-ansible#56`, `fds-project-evidence#52/#53`은 Open 제외 목록에서 제거하고 Merged 입력으로 승격했다.
 
 위 Open PR은 상태 변화가 생기면 차기 intake refresh에서 다시 판정한다.
 
