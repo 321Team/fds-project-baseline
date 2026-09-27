@@ -1,5 +1,5 @@
 {
-  "generated_at_kst": "2026-09-27T16:18:00+09:00",
+  "generated_at_kst": "2026-09-27T17:43:36+09:00",
   "base_canonical": "v3.1.20",
   "base_publication_kst": "2026-09-23T02:37:13+09:00",
   "source_main": "2084182f97b593b3950194f44c071a88c0dfc4da",
@@ -47,7 +47,11 @@
       36,
       38,
       39,
-      42
+      42,
+      49,
+      50,
+      52,
+      53
     ],
     "infra-ansible": [
       42,
@@ -58,9 +62,11 @@
       49,
       50,
       52,
-      54
+      54,
+      56
     ],
     "infra-kubernetes": [
+      7,
       11,
       14,
       15,
@@ -108,7 +114,10 @@
       8,
       9,
       10,
-      11
+      11,
+      20,
+      21,
+      22
     ],
     "infra-db": [
       4,
@@ -125,12 +134,15 @@
     "fds-msa": [
       4,
       5,
-      6
+      6,
+      8,
+      9
     ]
   },
   "open_excluded": {
     "fds-project-evidence": [
-      50
+      51,
+      54
     ],
     "infra-ansible": [
       53,
@@ -139,8 +151,8 @@
     "infra-kubernetes": [
       49
     ],
-    "fds-msa": [
-      9
+    "infra-cicd": [
+      38
     ]
   },
   "current_planning_inputs": [
@@ -156,7 +168,15 @@
         "이권욱"
       ],
       "review_owner": "이하영",
-      "related_pr": "321Team/fds-msa#9"
+      "related_pr": "321Team/fds-msa#9",
+      "decision_approval": "APPROVED",
+      "approval_scope": "DEC-01~04 + HOLD conditions",
+      "metadata_status": "Issue/Project remains To Do/Todo",
+      "related_pr_state": "MERGED",
+      "related_pr_merge_sha": "1c7f3651504097096c3a3fe4a86ac1973e169688",
+      "delivery_runtime": "NOT_VERIFIED",
+      "native_issue_type": "PENDING",
+      "post_approval_addendum": "REVIEW_OWNER_CONFIRMATION_PENDING"
     }
   ],
   "team_calendar_updates": [
