@@ -49,8 +49,8 @@
       "updated_at": "2026-09-27T14:20:20Z",
       "before_sha256_lf": "b5a7448e804f9e6a623c8353645ec7b146de199d601462ebfeba15f5d63bc3dc",
       "file": "bodies/issue-110.md",
-      "file_sha256": "7c381eaa387906afbf21f16b279aba8ce1c7afb5a0f37d5331a93c7b6c60c8b7",
-      "length": 10924,
+      "file_sha256": "a67095086501950e50620f6a6feb872ba09e0349687daf1c293a7b6050a07128",
+      "length": 10999,
       "title": "[DEC-P1-IMG-01] 1단계 애플리케이션 런타임 이미지 공급망 변경 결정",
       "state": "closed",
       "labels": [
@@ -77,7 +77,8 @@
         "Make approved operating UID/GID 10001:999 authoritative in current Decision/risk-control text.",
         "Update pre-approval boundary/decision/rollback wording to approved/merged current state.",
         "Record fds-msa PR #9 approved implementation HEAD and merge SHA.",
-        "Clarify PR #9 Source merge is complete while on-prem delivery/Harbor/Kubernetes Runtime acceptance remains follow-up."
+        "Clarify PR #9 Source merge is complete while on-prem delivery/Harbor/Kubernetes Runtime acceptance remains follow-up.",
+        "Relabel pre-approval scope exclusions as historical decision-time boundaries."
       ]
     }
   ]
