@@ -3,7 +3,8 @@
 > **Status:** CANDIDATE / COLLECTING / NOT RELEASED  
 > **Started:** 2026-09-27 KST  
 > **Base canonical:** `docs-v3.1.20`  
-> **Source main snapshot:** `2084182f97b593b3950194f44c071a88c0dfc4da`
+> **Source main snapshot:** `2084182f97b593b3950194f44c071a88c0dfc4da`  
+> **Latest intake refresh:** `2026-09-27 17:43:36 KST`
 
 이 브랜치는 v3.1.20 발행 이후의 정본 동기화 입력을 미리 수집하는 **후보 수집 지점**이다. 이 상태는 정본 승인·병합·Tag·Release 발행을 의미하지 않는다.
 
@@ -11,7 +12,8 @@
 
 - v3.1.20 발행 후 main 및 관련 저장소의 Merged 변경 이력 수집.
 - v3.1.20 발행 후 정정 기록에서 지정한 v3.1.21 이월 항목 수집.
-- 현행 계획 입력 `DEC-P1-IMG-01`(#110)을 **To Do / 승인 대기 상태 그대로** 후보 데이터로 기록.
+- `DEC-P1-IMG-01`(#110)은 **Review Owner Decision 승인 완료**를 기록하되 Issue/Project 메타데이터 `To Do/Todo` drift와 Delivery Runtime `NOT_VERIFIED`를 함께 보존한다.
+- 관련 `fds-msa#9`은 병합 입력으로 승격했지만 on-prem Test→Build→Scan, Harbor Push, Kubernetes Deploy 완료로 확대하지 않는다.
 - `audit/canonical-candidate-20260927/proposed/FDS_v3.1.21_WBS_and_Gantt_v1.0.xlsx` 후보 생성.
   - 2026-09-28 이재환: 개인 사정으로 인한 휴가
   - 2026-09-29 이하영: 채용설명회 및 직무테스트로 인한 휴가
