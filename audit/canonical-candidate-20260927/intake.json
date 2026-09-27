@@ -1,5 +1,5 @@
 {
-  "generated_at_kst": "2026-09-27T17:43:36+09:00",
+  "generated_at_kst": "2026-09-27T17:55:00+09:00",
   "base_canonical": "v3.1.20",
   "base_publication_kst": "2026-09-23T02:37:13+09:00",
   "source_main": "2084182f97b593b3950194f44c071a88c0dfc4da",
@@ -50,6 +50,7 @@
       42,
       49,
       50,
+      51,
       52,
       53
     ],
@@ -141,7 +142,6 @@
   },
   "open_excluded": {
     "fds-project-evidence": [
-      51,
       54
     ],
     "infra-ansible": [
@@ -153,6 +153,9 @@
     ],
     "infra-cicd": [
       38
+    ],
+    "fds-msa": [
+      10
     ]
   },
   "current_planning_inputs": [
