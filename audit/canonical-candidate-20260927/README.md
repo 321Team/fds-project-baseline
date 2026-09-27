@@ -111,7 +111,13 @@ fds-app namespace 정정, monitor01 입력, Grafana namespace 정정, Alertmanag
 - governance drift를 차기 Manifest/SHA256SUMS에 동기화
 - `retrospectives/`의 정본 체크섬 대상 편입 여부 결정
 
-## 7. 완료/미완료 판정
+## 7. Candidate WBS 배치 원칙
+
+초기 생성 시 `wbs/FDS_v3.1.21_WBS_and_Gantt_v1.0.xlsx` 경로는 정본 검증기가 완성된 v3.1.21 release set으로 판정해 SHA256SUMS/Manifest/ZIP을 요구했다. 파일 결함이 아니라 Release Gate 동작이었다.
+
+따라서 사전 수집 단계에서는 동일 후보 원본을 `audit/canonical-candidate-20260927/proposed/FDS_v3.1.21_WBS_and_Gantt_v1.0.xlsx`로 유지한다. 전체 정본 산출물을 재생성하는 시점에만 `wbs/` 정식 경로로 승격한다.
+
+## 8. 완료/미완료 판정
 
 - SOURCE COLLECTION: **DONE (snapshot 기준)**
 - CANDIDATE BRANCH: **CREATED**
