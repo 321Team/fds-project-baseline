@@ -1,10 +1,14 @@
 name: FDS Project 1 Sync
 
 on:
+  # Lifecycle events only. Edits/labels/assignees/milestones are reconciled by the
+  # batched schedule below, because each run reconciles all issues anyway.
   issues:
-    types: [opened, edited, labeled, unlabeled, assigned, unassigned, closed, reopened, milestoned, demilestoned, transferred, deleted]
+    types: [opened, closed, reopened, transferred, deleted]
   schedule:
-    - cron: '23 */6 * * *'
+    - cron: '17 23 * * 0-4'   # KST Mon-Fri 08:17
+    - cron: '17 0-13 * * 1-5' # KST Mon-Fri 09:17-22:17, hourly
+    - cron: '23 */6 * * 0,6'  # UTC Sat/Sun every 6 hours
   workflow_dispatch:
     inputs:
       mode:
