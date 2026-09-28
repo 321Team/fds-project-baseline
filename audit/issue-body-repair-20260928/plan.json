@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-28",
+  "repo": "321Team/fds-project-baseline",
+  "purpose": "Issue body corruption/consistency repair prepared under TICKET_SYNC_POLICY §5.1; AI does not apply Issue bodies.",
+  "base_repository_sha": "2084182f97b593b3950194f44c071a88c0dfc4da",
+  "issues": [
+    {
+      "number": 19,
+      "record_ids": [
+        "P1-SEC-01"
+      ],
+      "updated_at": "2026-09-27T16:38:55Z",
+      "before_sha256_lf": "7920bb21943e37d611e5df19ceb22e645104be284b53626b22c5d825006ef616",
+      "file": "bodies/issue-19.md",
+      "file_sha256": "0f6f0d58ed99596113582ef953386cbe86d0bb4ad48fcd962602f4515cc7e269",
+      "length": 34541,
+      "title": "[P1-SEC-01] Kubernetes Security Controls",
+      "state": "open",
+      "labels": [
+        "priority:P0",
+        "area:security",
+        "type:task",
+        "phase:phase-1",
+        "status:in-progress"
+      ],
+      "before_signals": {
+        "lt_gt_entities": 0,
+        "stray_double_backticks": 6,
+        "generated_footer": 0,
+        "malformed_markdown_links": 3
+      },
+      "after_signals": {
+        "lt_gt_entities": 0,
+        "stray_double_backticks": 0,
+        "generated_footer": 0,
+        "malformed_markdown_links": 0
+      },
+      "intended_changes": [
+        "Repair exactly 3 malformed Markdown links (AGENTS.md example B).",
+        "No status/AC/requirements/approval semantics changed."
+      ]
+    },
+    {
+      "number": 110,
+      "record_ids": [
+        "DEC-P1-IMG-01"
+      ],
+      "updated_at": "2026-09-27T14:20:20Z",
+      "before_sha256_lf": "b5a7448e804f9e6a623c8353645ec7b146de199d601462ebfeba15f5d63bc3dc",
+      "file": "bodies/issue-110.md",
+      "file_sha256": "a67095086501950e50620f6a6feb872ba09e0349687daf1c293a7b6050a07128",
+      "length": 10999,
+      "title": "[DEC-P1-IMG-01] 1단계 애플리케이션 런타임 이미지 공급망 변경 결정",
+      "state": "closed",
+      "labels": [
+        "type:decision",
+        "priority:P0",
+        "status:done",
+        "phase:phase-1",
+        "area:application"
+      ],
+      "before_signals": {
+        "lt_gt_entities": 0,
+        "stray_double_backticks": 0,
+        "generated_footer": 0,
+        "malformed_markdown_links": 0
+      },
+      "after_signals": {
+        "lt_gt_entities": 0,
+        "stray_double_backticks": 0,
+        "generated_footer": 0,
+        "malformed_markdown_links": 0
+      },
+      "intended_changes": [
+        "Preserve UID 65532 only as historical pre-approval candidate evidence.",
+        "Make approved operating UID/GID 10001:999 authoritative in current Decision/risk-control text.",
+        "Update pre-approval boundary/decision/rollback wording to approved/merged current state.",
+        "Record fds-msa PR #9 approved implementation HEAD and merge SHA.",
+        "Clarify PR #9 Source merge is complete while on-prem delivery/Harbor/Kubernetes Runtime acceptance remains follow-up.",
+        "Relabel pre-approval scope exclusions as historical decision-time boundaries."
+      ]
+    }
+  ]
+}
