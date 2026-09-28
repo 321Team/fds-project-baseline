@@ -9,9 +9,14 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+# Cancel superseded runs only for PR updates; release/push/dispatch runs always finish.
+concurrency:
+  group: canonical-integrity-${{ github.event.pull_request.number || github.ref }}-${{ github.event_name }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 jobs:
   verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4; resolved 2026-09-18
       - name: Install ripgrep

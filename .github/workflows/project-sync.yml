@@ -1,10 +1,10 @@
 name: FDS Project 1 Sync
 
 on:
-  issues:
-    types: [opened, edited, labeled, unlabeled, assigned, unassigned, closed, reopened, milestoned, demilestoned, transferred, deleted]
+  # Weekly full reconcile (2026-09-28 decision). Each run reconciles all issues,
+  # so no issue-event trigger is needed; run workflow_dispatch apply for urgent sync.
   schedule:
-    - cron: '23 */6 * * *'
+    - cron: '17 23 * * 0'     # KST Monday 08:17
   workflow_dispatch:
     inputs:
       mode:
