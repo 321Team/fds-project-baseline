@@ -118,3 +118,20 @@ Billing screenshot 단독보다 원본 Cost/Resource export 또는 CLI/API 결�
 - COST MEASUREMENT: **NOT RUN**
 - REVIEW: **NOT DONE**
 - MERGE/PUBLICATION: **NOT DONE**
+
+
+## 9. 실제 GitHub 운영 반영
+
+TICKET_SYNC_POLICY §5.1의 본문 직접 수정 금지를 준수하면서, 다음 관련 티켓에는 승인된 비용정책을 **Issue comment**로 실제 연결했다.
+
+- #34 — [comment](https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-5912002564)
+- #35 — [comment](https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-5912005719)
+- #38 — [comment](https://github.com/321Team/fds-project-baseline/issues/38#issuecomment-5912008823)
+- #42 — [comment](https://github.com/321Team/fds-project-baseline/issues/42#issuecomment-5912013508)
+- #49 — [comment](https://github.com/321Team/fds-project-baseline/issues/49#issuecomment-5912016585)
+- #55 — [comment](https://github.com/321Team/fds-project-baseline/issues/55#issuecomment-5912019416)
+- #57 — [comment](https://github.com/321Team/fds-project-baseline/issues/57#issuecomment-5912022066)
+
+- 기존 Issue body/title/state/label은 이번 비용정책 반영으로 수정하지 않았다.
+- Native `DEC-P2-COST-01` Issue는 아직 생성하지 않았다.
+- 차기 정본에서 Decision record와 관련 ticket description을 재생성할 때 이 감사 기록과 코멘트를 입력으로 사용한다.
