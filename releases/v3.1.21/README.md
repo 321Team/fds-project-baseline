@@ -69,6 +69,18 @@
 - Machine-readable: `audit/project-schedule-replan-20260930/schedule.json`
 - 기존 후보 WBS XLSX는 이번 재계획 전 생성본이므로 **STALE / 전체 재생성 대상**이다. 최신 Issue 일정에서 재생성하며 바이너리 부분 패치로 정합성을 깨지 않는다.
 
+## 2026-09-30 Cloud Cost / Lifecycle 정책
+
+- 사용자 승인: **Target Spend ≤ $400 / Operational Hard Stop $450 / Protected Reserve $50 / Total Ceiling $500**.
+- Candidate Decision: `DEC-P2-COST-01` — P0 cost/lifecycle control.
+- $400 도달/초과 예상 시 P1·선택 실험 Deferred 우선, P0 잔여 비용 재예측.
+- $450은 신규 유료 소비 Hard Stop. $450~$500은 billing lag·teardown delay·cleanup residual 전용이며 신규 기능 예산이 아니다.
+- Credit/Promo/지원금은 Ceiling 확대 근거로 사용하지 않는다.
+- 비용 판정은 Actual/Gross + 확인 가능한 미반영/Projected cost를 포함한다.
+- 상세: `audit/phase2-cost-policy-20260930/README.md`
+- Native Decision Issue와 기존 Issue 본문 추가는 `TICKET_SYNC_POLICY §5.1`에 따라 담당자가 수동 반영한다.
+- 관련 티켓: #34/#35/#38/#42/#49/#55/#57.
+
 ## 후보 WBS 위치와 Gate 경계
 
 사전 수집 단계에서는 WBS를 `audit/canonical-candidate-20260927/proposed/` 아래에 둔다. `wbs/FDS_v3.1.21_...` 경로는 Manifest/SHA256SUMS/ZIP/WEB 등 전체 릴리즈 세트가 준비될 때 승격한다. 이는 `canonical-integrity`가 불완전한 릴리즈 후보를 차단하는 현행 Gate와 일치한다.
