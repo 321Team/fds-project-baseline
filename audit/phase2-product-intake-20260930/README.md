@@ -119,3 +119,21 @@ Red Hat 공식 문서는 Compliance Operator 1.5.0부터 ROSA Hosted Control Pla
 - 해당 구현 CR/Task
 - WBS/Ticket Pack/Baseline 전체 재생성
 - Review/Merge/Publication
+
+
+## 7. Supplied OpenShift Lab precheck — 2026-09-30
+
+상세 사전조사와 티켓 본문 후보는 아래 파일에서 관리한다.
+
+- audit/phase2-openshift-lab-precheck-20260930/README.md
+- audit/phase2-openshift-lab-precheck-20260930/ticket-body-addenda.md
+
+핵심 판정:
+
+- 교육기관 제공 OCP 4.20.0은 **LAB-RUNTIME/PRECHECK** 용도로만 사용하며 P2 ROSA Runtime PASS로 확대하지 않는다.
+- redhat-operators CatalogSource READY.
+- GitOps: latest / v1.21.4, **AllNamespaces only**, 미설치 → Shared Lab 설치 HOLD.
+- Compliance: stable / v1.10.0, Own/Single/Multi/All 지원, 미설치 → Shared Lab 설치/scan HOLD.
+- 두 Decision 모두 기존 **P1 / G5·G6·Project Close non-blocking**을 유지한다.
+- 공급자 정책 답변 전에는 팀 Namespace/App Compatibility 사전검증만 우선하고 cluster-wide 변경은 수행하지 않는다.
+- Issue 본문 addendum은 TICKET_SYNC_POLICY §5.1에 따라 이 PR에 후보로만 보관하고 담당자가 최신 원문 재확인 후 수동 적용한다.
