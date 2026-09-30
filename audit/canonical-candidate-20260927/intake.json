@@ -2,7 +2,7 @@
   "generated_at_kst": "2026-09-30T00:00:00+09:00",
   "base_canonical": "v3.1.20",
   "base_publication_kst": "2026-09-23T02:37:13+09:00",
-  "source_main": "2084182f97b593b3950194f44c071a88c0dfc4da",
+  "source_main": "e603d0d0177081d6f60b823f66e3559911c56272",
   "merged_inputs": {
     "fds-project-baseline": [
       83,
@@ -236,5 +236,10 @@
       ]
     },
     "canonical_regeneration": "PENDING"
+  },
+  "candidate_main_sync": {
+    "date_kst": "2026-09-30",
+    "merge_commit": "e0e1889fd5a7c465c167d79d7533e40f2dd2b596",
+    "base_main": "e603d0d0177081d6f60b823f66e3559911c56272"
   }
 }
