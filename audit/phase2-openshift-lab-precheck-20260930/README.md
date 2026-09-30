@@ -11,6 +11,8 @@
 - 분류: **LAB-RUNTIME / PRECHECK**
 - **ROSA Runtime PASS, Operator Runtime PASS, 도입 승인, 공급자 변경 승인으로 확대하지 않는다.**
 - 사용자 제공 read-only 출력에는 정확한 실행 시각이 포함되지 않아 기준일만 2026-09-30 KST로 기록한다.
+- 원본 출력은 현재 fds-project-evidence에 독립 편입·해시 고정되지 않았다. 따라서 이 기록은 **사용자 제공 capture 기반의 후보 감사 기록**이며, Acceptance/Gate의 원본 Evidence로 사용하지 않는다.
+- 향후 실제 Operator/App Runtime을 수행할 경우 별도 원본 로그·실행시각·대상 Cluster/Version·명령·종료상태·SHA256을 fds-project-evidence에 보존해야 한다.
 
 ## 2. 환경 사실
 
