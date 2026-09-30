@@ -123,6 +123,17 @@ fds-app namespace 정정, monitor01 입력, Grafana namespace 정정, Alertmanag
 - v3.1.20 status/citation correction을 `CURRENT.md`, `releases/v3.1.20/README.md`, v3.1.20 Release Notes, v3.1.20 Baseline의 **main-side 설명**에 후보 반영했다.
 - `docs-v3.1.20` Tag/Release Assets/SHA256SUMS는 변경하지 않는다.
 
+## 5.2 2026-09-30 선택 제품/회의 결과 추가 입력
+
+- 추가 절차 간소화: **이번에는 적용하지 않고 현행 유지, 후속 재검토**.
+- 신규 P1 Decision:
+  - #120 `DEC-P2-GITOPS-01` — OpenShift GitOps(Argo CD)
+  - #121 `DEC-P2-COMP-01` — Compliance Operator
+- 두 Decision 모두 G5/G6/Project Close non-blocking.
+- 관련 Issue 연결: #34/#38/#41/#45/#46/#49/#53/#54.
+- 회의록 후보와 Red Hat 제품 인벤토리 후보를 갱신했다.
+- 상세 감사: `audit/phase2-product-intake-20260930/README.md`.
+
 ## 6. v3.1.21 필수 이월 사항
 
 `audit/canonical-followup-20260923/README.md`의 미반영 항목을 유지한다.
@@ -145,6 +156,8 @@ fds-app namespace 정정, monitor01 입력, Grafana namespace 정정, Alertmanag
 - CANDIDATE BRANCH: **CREATED**
 - WBS AVAILABILITY UPDATE: **APPLIED**
 - ROSA / PRIORITY REVIEW: **APPLIED TO ISSUES + CANDIDATE AUDIT**
+- PRODUCT INTAKE (#120/#121): **DECISION TICKETS CREATED / IMPLEMENTATION NOT RUN**
+- PROCEDURE SIMPLIFICATION: **NO NEW CHANGE / CURRENT PROCESS RETAINED**
 - v3.1.20 STATUS/CITATION CORRECTION: **APPLIED TO CANDIDATE BRANCH**
 - FULL CANONICAL REGENERATION: **NOT RUN**
 - RUNTIME/GATE REVALIDATION: **NOT RUN**
