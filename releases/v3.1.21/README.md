@@ -81,6 +81,18 @@
 - Native Decision Issue와 기존 Issue 본문 추가는 `TICKET_SYNC_POLICY §5.1`에 따라 담당자가 수동 반영한다.
 - 관련 티켓: #34/#35/#38/#42/#49/#55/#57.
 
+## 2026-09-30 Phase 2 Cost-aware Test Strategy
+
+- 승인 실행 모델: `W0 PRECHECK → W1 G4 → W2 G5 → W3 G6 → 10-23 CLOSE/TEARDOWN`.
+- 제공 OCP/CI에서 결함을 선제 제거하고 실제 ROSA는 G4 근처에 생성해 G5·G6를 동일 Cluster에서 연속 수행한다.
+- #119의 DB/FDS 장애 계약을 Phase 2 E2E Expected Result의 선행 입력으로 사용한다.
+- $400 Target 이후 P1은 Deferred-first, $450은 신규 paid Runtime Hard Stop.
+- Full ROSA recreate는 P0 필수가 아니며 조건부 P1.
+- 10-22는 Final Regression/Acceptance, 10-23은 Final Evidence/Cost/Inventory 및 teardown 우선.
+- 상세: `audit/phase2-test-strategy-20260930/README.md`
+- Runtime plan: `audit/phase2-test-strategy-20260930/runtime-window-plan.json`
+- Ticket addenda 후보: `audit/phase2-test-strategy-20260930/ticket-body-addenda.md`
+
 ## 후보 WBS 위치와 Gate 경계
 
 사전 수집 단계에서는 WBS를 `audit/canonical-candidate-20260927/proposed/` 아래에 둔다. `wbs/FDS_v3.1.21_...` 경로는 Manifest/SHA256SUMS/ZIP/WEB 등 전체 릴리즈 세트가 준비될 때 승격한다. 이는 `canonical-integrity`가 불완전한 릴리즈 후보를 차단하는 현행 Gate와 일치한다.
