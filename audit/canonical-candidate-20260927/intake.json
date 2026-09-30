@@ -1,0 +1,240 @@
+{
+  "generated_at_kst": "2026-09-30T00:00:00+09:00",
+  "base_canonical": "v3.1.20",
+  "base_publication_kst": "2026-09-23T02:37:13+09:00",
+  "source_main": "2084182f97b593b3950194f44c071a88c0dfc4da",
+  "merged_inputs": {
+    "fds-project-baseline": [
+      83,
+      91,
+      92,
+      93,
+      94,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      111
+    ],
+    "fds-project-evidence": [
+      7,
+      13,
+      16,
+      17,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      30,
+      31,
+      32,
+      33,
+      35,
+      36,
+      38,
+      39,
+      42,
+      49,
+      50,
+      51,
+      52,
+      53
+    ],
+    "infra-ansible": [
+      42,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      52,
+      54,
+      56
+    ],
+    "infra-kubernetes": [
+      7,
+      11,
+      14,
+      15,
+      20,
+      22,
+      24,
+      25,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      36,
+      37,
+      38,
+      39,
+      42,
+      43,
+      48
+    ],
+    "infra-lb": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "infra-cicd": [
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "infra-monitoring": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      20,
+      21,
+      22
+    ],
+    "infra-db": [
+      4,
+      5
+    ],
+    "infra-pki": [
+      5,
+      6
+    ],
+    "infra-harbor-trivy": [
+      4,
+      5
+    ],
+    "fds-msa": [
+      4,
+      5,
+      6,
+      8,
+      9
+    ]
+  },
+  "open_excluded": {
+    "fds-project-evidence": [
+      54
+    ],
+    "infra-ansible": [
+      53,
+      55
+    ],
+    "infra-kubernetes": [
+      49
+    ],
+    "infra-cicd": [
+      38
+    ],
+    "fds-msa": [
+      10
+    ]
+  },
+  "current_planning_inputs": [
+    {
+      "record_id": "DEC-P1-IMG-01",
+      "issue": 110,
+      "status": "To Do",
+      "start": "2026-09-27",
+      "end": "2026-10-06",
+      "lead": "이재환",
+      "support": [
+        "이하영",
+        "이권욱"
+      ],
+      "review_owner": "이하영",
+      "related_pr": "321Team/fds-msa#9",
+      "decision_approval": "APPROVED",
+      "approval_scope": "DEC-01~04 + HOLD conditions",
+      "metadata_status": "Issue/Project remains To Do/Todo",
+      "related_pr_state": "MERGED",
+      "related_pr_merge_sha": "1c7f3651504097096c3a3fe4a86ac1973e169688",
+      "delivery_runtime": "NOT_VERIFIED",
+      "native_issue_type": "PENDING",
+      "post_approval_addendum": "REVIEW_OWNER_CONFIRMATION_PENDING"
+    }
+  ],
+  "team_calendar_updates": [
+    {
+      "date": "2026-09-28",
+      "person": "이재환",
+      "reason": "개인 사정으로 인한 휴가",
+      "scope": "Personal absence"
+    },
+    {
+      "date": "2026-09-29",
+      "person": "이하영",
+      "reason": "채용설명회 및 직무테스트로 인한 휴가",
+      "scope": "Personal absence"
+    }
+  ],
+  "rosa_scope_priority_review": {
+    "date_kst": "2026-09-30",
+    "audit_path": "audit/phase2-rosa-scope-priority-review-20260930/README.md",
+    "matrix_path": "audit/phase2-rosa-scope-priority-review-20260930/priority-matrix.json",
+    "current_canonical": "docs-v3.1.20 / RELEASED",
+    "status_correction_scope": [
+      "CURRENT.md",
+      "releases/v3.1.20/README.md",
+      "releases/v3.1.20/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.20.md",
+      "baseline/FDS_Project_Implementation_Baseline_v3.1.20.md"
+    ],
+    "issue_updates": {
+      "phase2_carry_over": [
+        25,
+        26,
+        27
+      ],
+      "priority_demoted_to_p1": [
+        44
+      ],
+      "dependency_corrected": [
+        45,
+        49,
+        50,
+        53,
+        54
+      ],
+      "p1_nonblocking": [
+        25,
+        26,
+        27,
+        40,
+        41,
+        44,
+        48,
+        51,
+        95
+      ]
+    },
+    "canonical_regeneration": "PENDING"
+  }
+}

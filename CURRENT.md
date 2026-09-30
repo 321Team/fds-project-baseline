@@ -1,6 +1,6 @@
 # Current Canonical Release
 
-이 문서는 최종화 PR 승인·병합 후 적용할 메타데이터다. GitHub 실제 게시 여부는 아래 Release 링크/API를 기준으로 확인한다.
+이 문서는 **현행 운영 정본 포인터**다. 별도 승인된 변경 기준이 없는 한 Baseline/WBS/Ticket Pack 및 관련 티켓의 현행 정본 인용은 `docs-v3.1.20 / RELEASED`를 사용한다. GitHub 실제 게시 여부는 아래 Release 링크/API를 기준으로 확인한다.
 
 | Field | Value |
 |---|---|
@@ -15,6 +15,13 @@
 | Canonical release tag | `docs-v3.1.20` — finalization merge commit |
 | GitHub publication | Verified via Release API — `published_at` 2026-09-22T17:37:13Z |
 | Published timestamp | 2026-09-23 02:37:13 +09:00 (Release API `published_at`) |
+
+## Citation rule
+
+- 현행 정본: `docs-v3.1.20 / RELEASED`, 게시 시각 **2026-09-23 02:37:13 KST**.
+- `releases/v3.1.20/`, Baseline 또는 Release Notes에 남아 있는 `CANDIDATE / COLLECTING / 정식 발행 보류` 문구는 **발행 전 후보 수집 시점의 역사 기록**으로만 해석한다.
+- 해당 역사 문구를 현재 배포 상태, Runtime 완료, AC/Gate 승인 여부의 근거로 사용하지 않는다.
+- v3.1.20 Tag/Release Asset/SHA256SUMS는 소급 변경하지 않는다. 상태 설명 정정은 차기 정본 후보에서 관리한다.
 
 ## Publication evidence
 
