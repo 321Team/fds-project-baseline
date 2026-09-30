@@ -49,12 +49,14 @@
 
 ## 적용 전 Issue snapshot
 
-- #34: updated_at `2026-09-30T08:59:02Z` — [P2-ARC-01] Hybrid / OCI / AWS / ROSA Architecture Freeze
-- #35: updated_at `2026-09-30T08:59:08Z` — [P2-IAC-01] AWS / ROSA Terraform IaC
-- #38: updated_at `2026-09-30T08:59:46Z` — [P2-ROSA-01] ROSA Platform / Security
-- #42: updated_at `2026-09-30T09:00:09Z` — [DEC-P2-REG-01] ROSA Image Registry Source Decision
-- #49: updated_at `2026-09-30T09:01:09Z` — [P2-DOC-01] Cloud / Hybrid Deliverable Freeze
-- #55: updated_at `2026-09-30T09:01:35Z` — [P2-REV-01] Phase 2 Review / Project Close Execution
-- #57: updated_at `2026-09-30T09:05:41Z` — [MS-PROJECT-CLOSE-01] Project Close
+비용정책 운영 코멘트 적용 후 최신 snapshot:
+
+- #34: updated_at `2026-09-30T13:12:04Z` — [P2-ARC-01] Hybrid / OCI / AWS / ROSA Architecture Freeze — [운영 코멘트](https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-5912002564)
+- #35: updated_at `2026-09-30T13:12:14Z` — [P2-IAC-01] AWS / ROSA Terraform IaC — [운영 코멘트](https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-5912005719)
+- #38: updated_at `2026-09-30T13:12:24Z` — [P2-ROSA-01] ROSA Platform / Security — [운영 코멘트](https://github.com/321Team/fds-project-baseline/issues/38#issuecomment-5912008823)
+- #42: updated_at `2026-09-30T13:12:41Z` — [DEC-P2-REG-01] ROSA Image Registry Source Decision — [운영 코멘트](https://github.com/321Team/fds-project-baseline/issues/42#issuecomment-5912013508)
+- #49: updated_at `2026-09-30T13:12:52Z` — [P2-DOC-01] Cloud / Hybrid Deliverable Freeze — [운영 코멘트](https://github.com/321Team/fds-project-baseline/issues/49#issuecomment-5912016585)
+- #55: updated_at `2026-09-30T13:13:01Z` — [P2-REV-01] Phase 2 Review / Project Close Execution — [운영 코멘트](https://github.com/321Team/fds-project-baseline/issues/55#issuecomment-5912019416)
+- #57: updated_at `2026-09-30T13:13:11Z` — [MS-PROJECT-CLOSE-01] Project Close — [운영 코멘트](https://github.com/321Team/fds-project-baseline/issues/57#issuecomment-5912022066)
 
 적용 시점에 updated_at이 변경됐으면 최신 원문과 승인 변경을 다시 대조한다.
