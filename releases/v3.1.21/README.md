@@ -3,8 +3,9 @@
 > **Status:** CANDIDATE / COLLECTING / NOT RELEASED  
 > **Started:** 2026-09-27 KST  
 > **Base canonical:** `docs-v3.1.20`  
-> **Source main snapshot:** `2084182f97b593b3950194f44c071a88c0dfc4da`  
-> **Latest intake refresh:** `2026-09-30 KST`
+> **Source main snapshot:** `e603d0d0177081d6f60b823f66e3559911c56272`  
+> **Latest intake refresh:** `2026-09-30 KST`  
+> **Candidate/main sync commit:** `e0e1889fd5a7c465c167d79d7533e40f2dd2b596`
 
 이 브랜치는 v3.1.20 발행 이후의 정본 동기화 입력을 미리 수집하는 **후보 수집 지점**이다. 이 상태는 정본 승인·병합·Tag·Release 발행을 의미하지 않는다.
 
