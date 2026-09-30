@@ -82,6 +82,8 @@ P2-ARC-01
 | #56 | MS-P2-REVIEW-01 | P0 | **P0 유지** | Gate | Review milestone |
 | #57 | MS-PROJECT-CLOSE-01 | P0 | **P0 유지** | Gate | 최종 Close |
 | #95 | DEC-P2-RHOAI-01 | P1 | **P1 유지 / Deferred 우선** | Non-blocking | AI Inference Scope Out과 연결, 10/26 전 구현 기본계획에서 제외 |
+| #120 | DEC-P2-GITOPS-01 | 신규 | **P1** | Non-blocking | Go 시 #46 Delivery Contract CR 필요; 미결정이면 Runner direct 유지 |
+| #121 | DEC-P2-COMP-01 | 신규 | **P1** | Non-blocking | ROSA 보안 점검 고도화; HCP scheduling/managed boundary 반영 |
 
 ## 4. Phase 1 P1 carry-over 3건
 
@@ -144,6 +146,16 @@ Priority 변경 없이 정본 후보에서 상세화할 항목:
 - **#50:** Route→transaction-api→fds-engine→On-Prem DB + DENY + tunnel recovery + recreate regression
 - **#55/#57:** Cluster/MachinePool/NAT/LB/EBS/S3/VPN/Resolver 잔존 비용과 삭제 evidence
 
+## 7.1 선택 제품 유입 결정 — 2026-09-30
+
+- 추가 절차 간소화안은 **미적용 / 현행 유지 / 후속 재검토**.
+- 활성 추가 제품 검토:
+  - #120 OpenShift GitOps(Argo CD) — P1, non-blocking
+  - #121 Compliance Operator — P1, non-blocking
+- #120 Go 전에는 #46 Runner direct deploy를 유지한다. Go 시 Delivery Contract 변경 CR이 필요하다.
+- #121 Go 전에는 #38 P0 Security AC를 유지한다. Compliance 결과를 자동 P0 blocker나 규제 준수 인증으로 확대하지 않는다.
+- 상세: `audit/phase2-product-intake-20260930/README.md`
+
 ## 8. P0 WIP 통제
 
 Open P0 개수 자체가 많아도 Milestone/Review Ticket과 기술 구현을 같은 WIP로 취급하지 않는다.
@@ -166,7 +178,7 @@ Open P0 개수 자체가 많아도 Milestone/Review Ticket과 기술 구현을 �
 
 ### P1 실행 원칙
 
-#25/#26/#27/#40/#41/#44/#48/#51/#95는 P0 완료를 침범하지 않는 범위에서만 수행한다.
+#25/#26/#27/#40/#41/#44/#48/#51/#95/#120/#121은 P0 완료를 침범하지 않는 범위에서만 수행한다.
 10/26 이전 시간이 부족하면 Deferred/N/A/Cancelled 근거만 정리하고 구현을 강행하지 않는다.
 
 ## 9. 정본 반영 경계
