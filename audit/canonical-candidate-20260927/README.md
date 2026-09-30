@@ -6,7 +6,7 @@
 - 발행 시각: 2026-09-23 02:37:13 KST
 - 수집 기준 main: `e603d0d0177081d6f60b823f66e3559911c56272`
 - 최신 상태 재수집: `2026-09-30 KST`
-- 최신 main 동기화 merge: `e0e1889fd5a7c465c167d79d7533e40f2dd2b596`
+- 최신 main 동기화 merge: `904aa920750a109cbc4940ad1cdb429735b2d645` (main `c1d710c4f56f53d5ca274c5addbb8540cc6cff53` 포함)
 - 후보 브랜치: `release/v3.1.21`
 - 목적: 차기 정본 제작 전에 변경 입력과 미결 항목을 먼저 고정해 누락·중복 수집을 줄인다.
 - 경계: 이 기록은 **CANDIDATE intake**이며 Runtime 완료, Gate 승인, 열린 PR 병합, 정본 발행을 새로 부여하지 않는다.
@@ -120,8 +120,9 @@ fds-app namespace 정정, monitor01 입력, Grafana namespace 정정, Alertmanag
   - #45 → #46 P2-CICD 선행조건 보완
   - #49/#50/#53 → OADP P1 non-blocking 정합화
   - #54 → D25/D26 Decision 참조 보완
-- v3.1.20 status/citation correction을 `CURRENT.md`, `releases/v3.1.20/README.md`, v3.1.20 Release Notes, v3.1.20 Baseline의 **main-side 설명**에 후보 반영했다.
-- `docs-v3.1.20` Tag/Release Assets/SHA256SUMS는 변경하지 않는다.
+- v3.1.20 status/citation 해석 문제는 **v3.1.21 후보 감사 기록에서만 설명**한다.
+- `CURRENT.md`, `baseline/FDS_Project_Implementation_Baseline_v3.1.20.md`, `releases/v3.1.20/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.20.md`, `releases/v3.1.20/README.md`는 발행된 v3.1.20 정본 무결성을 위해 **main과 동일 바이트로 원복**했다.
+- `docs-v3.1.20` Tag/Release Assets/SHA256SUMS 및 위 과거 정본 파일은 소급 변경하지 않는다.
 
 ## 5.2 2026-09-30 선택 제품/회의 결과 추가 입력
 
@@ -169,13 +170,26 @@ fds-app namespace 정정, monitor01 입력, Grafana namespace 정정, Alertmanag
 - Machine-readable: `audit/phase2-test-strategy-20260930/runtime-window-plan.json`
 - 기존 후보 WBS XLSX는 계속 **STALE / REGENERATION REQUIRED**이며 이 전략을 재생성 입력으로 포함한다.
 
+## 5.6 2026-09-30 PR #112 무결성 정정
+
+- 타 세션 PMO/QA 리뷰에서 발행된 v3.1.20 정본 파일 직접 수정이 `RELEASE_POLICY §2.4`와 충돌함을 확인했다.
+- 다음 4개 파일을 최신 `main`과 동일 바이트로 원복했다.
+  - `CURRENT.md`
+  - `baseline/FDS_Project_Implementation_Baseline_v3.1.20.md`
+  - `releases/v3.1.20/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.20.md`
+  - `releases/v3.1.20/README.md`
+- latest `main`은 보조 PR #131로 후보 브랜치에 동기화했고, 동기화 후 `behind=0`을 확인했다.
+- #125/#126/#127/#128/#130은 **미결 Change Request**이므로 결정 전까지 v3.1.21 승인 입력·정본 재생성 Source에서 제외한다.
+- 본 정정은 Audit/Cost/Test Strategy 등 v3.1.21 신규 후보 기록을 폐기하지 않는다.
+- 정본 재생성은 승인 완료된 Issue/CR만 Source로 사용하고, WBS/Baseline/Ticket Pack/Manifest/SHA256SUMS/ZIP/WEB을 일괄 재생성한다.
+
 ## 6. v3.1.21 필수 이월 사항
 
 `audit/canonical-followup-20260923/README.md`의 미반영 항목을 유지한다.
 
-- `CURRENT.md`의 v3.1.20 현행 정본/인용 규칙 정정 — **후보 브랜치 반영 완료, 병합 대기**
+- `CURRENT.md` 및 발행된 v3.1.20 정본 파일은 **immutable history 유지**. 현재 후보에서는 직접 수정하지 않음
 - v3.1.20 중간 산출물 DOCX 정정본의 차기 정본 무결성 반영
-- `releases/v3.1.20/README.md`·Release Notes·Baseline의 과거 CANDIDATE 문구를 역사 기록으로 명시 — **후보 브랜치 반영 완료, 병합 대기**
+- v3.1.20 내부의 과거 CANDIDATE 표현에 대한 해석 정정은 **v3.1.21 Release Notes/audit에서만 기록**하고 과거 정본 바이트는 변경하지 않음
 - governance drift를 차기 Manifest/SHA256SUMS에 동기화
 - `retrospectives/`의 정본 체크섬 대상 편입 여부 결정
 
