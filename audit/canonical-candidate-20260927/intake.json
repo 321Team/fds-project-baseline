@@ -1,5 +1,5 @@
 {
-  "generated_at_kst": "2026-09-30T00:00:00+09:00",
+  "generated_at_kst": "2026-09-30T17:36:00+09:00",
   "base_canonical": "v3.1.20",
   "base_publication_kst": "2026-09-23T02:37:13+09:00",
   "source_main": "e603d0d0177081d6f60b823f66e3559911c56272",
@@ -232,7 +232,9 @@
         44,
         48,
         51,
-        95
+        95,
+        120,
+        121
       ]
     },
     "canonical_regeneration": "PENDING"
@@ -241,5 +243,37 @@
     "date_kst": "2026-09-30",
     "merge_commit": "e0e1889fd5a7c465c167d79d7533e40f2dd2b596",
     "base_main": "e603d0d0177081d6f60b823f66e3559911c56272"
+  },
+  "product_intake_20260930": {
+    "procedure_simplification": "NO_NEW_CHANGE_KEEP_CURRENT_REVISIT_LATER",
+    "active_review": [
+      {
+        "issue": 120,
+        "record_id": "DEC-P2-GITOPS-01",
+        "product": "OpenShift GitOps (Argo CD)",
+        "priority": "P1",
+        "blocking": false
+      },
+      {
+        "issue": 121,
+        "record_id": "DEC-P2-COMP-01",
+        "product": "Compliance Operator",
+        "priority": "P1",
+        "blocking": false
+      }
+    ],
+    "deferred_or_outside_current_intake": [
+      {
+        "issue": 95,
+        "product": "RHOAI",
+        "status": "P1_DEFERRED_DEFAULT"
+      },
+      {
+        "product": "ACS / Logging / Network Observability / cert-manager / others",
+        "status": "NOT_ACTIVE_INTAKE"
+      }
+    ],
+    "audit_path": "audit/phase2-product-intake-20260930/README.md",
+    "canonical_regeneration": "PENDING"
   }
 }
