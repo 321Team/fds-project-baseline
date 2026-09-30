@@ -151,5 +151,51 @@
     51,
     95
   ],
-  "candidate_wbs_status": "STALE_REGENERATE_FROM_LATEST_ISSUES"
+  "candidate_wbs_status": "STALE_REGENERATE_FROM_LATEST_ISSUES",
+  "lead_rebalance": {
+    "approved_at_kst": "2026-09-30",
+    "rationale": [
+      "3-person execution after original 4-person plan",
+      "retrospective identified large-ticket concentration and ownership-awareness delay",
+      "avoid additional ticket/review fatigue after CR #125-#130",
+      "preserve one-core-P0-WIP principle and reduce paid-runtime handoff"
+    ],
+    "changes": {
+      "35": {
+        "lead_before": "이권욱",
+        "lead_after": "이하영",
+        "support_after": [
+          "이권욱"
+        ],
+        "stream": "cloud-platform"
+      },
+      "37": {
+        "lead_before": "이권욱",
+        "lead_after": "이재환",
+        "support_after": [
+          "이권욱"
+        ],
+        "stream": "hybrid-data-path"
+      },
+      "42": {
+        "lead_before": "이하영",
+        "lead_after": "이권욱",
+        "support_after": [
+          "이하영",
+          "이재환"
+        ],
+        "stream": "registry-delivery-governance"
+      }
+    },
+    "unchanged": [
+      "schedule",
+      "scope",
+      "acceptance_criteria",
+      "priority",
+      "milestone",
+      "review_authority"
+    ],
+    "new_rebalance_ticket_created": false,
+    "p1_policy": "deferred-first-nonblocking"
+  }
 }
