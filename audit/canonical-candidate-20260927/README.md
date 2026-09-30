@@ -5,7 +5,7 @@
 - 정본 기준: `v3.1.20 / RELEASED`
 - 발행 시각: 2026-09-23 02:37:13 KST
 - 수집 기준 main: `2084182f97b593b3950194f44c071a88c0dfc4da`
-- 최신 상태 재수집: `2026-09-27 17:43:36 KST`
+- 최신 상태 재수집: `2026-09-30 KST`
 - 후보 브랜치: `release/v3.1.21`
 - 목적: 차기 정본 제작 전에 변경 입력과 미결 항목을 먼저 고정해 누락·중복 수집을 줄인다.
 - 경계: 이 기록은 **CANDIDATE intake**이며 Runtime 완료, Gate 승인, 열린 PR 병합, 정본 발행을 새로 부여하지 않는다.
@@ -109,13 +109,26 @@ fds-app namespace 정정, monitor01 입력, Grafana namespace 정정, Alertmanag
 
 위 Open PR은 상태 변화가 생기면 차기 intake refresh에서 다시 판정한다.
 
+## 5.1 2026-09-30 ROSA/Priority 추가 입력
+
+- 상세 감사: `audit/phase2-rosa-scope-priority-review-20260930/README.md`
+- Priority matrix: `audit/phase2-rosa-scope-priority-review-20260930/priority-matrix.json`
+- 실제 Issue 반영:
+  - #25/#26/#27 → `phase:phase-2`, P1 유지, Milestone G6
+  - #44 → Priority P1
+  - #45 → #46 P2-CICD 선행조건 보완
+  - #49/#50/#53 → OADP P1 non-blocking 정합화
+  - #54 → D25/D26 Decision 참조 보완
+- v3.1.20 status/citation correction을 `CURRENT.md`, `releases/v3.1.20/README.md`, v3.1.20 Release Notes, v3.1.20 Baseline의 **main-side 설명**에 후보 반영했다.
+- `docs-v3.1.20` Tag/Release Assets/SHA256SUMS는 변경하지 않는다.
+
 ## 6. v3.1.21 필수 이월 사항
 
 `audit/canonical-followup-20260923/README.md`의 미반영 항목을 유지한다.
 
-- `CURRENT.md`의 v3.1.20 Tag 설명 사실관계 정정
+- `CURRENT.md`의 v3.1.20 현행 정본/인용 규칙 정정 — **후보 브랜치 반영 완료, 병합 대기**
 - v3.1.20 중간 산출물 DOCX 정정본의 차기 정본 무결성 반영
-- `releases/v3.1.20/README.md`의 과거 CANDIDATE 문구 정리
+- `releases/v3.1.20/README.md`·Release Notes·Baseline의 과거 CANDIDATE 문구를 역사 기록으로 명시 — **후보 브랜치 반영 완료, 병합 대기**
 - governance drift를 차기 Manifest/SHA256SUMS에 동기화
 - `retrospectives/`의 정본 체크섬 대상 편입 여부 결정
 
@@ -130,6 +143,8 @@ fds-app namespace 정정, monitor01 입력, Grafana namespace 정정, Alertmanag
 - SOURCE COLLECTION: **REFRESHED (2026-09-27 17:43:36 KST 기준)**
 - CANDIDATE BRANCH: **CREATED**
 - WBS AVAILABILITY UPDATE: **APPLIED**
+- ROSA / PRIORITY REVIEW: **APPLIED TO ISSUES + CANDIDATE AUDIT**
+- v3.1.20 STATUS/CITATION CORRECTION: **APPLIED TO CANDIDATE BRANCH**
 - FULL CANONICAL REGENERATION: **NOT RUN**
 - RUNTIME/GATE REVALIDATION: **NOT RUN**
 - REVIEW/MERGE/RELEASE: **NOT DONE**
