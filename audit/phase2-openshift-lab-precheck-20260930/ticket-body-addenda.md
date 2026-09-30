@@ -3,6 +3,7 @@
 > 대상 PR: #112 / branch release/v3.1.21
 > 기준일: 2026-09-30 KST
 > 상태: **CANDIDATE / HUMAN APPLY REQUIRED**
+> 증적 경계: 현재 근거는 사용자 제공 read-only capture와 PR 감사 요약이며, 원본 출력의 fds-project-evidence 독립 편입은 아직 수행하지 않았다. 따라서 본 addendum은 Runtime Acceptance 증적이 아니다.
 >
 > governance/TICKET_SYNC_POLICY.md §5.1에 따라 AI가 Issue 본문 절/문단을 직접 추가하지 않는다. 아래 블록은 담당자가 최신 Issue 원문과 updated_at을 재확인한 뒤 수동 적용할 후보 문안이다. 적용 자체가 AC 충족·승인·종결을 의미하지 않는다.
 
