@@ -133,6 +133,36 @@ P0 잔여 capacity가 있을 때만 착수한다. 10-26 이전 완료를 강제�
 - 따라서 새 P1 기능을 P0로 승격하거나 ROSA provisioning 지연이 발생하면 일정 여유가 거의 없다.
 - 일정 보호를 위해 각 담당자 핵심 P0 WIP 1개 원칙을 유지한다.
 
+## 5.1 Phase 2 담당 리밸런싱
+
+2026-09-30 사용자 승인으로 P2 P0 실행 책임을 아래와 같이 조정한다. 일정·Scope·AC·Priority·Milestone은 변경하지 않는다.
+
+| Issue | 기존 Lead | 변경 Lead | Support | 근거 |
+|---:|---|---|---|---|
+| #35 P2-IAC-01 | 이권욱 | **이하영** | 이권욱 | Terraform/IAM/OIDC/ROSA prerequisite를 #38 ROSA Platform과 같은 Cloud Platform stream으로 연결 |
+| #37 P2-VPN-01 | 이권욱 | **이재환** | 이권욱 | VPN/Route/Source → #47 Hybrid → #50 E2E를 하나의 Hybrid data-path stream으로 연결 |
+| #42 DEC-P2-REG-01 | 이하영 | **이권욱** | 이하영, 이재환 | #35 이동으로 이하영에게 #35/#38/#42가 다시 집중되는 것을 방지하고, Registry Decision을 #46 CI/CD·Cost Governance와 연결 |
+
+### 리밸런싱 판단 근거
+
+- 팀 회고에서 **4인 계획이 3인 수행으로 축소된 뒤 대형 티켓 집중과 담당 인지 지연**이 실제 지연·피로 요인으로 확인됐다.
+- 최근 #125~#130의 Change Request 발행·리뷰 증가로 팀의 인지/리뷰 피로가 높아진 상태이므로, 리밸런싱 자체를 위한 신규 Issue/CR은 만들지 않고 **기존 P0 티켓의 Lead/Support/Assignee만 최소 변경**한다.
+- Phase 2는 13 작업일이며 G4~G6가 압축돼 있다. 숫자상 균등배분보다 **연속된 기술 경로를 같은 담당자가 소유해 handoff와 재학습을 줄이는 것**을 우선한다.
+- #35를 이하영에게 이동하는 대신 #42를 이권욱에게 이동해 기존 회고에서 지적된 “대형 티켓이 한 사람에게 몰리는” 패턴을 반복하지 않는다.
+- #37은 이재환의 #43 App → #47 Hybrid → #50 E2E 흐름 앞단으로 배치해 Runtime 원인분석과 Evidence 연결을 연속화한다.
+- 이권욱은 Architecture/Cost/Gate/CI-CD 중심으로 남아 전체 통제와 독립 검토를 지원한다.
+- Lead 변경은 실행 책임 조정이며 **자기승인 또는 Review Authority 이전이 아니다**. 독립 Review/Approval 기준은 그대로 유지한다.
+- P1(#40/#41/#44/#48/#51/#95/#120/#121)은 기존 Deferred-first/non-blocking을 유지하며, 인력 균형을 이유로 구현을 강행하지 않는다.
+
+### 10/12~10/16 집중구간 완화
+
+변경 전에는 10/12~14에 이권욱이 #35+#37, 이하영이 #38+#42를 동시에 소유해 두 사람에게 Critical Path가 집중됐다. 변경 후에는:
+- 이하영: #35→#38 Cloud Platform 연속
+- 이재환: #37→#43→#47/#50 Hybrid/App 연속
+- 이권욱: #42→#46 및 Architecture/Cost/Gate 통제
+
+로 병렬성이 높아지고, 한 사람의 지연이 G4 이후 paid ROSA Runtime 전체를 막는 single-person bottleneck을 줄인다.
+
 ## 6. 정본/WBS 동기화
 
 **실제 Issue 일정:** 반영 완료.
