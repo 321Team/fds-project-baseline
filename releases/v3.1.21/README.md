@@ -5,7 +5,7 @@
 > **Base canonical:** `docs-v3.1.20`  
 > **Source main snapshot:** `e603d0d0177081d6f60b823f66e3559911c56272`  
 > **Latest intake refresh:** `2026-09-30 KST`  
-> **Candidate/main sync commit:** `e0e1889fd5a7c465c167d79d7533e40f2dd2b596`
+> **Candidate/main sync commit:** `904aa920750a109cbc4940ad1cdb429735b2d645` (includes main `c1d710c4f56f53d5ca274c5addbb8540cc6cff53`)
 
 이 브랜치는 v3.1.20 발행 이후의 정본 동기화 입력을 미리 수집하는 **후보 수집 지점**이다. 이 상태는 정본 승인·병합·Tag·Release 발행을 의미하지 않는다.
 
@@ -26,7 +26,7 @@
 
 ## 2026-09-30 ROSA 범위·Priority 전수 검수
 
-- 현행 인용 정본을 `docs-v3.1.20 / RELEASED`로 명시하고, v3.1.20 파일에 남은 발행 전 Candidate 표현이 현재 상태로 오용되지 않도록 status/citation correction을 후보 브랜치에 반영했다.
+- 현행 인용 정본은 `docs-v3.1.20 / RELEASED`다. 발행된 v3.1.20 파일의 과거 Candidate 표현 해석 문제는 v3.1.21 후보 감사/Release Notes에서 설명하며, **v3.1.20 정본 파일 자체는 소급 수정하지 않는다.**
 - 상세 검수: `audit/phase2-rosa-scope-priority-review-20260930/README.md`
 - Machine-readable matrix: `audit/phase2-rosa-scope-priority-review-20260930/priority-matrix.json`
 - P1 carry-over:
@@ -92,6 +92,14 @@
 - 상세: `audit/phase2-test-strategy-20260930/README.md`
 - Runtime plan: `audit/phase2-test-strategy-20260930/runtime-window-plan.json`
 - Ticket addenda 후보: `audit/phase2-test-strategy-20260930/ticket-body-addenda.md`
+
+## 2026-09-30 PR #112 무결성 정정
+
+- 발행된 v3.1.20 정본 바이트 직접 수정은 철회했다.
+- `CURRENT.md`, v3.1.20 Baseline, v3.1.20 Release Notes, `releases/v3.1.20/README.md`는 최신 `main`과 동일 상태를 유지한다.
+- latest `main` 동기화 완료: sync merge `904aa920750a109cbc4940ad1cdb429735b2d645`, sync 기준 main `c1d710c4f56f53d5ca274c5addbb8540cc6cff53`.
+- #125/#126/#127/#128/#130은 미결 CR이므로 승인 완료 전에는 본 후보의 확정 Scope/AC 변경 입력으로 사용하지 않는다.
+- 이 정정 후에도 후보 WBS와 전체 Release Set은 미완성이므로 Draft/NOT RELEASED를 유지한다.
 
 ## 후보 WBS 위치와 Gate 경계
 
