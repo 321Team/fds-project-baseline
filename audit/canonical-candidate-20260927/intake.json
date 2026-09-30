@@ -1,5 +1,5 @@
 {
-  "generated_at_kst": "2026-09-27T17:55:00+09:00",
+  "generated_at_kst": "2026-09-30T00:00:00+09:00",
   "base_canonical": "v3.1.20",
   "base_publication_kst": "2026-09-23T02:37:13+09:00",
   "source_main": "2084182f97b593b3950194f44c071a88c0dfc4da",
@@ -195,5 +195,46 @@
       "reason": "채용설명회 및 직무테스트로 인한 휴가",
       "scope": "Personal absence"
     }
-  ]
+  ],
+  "rosa_scope_priority_review": {
+    "date_kst": "2026-09-30",
+    "audit_path": "audit/phase2-rosa-scope-priority-review-20260930/README.md",
+    "matrix_path": "audit/phase2-rosa-scope-priority-review-20260930/priority-matrix.json",
+    "current_canonical": "docs-v3.1.20 / RELEASED",
+    "status_correction_scope": [
+      "CURRENT.md",
+      "releases/v3.1.20/README.md",
+      "releases/v3.1.20/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.20.md",
+      "baseline/FDS_Project_Implementation_Baseline_v3.1.20.md"
+    ],
+    "issue_updates": {
+      "phase2_carry_over": [
+        25,
+        26,
+        27
+      ],
+      "priority_demoted_to_p1": [
+        44
+      ],
+      "dependency_corrected": [
+        45,
+        49,
+        50,
+        53,
+        54
+      ],
+      "p1_nonblocking": [
+        25,
+        26,
+        27,
+        40,
+        41,
+        44,
+        48,
+        51,
+        95
+      ]
+    },
+    "canonical_regeneration": "PENDING"
+  }
 }
