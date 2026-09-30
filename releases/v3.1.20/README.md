@@ -1,8 +1,10 @@
-# v3.1.20 — CANDIDATE / COLLECTING (정식 발행 보류)
+# v3.1.20 — RELEASED / 발행 전 후보 이력 보존
 
-상태: **CANDIDATE / COLLECTING**. 운영 정본은 여전히 **RELEASED v3.1.19**(`releases/v3.1.19/`, Tag `docs-v3.1.19`)이다. 이 디렉터리는 아직 완성된 릴리스가 아니며, `SHA256SUMS`·Distribution Manifest·Release Notes 등 RELEASE_POLICY §2의 필수 산출물을 포함하지 않는다. Tag 생성·GitHub Release 발행은 수행하지 않았고 수행하지 않는다.
+> **현재 상태 정정 — 2026-09-30 KST**  
+> `docs-v3.1.20`은 **2026-09-23 02:37:13 KST에 실제 발행된 현행 운영 정본**이다. 아래의 `CANDIDATE / COLLECTING / 정식 발행 보류` 표현은 2026-09-21~22 후보 수집 당시의 역사 기록이며 현재 배포 상태로 해석하지 않는다. 실제 발행 상태는 `CURRENT.md`와 GitHub Release API가 우선한다.  
+> 이 정정은 v3.1.20 Tag/Asset/SHA256SUMS를 소급 변경하지 않는다. main-side 상태 설명의 정정은 차기 정본 후보 `release/v3.1.21` / Draft PR #112에서 추적한다.
 
-## 목적
+## 후보 수집 당시 목적 — 역사 기록
 
 이 브랜치는 v3.1.19 이후 발생하는 governance/tooling/티켓 변경분을 **정식 v3.1.20 발행 시점까지 모아두는 후보 수집 지점**이다. RELEASE_POLICY §2.3(완료 변경 요청의 정본 동기화) 대상이 쌓이면 이 브랜치 위에 반영하고, 정본 Lead가 실제 발행을 결정할 때 §2의 10개 필수 산출물(Baseline, WBS/Gantt, Ticket Pack, Release Notes, Manifest, SHA256SUMS, Architecture, Integrity Audit, ZIP, WEB 스냅샷)을 갖춰 완성한다.
 
@@ -75,13 +77,13 @@ Phase 1 지연으로 Phase 2 실제 착수(`MS-P2-START-01` #33)가 09-28 → **
 - **반영 대상**: #33~#57 Phase 2 티켓 24건 전체에 각 티켓 코멘트로 일정 갱신을 기록했다. 티켓 본문 속성표는 변경하지 않았다(정본 통합 시점에 일괄 반영 예정).
 - 이 갱신은 §4.1(일정 유연성)에 따른 계획 목표 조정이며, 실제 착수·완료·Gate 승인·AC 상태를 변경하지 않는다.
 
-## 이 커밋이 수행하지 않는 것
+## 후보 수집 당시 수행하지 않았던 것 — 역사 기록
 
 - v3.1.19의 어떤 파일·Tag·SHA256SUMS·GitHub Release도 수정하지 않는다.
 - WBS/Gantt·Ticket Pack·Baseline·Architecture 문서를 새로 만들거나 복사하지 않는다 (변경 사유가 없음).
 - git tag 생성, GitHub Release 발행, Asset 업로드를 수행하지 않는다 — RELEASE_POLICY §6에 따라 "권한 있는 운영자"의 별도 결정·실행 사항이다.
 
-## 다음 조치 (Lead 결정 필요)
+## 후보 수집 당시 다음 조치 — 역사 기록
 
 1. 이 브랜치를 유지하며 후속 governance/티켓 변경이 쌓이는지 관찰한다.
 2. 실제 발행이 필요하다고 판단되는 시점에 §2 필수 산출물을 준비하고 이 PR을 갱신한다.
