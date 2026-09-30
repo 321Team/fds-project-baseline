@@ -1,5 +1,5 @@
 {
-  "generated_at_kst": "2026-09-30T00:00:00+09:00",
+  "generated_at_kst": "2026-09-30T17:36:00+09:00",
   "canonical_reference": "docs-v3.1.20",
   "candidate_pr": 112,
   "candidate_branch": "release/v3.1.21",
@@ -55,6 +55,20 @@
     {
       "issue": 54,
       "change": "add D25/D26 to related decisions"
+    },
+    {
+      "issue": 120,
+      "record_id": "DEC-P2-GITOPS-01",
+      "priority": "P1",
+      "blocking": false,
+      "scope": "OpenShift GitOps adoption decision"
+    },
+    {
+      "issue": 121,
+      "record_id": "DEC-P2-COMP-01",
+      "priority": "P1",
+      "blocking": false,
+      "scope": "Compliance Operator adoption decision"
     }
   ],
   "p0_delivery_core": [
@@ -90,7 +104,9 @@
     44,
     48,
     51,
-    95
+    95,
+    120,
+    121
   ],
   "scope_rules": {
     "rosa_hcp_control_plane": "managed_by_red_hat",
@@ -98,7 +114,10 @@
     "oadp": "P1_nonblocking",
     "hybrid_dns": "P1_conditional",
     "operator_mirror": "P1_conditional",
-    "rhoai": "P1_deferred_default"
+    "rhoai": "P1_deferred_default",
+    "openshift_gitops": "P1_decision_nonblocking_default_runner_direct",
+    "compliance_operator": "P1_decision_nonblocking",
+    "procedure_simplification": "NO_NEW_CHANGE_KEEP_CURRENT_REVISIT_LATER"
   },
   "canonical_regeneration_pending": [
     "WBS priority/phase/milestone",
