@@ -43,6 +43,17 @@
 
 **주의:** 위 Issue metadata/body 변경은 운영 입력으로 이미 반영했으나, 후보 WBS/Baseline/Ticket Pack 전체 재생성은 아직 수행하지 않았다. 정본 후보 산출물은 Issue 최신 상태를 수집하여 일괄 재생성한다.
 
+## 2026-09-30 선택 제품 유입 범위
+
+- 회의 결과: **추가 절차 간소화 미적용 / 현행 Governance·Review·Evidence 절차 유지 / 후속 재검토**.
+- 활성 추가 제품 검토는 다음 두 P1 Decision으로 한정:
+  - #120 `DEC-P2-GITOPS-01` — OpenShift GitOps(Argo CD), P1 / G5·G6 non-blocking
+  - #121 `DEC-P2-COMP-01` — Compliance Operator, P1 / G5·G6 non-blocking
+- #120 미결정이면 #46 Runner direct ROSA Delivery를 유지한다. Go 시에만 Delivery Contract 변경 CR을 발행한다.
+- #121 미결정이면 #38 현행 ROSA Platform/Security P0 AC를 유지한다. Compliance 결과는 자동 P0 blocker나 규제 준수 인증으로 확대하지 않는다.
+- RHOAI(#95)는 P1/Deferred 우선이며 이번 활성 유입 범위에서 제외한다.
+- 상세: `audit/phase2-product-intake-20260930/README.md`
+
 ## 후보 WBS 위치와 Gate 경계
 
 사전 수집 단계에서는 WBS를 `audit/canonical-candidate-20260927/proposed/` 아래에 둔다. `wbs/FDS_v3.1.21_...` 경로는 Manifest/SHA256SUMS/ZIP/WEB 등 전체 릴리즈 세트가 준비될 때 승격한다. 이는 `canonical-integrity`가 불완전한 릴리즈 후보를 차단하는 현행 Gate와 일치한다.
