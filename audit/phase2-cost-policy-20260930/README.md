@@ -135,3 +135,21 @@ TICKET_SYNC_POLICY §5.1의 본문 직접 수정 금지를 준수하면서, 다�
 - 기존 Issue body/title/state/label은 이번 비용정책 반영으로 수정하지 않았다.
 - Native `DEC-P2-COST-01` Issue는 아직 생성하지 않았다.
 - 차기 정본에서 Decision record와 관련 ticket description을 재생성할 때 이 감사 기록과 코멘트를 입력으로 사용한다.
+
+
+## 10. Cost-aware Test Strategy 연계
+
+사용자 승인에 따라 비용정책의 실행 전략을 `P2-TEST-STRATEGY-01`로 연결한다.
+
+- W0 PRECHECK: Local/CI/제공 OCP에서 유료 ROSA 반입 전 결함 제거
+- W1 G4: D21/IaC/IAM-OIDC/VPN/Registry/Cost GO
+- W2 G5: 실제 ROSA Platform→App→Runner Delivery
+- W3 G6: 동일 ROSA에서 Hybrid→E2E→Failure/Recovery→Regression
+- 10-23: Final Evidence/Cost/Resource Inventory 후 teardown 기본값
+- $400 초과 예상: P1/선택 시험 Deferred-first
+- $450 이상 예상: 신규 paid Runtime/Create/Recreate Hard Stop
+- Full ROSA recreate: P0 필수 아님 / 조건부 P1
+
+상세: `../phase2-test-strategy-20260930/README.md`
+
+이 연계는 DEC-P2-COST-01의 $400/$450/$500 기준을 변경하지 않는다.
