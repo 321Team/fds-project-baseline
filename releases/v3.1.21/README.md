@@ -54,6 +54,21 @@
 - RHOAI(#95)는 P1/Deferred 우선이며 이번 활성 유입 범위에서 제외한다.
 - 상세: `audit/phase2-product-intake-20260930/README.md`
 
+## 2026-09-30 일정 재계획
+
+- **Project Close:** 2026-10-26(월) 확정
+- **Non-working:** 10-05, 10-09, 토·일
+- **Phase 1:** 10-02 G3/최종 증적·문서 cutoff → 10-06 Review/Close
+- **Phase 2 Start:** 10-07
+- **G4:** 10-14
+- **G5:** 10-20
+- **G6:** 10-22
+- **Deliverable Freeze / Phase 2 Review:** 10-23
+- **Project Close:** 10-26
+- 상세: `audit/project-schedule-replan-20260930/README.md`
+- Machine-readable: `audit/project-schedule-replan-20260930/schedule.json`
+- 기존 후보 WBS XLSX는 이번 재계획 전 생성본이므로 **STALE / 전체 재생성 대상**이다. 최신 Issue 일정에서 재생성하며 바이너리 부분 패치로 정합성을 깨지 않는다.
+
 ## 후보 WBS 위치와 Gate 경계
 
 사전 수집 단계에서는 WBS를 `audit/canonical-candidate-20260927/proposed/` 아래에 둔다. `wbs/FDS_v3.1.21_...` 경로는 Manifest/SHA256SUMS/ZIP/WEB 등 전체 릴리즈 세트가 준비될 때 승격한다. 이는 `canonical-integrity`가 불완전한 릴리즈 후보를 차단하는 현행 Gate와 일치한다.
