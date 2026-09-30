@@ -155,6 +155,20 @@ fds-app namespace 정정, monitor01 입력, Grafana namespace 정정, Alertmanag
 - Native Decision Issue는 TICKET_SYNC_POLICY §5.1에 따라 AI가 본문을 신규 작성하지 않고, `audit/phase2-cost-policy-20260930/`의 후보를 담당자가 수동 적용한다.
 - 이 결정은 비용 통제를 승인한 것이며 AWS/ROSA provisioning·Runtime/Gate/Close 승인이 아니다.
 
+## 5.5 2026-09-30 Cost-aware Test Strategy
+
+- 사용자 승인 전략: **W0 PRECHECK → W1 G4 → W2 G5 → W3 G6 → 10-23 CLOSE/TEARDOWN**.
+- ROSA는 G4에 가까운 시점까지 생성 시점을 늦추고, 생성 후 G5→G6를 동일 Cluster에서 연속 수행한다.
+- Phase 1 Failure Contract(#119) 승인/잔여판정을 Phase 2 Expected Result의 선행 입력으로 사용한다.
+- 제공 OCP는 LAB-RUNTIME/PRECHECK로만 사용하고 ROSA Runtime PASS로 승격하지 않는다.
+- $400 Target 초과 예상 시 P1 Deferred-first, $450은 신규 유료 Runtime/Create/Recreate Hard Stop.
+- Full ROSA destroy→recreate는 P0 필수가 아니며 조건부 P1.
+- 10-21에 E2E 대부분을 수행하고 10-22는 Final Regression/Evidence 확정일로 사용한다.
+- 별도 승인된 실시간 Demo 요구가 없으면 10-23 Final Evidence/Cost/Inventory 후 ROSA teardown을 기본값으로 한다.
+- 상세: `audit/phase2-test-strategy-20260930/README.md`
+- Machine-readable: `audit/phase2-test-strategy-20260930/runtime-window-plan.json`
+- 기존 후보 WBS XLSX는 계속 **STALE / REGENERATION REQUIRED**이며 이 전략을 재생성 입력으로 포함한다.
+
 ## 6. v3.1.21 필수 이월 사항
 
 `audit/canonical-followup-20260923/README.md`의 미반영 항목을 유지한다.
