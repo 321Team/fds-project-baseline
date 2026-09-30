@@ -4,7 +4,7 @@
 > 예비 판정·권장은 제안이다. 결정란에 적힌 사항만 결정으로 보며, 정책·티켓·정본 반영은 결정 후 별도 PR·CR로 한다.
 > 양식: [회의록 템플릿](MEETING_TEMPLATE.md) / 안건 1 원문: [1차 결과 검토·2차 방향 종합 의견](../audit/team-review-summary-20260928/README.md)
 > 작성: 2026-09-28~29, 이권욱 요청, Claude Code 작성(AI 사용).
-> **ROSA 기준 정합(2026-09-30 KST):** 결정란·결정 사항·Action Item은 PR #112(`release/v3.1.21`, HEAD `8370f18`)의 감사 기록과 Issue #120·#121 조회 결과에 기록된 사실만 옮겼다. 기록이 없는 항목은 **미결정**으로 남겼다. 일정은 #112 일정 재계획(`audit/project-schedule-replan-20260930/`)을 따르며, 회의록에서 별도 기한을 정하지 않는다. #112는 아직 Draft이며 정본(v3.1.21)은 발행 전이다.
+> **ROSA 기준 정합(2026-09-30 KST):** 결정란·결정 사항·Action Item은 PR #112(`release/v3.1.21`, HEAD `8370f18`)의 감사 기록과 Issue #120·#121 조회 결과에 기록된 사실만 옮겼다. 비용 기준은 #112의 DEC-P2-COST-01(`audit/phase2-cost-policy-20260930/`, HEAD `edbffd8`)을 따른다. 기록이 없는 항목은 **미결정**으로 남겼다. 일정은 #112 일정 재계획(`audit/project-schedule-replan-20260930/`)을 따르며, 회의록에서 별도 기한을 정하지 않는다. #112는 아직 Draft이며 정본(v3.1.21)은 발행 전이다.
 
 - 참석: 이권욱, 이하영, 이재환
 - 작성: 이권욱 (Claude Code 작성 보조, AI 사용)
@@ -23,7 +23,7 @@
 | 목적 | 무엇을 해결하려는가 |
 | 현황 | 지금 상태와 근거(티켓·링크·SHA) |
 | 실익 | 얻는 것(발표·운영·보안·일정) |
-| 비용·공수 | 금액(크레딧 대상 / 자부담), 인일(추정이면 추정 표시) |
+| 비용·공수 | 금액(프로젝트 귀속 총지출 기준, DEC-P2-COST-01. 크레딧 대상 / Marketplace 구분은 참고), 인일(추정이면 추정 표시) |
 | 3가치 영향 | 재현성 / 무결성 / 추적성: ↑ 강화 · – 무관 · ↓ 약화 |
 | 리스크 | 예상 리스크와 완화책 |
 | Go 조건 | 모두 충족하면 Go |
@@ -35,7 +35,7 @@
 - N1 정본 Scope Out 또는 Fixed 항목과 충돌하는데 CR이 없음
 - N2 P0 일정(G4 10-14, G5 10-20, G6 10-22, Deliverable Freeze·Phase 2 Review 10-23, Project Close 10-26)을 침해함 — 2026-09-30 재계획 기준
 - N3 3가치 중 하나라도 ↓이고 완화책이 없음
-- N4 비용이 팀이 합의한 자부담 상한을 넘음
+- N4 비용이 DEC-P2-COST-01 기준을 침해함: Control Cost(실제 총지출 + 미반영·예상 비용)가 $450 Operational Hard Stop 이상인 신규 소비, 또는 $500 Ceiling 초과 예상. $400 Target 초과 예상 시 P1·선택 항목은 Deferred 우선 — 2026-09-30 승인 기준
 
 ---
 
@@ -159,6 +159,7 @@
 | P1 공통 | – | #25·#26·#27·#44·#48·#51·#95는 구현일 미배정. P0 여유가 있을 때만 착수하고, 미착수 시 Deferred·N/A·Cancelled·Known Issue로 Close | Issue 반영 |
 | #9 LB 재부팅 시나리오 | AC 범위 포함 여부 판단 | 기록 없음 | **미결정** (이권욱) |
 | #10 PARTIAL 문구·CoreDNS 분산 | 정합화 | 기록 없음 | **미결정** (이하영) |
+| 비용 기준 (1-5) | 예산 기준을 크레딧 한도에서 자부담 상한으로 전환, 10-05 합의 | **DEC-P2-COST-01 승인(9/30):** Target ≤ $400 / Operational Hard Stop $450 / Protected Reserve $50($450~$500) / Total Ceiling $500. 프로젝트 귀속 총지출(gross) 기준이며 Marketplace 등 크레딧 미적용 비용도 포함. 크레딧·지원금으로 상한을 늘리지 않음. 24x7 상시 가동은 기본값이 아님. 기존 추정(웹 검색 단가, 실측 아님)을 총지출로 환산하면 평일 10h 약 $160, 상시 480h 약 $511(Ceiling 초과) | #112 수집, #34·#35·#38·#42·#49·#55·#57 코멘트 연결. Native Issue 미생성. 결제 주체는 **미결정** |
 | #24 · #30~#32 | 유예 항목·Known Issue 목록 반영 | #24 End 10-02, #30~#32는 10-06 유지 | 일정만 반영. 목록 반영은 **미결정** |
 
 **P0 기술 핵심 체인 (9/30 재확정):** #34 Architecture → #35 IaC → #36 OCI Go/No-Go → #37 VPN → #38 ROSA → #42 Registry Decision → #43 App → #46 CI/CD → #47 Hybrid → #50 E2E → #49 Documentation/Freeze. 담당자당 활성 핵심 P0 1개를 기본으로 한다.
@@ -317,12 +318,12 @@
 | 목적 | Phase 2 ROSA 위에 추가할 Red Hat 제품의 범위를 3가치와 실익으로 판정 |
 | 현황 | 2026-09-28 기준 ROSA 위에 구현된 제품 없음. 제품 후보는 9/23 #34 코멘트. 9/30 활성 검토를 #120 GitOps·#121 Compliance로 한정(둘 다 P1, G5·G6·Project Close 비차단). 교육기관 제공 OCP 4.20.0에서 읽기 전용 사전조사 완료(4-3) |
 | 최종 결정 시점 | #34 Architecture 동결 **10-07**. #120·#121 Decision 창 **10-15~10-16**(#40·#41과 같은 창). 10-16까지 미결정이면 Deferred로 처리하고 P0는 계속 진행 |
-| 공통 선행조건 | D26(#41 Decision, 10-15~10-16) Operator 공급 방식. 자부담 상한 합의(시점은 #112 일정 기준) |
+| 공통 선행조건 | D26(#41 Decision, 10-15~10-16) Operator 공급 방식. 비용은 DEC-P2-COST-01(Target ≤ $400 / Hard Stop $450 / Reserve $50 / Ceiling $500) 적용 |
 
 **제품별 공통 Go 조건 (모두 충족해야 Go)**
 - P1 정본 범위와 맞음(Scope Out·Fixed 충돌 없음, 또는 CR 승인)
 - P2 D26 경로로 설치할 수 있음
-- P3 비용이 자부담 상한 안
+- P3 비용이 DEC-P2-COST-01 Target($400) 안이며 $450 Hard Stop을 침해하지 않음(P1은 $400 초과 예상 시 Deferred 우선)
 - P4 공수가 P0 일정을 침해하지 않음
 - P5 매일 재생성 운영에서 Git·IaC로 다시 설치·복원할 수 있음(재현성)
 - P6 무엇을 증적으로 남길지 정해져 있음(추적성)
@@ -352,7 +353,7 @@
 | OpenShift GitOps | #34에서 CR 필요 여부 판단, 재생성 후 Git 복원 1회 시연 | D26 경로로 설치 불가, CR 반려 | **Go** | 활성 검토 — #120 P1·비차단, Lead 이권욱, 10-15~16 결정 대기(PENDING). Go 전에는 #46 Runner direct 배포 유지, Go 시 #46 Delivery Contract CR 필요 |
 | Compliance Operator | 점검 결과를 Known Issue와 연결할 기준 | D26 경로로 설치 불가 | **Go** | 활성 검토 — #121 P1·비차단, Lead 이하영, 10-15~16 결정 대기(PENDING). Go 전에는 #38 P0 보안 AC 유지. 결과를 규제 준수 인증이나 자동 P0 차단으로 확대하지 않음 |
 | RHOAI | 구독료·체험판 확인, 워커 대수 확정, Scope Out CR 승인, 연장 기간(10-27~31) 한정 | 구독료 미확인 상태로 착수, 프로젝트 기간 내 P0 침해 | **보류**(연장 PoC 조건부) | P1 / Deferred 우선(#95). 10-26 전 구현 기본계획 제외, 이번 유입 범위 밖 |
-| ACS Cloud Service | 자부담 상한 안, 정책은 경고(audit) 모드부터 | 자부담 상한 초과, 강제 모드로 P0 배포 차단 | **조건부 Go** | 현재 유입 범위 밖 — 별도 승인 전 검토 후보·Deferred |
+| ACS Cloud Service | DEC-P2-COST-01 Target 안, 정책은 경고(audit) 모드부터 | Hard Stop·Ceiling 침해, 강제 모드로 P0 배포 차단 | **조건부 Go** | 현재 유입 범위 밖 — 별도 승인 전 검토 후보·Deferred |
 | Logging → CloudWatch | CloudWatch 비용 한도 설정 | 비용 한도 미설정 | 선택(여유 시) | 현재 유입 범위 밖 — 별도 승인 전 검토 후보·Deferred |
 | Network Observability | 저장소 요구사항 확인 | 별도 저장소가 필요해 공수 증가 | 선택(여유 시) | 현재 유입 범위 밖 — 별도 승인 전 검토 후보·Deferred |
 | cert-manager Operator | infra-pki와의 역할 분담 합의 | 사설 CA 체계와 충돌 | 선택(여유 시) | 현재 유입 범위 밖 — 별도 승인 전 검토 후보·Deferred |
@@ -392,7 +393,7 @@
 | D-6 | R1~R5 이번 주 적용 항목 | 팀 | 9/29 | 미적용 — 현행 유지, 후속 재검토 (9/30) |
 | D-7 | 자동 점검 A1~A3 도입 순서 | 이권욱 | 9/29 | **미결정** — 결정 기록 없음. 후속 재검토 때 함께 다룸 |
 | D-8 | Red Hat 제품 예비 판정(4-2) 확인 | 팀 | 9/29 예비 → 10-15~16 최종 | 활성 검토를 #120 GitOps·#121 Compliance(P1, 비차단)로 한정. RHOAI Deferred 우선, 나머지는 유입 범위 밖 (9/30). #120·#121 채택 여부는 **미결정** |
-| D-9 | 자부담 상한·결제 주체 | 팀 | #112 일정 기준 | **미결정** |
+| D-9 | 자부담 상한·결제 주체 | 팀 | #112 일정 기준 | 상한: **DEC-P2-COST-01 승인**(9/30) — Target ≤ $400 / Hard Stop $450 / Reserve $50 / Ceiling $500, 총지출 기준. 결제 주체는 **미결정** |
 | D-10 | 안건 1-1 미구축 서비스 처리 | 각 티켓 Lead | 9/29 | #25·#26·#27은 Phase 2 / P1 / G6 비차단으로 이관, #21·#22는 10-02 cutoff (9/30, Issue 반영). #27 On-Prem CP 보완 시험 여부는 **미결정** |
 | D-11 | 안건 1-7 정본 유입 반영 후보 확인 | 각 티켓 Lead | 이번 주 | #25·#26·#27·#44·#95는 #112에 수집(v3.1.21 미발행). #9·#10·#21·#22 판정, #24·#30~#32 Known Issue 목록은 **미결정** (1-8 참조) |
 
@@ -404,6 +405,7 @@
 2. **우선순위(ROSA 기준):** P0는 Phase 2 핵심 성공 체인과 Gate로 한정한다(1-8). P1 미완료는 P0 Gate를 자동으로 막지 않는다. #44 OADP는 P1로 하향하고, #25·#26·#27은 Phase 2 / P1 / G6 비차단으로 옮긴다. P1을 P0로 올리려면 CR과 인력·일정 영향 검토가 필요하다.
 3. **Red Hat 제품 유입:** 활성 검토는 #120 OpenShift GitOps와 #121 Compliance Operator 두 건이다(둘 다 P1, 비차단). Go 전에는 #46 Runner direct 배포와 #38 P0 보안 AC를 바꾸지 않는다. RHOAI(#95)는 Deferred 우선이며, ACS 등 나머지 제품은 별도 승인 전 유입 범위 밖이다.
 4. **일정:** Project Close는 **10-26(월)**으로 확정하며 자동 연장하지 않는다. 10-05와 10-09, 모든 주말은 비근무일이다. Phase 1은 10-02 cutoff, 10-06 Review·Close로 마무리한다. Phase 2는 10-07 Start, G4 10-14, G5 10-20, G6 10-22, Freeze·Review 10-23으로 진행한다. Phase 2 실작업일은 13일이다.
+5. **비용(DEC-P2-COST-01, 2026-09-30 승인):** Target Spend ≤ $400, Operational Hard Stop $450, Protected Reserve $50($450~$500), Total Ceiling $500. 프로젝트 귀속 총지출에 미반영·예상 비용을 더한 Control Cost로 판정한다. $400 초과 예상 시 P1·선택 실험은 Deferred 우선, $450에서 신규 유료 생성·확장·recreate를 중단한다. Reserve는 billing lag·삭제 지연·cleanup 잔여 과금에만 쓴다. 이 결정은 비용 통제 승인이며 AWS/ROSA 리소스 생성, P1 도입, Gate 통과를 승인하지 않는다.
 
 ## Action Item
 
@@ -419,6 +421,8 @@
 | #40 DNS·#41 Operator 공급 Decision | 각 티켓 Lead | 10-15~10-16 |
 | #9·#10·#27 CP 보완 시험 판단(1-8의 미결정 항목) | 이권욱, 이하영 | 미정 |
 | 절차 간소화 후속 재검토 회의 일정 | 이권욱 | 미정 |
+| Native Issue `DEC-P2-COST-01` 생성(§5.1에 따라 사람이 직접, 후보: `audit/phase2-cost-policy-20260930/decision-record.md`) | 이권욱 | 미정 |
+| 결제 주체 결정(D-9 잔여) | 팀 | 미정 |
 
 ## 미확인
 
