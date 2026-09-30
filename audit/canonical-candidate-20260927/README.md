@@ -183,6 +183,19 @@ fds-app namespace 정정, monitor01 입력, Grafana namespace 정정, Alertmanag
 - 본 정정은 Audit/Cost/Test Strategy 등 v3.1.21 신규 후보 기록을 폐기하지 않는다.
 - 정본 재생성은 승인 완료된 Issue/CR만 Source로 사용하고, WBS/Baseline/Ticket Pack/Manifest/SHA256SUMS/ZIP/WEB을 일괄 재생성한다.
 
+## 5.7 2026-09-30 Phase 2 담당 리밸런싱
+
+- 팀 회고의 **3인 수행 전환 / 대형 티켓 집중 / 담당 인지 지연** 문제와 최근 #125~#130 CR·리뷰 피로를 반영해, 신규 리밸런싱 Ticket/CR을 추가하지 않고 기존 P0 3건의 실행 책임만 최소 조정했다.
+- #35 P2-IAC-01: Lead **이권욱 → 이하영**, Support 이권욱
+- #37 P2-VPN-01: Lead **이권욱 → 이재환**, Support 이권욱
+- #42 DEC-P2-REG-01: Lead **이하영 → 이권욱**, Support 이하영·이재환
+- 목적은 균등 분배 자체가 아니라 `Cloud Platform(#35→#38)`, `Hybrid data path(#37→#43→#47→#50)`, `Registry/CI-CD/Cost Governance(#42→#46)`의 연속 책임을 만들고 G4~G6 handoff를 줄이는 것이다.
+- #35 이동과 동시에 #42를 반대 방향으로 이동해 이하영에게 대형 P0가 다시 집중되는 것을 방지한다.
+- 일정·Scope·AC·Priority·Milestone·Review Authority는 변경하지 않았다.
+- P1은 기존 Deferred-first/non-blocking을 유지한다.
+- 상세: `audit/project-schedule-replan-20260930/README.md §5.1`.
+- 기존 후보 WBS는 STALE이므로 다음 전체 재생성 시 최신 Issue Lead/Support를 Source로 반영한다.
+
 ## 6. v3.1.21 필수 이월 사항
 
 `audit/canonical-followup-20260923/README.md`의 미반영 항목을 유지한다.
