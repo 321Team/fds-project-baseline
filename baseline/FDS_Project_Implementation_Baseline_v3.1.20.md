@@ -2,7 +2,7 @@
 # On-Premises / Hybrid FDS 프로젝트 Implementation Baseline v3.1.20
 
 > **Release:** v3.1.20  
-> **Status:** RELEASED — `docs-v3.1.20`, 2026-09-23 02:37:13 KST 게시  
+> **Status:** CANDIDATE / COLLECTING — 정식 발행 보류, release/v3.1.20 후보 수집 중 (PR #87)  
 > **팀 프로젝트 착수일:** 2026-08-24  
 > **팀 구성:** 3인  
 > **1차 부제:** MSA 기반 거래 시스템 구축 및 FDS 모니터링  
@@ -12,14 +12,7 @@
 
 ---
 
-## 0. v3.1.20 통합 변경 (RELEASED · 후보 단계 기록 포함)
-
-### 발행 상태 해석
-
-- 현재 운영 정본 인용은 `docs-v3.1.20 / RELEASED`를 사용한다.
-- 아래 절의 후보 수집 시점 표현과 본문 내 과거 `CANDIDATE / NOT RELEASED` 표기는 당시 이력이며 현재 발행 상태를 덮어쓰지 않는다.
-- Runtime, AC, Gate 완료 여부는 Release 상태와 별개로 각 최신 Issue/Evidence에서 판정한다.
-- v3.1.20 발행 Tag/Asset/SHA256SUMS는 소급 변경하지 않는다.
+## 0. v3.1.20 통합 변경 (CANDIDATE)
 
 기준 2026-09-22 KST. v3.1.19 태그(`966fc5365874b1d259a9810fc876b57c3bfa0e08`, 2026-09-17) 이후 **종결(Done) 처리된 GitHub Issue 0건**이며, WBS/Ticket Pack/Baseline/Architecture 콘텐츠(완료 상태) 변경은 없다. 아래 두 종류의 변경만 반영한다.
 
