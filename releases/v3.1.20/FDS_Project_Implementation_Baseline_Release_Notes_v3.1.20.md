@@ -1,8 +1,6 @@
 # FDS v3.1.20 Release Notes
 
-상태: **RELEASED** · `docs-v3.1.20` · 게시 2026-09-23 02:37:13 KST
-
-> **발행 후 상태 정정 — 2026-09-30 KST:** 본 문서 아래의 `후보`, `발행 잔여`, `정식 발행 보류` 표현은 2026-09-22 후보 작성 시점의 역사 기록이다. 현재 정본 상태는 `CURRENT.md`와 GitHub Release API의 `docs-v3.1.20 / RELEASED`가 우선한다. v3.1.20 Tag/Asset/SHA256SUMS는 소급 수정하지 않으며, 본 상태 설명 정정은 차기 정본 후보 PR #112에서 추적한다.
+상태: CANDIDATE / COLLECTING · 기준 2026-09-22 (정식 발행 보류, `release/v3.1.20` PR #87)
 
 전체 67건 / 일정관리 58건 / 역사적 종결 9건 / Milestone 67/67건. 상태 집계: Done 18, In Progress 11, To Do 38. (v3.1.19 대비 Status 변경 없음 — governance/CI 수정과 Phase 2 24건 일정 갱신만 반영)
 
@@ -29,8 +27,8 @@ APPROVED_INPUT은 확인된 사용자/Lead 결정의 명시 범위만 뜻한다.
 
 WBS 편집은 셀 단위 diff로 검증했다(포뮬러 0건 변경, 의도한 48개 셀만 변경). 이 샌드박스에서 LibreOffice 재계산이 동작하지 않아 정식 재계산 검증은 미수행이므로, 실제 Excel에서 재계산·시각 확인을 권장한다.
 
-## 후보 작성 당시 발행 잔여 — 현재는 발행 완료
+## 발행 잔여
 
-아래 내용은 후보 작성 당시 잔여 항목이었다. 이후 PR #87 병합·최종화와 `docs-v3.1.20` Tag/GitHub Release/Asset 발행이 완료되어 현재 배포 상태 판단에는 사용하지 않는다. 당시 후보 단계에서는 이재환 리뷰, Distribution Manifest, SHA256SUMS, Integrity Audit Result, WEB 스냅샷, Distribution ZIP+checksum 및 Tag/Release 발행이 잔여였다.
+내용 측면: 이재환 리뷰(PR #87, sole reviewer 조정 진행 중) 완료가 필요하다. 형식 측면: RELEASE_POLICY §2 필수 산출물 중 Distribution Manifest, SHA256SUMS, Integrity Audit Result, WEB 스냅샷, Distribution ZIP+checksum이 아직 준비되지 않았다(작업 진행 중). Tag 생성, GitHub Release 발행, Asset 업로드는 §6에 따라 권한 있는 운영자의 별도 결정·실행 사항이며 이번 후보 수집 작업 범위에 포함하지 않는다.
 
 배포 상태의 효력과 작성 시점은 `releases/v3.1.20/README.md`를 따른다.
