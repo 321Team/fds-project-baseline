@@ -144,6 +144,17 @@ fds-app namespace 정정, monitor01 입력, Grafana namespace 정정, Alertmanag
 - 상세: `audit/project-schedule-replan-20260930/README.md`
 - 기존 proposed WBS XLSX는 **STALE_REGENERATE_FROM_LATEST_ISSUES**로 판정.
 
+## 5.4 2026-09-30 Cloud Cost 정책
+
+- 사용자 승인 정책: **Target ≤ $400 / Operational Hard Stop $450 / Protected Reserve $50 / Total Ceiling $500**.
+- 신규 Decision record: `DEC-P2-COST-01` — **APPROVED POLICY INPUT / P0 cost-lifecycle control**.
+- $400 도달 또는 초과 예상 시 신규 P1/선택 실험 Deferred 우선.
+- $450은 신규 유료 소비 Hard Stop이며 $450~$500은 billing lag·teardown delay·cleanup residual 전용 Reserve.
+- 판정은 Actual/Gross + 확인 가능한 미반영/Projected cost를 포함한다.
+- 관련: #34/#35/#38/#42/#49/#55/#57.
+- Native Decision Issue는 TICKET_SYNC_POLICY §5.1에 따라 AI가 본문을 신규 작성하지 않고, `audit/phase2-cost-policy-20260930/`의 후보를 담당자가 수동 적용한다.
+- 이 결정은 비용 통제를 승인한 것이며 AWS/ROSA provisioning·Runtime/Gate/Close 승인이 아니다.
+
 ## 6. v3.1.21 필수 이월 사항
 
 `audit/canonical-followup-20260923/README.md`의 미반영 항목을 유지한다.
