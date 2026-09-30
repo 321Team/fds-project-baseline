@@ -54,21 +54,23 @@ Phase 2 E2E의 DB/FDS 장애 Expected Result가 이 CR의 승인 결과를 소�
 ## #120 / #121
 GitOps/Compliance는 P1 non-blocking 유지. P0 결함, $400 초과 예상, G5/G6 일정 영향, 공급/권한 미확정 중 하나라도 있으면 Runtime 구현은 Deferred-first로 처리한다.
 
-## 적용 전 snapshot
+## 운영 코멘트 적용 후 snapshot
 
-- #33: updated_at `2026-09-30T08:58:57Z` — [MS-P2-START-01] Phase 2 Start
-- #34: updated_at `2026-09-30T13:12:04Z` — [P2-ARC-01] Hybrid / OCI / AWS / ROSA Architecture Freeze
-- #35: updated_at `2026-09-30T13:12:14Z` — [P2-IAC-01] AWS / ROSA Terraform IaC
-- #36: updated_at `2026-09-30T08:59:13Z` — [P2-OCI-01] OCI Relay Go / No-Go
-- #37: updated_at `2026-09-30T08:59:39Z` — [P2-VPN-01] OCI Relay / AWS Site-to-Site VPN
-- #38: updated_at `2026-09-30T13:12:24Z` — [P2-ROSA-01] ROSA Platform / Security
-- #43: updated_at `2026-09-30T09:00:29Z` — [P2-APP-01] ROSA Application Deployment
-- #46: updated_at `2026-09-30T09:00:40Z` — [P2-CICD-01] Runner to ROSA Delivery
-- #47: updated_at `2026-09-30T09:00:46Z` — [P2-HYB-01] Hybrid DB / Registry Integration
-- #49: updated_at `2026-09-30T13:12:52Z` — [P2-DOC-01] Cloud / Hybrid Deliverable Freeze
-- #50: updated_at `2026-09-30T09:01:14Z` — [P2-E2E-01] Hybrid E2E / Regression
-- #55: updated_at `2026-09-30T13:13:01Z` — [P2-REV-01] Phase 2 Review / Project Close Execution
-- #57: updated_at `2026-09-30T13:13:11Z` — [MS-PROJECT-CLOSE-01] Project Close
-- #119: updated_at `2026-09-30T08:58:51Z` — [CR-P1-APP-01-01] P1-APP-01 AC "DB/FDS 장애 시 /readyz 503" 문구 정정 — fds-engine fail-open 정합
-- #120: updated_at `2026-09-30T09:06:38Z` — [DEC-P2-GITOPS-01] OpenShift GitOps (Argo CD) 도입 범위 결정
-- #121: updated_at `2026-09-30T09:06:45Z` — [DEC-P2-COMP-01] Compliance Operator 도입 범위 결정
+- #33: updated_at `2026-09-30T13:38:39Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/33#issuecomment-5912449502)
+- #34: updated_at `2026-09-30T13:38:54Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-5912453444)
+- #35: updated_at `2026-09-30T13:39:08Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-5912457590)
+- #36: updated_at `2026-09-30T13:39:24Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/36#issuecomment-5912462098)
+- #37: updated_at `2026-09-30T13:39:38Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-5912466439)
+- #38: updated_at `2026-09-30T13:39:52Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/38#issuecomment-5912470914)
+- #43: updated_at `2026-09-30T13:40:06Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/43#issuecomment-5912475099)
+- #46: updated_at `2026-09-30T13:40:21Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/46#issuecomment-5912479459)
+- #47: updated_at `2026-09-30T13:40:36Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/47#issuecomment-5912483670)
+- #50: updated_at `2026-09-30T13:40:50Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/50#issuecomment-5912487784)
+- #49: updated_at `2026-09-30T13:41:04Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/49#issuecomment-5912491664)
+- #55: updated_at `2026-09-30T13:41:18Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/55#issuecomment-5912495364)
+- #57: updated_at `2026-09-30T13:41:33Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/57#issuecomment-5912499666)
+- #119: updated_at `2026-09-30T13:41:47Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/119#issuecomment-5912503337)
+- #120: updated_at `2026-09-30T13:42:00Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/120#issuecomment-5912507218)
+- #121: updated_at `2026-09-30T13:42:16Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/121#issuecomment-5912511435)
+
+본문 수동 반영 시 위 snapshot 이후 추가 변경이 없는지 다시 확인한다.
