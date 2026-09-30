@@ -55,7 +55,7 @@
 | 문제 | 첫 값(CI Scan Digest)은 #16이 생산한다. Run #5는 성공했으나 Push/Deploy가 NOT_EXECUTED이고 Run #5 증적은 [evidence PR #70](https://github.com/321Team/fds-project-evidence/pull/70)이 OPEN이다. HBR이 타 티켓 산출물 때문에 종결하지 못한다. |
 | 변경 | HBR 인수 범위를 **Harbor 소유 구간**으로 한정한다: ① Harbor Artifact Digest ↔ Pod `imageID`(Worker 3대) ② Harbor Trivy Scanner 정상 동작 및 Harbor 스캔 결과 ③ Credential fingerprint. 4/4 전체 trace와 Rollback(이전 승인 Digest 복구)은 #16 / DEC-P1-IMG-01에서 종결한다. |
 | 유지 | 2-way `LOCAL_DIGEST ↔ HARBOR_DIGEST`는 AC-05를 대체하지 않는다는 기존 원칙. HBR은 #16 산출물을 인수·검증하는 책임(기존 6차 리뷰 책임 경계)을 유지하되 종결 조건에서는 제외한다. |
-| 효력 조건 | #16 Lead(이권욱)가 4/4 trace·Rollback 종결 책임 인수를 코멘트로 확인한 뒤 효력. 9/14 결정("4/4 추적에 연결")과 충돌하지 않도록 HBR은 Harbor 측 digest 대조·#16 산출물 인수 검증 책임을 유지한다. |
+| 효력 조건 | #16 Lead(이권욱)가 4/4 trace·Rollback 종결 책임 인수를 코멘트로 확인한 뒤 효력. 9/14 결정("4/4 추적에 연결")과 충돌하지 않도록 HBR은 Harbor 측 digest 대조·#16 산출물 인수 검증 책임을 유지한다: #16이 Scan/Manifest Digest 산출물을 제공하면 HBR Lead가 Harbor 측 값을 1회 대조해 #16에 코멘트로 회신한다(종결 조건은 아님). |
 | 종결 근거 | 증적 PR #64 병합 + `PUSHED_DIGEST`가 manifest digest임을 확인(README가 config digest 가능성을 경고). |
 | 병합된 증적 영향 | 없음 (HBR 증적은 PR #64 미병합. #16 증적은 그대로 #16 소관) |
 
@@ -81,7 +81,7 @@ Robot 권한·회전·Secret 저장 경계(`robot$fds-ci` 60일 TTL·monitoring 
 
 1. Lead(이하영) 승인 결정을 이 Issue 코멘트로 기록. #16 Lead(이권욱)의 CHG-02 인수 확인 1건.
 2. 승인 후 #13 본문의 핵심 요구·AC-05·증적 목록을 변경 이력과 함께 갱신(원문 보존).
-3. #14 / #16에 이관 사실 링크 코멘트.
+3. #14에 "OID-02 결정 입력 제공·결정 추적 — 담당 이하영, 기한 P1-K8S Gate 1 전"을 명시하고, #16에는 4/4 trace·Rollback 종결 및 HBR 대조 회신 절차를 링크 코멘트로 남긴다.
 4. 증적 저장소 변경이 있으면 독립 리뷰 후 병합.
 
 ## 6. 롤백
