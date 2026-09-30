@@ -274,7 +274,7 @@ Source → Runtime → Evidence → Cost chain을 유지한다.
 - STRATEGY INPUT: **APPROVED**
 - CANDIDATE PR: **APPLIED**
 - ISSUE BODY: **NOT MODIFIED**
-- ISSUE OPERATING COMMENTS: **TO BE APPLIED**
+- ISSUE OPERATING COMMENTS: **APPLIED**
 - WBS XLSX: **STALE / REGENERATION REQUIRED**
 - OCP APP PRECHECK: **NOT RUN**
 - ROSA RUNTIME: **NOT RUN**
@@ -301,3 +301,28 @@ Source → Runtime → Evidence → Cost chain을 유지한다.
 - #121: updated_at `2026-09-30T09:06:45Z` — [DEC-P2-COMP-01] Compliance Operator 도입 범위 결정
 
 Issue 본문 수동 반영 또는 정본 재생성 시 최신 `updated_at`과 원문을 다시 대조한다.
+
+
+## 14. 실제 GitHub 운영 반영
+
+승인된 전략을 다음 관련 Issue에 운영 코멘트로 연결했다. 기존 body/title/state/label/AC는 수정하지 않았다.
+
+- #33 — updated_at `2026-09-30T13:38:39Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/33#issuecomment-5912449502)
+- #34 — updated_at `2026-09-30T13:38:54Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-5912453444)
+- #35 — updated_at `2026-09-30T13:39:08Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-5912457590)
+- #36 — updated_at `2026-09-30T13:39:24Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/36#issuecomment-5912462098)
+- #37 — updated_at `2026-09-30T13:39:38Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-5912466439)
+- #38 — updated_at `2026-09-30T13:39:52Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/38#issuecomment-5912470914)
+- #43 — updated_at `2026-09-30T13:40:06Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/43#issuecomment-5912475099)
+- #46 — updated_at `2026-09-30T13:40:21Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/46#issuecomment-5912479459)
+- #47 — updated_at `2026-09-30T13:40:36Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/47#issuecomment-5912483670)
+- #50 — updated_at `2026-09-30T13:40:50Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/50#issuecomment-5912487784)
+- #49 — updated_at `2026-09-30T13:41:04Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/49#issuecomment-5912491664)
+- #55 — updated_at `2026-09-30T13:41:18Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/55#issuecomment-5912495364)
+- #57 — updated_at `2026-09-30T13:41:33Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/57#issuecomment-5912499666)
+- #119 — updated_at `2026-09-30T13:41:47Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/119#issuecomment-5912503337)
+- #120 — updated_at `2026-09-30T13:42:00Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/120#issuecomment-5912507218)
+- #121 — updated_at `2026-09-30T13:42:16Z` — [strategy comment](https://github.com/321Team/fds-project-baseline/issues/121#issuecomment-5912511435)
+
+- Issue 본문 addendum은 여전히 **HUMAN APPLY REQUIRED**다.
+- 댓글 반영으로 각 Issue의 `updated_at`은 변경됐으므로 향후 본문 수동 반영/정본 재생성 시 최신 원문을 다시 수집해야 한다.
