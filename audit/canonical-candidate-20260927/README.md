@@ -134,6 +134,16 @@ fds-app namespace 정정, monitor01 입력, Grafana namespace 정정, Alertmanag
 - 회의록 후보와 Red Hat 제품 인벤토리 후보를 갱신했다.
 - 상세 감사: `audit/phase2-product-intake-20260930/README.md`.
 
+## 5.3 2026-09-30 일정 재계획
+
+- Project Close: **2026-10-26 확정**
+- Non-working: **10-05 / 10-09 / 토·일**
+- Phase 1 final cutoff 10-02, Review/Close 10-06, Phase 2 Start 10-07.
+- G4 10-14 / G5 10-20 / G6 10-22 / Freeze+Review 10-23 / Close 10-26.
+- P1 구현 고정일은 제거하고 P0 잔여 capacity에서만 실행.
+- 상세: `audit/project-schedule-replan-20260930/README.md`
+- 기존 proposed WBS XLSX는 **STALE_REGENERATE_FROM_LATEST_ISSUES**로 판정.
+
 ## 6. v3.1.21 필수 이월 사항
 
 `audit/canonical-followup-20260923/README.md`의 미반영 항목을 유지한다.
@@ -159,6 +169,8 @@ fds-app namespace 정정, monitor01 입력, Grafana namespace 정정, Alertmanag
 - PRODUCT INTAKE (#120/#121): **DECISION TICKETS CREATED / IMPLEMENTATION NOT RUN**
 - PROCEDURE SIMPLIFICATION: **NO NEW CHANGE / CURRENT PROCESS RETAINED**
 - v3.1.20 STATUS/CITATION CORRECTION: **APPLIED TO CANDIDATE BRANCH**
+- SCHEDULE REPLAN: **APPLIED TO ISSUES + CANDIDATE AUDIT**
+- CANDIDATE WBS XLSX: **STALE / REGENERATION REQUIRED**
 - FULL CANONICAL REGENERATION: **NOT RUN**
 - RUNTIME/GATE REVALIDATION: **NOT RUN**
 - REVIEW/MERGE/RELEASE: **NOT DONE**
