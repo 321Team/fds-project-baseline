@@ -1,95 +1,87 @@
-# CR-P1-HBR-01-01 — P1-HBR-01 종결 범위 조정 (핵심 요구 2건 이관·축소)
+# CR-P1-HBR-01-01 — P1-HBR-01 종결 범위 조정 (OID-02 결정 이관 · AC-05 05A/05B 분리)
 
-> PROPOSED / APPROVAL PENDING · 2026-09-30 KST · GitHub Issue 미생성(PR로 제안). 승인 전에는 P1-HBR-01의 Scope·AC·Status를 변경하지 않는다.
-
-## 속성 (Issue 등록 시 사용)
+## 티켓 속성
 
 | Property | 입력값 |
-|---|---|
-| Record ID | CR-P1-HBR-01-01 (번호는 등록 시 확정) |
+| --- | --- |
+| Record ID | CR-P1-HBR-01-01 |
 | Phase | Phase 1 |
 | Category | Registry / Scope Change Control |
-| Type | Change Request (`type:change-request`) |
-| Status | Proposed / Approval Pending |
-| Priority | P0 (P1-HBR-01 종결의 선행 조건) |
-| Lead | 이하영 (P1-HBR-01 Lead) |
-| Support | 이권욱 (#16 Lead — CHG-02 인수 확인) |
-| Target Ticket | [P1-HBR-01 #13](https://github.com/321Team/fds-project-baseline/issues/13) |
-| Related | [#16 P1-CICD-01](https://github.com/321Team/fds-project-baseline/issues/16) · [#14 ICR-D-NET-01-01](https://github.com/321Team/fds-project-baseline/issues/14) · [#19 P1-SEC-01](https://github.com/321Team/fds-project-baseline/issues/19) · DEC-P1-IMG-01 |
-| Related Decision IDs | D19; D-SEC-01; 2026-09-14 Robot 유한 30일 결정 ([코멘트](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-5659049448)) |
-| Approval | REVIEW_AUTHORITY_POLICY §1 — 코드 외 절차는 Lead 결정. 단 증적 저장소 PR은 독립 리뷰 유지 |
+| Type | Change Request |
+| Status | To Do |
+| Priority | P0 |
+| Start | 2026-09-30 |
+| End | 2026-10-02 |
+| Lead | 이하영 |
+| Support | 이권욱 (#16 Lead — AC-05B 인수 구조 확인) |
+| Exit Criteria | #13 핵심 요구/AC-05 구조 조정 결정 기록, #14의 OID-02 완료조건/Owner/Due 명시, #16 Lead의 4/4 Review Run 산출물 제공 확인, #13 본문 교체 |
+| Related Decision IDs | D19; D-SEC-01; [2026-09-14 Robot 유한 30일 결정](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-5659049448) |
+| Source | [#13 종합 대조 코멘트(2026-09-30)](https://github.com/321Team/fds-project-baseline/issues/13); [Review Owner 딥리뷰](https://github.com/321Team/fds-project-baseline/issues/130#issuecomment-5912569914)·[교차검토](https://github.com/321Team/fds-project-baseline/issues/130#issuecomment-5912873005) |
+| Related | [#13 P1-HBR-01](https://github.com/321Team/fds-project-baseline/issues/13) · [#16 P1-CICD-01](https://github.com/321Team/fds-project-baseline/issues/16) · [#14 ICR-D-NET-01-01](https://github.com/321Team/fds-project-baseline/issues/14) · DEC-P1-IMG-01 |
 
-## 1. 변경 배경
+## 변경 이력
 
-#13의 종결 조건 중 두 가지는 HBR이 단독으로 충족할 수 없어, 다른 책임 티켓의 산출물을 기다리는 구조가 되었다. 나머지 요구사항의 Runtime 증적은 [fds-project-evidence PR #64](https://github.com/321Team/fds-project-evidence/pull/64)(OPEN)에 있으며 이 CR의 대상이 아니다.
+- 2026-09-30 최초 제안: CHG-01(OID-02 이관), CHG-02(4/4 Digest·Rollback을 #16로 이관해 HBR 종결 조건에서 제외)
+- 2026-09-30 Review Owner 판정: CHG-01 **조건부 수용**, CHG-02 **HOLD**(HBR의 end-to-end 인수 Gate 제거는 추적성을 약화)
+- **2026-10-01 개정(이 본문):** Review Owner 권고를 반영해 CHG-02를 "제외"에서 "**05A/05B 분리, HBR 인수 Gate 유지**"로 변경하고, CHG-01에 수용 조건 3개를 명시. 4/4 인수를 HBR 종결 조건에서 **빼지 않는다.**
 
-- 이 CR은 **보안 통제를 완화하지 않는다.** TLS 검증 우회 금지, Worker Pull-only, Push DENY, 비승인 Source/CA/Credential DENY, 비밀정보 비노출은 그대로 유지한다.
-- 이 CR은 기존 PASS/증적을 소급 인정하지 않는다. 승인 전 #13은 PASS 0 / NOT VERIFIED 상태가 유지된다.
+## 변경 요청
 
-## 1-1. 정당성 검토 결과
+[#13](https://github.com/321Team/fds-project-baseline/issues/13)의 종결 조건 중 OID-02 결정 추적 위치와 AC-05의 구조를 명확히 합니다.
+
+| # | 현재 (#13 문구) | 변경안 |
+|---|---|---|
+| CHG-01 | 핵심 요구 "OID-02를 P1-K8S Gate 1 전 결정" | HBR 요구를 "OID-02 결정 **입력** 제공(Harbor 측 Pull 가능성·경로 옵션·CA/Robot 영향)"으로 명확화. 결정 자체와 Gate 판정은 [#14](https://github.com/321Team/fds-project-baseline/issues/14)가 추적. 담당(이하영)·기한(K8S Gate 1 전) 불변. IF-10은 Worker만 허용, 결정 전 CP Source를 IF-10에 포함하지 않음. **수용 조건:** ① #14가 OID-02 결정의 완료조건/Owner/Due를 명시 ② HBR은 Harbor 입력을 제공 ③ OID-02 미결정을 HBR이 임의 PASS로 해석하지 않음 |
+| CHG-02 | AC-05 "CI Scan Digest → Harbor Artifact → Manifest `image@sha256` → Pod `imageID` 4/4" 단일 항목 | AC-05를 **두 단계로 분리하되 HBR 종결 조건은 유지**한다. **HBR-AC-05A:** Harbor Scanner / Artifact / Credential fingerprint / Worker imageID 구간 PASS. **HBR-AC-05B:** #16이 생산한 **동일 Review Run 4/4 trace package를 HBR가 인수·대조**하고 회신. Rollback 실행 산출물은 #16이 생산하고, Harbor Artifact / Worker 재기동 구간 결과를 HBR가 인수. 생산 책임은 #16, **end-to-end 인수 Gate는 #13에 유지** |
+| 부수 | "검증 및 증적" 목록의 `Rollback` | 제외하지 않는다. #16 생산, HBR 인수 구간(Harbor/Worker 재기동)을 #13 목록에 유지 |
+
+## 변경 이유
+
+1. CHG-01: HBR AC 6개에 OID-02 결정에 대응하는 항목이 없고 Scope는 "결정 **지원**"입니다. OID-02(CP/Calico/system image source)는 K8S Gate 항목이며 [#14](https://github.com/321Team/fds-project-baseline/issues/14#issuecomment-5849779324)에서 `system_images.mode = BLOCKED / OID-02·03`으로 이미 추적 중입니다.
+2. CHG-02: 6차 리뷰의 책임 분리(#16 생산 / #13 인수·검증 / 공동 4/4 대조)와 "#16 의존성은 착수 차단이 아니라 #13 완료 차단"이라는 기존 설계는 의도된 cross-ticket acceptance gate입니다. 따라서 4/4를 HBR 종결에서 제외하는 것은 정당화되지 않으며, **구조를 05A/05B로 명확히 나누어 HBR가 자기 구간(05A)은 독립적으로 진행하고 05B는 #16 산출물 도착 후 인수**하도록 정리합니다.
+3. 비용·일정 최적화는 #16과 #13이 **같은 Review Run 증적을 공유**하는 방식(동일 Run 재실행 없음)으로 해결합니다.
+
+## 정당성 검토
 
 | 항목 | 판정 | 근거 |
 |---|---|---|
-| CHG-01 | 정당 | AC에 대응 항목 없음, Scope는 "결정 지원", #14가 이미 BLOCKED로 추적. 담당(이하영)·기한(K8S Gate 1 전) 불변 |
-| CHG-02 | 조건부 정당 | CI Scan Digest 생산은 9/14 결정상 #16 담당. #16 Lead(이권욱)의 인수 확인 후 효력 |
-| (제외) Robot 회전 | 변경하지 않음 | 9/14 결정이 인계/회전 검증을 구현·인수 항목으로 유지하고 credential 증적을 면제하지 않음. 기존 요구 유지 |
+| CHG-01 | 조건부 수용 | Review Owner 판정: 책임 분리 자연스러움. #14의 Decision 완료조건/Owner/Due 명시와 PASS 임의 승격 금지가 조건 |
+| CHG-02 | **개정 반영 후 재검토 요청** | 기존 "제외"안은 HOLD. 개정안은 Review Owner 권고 구조(05A/05B, HBR 인수 Gate 유지)를 그대로 따름 |
+| (제외) Robot 회전 | 변경하지 않음 | 9/14 결정이 인계/회전 검증을 구현·인수 항목으로 유지 |
 
-## 2. 변경 항목
+## 영향
 
-### CHG-01 — OID-02 결정 요구를 HBR 핵심 요구에서 제외하고 #14로 이관
-
-| 항목 | 내용 |
+| 대상 | 영향 |
 |---|---|
-| 현행 | 핵심 요구 "OID-02를 P1-K8S Gate 1 전 결정" |
-| 문제 | HBR AC 6개에 대응 항목이 없다. Scope는 "결정 **지원**"이다. OID-02(CP/Calico/system image source)는 K8S 게이트 항목이며 [#14](https://github.com/321Team/fds-project-baseline/issues/14#issuecomment-5849779324)에서 `system_images.mode = BLOCKED / OID-02·03`으로 추적 중이다. |
-| 변경 | HBR 요구를 "OID-02 결정 입력(Harbor 측 Pull 가능 여부·경로 옵션) 제공"으로 축소한다. 결정 자체와 Gate 판정은 #14가 추적한다. |
-| 유지 | IF-10은 Worker만 허용. 결정 전 CP Source를 IF-10에 포함하지 않는다. |
-| 종결 근거 | Harbor 측 옵션 제시 기록 1건(코멘트 링크). 결정 완료는 요구하지 않는다. |
-| 병합된 증적 영향 | 없음 (evidence `main`에 OID-02 증적 없음) |
+| 보안 | 통제 완화 없음 |
+| #16 CICD | 4/4 산출물(CI Scan Digest / Manifest / Rollback)을 같은 Review Run으로 제공. 05B 인수 시점은 산출물 도착 후 |
+| #14 K8S | OID-02 결정의 완료조건/Owner/Due를 #14에 명시. 결정 추적의 단일 창구 |
+| G1 Milestone | #13 종결은 05B(#16 산출물)에 계속 의존. 단 05A는 독립 진행 |
+| 병합된 증적 | 영향 없음 |
+| 정본 | 승인 시 RELEASE_POLICY에 따라 차기 정본 후보에 반영(`P1-HBR-01` 핵심 요구·AC-05 문구) |
 
-### CHG-02 — 4/4 Digest Traceability를 HBR AC에서 분리, Harbor 구간(3구간)으로 축소
+## 이 CR이 하지 않는 것
 
-| 항목 | 내용 |
-|---|---|
-| 현행 | 핵심 요구 "Trivy 결과와 배포 Digest 일치", AC "Image Digest·Scan 결과·Credential fingerprint Evidence 확보"(AC-05: CI Scan Digest → Harbor Artifact → Manifest `image@sha256` → Pod `imageID` 4/4) |
-| 문제 | 첫 값(CI Scan Digest)은 #16이 생산한다. Run #5는 성공했으나 Push/Deploy가 NOT_EXECUTED이고 Run #5 증적은 [evidence PR #70](https://github.com/321Team/fds-project-evidence/pull/70)이 OPEN이다. HBR이 타 티켓 산출물 때문에 종결하지 못한다. |
-| 변경 | HBR 인수 범위를 **Harbor 소유 구간**으로 한정한다: ① Harbor Artifact Digest ↔ Pod `imageID`(Worker 3대) ② Harbor Trivy Scanner 정상 동작 및 Harbor 스캔 결과 ③ Credential fingerprint. 4/4 전체 trace와 Rollback(이전 승인 Digest 복구)은 #16 / DEC-P1-IMG-01에서 종결한다. |
-| 유지 | 2-way `LOCAL_DIGEST ↔ HARBOR_DIGEST`는 AC-05를 대체하지 않는다는 기존 원칙. HBR은 #16 산출물을 인수·검증하는 책임(기존 6차 리뷰 책임 경계)을 유지하되 종결 조건에서는 제외한다. |
-| 효력 조건 | #16 Lead(이권욱)가 4/4 trace·Rollback 종결 책임 인수를 코멘트로 확인한 뒤 효력. 9/14 결정("4/4 추적에 연결")과 충돌하지 않도록 HBR은 Harbor 측 digest 대조·#16 산출물 인수 검증 책임을 유지한다: #16이 Scan/Manifest Digest 산출물을 제공하면 HBR Lead가 Harbor 측 값을 1회 대조해 #16에 코멘트로 회신한다(종결 조건은 아님). |
-| 종결 근거 | 증적 PR #64 병합 + `PUSHED_DIGEST`가 manifest digest임을 확인(README가 config digest 가능성을 경고). |
-| 병합된 증적 영향 | 없음 (HBR 증적은 PR #64 미병합. #16 증적은 그대로 #16 소관) |
+- 보안 통제를 완화하지 않습니다. TLS 검증 우회 금지, Worker Pull-only, Push DENY, 비승인 Source/CA/Credential DENY, 비밀정보 비노출은 유지합니다.
+- **4/4 Digest 인수와 Rollback 인수를 #13 종결 조건에서 제외하지 않습니다.** 구조만 05A/05B로 명확히 합니다.
+- 기존 PASS/증적을 소급 인정하지 않습니다. Runtime을 변경하지 않습니다. #13의 Scope·AC·Status는 결정 전까지 바꾸지 않습니다.
+- 롤백: 승인 철회 시 #13 원문(SHA256 `8a5159fa6aecafdb1c61652bd0be2a234fa3b9792c53e910eeb39d6a17b400ff`)의 요구로 복귀합니다.
 
-### 부수 정리 — 본문 증적 목록에서 Rollback 제거
+## 확인 요청
 
-"검증 및 증적"의 `Rollback`은 CHG-02에 따라 #16 소관이므로 #13 목록에서 제외한다. Retention/GC는 기존대로 Optional / Non-blocking 유지.
+- 결정: HBR Lead 이하영 (REVIEW_AUTHORITY_POLICY §4 — Decision/CR 검토는 해당 Lead)
+- @GWONUK — Review Owner / #16 Lead: 개정된 CHG-01 수용 조건과 CHG-02(05A/05B 분리, HBR 인수 Gate 유지)가 권고 구조와 일치하는지 재검토 부탁드립니다.
 
-## 3. 변경하지 않는 항목 (종결 조건으로 유지)
+## 적용 절차
 
-Robot 권한·회전·Secret 저장 경계(`robot$fds-ci` 60일 TTL·monitoring `admin` Secret 처리 포함) / TLS 1.2+·SAN·Chain / Runner `.20` 인증 Push·Pull / Worker 3대 Pull·Pod Start·Push DENY / 잘못된 CA·Credential·비승인 Source DENY / 실제 Source IP와 Host Firewall 일치(AC-04: 현재 `ACTUAL_SOURCE=NOT_VERIFIED`) / 비밀정보 평문 미포함.
+1. Lead 결정을 이 Issue 코멘트로 기록하고 Review Owner의 재검토 확인 1건을 받습니다.
+2. 승인 후 #13 본문의 핵심 요구·AC-05를 05A/05B로 갱신합니다(원문 보존, 변경 이력 포함).
+3. #14에 "OID-02 결정 입력 제공·결정 추적 — 담당 이하영, 기한 P1-K8S Gate 1 전, 완료조건"을 명시하고, #16에는 같은 Review Run 4/4 산출물 제공 및 HBR 인수·대조 회신 절차를 링크 코멘트로 남깁니다.
+4. 증적 저장소 변경이 있으면 독립 리뷰 후 병합합니다.
 
-## 4. 영향 분석
+## Completion Record
 
-| 영역 | 영향 |
-|---|---|
-| 보안 | 통제 완화 없음. Robot 요구 전체 유지 |
-| #16 CICD | 4/4 trace·Rollback 종결 책임이 명시적으로 #16으로 확정됨. Support 확인 필요 |
-| #14 K8S | OID-02 결정 추적이 #14 단일 창구가 됨 |
-| G1 Milestone | HBR 종결이 #16 산출물에 종속되지 않음 |
-| 정본 | 승인 시 RELEASE_POLICY에 따라 다음 정본 후보에 동기화 (`P1-HBR-01` 핵심 요구·AC-05 문구) |
-
-## 5. 승인 및 적용 절차
-
-1. Lead(이하영) 승인 결정을 이 Issue 코멘트로 기록. #16 Lead(이권욱)의 CHG-02 인수 확인 1건.
-2. 승인 후 #13 본문의 핵심 요구·AC-05·증적 목록을 변경 이력과 함께 갱신(원문 보존).
-3. #14에 "OID-02 결정 입력 제공·결정 추적 — 담당 이하영, 기한 P1-K8S Gate 1 전"을 명시하고, #16에는 4/4 trace·Rollback 종결 및 HBR 대조 회신 절차를 링크 코멘트로 남긴다.
-4. 증적 저장소 변경이 있으면 독립 리뷰 후 병합.
-
-## 6. 롤백
-
-승인 철회 시 #13 원문(SHA256 `8a5159fa6aecafdb1c61652bd0be2a234fa3b9792c53e910eeb39d6a17b400ff`)의 요구사항으로 복귀한다. 이 CR은 Runtime 변경을 포함하지 않는다.
-
-## 7. 근거
-
-- [#13 종합 대조 (2026-09-30)](https://github.com/321Team/fds-project-baseline/issues/13) 코멘트 전체
-- [evidence PR #64](https://github.com/321Team/fds-project-evidence/pull/64) / [PR #70](https://github.com/321Team/fds-project-evidence/pull/70) — 둘 다 2026-09-30 조회 시점 OPEN
-- [REVIEW_AUTHORITY_POLICY](../../governance/REVIEW_AUTHORITY_POLICY.md)
+- **Result:** TBD
+- **Status:** To Do
+- **Completed Date:** 미입력
+- **Reviewer / Approver:** 미입력 — 입력 시 풀네임 사용
