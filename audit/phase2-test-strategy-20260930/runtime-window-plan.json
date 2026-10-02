@@ -32,9 +32,9 @@
     {
       "id": "W1-G4",
       "range": "2026-10-07/2026-10-14",
-      "environment": "aws-oci-network-prerequisites",
+      "environment": "aws-seoul-ap-northeast-2-oci-network-prerequisites",
       "paid_cloud": "limited",
-      "purpose": "d21_iac_iam_oidc_vpn_registry_cost_go"
+      "purpose": "d21_iac_iam_oidc_vpn_registry_hcp_classic_cost_go"
     },
     {
       "id": "W2-G5",
@@ -68,7 +68,10 @@
       "vpn_prerequisite_ready_or_frozen_plan",
       "rosa_inputs_frozen",
       "control_cost_known",
-      "p0_cost_to_complete_estimated"
+      "p0_cost_to_complete_estimated",
+      "aws_rosa_region_ap_northeast_2_fixed",
+      "rosa_hcp_or_classic_selected_by_same_workload_cost_comparison",
+      "cost_model_inputs_complete"
     ],
     "cost_states": {
       "green": "projected_completion_le_400",
@@ -103,5 +106,15 @@
   ],
   "p1_operator_policy": "deferred_first_if_p0_or_cost_or_schedule_risk",
   "teardown_target": "2026-10-23",
-  "wbs_status": "STALE_REGENERATION_REQUIRED"
+  "wbs_status": "STALE_REGENERATION_REQUIRED",
+  "updated_at_kst": "2026-10-02",
+  "aws_rosa_execution_input": {
+    "region_name": "Asia Pacific (Seoul)",
+    "region_code": "ap-northeast-2",
+    "region_status": "APPROVED_EXECUTION_INPUT",
+    "rosa_hcp_supported": true,
+    "rosa_classic_supported": true,
+    "topology_status": "PENDING_COST_COMPARISON",
+    "cost_model": "../phase2-cost-policy-20260930/cost-model-inputs.json"
+  }
 }
