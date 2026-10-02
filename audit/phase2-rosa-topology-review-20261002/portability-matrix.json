@@ -21,55 +21,64 @@
       "id": "PG-01",
       "name": "workload_base",
       "rule": "prefer standard Kubernetes APIs for Deployment/Service/ConfigMap/SecretRef/SA/RBAC/NetworkPolicy/SecurityContext",
-      "status": "TO_VERIFY"
+      "status": "HOLD",
+      "evidence": "No single authoritative portable workload base; fds-msa Kubernetes files are reference snapshots and infra-kubernetes app manifest is security patch/reference."
     },
     {
       "id": "PG-02",
       "name": "openshift_overlay",
       "rule": "separate Route and other OpenShift-specific resources from portable workload base",
-      "status": "TO_VERIFY"
+      "status": "HOLD",
+      "evidence": "Phase1 transaction-api uses NodePort+edge01; OpenShift Route/ingress overlay not implemented."
     },
     {
       "id": "PG-03",
       "name": "security",
       "rule": "preserve portable pod SecurityContext; avoid custom SCC/privileged/host coupling as baseline",
-      "status": "TO_VERIFY"
+      "status": "HOLD",
+      "evidence": "Explicit runAsUser 10001 and runAsGroup 999/10001 require OpenShift restricted-v2 UID-range compatibility test."
     },
     {
       "id": "PG-04",
       "name": "network_policy",
       "rule": "prefer standard NetworkPolicy; isolate CNI-specific CRDs as exceptions",
-      "status": "TO_VERIFY"
+      "status": "PARTIAL",
+      "evidence": "Standard NetworkPolicy API is reusable, but Phase1 edge/db/monitor/control-plane/worker IP blocks are environment-specific."
     },
     {
       "id": "PG-05",
       "name": "storage_data",
       "rule": "keep business data contract external; parameterize StorageClass/PVC inputs",
-      "status": "TO_VERIFY"
+      "status": "PASS_P0_BLOCKED_FULL_SYSTEM",
+      "evidence": "P0 app business path has no PVC dependency; monitoring static local PVs are bound to k8s-worker03 and are not ROSA-portable."
     },
     {
       "id": "PG-06",
       "name": "registry_delivery",
       "rule": "digest-tracked images and target credentials/endpoints remain environment inputs",
-      "status": "TO_VERIFY"
+      "status": "PARTIAL",
+      "evidence": "Delivery contract is reusable; current runner/workflow is pinned to on-prem runner identity and local paths and needs target adapter."
     },
     {
       "id": "PG-07",
       "name": "hybrid_interface",
       "rule": "keep CIDR/port/TLS/DNS/source contracts topology-independent",
-      "status": "TO_VERIFY"
+      "status": "PARTIAL",
+      "evidence": "DB/FDS endpoints are externalized, but VPN/source CIDR/route/security inputs are AWS/Hybrid-specific."
     },
     {
       "id": "PG-08",
       "name": "iac_layering",
       "rule": "separate common network, AWS IAM/OIDC, topology provisioning, platform config and workload layers",
-      "status": "TO_VERIFY"
+      "status": "HOLD",
+      "evidence": "infra-terraform and infra-rosa are initialization-only; required layering is not implemented yet."
     },
     {
       "id": "PG-09",
       "name": "evidence",
       "rule": "chosen topology must expose enough evidence for current P0 AC without weakening acceptance",
-      "status": "TO_VERIFY"
+      "status": "PARTIAL",
+      "evidence": "Source→Runtime→Evidence contract exists; target-specific HCP/Classic evidence collection is not runtime-validated."
     }
   ],
   "comparison": {
@@ -104,11 +113,18 @@
       "classic": "PENDING_EXACT_INPUTS"
     }
   },
-  "current_interpretation": "Current P0 acceptance is worker/workload centric. No topology winner until PG-01..PG-09 and Cost GO are completed.",
+  "current_interpretation": "Current P0 portability risks are predominantly common OpenShift/admission/environment-adapter issues, not HCP-vs-Classic control-plane placement. Clear PG-01/02/03/08 before topology decision.",
   "references": [
     "https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws/4/html/introduction_to_rosa/rosa-architecture-models",
     "https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws_classic_architecture/4/html/architecture/rosa-architecture-models",
     "https://docs.redhat.com/en/documentation/openshift_container_platform/4.21/html/ingress_and_load_balancing/routes",
     "https://docs.redhat.com/en/documentation/openshift_container_platform/4.20/html/authentication_and_authorization/managing-pod-security-policies"
+  ],
+  "source_inventory": "source-portability-inventory.json",
+  "blocking_before_topology_decision": [
+    "PG-01",
+    "PG-02",
+    "PG-03",
+    "PG-08"
   ]
 }
