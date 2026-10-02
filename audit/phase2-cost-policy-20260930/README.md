@@ -38,7 +38,8 @@
 
 - AWS General Reference 기준 `ap-northeast-2`는 ROSA with hosted control planes(HCP)와 ROSA classic 모두 지원한다.
 - Region 확정은 **HCP/Classic topology 확정 또는 ROSA provisioning 승인으로 확대하지 않는다.**
-- topology는 동일 workload·가용성·Runtime window를 전제로 HCP/Classic Cost-to-Complete를 비교한 뒤 Cost GO에서 확정한다.
+- topology는 **Portability Gate(PG-01~PG-09) → Security/Evidence → Hybrid Networking → Operability → 동일 workload Cost-to-Complete → Schedule** 순으로 비교한 뒤 Architecture Freeze/Cost GO에서 확정한다. 비용 단독으로 선택하지 않는다.
+- 이식성 검토: `../phase2-rosa-topology-review-20261002/README.md`
 - 비용모델 machine-readable 입력: `cost-model-inputs.json`
 - ROSA 서비스 요금 참고값과 서울 리전 AWS 인프라 단가는 **실제 Cost GO 직전 재확인**한다.
 
