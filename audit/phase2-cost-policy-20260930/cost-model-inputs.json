@@ -26,7 +26,15 @@
       "ROSA_HCP",
       "ROSA_CLASSIC"
     ],
-    "rule": "Do not treat region approval as topology approval. Select topology only after same-workload Cost-to-Complete comparison and prerequisite check."
+    "rule": "Do not treat region approval as topology approval. Select topology only after same-workload Cost-to-Complete comparison and prerequisite check.",
+    "preliminary_direction": "HCP_FAVORED_FOR_SHORT_POC_SUBJECT_TO_COST_GO",
+    "preliminary_basis": [
+      "smaller customer-account EC2 footprint",
+      "same worker service fee basis plus HCP cluster fee",
+      "classic adds customer control-plane and infrastructure EC2/EBS footprint",
+      "classic has additional quota prerequisite",
+      "project uses a short controlled runtime window"
+    ]
   },
   "project_inputs": {
     "actual_gross_project_spend_usd": null,
@@ -89,5 +97,29 @@
     "classify_green_amber_red"
   ],
   "runtime_status": "NOT_RUN",
-  "cost_measurement_status": "NOT_RUN"
+  "cost_measurement_status": "NOT_RUN",
+  "topology_structural_facts": {
+    "checked_at_kst": "2026-10-02",
+    "sources": [
+      "https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws/4/epub/introduction_to_rosa/welcome-index",
+      "https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws_classic_architecture/4/html-single/install_rosa_classic_clusters/index",
+      "https://docs.aws.amazon.com/general/latest/gr/rosa.html"
+    ],
+    "ROSA_HCP": {
+      "control_plane_hosting": "Red Hat-owned AWS account",
+      "minimum_customer_ec2_instances": 2,
+      "dedicated_customer_infrastructure_nodes": false,
+      "hcp_cluster_service_fee_per_hour_usd": 0.25
+    },
+    "ROSA_CLASSIC": {
+      "control_plane_hosting": "customer AWS account",
+      "minimum_customer_ec2_instances": 7,
+      "minimum_control_plane": "3 x m5.2xlarge",
+      "minimum_infrastructure": "2 x r5.xlarge",
+      "minimum_workers": "2 x m5.xlarge",
+      "hcp_cluster_service_fee_per_hour_usd": 0,
+      "classic_creation_quota_note": "AWS documentation states ROSA classic cluster creation requires a minimum 100 vCPU quota."
+    },
+    "interpretation": "Structural comparison input only. It does not select topology; refresh Seoul infrastructure prices and project worker/network inputs before Cost GO."
+  }
 }
