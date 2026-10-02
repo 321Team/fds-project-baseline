@@ -19,7 +19,7 @@
 
 1. **Phase 1 계약을 먼저 고정한다.** Phase 2 ROSA에서 요구사항·실패정책을 다시 정의하지 않는다.
 2. **Shift-left.** Local/CI/제공 OCP Lab에서 제거 가능한 결함은 유료 ROSA에 반입하지 않는다.
-3. **ROSA 생성은 늦추고, 한 번 생성한 Cluster는 G5→G6까지 같은 Runtime으로 연속 사용한다.**
+3. **ROSA 생성은 늦추고, 한 번 생성한 Cluster는 G5→G6까지 같은 Runtime으로 연속 사용한다.** AWS/ROSA 기준 리전은 `ap-northeast-2`(Seoul)로 고정한다.
 4. **P0 우선.** GitOps/Compliance 등 P1은 P0 일정·비용을 침해하면 Deferred한다.
 5. **유료 재시험은 변경 근거가 있어야 한다.** 동일 실패를 Source/설정 변경·사전검증 없이 반복하지 않는다.
 6. **Full ROSA destroy→recreate는 P0 필수 시험이 아니다.** 이번 P0에서는 Terraform 재-plan/drift, App redeploy, 최종 teardown으로 재현성을 증명한다.
@@ -49,7 +49,7 @@ ROSA 유료 Runtime 전 최소 조건:
 | Window | 기간/조건 | 환경 | 목적 | 비용 성격 |
 |---|---|---|---|---|
 | **W0 PRECHECK** | 지금~10-08 | Local/CI + 제공 OCP(허용 시) | App/Manifest/OpenShift 호환성, 계약 선검증 | 프로젝트 Cloud 비용 최소 |
-| **W1 G4** | 10-07~10-14 | AWS/OCI/Network 중심 | D21, IaC, IAM/OIDC, VPN, Registry 결정 | 제한적 유료 |
+| **W1 G4** | 10-07~10-14 | AWS Seoul(`ap-northeast-2`)/OCI/Network 중심 | D21, IaC, IAM/OIDC, VPN, Registry 결정, HCP/Classic Cost GO | 제한적 유료 |
 | **W2 G5** | 10-14~10-20 | 실제 ROSA | Platform→App→Runner Delivery | 주요 유료 Runtime |
 | **W3 G6** | 10-20~10-22 | **W2와 동일 ROSA** | Hybrid→E2E→Failure/Recovery→Regression | 주요 유료 Runtime |
 | **CLOSE** | 10-23 | 동일 환경→teardown | Final Evidence/Cost/Inventory/삭제 | 신규 시험 금지 |
@@ -86,11 +86,12 @@ ROSA 유료 Runtime 전 최소 조건:
 
 순서:
 
-`Terraform fmt/validate → Plan Review → D21 Go/No-Go → IAM/OIDC/Network prerequisite → VPN/Route → Cost GO → ROSA Create`
+`Region(ap-northeast-2) fixed → Terraform fmt/validate → Plan Review → D21 Go/No-Go → IAM/OIDC/Network prerequisite → VPN/Route → HCP/Classic Cost-to-Complete → Cost GO → ROSA Create`
 
 - #36 D21은 10-08까지 단일 Primary/Fallback으로 결정한다.
 - #35/#37의 준비·검증이 완료되기 전 ROSA를 장시간 먼저 띄워두지 않는다.
-- #38의 10-12~10-14 작업은 Region/Version/Quota, STS/OIDC, Namespace/RBAC/NetworkPolicy/SecurityContext, Terraform input 등 **creation readiness**로 수행 가능하다.
+- #38의 10-12~10-14 작업은 **Region=`ap-northeast-2`를 고정 입력**으로 두고 Version/Quota, STS/OIDC, Namespace/RBAC/NetworkPolicy/SecurityContext, Terraform input 등 **creation readiness**로 수행 가능하다.
+- HCP/Classic은 Region 확정과 분리한다. 동일 workload·availability·Runtime window 기준의 Cost-to-Complete와 prerequisite를 비교한 뒤 Cost GO에서 topology를 확정한다.
 - 실제 ROSA Create는 G4에 가까운 시점, 명목상 **10-14 전후**를 목표로 한다.
 - 티켓 Start/End 자체는 이번 전략으로 변경하지 않는다.
 
@@ -163,7 +164,10 @@ Commit SHA → Image Digest → ROSA Runtime imageID 추적을 보존한다.
 - Terraform Plan: REVIEWED
 - D22 Registry: DECIDED
 - VPN prerequisite: READY 또는 승인된 적용계획 고정
+- AWS/ROSA Region: **FROZEN — `ap-northeast-2` / Seoul**
+- ROSA HCP/Classic topology: **SELECTED BY SAME-WORKLOAD COST COMPARISON**
 - ROSA inputs: FROZEN
+- Cost model inputs: **COMPLETE — `../phase2-cost-policy-20260930/cost-model-inputs.json`**
 - Control Cost: KNOWN
 - P0 Cost-to-Complete: ESTIMATED
 
@@ -174,7 +178,7 @@ Commit SHA → Image Digest → ROSA Runtime imageID 추적을 보존한다.
 - **RED:** Control Cost 또는 예상치가 $450 이상 → 신규 유료 Runtime/Create/Recreate 금지, Hard Stop/cleanup 적용
 - **$450~$500:** 테스트 예산이 아니며 billing lag/teardown delay/cleanup residual 전용
 
-`Control Cost` 정의는 DEC-P2-COST-01을 따른다.
+`Control Cost` 정의는 DEC-P2-COST-01을 따른다. Region-specific AWS 가격과 ROSA 서비스 요금은 Cost GO 직전 최신 공식 값을 재확인하고, topology/worker/network 입력을 고정한 계산 스냅샷을 Evidence로 남긴다.
 
 ## 6. 재시험 정책
 
