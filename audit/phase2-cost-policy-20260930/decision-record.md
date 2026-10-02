@@ -12,6 +12,8 @@
 - Target Spend: **≤ $400**
 - Operational Hard Stop: **$450**
 - Protected Reserve: **$50 ($450~$500)**
+- AWS/ROSA baseline Region: **Asia Pacific (Seoul) / `ap-northeast-2` — APPROVED 2026-10-02 KST**
+- ROSA topology: **HCP vs Classic — PENDING Cost-to-Complete comparison**
 
 ## Interpretation
 
@@ -22,6 +24,8 @@
 5. $500은 총 상한이며 Credit/Promo/지원금이 남더라도 확대하지 않는다.
 6. Hard Stop은 단순 현재 청구액이 아니라 Actual/Gross + 확인 가능한 미반영/Projected cost를 기준으로 선제 적용한다.
 7. Reserve를 P1 확장, 신규 PoC, 일정 연장 또는 정상 운영비로 전용하지 않는다.
+8. Phase 2 AWS/ROSA 실행 기준 리전은 `ap-northeast-2`(Seoul)로 고정한다.
+9. Region 결정은 HCP/Classic topology 승인으로 간주하지 않는다. 동일 workload/Runtime 조건의 Cost-to-Complete 비교와 prerequisite 확인 후 Cost GO에서 topology를 확정한다.
 
 ## Decision Boundary
 
@@ -30,6 +34,7 @@
 다음을 승인하지 않는다.
 
 - AWS/ROSA 리소스 생성 자체
+- ROSA HCP/Classic topology 선택 자체
 - GitOps/Compliance 등 P1 기능 도입
 - Runtime Acceptance
 - Gate 통과
@@ -38,7 +43,7 @@
 
 ## Related Tickets
 
-#34, #35, #38, #42, #49, #55, #57
+#34, #35, #37, #38, #42, #49, #55, #57
 
 ## Native ticket draft properties
 
