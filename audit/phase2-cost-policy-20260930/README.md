@@ -111,18 +111,45 @@ Credit, Promo, 교육기관 지원금 또는 환급은 **$500 Ceiling을 확대�
 
 ## 7. 검증 및 증적 원칙
 
-최소 기록:
+### 7.1 Billing 관측 제약 — 2026-10-02
+
+프로젝트 AWS 작업 계정의 Billing/Cost Explorer 조회는 교육장 AWS Organizations의 상위 통제로 제한되어 있으며, 프로젝트 팀이 해당 통제를 변경하지 않는다.
+
+교육장 측 비용정보는 **외부 제공 Daily Summary**로 취급한다.
+
+- 제공 형식·필드·전달 시각을 프로젝트 요구사항으로 강제하지 않는다.
+- 교육장이 제공 가능한 간소화 형식을 원문 그대로 수용한다.
+- 계정번호, 조직정보, 계약/크레딧 세부 등 교육장이 비공개로 판단한 정보는 수집·저장 요구하지 않는다.
+- 외부 Summary에 특정 서비스/Marketplace/Credit 항목이 없다는 이유로 해당 비용을 `$0` 또는 Credit 적용으로 판정하지 않는다.
+- 원본 화면/파일을 프로젝트 저장소에 편입하는 것은 **비식별·공개 허용이 확인된 경우에만** 수행한다.
+- 원본을 보관할 수 없으면 기준일시, 제공주체, 확인 가능한 Gross/Credit/Net 요약값과 제한사항만 프로젝트 Evidence에 기록한다.
+
+### 7.2 Cost Gate 판정 소스
+
+비용 통제는 다음 소스를 우선순위가 아니라 **상호 보완**으로 사용한다.
+
+1. 프로젝트가 직접 추적 가능한 유료 Resource Inventory와 Create/Destroy 시각
+2. 공식 단가 기반의 미반영/Projected Cost-to-Complete
+3. 교육장 외부 Daily Billing Summary에서 확인 가능한 Actual/Gross/Credit/Net 관측값
+4. Billing lag 또는 외부 Summary 누락 가능성을 반영한 teardown residual estimate
+
+최소 내부 기록:
 
 - 기준 시각(KST)
-- AWS/ROSA Account/Project 식별 정보(Secret 제외)
-- Actual/Gross spend
+- 비식별 Project/Environment 식별자
+- 확인 가능한 Actual/Gross spend 또는 외부 Summary 값
+- 값의 Source와 관측 한계
 - 미반영/Projected 또는 계산한 잔여 비용
 - 실행 중 유료 리소스 inventory
 - Create/Destroy 시각
 - cleanup 상태
 - Hard Stop 발동 여부와 후속 Action
 
-Billing screenshot 단독보다 원본 Cost/Resource export 또는 CLI/API 결과를 우선한다. Secret, 계정 토큰, Access Key는 증적에 포함하지 않는다.
+**외부 Daily Summary가 아직 없거나 간소화되어도 Cost GO 자체를 자동 차단하지 않는다.** 대신 해당 구간은 `ESTIMATED`로 표시하고, 공식 단가 + Resource Inventory + Runtime 계획으로 보수적으로 계산한다. 이후 Summary가 도착하면 Estimate와 Actual 관측값의 차이를 reconciliation 한다.
+
+Credit/Marketplace 적용 여부가 외부 Summary에서 확인되지 않으면 `UNKNOWN`으로 유지하며, 이를 Gross Ceiling 확대 또는 신규 유료 실행 근거로 사용하지 않는다.
+
+Secret, 계정 토큰, Access Key, 비공개 Account/Organization 식별정보는 증적에 포함하지 않는다.
 
 ## 8. 상태 구분
 
@@ -132,7 +159,7 @@ Billing screenshot 단독보다 원본 Cost/Resource export 또는 CLI/API 결�
 - ISSUE PUBLICATION: **NOT CREATED / HUMAN APPLY REQUIRED**
 - CANDIDATE PR: **APPLIED**
 - CLOUD RUNTIME: **NOT RUN**
-- COST MEASUREMENT: **NOT RUN**
+- COST MEASUREMENT: **DIRECT BILLING API BLOCKED / EXTERNAL DAILY SUMMARY AVAILABLE WHEN PROVIDED / PROJECT ESTIMATE ACTIVE**
 - REVIEW: **NOT DONE**
 - MERGE/PUBLICATION: **NOT DONE**
 
