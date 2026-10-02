@@ -61,6 +61,7 @@
   ],
   "rosa_create_checkpoint": {
     "technical": [
+      "portability_gate_pg01_pg09_pass_or_approved_exception",
       "phase1_failure_contract_frozen_or_known_issue",
       "D21_decided",
       "terraform_plan_reviewed",
@@ -70,8 +71,8 @@
       "control_cost_known",
       "p0_cost_to_complete_estimated",
       "aws_rosa_region_ap_northeast_2_fixed",
-      "rosa_hcp_or_classic_selected_by_same_workload_cost_comparison",
-      "cost_model_inputs_complete"
+      "cost_model_inputs_complete",
+      "rosa_hcp_or_classic_selected_after_portability_and_same_workload_cost_comparison"
     ],
     "cost_states": {
       "green": "projected_completion_le_400",
@@ -114,7 +115,8 @@
     "region_status": "APPROVED_EXECUTION_INPUT",
     "rosa_hcp_supported": true,
     "rosa_classic_supported": true,
-    "topology_status": "PENDING_COST_COMPARISON",
-    "cost_model": "../phase2-cost-policy-20260930/cost-model-inputs.json"
+    "topology_status": "PENDING_PORTABILITY_AND_COST_REVIEW",
+    "cost_model": "../phase2-cost-policy-20260930/cost-model-inputs.json",
+    "portability_review": "../phase2-rosa-topology-review-20261002/README.md"
   }
 }
