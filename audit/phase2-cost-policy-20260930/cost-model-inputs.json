@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "record_id": "DEC-P2-COST-01-COST-MODEL",
+  "as_of_kst": "2026-10-02",
+  "decision_state": "REGION_FIXED_TOPOLOGY_PENDING",
+  "aws_rosa_region": {
+    "name": "Asia Pacific (Seoul)",
+    "code": "ap-northeast-2",
+    "status": "APPROVED_EXECUTION_INPUT",
+    "rosa_hcp_supported": true,
+    "rosa_classic_supported": true,
+    "source_checked_at_kst": "2026-10-02",
+    "source": "https://docs.aws.amazon.com/general/latest/gr/rosa.html"
+  },
+  "pricing_mode": "ON_DEMAND_PROJECT_WINDOW",
+  "pricing_reference": {
+    "checked_at_kst": "2026-10-02",
+    "source": "https://aws.amazon.com/rosa/pricing/",
+    "rosa_worker_service_fee_per_4vcpu_hour_usd": 0.171,
+    "rosa_hcp_cluster_fee_per_hour_usd": 0.25,
+    "note": "ROSA service fee reference only. Region-specific AWS infrastructure prices must be refreshed at Cost GO."
+  },
+  "topology_decision": {
+    "status": "PENDING_COST_COMPARISON",
+    "candidates": [
+      "ROSA_HCP",
+      "ROSA_CLASSIC"
+    ],
+    "rule": "Do not treat region approval as topology approval. Select topology only after same-workload Cost-to-Complete comparison and prerequisite check."
+  },
+  "project_inputs": {
+    "actual_gross_project_spend_usd": null,
+    "known_unbilled_or_projected_accrued_usd": null,
+    "planned_paid_runtime_hours": null,
+    "worker_instance_type": null,
+    "worker_count": null,
+    "worker_vcpu_each": null,
+    "worker_root_ebs_gb_each": null,
+    "multi_az": null,
+    "api_visibility": null,
+    "nat_gateway_count": null,
+    "vpn_connection_count": null,
+    "load_balancer_count": null,
+    "project_data_transfer_gb": null,
+    "other_project_attributable_usd": null
+  },
+  "cost_components": {
+    "common": [
+      "ROSA worker service fee",
+      "EC2 worker instances",
+      "EBS worker/root and required persistent volumes",
+      "Elastic Load Balancing",
+      "NAT Gateway hourly and data processing when used",
+      "Site-to-Site VPN hourly and transfer when used",
+      "inter-region_or_cross-cloud_data_transfer_when_used",
+      "public_ipv4_when_used",
+      "logging_monitoring_storage_or_other_project_attributable_AWS_cost",
+      "known_unbilled_or_projected_accrual"
+    ],
+    "ROSA_HCP": [
+      "ROSA HCP cluster hourly fee",
+      "customer-account worker infrastructure"
+    ],
+    "ROSA_CLASSIC": [
+      "customer-account control plane infrastructure",
+      "customer-account infrastructure nodes",
+      "customer-account worker infrastructure"
+    ]
+  },
+  "calculation": {
+    "control_cost": "actual_gross_project_spend_usd + known_unbilled_or_projected_accrued_usd",
+    "p0_cost_to_complete": "sum(remaining P0 ROSA service + AWS infrastructure + network + teardown residual estimate)",
+    "projected_completion_cost": "control_cost + p0_cost_to_complete",
+    "comparison_rule": "Use the same workload, availability assumptions, runtime window and required acceptance scope for HCP and Classic."
+  },
+  "cost_gate": {
+    "green": "projected_completion_cost <= 400",
+    "amber": "400 < projected_completion_cost < 450; defer new P1/optional paid tests and recalculate remaining P0",
+    "red": "projected_completion_cost >= 450 or control_cost >= 450; no new paid create/scale/recreate and cleanup first",
+    "absolute_ceiling_usd": 500
+  },
+  "required_before_rosa_create": [
+    "refresh_region_specific_AWS_prices_for_ap-northeast-2",
+    "freeze_worker_instance_type_count_vcpu_and_storage",
+    "freeze_network_cost_inputs",
+    "calculate_HCP_and_Classic_under_same_workload",
+    "record_selected_topology_and_rationale",
+    "record_control_cost_and_p0_cost_to_complete",
+    "classify_green_amber_red"
+  ],
+  "runtime_status": "NOT_RUN",
+  "cost_measurement_status": "NOT_RUN"
+}
