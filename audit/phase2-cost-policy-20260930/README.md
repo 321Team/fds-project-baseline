@@ -8,6 +8,8 @@
 - 차기 정본 후보: Draft PR #112 / `release/v3.1.21`
 - Priority: **P0 cost/lifecycle control**
 - 적용 범위: Phase 2에서 발생하는 프로젝트 귀속 Cloud/ROSA/AWS 유료 비용
+- AWS/ROSA 기준 리전: **Asia Pacific (Seoul) / `ap-northeast-2` — APPROVED EXECUTION INPUT (2026-10-02 KST)**
+- ROSA topology: **HCP vs Classic — PENDING COST COMPARISON / Cost GO 전 미확정**
 - Native Decision Issue: **NOT CREATED — HUMAN APPLY REQUIRED**
 - 이유: `governance/TICKET_SYNC_POLICY.md §5.1`에 따라 AI 도구가 Issue 본문을 신규 작성/문단 추가하지 않는다. 이 PR에서 Decision record와 본문 후보를 준비하고 관련 티켓에는 운영 코멘트로 연결한다.
 
@@ -29,6 +31,18 @@
 > **Target Spend ≤ $400 / Operational Hard Stop $450 / Protected Reserve $50 / Total Ceiling $500**
 
 ## 3. 비용 산정 기준
+
+### 3.1 AWS/ROSA Region 실행 입력 — 2026-10-02
+
+사용자 승인에 따라 Phase 2 AWS/ROSA 기준 리전을 **Asia Pacific (Seoul), `ap-northeast-2`**로 확정한다.
+
+- AWS General Reference 기준 `ap-northeast-2`는 ROSA with hosted control planes(HCP)와 ROSA classic 모두 지원한다.
+- Region 확정은 **HCP/Classic topology 확정 또는 ROSA provisioning 승인으로 확대하지 않는다.**
+- topology는 동일 workload·가용성·Runtime window를 전제로 HCP/Classic Cost-to-Complete를 비교한 뒤 Cost GO에서 확정한다.
+- 비용모델 machine-readable 입력: `cost-model-inputs.json`
+- ROSA 서비스 요금 참고값과 서울 리전 AWS 인프라 단가는 **실제 Cost GO 직전 재확인**한다.
+
+Cost-to-Complete 입력에는 최소 ROSA service fee, EC2, EBS, ELB, NAT Gateway, Site-to-Site VPN, data transfer, public IPv4(사용 시), logging/monitoring/storage, 기타 프로젝트 귀속 AWS 비용과 known-unbilled/projected accrual을 포함한다. 인스턴스 유형·수량·스토리지·Runtime 시간 등 미확정 값은 임의 확정하지 않는다.
 
 비용 통제는 단순히 Billing 화면의 현재 숫자만 보지 않는다.
 
@@ -112,6 +126,8 @@ Billing screenshot 단독보다 원본 Cost/Resource export 또는 CLI/API 결�
 ## 8. 상태 구분
 
 - POLICY DECISION: **APPROVED**
+- AWS/ROSA REGION: **APPROVED — `ap-northeast-2` / Seoul (2026-10-02 KST)**
+- ROSA TOPOLOGY: **PENDING COST COMPARISON**
 - ISSUE PUBLICATION: **NOT CREATED / HUMAN APPLY REQUIRED**
 - CANDIDATE PR: **APPLIED**
 - CLOUD RUNTIME: **NOT RUN**
