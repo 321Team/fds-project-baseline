@@ -10,7 +10,10 @@
     "hard_stop_usd": 450,
     "protected_reserve_usd": 50,
     "ceiling_usd": 500,
-    "control_cost": "actual_gross_plus_known_unbilled_or_projected"
+    "control_cost": "actual_gross_plus_known_unbilled_or_projected",
+    "observability": "external_daily_summary_uncontrolled_format_plus_project_estimate",
+    "external_report_absence_is_automatic_blocker": false,
+    "missing_external_fields_mean_zero": false
   },
   "schedule": {
     "phase2_start": "2026-10-07",
@@ -68,7 +71,7 @@
       "D22_decided",
       "vpn_prerequisite_ready_or_frozen_plan",
       "rosa_inputs_frozen",
-      "control_cost_known",
+      "control_cost_observed_or_conservatively_estimated_with_source_limitations_recorded",
       "p0_cost_to_complete_estimated",
       "aws_rosa_region_ap_northeast_2_fixed",
       "cost_model_inputs_complete",
