@@ -159,13 +159,14 @@ Commit SHA → Image Digest → ROSA Runtime imageID 추적을 보존한다.
 
 ### 기술 조건
 
+- ROSA topology Portability Gate(PG-01~PG-09): PASS 또는 승인된 Exception
 - Phase 1 App/Failure contract: FROZEN 또는 승인된 Known Issue로 인계
 - D21: DECIDED
 - Terraform Plan: REVIEWED
 - D22 Registry: DECIDED
 - VPN prerequisite: READY 또는 승인된 적용계획 고정
 - AWS/ROSA Region: **FROZEN — `ap-northeast-2` / Seoul**
-- ROSA HCP/Classic topology: **SELECTED BY SAME-WORKLOAD COST COMPARISON**
+- ROSA HCP/Classic topology: **SELECTED AFTER PORTABILITY + SECURITY/EVIDENCE + HYBRID NETWORK + OPERABILITY + SAME-WORKLOAD COST COMPARISON**
 - ROSA inputs: FROZEN
 - Cost model inputs: **COMPLETE — `../phase2-cost-policy-20260930/cost-model-inputs.json`**
 - Control Cost: KNOWN
