@@ -1,0 +1,206 @@
+{
+  "schema_version": "1.0",
+  "record_id": "P2-PORTABILITY-INVENTORY-01",
+  "as_of_kst": "2026-10-02",
+  "scope": "Phase1 current source to Shared OCP/ROSA portability assessment for P2 topology decision",
+  "source_heads": {
+    "321Team/infra-kubernetes": "7329bf2eb988b552483af48ff660d6a3f1f1d4f5",
+    "321Team/fds-msa": "5120b7df72d24ada3dbcf23fc0292fb58ae778af",
+    "321Team/infra-cicd": "52cf494bec02ab4b814bed07e4cf66f37a3547b6",
+    "321Team/infra-terraform": "1c5ce75b81c0c103b46c546b015246183a317e56",
+    "321Team/infra-rosa": "d5e6226d4e8eca45af757a16bfce5c0b89caf66a"
+  },
+  "classification_values": [
+    "REUSE",
+    "OPENSHIFT_OVERLAY",
+    "ROSA_DEPENDENT",
+    "AWS_DEPENDENT"
+  ],
+  "items": [
+    {
+      "id": "PORT-APP-01",
+      "source": "fds-msa application code / Dockerfiles",
+      "paths": [
+        "transaction-api/",
+        "fds-engine/"
+      ],
+      "classification": "REUSE",
+      "status": "PASS_WITH_RUNTIME_VALIDATION",
+      "rationale": "Application code uses HTTP/PostgreSQL and environment-injected DATABASE_URL/FDS_ENGINE_URL; no AWS/ROSA SDK dependency observed.",
+      "action": "Retain same image/business contract. Validate image supports OpenShift arbitrary UID before declaring runtime portability."
+    },
+    {
+      "id": "PORT-K8S-01",
+      "source": "application Deployment/Service base semantics",
+      "paths": [
+        "infra-kubernetes/manifests/02-securitycontext.yaml",
+        "fds-msa/references/upstream/kubernetes/base/*.yaml"
+      ],
+      "classification": "REUSE",
+      "status": "PARTIAL",
+      "rationale": "apps/v1 Deployment, v1 Service, probes, resources, emptyDir and standard pod security fields are Kubernetes APIs.",
+      "action": "Create one authoritative portable workload base; existing fds-msa files are reference snapshots and infra-kubernetes manifest is a security patch/reference rather than the Phase2 deployment source."
+    },
+    {
+      "id": "PORT-OCP-01",
+      "source": "fixed UID/GID security context",
+      "paths": [
+        "infra-kubernetes/manifests/02-securitycontext.yaml",
+        "fds-msa/references/upstream/kubernetes/base/deployment-*.yaml"
+      ],
+      "classification": "OPENSHIFT_OVERLAY",
+      "status": "HOLD",
+      "rationale": "Current manifests explicitly request runAsUser 10001 and runAsGroup 999/10001. OpenShift restricted-v2 constrains explicit UID to the project/SCC allowed range.",
+      "action": "Do not grant a broader/custom SCC just to preserve fixed IDs. First test arbitrary-UID compatibility; prefer removing fixed UID/GID from OpenShift overlay while retaining runAsNonRoot, seccomp RuntimeDefault, readOnlyRootFilesystem and drop ALL if image permissions permit."
+    },
+    {
+      "id": "PORT-OCP-02",
+      "source": "transaction-api external exposure",
+      "paths": [
+        "fds-msa/references/upstream/kubernetes/base/service.yaml"
+      ],
+      "classification": "OPENSHIFT_OVERLAY",
+      "status": "HOLD",
+      "rationale": "Phase1 uses NodePort 30080 + edge01 reverse proxy. ROSA/OpenShift P2 expects Route-based health/access and managed ingress.",
+      "action": "Portable base should keep ClusterIP service. Put OpenShift Route/TLS/ingress exposure in a ROSA/OpenShift overlay."
+    },
+    {
+      "id": "PORT-OCP-03",
+      "source": "namespace security labels",
+      "paths": [
+        "infra-kubernetes/manifests/01-namespace.yaml"
+      ],
+      "classification": "OPENSHIFT_OVERLAY",
+      "status": "HOLD",
+      "rationale": "Namespace PSA labels are pinned to Kubernetes v1.36 based on Phase1 runtime. ROSA/OpenShift cluster version can differ and SCC also participates in admission.",
+      "action": "Do not carry v1.36 labels verbatim. Derive supported PSA version or use target-compatible labels after ROSA version freeze; preserve restricted intent."
+    },
+    {
+      "id": "PORT-NET-01",
+      "source": "application NetworkPolicy",
+      "paths": [
+        "infra-kubernetes/manifests/03-networkpolicy.yaml"
+      ],
+      "classification": "OPENSHIFT_OVERLAY",
+      "status": "PARTIAL",
+      "rationale": "networking.k8s.io/v1 is portable, but edge01/db01/monitor01/control-plane/worker IP blocks are Phase1 topology values.",
+      "action": "Split policy intent from environment endpoints. Keep pod/namespace selector rules in base; inject approved DB/monitoring/source CIDRs and validate OVN-Kubernetes semantics with negative tests."
+    },
+    {
+      "id": "PORT-K8S-02",
+      "source": "ServiceAccount/RBAC",
+      "paths": [
+        "infra-kubernetes/manifests/06-rbac.yaml"
+      ],
+      "classification": "REUSE",
+      "status": "PASS_WITH_TARGET_REVALIDATION",
+      "rationale": "Core RBAC APIs and no-token service accounts are portable; CI deploy role is already limited to two existing deployments.",
+      "action": "Reuse least-privilege intent. Recreate target-specific short-lived credential/token flow and verify deny cases on ROSA."
+    },
+    {
+      "id": "PORT-STO-01",
+      "source": "monitoring local persistent storage",
+      "paths": [
+        "infra-kubernetes/manifests/04-storage.yaml"
+      ],
+      "classification": "AWS_DEPENDENT",
+      "status": "BLOCKED_FOR_FULL_SYSTEM_PORTABILITY",
+      "rationale": "Static local PVs bind host paths to k8s-worker03 and kubernetes.io/no-provisioner. They cannot be transplanted to managed ROSA workers as-is.",
+      "action": "For ROSA monitoring, replace with approved CSI-backed StorageClass/PVC (for example EBS-backed storage) via environment overlay. Do not change P0 app topology decision solely for P1 monitoring."
+    },
+    {
+      "id": "PORT-MON-01",
+      "source": "node-exporter host access",
+      "paths": [
+        "infra-kubernetes/docs/reference/p1-sec-01-monitoring-securitycontext.yaml"
+      ],
+      "classification": "OPENSHIFT_OVERLAY",
+      "status": "P1_EXCEPTION_REQUIRED",
+      "rationale": "node-exporter design uses hostNetwork, hostPID, hostPort and hostPath, requiring privileged namespace/SCC treatment and managed-platform validation.",
+      "action": "Keep outside P0 topology gate unless monitoring is promoted. Prefer supported OpenShift/ROSA monitoring integration before recreating host-level DaemonSet privileges."
+    },
+    {
+      "id": "PORT-CICD-01",
+      "source": "self-hosted runner pipeline",
+      "paths": [
+        "infra-cicd/.github/workflows/app-test-build-scan.yml",
+        "infra-cicd/config/app-build-scan.json",
+        "infra-cicd/docs/pipeline-contract.md"
+      ],
+      "classification": "OPENSHIFT_OVERLAY",
+      "status": "PARTIAL",
+      "rationale": "Commit→test→build→scan→digest contract is target-independent, but current workflow is pinned to cicd-runner01 labels/hostname/user and on-prem offline supply paths; current checked workflow does not itself prove ROSA deploy.",
+      "action": "Preserve external Runner and digest traceability. Parameterize target API/namespace/credential/registry and add ROSA deployment adapter without duplicating build/scan logic."
+    },
+    {
+      "id": "PORT-HYB-01",
+      "source": "Hybrid DB/Registry interface",
+      "paths": [
+        "transaction-api/app/db.py",
+        "transaction-api/app/fds_client.py",
+        "infra-kubernetes/manifests/03-networkpolicy.yaml"
+      ],
+      "classification": "AWS_DEPENDENT",
+      "status": "PARTIAL",
+      "rationale": "Application endpoint is externalized by env/Secret, which is portable; actual source CIDR, VPN route, SG/NACL and cross-cloud path are AWS/Hybrid environment inputs.",
+      "action": "Keep DATABASE_URL/FDS_ENGINE_URL externalized. Bind ROSA worker source/route/TLS/port through #35/#37/#47 rather than application image."
+    },
+    {
+      "id": "PORT-IAC-01",
+      "source": "Phase2 infrastructure IaC",
+      "paths": [
+        "infra-terraform",
+        "infra-rosa"
+      ],
+      "classification": "ROSA_DEPENDENT",
+      "status": "NOT_IMPLEMENTED",
+      "rationale": "Both repositories are still initialization-only; no Terraform ROSA module or ROSA manifests exist yet.",
+      "action": "Implement layered boundary: common network/interface -> AWS IAM/OIDC -> topology-specific ROSA provisioning -> cluster platform config -> portable workload. This is a design opportunity, not existing code debt."
+    }
+  ],
+  "gate_status": {
+    "PG-01": {
+      "status": "HOLD",
+      "reason": "No single authoritative portable workload base exists yet."
+    },
+    "PG-02": {
+      "status": "HOLD",
+      "reason": "OpenShift Route/SCC/namespace overlay not implemented."
+    },
+    "PG-03": {
+      "status": "HOLD",
+      "reason": "Fixed UID/GID requires restricted-v2 compatibility test."
+    },
+    "PG-04": {
+      "status": "PARTIAL",
+      "reason": "Standard NetworkPolicy API but environment IPs and CNI behavior require overlay/runtime validation."
+    },
+    "PG-05": {
+      "status": "PASS_P0_BLOCKED_FULL_SYSTEM",
+      "reason": "P0 app has no persistent workload storage dependency; monitoring local PV is non-portable."
+    },
+    "PG-06": {
+      "status": "PARTIAL",
+      "reason": "Delivery contract reusable, executor/target bindings need adapter."
+    },
+    "PG-07": {
+      "status": "PARTIAL",
+      "reason": "Hybrid interface intent portable; AWS/OCI/on-prem route/source inputs are environment-specific."
+    },
+    "PG-08": {
+      "status": "HOLD",
+      "reason": "Terraform/ROSA layering not implemented yet."
+    },
+    "PG-09": {
+      "status": "PARTIAL",
+      "reason": "Evidence contract exists; HCP/Classic target evidence still not runtime-validated."
+    }
+  },
+  "topology_implication": {
+    "status": "NO_WINNER_FROM_PORTABILITY_YET",
+    "note": "Most current portability risks are common to both HCP and Classic because they arise at OpenShift workload/admission and environment-adapter layers, not control-plane placement.",
+    "classic_specific_advantage": "Greater customer-account visibility of control-plane/infra architecture, relevant only if host-level/control-plane evidence becomes an approved P0 need.",
+    "hcp_specific_risk": "Lower customer visibility of control-plane hosts, but no current P0 AC requiring direct control-plane host operations was found.",
+    "decision_rule": "Do not select Classic solely for structural similarity and do not select HCP solely for cost. Clear PG-01/02/03/08, then compare security/evidence, hybrid path, operability, cost and schedule."
+  }
+}
