@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0",
+  "record_id": "P2-ROSA-TOPOLOGY-REVIEW-01",
+  "as_of_kst": "2026-10-02",
+  "region": {
+    "name": "Asia Pacific (Seoul)",
+    "code": "ap-northeast-2",
+    "status": "APPROVED"
+  },
+  "topology_status": "UNDECIDED",
+  "decision_order": [
+    "portability_gate",
+    "security_and_evidence",
+    "hybrid_networking",
+    "operability",
+    "cost_to_complete",
+    "schedule"
+  ],
+  "portability_gate": [
+    {
+      "id": "PG-01",
+      "name": "workload_base",
+      "rule": "prefer standard Kubernetes APIs for Deployment/Service/ConfigMap/SecretRef/SA/RBAC/NetworkPolicy/SecurityContext",
+      "status": "TO_VERIFY"
+    },
+    {
+      "id": "PG-02",
+      "name": "openshift_overlay",
+      "rule": "separate Route and other OpenShift-specific resources from portable workload base",
+      "status": "TO_VERIFY"
+    },
+    {
+      "id": "PG-03",
+      "name": "security",
+      "rule": "preserve portable pod SecurityContext; avoid custom SCC/privileged/host coupling as baseline",
+      "status": "TO_VERIFY"
+    },
+    {
+      "id": "PG-04",
+      "name": "network_policy",
+      "rule": "prefer standard NetworkPolicy; isolate CNI-specific CRDs as exceptions",
+      "status": "TO_VERIFY"
+    },
+    {
+      "id": "PG-05",
+      "name": "storage_data",
+      "rule": "keep business data contract external; parameterize StorageClass/PVC inputs",
+      "status": "TO_VERIFY"
+    },
+    {
+      "id": "PG-06",
+      "name": "registry_delivery",
+      "rule": "digest-tracked images and target credentials/endpoints remain environment inputs",
+      "status": "TO_VERIFY"
+    },
+    {
+      "id": "PG-07",
+      "name": "hybrid_interface",
+      "rule": "keep CIDR/port/TLS/DNS/source contracts topology-independent",
+      "status": "TO_VERIFY"
+    },
+    {
+      "id": "PG-08",
+      "name": "iac_layering",
+      "rule": "separate common network, AWS IAM/OIDC, topology provisioning, platform config and workload layers",
+      "status": "TO_VERIFY"
+    },
+    {
+      "id": "PG-09",
+      "name": "evidence",
+      "rule": "chosen topology must expose enough evidence for current P0 AC without weakening acceptance",
+      "status": "TO_VERIFY"
+    }
+  ],
+  "comparison": {
+    "workload_api": {
+      "hcp": "NEUTRAL",
+      "classic": "NEUTRAL",
+      "note": "same OpenShift workload APIs; portability depends mainly on manifests"
+    },
+    "control_plane_similarity_to_self_managed_ocp": {
+      "hcp": "LOWER",
+      "classic": "HIGHER",
+      "note": "classic is structurally closer but remains Red Hat managed"
+    },
+    "infrastructure_coupling": {
+      "hcp": "LOWER_CUSTOMER_FOOTPRINT",
+      "classic": "HIGHER_CUSTOMER_AWS_FOOTPRINT"
+    },
+    "hybrid_application_path": {
+      "hcp": "NEUTRAL_WITH_RUNTIME_VALIDATION",
+      "classic": "NEUTRAL_WITH_RUNTIME_VALIDATION"
+    },
+    "control_plane_host_evidence": {
+      "hcp": "LOWER_VISIBILITY",
+      "classic": "HIGHER_CUSTOMER_ACCOUNT_VISIBILITY"
+    },
+    "workload_portability_if_gate_passes": {
+      "hcp": "HIGH",
+      "classic": "HIGH"
+    },
+    "cost_status": {
+      "hcp": "PENDING_EXACT_INPUTS",
+      "classic": "PENDING_EXACT_INPUTS"
+    }
+  },
+  "current_interpretation": "Current P0 acceptance is worker/workload centric. No topology winner until PG-01..PG-09 and Cost GO are completed.",
+  "references": [
+    "https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws/4/html/introduction_to_rosa/rosa-architecture-models",
+    "https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws_classic_architecture/4/html/architecture/rosa-architecture-models",
+    "https://docs.redhat.com/en/documentation/openshift_container_platform/4.21/html/ingress_and_load_balancing/routes",
+    "https://docs.redhat.com/en/documentation/openshift_container_platform/4.20/html/authentication_and_authorization/managing-pod-security-policies"
+  ]
+}
