@@ -21,20 +21,20 @@
     "note": "ROSA service fee reference only. Region-specific AWS infrastructure prices must be refreshed at Cost GO."
   },
   "topology_decision": {
-    "status": "PENDING_COST_COMPARISON",
+    "status": "PENDING_PORTABILITY_AND_COST_REVIEW",
     "candidates": [
       "ROSA_HCP",
       "ROSA_CLASSIC"
     ],
     "rule": "Do not treat region approval as topology approval. Select topology only after same-workload Cost-to-Complete comparison and prerequisite check.",
-    "preliminary_direction": "HCP_FAVORED_FOR_SHORT_POC_SUBJECT_TO_COST_GO",
+    "preliminary_direction": "UNDECIDED",
     "preliminary_basis": [
-      "smaller customer-account EC2 footprint",
-      "same worker service fee basis plus HCP cluster fee",
-      "classic adds customer control-plane and infrastructure EC2/EBS footprint",
-      "classic has additional quota prerequisite",
-      "project uses a short controlled runtime window"
-    ]
+      "cost alone is not sufficient",
+      "must preserve Phase 1 workload, security, delivery and hybrid interface contracts",
+      "must compare workload portability separately from platform-operations portability",
+      "topology selection requires portability gate plus Cost GO"
+    ],
+    "required_prior_assessment": "../phase2-rosa-topology-review-20261002/README.md"
   },
   "project_inputs": {
     "actual_gross_project_spend_usd": null,
@@ -88,13 +88,14 @@
     "absolute_ceiling_usd": 500
   },
   "required_before_rosa_create": [
+    "pass_portability_gate",
     "refresh_region_specific_AWS_prices_for_ap-northeast-2",
     "freeze_worker_instance_type_count_vcpu_and_storage",
     "freeze_network_cost_inputs",
-    "calculate_HCP_and_Classic_under_same_workload",
     "record_selected_topology_and_rationale",
     "record_control_cost_and_p0_cost_to_complete",
-    "classify_green_amber_red"
+    "classify_green_amber_red",
+    "calculate_HCP_and_Classic_under_same_workload"
   ],
   "runtime_status": "NOT_RUN",
   "cost_measurement_status": "NOT_RUN",
