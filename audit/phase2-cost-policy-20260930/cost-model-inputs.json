@@ -50,7 +50,11 @@
     "vpn_connection_count": null,
     "load_balancer_count": null,
     "project_data_transfer_gb": null,
-    "other_project_attributable_usd": null
+    "other_project_attributable_usd": null,
+    "external_daily_summary_gross_usd": null,
+    "external_daily_summary_credit_usd": null,
+    "external_daily_summary_net_usd": null,
+    "external_daily_summary_as_of_kst": null
   },
   "cost_components": {
     "common": [
@@ -79,7 +83,11 @@
     "control_cost": "actual_gross_project_spend_usd + known_unbilled_or_projected_accrued_usd",
     "p0_cost_to_complete": "sum(remaining P0 ROSA service + AWS infrastructure + network + teardown residual estimate)",
     "projected_completion_cost": "control_cost + p0_cost_to_complete",
-    "comparison_rule": "Use the same workload, availability assumptions, runtime window and required acceptance scope for HCP and Classic."
+    "comparison_rule": "Use the same workload, availability assumptions, runtime window and required acceptance scope for HCP and Classic.",
+    "gross_project_cost": "observed_gross_when_available_else_estimated_resource_cost",
+    "credit_eligible_cost": "UNKNOWN until observed/confirmed; informational only and does not expand gross ceiling",
+    "expected_cash_out": "observed_net_when_available; otherwise UNKNOWN/ESTIMATED separately from gross",
+    "reconciliation": "compare external observed summary with prior estimate when a later report becomes available"
   },
   "cost_gate": {
     "green": "projected_completion_cost <= 400",
@@ -93,9 +101,9 @@
     "freeze_worker_instance_type_count_vcpu_and_storage",
     "freeze_network_cost_inputs",
     "record_selected_topology_and_rationale",
-    "record_control_cost_and_p0_cost_to_complete",
     "classify_green_amber_red",
-    "calculate_HCP_and_Classic_under_same_workload"
+    "calculate_HCP_and_Classic_under_same_workload",
+    "record_control_cost_and_p0_cost_to_complete_using_observed_or_conservative_estimate"
   ],
   "runtime_status": "NOT_RUN",
   "cost_measurement_status": "NOT_RUN",
@@ -122,5 +130,17 @@
       "classic_creation_quota_note": "AWS documentation states ROSA classic cluster creation requires a minimum 100 vCPU quota."
     },
     "interpretation": "Structural comparison input only. It does not select topology; refresh Seoul infrastructure prices and project worker/network inputs before Cost GO."
+  },
+  "billing_observability": {
+    "mode": "EXTERNAL_EDUCATION_DAILY_SUMMARY",
+    "direct_cost_explorer_api": "BLOCKED_BY_ORG_SCP",
+    "project_control_over_report_format": "NONE",
+    "report_frequency": "DAILY_WHEN_PROVIDED",
+    "raw_report_storage": "ONLY_IF_SANITIZED_AND_EXPLICITLY_ALLOWED",
+    "private_account_org_credit_details": "DO_NOT_REQUIRE_OR_STORE",
+    "reconciliation_rule": "Use report values when available; never infer zero cost or credit eligibility from missing fields.",
+    "fallback_when_report_missing_or_simplified": "ESTIMATE_FROM_RESOURCE_INVENTORY_OFFICIAL_PRICING_RUNTIME_AND_TEARDOWN_RESIDUAL",
+    "cost_go_blocking_rule": "External report absence alone is not a blocker if conservative projected cost can be established.",
+    "credit_marketplace_status": "UNKNOWN_UNLESS_OBSERVED_OR_CONFIRMED_BY_PROVIDER"
   }
 }
