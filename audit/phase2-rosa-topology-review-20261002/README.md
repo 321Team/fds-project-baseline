@@ -118,6 +118,55 @@ Cost GO 이전에 다음을 확인한다.
 
 그 뒤 Architecture Freeze에서 topology를 결정한다.
 
+## 5A. 2026-10-02 Phase 1 실제 Source 대조 결과
+
+대조한 main HEAD:
+- `321Team/infra-kubernetes@7329bf2eb988b552483af48ff660d6a3f1f1d4f5`
+- `321Team/fds-msa@5120b7df72d24ada3dbcf23fc0292fb58ae778af`
+- `321Team/infra-cicd@52cf494bec02ab4b814bed07e4cf66f37a3547b6`
+- `321Team/infra-terraform@1c5ce75b81c0c103b46c546b015246183a317e56`
+- `321Team/infra-rosa@d5e6226d4e8eca45af757a16bfce5c0b89caf66a`
+
+상세 machine-readable inventory:
+- `source-portability-inventory.json`
+
+W0 실행계획:
+- `w0-portability-precheck.md`
+
+### 분류 요약
+
+| 분류 | 현재 주요 항목 | 조치 |
+|---|---|---|
+| 그대로 재사용 가능 | 앱 business code, HTTP/PostgreSQL contract, probes/resources, core RBAC intent, ServiceAccount token 최소화 | target Runtime 재검증 후 재사용 |
+| OpenShift overlay 필요 | NodePort+edge01, 고정 UID/GID, PSA v1.36 pin, target CIDR NetworkPolicy, Route/SCC/target credential | portable base와 분리 |
+| ROSA 종속 | target API/access, managed platform evidence, HCP/Classic provisioning adapter | `infra-rosa` / topology layer에 격리 |
+| AWS 종속 | VPC/Subnet, IAM/OIDC, VPN/SG/NACL, EBS/ELB/NAT/data transfer | `infra-terraform` / network layer에 격리 |
+
+### 현재 차단 Gate
+
+- **PG-01 HOLD:** 권위 있는 단일 portable workload base가 아직 없다. `fds-msa/references/upstream/kubernetes`는 reference snapshot이고 `infra-kubernetes/manifests/02-securitycontext.yaml`은 Security patch/reference 성격이다.
+- **PG-02 HOLD:** Phase 1 외부 진입은 NodePort 30080 + edge01이며 OpenShift Route overlay는 아직 구현되지 않았다.
+- **PG-03 HOLD:** Phase 1 manifest가 `runAsUser: 10001`, `runAsGroup: 999/10001`을 고정한다. OpenShift restricted-v2 namespace UID range와의 호환성을 Shared OCP에서 확인해야 한다.
+- **PG-08 HOLD:** `infra-terraform` / `infra-rosa`는 저장소 초기 구성만 존재하고 실제 계층형 IaC/manifest가 아직 없다.
+
+### 비차단이나 이식성 비용이 큰 항목
+
+- Phase 1 monitoring storage는 `fds-local-storage` + `k8s-worker03` local PV에 결합되어 있어 ROSA에 직접 이식할 수 없다. P0 App topology blocker는 아니지만 full-system portability에는 CSI-backed storage overlay가 필요하다.
+- node-exporter는 hostNetwork/hostPID/hostPort/hostPath를 사용하므로 managed OpenShift/ROSA에서 별도 권한/운영 모델 검토가 필요하다. P1 Monitoring 영역으로 분리한다.
+- 현재 CI workflow의 build/scan 계약은 재사용 가능하지만 `cicd-runner01` hostname/user/label 및 local offline path에 결합되어 있다. ROSA API/namespace/token/registry를 target adapter로 분리해야 한다.
+
+### Topology 영향
+
+이 대조로 **HCP 또는 Classic을 직접 선택할 근거는 아직 생기지 않았다.** 현재 blocker 대부분은 두 topology 공통의 OpenShift admission/workload/adapter 문제다.
+
+따라서:
+1. Shared OCP W0에서 PG-03 UID/SCC와 portable securityContext를 먼저 실증
+2. portable workload base + OpenShift overlay 경계 확정
+3. Terraform/ROSA topology module 경계 확인
+4. 그 뒤 HCP/Classic의 운영·증적·Hybrid path·비용을 비교
+
+순서로 진행한다.
+
 ## 6. 설계 권고
 
 - **Kubernetes base + OpenShift overlay** 구조를 사용한다.
