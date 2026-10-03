@@ -1,11 +1,11 @@
 # Current Canonical Release
 
-이 문서는 최종화 PR 승인·병합 후 적용할 메타데이터다. GitHub 실제 게시 여부는 아래 Release 링크/API를 기준으로 확인한다.
+이 문서는 실제 게시된 운영 정본의 포인터다. v3.1.21 후보 수집·검토 상태는 운영 정본의 발행 상태와 별도로 관리한다. GitHub 게시 사실은 아래 Release API로 확인한다.
 
 | Field | Value |
 |---|---|
 | Repository status | ACTIVE / CANONICAL |
-| Canonical document version | v3.1.20 / RELEASED after finalization merge |
+| Canonical document version | v3.1.20 / PUBLISHED (verified Release API) |
 | History path | `releases/v3.1.20/` |
 | Approved content HEAD | `9fa13f8e99da43d668a4ed38218e69ab55b6db75` |
 | Content merge | `336446500ef9a71c4796e6cfc8bc4db18daceb09` |
@@ -33,3 +33,10 @@ v3.1.20 is now the operational publication; v3.1.19 becomes the previous preserv
 ## Scope
 
 RELEASED in document headings means approved content plus reviewed finalization on main and matching checksums. It does not imply that GitHub Publish, operational Runtime, AC or Gate acceptance has occurred. v3.1.20 carries forward Baseline/WBS/Ticket Pack with real edits limited to governance/CI fixes (PR #82/#86/#88/#89) and the Phase 2 schedule replan (Lead decision, 2026-09-22); Architecture is unchanged from v3.1.19 (no revision reason this cycle, §2 item 7 conditional requirement). Snapshot-time candidate wording in retained source/Description/audit inputs remains historical. Planning dates remain adjustable targets.
+
+## 2026-10-03 current status clarification (candidate correction)
+
+- `docs-v3.1.20`: Release API draft=false, published_at=2026-09-22T17:37:13Z (2026-09-23 02:37:13 KST), 실제 PUBLISHED. Release text의 CANDIDATE/COLLECTING/정식 발행 보류는 당시 snapshot 문구다. 기존 tag/assets/release byte를 소급 수정하지 않는다.
+- `v3.1.21`: baseline PR #112 CANDIDATE/COLLECTING/NOT_PUBLISHED. 이 포인터 후보 수정은 v3.1.21 release 발행이 아니다.
+- Phase 2 current delta: [R/I/T/P follow-up](audit/phase2-ritp-followup-20261003/README.md), [architecture candidate PR #8](https://github.com/321Team/fds-project-architecture/pull/8). D21 FINAL과 full Architecture Freeze HOLD를 구분한다.
+- Apply/Runtime/Gate acceptance는 document publication 상태와 별개다. AI 사용: CODEX_ASSISTED.
