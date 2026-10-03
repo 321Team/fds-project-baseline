@@ -31,7 +31,7 @@ SHA256SUMS는 sources.json 바이트 무결성을 검증한다. Snapshot complet
 
 ## Publication semantics
 
-docs-v3.1.20 Release API draft=false/published_at=2026-09-22T17:37:13Z로 실제 게시 확인. Release text의 stale candidate 표현은 historical. CURRENT.md 후보에서 PUBLISHED와 v3.1.21 NOT_PUBLISHED를 구분하며 기존 release bytes/assets/hash는 변경하지 않았다.
+docs-v3.1.20 Release API draft=false/published_at=2026-09-22T17:37:13Z로 실제 게시 확인. Release text의 stale candidate 표현은 historical. CURRENT.proposed.md 교정안에서 PUBLISHED와 v3.1.21 NOT_PUBLISHED를 구분하며 기존 release bytes/assets/hash는 변경하지 않았다.
 
 ## Remaining gates / owners
 
@@ -42,3 +42,7 @@ docs-v3.1.20 Release API draft=false/published_at=2026-09-22T17:37:13Z로 실제
 - PR112 owner: 본 delta를 전체 regeneration input에 편입하고 WBS/문서/manifest/ZIP+검증을 수행. 이 회차는 전체 release set 생성 아님.
 
 STATIC=bounded PASS / MOCK=ROSA input-contract PASS / CI=evidence104 exact-head SUCCESS, 그 외 재조회 / RUNTIME=NOT_RUN_BY_TASK / REVIEW=independent PENDING / MERGE=NOT_DONE / PUBLICATION=NOT_DONE.
+
+## CI regression and correction
+
+초기 delta b188d539ac056cdfb2a696ba445ad7227ac5d288에서 root CURRENT.md 교정이 발행 v3.1.20 manifest와 충돌해 canonical-integrity run37103309898 FAILED. 검사 완화/발행 checksum 수정 대신 CURRENT.md를 이전 blob43d41ac24e9afa871e051d6efcb6b9360746ab2e로 복원하고 CURRENT.proposed.md에 교정안을 격리한다. 기존 운영 드리프트7건은 현 checker 정책의 WARN 범위이며 새 exact-head CI로 다시 확인한다.
