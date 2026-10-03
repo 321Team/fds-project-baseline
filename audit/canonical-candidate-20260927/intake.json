@@ -512,12 +512,23 @@
   ],
   "release_gates": {
     "P1_CLOSE": "HOLD",
-    "D21": "OPEN",
+    "D21": "FINAL",
     "P2_ARCH_FREEZE": "HOLD",
     "P2_IAC_STAGE_A": "NOT_READY",
     "WBS": "STALE_REGENERATION_REQUIRED",
     "FULL_RELEASE_SET": "NOT_GENERATED",
     "PUBLICATION": "NOT_READY",
-    "RUNTIME": "NOT_EXECUTED_BY_THIS_TASK"
+    "RUNTIME": "NOT_EXECUTED_BY_THIS_TASK",
+    "D21_EVIDENCE_PUBLICATION": "HOLD_RAW_INTAKE",
+    "ISSUE36_CLOSE": "HOLD_HANDOFF_AND_PUBLICATION"
+  },
+  "remaining_conditions_recheck": {
+    "collected_at_kst": "2026-10-03T19:59:14.334+09:00",
+    "scope": "18 named Issues, 5 related source PRs and baseline PR112/main; not full merged-input recollection",
+    "audit_path": "audit/canonical-hold-recheck-20261003-1955/README.md",
+    "source_snapshot": "audit/canonical-hold-recheck-20261003-1955/sources.json",
+    "input_head": "ccaa841c39b75497d17e793b79b248b41c5308e4",
+    "main_head": "67ba6cf8a7f187e2dfcf188e4b2c55a853993778",
+    "behind": 0
   }
 }
