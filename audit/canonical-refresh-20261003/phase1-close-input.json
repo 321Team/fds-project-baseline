@@ -1,0 +1,31 @@
+{
+  "target_date_kst": "2026-10-06",
+  "status": "PENDING_ACTUAL_CLOSE_RESULT",
+  "required_source_issues": [
+    30,
+    31,
+    32
+  ],
+  "allowed_dispositions": [
+    "MET",
+    "NOT MET-RISK ACCEPTED",
+    "KNOWN ISSUE",
+    "APPROVED DEFERRED"
+  ],
+  "records": [],
+  "required_per_record": [
+    "record_id",
+    "acceptance_owner",
+    "disposition",
+    "decision_url",
+    "evidence_repository",
+    "evidence_commit",
+    "evidence_path",
+    "runtime_timestamp_kst",
+    "source_sha",
+    "remaining_action",
+    "owner",
+    "due_or_approved_deferred_reason"
+  ],
+  "rule": "No fabricated records. Populate only from Lead Close decision plus original evidence; null/empty input never means MET. Recollect all changed source heads and issue bodies before final generation."
+}

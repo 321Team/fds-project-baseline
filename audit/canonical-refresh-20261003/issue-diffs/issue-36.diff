@@ -1,0 +1,11 @@
+--- issue-36-before
++++ issue-36-after
+@@ -316,7 +316,7 @@
+ | Related Decision IDs | D10; D21 |
+ | Related Risk IDs | RISK-10; RISK-12 |
+ | Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #36 snapshot 2026-09-09T12:07:26Z; 일정: docs-v3.1.20 WBS + 2026-09-22 재계획 + 2026-09-24 일정 정합화 |
+-| Schedule Note | D21 Go/No-Go 결정창을 10-07~10-08 2작업일로 조정한다. 10-09 공휴일 이전에 Primary/Fallback을 단일안으로 확정한다. |
++| Schedule Note | D21 결정창 10-07~10-08 유지. 교육장 UDP/500·4500 경로 관측 → return/NAT-T/IKE 검증 → 보안 노출·return-route·SPOF 판단 → Transport Adapter 선택을 거쳐 #34 최종 Freeze 및 #35 Stage-A에 인계한다. 경로 관측/Decision 미완료 시 D21 OPEN과 후속 HOLD를 유지한다. |
+ 
+ 
+ ## 최신 운영 기록의 보존

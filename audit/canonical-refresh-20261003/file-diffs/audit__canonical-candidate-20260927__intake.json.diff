@@ -1,0 +1,472 @@
+--- a/audit/canonical-candidate-20260927/intake.json
++++ b/audit/canonical-candidate-20260927/intake.json
+@@ -1,9 +1,21 @@
+ {
+-  "generated_at_kst": "2026-09-30T17:36:00+09:00",
++  "generated_at_kst": "2026-10-03T11:53:07.711+09:00",
+   "base_canonical": "v3.1.20",
+   "base_publication_kst": "2026-09-23T02:37:13+09:00",
+-  "source_main": "e603d0d0177081d6f60b823f66e3559911c56272",
++  "source_main": "67ba6cf8a7f187e2dfcf188e4b2c55a853993778",
+   "merged_inputs": {
++    "fds-msa": [
++      4,
++      5,
++      6,
++      8,
++      9,
++      11,
++      12,
++      13,
++      15,
++      16
++    ],
+     "fds-project-baseline": [
+       83,
+       91,
+@@ -23,7 +35,18 @@
+       106,
+       107,
+       108,
+-      111
++      111,
++      113,
++      114,
++      115,
++      117,
++      118,
++      122,
++      123,
++      124,
++      131,
++      132,
++      133
+     ],
+     "fds-project-evidence": [
+       7,
+@@ -39,23 +62,82 @@
+       25,
+       26,
+       27,
++      28,
++      29,
+       30,
+       31,
+       32,
+       33,
+       35,
+       36,
++      37,
+       38,
+       39,
++      40,
++      41,
+       42,
++      43,
++      44,
++      45,
++      46,
++      47,
+       49,
+       50,
+       51,
+       52,
+-      53
++      53,
++      54,
++      55,
++      56,
++      57,
++      59,
++      60,
++      61,
++      62,
++      64,
++      65,
++      66,
++      67,
++      68,
++      69,
++      70,
++      71,
++      72,
++      73,
++      74,
++      75,
++      76,
++      77,
++      78,
++      79,
++      80,
++      81,
++      82,
++      83,
++      84,
++      85,
++      86,
++      87,
++      88,
++      89,
++      90,
++      91,
++      92,
++      93,
++      94,
++      95,
++      96,
++      97,
++      98,
++      99,
++      100,
++      101,
++      102,
++      103
+     ],
+     "infra-ansible": [
+       42,
++      43,
+       45,
+       46,
+       47,
+@@ -63,8 +145,60 @@
+       49,
+       50,
+       52,
++      53,
+       54,
+-      56
++      55,
++      56,
++      57,
++      58,
++      59,
++      60,
++      64
++    ],
++    "infra-cicd": [
++      29,
++      30,
++      31,
++      32,
++      33,
++      34,
++      35,
++      36,
++      38,
++      39,
++      40,
++      41,
++      42,
++      43,
++      44,
++      45,
++      46
++    ],
++    "infra-db": [
++      4,
++      5,
++      6
++    ],
++    "infra-dns": [
++      1,
++      2,
++      3,
++      4,
++      9,
++      10,
++      11,
++      12,
++      13,
++      14,
++      15,
++      16
++    ],
++    "infra-harbor-trivy": [
++      4,
++      5,
++      6,
++      8,
++      9
+     ],
+     "infra-kubernetes": [
+       7,
+@@ -75,6 +209,7 @@
+       22,
+       24,
+       25,
++      26,
+       27,
+       28,
+       29,
+@@ -87,9 +222,14 @@
+       37,
+       38,
+       39,
++      40,
+       42,
+       43,
+-      48
++      48,
++      49,
++      50,
++      51,
++      52
+     ],
+     "infra-lb": [
+       8,
+@@ -97,9 +237,36 @@
+       10,
+       11,
+       12,
+-      13
+-    ],
+-    "infra-cicd": [
++      13,
++      14,
++      15,
++      16,
++      18
++    ],
++    "infra-monitoring": [
++      5,
++      6,
++      7,
++      8,
++      9,
++      10,
++      11,
++      12,
++      13,
++      14,
++      15,
++      16,
++      18,
++      19,
++      20,
++      21,
++      22,
++      23,
++      24,
++      25,
++      26,
++      27,
++      28,
+       29,
+       30,
+       31,
+@@ -107,79 +274,68 @@
+       33,
+       34,
+       35,
+-      36
+-    ],
+-    "infra-monitoring": [
+-      6,
+-      7,
+-      8,
+-      9,
+-      10,
+-      11,
+-      20,
+-      21,
+-      22
+-    ],
+-    "infra-db": [
+-      4,
+-      5
++      36,
++      37,
++      38,
++      39
+     ],
+     "infra-pki": [
+       5,
+       6
+     ],
++    "infra-rosa": [
++      1
++    ],
++    "infra-terraform": [
++      1
++    ]
++  },
++  "open_excluded": {
++    "fds-msa": [
++      14
++    ],
++    "fds-project-baseline": [
++      112
++    ],
++    "fds-project-evidence": [
++      104
++    ],
++    "infra-ansible": [
++      63
++    ],
++    "infra-cicd": [],
++    "infra-db": [],
++    "infra-dns": [],
+     "infra-harbor-trivy": [
+-      4,
+-      5
+-    ],
+-    "fds-msa": [
+-      4,
+-      5,
+-      6,
+-      8,
+-      9
+-    ]
+-  },
+-  "open_excluded": {
+-    "fds-project-evidence": [
+-      54
+-    ],
+-    "infra-ansible": [
+-      53,
+-      55
+-    ],
+-    "infra-kubernetes": [
+-      49
+-    ],
+-    "infra-cicd": [
+-      38
+-    ],
+-    "fds-msa": [
+       10
++    ],
++    "infra-kubernetes": [],
++    "infra-lb": [],
++    "infra-monitoring": [],
++    "infra-pki": [],
++    "infra-rosa": [
++      2
++    ],
++    "infra-terraform": [
++      2,
++      3
+     ]
+   },
+   "current_planning_inputs": [
+     {
+       "record_id": "DEC-P1-IMG-01",
+       "issue": 110,
+-      "status": "To Do",
++      "status": "Done",
++      "state": "closed",
+       "start": "2026-09-27",
+       "end": "2026-10-06",
+       "lead": "이재환",
+-      "support": [
+-        "이하영",
+-        "이권욱"
+-      ],
+-      "review_owner": "이하영",
+-      "related_pr": "321Team/fds-msa#9",
+-      "decision_approval": "APPROVED",
+-      "approval_scope": "DEC-01~04 + HOLD conditions",
+-      "metadata_status": "Issue/Project remains To Do/Todo",
+-      "related_pr_state": "MERGED",
+-      "related_pr_merge_sha": "1c7f3651504097096c3a3fe4a86ac1973e169688",
+-      "delivery_runtime": "NOT_VERIFIED",
+-      "native_issue_type": "PENDING",
+-      "post_approval_addendum": "REVIEW_OWNER_CONFIRMATION_PENDING"
++      "native_issue_type": null,
++      "source_updated_at": "2026-09-28T04:36:43Z",
++      "source_body_sha256": "a67095086501950e50620f6a6feb872ba09e0349687daf1c293a7b6050a07128",
++      "decision_approval": "APPROVED_DECISION_ONLY",
++      "delivery_runtime": "NOT_REVALIDATED_IN_THIS_COLLECTION",
++      "source_url": "https://github.com/321Team/fds-project-baseline/issues/110"
+     }
+   ],
+   "team_calendar_updates": [
+@@ -240,9 +396,12 @@
+     "canonical_regeneration": "PENDING"
+   },
+   "candidate_main_sync": {
+-    "date_kst": "2026-09-30",
+-    "merge_commit": "e0e1889fd5a7c465c167d79d7533e40f2dd2b596",
+-    "base_main": "e603d0d0177081d6f60b823f66e3559911c56272"
++    "verified_at_kst": "2026-10-03T11:53:07.711+09:00",
++    "candidate_input_head": "39549c3b4aed92e6ea1e6e54735bfbe833b9c869",
++    "base_main": "67ba6cf8a7f187e2dfcf188e4b2c55a853993778",
++    "ahead": 91,
++    "behind": 0,
++    "scope": "Pre-change candidate HEAD; resulting refresh commit inherits this HEAD."
+   },
+   "product_intake_20260930": {
+     "procedure_simplification": "NO_NEW_CHANGE_KEEP_CURRENT_REVISIT_LATER",
+@@ -294,7 +453,71 @@
+     "project_close": "2026-10-26",
+     "audit_path": "audit/project-schedule-replan-20260930/README.md",
+     "schedule_path": "audit/project-schedule-replan-20260930/schedule.json",
+-    "proposed_wbs_status": "STALE_REGENERATE_FROM_LATEST_ISSUES"
++    "proposed_wbs_status": "STALE_REGENERATE_FROM_LATEST_ISSUES",
++    "latest_refresh": "audit/canonical-refresh-20261003/dependency-schedule.json"
++  },
++  "repository_source_heads": "audit/canonical-refresh-20261003/repository-source-heads.json",
++  "source_snapshot": "audit/canonical-refresh-20261003/snapshot.zip",
++  "issue_index": "audit/canonical-refresh-20261003/issue-index.json",
++  "collection_status": "REFRESHED_AT_CAPTURE_TIME",
++  "merged_input_count": 257,
++  "added_merged_inputs": 144,
++  "missing_merged_inputs_at_capture": 0,
++  "previous_collection": {
++    "generated_at_kst": "2026-09-30T17:36:00+09:00",
++    "source_main": "e603d0d0177081d6f60b823f66e3559911c56272",
++    "merged_input_count": 113
++  },
++  "change_dispositions": [
++    {
++      "issue": 125,
++      "disposition": "ACCEPTED_CR_COMPLETED",
++      "effective_ac_change": true,
++      "state": "closed",
++      "state_reason": "completed",
++      "source_comments": "audit/canonical-refresh-20261003/snapshot.zip#comments/125"
++    },
++    {
++      "issue": 126,
++      "disposition": "WITHDRAWN_NO_CHANGE",
++      "effective_ac_change": false,
++      "state": "closed",
++      "state_reason": "not_planned",
++      "source_comments": "audit/canonical-refresh-20261003/snapshot.zip#comments/126"
++    },
++    {
++      "issue": 127,
++      "disposition": "REJECTED_NO_CHANGE",
++      "effective_ac_change": false,
++      "state": "closed",
++      "state_reason": "not_planned",
++      "source_comments": "audit/canonical-refresh-20261003/snapshot.zip#comments/127"
++    },
++    {
++      "issue": 128,
++      "disposition": "WITHDRAWN_NO_AC_CHANGE",
++      "effective_ac_change": false,
++      "state": "closed",
++      "state_reason": "not_planned",
++      "source_comments": "audit/canonical-refresh-20261003/snapshot.zip#comments/128"
++    },
++    {
++      "issue": 130,
++      "disposition": "CHG01_CHG02_ACCEPTED_CR_COMPLETED",
++      "effective_ac_change": true,
++      "state": "closed",
++      "state_reason": "completed",
++      "source_comments": "audit/canonical-refresh-20261003/snapshot.zip#comments/130"
++    }
++  ],
++  "release_gates": {
++    "P1_CLOSE": "HOLD",
++    "D21": "OPEN",
++    "P2_ARCH_FREEZE": "HOLD",
++    "P2_IAC_STAGE_A": "NOT_READY",
++    "WBS": "STALE_REGENERATION_REQUIRED",
++    "FULL_RELEASE_SET": "NOT_GENERATED",
++    "PUBLICATION": "NOT_READY",
++    "RUNTIME": "NOT_EXECUTED_BY_THIS_TASK"
+   }
+ }
+-

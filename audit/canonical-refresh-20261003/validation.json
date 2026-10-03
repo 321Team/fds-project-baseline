@@ -1,0 +1,59 @@
+{
+  "STATIC": "PASS_FOR_INTAKE_SCOPE",
+  "source_record_count": 78,
+  "unique_record_ids": 78,
+  "repository_count": 14,
+  "merged_count": 257,
+  "main_merged_count": 255,
+  "candidate_sync_count": 2,
+  "new_inputs": 144,
+  "ancestry_verified": true,
+  "missing_inputs_at_capture": 0,
+  "baseline_behind": 0,
+  "phase2_workdays": 13,
+  "issue_write_exact_match": true,
+  "metadata_anomalies": [
+    {
+      "number": 125,
+      "kind": "MISSING_PROPERTIES",
+      "fields": [
+        "Calendar Days",
+        "Working Days"
+      ]
+    },
+    {
+      "number": 128,
+      "kind": "MISSING_PROPERTIES",
+      "fields": [
+        "Calendar Days",
+        "Working Days",
+        "Support",
+        "Related Risk IDs",
+        "Schedule Note"
+      ]
+    },
+    {
+      "number": 128,
+      "kind": "STATUS_VOCABULARY",
+      "value": "Todo"
+    },
+    {
+      "number": 128,
+      "kind": "STATE_BODY_DRIFT",
+      "body_status": "Todo",
+      "state": "closed",
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 130,
+      "kind": "MISSING_PROPERTIES",
+      "fields": [
+        "Calendar Days",
+        "Working Days",
+        "Related Risk IDs",
+        "Schedule Note"
+      ]
+    }
+  ],
+  "full_release_status": "NOT_GENERATED"
+}
