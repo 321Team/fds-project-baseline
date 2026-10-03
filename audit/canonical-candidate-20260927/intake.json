@@ -453,7 +453,7 @@
     "project_close": "2026-10-26",
     "audit_path": "audit/project-schedule-replan-20260930/README.md",
     "schedule_path": "audit/project-schedule-replan-20260930/schedule.json",
-    "proposed_wbs_status": "STALE_REGENERATE_FROM_LATEST_ISSUES",
+    "proposed_wbs_status": "SUPERSEDED_BY_REGENERATED_CANONICAL_PATH",
     "latest_refresh": "audit/canonical-refresh-20261003/dependency-schedule.json"
   },
   "repository_source_heads": "audit/canonical-refresh-20261003/repository-source-heads.json",
@@ -515,9 +515,9 @@
     "D21": "FINAL",
     "P2_ARCH_FREEZE": "HOLD",
     "P2_IAC_STAGE_A": "NOT_READY",
-    "WBS": "STALE_REGENERATION_REQUIRED",
-    "FULL_RELEASE_SET": "NOT_GENERATED",
-    "PUBLICATION": "NOT_READY",
+    "WBS": "REGENERATED_78_RECORDS_VERIFIED",
+    "FULL_RELEASE_SET": "CANDIDATE_GENERATED",
+    "PUBLICATION": "HOLD_INDEPENDENT_MIXED_CODE_REVIEW_AND_FINALIZATION",
     "RUNTIME": "NOT_EXECUTED_BY_THIS_TASK",
     "D21_EVIDENCE_PUBLICATION": "HOLD_RAW_INTAKE",
     "ISSUE36_CLOSE": "HOLD_HANDOFF_AND_PUBLICATION"
@@ -530,5 +530,15 @@
     "input_head": "ccaa841c39b75497d17e793b79b248b41c5308e4",
     "main_head": "67ba6cf8a7f187e2dfcf188e4b2c55a853993778",
     "behind": 0
+  },
+  "release_preparation": {
+    "source_heads_checked_at_kst": "2026-10-03T21:01:44+09:00",
+    "issue_snapshot": "audit/release-preparation-20261003/snapshot.zip",
+    "source_heads": "audit/release-preparation-20261003/repository-source-heads.json",
+    "wbs": "wbs/FDS_v3.1.21_WBS_and_Gantt_v1.0.xlsx",
+    "audit": "audit/release-preparation-20261003/README.md",
+    "scope": "78 current Issue bodies; 15 repository main HEADs checked. Earlier full merged intake capture time unchanged.",
+    "runtime": "NOT_RUN",
+    "publication": "NOT_RELEASED"
   }
 }

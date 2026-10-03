@@ -1,6 +1,6 @@
 # v3.1.21 Candidate — 최신 수집 2026-10-03
 
-**CANDIDATE / COLLECTING / NOT RELEASED**
+**CANDIDATE / RELEASE SET GENERATED / NOT RELEASED**
 
 잔여 조건 재수집: 2026-10-03T19:59:14.334+09:00 (18 Issues/5 source PRs + baseline PR112). `audit/canonical-hold-recheck-20261003-1955/README.md` 참조. 아래 11:53 전체 수집 시각·건수와 구분한다. Architecture c421733 revision2 재승인, raw intake, account/capacity/cost 및 10/8 Freeze vs 10/12 입력 제안 정렬이 남아 있다.
 
@@ -12,7 +12,10 @@
 - #110=Done Decision; #125/#130=CR completed; #126/#127/#128=no-change 이력. Runtime 완료와 분리.
 - #34 최종 Freeze 목표=10-08 D21 이후; #35 Stage-A=동일일 조건부 handoff. source schedule.json 최신 이슈에서 재생성.
 - P1 Close HOLD / D21 FINAL / D21 raw publication·Issue Close HOLD / Architecture HOLD / Stage-A NOT_READY.
-- 기존 WBS STALE; 78개 Record 입력 인덱스/Baseline 변경 입력/10-06 Close 수신 구조 생성. 전체 Release Set은 NOT_GENERATED.
+- WBS 78 Record/10 sheet 재생성 및 검증 완료. Baseline/Test Strategy/Ticket Pack/78 Description/WEB/Architecture/Manifest/SHA256SUMS/배포 ZIP 후보를 생성했다. `audit/release-preparation-20261003/README.md` 참조.
+- 기준 main 15개 재확인: 2026-10-03 21:01:44 KST. 전체 merged-input 수집은 위 11:53 snapshot을 유지한다.
+- 10/12 capacity 제안은 채택하지 않고 최초 #34 Freeze 전 제출 조건으로 정렬했다. #35는 Freeze 이후 조건부다.
+- Publication: 혼합 코드 독립 리뷰·병합·최종화·Tag/Release Asset 검증 미완. 현재 정본은 docs-v3.1.20이다.
 
 아래는 이전 수집 당시 원문이다. 오래된 source HEAD/날짜/#110 To Do/CR 미결 표기는 현행 판정으로 사용하지 않는다. 현재 상태는 위 스냅샷과 intake.json이 기준이다.
 

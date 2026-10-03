@@ -1,148 +1,16 @@
-# v3.1.21 Candidate — 최신 수집 2026-10-03
+# v3.1.21 Candidate release set
 
-**CANDIDATE / COLLECTING / NOT RELEASED**
+CANDIDATE / CONTENT PREPARED / NOT RELEASED.
 
-잔여 조건 재수집: 2026-10-03T19:59:14.334+09:00 (18 Issues/5 source PRs + baseline PR112). `audit/canonical-hold-recheck-20261003-1955/README.md` 참조. 아래 11:53 전체 수집 시각·건수와 구분한다. Architecture c421733 revision2 재승인, raw intake, account/capacity/cost 및 10/8 Freeze vs 10/12 입력 제안 정렬이 남아 있다.
+- 78 Issue 최신 속성/원문·해시와 완료 CR/Decision을 WBS·Baseline·Ticket Pack·78 Description에 반영.
+- 테스트 전략 TS01~16: 생성 전/후 Gate 분리, #119 failure contract, #125/#130 생산·인수 경계, source/CA/DNS/복구·비용 증적.
+- D21 FINAL을 반영하되 raw publication·Issue Close HOLD 유지. Architecture/Stage-A/P1 Close 인수 아님.
+- WBS 58→78 Record, 9→10 sheets(Test Strategy 추가). 상태 집계는 원문 그대로 {'Done': 27, 'In Progress': 12, 'To Do': 38, 'Todo': 1}. native lifecycle 불일치는 메모로 보존.
+- 계획일 유지. 10/12 capacity 제안은 채택하지 않고 최초 Freeze 전 입력 제약으로 정렬. 실제 완료일 생성 없음.
+- 현재 14 source main HEAD가 11:53 전체 수집과 동일함을 재확인. Architecture main은 추가 source로 기록. 257 merged 입력의 과거 capture 시각은 유지.
+- v3.1.20 원본/Tag/Asset과 CURRENT.md 변경 없음. 현재 PR112는 코드 혼합이며 exact-head 독립 승인 미확보.
 
-- Source main: `67ba6cf8a7f187e2dfcf188e4b2c55a853993778`
-- Candidate 입력 HEAD: `39549c3b4aed92e6ea1e6e54735bfbe833b9c869` / behind=0
-- 수집 시각(KST): 2026-10-03T11:53:07.711+09:00
-- 14개 저장소 merged 257건, 기존 대비 144건 추가. infra-dns 신규 수집 포함.
-- 상세·HEAD·원문·diff·생성 규칙: `audit/canonical-refresh-20261003/README.md`
-- #110=Done Decision; #125/#130=CR completed; #126/#127/#128=no-change 이력. Runtime 완료와 분리.
-- #34 최종 Freeze 목표=10-08 D21 이후; #35 Stage-A=동일일 조건부 handoff. source schedule.json 최신 이슈에서 재생성.
-- P1 Close HOLD / D21 FINAL / D21 raw publication·Issue Close HOLD / Architecture HOLD / Stage-A NOT_READY.
-- 기존 WBS STALE; 78개 Record 입력 인덱스/Baseline 변경 입력/10-06 Close 수신 구조 생성. 전체 Release Set은 NOT_GENERATED.
+알려진 한계: #125/#128/#130 필수 속성 일부 미기재, #128 Todo vs closed/not_planned, 2 Record milestone 미배정. 원문을 임의 보완/승인하지 않는다. 계획 베이스라인은 이 차이를 명시적으로 보존하며 live ticket 동기화 결정은 별도다.
+P1 Close10/6 결과와 Runtime 원본은 향후 새 수집/정본 변경으로 반영한다. 이번 산출물을 실제 실행 증적으로 사용하지 않는다.
 
-아래는 이전 수집 당시 원문이다. 오래된 source HEAD/날짜/#110 To Do/CR 미결 표기는 현행 판정으로 사용하지 않는다. 현재 상태는 위 스냅샷과 intake.json이 기준이다.
-
-<details>
-<summary>이전 수집 기록 — 역사적 원문</summary>
-
-# v3.1.21 Canonical Candidate
-
-> **Status:** CANDIDATE / COLLECTING / NOT RELEASED  
-> **Started:** 2026-09-27 KST  
-> **Base canonical:** `docs-v3.1.20`  
-> **Source main snapshot:** `e603d0d0177081d6f60b823f66e3559911c56272`  
-> **Latest intake refresh:** `2026-09-30 KST`  
-> **Candidate/main sync commit:** `904aa920750a109cbc4940ad1cdb429735b2d645` (includes main `c1d710c4f56f53d5ca274c5addbb8540cc6cff53`)
-
-이 브랜치는 v3.1.20 발행 이후의 정본 동기화 입력을 미리 수집하는 **후보 수집 지점**이다. 이 상태는 정본 승인·병합·Tag·Release 발행을 의미하지 않는다.
-
-## 이번 사전 수집에 포함한 것
-
-- v3.1.20 발행 후 main 및 관련 저장소의 Merged 변경 이력 수집.
-- v3.1.20 발행 후 정정 기록에서 지정한 v3.1.21 이월 항목 수집.
-- `DEC-P1-IMG-01`(#110)은 **Review Owner Decision 승인 완료**를 기록하되 Issue/Project 메타데이터 `To Do/Todo` drift와 Delivery Runtime `NOT_VERIFIED`를 함께 보존한다.
-- 관련 `fds-msa#9`은 병합 입력으로 승격했지만 on-prem Test→Build→Scan, Harbor Push, Kubernetes Deploy 완료로 확대하지 않는다.
-- `audit/canonical-candidate-20260927/proposed/FDS_v3.1.21_WBS_and_Gantt_v1.0.xlsx` 후보 생성.
-  - 2026-09-28 이재환: 개인 사정으로 인한 휴가
-  - 2026-09-29 이하영: 채용설명회 및 직무테스트로 인한 휴가
-  - 개인 부재 계산 범위를 Team Calendar 12행 → 14행으로 확장.
-  - 기존 일정·Status·Lead/Support를 자동 변경하지 않음.
-  - 영향 창: `DEC-P1-IMG-01`, `CR-P1-MON-01-01`, `CR-P1-MON-01-02`.
-
-상세 수집 근거는 `audit/canonical-candidate-20260927/`을 따른다.
-
-## 2026-09-30 ROSA 범위·Priority 전수 검수
-
-- 현행 인용 정본은 `docs-v3.1.20 / RELEASED`다. 발행된 v3.1.20 파일의 과거 Candidate 표현 해석 문제는 v3.1.21 후보 감사/Release Notes에서 설명하며, **v3.1.20 정본 파일 자체는 소급 수정하지 않는다.**
-- 상세 검수: `audit/phase2-rosa-scope-priority-review-20260930/README.md`
-- Machine-readable matrix: `audit/phase2-rosa-scope-priority-review-20260930/priority-matrix.json`
-- P1 carry-over:
-  - #25 P1-MON-02 → Phase 2 / P1 / G6 non-blocking
-  - #26 P1-DR-02 → Phase 2 / P1 / G6 non-blocking
-  - #27 P1-HA-02 → Phase 2 / P1 / G6 non-blocking
-- P2-OADP-01(#44): P0 → **P1**, G6/E2E non-blocking
-- Dependency correction:
-  - #45에 P2-CICD-01(#46) 선행조건 추가
-  - #49/#50/#53에서 P1 OADP를 P0 blocker에서 제거
-  - #54 Related Decision에 D25/D26 보완
-- #40/#41/#48/#51/#95는 P1/conditional 또는 Deferred 원칙을 유지한다.
-- ROSA 공통 기준은 managed/customer 책임경계, Terraform Source, STS/OIDC, SCC/RBAC/NetworkPolicy, Source→Runtime→Evidence, failure/recovery를 사용한다.
-
-**주의:** 위 Issue metadata/body 변경은 운영 입력으로 이미 반영했으나, 후보 WBS/Baseline/Ticket Pack 전체 재생성은 아직 수행하지 않았다. 정본 후보 산출물은 Issue 최신 상태를 수집하여 일괄 재생성한다.
-
-## 2026-09-30 선택 제품 유입 범위
-
-- 회의 결과: **추가 절차 간소화 미적용 / 현행 Governance·Review·Evidence 절차 유지 / 후속 재검토**.
-- 활성 추가 제품 검토는 다음 두 P1 Decision으로 한정:
-  - #120 `DEC-P2-GITOPS-01` — OpenShift GitOps(Argo CD), P1 / G5·G6 non-blocking
-  - #121 `DEC-P2-COMP-01` — Compliance Operator, P1 / G5·G6 non-blocking
-- #120 미결정이면 #46 Runner direct ROSA Delivery를 유지한다. Go 시에만 Delivery Contract 변경 CR을 발행한다.
-- #121 미결정이면 #38 현행 ROSA Platform/Security P0 AC를 유지한다. Compliance 결과는 자동 P0 blocker나 규제 준수 인증으로 확대하지 않는다.
-- RHOAI(#95)는 P1/Deferred 우선이며 이번 활성 유입 범위에서 제외한다.
-- 상세: `audit/phase2-product-intake-20260930/README.md`
-
-## 2026-09-30 일정 재계획
-
-- **Project Close:** 2026-10-26(월) 확정
-- **Non-working:** 10-05, 10-09, 토·일
-- **Phase 1:** 10-02 G3/최종 증적·문서 cutoff → 10-06 Review/Close
-- **Phase 2 Start:** 10-07
-- **G4:** 10-14
-- **G5:** 10-20
-- **G6:** 10-22
-- **Deliverable Freeze / Phase 2 Review:** 10-23
-- **Project Close:** 10-26
-- 상세: `audit/project-schedule-replan-20260930/README.md`
-- Machine-readable: `audit/project-schedule-replan-20260930/schedule.json`
-- 기존 후보 WBS XLSX는 이번 재계획 전 생성본이므로 **STALE / 전체 재생성 대상**이다. 최신 Issue 일정에서 재생성하며 바이너리 부분 패치로 정합성을 깨지 않는다.
-
-## 2026-09-30 Cloud Cost / Lifecycle 정책
-
-- 사용자 승인: **Target Spend ≤ $400 / Operational Hard Stop $450 / Protected Reserve $50 / Total Ceiling $500**.
-- Candidate Decision: `DEC-P2-COST-01` — P0 cost/lifecycle control.
-- $400 도달/초과 예상 시 P1·선택 실험 Deferred 우선, P0 잔여 비용 재예측.
-- $450은 신규 유료 소비 Hard Stop. $450~$500은 billing lag·teardown delay·cleanup residual 전용이며 신규 기능 예산이 아니다.
-- Credit/Promo/지원금은 Ceiling 확대 근거로 사용하지 않는다.
-- 비용 판정은 Actual/Gross + 확인 가능한 미반영/Projected cost를 포함한다.
-- 상세: `audit/phase2-cost-policy-20260930/README.md`
-- Native Decision Issue와 기존 Issue 본문 추가는 `TICKET_SYNC_POLICY §5.1`에 따라 담당자가 수동 반영한다.
-- 관련 티켓: #34/#35/#38/#42/#49/#55/#57.
-
-## 2026-09-30 Phase 2 Cost-aware Test Strategy
-
-- 승인 실행 모델: `W0 PRECHECK → W1 G4 → W2 G5 → W3 G6 → 10-23 CLOSE/TEARDOWN`.
-- 제공 OCP/CI에서 결함을 선제 제거하고 실제 ROSA는 G4 근처에 생성해 G5·G6를 동일 Cluster에서 연속 수행한다.
-- #119의 DB/FDS 장애 계약을 Phase 2 E2E Expected Result의 선행 입력으로 사용한다.
-- $400 Target 이후 P1은 Deferred-first, $450은 신규 paid Runtime Hard Stop.
-- Full ROSA recreate는 P0 필수가 아니며 조건부 P1.
-- 10-22는 Final Regression/Acceptance, 10-23은 Final Evidence/Cost/Inventory 및 teardown 우선.
-- 상세: `audit/phase2-test-strategy-20260930/README.md`
-- Runtime plan: `audit/phase2-test-strategy-20260930/runtime-window-plan.json`
-- Ticket addenda 후보: `audit/phase2-test-strategy-20260930/ticket-body-addenda.md`
-
-## 2026-09-30 PR #112 무결성 정정
-
-- 발행된 v3.1.20 정본 바이트 직접 수정은 철회했다.
-- `CURRENT.md`, v3.1.20 Baseline, v3.1.20 Release Notes, `releases/v3.1.20/README.md`는 최신 `main`과 동일 상태를 유지한다.
-- latest `main` 동기화 완료: sync merge `904aa920750a109cbc4940ad1cdb429735b2d645`, sync 기준 main `c1d710c4f56f53d5ca274c5addbb8540cc6cff53`.
-- #125/#126/#127/#128/#130은 미결 CR이므로 승인 완료 전에는 본 후보의 확정 Scope/AC 변경 입력으로 사용하지 않는다.
-- 이 정정 후에도 후보 WBS와 전체 Release Set은 미완성이므로 Draft/NOT RELEASED를 유지한다.
-
-## 후보 WBS 위치와 Gate 경계
-
-사전 수집 단계에서는 WBS를 `audit/canonical-candidate-20260927/proposed/` 아래에 둔다. `wbs/FDS_v3.1.21_...` 경로는 Manifest/SHA256SUMS/ZIP/WEB 등 전체 릴리즈 세트가 준비될 때 승격한다. 이는 `canonical-integrity`가 불완전한 릴리즈 후보를 차단하는 현행 Gate와 일치한다.
-
-## 아직 정본 후보 완성으로 판정하지 않는 항목
-
-다음은 이 PR에서 **수집/기록만** 하고 최종 정본 동기화 완료로 판정하지 않는다.
-
-- Baseline / Ticket Pack / Description 전체 재생성 및 상호 대조
-- ROSA 범위·P0/P1 재분류를 WBS Priority/Phase/Milestone에 동기화
-- v3.1.20 발행 후 정정 사항의 전체 반영
-- Manifest / SHA256SUMS / Distribution ZIP / WEB snapshot 생성
-- 필요 시 Architecture 재발행 사유 판정
-- 전체 Workbook 수식 재계산 및 렌더링 기반 시각 QA
-- GitHub Release Tag/Asset 발행 검증
-
-열려 있는 구현·증적 PR은 병합 완료 입력으로 승격하지 않는다. 현재 제외 목록은 audit 기록의 **Open / excluded** 절을 따른다.
-
-## Release gate
-
-최종 v3.1.21 병합/발행 전에는 `governance/RELEASE_POLICY.md` §2~§6의 필수 산출물과 검증을 다시 수행해야 한다.
-
-
-</details>
+필수 산출물·무결성 상세: FDS_Document_Distribution_Manifest_v3.1.21.md 및 SHA256SUMS. 배포 ZIP은 로컬 생성 후 Tag 확정 시 Release Asset으로 올린다. 독립 WBS Asset까지 확인 전 발행 완료 아님.

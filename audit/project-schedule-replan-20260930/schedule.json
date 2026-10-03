@@ -139,7 +139,7 @@
     120,
     121
   ],
-  "candidate_wbs_status": "STALE_REGENERATE_FROM_LATEST_ISSUES",
+  "candidate_wbs_status": "REGENERATED_78_RECORDS_VERIFIED",
   "lead_rebalance": {
     "approved_at_kst": "2026-09-30",
     "rationale": [
@@ -199,7 +199,18 @@
     "behind": 0,
     "decision_status": "D21_FINAL_2026-10-03",
     "issue36_close": "HOLD",
-    "schedule_status": "TARGETS_UNCHANGED_RECONCILIATION_REQUIRED",
-    "conflict": "PR8 revision2 proposes pre-Freeze live capacity checkpoint 2026-10-12 18:00 KST (not approved), later than #34 Freeze target 2026-10-08; owners must align before Freeze. No automatic reschedule."
+    "schedule_status": "TARGETS_UNCHANGED_PRE_FREEZE_INPUT_CONSTRAINT_RECORDED",
+    "conflict": "PR8 revision2 proposes pre-Freeze live capacity checkpoint 2026-10-12 18:00 KST (not approved), later than #34 Freeze target 2026-10-08; owners must align before Freeze. No automatic reschedule.",
+    "resolution": "Capacity must be supplied before the first #34 Freeze. 10/12 18:00 proposal is not adopted. Exact intake deadline remains owner-confirmed; #35 stays conditional after Freeze and account/plan/cost gates."
+  },
+  "release_preparation": {
+    "source_heads_checked_at_kst": "2026-10-03T21:01:44+09:00",
+    "issue_snapshot": "audit/release-preparation-20261003/snapshot.zip",
+    "source_heads": "audit/release-preparation-20261003/repository-source-heads.json",
+    "wbs": "wbs/FDS_v3.1.21_WBS_and_Gantt_v1.0.xlsx",
+    "audit": "audit/release-preparation-20261003/README.md",
+    "scope": "78 current Issue bodies; 15 repository main HEADs checked. Earlier full merged intake capture time unchanged.",
+    "runtime": "NOT_RUN",
+    "publication": "NOT_RELEASED"
   }
 }
