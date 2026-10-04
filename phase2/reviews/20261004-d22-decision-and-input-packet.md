@@ -77,3 +77,10 @@ rotation 전에는 각 consumer 교체순서, 이전 자격 즉시 무효화 여
 - 잘못된 CA/비승인 source·credential/권한 밖 push는 거부돼야 한다. 실제 negative 시험은 해당 환경/창의 승인 조건 후 수행.
 - 신규 rollout/pull 실패 시 이전 정상 workload/digest 보존, 자동 mirror·재빌드·tag fallback 없음.
 이번에는 시나리오/입력 경계만 작성했다. P1 Robot/Secret/CA/CI authfile/운영 이미지 변경·실제 pull·Pod 생성 없음. 기존 P1 생산·검토 세션의 결과를 소비하며 별도 중복 구현하지 않는다.
+
+
+## 8. 공급·Delivery source 연결 — 2026-10-05
+[플랫폼·이미지 handoff §2~5](20261005-platform-image-handoff.md)에 현재 소스와 입력 소비 범위를 구체화했다.
+CI PR45/46은 병합됐으나 Runtime adapter NOT_INTEGRATED / Push·Deploy NOT_EXECUTED 범위다. §6의 운영 Push adapter/authfile 잔여를 해결 완료로 바꾸지 않는다.
+P1 live digest와 현재 apko Dockerfile을 같다고 가정하지 않으며 source→build→scan→remote digest→P2 runtime을 결속해야 한다. #110의 운영 전환 이관안은 #30 수신 확정과 별도다.
+기존 generic admission 도구/CI 결과를 실제 P2 namespace·SA·endpoint·audience·UID 동작으로 자동 승계하지 않는다. 추가 계정·Secret·CA·manifest 적용 없음.

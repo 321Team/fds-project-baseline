@@ -113,3 +113,10 @@ INDEPENDENT_REVIEW=PENDING / D22_FINAL=PENDING / ARCHITECTURE_FREEZE=HOLD / MERG
 - 비용: cost-intake.pending.json 그대로 null. 10-06 사용자 텍스트를 받은 뒤 통화·기간·기준시각·잔여/teardown을 계산. 임의 추정 한도·0원 없음.
 
 현재: PREPARATION_DOCUMENTS=UPDATED / CAPACITY_ARITHMETIC=CHECKED / INDEPENDENT_REVIEW=PENDING / SHARED_RUNTIME_CHANGE=NOT_RUN / FREEZE=HOLD.
+
+
+## 9. 플랫폼·이미지 연결 후속 — 2026-10-05
+[후속 대조](20261005-platform-image-handoff.md)를 작성했다. 새 #35/#38 지원/예산 입력은 없고, 기존 #43 현장 자료는 중복 수집하지 않았다.
+fds-msa main의 실제 Dockerfile/apko/run.py 및 infra-rosa PR2 admission-only 범위를 대조했다. source UID10001:999와 uvicorn 두 listener 구성을 확인했으며 live digest provenance/UID Runtime은 미검증이다.
+infra-cicd PR45/46 병합은 입력 검증 계약의 진전이며 실제 Push/Deploy adapter 통합·실행 완료가 아니다. #110 전환 이관안 및 supply CI의 SHA별 결과를 연결했다. P1 권한/이미지/클러스터 변경 없음.
+다음은 기존 producer의 지원·예산/최종 공급 receipt 수신이며, actual post-create allocatable를 precreate 필수 실측으로 요구하지 않는다.
