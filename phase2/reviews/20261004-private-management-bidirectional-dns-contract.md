@@ -34,7 +34,7 @@ routed 경로를 확보할 수 없다면 관리 source/Runner 배치 adapter를 
 | Runner·승인 관리자 | 기존 승인 DNS52/53에 query | Runner resolver 설정·query source·관리자 별도 source/접속경로 |
 | 기타 일반 DNS | 기존 정책 유지 | 이번 subset 밖의 forwarding 확대 금지 |
 
-`fds.internal`은 과거 설계 입력이다. 현재 Harbor/DB의 authoritative zone/SAN을 실제 원본에서 확인하기 전 그대로 생성하지 않는다.
+`fds.internal`과 Harbor/DB A 레코드는 infra-dns main의 zone 원본에서 확인했다(§10). 현재 live authoritative 응답·DB TLS SAN은 별도 미확인이다. Git 원본 확인을 근거로 신규 DNS zone을 중복 생성하거나 현재 Runtime 확인을 생략하지 않는다.
 ROSA domain을 전체 `openshiftapps.com` 또는 루트 `.`로 광역 forward하지 않는다. 실제 cluster zone과 CNAME 의존성을 식별해 최소 suffix/이름 정책을 검토한다.
 inbound가 조회하는 zone은 해당 VPC에서 해석 가능해야 한다. PHZ인 경우 VPC association 확인; 임의 split-horizon zone을 만들어 vendor record를 대체하지 않는다.
 같은 suffix가 양방향 forwarding rule에 들어가지 않도록 zone 목록·우선순위·loop 검증을 고정한다.
@@ -140,3 +140,36 @@ syntax 실패·route/source 확대·managed SG 수정·TLS/SELinux 우회·loop�
 - [AWS endpoint 고려사항](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-choose-vpc.html): endpoint마다 다른AZ 최소2IP·PHZ/VPC 연결.
 - [AWS outbound query 경로](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-overview-forward-vpc-to-network.html): endpoint ENI·zone별rule·VPC association·TCP/UDP53.
 - [AWS inbound query 경로](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-overview-forward-network-to-vpc.html).
+
+
+## 10. 권욱 사전 작업 — DNS 원본 및 기존 완료 증적 연결 (2026-10-04 KST)
+입력 PR137 HEAD `172a5546af57d3acd676d6f3712bd8c7e81a2cbe`에서 후속 수행. STATIC/SOURCE_RECONCILIATION이며 오늘 서버 접속·설정 변경·DNS 시험 없음.
+
+### 확보한 입력
+| 항목 | 원본/확인 범위 | 미확인 범위 |
+|---|---|---|
+| On-Prem zone | infra-dns `5f7505f9613e4b94aedd4bcdaba52f2b3f1a5f19`의 [zone](https://github.com/321Team/infra-dns/blob/5f7505f9613e4b94aedd4bcdaba52f2b3f1a5f19/zones/fds.internal.zone): fds.internal, TTL300, serial2026090101, NS dns01/dns02 | 오늘 live serial/TTL/권위 응답 |
+| Harbor/DB 이름 | 같은 zone: harbor.fds.internal→10.1.93.54, db.fds.internal→10.1.93.55 | 실제 query/route와 DB TLS 이름 검증; Harbor leaf는 D22 §1.3 USER_READBACK 범위 |
+| BIND 참고 ACL | 09-18 dns01/dns02 sanitized reference에서 fds-known-clients는 allow-query/allow-recursion/allow-query-cache에 공용 사용. Runner10.250.10.20은 목록에 없음 | 참고본은 배포 정본/현재 설정 아님. 실제 ACL/ipset·source는 실행 전 대조 |
+| DNS→관리망 반환 | 09-29 두 서버 post raw: 10.250.10.0/24 via10.1.93.58 devens160. 기본 GW10.1.93.254 | .58 현재 역할/forwarding·Runner 정방향·vpn-gw 반환·source 보존 미확인 |
+| DNS 방화벽 | 같은 post raw: public runtime/permanent에 fds-dns-clients ipset 기반 dns service rich rule | post raw에는 ipset 원소 목록 없음. query 허용 여부를 route만으로 판단하지 않음 |
+
+DNS01/02 post 원본 위치: [evidence 폴더](https://github.com/321Team/fds-project-evidence/tree/728ac6fb4b00e654cd8391763ab0e8cae3882bc4/evidence/P1-DNS-01/infra-dns-issue-7-bc-runtime-20260929).
+이번 fetch text를 UTF-8 바이트로 재구성해 size/SHA256을 README와 대조했다:
+- dns01: 1520 bytes / `d96ba840a98d04c161e899d7359fa9e1f310ec25c60353286d15293da96ddecc` 일치.
+- dns02: 1547 bytes / `fb1601d2f6bc7d483736794ffb1885fe5c7b7b262125ae8ef83acea84228f6d0` 일치.
+이는 조회 원본 무결성 확인이며 오늘의 route/접속 PASS가 아니다.
+
+### 기존 완료를 다시 미완료로 만들지 않음
+- [infra-dns #6 최종 기록](https://github.com/321Team/infra-dns/issues/6#issuecomment-5863939688): named 구조/TSIG 참조 수집과 Evidence#61 편입 완료, Issue CLOSED. #61 merged API 직접 확인. deployable Source 추가 편입은 당시 명시적으로 범위 제외.
+- [infra-dns #7 최종 기록](https://github.com/321Team/infra-dns/issues/7#issuecomment-5910859871): UDP/TCP53 allow/deny 및 dns02→dns01 reboot persistence 완료, Evidence#65 merged API 직접 확인.
+- Evidence README의 REVIEW/MERGE PENDING은 작성 당시 상태다. 현재 편입 상태는 PR61 merge `dc79233c3f0e02c29555f4ddd7fea94c036f63ec`, PR65 merge `6f8232430d6f578abaf94ac2d6ef4b33d5f74db1`로 정정해 소비한다. 원본 README는 수정하지 않았다.
+- #6 원본 archive는 이번 세션에서 재해시·전문 해제하지 않았다. 09-28 expanded diff 및 TSIG 결과는 편입 README/종결 기록 범위로만 인용한다. 09-18 참고 ACL을 현재 전체 ACL로 승격하지 않는다.
+
+### 결정안에 반영할 차이
+1. On-Prem 이름을 다시 정의할 필요 없이 기존 fds.internal 및 Harbor/DB 이름을 후보 계약의 source input으로 소비한다. 실제 cloud forwarding rule/endpoint 생성은 미승인·미실행이다.
+2. cloud outbound Resolver의 권위 zone 조회 권한과 Runner의 외부/private cloud DNS recursion 권한을 분리 검토한다. 공용 fds-known-clients에 새 source를 넣으면 query·recursion·cache 세 권한에 동시에 영향을 줄 수 있으므로 각 용도에 필요한 범위를 검토한 뒤 결정한다. AWS source가 zone transfer 권한을 얻어서는 안 된다.
+3. 기존 LOCAL-DNS 경로 조사에는 .58 경유 반환 관측을 재사용하되 새 next hop으로 즉시 확정하지 않는다. 신규 수집은 Runner/vpn-gw/local router의 현재 L3/source와 기존 DNS 관측의 drift 여부를 중심으로 한다. 기존 P1 DNS reboot/packet 시험을 반복하지 않는다.
+4. 최소 잔여: 현재 Runner/local router→vpn-gw 경로·source, selected HCP DNS/endpoint 지원, 필수 DNS subset의 책임·시점 결정, cloud source/return·정확 rule 계약. 오늘 cloud actual ID가 없다는 이유로 논리 설계를 순환 차단하지 않는다.
+
+기존 담당·D23 P1 범위·일정·AC는 유지한다. 문서 후보 보완과 Lead 최종 수용은 별도이며 D22 FINAL/Architecture Freeze/Runtime 적용을 승인한 기록이 아니다.
