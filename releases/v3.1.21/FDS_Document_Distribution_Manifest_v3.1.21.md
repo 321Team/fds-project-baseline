@@ -1,8 +1,8 @@
 # v3.1.21 Distribution Manifest
 
-CANDIDATE / NOT RELEASED. Input HEAD 226959ac0c5d3dcf79109ba8b914c18bcbab3c0c; source HEAD check 2026-10-03 21:01:44 KST.
+RELEASED after reviewed finalization merge. Source snapshot 2026-10-03 KST; finalization 2026-10-04 KST. Content merge bb3cd4f44932e932984beaba7f279bd4b7321c0b. Actual Tag/Asset publication is verified separately. Historical audit/Description candidate wording is retained source context.
 
-All files below are included in SHA256SUMS and distribution ZIP. Manifest itself is included in SHA256SUMS; SHA256SUMS is included in ZIP. ZIP sidecar is external to prevent recursive hashes. Release Asset upload is NOT RUN. Published verification remains required. Historical v3.1.20 report and retrospectives are preserved references.
+All listed files enter SHA256SUMS/ZIP. Manifest itself is in SHA256SUMS; SHA256SUMS is in ZIP. ZIP sidecar is external.
 
 | Path | Bytes | SHA-256 |
 |---|---:|---|
@@ -15,13 +15,16 @@ All files below are included in SHA256SUMS and distribution ZIP. Manifest itself
 | `audit/canonical-followup-20260923/README.md` | 4002 | `5732f429930ef350504e236bd0fc8da13a35eccaa20c8dba7276613490b9b12c` |
 | `audit/canonical-hold-recheck-20261003-1955/README.md` | 7414 | `7044bf22e4a6e5002f9c6658e0758cf7d0f52ec6503118d42f98221e8b75e8a9` |
 | `audit/canonical-hold-recheck-20261003-1955/sources.json` | 613099 | `a343a4fd7cab0658ba0d222ccc5e4f0f3d161aceb9ac42730afbebbfec4c40c9` |
+| `audit/canonical-refresh-20261003/README.md` | 3568 | `f46dd7d991448a54a9b302aae863b5a0439e8bcea312226052c0bcb2a3242a02` |
 | `audit/project-schedule-replan-20260930/schedule.json` | 5356 | `8f10340bc9a9f6a07e57b64a1f90ed06d8d8cb3b6537f611e25cfc855f6947bc` |
+| `audit/release-finalization-20261004/integrity-audit.json` | 1093 | `16935c00ee718c29b8f3b002d95cdd4eb2f234733b5e97e463934bbdc9e2ec7f` |
 | `audit/release-preparation-20261003/integrity-audit.json` | 680 | `ec4e1f6ccaecfff14368da398e6c7370a12b5152ded9609baa0defda4c47e32d` |
 | `audit/release-preparation-20261003/publication-state.json` | 3973 | `9eabe9a0eef1593bd129c7af772ca16eb76704a2d77453658dbde9c5d6a9568a` |
 | `audit/release-preparation-20261003/README.md` | 2850 | `05a101650ae85c4f00e491d642a99e439a260973a420f1346659f4e7c13fe769` |
 | `audit/release-preparation-20261003/repository-source-heads.json` | 3308 | `bf685cc35727e07fab09d5db17f76f1f58094e29a834c8b285dea68bb39ed6ea` |
 | `audit/release-preparation-20261003/snapshot.zip` | 605407 | `4c285c80ff7c9bd553fd7a1e14bdd62b8523692ce9bbf7b78e21140064fd3744` |
-| `baseline/FDS_Project_Implementation_Baseline_v3.1.21.md` | 132279 | `c8d4b29e3095ef4180536656d65f79964b8b7b1c19af4a39e4d05f67f793c972` |
+| `baseline/FDS_Project_Implementation_Baseline_v3.1.21.md` | 132468 | `16ef604028c3c9b7826c0bd07d6d4b7774ead3e05df1c16befe11bfa30b67ed3` |
+| `CURRENT.md` | 2163 | `25d28056e5d8403eee41f194b43e65253d3af48e0f318d3b5480b4bda8ab4f51` |
 | `governance/GITHUB_IDENTITY_MAP.md` | 2261 | `be013eb1de24ef6a53010e354bcff189dac8cb641161a27569de92f27bfb3e1e` |
 | `governance/GITHUB_LABEL_SCHEMA.md` | 4529 | `9d07c160d20b8e43b90ca1047b0c263ddcad2f3d2af968c3a583c6a69e9bd8ff` |
 | `governance/GITHUB_MILESTONE_MAP.md` | 8753 | `fa661d2afd3b35585c62bd32c0170d17ba41a01d74b332bb39d274348af1a6f7` |
@@ -31,9 +34,11 @@ All files below are included in SHA256SUMS and distribution ZIP. Manifest itself
 | `governance/ticket-sync-map.json` | 109388 | `dc358ef83ad385230860be0e71eecb361b7441a667a2d492be983f16ca7a31a0` |
 | `governance/TICKET_SYNC_POLICY.md` | 14272 | `b2934808dc466b11958694f5b9d7465323a95ac09d1a0948ab2b2ce1ad9a9a00` |
 | `governance/TICKET_SYNC_RUNBOOK.md` | 4359 | `eae4da7f455e01c52ed3a0ccee5e66334f4a7443240568da5cc25010728a073e` |
+| `README.md` | 11074 | `414e215d8f4ae09b62f96a2d1ca07f9b9e35489960c87fb6d86a37a825cfc331` |
 | `releases/v3.1.20/reports/FDS_Interim_Deliverable_Report_v3.1.20.docx` | 13674 | `04b8daf58efb4fdfb7947d6b4635c4be4e3bd237ec2b466daa70962bba777735` |
-| `releases/v3.1.21/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.21.md` | 1559 | `c999e42d150816d83e8b7008fb321f2bcf3ee08311577d3f5aba443d5c55d2d1` |
-| `releases/v3.1.21/README.md` | 1796 | `8bb6227826a9ed4f0696e9c6ea9b36cb2f2d764c2912e10a3b516a5538a32b26` |
+| `releases/v3.1.21/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.21.md` | 1591 | `2c7861b92209ea7df2e0ce1db7b324080f5cb0526ed9f615a8c8b0275d92a2bb` |
+| `releases/v3.1.21/FDS_Release_Finalization_Record_v3.1.21.md` | 1960 | `f05106bf4b37a256e8738a4e648cda2d67690dfe0558b3c70610d640134ba2a0` |
+| `releases/v3.1.21/README.md` | 1896 | `cff5f09e15bb880266d4e98a5e6d3c37b9a76e9cb3a3eecc8085ea7df5d616eb` |
 | `retrospectives/FDS_Phase1_Instructor_Feedback_2026-09-23.md` | 2218 | `849a7eaca2db5310b9c4ab299d893093f253126e02e3eee885e4878b78ee821b` |
 | `retrospectives/FDS_Team_Retrospective_2026-09-23.md` | 495 | `7f9af3eb1100359e1a96507361a6080f0c18dcc35df5526cb6a71ae95c86bca3` |
 | `retrospectives/FDS_Team_Retrospective_2026-09-29.md` | 43562 | `48a080a5cb21a90d5dc864bd6193cf5c82ca5a9887160ea3b4a00f6046c6b8c0` |
@@ -44,7 +49,7 @@ All files below are included in SHA256SUMS and distribution ZIP. Manifest itself
 | `scripts/verify-document-secrets.py` | 1833 | `a79f0c7ec6c40e762c80457f5706233dee8a9c1db3328b910ec04961a3553861` |
 | `scripts/verify-wbs-gantt-distribution.sh` | 3259 | `139e45ba113d08df98bd58f7b4ad864822b459dd10e04422e6fe12ff63c7c774` |
 | `tests/FDS_Test_Strategy_v3.1.21.md` | 10895 | `04ecc2e74fae33362a1a1e1ac02337dd8b33a87dee7c7c78d44865280f87535a` |
-| `tickets/FDS_v3.1.21_Canonical_Ticket_Update_Pack_v1.0.md` | 102884 | `ec6ef6fc515127c5d3b4378cf3216e4fb5d9af8e88fd929961aef4bdb2f422aa` |
+| `tickets/FDS_v3.1.21_Canonical_Ticket_Update_Pack_v1.0.md` | 102981 | `25f5348c9ba326c19601207170ffb73b4e9fb4821896af4af012002c12cbdc8c` |
 | `tickets/v3.1.21/canonical-records.json` | 131086 | `90272bf9a08f8fa2c57d155eda88f5169ff9c32a19055bd2cde88bfac2145c8f` |
 | `tickets/v3.1.21/descriptions/CR-P1-ANS-01-01.md` | 26786 | `8026d5f47c0816cd367c57104ad5bb96fceace4abef712baa87270d54f34fc0d` |
 | `tickets/v3.1.21/descriptions/CR-P1-APP-01-01.md` | 12180 | `2055b087e027a65150dbe95b3c7b7051c04ca9cc5883c16d5753fe978d833f5a` |
@@ -124,5 +129,5 @@ All files below are included in SHA256SUMS and distribution ZIP. Manifest itself
 | `tickets/v3.1.21/descriptions/P2-REV-01.md` | 19421 | `c8469a23ec1f6fc091adaaad0b6ef90f22e46773b7f0909526982d9634d5a3eb` |
 | `tickets/v3.1.21/descriptions/P2-ROSA-01.md` | 21484 | `edef0041e1c2ebfbf3588591d1c39d3a9e160ed7a3bfcb70d1f73bc2d8322c8f` |
 | `tickets/v3.1.21/descriptions/P2-VPN-01.md` | 22660 | `ea1e743715cb1a114c501182e8a307f4f092ccdc2300b9baa371de86936337f2` |
-| `wbs/FDS_v3.1.21_WBS_and_Gantt_v1.0.xlsx` | 141514 | `9fb6fb466daab16dfb292bb085fff6ce46ff1c568bd508202136972c72c0c289` |
-| `web/FDS_v3.1.21_Canonical_Status.html` | 13462 | `da7982070c164705e8819f4756c2f2a58cc7b665748c2b5183edb851be892491` |
+| `wbs/FDS_v3.1.21_WBS_and_Gantt_v1.0.xlsx` | 141476 | `713ba391fc2e7124245030288208f1ccec11b916a893b34639f90fe5210ffa46` |
+| `web/FDS_v3.1.21_Canonical_Status.html` | 13535 | `3fa99b539dcc54f68dcc0c355add6dfbf51ac8b82f39892f948ac65bc11df2f7` |
