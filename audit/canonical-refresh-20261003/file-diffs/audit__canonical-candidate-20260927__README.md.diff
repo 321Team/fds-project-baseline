@@ -1,0 +1,31 @@
+--- a/audit/canonical-candidate-20260927/README.md
++++ b/audit/canonical-candidate-20260927/README.md
+@@ -1,3 +1,22 @@
++# v3.1.21 Candidate — 최신 수집 2026-10-03
++
++**CANDIDATE / COLLECTING / NOT RELEASED**
++
++- Source main: `67ba6cf8a7f187e2dfcf188e4b2c55a853993778`
++- Candidate 입력 HEAD: `39549c3b4aed92e6ea1e6e54735bfbe833b9c869` / behind=0
++- 수집 시각(KST): 2026-10-03T11:53:07.711+09:00
++- 14개 저장소 merged 257건, 기존 대비 144건 추가. infra-dns 신규 수집 포함.
++- 상세·HEAD·원문·diff·생성 규칙: `audit/canonical-refresh-20261003/README.md`
++- #110=Done Decision; #125/#130=CR completed; #126/#127/#128=no-change 이력. Runtime 완료와 분리.
++- #34 최종 Freeze 목표=10-08 D21 이후; #35 Stage-A=동일일 조건부 handoff. source schedule.json 최신 이슈에서 재생성.
++- P1 Close HOLD / D21 OPEN / Architecture HOLD / Stage-A NOT_READY.
++- 기존 WBS STALE; 78개 Record 입력 인덱스/Baseline 변경 입력/10-06 Close 수신 구조 생성. 전체 Release Set은 NOT_GENERATED.
++
++아래는 이전 수집 당시 원문이다. 오래된 source HEAD/날짜/#110 To Do/CR 미결 표기는 현행 판정으로 사용하지 않는다. 현재 상태는 위 스냅샷과 intake.json이 기준이다.
++
++<details>
++<summary>이전 수집 기록 — 역사적 원문</summary>
++
+ # v3.1.21 후보 사전 수집 기록 — 2026-09-27
+ 
+ ## 1. 기준
+@@ -227,3 +246,5 @@
+ - RUNTIME/GATE REVALIDATION: **NOT RUN**
+ - REVIEW/MERGE/RELEASE: **NOT DONE**
+ 
++
++</details>

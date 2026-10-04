@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "P2-ROSA-TOPOLOGY-COST-COMPARISON-01",
+  "as_of_kst": "2026-10-02",
+  "region": "ap-northeast-2",
+  "status": "MODEL_READY_EXACT_PROJECT_INPUTS_PENDING",
+  "decision_boundary": "This model is an input to Architecture Freeze/Cost GO and is not topology approval.",
+  "billing_observability": {
+    "direct_cost_explorer": "BLOCKED_BY_ORG_SCP",
+    "external_daily_summary": "AVAILABLE_WHEN_PROVIDED",
+    "external_format_control": "NONE",
+    "missing_fields": "UNKNOWN_NOT_ZERO",
+    "credit_and_marketplace_eligibility": "UNKNOWN_UNLESS_OBSERVED_OR_CONFIRMED",
+    "project_gate_basis": "GROSS_COST_USING_OBSERVED_VALUES_WHEN_AVAILABLE_ELSE_CONSERVATIVE_ESTIMATE"
+  },
+  "official_rosa_service_pricing": {
+    "source": "https://aws.amazon.com/rosa/pricing/",
+    "checked_at_kst": "2026-10-02",
+    "worker_fee_usd_per_4vcpu_hour": 0.171,
+    "hcp_cluster_fee_usd_per_cluster_hour": 0.25,
+    "region_behavior": "ROSA service fees are uniform across supported AWS standard Regions",
+    "aws_infrastructure_price_behavior": "Region-specific and must be refreshed for ap-northeast-2 at Cost GO"
+  },
+  "structural_cost_formula": {
+    "common_worker_service_fee": "runtime_hours * worker_count * (worker_vcpu_each / 4) * 0.171",
+    "hcp_service_fee": "common_worker_service_fee + runtime_hours * 0.25",
+    "classic_service_fee": "common_worker_service_fee",
+    "hcp_aws_infrastructure": "worker_ec2 + worker_ebs + required_network + other_project_attributable_aws_cost",
+    "classic_aws_infrastructure": "worker_ec2 + worker_ebs + control_plane_ec2_ebs + infrastructure_node_ec2_ebs + required_network + other_project_attributable_aws_cost",
+    "gross_project_cost": "rosa_service_fee + aws_infrastructure + known_unbilled_projected + teardown_residual",
+    "expected_cash_out": "observed_net_when_available; otherwise separate UNKNOWN/ESTIMATED value, never used to expand gross ceiling"
+  },
+  "reference_only_minimum_worker_service_scenario": {
+    "approval_status": "NOT_APPROVED_PROJECT_SIZING",
+    "purpose": "Show only the ROSA service-fee difference before Seoul AWS infrastructure prices are populated.",
+    "worker_count": 2,
+    "worker_vcpu_each": 4,
+    "classic_rosa_service_fee_usd_per_hour": 0.342,
+    "hcp_rosa_service_fee_usd_per_hour": 0.592,
+    "difference_hcp_minus_classic_service_fee_usd_per_hour": 0.25,
+    "warning": "Do not use these totals as project Cost-to-Complete. Classic has additional customer-account control-plane/infrastructure AWS costs; HCP has the cluster fee."
+  },
+  "project_inputs_required": {
+    "planned_paid_runtime_hours": null,
+    "worker_instance_type": null,
+    "worker_count": null,
+    "worker_vcpu_each": null,
+    "worker_root_ebs_gb_each": null,
+    "single_or_multi_az": null,
+    "api_visibility": null,
+    "load_balancer_count": null,
+    "nat_gateway_count": null,
+    "vpn_connection_count": null,
+    "estimated_data_transfer_gb": null,
+    "teardown_residual_hours": null,
+    "other_project_attributable_usd": null
+  },
+  "comparison_axes": [
+    "portability_gate",
+    "security_and_evidence",
+    "hybrid_networking",
+    "operability",
+    "gross_cost_to_complete",
+    "observed_or_estimated_cash_out",
+    "schedule"
+  ],
+  "current_result": {
+    "topology": "UNDECIDED",
+    "reason": "Exact project sizing/runtime and Portability Gate remain incomplete. External billing detail is not required to build a conservative gross estimate."
+  }
+}

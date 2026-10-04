@@ -1,0 +1,22 @@
+--- issue-34-before
++++ issue-34-after
+@@ -160,8 +160,8 @@
+ | Type | Task |
+ | Status | To Do |
+ | Priority | P0 |
+-| Start | 2026-10-07 |
+-| End | 2026-10-07 |
++| Start | 2026-10-08 |
++| End | 2026-10-08 |
+ | Calendar Days | 1 |
+ | Working Days | 1 |
+ | Lead | 이권욱 |
+@@ -170,7 +170,7 @@
+ | Related Decision IDs | D10; D21; D22; D23; D25; D26 |
+ | Related Risk IDs | RISK-10; RISK-11; RISK-12; RISK-14; RISK-15 |
+ | Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #34 snapshot 2026-09-10T02:09:45Z; 일정: docs-v3.1.20 WBS + 2026-09-22 재계획 + 2026-09-24 일정 정합화 |
+-| Schedule Note | Phase 2 Start와 같은 10-07 설계 동결 목표. HCP/Classic, Region/AZ, API/Ingress, P0/P1, GitOps/Compliance P1 decision 경계를 고정한다. |
++| Schedule Note | 10-07은 사전설계/미결 입력 정리, 최종 Freeze 목표는 10-08 D21 결정 이후다. 순서: #36 D21 → #34 최종 Architecture/Transport 계약 Freeze → #35 Stage-A handoff. D21 또는 잔여 사양 미확정 시 Freeze HOLD; 같은 날 handoff 작업창은 별도 확인하며 G4/후속 일정을 자동 승인하지 않는다. |
+ 
+ 
+ ## 최신 운영 기록의 보존

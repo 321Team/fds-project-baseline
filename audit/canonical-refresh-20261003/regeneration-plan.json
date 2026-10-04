@@ -1,0 +1,85 @@
+{
+  "status": "PREPARATION_EXECUTED_FULL_RELEASE_NOT_GENERATED",
+  "source_index": "issue-index.json",
+  "source_snapshot": "snapshot.zip",
+  "input_record_count": 78,
+  "previous_wbs_record_count": 58,
+  "required_outputs": [
+    "Baseline",
+    "WBS/Gantt with all current applicable records",
+    "Ticket Pack",
+    "78 Description snapshots",
+    "Release Notes",
+    "Manifest",
+    "SHA256SUMS",
+    "WEB snapshot",
+    "Distribution ZIP + sidecar"
+  ],
+  "blocking_inputs": [
+    "10/6 Phase 1 Close disposition not available",
+    "D21 and Architecture/Stage-A contract unresolved",
+    "Source metadata anomalies require explicit resolution; preserve absent values as unknown"
+  ],
+  "metadata_anomalies": [
+    {
+      "number": 125,
+      "kind": "MISSING_PROPERTIES",
+      "fields": [
+        "Calendar Days",
+        "Working Days"
+      ]
+    },
+    {
+      "number": 128,
+      "kind": "MISSING_PROPERTIES",
+      "fields": [
+        "Calendar Days",
+        "Working Days",
+        "Support",
+        "Related Risk IDs",
+        "Schedule Note"
+      ]
+    },
+    {
+      "number": 128,
+      "kind": "STATUS_VOCABULARY",
+      "value": "Todo"
+    },
+    {
+      "number": 128,
+      "kind": "STATE_BODY_DRIFT",
+      "body_status": "Todo",
+      "state": "closed",
+      "state_reason": "not_planned"
+    },
+    {
+      "number": 130,
+      "kind": "MISSING_PROPERTIES",
+      "fields": [
+        "Calendar Days",
+        "Working Days",
+        "Related Risk IDs",
+        "Schedule Note"
+      ]
+    }
+  ],
+  "generation_order": [
+    "Refresh source heads and issues/comments, revalidate source ancestry",
+    "Apply approved dispositions and resolve source metadata anomalies without inventing AC/status",
+    "Populate phase1-close-input.json with original evidence references",
+    "Generate complete Baseline, Ticket Pack/Descriptions, WBS from one Record ID registry",
+    "Recalculate working days and individual absences; verify checkpoint dependencies and owner WIP",
+    "Render workbook and verify formulas, all sheet ranges and record coverage",
+    "Generate Manifest/SHA256SUMS/WEB/ZIP from exact candidate bytes",
+    "Run canonical-integrity and record exact-head review; merge/publication require separate authorization"
+  ],
+  "boundaries": {
+    "STATIC": "Executed for intake/metadata/date/dependency/ancestry",
+    "MOCK": "NOT_RUN",
+    "CI": "NOT_RUN_FOR_THIS_GENERATOR",
+    "RUNTIME": "NOT_RUN",
+    "REVIEW": "NOT_APPROVED",
+    "MERGE": "NOT_DONE",
+    "PUBLICATION": "NOT_DONE"
+  }
+}

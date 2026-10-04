@@ -1,0 +1,216 @@
+{
+  "generated_at_kst": "2026-10-03T11:53:07.711+09:00",
+  "project_end": "2026-10-26",
+  "non_working_dates": [
+    "2026-10-05",
+    "2026-10-09"
+  ],
+  "weekend_work": false,
+  "phase1_cutoff": "2026-10-02",
+  "phase1_review_close": "2026-10-06",
+  "phase2_start": "2026-10-07",
+  "phase2_available_workdays": 13,
+  "gates": {
+    "G4": "2026-10-14",
+    "G5": "2026-10-20",
+    "G6": "2026-10-22",
+    "deliverable_freeze": "2026-10-23",
+    "phase2_review": "2026-10-23",
+    "project_close": "2026-10-26"
+  },
+  "p0_schedule": {
+    "33": [
+      "2026-10-07",
+      "2026-10-07",
+      1
+    ],
+    "34": [
+      "2026-10-08",
+      "2026-10-08",
+      1
+    ],
+    "35": [
+      "2026-10-08",
+      "2026-10-14",
+      4
+    ],
+    "36": [
+      "2026-10-07",
+      "2026-10-08",
+      2
+    ],
+    "37": [
+      "2026-10-12",
+      "2026-10-14",
+      3
+    ],
+    "38": [
+      "2026-10-15",
+      "2026-10-19",
+      3
+    ],
+    "39": [
+      "2026-10-14",
+      "2026-10-14",
+      1
+    ],
+    "42": [
+      "2026-10-15",
+      "2026-10-15",
+      1
+    ],
+    "43": [
+      "2026-10-16",
+      "2026-10-19",
+      2
+    ],
+    "45": [
+      "2026-10-20",
+      "2026-10-20",
+      1
+    ],
+    "46": [
+      "2026-10-20",
+      "2026-10-20",
+      1
+    ],
+    "47": [
+      "2026-10-21",
+      "2026-10-21",
+      1
+    ],
+    "49": [
+      "2026-10-23",
+      "2026-10-23",
+      1
+    ],
+    "50": [
+      "2026-10-22",
+      "2026-10-22",
+      1
+    ],
+    "52": [
+      "2026-10-07",
+      "2026-10-07",
+      1
+    ],
+    "53": [
+      "2026-10-22",
+      "2026-10-22",
+      1
+    ],
+    "54": [
+      "2026-10-23",
+      "2026-10-23",
+      1
+    ],
+    "55": [
+      "2026-10-23",
+      "2026-10-26",
+      2
+    ],
+    "56": [
+      "2026-10-23",
+      "2026-10-23",
+      1
+    ],
+    "57": [
+      "2026-10-26",
+      "2026-10-26",
+      1
+    ]
+  },
+  "p1_decision_windows": {
+    "40": [
+      "2026-10-16",
+      "2026-10-16",
+      1
+    ]
+  },
+  "p1_unscheduled": [
+    25,
+    26,
+    27,
+    41,
+    44,
+    48,
+    51,
+    95,
+    120,
+    121
+  ],
+  "candidate_wbs_status": "REGENERATED_78_RECORDS_VERIFIED",
+  "lead_rebalance": {
+    "approved_at_kst": "2026-09-30",
+    "rationale": [
+      "3-person execution after original 4-person plan",
+      "retrospective identified large-ticket concentration and ownership-awareness delay",
+      "avoid additional ticket/review fatigue after CR #125-#130",
+      "preserve one-core-P0-WIP principle and reduce paid-runtime handoff"
+    ],
+    "changes": {
+      "35": {
+        "lead_before": "이권욱",
+        "lead_after": "이하영",
+        "support_after": [
+          "이권욱"
+        ],
+        "stream": "cloud-platform"
+      },
+      "37": {
+        "lead_before": "이권욱",
+        "lead_after": "이재환",
+        "support_after": [
+          "이권욱"
+        ],
+        "stream": "hybrid-data-path"
+      },
+      "42": {
+        "lead_before": "이하영",
+        "lead_after": "이권욱",
+        "support_after": [
+          "이하영",
+          "이재환"
+        ],
+        "stream": "registry-delivery-governance"
+      }
+    },
+    "unchanged": [
+      "schedule",
+      "scope",
+      "acceptance_criteria",
+      "priority",
+      "milestone",
+      "review_authority"
+    ],
+    "new_rebalance_ticket_created": false,
+    "p1_policy": "deferred-first-nonblocking"
+  },
+  "source_index": "audit/canonical-refresh-20261003/issue-index.json",
+  "dependency_contract": "audit/canonical-refresh-20261003/dependency-schedule.json",
+  "schedule_rule": "Inclusive weekday count, exclude 2026-10-05 and 2026-10-09; dates are planning targets, never actual execution/acceptance.",
+  "remaining_conditions_recheck": {
+    "collected_at_kst": "2026-10-03T19:59:14.334+09:00",
+    "scope": "18 named Issues, 5 related source PRs and baseline PR112/main; not full merged-input recollection",
+    "audit_path": "audit/canonical-hold-recheck-20261003-1955/README.md",
+    "source_snapshot": "audit/canonical-hold-recheck-20261003-1955/sources.json",
+    "input_head": "ccaa841c39b75497d17e793b79b248b41c5308e4",
+    "main_head": "67ba6cf8a7f187e2dfcf188e4b2c55a853993778",
+    "behind": 0,
+    "decision_status": "D21_FINAL_2026-10-03",
+    "issue36_close": "HOLD",
+    "schedule_status": "TARGETS_UNCHANGED_PRE_FREEZE_INPUT_CONSTRAINT_RECORDED",
+    "conflict": "PR8 revision2 proposes pre-Freeze live capacity checkpoint 2026-10-12 18:00 KST (not approved), later than #34 Freeze target 2026-10-08; owners must align before Freeze. No automatic reschedule.",
+    "resolution": "Capacity must be supplied before the first #34 Freeze. 10/12 18:00 proposal is not adopted. Exact intake deadline remains owner-confirmed; #35 stays conditional after Freeze and account/plan/cost gates."
+  },
+  "release_preparation": {
+    "source_heads_checked_at_kst": "2026-10-03T21:01:44+09:00",
+    "issue_snapshot": "audit/release-preparation-20261003/snapshot.zip",
+    "source_heads": "audit/release-preparation-20261003/repository-source-heads.json",
+    "wbs": "wbs/FDS_v3.1.21_WBS_and_Gantt_v1.0.xlsx",
+    "audit": "audit/release-preparation-20261003/README.md",
+    "scope": "78 current Issue bodies; 15 repository main HEADs checked. Earlier full merged intake capture time unchanged.",
+    "runtime": "NOT_RUN",
+    "publication": "NOT_RELEASED"
+  }
+}

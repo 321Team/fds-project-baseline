@@ -1,0 +1,90 @@
+--- a/audit/canonical-candidate-20260927/README.md
++++ b/audit/canonical-candidate-20260927/README.md
+@@ -1,6 +1,8 @@
+ # v3.1.21 Candidate — 최신 수집 2026-10-03
+ 
+ **CANDIDATE / COLLECTING / NOT RELEASED**
++
++잔여 조건 재수집: 2026-10-03T19:59:14.334+09:00 (18 Issues/5 source PRs + baseline PR112). `audit/canonical-hold-recheck-20261003-1955/README.md` 참조. 아래 11:53 전체 수집 시각·건수와 구분한다. Architecture c421733 revision2 재승인, raw intake, account/capacity/cost 및 10/8 Freeze vs 10/12 입력 제안 정렬이 남아 있다.
+ 
+ - Source main: `67ba6cf8a7f187e2dfcf188e4b2c55a853993778`
+ - Candidate 입력 HEAD: `39549c3b4aed92e6ea1e6e54735bfbe833b9c869` / behind=0
+@@ -9,7 +11,7 @@
+ - 상세·HEAD·원문·diff·생성 규칙: `audit/canonical-refresh-20261003/README.md`
+ - #110=Done Decision; #125/#130=CR completed; #126/#127/#128=no-change 이력. Runtime 완료와 분리.
+ - #34 최종 Freeze 목표=10-08 D21 이후; #35 Stage-A=동일일 조건부 handoff. source schedule.json 최신 이슈에서 재생성.
+-- P1 Close HOLD / D21 OPEN / Architecture HOLD / Stage-A NOT_READY.
++- P1 Close HOLD / D21 FINAL / D21 raw publication·Issue Close HOLD / Architecture HOLD / Stage-A NOT_READY.
+ - 기존 WBS STALE; 78개 Record 입력 인덱스/Baseline 변경 입력/10-06 Close 수신 구조 생성. 전체 Release Set은 NOT_GENERATED.
+ 
+ 아래는 이전 수집 당시 원문이다. 오래된 source HEAD/날짜/#110 To Do/CR 미결 표기는 현행 판정으로 사용하지 않는다. 현재 상태는 위 스냅샷과 intake.json이 기준이다.
+--- a/audit/canonical-candidate-20260927/intake.json
++++ b/audit/canonical-candidate-20260927/intake.json
+@@ -512,12 +512,23 @@
+   ],
+   "release_gates": {
+     "P1_CLOSE": "HOLD",
+-    "D21": "OPEN",
++    "D21": "FINAL",
+     "P2_ARCH_FREEZE": "HOLD",
+     "P2_IAC_STAGE_A": "NOT_READY",
+     "WBS": "STALE_REGENERATION_REQUIRED",
+     "FULL_RELEASE_SET": "NOT_GENERATED",
+     "PUBLICATION": "NOT_READY",
+-    "RUNTIME": "NOT_EXECUTED_BY_THIS_TASK"
++    "RUNTIME": "NOT_EXECUTED_BY_THIS_TASK",
++    "D21_EVIDENCE_PUBLICATION": "HOLD_RAW_INTAKE",
++    "ISSUE36_CLOSE": "HOLD_HANDOFF_AND_PUBLICATION"
++  },
++  "remaining_conditions_recheck": {
++    "collected_at_kst": "2026-10-03T19:59:14.334+09:00",
++    "scope": "18 named Issues, 5 related source PRs and baseline PR112/main; not full merged-input recollection",
++    "audit_path": "audit/canonical-hold-recheck-20261003-1955/README.md",
++    "source_snapshot": "audit/canonical-hold-recheck-20261003-1955/sources.json",
++    "input_head": "ccaa841c39b75497d17e793b79b248b41c5308e4",
++    "main_head": "67ba6cf8a7f187e2dfcf188e4b2c55a853993778",
++    "behind": 0
+   }
+ }
+--- a/audit/project-schedule-replan-20260930/schedule.json
++++ b/audit/project-schedule-replan-20260930/schedule.json
+@@ -188,5 +188,18 @@
+   },
+   "source_index": "audit/canonical-refresh-20261003/issue-index.json",
+   "dependency_contract": "audit/canonical-refresh-20261003/dependency-schedule.json",
+-  "schedule_rule": "Inclusive weekday count, exclude 2026-10-05 and 2026-10-09; dates are planning targets, never actual execution/acceptance."
++  "schedule_rule": "Inclusive weekday count, exclude 2026-10-05 and 2026-10-09; dates are planning targets, never actual execution/acceptance.",
++  "remaining_conditions_recheck": {
++    "collected_at_kst": "2026-10-03T19:59:14.334+09:00",
++    "scope": "18 named Issues, 5 related source PRs and baseline PR112/main; not full merged-input recollection",
++    "audit_path": "audit/canonical-hold-recheck-20261003-1955/README.md",
++    "source_snapshot": "audit/canonical-hold-recheck-20261003-1955/sources.json",
++    "input_head": "ccaa841c39b75497d17e793b79b248b41c5308e4",
++    "main_head": "67ba6cf8a7f187e2dfcf188e4b2c55a853993778",
++    "behind": 0,
++    "decision_status": "D21_FINAL_2026-10-03",
++    "issue36_close": "HOLD",
++    "schedule_status": "TARGETS_UNCHANGED_RECONCILIATION_REQUIRED",
++    "conflict": "PR8 revision2 proposes pre-Freeze live capacity checkpoint 2026-10-12 18:00 KST (not approved), later than #34 Freeze target 2026-10-08; owners must align before Freeze. No automatic reschedule."
++  }
+ }
+--- a/releases/v3.1.21/README.md
++++ b/releases/v3.1.21/README.md
+@@ -1,6 +1,8 @@
+ # v3.1.21 Candidate — 최신 수집 2026-10-03
+ 
+ **CANDIDATE / COLLECTING / NOT RELEASED**
++
++잔여 조건 재수집: 2026-10-03T19:59:14.334+09:00 (18 Issues/5 source PRs + baseline PR112). `audit/canonical-hold-recheck-20261003-1955/README.md` 참조. 아래 11:53 전체 수집 시각·건수와 구분한다. Architecture c421733 revision2 재승인, raw intake, account/capacity/cost 및 10/8 Freeze vs 10/12 입력 제안 정렬이 남아 있다.
+ 
+ - Source main: `67ba6cf8a7f187e2dfcf188e4b2c55a853993778`
+ - Candidate 입력 HEAD: `39549c3b4aed92e6ea1e6e54735bfbe833b9c869` / behind=0
+@@ -9,7 +11,7 @@
+ - 상세·HEAD·원문·diff·생성 규칙: `audit/canonical-refresh-20261003/README.md`
+ - #110=Done Decision; #125/#130=CR completed; #126/#127/#128=no-change 이력. Runtime 완료와 분리.
+ - #34 최종 Freeze 목표=10-08 D21 이후; #35 Stage-A=동일일 조건부 handoff. source schedule.json 최신 이슈에서 재생성.
+-- P1 Close HOLD / D21 OPEN / Architecture HOLD / Stage-A NOT_READY.
++- P1 Close HOLD / D21 FINAL / D21 raw publication·Issue Close HOLD / Architecture HOLD / Stage-A NOT_READY.
+ - 기존 WBS STALE; 78개 Record 입력 인덱스/Baseline 변경 입력/10-06 Close 수신 구조 생성. 전체 Release Set은 NOT_GENERATED.
+ 
+ 아래는 이전 수집 당시 원문이다. 오래된 source HEAD/날짜/#110 To Do/CR 미결 표기는 현행 판정으로 사용하지 않는다. 현재 상태는 위 스냅샷과 intake.json이 기준이다.

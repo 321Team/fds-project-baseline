@@ -1,0 +1,126 @@
+{
+  "collected_at_kst": "2026-10-03T21:01:44+09:00",
+  "repositories": [
+    {
+      "repo": "fds-msa",
+      "sha": "5120b7df72d24ada3dbcf23fc0292fb58ae778af"
+    },
+    {
+      "repo": "fds-project-baseline",
+      "sha": "67ba6cf8a7f187e2dfcf188e4b2c55a853993778"
+    },
+    {
+      "repo": "fds-project-evidence",
+      "sha": "51b0bac5b8558fce2b34103d5737f2c8c66dfbdb"
+    },
+    {
+      "repo": "infra-ansible",
+      "sha": "bf6f1a96565e198cfe9447c03cd8343e8828909d"
+    },
+    {
+      "repo": "infra-cicd",
+      "sha": "07f7f26d306056203e057b43bdf5234a2de2b8ae"
+    },
+    {
+      "repo": "infra-db",
+      "sha": "ab603a9c68c59d1d2cdb852ed1c57d19b5f19866"
+    },
+    {
+      "repo": "infra-dns",
+      "sha": "5f7505f9613e4b94aedd4bcdaba52f2b3f1a5f19"
+    },
+    {
+      "repo": "infra-harbor-trivy",
+      "sha": "b4e9eefc70be1363c3f57c9f6e0f3f377c775b7a"
+    },
+    {
+      "repo": "infra-kubernetes",
+      "sha": "7329bf2eb988b552483af48ff660d6a3f1f1d4f5"
+    },
+    {
+      "repo": "infra-lb",
+      "sha": "140455edcfaf71913c3725fc91d10b97c1d7b88b"
+    },
+    {
+      "repo": "infra-monitoring",
+      "sha": "01f7d59e215627652c6a32b669261feadac45c82"
+    },
+    {
+      "repo": "infra-pki",
+      "sha": "f8bded5c02b4497452da0a3117fc7e08aab8f9bb"
+    },
+    {
+      "repo": "infra-rosa",
+      "sha": "d5e6226d4e8eca45af757a16bfce5c0b89caf66a"
+    },
+    {
+      "repo": "infra-terraform",
+      "sha": "1c5ce75b81c0c103b46c546b015246183a317e56"
+    },
+    {
+      "repo": "fds-project-architecture",
+      "sha": "dd90efc09d5ab16e170499374736df97c7ea5559"
+    }
+  ],
+  "previous_main_comparison": {
+    "fds-msa": {
+      "old": "5120b7df72d24ada3dbcf23fc0292fb58ae778af",
+      "same": true
+    },
+    "fds-project-baseline": {
+      "old": "67ba6cf8a7f187e2dfcf188e4b2c55a853993778",
+      "same": true
+    },
+    "fds-project-evidence": {
+      "old": "51b0bac5b8558fce2b34103d5737f2c8c66dfbdb",
+      "same": true
+    },
+    "infra-ansible": {
+      "old": "bf6f1a96565e198cfe9447c03cd8343e8828909d",
+      "same": true
+    },
+    "infra-cicd": {
+      "old": "07f7f26d306056203e057b43bdf5234a2de2b8ae",
+      "same": true
+    },
+    "infra-db": {
+      "old": "ab603a9c68c59d1d2cdb852ed1c57d19b5f19866",
+      "same": true
+    },
+    "infra-dns": {
+      "old": "5f7505f9613e4b94aedd4bcdaba52f2b3f1a5f19",
+      "same": true
+    },
+    "infra-harbor-trivy": {
+      "old": "b4e9eefc70be1363c3f57c9f6e0f3f377c775b7a",
+      "same": true
+    },
+    "infra-kubernetes": {
+      "old": "7329bf2eb988b552483af48ff660d6a3f1f1d4f5",
+      "same": true
+    },
+    "infra-lb": {
+      "old": "140455edcfaf71913c3725fc91d10b97c1d7b88b",
+      "same": true
+    },
+    "infra-monitoring": {
+      "old": "01f7d59e215627652c6a32b669261feadac45c82",
+      "same": true
+    },
+    "infra-pki": {
+      "old": "f8bded5c02b4497452da0a3117fc7e08aab8f9bb",
+      "same": true
+    },
+    "infra-rosa": {
+      "old": "d5e6226d4e8eca45af757a16bfce5c0b89caf66a",
+      "same": true
+    },
+    "infra-terraform": {
+      "old": "1c5ce75b81c0c103b46c546b015246183a317e56",
+      "same": true
+    }
+  },
+  "candidate_input_head": "226959ac0c5d3dcf79109ba8b914c18bcbab3c0c",
+  "issue_count": 78,
+  "issue_collection": "Non-atomic latest body collection, 2026-10-03 KST; each updated_at/body_sha256 retained."
+}

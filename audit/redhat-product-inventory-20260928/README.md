@@ -34,6 +34,21 @@
 | 보류 | Trusted Artifact Signer, Quay, Advanced Cluster Management |
 | 제외 | OpenShift Pipelines(§5 Fixed와 충돌), Service Mesh(§1.3 Scope Out), Streams for Apache Kafka(DEC-P1-TXN-01과 충돌) |
 
+## 2026-09-30 유입 범위 갱신
+
+사용자 회의 결과에 따라 추가 제품의 **활성 유입 검토 대상**을 다음 두 건으로 한정한다.
+
+| 제품 | Decision | Priority | Gate 영향 | 상태 |
+|---|---|---|---|---|
+| OpenShift GitOps (Argo CD) | #120 DEC-P2-GITOPS-01 | P1 | G5/G6 non-blocking | 도입/유예/미도입 결정 대기 |
+| Compliance Operator | #121 DEC-P2-COMP-01 | P1 | G5/G6 non-blocking | 도입/유예/미도입 결정 대기 |
+
+- OpenShift GitOps가 미결정이면 #46의 Runner direct ROSA Delivery를 유지한다.
+- Compliance Operator가 미결정이면 #38의 기존 ROSA Platform/Security P0 AC를 유지한다.
+- RHOAI(#95)는 P1/Deferred 우선이며 이번 활성 유입 검토에 포함하지 않는다.
+- ACS, Logging, Network Observability, cert-manager 등은 별도 승인 전 검토 후보/Deferred로 유지한다.
+- 추가 절차 간소화안은 이번에 적용하지 않고 현행 Governance/Review/Evidence 절차를 유지한다.
+
 ## 표기 기준
 
 발표 자료 등에 "ROSA 기반 Red Hat 제품"을 쓸 때는 1번만 "구현", 2번은 "계획", 3번은 "검토 중"으로 표기한다.

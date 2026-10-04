@@ -1,0 +1,11 @@
+--- issue-35-before
++++ issue-35-after
+@@ -229,7 +229,7 @@
+ | Related Decision IDs | D10; D21; D25 |
+ | Related Risk IDs | RISK-10; RISK-11; RISK-12 |
+ | Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #35 snapshot 2026-09-10T02:09:47Z; 일정: docs-v3.1.20 WBS + 2026-09-22 재계획 + 2026-09-24 일정 정합화 |
+-| Schedule Note | 10-08 Stage-A(VPC/Subnet/Route/VPN handoff 입력) → 10-12 #37 VPN 착수 가능. 10-14 Full IaC/IAM/OIDC/ROSA prerequisite 및 G4 Evidence 완료. Stage-A는 중간 인계점이며 #35 전체 AC PASS를 의미하지 않는다. |
++| Schedule Note | 10-08 Stage-A 목표는 #36 D21 결정 → #34 최종 Freeze 이후에만 유효하다. Transport Adapter·Subnet/AZ·Route·backend/state 계약 및 reviewed plan/evidence를 고정한 뒤 #37(10-12)이 소비한다. 10-14 Full completion/G4 목표 유지. 당일 작업창 부족 또는 선행 HOLD 시 handoff를 완료로 기록하지 않고 후속 일정 재평가; Stage-A는 전체 AC PASS가 아니다. |
+ 
+ 
+ ## 최신 운영 기록의 보존

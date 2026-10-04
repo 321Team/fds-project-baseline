@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0",
+  "approved_at_kst": "2026-09-30",
+  "record_id": "P2-TEST-STRATEGY-01",
+  "canonical_base": "docs-v3.1.20",
+  "candidate_pr": 112,
+  "cost_policy": {
+    "record_id": "DEC-P2-COST-01",
+    "target_usd": 400,
+    "hard_stop_usd": 450,
+    "protected_reserve_usd": 50,
+    "ceiling_usd": 500,
+    "control_cost": "actual_gross_plus_known_unbilled_or_projected",
+    "observability": "external_daily_summary_uncontrolled_format_plus_project_estimate",
+    "external_report_absence_is_automatic_blocker": false,
+    "missing_external_fields_mean_zero": false
+  },
+  "schedule": {
+    "phase2_start": "2026-10-07",
+    "G4": "2026-10-14",
+    "G5": "2026-10-20",
+    "G6": "2026-10-22",
+    "freeze": "2026-10-23",
+    "close": "2026-10-26",
+    "available_workdays": 13
+  },
+  "windows": [
+    {
+      "id": "W0-PRECHECK",
+      "range": "through-2026-10-08",
+      "environment": "local-ci-supplied-ocp-if-authorized",
+      "paid_cloud": false,
+      "purpose": "app_manifest_openshift_compatibility_precheck"
+    },
+    {
+      "id": "W1-G4",
+      "range": "2026-10-07/2026-10-14",
+      "environment": "aws-seoul-ap-northeast-2-oci-network-prerequisites",
+      "paid_cloud": "limited",
+      "purpose": "d21_iac_iam_oidc_vpn_registry_hcp_classic_cost_go"
+    },
+    {
+      "id": "W2-G5",
+      "range": "2026-10-14/2026-10-20",
+      "environment": "rosa",
+      "paid_cloud": true,
+      "purpose": "platform_app_runner_delivery"
+    },
+    {
+      "id": "W3-G6",
+      "range": "2026-10-20/2026-10-22",
+      "environment": "same-rosa-as-W2",
+      "paid_cloud": true,
+      "purpose": "hybrid_e2e_failure_recovery_regression"
+    },
+    {
+      "id": "CLOSE",
+      "date": "2026-10-23",
+      "environment": "rosa-to-teardown",
+      "paid_cloud": true,
+      "purpose": "final_evidence_cost_inventory_teardown",
+      "new_tests": false
+    }
+  ],
+  "rosa_create_checkpoint": {
+    "technical": [
+      "portability_gate_pg01_pg09_pass_or_approved_exception",
+      "phase1_failure_contract_frozen_or_known_issue",
+      "D21_decided",
+      "terraform_plan_reviewed",
+      "D22_decided",
+      "vpn_prerequisite_ready_or_frozen_plan",
+      "rosa_inputs_frozen",
+      "control_cost_observed_or_conservatively_estimated_with_source_limitations_recorded",
+      "p0_cost_to_complete_estimated",
+      "aws_rosa_region_ap_northeast_2_fixed",
+      "cost_model_inputs_complete",
+      "rosa_hcp_or_classic_selected_after_portability_and_same_workload_cost_comparison"
+    ],
+    "cost_states": {
+      "green": "projected_completion_le_400",
+      "amber": "projected_completion_gt_400_and_lt_450__p1_deferred_p0_only",
+      "red": "projected_or_control_cost_ge_450__no_new_paid_runtime_cleanup"
+    }
+  },
+  "paid_retest_rule": "no_repeat_without_failure_hypothesis_and_source_or_config_change_or_documented_transient_reason",
+  "full_rosa_recreate": {
+    "p0": false,
+    "p1_conditional": true,
+    "conditions": [
+      "p0_complete",
+      "does_not_break_400_target",
+      "no_freeze_delay",
+      "separate_purpose_and_acceptance"
+    ]
+  },
+  "e2e_sequence": [
+    "hybrid_tcp_db_positive",
+    "normal_transaction",
+    "R01",
+    "R02",
+    "R04",
+    "R07",
+    "unauthorized_db_or_source",
+    "external_db_failure",
+    "fds_engine_failure_fail_open",
+    "tunnel_down",
+    "tunnel_recovery",
+    "final_regression"
+  ],
+  "p1_operator_policy": "deferred_first_if_p0_or_cost_or_schedule_risk",
+  "teardown_target": "2026-10-23",
+  "wbs_status": "STALE_REGENERATION_REQUIRED",
+  "updated_at_kst": "2026-10-02",
+  "aws_rosa_execution_input": {
+    "region_name": "Asia Pacific (Seoul)",
+    "region_code": "ap-northeast-2",
+    "region_status": "APPROVED_EXECUTION_INPUT",
+    "rosa_hcp_supported": true,
+    "rosa_classic_supported": true,
+    "topology_status": "PENDING_PORTABILITY_AND_COST_REVIEW",
+    "cost_model": "../phase2-cost-policy-20260930/cost-model-inputs.json",
+    "portability_review": "../phase2-rosa-topology-review-20261002/README.md"
+  }
+}

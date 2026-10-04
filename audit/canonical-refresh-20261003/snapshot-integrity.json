@@ -1,0 +1,8 @@
+{
+  "compressed_sha256": "6274b0e2bd44d9d8afac1c18c7d42465929ba1ed6a33f4b265607c32d43b2df1",
+  "decompressed_sha256": "1b59f088b9aa61e2d429e03dcb4fcb2c017f36b2b4ac83870cd22cc893226425",
+  "encoding": "UTF-8 JSON",
+  "zip_entry_timestamp": "2026-01-01T00:00:00",
+  "contains": "78 issue original bodies + selected decision comment collections + PR metadata + repository ancestors + exact issue write before/after",
+  "limitations": "Not all 78 issue comment threads were collected; Runtime logs were not re-executed or independently revalidated."
+}

@@ -1,0 +1,59 @@
+{
+  "generated_at_kst": "2026-10-03T11:53:07.711+09:00",
+  "sequence": [
+    {
+      "step": 1,
+      "issue": 36,
+      "checkpoint": "D21 transport decision",
+      "target": "2026-10-08",
+      "status": "OPEN",
+      "requires": [
+        "Education-site UDP500/4500 packet path observed",
+        "Return/NAT-T/IKE result reviewed",
+        "Security exposure, return-route and SPOF disposition"
+      ]
+    },
+    {
+      "step": 2,
+      "issue": 34,
+      "checkpoint": "Final Architecture Freeze",
+      "target": "2026-10-08",
+      "status": "HOLD",
+      "requires": [
+        "D21 selected transport",
+        "remaining subnet/AZ/topology/state/security contracts frozen"
+      ]
+    },
+    {
+      "step": 3,
+      "issue": 35,
+      "checkpoint": "Stage-A handoff",
+      "target": "2026-10-08",
+      "status": "NOT_READY",
+      "requires": [
+        "Final Architecture Freeze",
+        "exact source/schema + reviewed plan + handoff evidence"
+      ]
+    },
+    {
+      "step": 4,
+      "issue": 37,
+      "checkpoint": "VPN start",
+      "target": "2026-10-12",
+      "status": "CONDITIONAL",
+      "requires": [
+        "D21 decision",
+        "Stage-A accepted handoff"
+      ]
+    }
+  ],
+  "same_day_capacity": "UNVERIFIED: D21 -> Freeze -> Stage-A on 10-08 is ordered, not proof of sufficient work time; replan #37/G4 if any gate or handoff slips.",
+  "wip_rule": "10-07 preliminary architecture input is precheck. D21 decision and final Freeze are serialized for Lead 이권욱; do not claim workload feasibility from date arithmetic.",
+  "resource_mutations": "NOT_AUTHORIZED_BY_THIS_CHANGE",
+  "issue_body_dependency_sections": "Unchanged; subordinate same-day checkpoint ordering added to permitted Schedule Note metadata and audit.",
+  "issue_metadata_applied": [
+    34,
+    35,
+    36
+  ]
+}

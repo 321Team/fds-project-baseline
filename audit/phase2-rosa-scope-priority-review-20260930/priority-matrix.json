@@ -1,0 +1,130 @@
+{
+  "generated_at_kst": "2026-09-30T17:36:00+09:00",
+  "canonical_reference": "docs-v3.1.20",
+  "candidate_pr": 112,
+  "candidate_branch": "release/v3.1.21",
+  "policy": {
+    "P0": "Phase 2 core success chain, prerequisite decision, or gate-critical",
+    "P1": "enhancement/conditional/deferred; must not automatically block P0 gates"
+  },
+  "applied_changes": [
+    {
+      "issue": 25,
+      "phase": "Phase 2",
+      "priority": "P1",
+      "milestone": "G6",
+      "blocking": false
+    },
+    {
+      "issue": 26,
+      "phase": "Phase 2",
+      "priority": "P1",
+      "milestone": "G6",
+      "blocking": false
+    },
+    {
+      "issue": 27,
+      "phase": "Phase 2",
+      "priority": "P1",
+      "milestone": "G6",
+      "blocking": false
+    },
+    {
+      "issue": 44,
+      "phase": "Phase 2",
+      "priority_from": "P0",
+      "priority_to": "P1",
+      "blocking": false
+    },
+    {
+      "issue": 45,
+      "change": "add P2-CICD-01 as G5 dependency"
+    },
+    {
+      "issue": 49,
+      "change": "remove P2-OADP-01 as P0 blocker"
+    },
+    {
+      "issue": 50,
+      "change": "remove P2-OADP-01 as P0 blocker"
+    },
+    {
+      "issue": 53,
+      "change": "remove P2-OADP-01 as P0 blocker; require result or Deferred/N/A only if applicable"
+    },
+    {
+      "issue": 54,
+      "change": "add D25/D26 to related decisions"
+    },
+    {
+      "issue": 120,
+      "record_id": "DEC-P2-GITOPS-01",
+      "priority": "P1",
+      "blocking": false,
+      "scope": "OpenShift GitOps adoption decision"
+    },
+    {
+      "issue": 121,
+      "record_id": "DEC-P2-COMP-01",
+      "priority": "P1",
+      "blocking": false,
+      "scope": "Compliance Operator adoption decision"
+    }
+  ],
+  "p0_delivery_core": [
+    34,
+    35,
+    36,
+    37,
+    38,
+    42,
+    43,
+    46,
+    47,
+    50,
+    49
+  ],
+  "p0_governance": [
+    33,
+    39,
+    45,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57
+  ],
+  "p1_nonblocking": [
+    25,
+    26,
+    27,
+    40,
+    41,
+    44,
+    48,
+    51,
+    95,
+    120,
+    121
+  ],
+  "scope_rules": {
+    "rosa_hcp_control_plane": "managed_by_red_hat",
+    "rosa_worker_and_workload": "customer_managed_scope",
+    "oadp": "P1_nonblocking",
+    "hybrid_dns": "P1_conditional",
+    "operator_mirror": "P1_conditional",
+    "rhoai": "P1_deferred_default",
+    "openshift_gitops": "P1_decision_nonblocking_default_runner_direct",
+    "compliance_operator": "P1_decision_nonblocking",
+    "procedure_simplification": "NO_NEW_CHANGE_KEEP_CURRENT_REVISIT_LATER"
+  },
+  "canonical_regeneration_pending": [
+    "WBS priority/phase/milestone",
+    "Baseline",
+    "Ticket Pack",
+    "Descriptions",
+    "working-day recalculation",
+    "Manifest/SHA256SUMS/ZIP/WEB"
+  ]
+}
