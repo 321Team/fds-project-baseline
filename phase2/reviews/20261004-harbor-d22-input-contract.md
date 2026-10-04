@@ -180,6 +180,41 @@ host/user=`cicd-runner01/server01_cicd-runner`, 관측 timestamp는 출력되지
 Secret 값 출력, 추측한 파일 교체, Pod restart/rollout, RBAC/SA 수정은 수행하지 않는다.
 이번 변경은 이전 source snapshot 이후 추가된 관측 delta이며 migration manifest의 원본 파일 hash를 덮어쓰지 않는다.
 
+### 1.7 Runner IF09 / CI credential source 대조 — 2026-10-04 18:30 이후
+이 절은 source 검토이며 실제 Runner 파일 내용·환경·credential을 조회하거나 시험을 재실행하지 않았다.
+
+**현재 CI 실행 범위**
+infra-cicd main commit `07f7f26d306056203e057b43bdf5234a2de2b8ae`:
+- [app-test-build-scan.yml](https://github.com/321Team/infra-cicd/blob/07f7f26d306056203e057b43bdf5234a2de2b8ae/.github/workflows/app-test-build-scan.yml)은 host=cicd-runner01, user=server01_cicd-runner, uid=1000을 검사한다. 이는 코드상 실행 조건이며 모든 live job이 이 사용자로 실행됐다는 독립 증명이 아니다.
+- [app_workflow.py](https://github.com/321Team/infra-cicd/blob/07f7f26d306056203e057b43bdf5234a2de2b8ae/tools/delivery/app_workflow.py)는 PUSH/DEPLOY=NOT_EXECUTED를 기록한다.
+- [delivery-runtime-gate](https://github.com/321Team/infra-cicd/blob/07f7f26d306056203e057b43bdf5234a2de2b8ae/docs/delivery-runtime-gate-20261002.md)는 Harbor login/push/manifest 실행 adapter를 미구현 범위로 명시한다.
+따라서 이 workflow의 운영 Push authfile 연결을 현장 파일 검색만으로 확정하려 하지 않는다. 다른 workflow/별도 수동작업 전체의 부재를 증명한 것은 아니다.
+
+**IF09 source**
+infra-harbor-trivy main commit `030a4ce14acdab3a58c4767455b7555aaf8ce949`:
+- [runner-push-test.sh](https://github.com/321Team/infra-harbor-trivy/blob/030a4ce14acdab3a58c4767455b7555aaf8ce949/scripts/verify/runner-push-test.sh): 임시 TEST_DOCKER_CONFIG를 만들고 DOCKER_CONFIG를 export한다. login/push/pull/logout에 --authfile을 지정하지 않으며 REGISTRY_AUTH_FILE을 고정·제거하지 않는다.
+- [formal wrapper](https://github.com/321Team/infra-harbor-trivy/blob/030a4ce14acdab3a58c4767455b7555aaf8ce949/scripts/verify/formal-run/runner-formal-run-oneshot.txt): robot$push와 hidden terminal input→password-stdin 사용, host/user/Podman version 로그 기록. 실제 실행 사용자 강제 gate와 authfile 고정은 이 wrapper에 없다. 과거 source label은 별도 provenance 한계로 이미 기록한 범위를 유지한다.
+
+공식 [podman-login](https://docs.podman.io/en/latest/markdown/podman-login.1.html)에서 Linux 기본 파일은 XDG_RUNTIME_DIR/containers/auth.json이며 --authfile 또는 REGISTRY_AUTH_FILE로 변경한다.
+DOCKER_CONFIG만의 지정으로 Podman 기본 파일의 write/logout을 격리했다고 보장할 수 없다.
+현장에 존재한 /run/user/1000/containers/auth.json은 기본 경로와 양립하지만 과거 IF09에서 그 파일을 실제 사용했다는 증거는 아니다. 당시 상속 환경/Podman version별 동작은 미확인이다.
+
+**발견사항과 영향**
+AUTHFILE_ISOLATION=NOT_ESTABLISHED_IN_SOURCE.
+기본 파일 또는 상속된 REGISTRY_AUTH_FILE에 시험 login/logout이 작용할 가능성을 배제하지 못한다.
+기존 10-02 보고 Push/Pull/wrong-credential 결과를 곧바로 취소하지는 않되, 그 결과가 credential 격리/현재 CI binding/현재 자격 유효성까지 입증한다는 해석은 금지한다.
+격리 결함은 향후 IF09 재실행 및 운영 Push adapter 편입 전에 해소·독립 검토할 항목이다. 타 세션 P1 실행 코드나 기존 AC 판정은 이번에 변경하지 않는다.
+
+**후속 코드 보완 기준 — 제안, 미적용**
+1. private 임시 디렉터리/명시적 authfile을 생성하고 login/push/pull/logout 전체에 동일한 --authfile을 전달한다.
+2. negative 시험은 별도 authfile로 분리하며, 상속 REGISTRY_AUTH_FILE 등의 영향과 credential helper/fallback을 검토한다.
+3. cleanup은 해당 임시 자격 파일/디렉터리에만 적용한다. 기본 파일 logout·삭제를 복구 절차로 사용하지 않는다.
+4. subprocess mock으로 모든 registry 명령의 authfile 인자를 검증하고, 사전에 둔 기본 auth 파일이 정상·실패·중단 뒤 변경되지 않는지 확인한다. 실제 secret 값/파일 credential hash를 evidence에 출력하지 않는다.
+5. source SHA/host/user/Podman version/비밀값 없는 authfile 식별·수명과 runtime receipt를 결속한 뒤 기존 독립 리뷰 및 실행 절차로 진행한다.
+
+현재 **CI_PUSH_ADAPTER=NOT_IMPLEMENTED_IN_REVIEWED_MAIN / RUNNER_PRODUCTION_AUTH_BINDING=PENDING_ADAPTER / IF09_AUTHFILE_ISOLATION=FOLLOWUP_REQUIRED**.
+지금 auth.json 교체·추가 login/logout·기존 시험 재실행은 불필요하다.
+
 ## 2. D22 필수 12개 입력
 | # | 계약 후보/채울 값 | 현재 상태·담당 입력 |
 |---:|---|---|
