@@ -2,7 +2,7 @@
 기준: 2026-10-03 21:00 KST. 2026-10-04 후속: collector guard/JSON format·timeout 증적 보존 수정. AI: CODEX_ASSISTED.
 상태: EXECUTION_CANDIDATE / AWS 실제 실행 NOT_RUN / 독립 REVIEW PENDING / Freeze HOLD.
 연계: [하영 추가 의견](https://github.com/321Team/fds-project-architecture/pull/8#issuecomment-5968593648), #35/#38/#34.
-이번 PR8 후속 조회에 한정한 실행안이며 개인 Codex 지침을 팀 공용 정책으로 승격하지 않는다.
+현재 작업 위치는 비공개 baseline PR137이다. PR8 링크는 원래 논의 이력이다. 개인 Codex 지침을 팀 공용 정책으로 승격하지 않는다.
 
 ## 1. 선택한 방식과 책임
 - 권장: 담당 1명(하영 #35/#38 Lead, 이미 세션 가능한 권욱 대행 가능)이 MFA로 FDS-ReadOnly-Audit 역할 전환한 **서울 CloudShell**에서 고정 AWS 조회를 실행한다.
@@ -14,7 +14,8 @@
 
 ## 2. AWS 고정 조회 범위
 [수집 script](phase2-readiness-capture.py)의 검토 대상 source commit:
-`c2451973ad99ea9d7192e7f6b0d1d73b576dcf56` (실행파일 SHA256도 capture.json에 기록).
+`59985b6399fa4c9e629e51b135264d1293bbae7f` — 비공개 fds-project-baseline 고정본(실행파일 SHA256도 capture.json에 기록).
+2026-10-05 비교에서 원래 architecture `c2451973ad99ea9d7192e7f6b0d1d73b576dcf56`의 수집기와 파일 내용 동일 확인. 코드 변경은 없으며 기존 STATIC/MOCK 범위를 재사용한다. source-ref는 실제 가져온 저장소·commit에 맞춰 기록한다.
 명령은 CLI args 배열로 전달하고 shell 실행/외부 command 입력을 받지 않는다.
 
 | 입력 | 고정 조회 | 해석 |
@@ -32,10 +33,10 @@ EIP4와 실제추가 필요·삭제예정 NAT 상태·role존재·quota 적용�
 
 ## 3. 실행 순서와 정상/실패 판정
 실행 위치: 예상 역할로 전환한 ap-northeast-2 CloudShell. AWS CLI/Python3가 이미 사용 가능해야 한다.
-1. source SHA가 위 값인 [원본 script](https://github.com/321Team/fds-project-architecture/blob/c2451973ad99ea9d7192e7f6b0d1d73b576dcf56/phase2/runbooks/phase2-readiness-capture.py)를 읽고 CloudShell editor에 동일 내용으로 `phase2-readiness-capture.py` 저장한다. GitHub 개인토큰을 shell history나 Issue에 넣지 않는다. CLI설치/새credential 파일 생성 불필요.
+1. source SHA가 위 값인 [원본 script](https://github.com/321Team/fds-project-baseline/blob/59985b6399fa4c9e629e51b135264d1293bbae7f/phase2/runbooks/phase2-readiness-capture.py)를 읽고 CloudShell editor에 동일 내용으로 `phase2-readiness-capture.py` 저장한다. GitHub 개인토큰을 shell history나 Issue에 넣지 않는다. CLI설치/새credential 파일 생성 불필요.
 2. root가 아닌 예상 역할 세션인지 확인한 상태에서 아래 실행. 파일을 편집했다면 original source로 주장하지 말고 변경분 검토 후 별도 revision 기록.
 ```bash
-python3 phase2-readiness-capture.py --source-ref c2451973ad99ea9d7192e7f6b0d1d73b576dcf56
+python3 phase2-readiness-capture.py --source-ref 59985b6399fa4c9e629e51b135264d1293bbae7f
 ```
 3. 출력 DIRECTORY는 실행마다 새로 생성된다. 권한 umask077/raw dir0700, 기존경로 덮어쓰기 없음. 명령별 stdout 원문 bytes, stderr 원문 bytes, RC·command·KST와 CLIversion/scriptSHA/sourceSHA를 보존한다.
 4. `manifest.json`에는 raw/capture 파일별 path·size·SHA256, 콘솔 출력에는 manifest 자체 SHA256을 별도로 기록한다. manifest는 자기자신을 포함하지 않는다. 최종 transferred bytes에서 size/hash를 다시 확인한다.

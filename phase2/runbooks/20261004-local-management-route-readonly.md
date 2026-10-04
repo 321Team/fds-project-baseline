@@ -1,6 +1,6 @@
 # Runner 관리 경로 local read-only 수집
 2026-10-04 / CODEX_ASSISTED. #34 B1·#37·#40 기존 입력 요청을 위한 실행 보조.
-작성/STATIC/MOCK만 완료. Field 실행, route 변경, Freeze/Decision 승인이 아니다.
+작성 시점의 STATIC/MOCK과 후속 현장 관측을 구분한다. 2026-10-04 Runner/vpn-gw 로컬 수집 및 원본 SHA 대조 완료. 상세는 [DNS 계약 §11~14](../reviews/20261004-private-management-bidirectional-dns-contract.md)를 따른다. 동일 상태의 재수집은 불필요하며 route 변경·Freeze/Decision 승인 또는 네트워크 인수는 아니다.
 
 ## 실행 경계
 - 대상: cicd-runner01의 기존 server01_cicd-runner 계정, vpn-gw01의 기존 담당자 승인 계정.
@@ -38,7 +38,7 @@ fi
 
 부모 shell 옵션을 바꾸거나 터미널을 종료하지 않는다. wrapper의 마지막 printf 상태가 아니라 출력된 LOCAL_ROUTE_CAPTURE_RC를 판정에 사용한다.
 3. RESULT_DIR 아래 local-route.txt와 SHA256SUMS를 private 경로로 전달한다. 파일에는 source script hash·UTC/KST·계정·host·각 명령/RC가 기록된다.
-4. .58 장비는 현재 identity/권한 미확인이므로 이번 수집기의 임의 대상으로 추가하지 않았다. Runner/vpn-gw lookup에서 next hop을 먼저 확인하고 필요한 로컬 중계 장비 조회는 해당 운영자 범위에서 이어간다.
+4. 후속 콘솔에서 .58과10.250.10.1은 mgmt-gw01의 ens160/ens224로 확인했다. mgmt-gw는 vpn-gw01(.51)과 별도다. 본 수집기의 runner/vpn-gw 주소 guard를 변경해 mgmt-gw에 실행하지 않는다. 해당 장비의 기존 주소·규칙 관측은 DNS 계약 §13~14에 연결돼 있다.
 
 ## 판정·중단·복구
 - RC0 / CAPTURED_REVIEW_REQUIRED: 고정 로컬 조회가 모두 RC0. L3 연결·방화벽 허용·VPN SA·DNS 응답 성공은 아님.
@@ -49,7 +49,7 @@ fi
 - source가 예상과 다르거나 unexpected default route면 그대로 STOP/검토. route add/selector 확대/SNAT/방화벽 해제/재시작 금지.
 - 자료 수신 후 source/next-hop/return 양측 대응을 검토한다. 실제 forwarding/source보존 시험은 별도 범위로 구분한다.
 
-## 준비 검증
+## 작성 당시 준비 검증 (후속 현장 수신과 구분)
 - bash -n PASS; 잘못된 role 입력 RC2.
 - fake ip command를 사용한 MOCK5/5: Runner 정상, vpn-gw 정상, 주소 mismatch, route lookup 실패, 주소 JSON 오류.
 - 정상/부분 수집은 결과 권한0700/0600 및 SHA256SUMS 확인. 실패 guard는 결과 디렉터리0.
