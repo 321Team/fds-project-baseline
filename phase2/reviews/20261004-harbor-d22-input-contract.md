@@ -110,6 +110,7 @@ system 수준 계정이지만 출력된 permission은 fds 프로젝트 범위다
 고정 IP에 대한 pinned CA HTTPS 성공은 이 스크립트/출력 범위의 IP 이름·chain 검증을 지지한다. DNS/OS default trust/Robot 자체 인증 및 Worker push 거부/ROSA 인수까지 확대하지 않는다. 추가 API 재수집은 현재 입력 정리에 필요하지 않다.
 
 ### 1.5 기존 rotation 계획과 consumer별 실행·검증 연결
+후속 실제 SA/Secret 참조 관측은 1.6을 우선한다. 아래 실행·인수 절차 자체는 여전히 미수행이다.
 [Lead 계획](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-5927104283)을 2026-10-04 재조회했다. **10-12~10-13은 기존 일정(안)**이며 새 확정 일정으로 바꾸지 않는다. 아래는 해당 계획을 소비하는 검증 절차 제안이며 실제 재발급·Secret 갱신·회수는 수행하지 않았다.
 
 | 기존 consumer | 갱신 대상 | 실행 전 확인 / 완료 증적 |
@@ -129,6 +130,56 @@ system 수준 계정이지만 출력된 permission은 fds 프로젝트 범위다
 현재 **ROTATION=NOT_VERIFIED / CONSUMER_REFRESH=NOT_VERIFIED / P2_PRINCIPAL_DECISION=PENDING**.
 기존 P1 principal의 P2 공유나 새 계정 발급을 이 관측 기록으로 승인하지 않는다.
 
+### 1.6 Consumer 실제 참조 및 Runner 파일 후보 — 2026-10-04
+사용자 터미널 readback: control01 관측시각 **2026-10-04T17:55:28+09:00**,
+host/user=`k8s-control01/server02`, 사전 표시 context=`kubernetes-admin@kubernetes`.
+`D22_CONSUMER_READ_RC=0`. context 이름만으로 cluster 고유 identity를 증명하지 않으며, 실행 중 context를 고정한 source hash/원본 수집 파일은 미수신이다.
+참조 절차는 비공개 baseline `99678c807d7504ae243ac6ce9d2cfce29b59a852`의 [consumer runbook](../runbooks/20261004-harbor-consumer-reference-readonly.md).
+붙여넣은 명령의 끝부분은 표시가 섞여 있어 해당 버전 전체를 byte-identical 실행했다고 단정하지 않는다. 아래는 제공된 결과에 한정한다.
+
+| namespace | workload / SA | 관측 Pod 수 | node 분포 |
+|---|---|---:|---|
+| fds-app | Deployment/fds-engine / fds-engine-sa | 3 | worker01 2, worker02 1 |
+| fds-app | Deployment/transaction-api / transaction-api-sa | 3 | worker01 1, worker02 2 |
+| monitoring-api | Deployment/alertmanager / alertmanager-sa | 1 | worker03 |
+| monitoring-api | Deployment/grafana / grafana-sa | 1 | worker03 |
+| monitoring-api | Deployment/kube-state-metrics / kube-state-metrics-sa | 1 | worker02 |
+| monitoring-api | Deployment/prometheus / prometheus-sa | 1 | worker03 |
+| monitoring-node | DaemonSet/node-exporter / node-exporter-sa | 3 | worker01/02/03 각 1 |
+
+위 worker 표기는 실제 `k8s-worker01/02/03`의 축약이다.
+workload7개와 Pod13개 모두 해당 namespace의 `harbor-pull-secret`을 직접 참조한다.
+출력된 모든 SA(default 포함)는 imagePullSecrets가 비어 있다. Secret 연결은 이 결과에서 SA 상속이 아니라 workload template/Pod 명시 참조로 확인되며, 이를 이유로 SA를 변경할 필요는 없다.
+
+| namespace | Secret type | UID | resourceVersion |
+|---|---|---|---|
+| fds-app | kubernetes.io/dockerconfigjson | 0f3772b6-c230-40bd-9e38-f27a21df7b88 | 2832102 |
+| monitoring-api | kubernetes.io/dockerconfigjson | c0f0bc4b-fd88-4ec6-879b-71a4bd7ed172 | 3053155 |
+| monitoring-node | kubernetes.io/dockerconfigjson | 616deba6-b104-4420-9e59-4c7cf962317c | 3053156 |
+
+namespace별로 같은 이름의 서로 다른 Secret3개다. UID/RV는 관측 metadata이며 credential fingerprint/갱신시각/내부 username 증명이 아니다.
+Secret data는 이 결과에 출력되지 않았다. 3개 내부 credential이 모두 robot$worker인지, 서로 같은 credential인지도 이번 조회로는 확인하지 않았다.
+Pod 이름:
+- fds-engine-5699669f6f-bp6t6 / -hxq4n / -t4xbj
+- transaction-api-b784c8c5d-jn7jc / -rq9b6 / -szcdq
+- alertmanager-6bf6dc555-jks9k, grafana-f65457bfd-ghl62, kube-state-metrics-77796bd485-7rq4h, prometheus-d8949bd64-wsdhd
+- node-exporter-4gtms / -thcn5 / -zdhnv
+목록은 관측시점 참조이며 Pod Ready/phase/imageID 또는 신규 pull 성공은 조회하지 않았다.
+이 분포만으로 scheduling 장애·replica 가용성·N-1 충족을 판정하지 않는다. Job/CronJob 등 전체 consumer inventory도 아니다.
+
+**Runner 후보 조회**
+host/user=`cicd-runner01/server01_cicd-runner`, 관측 timestamp는 출력되지 않음(같은 사용자 메시지 2026-10-04 17:58 KST 수신).
+- `/run/user/1000/containers/auth.json`: 일반 파일, owner=server01_cicd-runner, mode=600.
+- `/home/server01_cicd-runner/.config/containers/auth.json`: 없음.
+- `/home/server01_cicd-runner/.docker/config.json`: 없음.
+- `ACTIVE_AUTHFILE_BINDING=NOT_VERIFIED`, `D22_RUNNER_REF_RC=0`.
+현재 interactive user의 후보 파일 존재·권한만 확인했다. CI/Podman 실행 user/env/--authfile에 결박하지 않았으므로 이 파일을 자동 교체 대상으로 지정하지 않는다. 내용/credential hash는 조회하지 않았다.
+
+판정: **WORKLOAD_SECRET_REFERENCE=PASS_USER_READBACK (7 workloads/13 Pods/3 Secrets) / RUNNER_CANDIDATE_METADATA=PASS_USER_READBACK / RUNNER_ACTIVE_BINDING=PENDING**.
+현재 추가 동일 조회는 불필요하다. 다음 단계는 기존 IF09/CI 실행 source의 명시적 --authfile 또는 환경 경로/실행사용자 확인과 approved rotation 실행창·복구방식 확정이다.
+Secret 값 출력, 추측한 파일 교체, Pod restart/rollout, RBAC/SA 수정은 수행하지 않는다.
+이번 변경은 이전 source snapshot 이후 추가된 관측 delta이며 migration manifest의 원본 파일 hash를 덮어쓰지 않는다.
+
 ## 2. D22 필수 12개 입력
 | # | 계약 후보/채울 값 | 현재 상태·담당 입력 |
 |---:|---|---|
@@ -141,7 +192,7 @@ system 수준 계정이지만 출력된 permission은 fds 프로젝트 범위다
 | 7 | 각 승인 ROSA worker actual node-pull source→Harbor443, VPN/FORWARD/return 및 HCP node trust | #38 inventory, #37 transport, #42 Harbor 소비; 생성 전 tuple 규칙/생성 후 IP 증적 |
 | 8 | 신규 pull 실패 시 새 rollout STOP. 이미 실행 중 정상 workload/이전 approved digest 보존. cloud mirror는 별도 승인·동일 digest·접속/인증 증적이 있을 때만 후보 | 자동 failover/새 cloud registry 생성 승인 없음 |
 | 9 | 이미지 크기×노드/캐시 미스/교체 횟수, hybrid transfer 및 선택 mirror storage/egress; 고정/변동 비용 분리 | 금액 입력은 사용자 10-06부터 텍스트 제공; 한도/잔여/기간 미확인 HOLD |
-| 10 | 비밀은 승인 secret store/reference만 기록. namespace/SA imagePullSecret 범위, 만료·회수·rotation 및 담당. 전역 pull-secret 변경은 필요성 별도 판단 | P1 principal metadata는 1.4 확보; consumer 연결은 1.5. 실제 SA/보관 reference 및 P2 입력 PENDING; token/private key 원문 Git 금지 |
+| 10 | 비밀은 승인 secret store/reference만 기록. namespace/SA imagePullSecret 범위, 만료·회수·rotation 및 담당. 전역 pull-secret 변경은 필요성 별도 판단 | P1 principal metadata는 1.4 확보; consumer 연결은 1.5. P1 실제 SA/Secret 참조는 1.6 확보; Runner active reference 및 P2 입력 PENDING; token/private key 원문 Git 금지 |
 | 11 | source SHA + raw 관측 KST/환경/RC + sanitized 결과 + raw hash/size + 시험ID + 독립 evidence review 연결 | leaf/Robot은 1.3~1.4 USER_READBACK 확보; raw 독립 재해시·evidence 리뷰 및 P2 actual 인수 PENDING |
 | 12 | logical 선택/전제 수용 → Basic Ready 이후 Final GO/NO_GO 기록. 이후 실제 cold-pull/실패·복구 인수 상태 별도 | #42 Lead 판정 PENDING; 최종 성공·승인 미기록 |
 
