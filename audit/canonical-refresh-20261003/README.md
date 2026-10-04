@@ -26,3 +26,7 @@ STATIC: 병합 목록의 전체 페이지, merge SHA 계보, Record ID 유일성
 ## 남은 HOLD
 
 P1_CLOSE=HOLD / D21=OPEN / P2_ARCH_FREEZE=HOLD / P2_IAC_STAGE_A=NOT_READY. 10-08 연속 인계 시간은 미검증이다. 10-06 실제 Close와 미결 metadata/사양을 반영한 뒤 WBS/Baseline/Ticket Pack/Description 전체 재생성, Workbook QA, Manifest/SHA256SUMS/WEB/ZIP 검증이 필요하다. FULL_RELEASE_SET=NOT_GENERATED / MERGE=NOT_DONE / PUBLICATION=NOT_READY.
+
+## 2026-10-04 최종화 해석 보완
+
+이 디렉터리 SHA256SUMS와 regenerate.py --from-snapshot은 2026-10-03 최초 수집 snapshot의 재현·audit 무결성 범위다. 이후 intake.json·candidate README·schedule.json 및 이 README가 수정되어 현재 repo 루트에서 당시 checksum 일부는 불일치한다. 최종 v3.1.21 전체 파일의 무결성 기준은 releases/v3.1.21/SHA256SUMS다. 이 생성기는 최종 WBS/Baseline/Ticket Pack 전체를 재생성하는 생성기가 아니다. 당시 snapshot/체크섬 자체는 소급 변경하지 않는다.

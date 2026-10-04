@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "content_head": "4acd5a9af69ed7dcaa3cfc934ba8e4bd05b7c0d8",
+  "content_merge": "bb3cd4f44932e932984beaba7f279bd4b7321c0b",
+  "workbook_changed_cells": [
+    [
+      "Executive Summary",
+      "A1"
+    ],
+    [
+      "Executive Summary",
+      "B5"
+    ],
+    [
+      "Executive Summary",
+      "B27"
+    ],
+    [
+      "Executive Summary",
+      "C27"
+    ],
+    [
+      "WBS",
+      "A1"
+    ],
+    [
+      "WBS",
+      "D2"
+    ],
+    [
+      "Phase 1 Gantt",
+      "A1"
+    ],
+    [
+      "Phase 2 Gantt",
+      "A1"
+    ],
+    [
+      "Milestones & Decisions",
+      "A1"
+    ],
+    [
+      "Risks & Assumptions",
+      "A1"
+    ],
+    [
+      "Sources & Change Log",
+      "A1"
+    ],
+    [
+      "Sources & Change Log",
+      "C4"
+    ],
+    [
+      "Sources & Change Log",
+      "C34"
+    ],
+    [
+      "Team Calendar",
+      "A1"
+    ]
+  ],
+  "workbook_formulas_and_source_values": "UNCHANGED",
+  "workbook_formula_errors": 0,
+  "runtime": "NOT_RUN",
+  "artifact_engine_exit": "1 after successful output, independently verified",
+  "native_excel": "NOT_RUN"
+}

@@ -1,6 +1,6 @@
 # On-Premises / Hybrid FDS Implementation Baseline v3.1.21
 
-Status: CANDIDATE / CONTENT PREPARED / NOT RELEASED. Current published canonical: docs-v3.1.20.
+Status: RELEASED after reviewed finalization merge. Version: docs-v3.1.21. Actual publication: Release API / Assets verification.
 기준일: 2026-10-03 KST. 사용자 요청에 따라 현 시점 계획·테스트 전략·실제 잔여를 동기화한다. 이 문서 발행은 P1 Close·Architecture Freeze·운영 Runtime 인수를 대신하지 않는다.
 
 ## 1. 이번 버전의 권위와 변경
@@ -1247,6 +1247,8 @@ v19 추가/구체화: IF-07의 관리 Source/identity는 .10/32 + svc_ansible이
 ---
 
 # 16. Project Status Register — 2026-09-17 20:28 KST
+
+> 역사 기록: 아래는 v3.1.20 당시 표다. v3.1.21의 현행 상태·일정·담당 기준은 이 문서 앞부분 §5 Current Record register다.
 
 전체 67건 / 일정관리 58건 / 역사적 종결 9건 / Milestone 67/67건. 상태 집계: Done 18, In Progress 11, To Do 38.
 

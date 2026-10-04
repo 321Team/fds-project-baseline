@@ -1,6 +1,6 @@
 # FDS v3.1.21 Canonical Ticket Update Pack
 
-CANDIDATE / NOT RELEASED. 78개 전체 Record를 동기화했다. 현재 Issue 속성·lifecycle·AC와 최신 disposition을 함께 보존한다. 원문에 없는 값을 추정하지 않는다. Runtime 완료를 새로 선언하지 않는다. 세부 Description은 `tickets/v3.1.21/descriptions/`, byte 원문은 audit snapshot.zip에 있다.
+RELEASED after reviewed finalization merge. Description의 CANDIDATE 표기는 보존된 수집 시점 메타데이터다. 78개 전체 Record를 동기화했다. 현재 Issue 속성·lifecycle·AC와 최신 disposition을 함께 보존한다. 원문에 없는 값을 추정하지 않는다. Runtime 완료를 새로 선언하지 않는다. 세부 Description은 `tickets/v3.1.21/descriptions/`, byte 원문은 audit snapshot.zip에 있다.
 
 ## DEC-P1-FDS-01 — #4
 

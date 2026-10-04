@@ -1,35 +1,27 @@
 # Current Canonical Release
 
-이 문서는 최종화 PR 승인·병합 후 적용할 메타데이터다. GitHub 실제 게시 여부는 아래 Release 링크/API를 기준으로 확인한다.
+최종화 PR 병합 후 적용하는 정본 메타데이터다. RELEASED는 승인 내용·최종화 병합·체크섬 기준이며 실제 GitHub 게시 완료 여부는 Release API와 Asset 검증 기록으로 확인한다.
 
 | Field | Value |
 |---|---|
-| Repository status | ACTIVE / CANONICAL |
-| Canonical document version | v3.1.20 / RELEASED after finalization merge |
-| History path | `releases/v3.1.20/` |
-| Approved content HEAD | `9fa13f8e99da43d668a4ed38218e69ab55b6db75` |
-| Content merge | `336446500ef9a71c4796e6cfc8bc4db18daceb09` |
-| Reviewer | 이재환 (`supreme33-kr`), REVIEW_AUTHORITY_POLICY상 문서/최종화 전용 PR — Lead 검토·결정, APPROVED 3회 |
-| Content approval (KST) | 2026-09-23 02:15:33 +09:00 |
-| Content merge (KST) | 2026-09-23 02:18:11 +09:00 |
-| Canonical release tag | `docs-v3.1.20` — finalization merge commit |
-| GitHub publication | Verified via Release API — `published_at` 2026-09-22T17:37:13Z |
-| Published timestamp | 2026-09-23 02:37:13 +09:00 (Release API `published_at`) |
+| Canonical document version | v3.1.21 / RELEASED after finalization merge |
+| Source snapshot | 2026-10-03 KST / 78 Issue records |
+| Approved content HEAD | `4acd5a9af69ed7dcaa3cfc934ba8e4bd05b7c0d8` |
+| Content merge | `bb3cd4f44932e932984beaba7f279bd4b7321c0b` / PR112 |
+| Reviewer | 이하영 (`hayeounglee`), exact HEAD APPROVED; reviewed scope stated in review |
+| Content approval (KST) | 2026-10-04 09:36:58 +09:00 |
+| Content merge (KST) | 2026-10-04 13:43:03 +09:00 |
+| Finalization authority | 정본 Lead 이권욱; 사용자 배포 지시 / 문서 전용 최종화 |
+| Canonical release tag | `docs-v3.1.21` — finalization merge commit, resolved from Tag API |
+| GitHub publication | Not pre-asserted; Release API published_at and four Asset digests are authoritative |
 
-## Publication evidence
+- [독립 리뷰](https://github.com/321Team/fds-project-baseline/pull/112#pullrequestreview-5403611452)
+- [v3.1.21 Release](https://github.com/321Team/fds-project-baseline/releases/tag/docs-v3.1.21)
+- [Release API](https://api.github.com/repos/321Team/fds-project-baseline/releases/tags/docs-v3.1.21)
+- [최종화 기록](releases/v3.1.21/FDS_Release_Finalization_Record_v3.1.21.md)
 
-- [v20 Release](https://github.com/321Team/fds-project-baseline/releases/tag/docs-v3.1.20) / [Release API](https://api.github.com/repos/321Team/fds-project-baseline/releases/tags/docs-v3.1.20).
-- [PR #87](https://github.com/321Team/fds-project-baseline/pull/87) / [Content merge](https://github.com/321Team/fds-project-baseline/commit/336446500ef9a71c4796e6cfc8bc4db18daceb09).
-- WBS/Gantt 배포 통제(§2.1) 5곳 전부 확인: 저장소 원본·Manifest·`SHA256SUMS`·ZIP 내부·GitHub Release Asset 모두 SHA-256 `e0b324161d07b0d46db93065d9c3334c36459d0d84b2b7c4e81ff6799e210479` 동일. Release Asset은 GitHub이 업로드 시점에 계산해 API로 보고하는 `digest` 필드로 대조했다(리포지토리 비공개로 인해 비인증 재다운로드가 차단되어, 로컬 재다운로드 방식 대신 사용).
-- Distribution ZIP(`FDS_v3.1.20_Canonical_Baseline_Release_Package.zip`) SHA-256 `9a1044d5c84273ca54ecdf577395c1c45d4813b18a26a1192e68dac4305230d4` — 로컬 생성 sidecar와 GitHub Release Asset digest 일치 확인.
-- `git tag docs-v3.1.20`와 GitHub Release 생성·Asset 4종 업로드는 이 세션의 git/GitHub 도구 권한 밖(HTTP 403, Release 쓰기 API 미제공)이라 정본 Lead가 GitHub 웹 UI에서 직접 수행했다.
+P1 Close·Architecture Freeze·Stage-A·D21 raw 잔여와 계획일은 수집 시점 판정을 유지한다. 이 발행은 Runtime·AC·티켓 종결을 부여하지 않는다. 보존된 audit/Description/source 안의 CANDIDATE·미발행 문구는 당시 수집 기록이며 현재 버전 상태는 이 문서와 Release 메타데이터를 따른다.
 
-## Last verified publication at finalization preparation
+## Preserved publication history
 
-v3.1.19 was published on **2026-09-18 09:20:13 KST**, tag `docs-v3.1.19`, target `966fc5365874b1d259a9810fc876b57c3bfa0e08`, four Assets. [Release](https://github.com/321Team/fds-project-baseline/releases/tag/docs-v3.1.19).
-
-v3.1.20 is now the operational publication; v3.1.19 becomes the previous preserved release. Its Tag/Release/Assets are unmodified and remain accessible at the link above.
-
-## Scope
-
-RELEASED in document headings means approved content plus reviewed finalization on main and matching checksums. It does not imply that GitHub Publish, operational Runtime, AC or Gate acceptance has occurred. v3.1.20 carries forward Baseline/WBS/Ticket Pack with real edits limited to governance/CI fixes (PR #82/#86/#88/#89) and the Phase 2 schedule replan (Lead decision, 2026-09-22); Architecture is unchanged from v3.1.19 (no revision reason this cycle, §2 item 7 conditional requirement). Snapshot-time candidate wording in retained source/Description/audit inputs remains historical. Planning dates remain adjustable targets.
+v3.1.20 Release는 2026-09-23 02:37:13 KST 발행됐다. `docs-v3.1.20`은 최종화 병합이 아닌 내용 병합 `336446500ef9a71c4796e6cfc8bc4db18daceb09`를 가리킨다. 과거 Tag/Asset/정본 바이트는 변경하지 않는다. v3.1.21이 실제 게시되기 전까지 마지막 게시 버전은 v3.1.20이다.

@@ -8,7 +8,7 @@ Private canonical repository for the FDS hybrid cloud project's approved baselin
 
 321Team은 [코오롱 베니트] 하이브리드 클라우드 컨테이너 플랫폼 설계 및 구현 9기 과정 팀이다. 대상 서비스는 On-prem 가상화 + Kubernetes 기반 하이브리드 컨테이너 플랫폼 위의 FDS(`transaction-api`, `fds-engine`)이다.
 
-현재 발행 문서 정본은 **v3.1.20**이며 `CURRENT.md`와 태그 `docs-v3.1.20`을 우선한다. `main` HEAD가 태그보다 앞설 수 있으며, 문서 인용은 태그/Release를 기준으로 한다.
+최종화된 문서 정본은 **v3.1.21**이며 `CURRENT.md`와 태그 `docs-v3.1.21`을 우선한다. 실제 게시 완료는 Release 페이지/API와 Asset 검증 기록으로 확인한다. `main` HEAD가 태그보다 앞설 수 있으며, 문서 인용은 태그/Release를 기준으로 한다.
 
 > v3.1.20 태그 주의: `docs-v3.1.20`은 최종화 병합이 아니라 내용 병합 `3364465`(PR #87)를 가리킨다. 그래서 태그 시점의 `CURRENT.md`에는 v3.1.19가 표시된다. v3.1.20 발행 메타데이터는 최종화 `9f57e69`(PR #91) 이후 main의 `CURRENT.md`를 기준으로 한다. 발행 후 정정 사항은 [v3.1.20 발행 후 정정 기록](audit/canonical-followup-20260923/README.md)을 따른다.
 
@@ -64,7 +64,7 @@ Private canonical repository for the FDS hybrid cloud project's approved baselin
 | `web/` | Static distribution snapshot; not live Runtime evidence |
 | `releases/` | Immutable version history, release notes, manifest, checksums and package |
 | `audit/` | Read-only integrity and consistency audit results |
-| `retrospectives/` | 팀 회고·강사 피드백 기록. 정본 체크섬 대상 편입은 차기 후보(v3.1.21)에서 결정 |
+| `retrospectives/` | 팀 회고·강사 피드백 기록. v3.1.21 Manifest/체크섬에 참고 이력으로 편입; AC 자동 승격 없음 |
 | `governance/` | Release and document-control rules |
 | `scripts/` | Local and CI integrity verification |
 
@@ -121,7 +121,7 @@ README·정책 보완은 PR #69의 승인·내용 병합에 포함됐다. 최종
 
 | 버전 | Tag | 핵심 기록 |
 |---|---|---|
-| v3.1.20 (현재) | `docs-v3.1.20` → `3364465` (내용 병합 PR #87; 최종화 PR #91 `9f57e69`는 태그 이후) | [Release 디렉터리](releases/v3.1.20/), [Release Notes](releases/v3.1.20/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.20.md), [Manifest](releases/v3.1.20/FDS_Document_Distribution_Manifest_v3.1.20.md), [무결성 감사](audit/FDS_Canonical_Integrity_Audit_v3.1.20.md), [발행 후 정정 기록](audit/canonical-followup-20260923/README.md) |
+| v3.1.20 (이전 발행) | `docs-v3.1.20` → `3364465` (내용 병합 PR #87; 최종화 PR #91 `9f57e69`는 태그 이후) | [Release 디렉터리](releases/v3.1.20/), [Release Notes](releases/v3.1.20/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.20.md), [Manifest](releases/v3.1.20/FDS_Document_Distribution_Manifest_v3.1.20.md), [무결성 감사](audit/FDS_Canonical_Integrity_Audit_v3.1.20.md), [발행 후 정정 기록](audit/canonical-followup-20260923/README.md) |
 | v3.1.19 | `docs-v3.1.19` → `966fc53` (최종화 PR #79) | [최종화 기록](releases/v3.1.19/FDS_Release_Finalization_Record_v3.1.19.md), [Release Notes](releases/v3.1.19/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.19.md) |
 | v3.1.18 | `docs-v3.1.18` → `72599ae` | [최종화 기록](releases/v3.1.18/FDS_Release_Finalization_Record_v3.1.18.md). PR #69 승인 HEAD `04c1ca46dcf82f814d350b4d49539e3ba4d6a9b4`, 내용 병합 `02be2150f7662319a3d796cdcb99f6d26aec5472` |
 | v3.1.17 | `docs-v3.1.17` → `2d93395` | [Release Notes](releases/v3.1.17/FDS_Project_Implementation_Baseline_Release_Notes_v3.1.17.md) |
