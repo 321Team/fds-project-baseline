@@ -232,3 +232,30 @@ Cloud10.20.110.10의 lookup이 default254를 사용하고 별도10.20/16 route�
 - 이후 필요한 범위만 해당 중계 장비의 FORWARD/NAT 정책과 source 보존 시험에 연결. 기존 DNS query 허용과 Runner resolver 변경은 이 경로/정책 확인 후 검토한다.
 
 현재: 양단 LOCAL_RUNTIME_CAPTURE=PASS / RECEIVED_SHA256=PASS / TRANSIT_IDENTITY=PENDING / END_TO_END_NETWORK_ACCEPTANCE=NOT_RUN / FREEZE=HOLD. 설정·역할·일정·AC 변경 없음.
+
+
+## 13. mgmt-gw identity 및 runtime FORWARD/NAT 대조 — 2026-10-04
+AI 사용: CODEX_ASSISTED. 앞선 사용자 콘솔과 후속 active-zones/nft ruleset 첨부를 대조했다. §11~12의 TRANSIT_IDENTITY=PENDING은 이번 관측으로 해소한다.
+- mgmt-gw01: ens224=10.250.10.1/24 (management), ens160=10.1.93.58/24 (physical), ip_forward=1. vpn-gw01(.51)과 별도 장비다.
+- 콘솔 main route: 두 연결망과 default via10.1.93.254 ens160. mgmt-gw의 Cloud 전용 route는 이 출력에 없으며 vpn-gw51 경유 Cloud 전달이 확인된 것은 아니다. 정책 라우팅/XFRM 전체를 확인한 결과로 확대하지 않는다.
+- 후속 첨부 01-1-.txt: 29886bytes, 수신 바이트 SHA256 `e781aaffefc571e4410e25399fc080e3f827de9f780fb491b9e35b25ceb2f925`. 독립 서버 checksum/명령별 RC/수집 시각이 없는 사용자 콘솔 전사본이다. 최초 sudo -n은 실패, 이후 사용자가 root 세션에서 얻은 출력으로 분석한다. 원본 재작성·evidence 편입 없음.
+- runtime 규칙만 수신했으며 permanent 설정과의 일치·재부팅 유지 여부는 미확인이다.
+
+| 새 flow (Runner10.250.10.20, ens224→ens160) | 제공 규칙 평가 |
+|---|---|
+| DNS10.1.93.52/53 TCP·UDP53 | mgmt-to-physical allow handles490–493. 목적지는 내부 set에 포함되어 masquerade336과 불일치 |
+| Harbor10.1.93.54 TCP443 | allow494. 목적지는 내부 set에 포함되어 masquerade336과 불일치 |
+| Cloud10.20.0.0/16 TCP443 | 내부 set에 없음. 외부 목적지 허용487 및 masquerade336 조건에 해당 |
+| Cloud TCP80/UDP123 | 같은 외부 목적지 조건으로488/486 허용 및336 NAT 대상 |
+| vpn-gw10.1.93.51 SSH/ICMP | Runner source의 명시적 신규 flow 허용을 수신 규칙에서 찾지 못함. 이를 Cloud transit 시험의 필수 성공조건으로 삼지 않음 |
+
+filter_FORWARD는 established/related27을 먼저 허용하고, ens224→ens160은 policy519의 허용 목록 뒤 drop440을 적용한다. 정상 세션 reply와 Cloud에서 시작하는 신규 flow를 구분한다. NAT 경로는520→395→nat_POST_physical_allow336이다.
+fds-internal-nets에는10.1.93/24,10.250.10/24,10.250.40/24,10.250.50/24만 있다. 따라서 위 경로의 신규 Cloud HTTPS는 현재 규칙상 source 보존 계약과 충돌한다. 이는 제공 runtime ruleset의 정적 평가이며 실제 패킷의 전달·SNAT·DNS 성공을 관측한 결과가 아니다.
+
+### 변경안과 다음 시험
+1. Cloud 경로는 exact route/next hop, Runner /32 관리 selector, 좁은 목적지·port 허용, no-inner-NAT 및 반환을 하나의 별도 변경안으로 검토한다. 즉시 route 추가·방화벽 적용 없음.
+2. Cloud 대역을 내부 set에 넣는 작업만 단독 수행하지 않는다. 이 set은 NAT와 외부 허용 규칙이 공유한다. 단독 추가하면 기존 .10/.20/.30의 해당 Cloud 외부 허용도 사라져 명시적 예외 없는 새 flow는 drop440으로 갈 수 있다. 적용 전 permanent/source 정합성 및 다른 관리 단말 영향·복구를 확인해야 한다.
+3. 현재 mgmt-gw의 DNS transit 허용을 확보했으므로 Runner에서 DNS52/53 각각 harbor.fds.internal A를 UDP/TCP로 제한 질의한다. 이는 DNS 호스트의 실제 방화벽/BIND ACL·응답을 좁히는 진단이다. 응답만으로 중계 source 보존을 입증하지 않으며 서버 관측과 별도 연결한다. dig가 없으면 설치 없이 멈춘다.
+4. Runner resolver8.8.8.8 변경은 두 DNS의 실제 응답과 필요한 query/recursion 권한 확인 후 검토한다.
+
+TRANSIT_IDENTITY=OBSERVED / FORWARD_NAT_RULE_REVIEW=RECORDED / END_TO_END_NETWORK_ACCEPTANCE=NOT_RUN / EVIDENCE_REVIEW=PENDING / FREEZE=HOLD. D22 최종 수용·설정 적용·AC 변경 없음.
