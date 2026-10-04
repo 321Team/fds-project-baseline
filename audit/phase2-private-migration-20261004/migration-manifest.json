@@ -1,0 +1,152 @@
+{
+  "source_commit": "9ff3b32263ae1305fbd3a18781e633173a153452",
+  "baseline_parent": "8e870c4c551506afef816ef19b94b381994c6386",
+  "files": [
+    {
+      "source_path": "phase2/README.md",
+      "destination_path": "phase2/README.md",
+      "source_blob_sha1": "e634735424fe1432fa30c6753fbe8a3d02791f12",
+      "sha256": "e87d49d1dc964dd8fd75c60f674e90fd9a06ffe43266ab1fa562387e9b5fc558",
+      "bytes": 20207
+    },
+    {
+      "source_path": "phase2/inputs/harbor-additional-trusted-ca.candidate.json",
+      "destination_path": "phase2/inputs/harbor-additional-trusted-ca.candidate.json",
+      "source_blob_sha1": "5a1af46767ccec9fa98ba704d26870ff8b80d35a",
+      "sha256": "a77e20fae231bc6178b0a5765ded5b1f4b3608190297339d337eb7a3975a03de",
+      "bytes": 2068
+    },
+    {
+      "source_path": "phase2/reviews/20261003-design-ritp-deep-review.md",
+      "destination_path": "phase2/reviews/20261003-design-ritp-deep-review.md",
+      "source_blob_sha1": "beeb281a3a38d8c2b112144f06041173d202466f",
+      "sha256": "0fd71ab8946073b804a3001becdb85a678644011bda4b7d593f5c938e8c546b1",
+      "bytes": 22790
+    },
+    {
+      "source_path": "phase2/reviews/20261003-resource-fit-recommended-design.md",
+      "destination_path": "phase2/reviews/20261003-resource-fit-recommended-design.md",
+      "source_blob_sha1": "a436013c3d3777a29e41db83df76aaa02e6c85e3",
+      "sha256": "655fed213d9b8b58b9854c39989ba0f16458a0691fea5bd45231aab1c57587da",
+      "bytes": 42163
+    },
+    {
+      "source_path": "phase2/reviews/20261003-unresolved-design-register.md",
+      "destination_path": "phase2/reviews/20261003-unresolved-design-register.md",
+      "source_blob_sha1": "b416b13451b38953c117e7cb11eebdbf07567940",
+      "sha256": "bd757e35882904fd49a272a16ace7621c91dc9e9179779cc25a734e29bf2217b",
+      "bytes": 9730
+    },
+    {
+      "source_path": "phase2/reviews/20261004-harbor-d22-input-contract.md",
+      "destination_path": "phase2/reviews/20261004-harbor-d22-input-contract.md",
+      "source_blob_sha1": "726a06cb1bf911e6cccbb651db462b14bef5c878",
+      "sha256": "af99626f11bed4fef4fa3960e100ee4a1749028d1c02a0155304750d4d6bd5b4",
+      "bytes": 26098
+    },
+    {
+      "source_path": "phase2/reviews/20261004-offline-readiness-verification.md",
+      "destination_path": "phase2/reviews/20261004-offline-readiness-verification.md",
+      "source_blob_sha1": "98dd5f02dd48ea560283adcec09fd170f691d019",
+      "sha256": "cefdded9047db500b1856f4cdc7586d999ccc162c6d2ad4c136ee61183c2f148",
+      "bytes": 5116
+    },
+    {
+      "source_path": "phase2/reviews/20261004-private-management-bidirectional-dns-contract.md",
+      "destination_path": "phase2/reviews/20261004-private-management-bidirectional-dns-contract.md",
+      "source_blob_sha1": "7f8b0f675d41fe0daa14153d09a75b092b6d28e4",
+      "sha256": "e083089c6d767ed152ede93e1507bc1a39576a15518e3c709ff6e9db6efb432c",
+      "bytes": 15011
+    },
+    {
+      "source_path": "phase2/reviews/20261004-source-reconciliation-sec-decision-candidate.md",
+      "destination_path": "phase2/reviews/20261004-source-reconciliation-sec-decision-candidate.md",
+      "source_blob_sha1": "612d239e2076d7c7e996a0ced1150684ba4b054d",
+      "sha256": "310b097e9cf6a2e624a0023d1594d5dd650e75f7da79d6fbd1ebcb89134ece6f",
+      "bytes": 15122
+    },
+    {
+      "source_path": "phase2/runbooks/20261003-gwonuk-console-readiness.md",
+      "destination_path": "phase2/runbooks/20261003-gwonuk-console-readiness.md",
+      "source_blob_sha1": "05cad12df303488dbcf4556613a04db8ec6ee465",
+      "sha256": "0517631db9652217996fbda2ba17eae1e436d291ae1419c28ba249c09a282c0a",
+      "bytes": 10274
+    },
+    {
+      "source_path": "phase2/runbooks/20261003-readiness-evidence-capture.md",
+      "destination_path": "phase2/runbooks/20261003-readiness-evidence-capture.md",
+      "source_blob_sha1": "a49debc1391f39badba2a7825ca17e5ef9b6613e",
+      "sha256": "597d1af59467cf29344d253bdc58a825f590d02da34adbe5d36f54d1ef87444e",
+      "bytes": 10444
+    },
+    {
+      "source_path": "phase2/runbooks/20261003-rosa-prereq-readonly.md",
+      "destination_path": "phase2/runbooks/20261003-rosa-prereq-readonly.md",
+      "source_blob_sha1": "5f204989254dd82cb0866bb4d940e59b4937f1ae",
+      "sha256": "5aa27744e983b5142175b8184a14fb4f71cfbeda21279bd82f94a1c73f2db45a",
+      "bytes": 4986
+    },
+    {
+      "source_path": "phase2/runbooks/20261003-team-iam-readonly-bootstrap.md",
+      "destination_path": "phase2/runbooks/20261003-team-iam-readonly-bootstrap.md",
+      "source_blob_sha1": "d0421e38249e3d2fe6e40c4571e370c35b0ccfeb",
+      "sha256": "1a9cbc218e4a3dea03ea08f6d88ad1f0cfe3882bd2695a3613a6c78af200fa01",
+      "bytes": 22756
+    },
+    {
+      "source_path": "phase2/runbooks/20261004-harbor-consumer-reference-readonly.md",
+      "destination_path": "phase2/runbooks/20261004-harbor-consumer-reference-readonly.md",
+      "source_blob_sha1": "c5ce692e1d1e3f3b56c8e6d6dd13a8b6057afeef",
+      "sha256": "83ae1d2b277e2bba9eb45c44823da198d526697a8fb34f085d396f92cebfc328",
+      "bytes": 7259
+    },
+    {
+      "source_path": "phase2/runbooks/20261004-harbor-d22-readonly-intake.md",
+      "destination_path": "phase2/runbooks/20261004-harbor-d22-readonly-intake.md",
+      "source_blob_sha1": "015d405e1215c35c25a2db09e928edaae1f95d6a",
+      "sha256": "44ad75028ca95d15bc94e10060b7cb3770bb37a5de47abdb1e76ffcc1791ab54",
+      "bytes": 12530
+    },
+    {
+      "source_path": "phase2/runbooks/20261004-harbor-robot-readonly.md",
+      "destination_path": "phase2/runbooks/20261004-harbor-robot-readonly.md",
+      "source_blob_sha1": "f4491404ad185cc2c4c30bc363e5ce21b146122d",
+      "sha256": "14ad22e10ebba342c258b4d44d6aadab5813c41536c42c549fe7ee28d2ccc165",
+      "bytes": 3171
+    },
+    {
+      "source_path": "phase2/runbooks/harbor-robot-readonly.py",
+      "destination_path": "phase2/runbooks/harbor-robot-readonly.py",
+      "source_blob_sha1": "57869b63fc1bbd16318ba9eefe3df3599a6ddbed",
+      "sha256": "62c3c8c806c1426f4a369028dad94040c4a444d08d1fcde0d853be0bedf37c42",
+      "bytes": 6939
+    },
+    {
+      "source_path": "phase2/runbooks/phase2-readiness-capture.py",
+      "destination_path": "phase2/runbooks/phase2-readiness-capture.py",
+      "source_blob_sha1": "21548b5f3432ea3606aff44b462d955b6eb62c9e",
+      "sha256": "c6856365622a55786a08ef24a32baf58661ffe0d4050b587980a769355628874",
+      "bytes": 6950
+    },
+    {
+      "source_path": "phase2/runbooks/test_harbor_robot_readonly.py",
+      "destination_path": "phase2/runbooks/test_harbor_robot_readonly.py",
+      "source_blob_sha1": "625a6b5ffcd80f0ac272e6fc616ac42cb1b560a5",
+      "sha256": "53ea0f781e0d81e0ca6274b033464609baaca7dbd20ac5e1cf07c8883839c863",
+      "bytes": 2927
+    },
+    {
+      "source_path": "phase2/runbooks/test_phase2_readiness_capture.py",
+      "destination_path": "phase2/runbooks/test_phase2_readiness_capture.py",
+      "source_blob_sha1": "ea26294d0143f4bf01368b1ce3bda09cead6b7f2",
+      "sha256": "6f9e659f81fb5df9eec81fe7968d0fc3b7ca620a22eb2ee5ce16c84deb9c4a13",
+      "bytes": 4668
+    }
+  ],
+  "broken_relative_links": [],
+  "pattern_findings": [],
+  "scan_units": 83,
+  "history_commits": 42,
+  "comments": 20,
+  "limits": "Pattern scan only; not proof of absence of arbitrary passwords or opaque secrets. Commit patch coverage may omit large diffs; clones/caches not checked."
+}
