@@ -57,3 +57,23 @@ rotation 전에는 각 consumer 교체순서, 이전 자격 즉시 무효화 여
 2026-10-04 18:30 이후 [D22 입력1.7](20261004-harbor-d22-input-contract.md)에서 current infra-cicd main Push adapter 미구현과 IF09 authfile 격리 미확정을 확인했다.
 현재 파일 존재 확인을 반복하거나 운영 credential 교체로 진행하지 않는다. 다음은 기존 P1 담당 구현 경로에서 명시적 authfile/cleanup 격리 보완 및 독립 리뷰를 연결하는 것이다. P2는 해당 source/runtime handoff를 소비하며 타 세션의 코드 변경·시험을 중복하지 않는다.
 비용 입력 대기와 별개로 D22 논리 결정안·platform 지원/capacity·APP approved digest 입력 연결은 계속 가능하다. 이 문서는 신규 권한/실행창/승인을 부여하지 않는다.
+
+
+## 7. P1 진행 중 APP 입력 소비와 검증 준비 — 2026-10-04 후속
+[APP Lead 최신 보고](https://github.com/321Team/fds-project-baseline/issues/43#issuecomment-5980505812)는 P1 진행 중 환경의 snapshot이다. P1/Phase2 인수나 최종 P2 이미지 승인을 의미하지 않는다. [resource-fit §10](20261003-resource-fit-recommended-design.md)과 [capacity 파생값](../inputs/20261004-app-capacity-derived.json)에 반영했으며 동일 자료 재수집을 요청하지 않는다.
+
+| 입력 | 현재 소비 가능 | 미확인 / P2 소비 조건 |
+|---|---|---|
+| current P1 image | transaction-api a7093136…, fds-engine5e2a081c…의 보고된 full digest | 최종 P2 build/scan/provenance/digest 승인과 별도. source↔live 미검증 |
+| 자원/rollout | 각3replica·250m/256Mi request, 25% surge/unavailable; 산술표 확보 | 실제 HCP 예산/N-1/종료 중첩·배치/PDB |
+| SA/보안 | transaction-api-sa/fds-engine-sa, token automount=false·제한 securityContext | fixed UID10001/GID999를 P2에서 그대로 허용한다고 가정하지 않음 |
+| service/probe | TA8000/metrics9091, engine8001/metrics9090, /livez·/readyz | engine grpc라는 이름과 HTTP 의미 대조; P2 edge/Route 선택은 별도 |
+| secret/storage | DATABASE_URL 참조 존재, 보고상 두 앱 PVC/volumes 없음 | 값/credential 수집 없음. P2 DB secret reference·trust·network 및 platform storage 별도 |
+| 배포 소스 | 현장 요약 및 repo 참고본 | 권위 portable base 미확보를 숨기지 않음. 현장 report를 그대로 deployable YAML로 생성하지 않음 |
+
+준비할 수 있는 기대값:
+- strict DNS→FQDN TLS→승인 P2 pull-only 인증→exact approved digest cold-pull 연결. 사전 캐시 hit를 cold-pull PASS로 표시하지 않는다.
+- 승인 SA/namespace와 제한 보안조건에서 arbitrary UID·읽기 전용 rootfs·필요 쓰기경로·probe·업무 동작을 검증. 미확인 쓰기경로를 임의 volume으로 해결하지 않는다.
+- 잘못된 CA/비승인 source·credential/권한 밖 push는 거부돼야 한다. 실제 negative 시험은 해당 환경/창의 승인 조건 후 수행.
+- 신규 rollout/pull 실패 시 이전 정상 workload/digest 보존, 자동 mirror·재빌드·tag fallback 없음.
+이번에는 시나리오/입력 경계만 작성했다. P1 Robot/Secret/CA/CI authfile/운영 이미지 변경·실제 pull·Pod 생성 없음. 기존 P1 생산·검토 세션의 결과를 소비하며 별도 중복 구현하지 않는다.

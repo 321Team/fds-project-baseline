@@ -1,0 +1,84 @@
+{
+  "status": "DERIVED_FROM_LEAD_REPORT_NOT_CAPACITY_APPROVAL",
+  "observed_at_kst": "2026-10-04T22:26:00+09:00",
+  "source_reference": "https://github.com/321Team/fds-project-baseline/issues/43#issuecomment-5980505812",
+  "input_class": "LEAD_REPORTED_SANITIZED_JSON",
+  "original_archive_received": false,
+  "original_archive_hash_recomputed": false,
+  "source_to_live_verified": false,
+  "scope": "Two reported application containers only; not a ROSA platform budget or total resource upper bound.",
+  "applications": [
+    {
+      "name": "fds-engine",
+      "replicas": 3,
+      "image": "10.1.93.54/fds/fds-engine@sha256:5e2a081cd51a957c3fad038b3eab07884c446ea3c2a814a905e3f41c24f67369",
+      "request_cpu_m": 250,
+      "request_memory_Mi": 256,
+      "limit_cpu_m": 500,
+      "limit_memory_Mi": 512,
+      "max_surge_pods": 1,
+      "max_unavailable_pods": 0
+    },
+    {
+      "name": "transaction-api",
+      "replicas": 3,
+      "image": "10.1.93.54/fds/transaction-api@sha256:a7093136d12640da00570c18ed278eacbb8e9ba3637c7d509571346eac45cc33",
+      "request_cpu_m": 250,
+      "request_memory_Mi": 256,
+      "limit_cpu_m": 500,
+      "limit_memory_Mi": 512,
+      "max_surge_pods": 1,
+      "max_unavailable_pods": 0
+    }
+  ],
+  "scenarios": {
+    "steady": {
+      "pods": 6,
+      "request_cpu_m": 1500,
+      "request_memory_Mi": 1536,
+      "limit_cpu_m": 3000,
+      "limit_memory_Mi": 3072
+    },
+    "transaction_api_only_rollout": {
+      "pods": 7,
+      "request_cpu_m": 1750,
+      "request_memory_Mi": 1792,
+      "limit_cpu_m": 3500,
+      "limit_memory_Mi": 3584
+    },
+    "fds_engine_only_rollout": {
+      "pods": 7,
+      "request_cpu_m": 1750,
+      "request_memory_Mi": 1792,
+      "limit_cpu_m": 3500,
+      "limit_memory_Mi": 3584
+    },
+    "simultaneous_rollout": {
+      "pods": 8,
+      "request_cpu_m": 2000,
+      "request_memory_Mi": 2048,
+      "limit_cpu_m": 4000,
+      "limit_memory_Mi": 4096
+    }
+  },
+  "remaining_inputs": {
+    "selected_hcp_version": null,
+    "selected_machine_type_support": null,
+    "rosa_worker_allocatable": null,
+    "rosa_platform_requests": null,
+    "per_node_daemonset_requests": null,
+    "termination_overlap_budget": null,
+    "pod_overhead": null,
+    "placement_and_pdb_contract": null,
+    "final_p2_image_digest_and_resources": null
+  },
+  "n_minus_one_verdict": "NOT_EVALUATED",
+  "runtime_verdict": "NOT_RUN",
+  "notes": [
+    "maxSurge percentage rounded up; maxUnavailable rounded down for each deployment.",
+    "Terminating Pods can consume extra resources beyond replicas+maxSurge.",
+    "P1 six-node allocatable and requests must not substitute for ROSA platform overhead.",
+    "No equal placement is assumed; supplied P1 spec has no affinity/topology spread.",
+    "Missing values are unknown, not zero."
+  ]
+}

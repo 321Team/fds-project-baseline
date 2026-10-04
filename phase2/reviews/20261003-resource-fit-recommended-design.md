@@ -247,3 +247,32 @@ D21 expected final: 8706 bytes / e5f754a3d66c6fe452605ff914a6294e87aa85bf6a345ec
 
 - [재환 exact-head 리뷰](https://github.com/321Team/fds-project-architecture/pull/8#pullrequestreview-5400010956), [하영 리뷰 의견](https://github.com/321Team/fds-project-architecture/pull/8#issuecomment-5968359308).
 - [HCP registry CA 및 rollout 공식](https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws/4/html/images/image-configuration-hcp), [DNS 쌍방향 endpoint 공식](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-choose-vpc.html), [Resolver 가격](https://aws.amazon.com/route53/pricing/).
+
+
+## 10. P1 진행 중 받은 APP 입력의 제한적 소비 — 2026-10-04 후속
+[APP Lead 22:26 보고](https://github.com/321Team/fds-project-baseline/issues/43#issuecomment-5980505812)의 sanitized JSON을 직접 읽어 계산했다. LEAD_REPORTED_INPUT이며 원본 archive 수신·hash 재계산·source↔live 검증 또는 P1 인수는 아니다. 앞선 live sizing 입력 대기는 이 보고의 확보 필드 범위에서 해소한다.
+기계 판독용 파생값: [capacity-app-input](../inputs/20261004-app-capacity-derived.json). 이 JSON은 배포 manifest가 아니다.
+
+### 앱 자원 산술
+두 Deployment 각각 replicas3, 컨테이너1개, requests250m/256Mi, limits500m/512Mi. maxSurge25%는 각1Pod, maxUnavailable25%는 각0Pod로 계산한다.
+| 시나리오 | 앱 Pod 수 | requests CPU / memory | limits CPU / memory |
+|---|---:|---|---|
+| 정상 replica 수 | 6 | 1.5 CPU / 1536Mi | 3 CPU / 3072Mi |
+| 한 앱만 rollout | 7 | 1.75 CPU / 1792Mi | 3.5 CPU / 3584Mi |
+| 두 앱 동시 rollout | 8 | 2 CPU / 2048Mi | 4 CPU / 4096Mi |
+
+이는 보고된 앱 컨테이너 소계다. [Kubernetes rounding](https://kubernetes.io/docs/tasks/run-application/update-deployment-rolling/)을 적용했다. [terminating Pod](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)는 종료 동안 추가 자원을 쓸 수 있으므로 8Pod/2CPU를 전체 피크 상한으로 삼지 않는다. sidecar/init·Pod overhead·platform/DaemonSet·추가 workload·종료 중첩은 별도다.
+
+### N-1 및 배치
+P1 6노드의 allocatable/현재 requests를 ROSA 3worker의 platform 예산으로 복사하지 않는다. 서로 다른 환경이다.
+surge를 포함한 앱 request + 플랫폼/DaemonSet + 명시적 여유가 잔존 노드 allocatable에 들어가는지 검토하고, 노드별 배치/Pod 수/taint·PDB·AZ/PVC 제약까지 확인해야 한다. 총합 비교만으로 N-1 통과 판정하지 않는다.
+보고에는 affinity/topologySpread/nodeSelector 및 zone label이 없고 worker03에는 앱 Pod가0개다. 3replicas라는 사실은 3노드/AZ 분산 증거가 아니다. P2 배치 후보 작성 시 이를 별도 해결하며 P1 spec을 변경하지 않는다.
+P1 앱 PVC 없음은 해당 두 앱 범위다. P2 monitoring/storage·플랫폼 PVC 요구가 없다는 의미가 아니다.
+
+### 이식성 입력
+- observed UID10001/GID999 고정이다. 기존 문서의 generic security 예시·사용자 memory 값으로 대체하지 않는다. selected HCP/SCC·namespace UID 조건과 이미지 파일권한/쓰기 경로를 대조해야 하며 arbitrary UID 동작은 미검증이다. [Red Hat 이미지 이식성 지침](https://developers.redhat.com/articles/2021/11/11/best-practices-building-images-pass-red-hat-container-certification)을 참고하되 특정 version 지원을 대신하지 않는다.
+- readOnlyRootFilesystem, non-root, RuntimeDefault, drop ALL, allowPrivilegeEscalation=false, SA token automount=false는 보고된 제한이다. 이를 피하려고 anyuid/privileged 또는 광범위 RBAC를 기본 해법으로 삼지 않는다.
+- fds-engine 8001 service 이름 grpc와 보고된 HTTP probe/호출을 구분한다. 이름만으로 gRPC임을 확정하거나 P1 port name을 즉시 변경하지 않는다.
+- 최종 P2 이미지의 자원·provenance·UID 호환성은 별도 handoff다. 현재 P1 digest를 자동 승인 P2 digest로 사용하지 않는다.
+
+CAPACITY_INPUT=PARTIAL_LEAD_REPORT / APP_ARITHMETIC=CHECKED / PLATFORM_BUDGET=PENDING / N_MINUS_ONE=NOT_EVALUATED / RUNTIME=NOT_RUN.

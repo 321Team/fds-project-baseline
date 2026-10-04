@@ -1,5 +1,6 @@
 # Phase 2 사전 작업 및 PR137 리뷰 후속 — 2026-10-04
-AI usage: CODEX_ASSISTED. 조회 기준 2026-10-04 18:55~19:00 KST.
+AI usage: CODEX_ASSISTED.
+최신 작업 선별·착수 기록은 §8을 우선한다. §1~7은 앞선 시점의 이력이며 Phase 1 인수 완료를 의미하지 않는다. 조회 기준 2026-10-04 18:55~19:00 KST.
 입력 PR137 HEAD: `36093a8640d045dea887d0e3d5b6817574851d96`.
 현재 정본: CURRENT.md의 v3.1.21. 정본 발행과 P1 Close/Phase2 Start/Freeze는 별도다.
 이번 범위: 기존 준비 코드·문서의 리뷰 보완. 담당·일정·AC·Status·Decision·권한을 변경하지 않는다.
@@ -73,3 +74,42 @@ INDEPENDENT_REVIEW=PENDING / D22_FINAL=PENDING / ARCHITECTURE_FREEZE=HOLD / MERG
 - [#32 Close 계획](https://github.com/321Team/fds-project-baseline/issues/32#issuecomment-5793206233), [#33 실행모델](https://github.com/321Team/fds-project-baseline/issues/33#issuecomment-5912449502)
 - [#34 관리/DNS](https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-5976875946), [#35 준비검증](https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-5977270867), [#38 capacity](https://github.com/321Team/fds-project-baseline/issues/38#issuecomment-5977086566)
 - [#43 image handoff](https://github.com/321Team/fds-project-baseline/issues/43#issuecomment-5977008279), [D22 현재 패킷](20261004-d22-decision-and-input-packet.md)
+
+
+## 8. Phase 1 진행 중 수행할 Phase 2 사전 작업 — 2026-10-04 23:35 KST 요청 반영
+사용자 지시: Phase 1이 아직 인수 단계가 아님을 고려해 가능한 사전 작업부터 선별·착수한다. Phase 1 인수/Close를 가정하지 않는다. 기존 담당·일정·AC·P2 실행 진입조건은 유지한다.
+
+### 8.1 권장 순서와 이번 수행
+| 순서 | 지금 할 작업 | 이번 산출물/상태 | 이후 소비 조건 |
+|---|---|---|---|
+| 1 | 공용 환경 변경과 준비 작업 분리 | 관리/DNS 계약 §14에 DNS ACL, Runner resolver, Cloud route/NAT를 별도 변경으로 정리 완료 | P1 시험과 필요성·영향·비충돌 창 확인 후 해당 변경만 검토 |
+| 2 | 수신 APP live 입력을 capacity에 연결 | resource-fit §10 및 capacity 파생 JSON 작성·산술 대조 완료 | #38의 HCP platform/allocatable·배치 입력 결합 전 N-1 미판정 |
+| 3 | APP 이식성 차이와 D22 연결 | D22 패킷 §7에 UID/GID·포트·배치·digest 및 source 차이 기록 완료 | #43 기존 producer의 portable base/최종 이미지 handoff 소비 |
+| 4 | 후속 시험의 기대값·회귀 범위 고정 | 관리/DNS §14와 D22 §7에 검증·복구 조건 정리 완료 | 실제 적용/cluster 생성 후 승인 시험창에서 검증 |
+| 5 | 플랫폼·계정·비용 잔여 입력 소비 | 기존 collector/요청·cost JSON 재사용; 금액/지원값 미기입 유지 | 기존 담당자의 선택 version/account readback, 사용자10-06 비용 텍스트 |
+| 6 | 코드/설계 검토 잔여 연결 | PR137 최신 변경분과 migration-only 리뷰 범위 구분 | 새로운 기술 변경분만 독립 검토; 기존 동일 MOCK 반복하지 않음 |
+
+이 순서는 이권욱의 현재 사전 작업 순서이며 팀 공용 WBS/새 담당/기한 변경이 아니다. 1~4의 **준비 산출물 작성**을 완료한 것이며 실행·인수·독립 승인을 완료한 것은 아니다.
+
+### 8.2 현재 수행에서 제외하는 작업
+- 공용 DNS/BIND/ipset 수정·reload, Runner resolver/CA/authfile 변경.
+- mgmt-gw/vpn-gw의 route/NAT/FORWARD/selector 적용.
+- 기존 P1 Robot/Secret rotation, 실제 login/push/pull, 공용 K8s 배포/재시작·장애주입.
+- AWS/ROSA/Resolver/Relay 생성, IAM 권한 변경, Terraform apply.
+필요한 작성·정적 대조·기존 증적 소비는 계속한다. 읽기 전용이라도 인증 실행/대량 조회/네트워크 시험은 현재 필요한 입력인지 확인하며 이미 받은 자료를 재수집하지 않는다.
+
+### 8.3 P1과의 충돌 및 증적 재사용
+- [HBR 준비](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-5980927741): 다음 field precheck와 새 창 대기. 이번 P2 준비가 CA/Robot/registry endpoint를 변경하지 않는다.
+- [MON port-forward](https://github.com/321Team/fds-project-baseline/issues/17#issuecomment-5980965707)와 [.108 canary](https://github.com/321Team/fds-project-baseline/issues/17#issuecomment-5980971380): 기존 담당 세션에서 준비/검토 중. P2에서 새로 실행하거나 같은 코드를 중복 수정하지 않는다.
+- [E2E 변경영향표](https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-5980751335): 9/29 결과와 현재 배치/경로를 구분한다. 공용 정책 변경 시 영향표에 변경시점·정책 revision을 연결한다.
+- DNS 개별 증적 편입/완료와 Phase 1 전체 인수를 구분한다. 기존 결과를 전부 무효화하지 않으며 영향 있는 DNS/consumer/negative/recovery에만 재검증을 연결한다.
+- P1 전체 종료를 모든 P2 준비의 새 선행조건으로 만들지 않는다. 실제 공유 설정 변경은 P1에 지금 필요한 경우 해당 작업의 선행 변경으로, P2 전용이면 별도 비충돌 창으로 분리한다. Phase 2 Runtime 진입은 기존 #32/#33/#34 조건을 따른다.
+
+### 8.4 남은 입력 — 기존 요청 재등록 없음
+- #38: exact HCP version·type/AZ support, managed platform/DaemonSet/allocatable 예산 및 배치/PDB/복구 후보. 3×m5.xlarge는 기존 후보, 확정 구매/생성 사양 아님.
+- #35: 현재 계정 지원·linkage/role/명칭별 quota와 검토된 plan. 오래된 성공/실패를 현재 계정 상태로 승격하지 않는다.
+- #43: source↔live/provenance, 최종 승인 P2 digest, arbitrary UID와 제한된 보안 설정에서의 동일 이미지 동작. 22:26 보고의 동일 inventory 재수집 불필요.
+- #42: P2 principal/endpoint/trust 논리 선택 및 P1 공급망 handoff. 현장 P1 credential 시험은 기존 세션에서 진행.
+- 비용: cost-intake.pending.json 그대로 null. 10-06 사용자 텍스트를 받은 뒤 통화·기간·기준시각·잔여/teardown을 계산. 임의 추정 한도·0원 없음.
+
+현재: PREPARATION_DOCUMENTS=UPDATED / CAPACITY_ARITHMETIC=CHECKED / INDEPENDENT_REVIEW=PENDING / SHARED_RUNTIME_CHANGE=NOT_RUN / FREEZE=HOLD.

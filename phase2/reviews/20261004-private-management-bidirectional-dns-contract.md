@@ -259,3 +259,30 @@ fds-internal-nets에는10.1.93/24,10.250.10/24,10.250.40/24,10.250.50/24만 있�
 4. Runner resolver8.8.8.8 변경은 두 DNS의 실제 응답과 필요한 query/recursion 권한 확인 후 검토한다.
 
 TRANSIT_IDENTITY=OBSERVED / FORWARD_NAT_RULE_REVIEW=RECORDED / END_TO_END_NETWORK_ACCEPTANCE=NOT_RUN / EVIDENCE_REVIEW=PENDING / FREEZE=HOLD. D22 최종 수용·설정 적용·AC 변경 없음.
+
+
+## 14. DNS 진단 결과와 P1 진행 중 변경 분리 — 2026-10-04
+§13 이후 [Runner 질의](https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-5980791972), [DNS runtime](https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-5980821721), [permanent/BIND](https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-5980841348)를 수신했다.
+- Runner→DNS52/53 harbor.fds.internal A, UDP/TCP 총4회 모두 host unreachable / DIG_RC9. 실제 ICMP 발생 장비·수신 source를 packet으로 특정한 결과는 아니다.
+- 양 DNS 반환 lookup via10.1.93.58. runtime/permanent fds-dns-clients14개에는 Runner10.250.10.20 없음.
+- 양 DNS on-disk fds-known-clients는 loopback+기존14개 /32이며 Runner 없음. allow-query/allow-recursion/allow-query-cache 모두 이를 참조. BIND_CHECK_RC0은 검사 pipeline 성공이며 runtime loaded ACL 성공 아님.
+- 현재 범위에서 DNS host 허용 누락을 확인했다. 기존14개 정책이 잘못됐거나 P1 DNS 완료 증적이 무효라는 의미가 아니다. source 관측·최종 DNS 사용 성공은 잔여다.
+
+### 이전 권장안의 적용 경계 보완
+사용자가 Phase 1은 아직 인수 단계가 아님을 명시했다. DNS 개별 과거 검증 완료를 P1 전체 인수로 해석하지 않는다. 앞선 Runner 한 IP 추가는 후보이며 공용 환경 영향·작업창 검토 없이 적용하지 않는다.
+| 분리할 변경 | 정확 범위 후보 | 현재 처리 / 이후 검증 |
+|---|---|---|
+| A DNS 서버 허용 | Runner /32→DNS52/53 TCP/UDP53; BIND query/recursion/cache 필요 권한 명시 | 설계만. 적용 시 양 DNS UDP/TCP NOERROR+A10.1.93.54, 기존 허용/비허용·설정 재적재/복구 확인 |
+| B Runner resolver | 현8.8.8.8에서 승인 내부 resolver 사용 | A 검증 후 별도 판단. 실제 CI 외부/내부 이름·TLS 경로 영향, 기존 설정 원복 확인 |
+| C Cloud 관리 transport | exact next hop/Runner /32 selector/FORWARD/return/no-inner-NAT | Cloud 준비·변경결정과 별도 창. DNS 실패 해소 명목으로 NAT/route까지 묶어 적용하지 않음 |
+
+A에서 기존 ACL에 Runner를 한 줄 추가하면 세 권한이 함께 열리는 점을 검토한다. Harbor 권위 질의만 필요하면 query-only 대안과 비교하고, 일반/private cloud resolver 사용이 필요하면 recursion/cache를 명시적으로 포함한다. 이 후보의 판단을 이 문서가 대신하지 않는다.
+B는 적용하지 않으므로 현재 P1 CI resolver 환경은 이 작업으로 바뀌지 않는다. C의 내부 set 단독 확대에 따른 기존 외부 허용 변화는 §13 그대로다.
+
+### 실제 적용으로 넘어갈 때
+1. P1 남은 시험에 지금 필요한 변경인지 또는 P2 전용인지를 기존 담당/작업 기록으로 연결한다.
+2. exact source/최소 diff·기존 설정/복구 방법, 해당 권한 수용, 공유 시험과 비충돌 창을 기존 절차에서 확인한다.
+3. 영향 있는 DNS/consumer/negative/recovery만 추가 검증한다. 기존 원본은 변경 전 증적으로 보존하고 모든 P1 시험을 무조건 다시 수행하지 않는다.
+4. 시간/정책 revision/원본/검토를 연결한다. 이전9/29 E2E와10/4 APP 입력은 각 시점 결과이며 최신 정책 PASS를 대체하지 않는다.
+
+현재는 원본 읽기와 제한 질의·분석까지만 수행했다. DNS/Runner/route/NAT 설정 수정·reload·재시작은 없음. PREPARATION=CONTINUE / SHARED_CHANGE=NOT_RUN / DNS_USE=NOT_PASSED / FREEZE=HOLD.
