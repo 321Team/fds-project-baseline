@@ -22,4 +22,4 @@ AI usage: CODEX_ASSISTED. 이 기록은 비공개 baseline 전용이다.
 저장소 owner는 인증된 GitHub UI에서 폐쇄 PR의 작업 branch 삭제를 수행할 수 있다. 삭제 대상은 docs/p2-ritp-current-20261003 하나이며 main은 대상이 아니다.
 branch 삭제 후에도 과거 이력은 별도 잔여다. 전체 history rewrite는 source hash·review·협업자 clone 영향표와 exact 제거 범위 확인 후 별도 실행한다.
 민감정보 판정/지원 범위에 맞는 cache·PR ref 제거 필요성은 GitHub 공식 절차로 검토한다.
-이전 기록: [MIGRATION](../../../phase2/MIGRATION-20261004.md).
+이전 기록: [MIGRATION](../../phase2/MIGRATION-20261004.md).
