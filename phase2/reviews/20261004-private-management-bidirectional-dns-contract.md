@@ -203,3 +203,32 @@ Harbor 이전 pinned-FQDN TLS는 fixed-IP transport로 수행된 USER_READBACK�
 
 LOCAL_RUNTIME_CAPTURE=PASS / RECEIVED_SHA256=PASS / NETWORK_RUNTIME_ACCEPTANCE=NOT_RUN / EVIDENCE_REVIEW=PENDING / FREEZE=HOLD.
 기존 완료 DNS 시험, P1 CI credential 작업, 기존 요청 댓글을 반복하지 않는다.
+
+
+## 12. vpn-gw01 수신 및 Runner 양단 대조 — 2026-10-04 20:29:00 KST
+사용자 첨부 local-route.txt/SHA256SUMS와 앞선 GW 실행 화면 수신. host vpn-gw01, account server08, role vpn-gw.
+- 원본2717bytes, SHA256 `caa425988ae7b7b04ea7d7cbf1a232c93e5e79c178f5672ca2e2753173210d12` 직접 계산 및 sidecar 일치.
+- 수집기 hash `b63aeaefad988071b3b87872239759d0b9c6a62f60d1cc1619d0c7e9ab275414`는 Runner와 동일. 14 COMMAND/14 RC 모두0; 실행 화면 wrapper RC0.
+- 첨부 원본 보존, 이번 변경은 분석 문서만. Evidence 저장소 편입·독립 검토 미수행.
+
+| 항목 | Runner19:47:11 관측 | vpn-gw20:29:00 관측 |
+|---|---|---|
+| 로컬 IPv4 | ens16010.250.10.20/24 | ens16010.1.93.51/24 |
+| 기본 GW | 10.250.10.1 | 10.1.93.254 |
+| 상대편 route lookup | .51 via10.250.10.1 src10.250.10.20 | .20 via10.1.93.58 src10.1.93.51 |
+| Cloud Relay 설계IP lookup | 10.20.110.10 via10.250.10.1 | 10.20.110.10 via10.1.93.254 |
+| DNS 설정 | 8.8.8.8, search fds.internal | 10.1.93.52/53, search fds.internal |
+| IPv4 forwarding | 0 (단말 역할) | 1 (기능 활성 관측; firewall/실제 forward 인수 아님) |
+
+vpn-gw의 관리망 반환 route는 `10.250.10.0/24 via10.1.93.58 devens160`으로 현재 수집에서 확인됐다. 과거 DNS 두 서버의 반환 next hop과 같지만, .58의 장비 identity/정책 및 .1과의 관계는 여전히 미확인이다.
+local addresses에는 .1/.58이 없으므로 두 next hop을 vpn-gw01의 로컬 주소로 해석하지 않는다. 동일 dual-homed 중계 장비인지, 별개 next hop인지 확인해야 한다. route의 모양만으로 비대칭 장애·NAT·패킷 성공을 단정하지 않는다.
+
+Cloud10.20.110.10의 lookup이 default254를 사용하고 별도10.20/16 route가 이 출력에 없는 것은 관측 사실이다. 이번 수집은 XFRM policy/state·IPsec SA·방화벽을 조회하지 않았다. 따라서 route lookup만으로 policy-based VPN 미구성/터널 장애를 판정하거나 임의 정적 route 추가를 권고하지 않는다. 현재는 production VPN/관리 selector 인수 완료로 볼 증적이 없다.
+
+### 다음 단계 축소
+- Runner와 vpn-gw의 동일 로컬 수집은 완료했으므로 재실행하지 않는다.
+- 먼저 10.250.10.1 및10.1.93.58 소유 장비/VM·운영 계정을 확인한다. 소유 장비의 기존 권한으로 `hostname; ip -br -4 address; ip -4 route; cat /proc/sys/net/ipv4/ip_forward`를 조회하면 양쪽 주소·route·forwarding 입력을 좁힐 수 있다. 이 명령의 성공도 방화벽/NAT 부재를 증명하지 않는다.
+- 장비가 Linux가 아니면 위 명령을 실행하지 않고 장비 종류에 맞는 조회 경로를 사용한다. 장비 확인 전 임의 SSH 접속·스캔/권한 확대는 하지 않는다.
+- 이후 필요한 범위만 해당 중계 장비의 FORWARD/NAT 정책과 source 보존 시험에 연결. 기존 DNS query 허용과 Runner resolver 변경은 이 경로/정책 확인 후 검토한다.
+
+현재: 양단 LOCAL_RUNTIME_CAPTURE=PASS / RECEIVED_SHA256=PASS / TRANSIT_IDENTITY=PENDING / END_TO_END_NETWORK_ACCEPTANCE=NOT_RUN / FREEZE=HOLD. 설정·역할·일정·AC 변경 없음.
