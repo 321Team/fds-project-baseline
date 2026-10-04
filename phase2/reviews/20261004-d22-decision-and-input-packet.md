@@ -52,3 +52,8 @@ rotation 전에는 각 consumer 교체순서, 이전 자격 즉시 무효화 여
 기존 체계와 별개의 신규 승인 Gate/담당/기한을 만들지 않는다.
 
 연결: [미확정 register](20261003-unresolved-design-register.md), [관리/DNS 계약](20261004-private-management-bidirectional-dns-contract.md), [D22 입력](20261004-harbor-d22-input-contract.md).
+
+## 6. Runner source 대조 후 다음 작업 정정
+2026-10-04 18:30 이후 [D22 입력1.7](20261004-harbor-d22-input-contract.md)에서 current infra-cicd main Push adapter 미구현과 IF09 authfile 격리 미확정을 확인했다.
+현재 파일 존재 확인을 반복하거나 운영 credential 교체로 진행하지 않는다. 다음은 기존 P1 담당 구현 경로에서 명시적 authfile/cleanup 격리 보완 및 독립 리뷰를 연결하는 것이다. P2는 해당 source/runtime handoff를 소비하며 타 세션의 코드 변경·시험을 중복하지 않는다.
+비용 입력 대기와 별개로 D22 논리 결정안·platform 지원/capacity·APP approved digest 입력 연결은 계속 가능하다. 이 문서는 신규 권한/실행창/승인을 부여하지 않는다.
