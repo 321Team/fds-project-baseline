@@ -30,7 +30,9 @@ Phase 1에서 검증한 재현성·무결성·추적성 intent를 보존하고, 
 2026-10-03 후속 심층리뷰: [권장 설계 R/I/T/P 대조·수정·동결 Gate](reviews/20261003-design-ritp-deep-review.md)가 구체적인 권장안 검토를 보완한다. 판정은 DESIGN_DIRECTION=CONDITIONALLY_SUITABLE / DESIGN_REVIEW=CHANGES_REQUIRED / 전체 Freeze HOLD이다.
 대화의 단일 MachinePool 3-AZ 권고는 정정: HCP pool은 단일 AZ/subnet이며 AZ별 공통 template pool을 후보로 검토한다. 단일 NAT는 별도 SPOF/지원·보안·비용 조건부 후보이다. PrivateLink 추가 SG, ingress/source 보존, 기존 Harbor 차단, managed Secret/복구·관측 adapter mapping을 닫기 전 신규값을 CONFIRMED로 소비하지 않는다.
 권장 순서: HCP를 우선 비교하되 Private API/Private Ingress, 실제 지원 version, worker capacity, egress, private access DNS, Cost-to-Complete를 묶어서 판단한다.
-3 MachinePool×1, m5.2xlarge, root 300 GiB, Pod/Service CIDR는 이 문서에서 확정하지 않는다.
+현행 sizing 후보의 단일 참조는 [resource-fit 권장안 §3](reviews/20261003-resource-fit-recommended-design.md)이다: AZ별 1개 pool·worker 1대씩 총 3×m5.xlarge, worker root 300 GiB/대. 기존 m5.2xlarge 언급은 과거 비교값이며 현행 후보가 아니다. 이 후보도 supported version/type·allocatable/platform·surge/N-1·비용 검토와 authority 수용 전 확정하지 않는다. Pod/Service CIDR 역시 미확정이다.
+
+Runner 관리 경로는 B1의 명시적 HOLD 사유다. [사전 작업·Runner 3안 비교](reviews/20261004-prework-review-followup.md)를 적용한다. 기존 Runner 보존+routed /32 후보를 우선 검토하되 actual L3/next hop과 별도 관리 selector/return-route 결정 전 구현하지 않는다.
 
 | 선택 | 공식 제약/구조 | R/I/T/P·일정 판단 | 선정 조건 |
 |---|---|---|---|

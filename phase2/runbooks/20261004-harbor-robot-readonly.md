@@ -6,10 +6,10 @@ Source contract: [Harbor v2.13.1 API](https://github.com/goharbor/harbor/blob/v2
 
 Save [harbor-robot-readonly.py](harbor-robot-readonly.py) as
 /home/server01_cicd-runner/harbor-robot-readonly.py using GitHub Raw/download and your existing file transfer method.
-Requires Python 3 and an interactive terminal. The known CA path and expected PEM SHA256 are already configured.
+Requires Python 3, an interactive terminal, and existing DNS resolution for harbor.fds.internal. Pass the existing public Root CA PEM path explicitly with --ca-file; the expected PEM SHA256 remains pinned in code. No hosts override or DNS configuration change is included.
 
 ```bash
-if python3 /home/server01_cicd-runner/harbor-robot-readonly.py; then
+if python3 /home/server01_cicd-runner/harbor-robot-readonly.py --ca-file "$HOME/.config/containers/certs.d/10.1.93.54/ca.crt"; then
   printf 'D22_ROBOT_EXIT_CODE=0\n'
 else
   d22_robot_rc=$?
@@ -34,11 +34,13 @@ PARTIAL_MISSING_TARGETS (exit 2) means missing or not visible to the account; no
 
 expires_at is preserved as the API integer; positive values also have a KST rendering. Zero/negative values remain explicit without guessing their meaning. disable, duration, permission kind/namespace/resource/action/effect are preserved. Omitted effect is null, not inferred allow. Compare actual project permissions and expiry with the input contract after capture.
 
-HTTPS connects directly to 10.1.93.54 and verifies its IP SAN using only pinned CA bytes. Ambient proxies and redirects are disabled. GET list pagination is bounded to 100 data pages plus an empty-page check; repeated IDs and malformed metadata stop capture. Results are not an atomic snapshot if accounts change while paging.
+HTTPS connects to harbor.fds.internal and verifies its FQDN SAN using only pinned CA bytes. The example CA storage directory retains the existing IP name; this does not change the HTTPS endpoint or container runtime trust. Ambient proxies and redirects are disabled. An unauthenticated GET probe checks DNS/TLS before the credential prompt; 200/401/403 only allow that preflight to continue. Authenticated 401/403 still stops. DNS/TLS failure has no IP/insecure fallback. GET list pagination is bounded to 100 data pages plus an empty-page check; repeated IDs and malformed metadata stop capture. Results are not an atomic snapshot if accounts change while paging.
+
+The 2026-10-04 field USER_READBACK in the D22 contract §1.3 reports IP and FQDN SANs. This is not a new live certificate verification by this collector. Existing captured Robot metadata need not be collected again solely because this preparation tool changed. On failure preserve the STOP/exit status, resolve the existing DNS/CA access prerequisite, and rerun only when needed; no server change or rollback is part of this read-only command.
 
 ## Validation
 
 10 local offline unittest cases passed on 2026-10-04: pagination and secret omission; missing targets; duplicate IDs; invalid JSON; missing fields; wrong scalar types; disabled/expired metadata; negative expiry; redirects; safe 401/403 diagnostics. No live Harbor API call performed by the author.
 Run: python3 -m unittest discover -s phase2/runbooks -p test_harbor_robot_readonly.py
 
-Code review pending; Phase 2 Freeze HOLD remains. This collector supplies metadata evidence only.
+Revision follow-up: 15 local offline tests PASS (the original 10 plus FQDN endpoint, bad/missing CA, explicit CA path with strict TLS, and connection failure before credential input). Tests use mocks and do not establish live DNS/TLS/API success. Code review pending; Phase 2 Freeze HOLD remains. This collector supplies metadata evidence only.

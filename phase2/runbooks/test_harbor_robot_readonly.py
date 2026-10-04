@@ -1,4 +1,4 @@
-import importlib.util, json, unittest
+import importlib.util, json, ssl, sys, tempfile, unittest
 from pathlib import Path
 from unittest.mock import patch
 from urllib import error
@@ -19,6 +19,36 @@ class Opener:
         return Response(next(self.pages))
 def page(rows): return json.dumps(rows).encode()
 class Tests(unittest.TestCase):
+    def test_fqdn_endpoint(self):
+        op=Opener([b"[]"])
+        m.collect(op,"Basic TEST")
+        self.assertEqual(op.requests[0].host,"harbor.fds.internal")
+        self.assertEqual(op.requests[0].type,"https")
+    def test_bad_ca_before_prompt_or_network(self):
+        with tempfile.TemporaryDirectory() as root:
+            ca=Path(root)/"ca.crt";ca.write_text("wrong CA")
+            with patch.object(sys,"argv",["collector","--ca-file",str(ca)]),patch("builtins.input") as prompt,patch.object(m.request,"build_opener") as network:
+                self.assertEqual(m.run(),2)
+                prompt.assert_not_called();network.assert_not_called()
+    def test_missing_ca(self):
+        with tempfile.TemporaryDirectory() as root:
+            with self.assertRaises(m.Stop):m.tls_context(Path(root)/"missing")
+    def test_ca_path_and_strict_tls(self):
+        payload=b"pinned public PEM"
+        with tempfile.TemporaryDirectory() as root:
+            ca=Path(root)/"custom-ca.pem";ca.write_bytes(payload)
+            with patch.object(m,"CA_SHA",m.hashlib.sha256(payload).hexdigest()),patch.object(m.ssl.SSLContext,"load_verify_locations") as load:
+                ctx=m.tls_context(ca)
+                load.assert_called_once_with(cadata=payload.decode("ascii"))
+                self.assertTrue(ctx.check_hostname)
+                self.assertEqual(ctx.verify_mode,ssl.CERT_REQUIRED)
+    def test_connection_failure_before_prompt(self):
+        with patch.object(sys,"argv",["collector","--ca-file","/unused"]),patch.object(m,"tls_context"),patch.object(m.request,"build_opener") as build,patch("builtins.input") as prompt:
+            build.return_value.open.side_effect=error.URLError("SECRET_SENTINEL")
+            with patch("builtins.print") as out:
+                self.assertEqual(m.run(),2)
+                self.assertNotIn("SECRET_SENTINEL",str(out.call_args_list))
+            prompt.assert_not_called()
     def test_pages_and_secrets(self):
         op=Opener([page([robot()]),page([robot(2,"robot$push")]),b"[]"])
         result=m.collect(op,"Basic TEST")

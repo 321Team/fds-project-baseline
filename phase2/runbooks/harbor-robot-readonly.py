@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """D22 Harbor Robot metadata intake; GET only, no credential/raw-body files."""
+import argparse
 import base64
 import getpass
 import hashlib
@@ -13,9 +14,8 @@ import warnings
 from datetime import datetime, timezone, timedelta
 from urllib import request, error
 
-CA = Path("/home/server01_cicd-runner/.config/containers/certs.d/10.1.93.54/ca.crt")
 CA_SHA = "20ddfa5e92c346aaf46fc30179fbc0b069e256effd2615a9f4308a8fe719053f"
-BASE = "https://10.1.93.54/api/v2.0/robots"
+BASE = "https://harbor.fds.internal/api/v2.0/robots"
 TARGETS = ("robot$worker", "robot$push")
 KST = timezone(timedelta(hours=9))
 
@@ -102,19 +102,38 @@ def collect(opener, auth):
                 found[name] = select_robot(row)
     raise Stop("Incomplete pagination")
 
-def main():
-    os.umask(0o077)
+def tls_context(ca_file):
     try:
-        ca_bytes = CA.read_bytes()
+        ca_bytes = Path(ca_file).expanduser().read_bytes()
     except OSError:
         raise Stop("Root CA file missing or unreadable") from None
     if hashlib.sha256(ca_bytes).hexdigest() != CA_SHA:
         raise Stop("Root CA hash mismatch")
-    # Trust only the pinned public CA bytes; verify IP SAN and certificate chain.
+    # Trust only pinned public CA bytes; verify FQDN SAN and certificate chain.
     ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
     ctx.load_verify_locations(cadata=ca_bytes.decode("ascii"))
+    return ctx
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--ca-file", required=True, help="Existing pinned public Root CA PEM path")
+    args = parser.parse_args()
+    os.umask(0o077)
+    ctx = tls_context(args.ca_file)
     opener = request.build_opener(request.ProxyHandler({}),
                                   request.HTTPSHandler(context=ctx), NoRedirect())
+    # Validate DNS/TLS before asking for credentials. A 401/403 is acceptable
+    # only for this unauthenticated probe; authenticated failures still stop.
+    probe = request.Request(BASE + "?page=1&page_size=1", method="GET")
+    try:
+        with opener.open(probe, timeout=20) as response:
+            if response.status != 200:
+                raise Stop("Unexpected preflight HTTP status")
+    except error.HTTPError as exc:
+        code = exc.code
+        exc.close()
+        if code not in (401, 403):
+            raise Stop("Unexpected preflight HTTP status") from None
     if not sys.stdin.isatty():
         raise Stop("Run this saved file directly from an interactive terminal")
     user = input("Existing Harbor metadata reader username: ").strip()

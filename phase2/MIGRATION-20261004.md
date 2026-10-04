@@ -9,7 +9,7 @@ collector는 현재 준비 도구로 함께 보존하며 향후 구현 저장소
 
 ## 원본 보존
 원본: fds-project-architecture PR8, commit `9ff3b32263ae1305fbd3a18781e633173a153452`.
-이전 대상 20개 파일은 내용·경로·Git blob을 그대로 보존했다. mapping은 [migration-manifest.json](../audit/phase2-private-migration-20261004/migration-manifest.json)에 파일별 SHA256/byte size/source blob을 기록한다.
+최초 이전 시점의 20개 파일은 내용·경로·Git blob을 그대로 보존했다. mapping은 [migration-manifest.json](../audit/phase2-private-migration-20261004/migration-manifest.json)에 파일별 SHA256/byte size/source blob을 기록한다. 이후 리뷰 보완은 별도 commit diff로 추적하며 현재 HEAD의 20개 파일이 원본과 모두 같다고 주장하지 않는다. 최초 이전 manifest와 snapshot은 수정하지 않는다.
 baseline parent: `8e870c4c551506afef816ef19b94b381994c6386`.
 과거 설계 결정/상태/가격/링크는 당시 기록이며 이전이 이를 최신 승인으로 승격하지 않는다.
 문서 속 architecture 고정 commit URL과 PR8 참조는 원본 provenance로 보존했다. 후속 실행파일은 이 비공개 PR의 동일 경로를 소비한다. 별도 링크 변경을 원본과 혼합하지 않았다.
@@ -42,4 +42,7 @@ baseline parent: `8e870c4c551506afef816ef19b94b381994c6386`.
 
 ## 다음 단계
 비공개 PR 독립 코드/내용 리뷰. Freeze HOLD와 D22 final PENDING 유지.
-consumer read-only 절차는 [준비 문서](runbooks/20261004-harbor-consumer-reference-readonly.md)에 있으며 현장 미실행이다.
+consumer read-only 절차는 [준비 문서](runbooks/20261004-harbor-consumer-reference-readonly.md)에 있다. 이후 사용자 현장 출력 및 Runner source 대조는 [D22 입력 계약](reviews/20261004-harbor-d22-input-contract.md) §1.6~1.7을 따른다. 최초 이전 당시의 미실행 표기를 현재 상태로 사용하지 않는다.
+
+## 이전 이후 사전 작업 리뷰 보완
+[후속 기록](reviews/20261004-prework-review-followup.md)에 Runner 경로 3안, sizing 후보 정합, FQDN/CA 인자화와 시험, 공개 이력·IAM 후속을 연결한다. 공개 노출과 MFA/정책 약점의 확인·보완은 credential 유출 여부와 별개이며, 이번 코드/문서 수정으로 실제 계정 보완을 완료했다고 표시하지 않는다.
