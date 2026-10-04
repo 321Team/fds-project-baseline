@@ -14,9 +14,9 @@ Runner push와 P2 node pull은 별도 actor로 관리한다. 생성 전 endpoint
 | current leaf | [D22 1.3](20261004-harbor-d22-input-contract.md): pinned CA FQDN TLS 및 현장checksum USER_READBACK | raw 독립 수신/재해시, OS/각 runtime trust |
 | P1 Robot | [D22 1.4](20261004-harbor-d22-input-contract.md): worker pull, push push+pull, fds범위, enabled, duration30 | P2 principal 발급/공유 정책 선택, 실제 인증/negative |
 | 만료 | worker10-16 17:02:37, push10-18 17:16:55 KST | 10-12~13 기존 rotation 일정(안)의 실행창 확정·완료 |
-| monitoring consumer | [consumer runbook](../runbooks/20261004-harbor-consumer-reference-readonly.md): source상 workload5개/SA/Secret 연결 | live workload/SA/Pod/Secret metadata 대조 |
-| fds-app consumer | 기존 기대 SA transaction-api-sa / fds-engine-sa | 실제 Pod/SA와 harbor-pull-secret 연결 |
-| Runner credential | 기존 robot$push actor 확인 | 실제 authfile/CI reference/실행사용자 결속 |
+| monitoring consumer | [consumer runbook](../runbooks/20261004-harbor-consumer-reference-readonly.md): source상 workload5개/SA/Secret 연결 | 1.6 현장 대조 확보: workload5/Pod7/Secret2; 실제 pull·Ready 별도 |
+| fds-app consumer | 기존 기대 SA transaction-api-sa / fds-engine-sa | 1.6 현장 연결 확보: workload2/Pod6/Secret1; 내부 credential 별도 |
+| Runner credential | 기존 robot$push actor 확인 | /run/user/1000/containers/auth.json owner/mode600 확인; 실제 CI binding 미확인 |
 | 공개 CA | pinned Root PEM 및 hostname→PEM JSON 후보 | exact HCP version/CLI 지원·IP/FQDN endpoint 선택과 key 정합 |
 | app image | P1 관측 digest와 승인 자원 baseline 존재 | 최종 build/scan/provenance/registry digest/P2 승인 연결 |
 
@@ -37,6 +37,7 @@ Runner push와 P2 node pull은 별도 actor로 관리한다. 생성 전 endpoint
 권욱 #42 Lead는 이 후보의 수용/수정/보류를 원 결정 위치에 기록한다. 이 파일 생성은 그 판단을 대신하지 않는다.
 
 ## 4. 지금 실행 가능한 순서
+2026-10-04 17:55 control01 및 Runner 사용자 출력 수신으로 아래 1~3의 참조 조회·연결표 반영을 완료했다(USER_READBACK). 동일 조회를 반복하지 않는다. 다음은 Runner active credential reference 확인과 platform/APP 입력 연결이다. 상세 범위는 D22 입력1.6 참조.
 1. control01에서 기존 context를 확인하고 [조회 절차](../runbooks/20261004-harbor-consumer-reference-readonly.md) §2를 실행한다. Secret 값은 출력하지 않는다.
 2. Runner에서 같은 절차 §3의 후보 파일 metadata만 확인한다. 실제 active authfile은 기존 IF09/CI 실행 방식과 결속하며 후보 파일 존재만으로 확정하지 않는다.
 3. 결과로 D22 consumer 연결표를 채운다. 권한 부족은 기존 운영자 조회로 해소하고 RBAC를 신설하지 않는다.
