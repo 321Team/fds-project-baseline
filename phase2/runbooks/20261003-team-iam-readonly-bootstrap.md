@@ -1,4 +1,9 @@
 # 팀 3인 IAM bootstrap 보완 / 조회 역할 일괄 연결
+## 현재 상태 — 2026-10-05 정본 대조
+10/3 v2 IAM configuration readback과 권욱의 조회 역할·CloudShell 성공이 후속 기록에서 확인됐다. **아래 초기 bootstrap·복구 명령을 지금 재실행하지 않는다.** 하영·재환의 본인 MFA/역할/CloudShell 검증, ELB 초기 설정, 구축용 역할은 별도 잔여다. [담당별 권한표와 착수 순서](../reviews/20261005-canonical-permission-readiness.md)를 따른다. AWS 상태 신규 조회·권한 변경·독립 승인·P1/P2 인수는 이번 문서 수정으로 발생하지 않는다.
+
+## 10/3 초기 작성 시점 기록
+
 기준: 2026-10-03 17:04:49 KST 사용자 CloudShell 출력. CODEX_ASSISTED.
 상태: v2 수정 준비 / v1 실제 실행 READBACK_MISMATCH / rollback 실제 상태 확인 대기 / 독립 리뷰 PENDING.
 이 파일 편입 또는 IAM readback은 Architecture Freeze/Runtime acceptance/리뷰 승인이 아니다.
