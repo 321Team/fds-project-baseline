@@ -173,3 +173,33 @@ DNS01/02 post 원본 위치: [evidence 폴더](https://github.com/321Team/fds-pr
 4. 최소 잔여: 현재 Runner/local router→vpn-gw 경로·source, selected HCP DNS/endpoint 지원, 필수 DNS subset의 책임·시점 결정, cloud source/return·정확 rule 계약. 오늘 cloud actual ID가 없다는 이유로 논리 설계를 순환 차단하지 않는다.
 
 기존 담당·D23 P1 범위·일정·AC는 유지한다. 문서 후보 보완과 Lead 최종 수용은 별도이며 D22 FINAL/Architecture Freeze/Runtime 적용을 승인한 기록이 아니다.
+
+
+## 11. Runner 현장 local metadata 수신 — 2026-10-04 19:47:11 KST
+실행자 제공 파일 local-route.txt / SHA256SUMS와 콘솔 LOCAL_ROUTE_CAPTURE_RC=0 수신.
+- host/account: cicd-runner01 / server01_cicd-runner.
+- 실행 source: PR137 `da90d392d3bb513565527d54b3b7edaa6dea04d4`의 collect-local-management-route.sh와 보고 hash 일치: `b63aeaefad988071b3b87872239759d0b9c6a62f60d1cc1619d0c7e9ab275414`.
+- 수신 local-route.txt: 2699 bytes, SHA256 `3694c3436f69069e9b1d30c2c3d6803ffb319868212f4cc494b974fc9895422d`. 직접 재계산과 sidecar 일치. 원본은 사용자 첨부로 보존하며 이번 commit에는 분석 기록만 반영한다. Evidence 저장소 편입·독립 검토는 별도 미수행.
+- COMMAND14개와 RC14개가 모두0. STATE=CAPTURED_REVIEW_REQUIRED. 성공 범위는 현장 로컬 정보 수집이다.
+
+| 현장 관측 | 판정/영향 |
+|---|---|
+| ens160 10.250.10.20/24, default via10.250.10.1 | Runner 주소 확인. 로컬 next hop은 .1로 좁혀짐 |
+| ip rule은 local/main/default; main에는 default와 local 관리망 route | 수신 범위에 On-Prem/Cloud 전용 route 미관측. 기본 route 존재 자체를 장애로 판정하지 않음 |
+| .51/.52/.53/10.20.110.10 lookup 모두 via10.250.10.1 src10.250.10.20 | route lookup 시 선택된 source 확인. 중계 후 source 보존/SNAT 부재·실제 forwarding은 미검증 |
+| resolv.conf: search fds.internal, nameserver8.8.8.8 | 내부 DNS52/53 사용 조건과 실제 설정 차이 확인. search suffix만으로 private zone 해석 가능하다고 판단하지 않음. 실제 DNS 질의 결과는 수집하지 않았음 |
+| ip_forward=0 | Runner는 transit router로 선정하지 않았으므로 결함 아님. 이를1로 변경하지 않음 |
+
+### B1/DNS 판정
+Runner local source/next hop=OBSERVED. End-to-end route/source-preservation=NOT_PROVEN. Private DNS prerequisite=UNRESOLVED. Freeze HOLD 유지.
+과거 DNS09-29 반환의 next hop10.1.93.58과 오늘 Runner의 next hop10.250.10.1은 서로 다른 주소다. 동일 dual-homed router인지 별개 장비인지 미확인이며 불일치 결함·NAT 사용·새 라우터 필요로 단정하지 않는다.
+Harbor 이전 pinned-FQDN TLS는 fixed-IP transport로 수행된 USER_READBACK이므로 이번 resolver 설정과 모순 없이 공존한다. FQDN 기반 수집기나 Private API/Ingress가 실제 이름을 해석할 수 있는지는 별도 조건이다.
+
+### 최소 다음 수집과 후속 변경 경계
+1. vpn-gw01의 기존 승인 계정에서 같은 source hash 수집기를 vpn-gw 모드로 실행. [실행 절차](../runbooks/20261004-local-management-route-readonly.md). ip route get10.250.10.20의 반환 next hop/source와 로컬 주소를 확보한다.
+2. .1/.58의 실제 장비 identity·양쪽 인터페이스·route/forwarding/NAT 정책은 해당 중계 장비 운영자의 기존 접근 범위에서 조회. 장비/권한이 확인되기 전 임의 SSH/sudo 또는 광역 스캔 금지.
+3. 기존 DNS ACL/ipset에 Runner query source가 허용되는지 확인한 뒤, 별도 읽기 시험 범위에서 DNS52/53 authoritative query와 실제 source 관측을 연결한다. 현재8.8.8.8을 즉시52/53으로 바꾸면 미허용/미도달 DNS로 전환될 수 있으므로 선행조건 확인 없이 변경하지 않는다.
+4. route/return/source/DNS 선행조건을 모아 관리 selector·정확 허용 규칙과 resolver 변경안을 기존 Decision에 연결한다. 실제 네트워크/영구 설정 적용은 이번 수집 승인 범위 밖이다.
+
+LOCAL_RUNTIME_CAPTURE=PASS / RECEIVED_SHA256=PASS / NETWORK_RUNTIME_ACCEPTANCE=NOT_RUN / EVIDENCE_REVIEW=PENDING / FREEZE=HOLD.
+기존 완료 DNS 시험, P1 CI credential 작업, 기존 요청 댓글을 반복하지 않는다.
