@@ -2,6 +2,42 @@
 
 2026-10-05 KST · CODEX_ASSISTED · 준비 후보 / AWS 변경 미실행
 
+
+## 10/5 09:44–09:47 KST 사용자 root 조회 후속 — 아래 과거 상태표보다 우선
+
+출처: 사용자 제공 CloudShell 출력. role/MFA capture UTC=2026-10-05T00:44:19Z, caller=프로젝트 계정 root. 후속 정책 조회는 09:47 KST 대화로 수신했으며 별도 실행 timestamp는 출력에 없다. Assistant의 AWS 직접 실행이 아니다.
+
+| 항목 | 새 확인 결과 | 후속 |
+|---|---|---|
+| root MFA | 사용자 get-account-summary 결과 0 / RC=0; 콘솔 접근 가능 보고 | 이전 로그인 화면의 MFA 요구 원인은 미확인. 계정 Owner 통제 경계 유지 |
+| 3인 MFA | 각 장치 1개 / RC=0 | 하영·재환 미등록 잔여는 해소. MFA 로그인/AssumeRole 성공과 구분 |
+| 3인 그룹 | 모두 FDS-Human-Bootstrap | 그룹 membership 확인 완료 |
+| 조회 role trust | 정확한 3인 principal, sts:AssumeRole, MFA=true; boundary=null | 확인된 trust에 수정 필요 근거 없음 |
+| 그룹 Assume 정책 | 정확한 조회 role ARN + MFA=true | identity-side Assume 허용 확인 |
+| 자기관리 정책 | MFA 없는 DeactivateMFADevice/DeleteVirtualMFADevice 명시 Deny 존재 | 기존 보완 적용 확인. 다시 bootstrap 실행하지 않음 |
+| 조회 role policies | Inventory/ROSA-Prereq 두 inline 내용 조회 RC=0; attached=[] | 서울 inventory/CloudShell 및 exact ELB GetRole Allow 존재. 쓰기 권한 추가 불필요 |
+| IaC/Network operator | 각각 GetRole NoSuchEntity / RC=254 | 두 후보 role 미생성 확정 |
+| ELB 서비스 연결 role | GetRole NoSuchEntity / RC=254 | 부재 확정. 10/3 미관측 추정 대신 사용 |
+| 장기 Access Key | 이번 조회에 포함되지 않음 | 과거 0개를 현재 검증 완료로 올리지 않음 |
+
+GetRole Allow가 현재 정책에 존재한다는 사실로 10/3 AccessDenied의 원인을 확정하지 않는다. root의 NoSuchEntity는 현재 역할 부재의 증거이며 당시 조회 역할의 유효권한 성공 증거가 아니다. 제공된 네 정책에 대해 목적·Action·Resource·MFA/Region 조건을 정적으로 대조했으며 전체 IAM effective permissions/SCP/session 정책 검증은 아니다.
+
+### ELB 후속의 실제 범위
+
+현재 root 계정 접근 및 role 부재가 확인됐으므로, ELB 선행 설정은 승인된 초기 설정 작업에서 해당 서비스 연결 역할 한 개를 생성하는 범위다. 공용 조회 역할에 후보 bootstrap policy를 붙이지 않는다. root를 승인된 최초 설정에 사용할 경우 별도 임시 grant도 필요하지 않으며, 기존 후보 JSON은 향후 별도 bootstrap principal에 위임할 때의 후보로 유지한다.
+
+아래는 **리뷰용 실행 후보이며 지금 실행 지시가 아니다**. 실제 실행 전 계정 identity와 role 부재를 재확인하고, 이미 존재하면 생성은 생략한다. AccessDenied는 부재로 해석하지 않고 중단한다.
+
+```bash
+aws iam create-service-linked-role --aws-service-name elasticloadbalancing.amazonaws.com --output json --no-cli-pager && aws iam get-role --role-name AWSServiceRoleForElasticLoadBalancing --query 'Role.{Arn:Arn,Path:Path,Trust:AssumeRolePolicyDocument}' --output json --no-cli-pager
+```
+
+정상 기준: 두 API 성공, 프로젝트 계정의 exact role ARN/path 및 elasticloadbalancing.amazonaws.com 서비스 trust 확인. 실패하면 원본 오류/RC를 보존하고 중단; 추가 IAM 권한 확대나 ELB/TG 생성으로 우회하지 않는다. readback 실패 시 생성 자체는 성공했을 수 있으므로 생성 명령을 반복하지 않고 조회로 확인한다. 자동 role 삭제 rollback은 하지 않는다.
+
+REVIEW_AUTHORITY_POLICY §2–4에 따라 새 IAM 변경 실행 후보는 코드 범위로 검토한다. 조회 시점 PR137 리뷰는 이전 무결성에 대한 COMMENTED 1건뿐이며 이 후보의 독립 리뷰/병합 증거는 없다. 해당 범위 리뷰 및 #35 Lead 실행 판단 전에는 생성하지 않는다. 기존 문서/정본 담당·일정·인수 조건은 바꾸지 않는다.
+
+다음 작업은 정책 재수집이 아니라 ELB 실행 후보 검토 및 Lead 실행 연결이다. 구축용 역할은 실제 Terraform resource/backend/STS-OIDC 범위와 정본 책임에 맞춰 별도 설계한다. 이번 반영은 기록·실행 후보 준비뿐이며 AWS mutation=NOT_RUN, operator 생성=NOT_RUN, ELB 생성=NOT_RUN.
+
 ## 권위와 적용 범위
 
 기준은 [CURRENT.md](https://github.com/321Team/fds-project-baseline/blob/main/CURRENT.md)의 발행 v3.1.21 및 [P2-IAC-01](https://github.com/321Team/fds-project-baseline/blob/docs-v3.1.21/tickets/v3.1.21/descriptions/P2-IAC-01.md), [P2-ROSA-01](https://github.com/321Team/fds-project-baseline/blob/docs-v3.1.21/tickets/v3.1.21/descriptions/P2-ROSA-01.md)이다. 정본 스냅샷 이후 실행 사실은 #35의 개별 결과로 보완하며, 이 준비 문서는 정본·담당·AC·계획일을 변경하지 않는다.
