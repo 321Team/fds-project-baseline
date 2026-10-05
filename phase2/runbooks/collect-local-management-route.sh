@@ -2,6 +2,7 @@
 # One-shot LOCAL metadata only. No packets, sudo, SSH, config writes or credentials.
 (
 set -u
+set -o pipefail
 umask 077
 role="${1:-}"
 case "$role" in
@@ -20,18 +21,24 @@ fi
 out="$(mktemp -d "$HOME/p2-local-route.XXXXXX")" || exit 2
 log="$out/local-route.txt"
 failed=0
+io_fail() {
+  printf 'RESULT_DIR=%s\nSTATE=INCOMPLETE_LOG_WRITE\n' "$out" >&2
+  exit 2
+}
 run() {
-  printf '\nCOMMAND' >>"$log"
-  printf ' %q' "$@" >>"$log"
-  printf '\n' >>"$log"
+  {
+    printf '\nCOMMAND' &&
+    printf ' %q' "$@" &&
+    printf '\n'
+  } >>"$log" || io_fail
   timeout 10 "$@" >>"$log" 2>&1
   rc=$?
-  printf 'RC=%s\n' "$rc" >>"$log"
+  printf 'RC=%s\n' "$rc" >>"$log" || io_fail
   if [ "$rc" -ne 0 ]; then failed=1; fi
 }
 {
-  printf 'SCOPE=LOCAL_METADATA_ONLY\nROLE=%s\nEXPECTED_ADDRESS=%s\n' "$role" "$expected"
-  printf 'SOURCE_FILE_SHA256='
+  printf 'SCOPE=LOCAL_METADATA_ONLY\nROLE=%s\nEXPECTED_ADDRESS=%s\n' "$role" "$expected" &&
+  printf 'SOURCE_FILE_SHA256=' &&
   sha256sum -- "$0" | cut -d ' ' -f 1
 } >"$log" || exit 2
 run date -u +%Y-%m-%dT%H:%M:%SZ
@@ -46,7 +53,7 @@ run cat /proc/sys/net/ipv4/ip_forward
 for target in "${targets[@]}"; do run ip -4 route get "$target"; done
 run ip -4 route get "${targets[0]}" from "$expected"
 if [ "$failed" -eq 0 ]; then state=CAPTURED_REVIEW_REQUIRED; else state=PARTIAL_REVIEW_REQUIRED; fi
-printf '\nSTATE=%s\nNOT_PROVEN=connectivity,forwarding,TLS,DNS_answer,VPN_or_ROSA_readiness\n' "$state" >>"$log"
+printf '\nSTATE=%s\nNOT_PROVEN=connectivity,forwarding,TLS,DNS_answer,VPN_or_ROSA_readiness\n' "$state" >>"$log" || io_fail
 (cd "$out" && sha256sum local-route.txt >SHA256SUMS) || exit 2
 printf 'RESULT_DIR=%s\nSTATE=%s\n' "$out" "$state"
 printf 'SOURCE-SENSITIVE: private review only; do not post to public repository.\n'

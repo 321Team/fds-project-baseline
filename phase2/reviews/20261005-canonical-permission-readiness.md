@@ -3,6 +3,12 @@
 2026-10-05 KST · CODEX_ASSISTED · 준비 후보 / AWS 변경 미실행
 
 
+## 10/5 저녁 독립 리뷰 후속 — IAM 쓰기 실행 주체
+e24c8813c9b16868e6efbc56889eae2d5e882509의 IAM/플랫폼 범위 [독립 승인5412755619](https://github.com/321Team/fds-project-baseline/pull/137#pullrequestreview-5412755619)을 확인했다. 실행 허가·Freeze·병합과 구분한다.
+리뷰 권고를 반영한 실행 조건: #35 Lead가 **MFA 인증이 확인된 승인 관리자 IAM principal**과 필요한 최소권한을 지정한다. root를 최초 설정에 사용해야 한다면 계정 Owner가 MFA를 설정하고 MFA 인증 세션을 확인한 뒤 수행한다. root MFA=0인 현재 기록만으로 IAM 쓰기를 진행하지 않는다. root MFA는 외부 Owner 통제이므로 프로젝트가 임의 등록/복구/재설정하지 않는다.
+계정 MFA 등록 수치와 실제 실행 세션의 MFA 인증은 구분한다. STS ARN만으로 MFA 여부를 증명하지 않는다. 승인 관리자 principal의 현재 존재/권한/세션은 아직 미확인이다. 관리자 경로가 없으면 Owner에 연결하며 공용 조회 역할에 쓰기를 붙여 우회하지 않는다.
+아래 과거 root 실행 후보는 이 조건이 우선한다. 후보 IAM JSON과 실행 명령 자체는 이번에 변경하지 않았다. 해당 범위의 기존 승인은 e24c881 기준이며 새 문서 보완 및 수집기 코드 수정은 변경 범위를 구분해 검토한다.
+
 ## 10/5 09:44–09:47 KST 사용자 root 조회 후속 — 아래 과거 상태표보다 우선
 
 출처: 사용자 제공 CloudShell 출력. role/MFA capture UTC=2026-10-05T00:44:19Z, caller=프로젝트 계정 root. 후속 정책 조회는 09:47 KST 대화로 수신했으며 별도 실행 timestamp는 출력에 없다. Assistant의 AWS 직접 실행이 아니다.

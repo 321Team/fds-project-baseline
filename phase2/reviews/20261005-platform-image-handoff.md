@@ -2,7 +2,12 @@
 AI usage: CODEX_ASSISTED. 사용자 후속 착수 지시. Phase 1 진행 중 공용 환경 변경 없이 소스/기존 기록을 대조했다.
 기준 baseline PR137 입력 HEAD: 6e17e50e4def3a17abee2ec152c5eab1e704af8f.
 
-## 1. 이번에 좁혀진 상태
+## 10/5 저녁 후속 — 아래 표는 최초 작성 시점 이력
+infra-rosa PR2의 현 HEAD는 `b66f412c35e756fc35ee5963eb9ad55dc845b14b`이며 [이하영 독립 코드 승인5412755375](https://github.com/321Team/infra-rosa/pull/2#pullrequestreview-5412755375)이 확인됐다. 이전 f5f0db1/reviews0 표기는 현재 상태가 아니다. 증적 보존·대상 고정 수정과 MOCK 검증 뒤 승인된 Pre-check 범위이며 PR은 조회 시 OPEN/Draft, 실행 HOLD다.
+동명 probe Pod의 AlreadyExists, 인증/네트워크 실패 등은 T2 nonzero 원인이 될 수 있으므로 raw stderr를 확인한다. REJECTED를 SCC 거부로 단정하지 않는다. 실제 app SA/volume/UID/Running/Ready/health 및 ROSA Runtime 인수는 계속 별도다.
+baseline PR137의 e24c881 HEAD에는 이하영의 IAM/플랫폼 범위 승인5412755619 및 이재환 수집기 범위 COMMENTED가 추가됐다. 이 승인은 미검증 actual 입력이나 AWS 실행 허가를 부여하지 않는다.
+
+## 1. 이번에 좁혀진 상태 (최초 조회 시점)
 | 대상 | 직접 조회한 기준 | 판정 |
 |---|---|---|
 | #35/#38 계정·HCP | 최신 댓글 각80/27건 | 앞선 조회 이후 새 exact version/offering/platform 예산 입력 없음. 기존 요청 반복하지 않음 |

@@ -1,5 +1,11 @@
 # 3인 IAM 기본 세션 조회 권한 — 적용 후보
-2026-10-05 KST · CODEX_ASSISTED · REVIEW PENDING / AWS NOT RUN
+2026-10-05 KST · CODEX_ASSISTED · e24c881 IAM 범위 독립 APPROVED / AWS NOT RUN
+
+## 10/5 저녁 독립 리뷰 후속 — IAM 쓰기 실행 주체
+e24c8813c9b16868e6efbc56889eae2d5e882509의 IAM/플랫폼 범위 [독립 승인5412755619](https://github.com/321Team/fds-project-baseline/pull/137#pullrequestreview-5412755619)을 확인했다. 실행 허가·Freeze·병합과 구분한다.
+리뷰 권고를 반영한 실행 조건: #35 Lead가 **MFA 인증이 확인된 승인 관리자 IAM principal**과 필요한 최소권한을 지정한다. root를 최초 설정에 사용해야 한다면 계정 Owner가 MFA를 설정하고 MFA 인증 세션을 확인한 뒤 수행한다. root MFA=0인 현재 기록만으로 IAM 쓰기를 진행하지 않는다. root MFA는 외부 Owner 통제이므로 프로젝트가 임의 등록/복구/재설정하지 않는다.
+계정 MFA 등록 수치와 실제 실행 세션의 MFA 인증은 구분한다. STS ARN만으로 MFA 여부를 증명하지 않는다. 승인 관리자 principal의 현재 존재/권한/세션은 아직 미확인이다. 관리자 경로가 없으면 Owner에 연결하며 공용 조회 역할에 쓰기를 붙여 우회하지 않는다.
+아래 과거 root 실행 후보는 이 조건이 우선한다. 후보 IAM JSON과 실행 명령 자체는 이번에 변경하지 않았다. 해당 범위의 기존 승인은 e24c881 기준이며 새 문서 보완 및 수집기 코드 수정은 변경 범위를 구분해 검토한다.
 
 ## 목적과 변경
 사용자 09:53 기본 로그인 세션 조회 요구 및 09:54 착수 지시에 따른 후보다. 현재는 FDS-ReadOnly-Audit로 전환해야 조회할 수 있다. FDS-Human-Bootstrap에 새 inline policy `FDS-Human-Direct-ReadOnly-v1` 하나를 추가한다.
@@ -12,9 +18,9 @@ CloudShell 환경/세션 생성 API는 도구 사용에 필요한 예외이며 �
 
 ## 실행 전 준비 — 지금은 리뷰 후보
 #35 Lead 이하영의 실행 판단과 적용 코드/정책 exact SHA 독립 리뷰가 선행한다. 근거: REVIEW_AUTHORITY_POLICY §2–4. 권욱 작성 후보를 자기 승인하지 않는다. P1 인수/Freeze/유료 Apply 승인과 별개다.
-승인된 root 초기 설정 CloudShell(프로젝트 계정)에서 작업한다. 비공개 저장소의 검토된 SHA에서 정책 JSON을 내려받아 CloudShell에 `human-direct-readonly.candidate.json`으로 업로드한다. 원격 코드를 pipe 실행하지 않는다.
+위 실행 조건을 충족하는 MFA 인증된 승인 관리자 CloudShell(프로젝트 계정)에서 작업한다. 비공개 저장소의 검토된 SHA에서 정책 JSON을 내려받아 CloudShell에 `human-direct-readonly.candidate.json`으로 업로드한다. 원격 코드를 pipe 실행하지 않는다.
 
-1. `aws sts get-caller-identity`로 account/root 확인. 다르면 STOP.
+1. `aws sts get-caller-identity`로 프로젝트 account 및 Lead가 지정한 exact principal 확인. 다르면 STOP. 별도로 해당 세션 MFA 인증 및 필요한 IAM 권한을 확인하며 ARN만으로 MFA 사용을 판정하지 않는다.
 2. 기존 조회 결과를 재요청하지 않는다. 실제 적용 직전에는 drift 확인 목적으로 `aws iam get-group --group-name FDS-Human-Bootstrap`의 정확한 3인 membership 및 각자의 MFA 등록을 확인한다.
 3. `aws iam list-group-policies --group-name FDS-Human-Bootstrap`, `aws iam list-attached-group-policies --group-name FDS-Human-Bootstrap` 확인. 알려진 기존 inline은 FDS-SelfService-Password-MFA와 FDS-Assume-ReadOnly-Audit-v1이다. 예상 밖 정책/사용자 또는 불명확한 오류가 있으면 STOP.
 4. 새 policy가 이미 있으면 `get-group-policy`로 조회하여 후보와 비교한다. 동일하면 쓰기 없이 SKIP, 다르면 STOP. 덮어쓰기하지 않는다. 이름 미존재 판정은 성공한 전체 list 결과로 한다.

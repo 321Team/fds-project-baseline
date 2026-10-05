@@ -2,6 +2,9 @@
 
 Source contract: [Harbor v2.13.1 API](https://github.com/goharbor/harbor/blob/v2.13.1/api/v2.0/swagger.yaml), GET /robots, Robot/RobotPermission/Access schemas.
 
+## Execution-location prerequisite — 2026-10-05 review follow-up
+Runner→DNS52/53 failures were recorded in baseline #37 comments5980791972/5980821721. Until DNS allowance and name resolution at the actual execution location are confirmed, do not run this collector on Runner expecting success. Confirm harbor.fds.internal resolution through the approved DNS path at the chosen execution location. Do not bypass with /etc/hosts, IP URL, disabled TLS, or an unapproved DNS change. Existing successful metadata need not be collected again. This note does not declare that the DNS issue remains unresolved in every environment; consume later evidence if available.
+
 ## Run on cicd-runner01
 
 Save [harbor-robot-readonly.py](harbor-robot-readonly.py) as
