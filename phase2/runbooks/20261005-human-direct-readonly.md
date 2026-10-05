@@ -38,7 +38,7 @@ sha256sum "$capture_dir"/*.json
 아래 명령은 IAM 쓰기이며 검토된 파일과 백업의 candidate가 일치할 때만 사용한다. 실행자가 사전 확인을 수행하는 절차이며 자동 preflight/rollback 스크립트가 아니다. 동시 IAM 작업이 없도록 Lead 작업창에서 수행한다.
 
 ```bash
-cmp -- human-direct-readonly.candidate.json "$capture_dir/candidate.json" && aws iam put-group-policy --group-name FDS-Human-Bootstrap --policy-name FDS-Human-Direct-ReadOnly-v1 --policy-document "file://$capture_dir/candidate.json" --no-cli-pager
+python3 check-human-direct-readonly.py --policy human-direct-readonly.candidate.json && cmp -- human-direct-readonly.candidate.json "$capture_dir/candidate.json" && aws iam put-group-policy --group-name FDS-Human-Bootstrap --policy-name FDS-Human-Direct-ReadOnly-v1 --policy-document "file://$capture_dir/candidate.json" --no-cli-pager
 ```
 
 RC를 즉시 기록한다. 타임아웃/오류도 미적용으로 단정하지 않고 아래 readback을 수행한다. 재실행으로 덮어쓰지 않는다.
@@ -69,3 +69,21 @@ aws iam delete-group-policy --group-name FDS-Human-Bootstrap --policy-name FDS-H
 AWS 근거: [MFA request context](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-multifactorauthpresent), [CloudShell IAM](https://docs.aws.amazon.com/cloudshell/latest/userguide/sec-auth-with-identities.html).
 
 크기 기준: [AWS IAM inline quota](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html).
+
+## 10/5 오프라인 계약 검사 보완
+[검사기](check-human-direct-readonly.py)는 AWS/credential/network 접근 없이 로컬 JSON만 읽는다. 검토된 동일 SHA의 검사기를 policy와 함께 CloudShell 작업 디렉터리에 준비한다.
+저장소 checkout에서는:
+```bash
+python3 phase2/runbooks/check-human-direct-readonly.py && python3 -m unittest discover -s phase2/runbooks/tests -p test_human_direct_readonly.py -v
+```
+CloudShell 적용 전 한 줄의 첫 단계가 검사기이며, RC2면 중단한다. 기존 수동 membership/정책 drift/백업/독립 리뷰/Lead 실행 조건은 별도 유지한다. 검사기만으로 자동 적용 승인되지 않는다.
+
+적용 후 get-group-policy --query PolicyDocument의 RC=0 JSON을 대상으로:
+```bash
+python3 check-human-direct-readonly.py --policy "$capture_dir/candidate.json" --readback "$capture_dir/applied.json"
+```
+정상: OFFLINE_CONTRACT=PASS, READBACK_CONTRACT=PASS, 두 파일 hash 출력. 이는 좁게 고정한 Action/Resource/Condition 계약 일치이며 AWS IAM simulator나 SCP/session을 포함한 유효권한 검증이 아니다. Statement/Action/Resource/principal 배열 순서와 Action/Resource 단일 문자열 표현을 정규화한다. 그 밖의 표현은 보수적으로 거부하므로 모든 IAM 의미 동등성을 판정한다고 주장하지 않는다.
+후보 JSON SHA256: `c3be8228aa21289ae8773a600f272f9975f94dc8ba5a0123f2f67a7d4c8e3652`.
+
+직접 로컬 실행: unittest4개 통과, 그중 보안 변경 subcase12개 모두 거부. 정상 후보 및 순서/단일값 표현 차이는 허용, 중복 JSON key는 거부. 12개는 MFA 제거/false/BoolIfExists, 대상 외 사용자, 서울 제한 제거/교체, 생성 권한/Action wildcard, ELB ARN wildcard, NotAction, statement 누락/중복이다.
+이 검증기는 특정 계정/3인/서울 및 10/5 사용자 제출된 기존 role 범위에 결속된 보안 검사 코드다. 다른 환경에서 사용하려면 환경별 계약과 입력을 함께 변경·리뷰하며 제한을 삭제하지 않는다. 신규 보안 통제 코드를 순수 수집기 예외로 병합하지 않는다. 정책 JSON 자체 및 AWS는 이번 후속에서 변경하지 않았다.
