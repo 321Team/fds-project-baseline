@@ -1,6 +1,6 @@
 # Phase 2 사전 작업 및 PR137 리뷰 후속 — 2026-10-04
 AI usage: CODEX_ASSISTED.
-최신 작업 선별·착수 기록은 §8을 우선한다. §1~7은 앞선 시점의 이력이며 Phase 1 인수 완료를 의미하지 않는다. 조회 기준 2026-10-04 18:55~19:00 KST.
+최신 작업 선별·착수 기록은 §10을 우선한다. §1~7은 앞선 시점의 이력이며 Phase 1 인수 완료를 의미하지 않는다. 조회 기준 2026-10-04 18:55~19:00 KST.
 입력 PR137 HEAD: `36093a8640d045dea887d0e3d5b6817574851d96`.
 현재 정본: CURRENT.md의 v3.1.21. 정본 발행과 P1 Close/Phase2 Start/Freeze는 별도다.
 이번 범위: 기존 준비 코드·문서의 리뷰 보완. 담당·일정·AC·Status·Decision·권한을 변경하지 않는다.
@@ -120,3 +120,33 @@ INDEPENDENT_REVIEW=PENDING / D22_FINAL=PENDING / ARCHITECTURE_FREEZE=HOLD / MERG
 fds-msa main의 실제 Dockerfile/apko/run.py 및 infra-rosa PR2 admission-only 범위를 대조했다. source UID10001:999와 uvicorn 두 listener 구성을 확인했으며 live digest provenance/UID Runtime은 미검증이다.
 infra-cicd PR45/46 병합은 입력 검증 계약의 진전이며 실제 Push/Deploy adapter 통합·실행 완료가 아니다. #110 전환 이관안 및 supply CI의 SHA별 결과를 연결했다. P1 권한/이미지/클러스터 변경 없음.
 다음은 기존 producer의 지원·예산/최종 공급 receipt 수신이며, actual post-create allocatable를 precreate 필수 실측으로 요구하지 않는다.
+
+## 10. 2026-10-05 11:13 KST 요청 후 재점검·착수
+이 절이 §1·§6·§8·§9의 과거 미확인/작업순서보다 우선한다. 현행 정본은 CURRENT.md v3.1.21로 재확인했다. P1은 여전히 진행 중이라는 사용자 전제를 유지한다.
+
+조회 범위: baseline open issues의 #33~#51/#95/#120/#121 메타데이터, PR137 현재 HEAD/reviews/comments, infra-rosa PR2 HEAD/reviews/전체 변경파일, infra-terraform PR2/3 HEAD 및 PR2 현행 출처 링크. 모든 P2 원본 증적/외부 서비스의 실시간 전수검증은 아니다.
+PR137 입력 HEAD=4c3768ee355c2da0800289545f21cf7195603ba9. 신규 11:08 작성자 측 기술 검토가 있었으나 새 독립 APPROVED는 없었다. 기존 supreme33-kr/hayeounglee 리뷰 요청을 유지하며 중복 요청하지 않는다.
+
+| 권장 순서 | 사전 작업 | 이번 실행/현재 판정 |
+|---|---|---|
+| 1 | 수집기 증적 보존 및 대상 고정 | infra-rosa PR2 수정·로컬 MOCK 완료; 새 HEAD b66f412c35e756fc35ee5963eb9ad55dc845b14b |
+| 2 | 현행 입력 출처 정합 | ROSA README 및 Terraform PR2 2문서 링크 교정; Terraform HEAD 027c3f3db6af9445b31b3a9f7847c5177493ec85 |
+| 3 | 기본 IAM 사용자 조회 및 ELB 초기 설정 | 사용자 3인 MFA/현 조회 정책 확인 완료. 그룹 직접조회 후보 작성됨, AWS 적용 없음. ELB/두 operator role 부재 확인. 독립 코드 리뷰·Lead 실행 판단 잔여 |
+| 4 | Runner 관리/DNS 설계 결정 | 현장 자료 이미 수신. DNS ACL·Runner resolver·route/NAT를 분리한 기존 변경 후보 유지; 공유 P1 환경 변경/중복 수집 없음 |
+| 5 | ROSA 지원·플랫폼/이미지 이식성 입력 결합 | 기존 #38/#42/#43 입력 요청 소비. final digest/provenance/실제 arbitrary UID·volume·health 미검증; precreate 예산과 postcreate allocatable 분리 |
+| 6 | 비용 및 Freeze/plan | 기존 10/6 사용자 비용 입력 대기. 금액 null 유지. #34 Freeze·검토된 source/plan/backend·비용 조건 전 paid create/apply 없음 |
+
+### 실제 보완
+- ROSA 기존 출력 경로 재사용 STOP, 신규 배타 디렉터리·권한 제한.
+- 모든 raw/context/result를 상대경로 checksum에 포함하고 목록 자체 hash 생성. 최종 검증 전 성공 stdout 없음.
+- 승인 context/API/environment 필수, 모든 인증 oc에 context/server/TLS 검증 고정. namespace UID 전후 비교 및 identity/UTC/KST 기록. token/kubeconfig 원문 없음.
+- 동일 이름의 namespace나 동일 버전만으로 다른 클러스터를 동일시하지 않는다. API endpoint 자체 재사용까지 막는 cluster cryptographic attestation은 아니다.
+- 종료된 공개 architecture PR8을 current authority로 가리키던 ROSA/Terraform 문구를 private PR137 후보 진입점으로 교정. 실제 적용은 검토된 exact SHA 사용.
+
+### 검증과 제한
+ROSA: bash syntax 및 기존 fail-closed 입력10건/dry-run2, 기존 경로 원본 보존, raw 변조 검출, target 입력 누락/credential 포함 URL 거부, 파일 열기/해시 실패 nonzero 및 성공 출력 없음. 전부 로컬 oc MOCK이다. 원격3파일 readback 일치.
+Terraform: 문서2파일 원격 readback 일치; 코드 변경이 없어 fmt/validate/plan을 재실행하지 않았다.
+IAM: 10/5 사용자 root 출력의 config 확인을 소비했으며 이번에 AWS 재접속·mutation·본인 session 검증하지 않았다. 장기 key 최신0 여부는 아직 미확인이다. MFA 등록 및 MFA 없는 장치 삭제 Deny의 미적용 추정은 해소했으며 이를 반복 요청하지 않는다.
+SHARED_OCP_RUNTIME=NOT_RUN / ROSA_RUNTIME=NOT_RUN / IAM_APPLY=NOT_RUN / TERRAFORM_APPLY=NOT_RUN / MERGE=NOT_RUN. P1/PG03/G4/Freeze 인수 승격 없음.
+
+연결: [ROSA 수정 후속](https://github.com/321Team/infra-rosa/pull/2#issuecomment-5986979352), [직접 조회 정책/적용 절차](../runbooks/20261005-human-direct-readonly.md), [권한 현황](20261005-canonical-permission-readiness.md).
