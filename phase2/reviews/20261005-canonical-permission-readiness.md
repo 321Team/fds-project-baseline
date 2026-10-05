@@ -3,11 +3,11 @@
 2026-10-05 KST · CODEX_ASSISTED · 준비 후보 / AWS 변경 미실행
 
 
-## 10/5 저녁 독립 리뷰 후속 — IAM 쓰기 실행 주체
-e24c8813c9b16868e6efbc56889eae2d5e882509의 IAM/플랫폼 범위 [독립 승인5412755619](https://github.com/321Team/fds-project-baseline/pull/137#pullrequestreview-5412755619)을 확인했다. 실행 허가·Freeze·병합과 구분한다.
-리뷰 권고를 반영한 실행 조건: #35 Lead가 **MFA 인증이 확인된 승인 관리자 IAM principal**과 필요한 최소권한을 지정한다. root를 최초 설정에 사용해야 한다면 계정 Owner가 MFA를 설정하고 MFA 인증 세션을 확인한 뒤 수행한다. root MFA=0인 현재 기록만으로 IAM 쓰기를 진행하지 않는다. root MFA는 외부 Owner 통제이므로 프로젝트가 임의 등록/복구/재설정하지 않는다.
-계정 MFA 등록 수치와 실제 실행 세션의 MFA 인증은 구분한다. STS ARN만으로 MFA 여부를 증명하지 않는다. 승인 관리자 principal의 현재 존재/권한/세션은 아직 미확인이다. 관리자 경로가 없으면 Owner에 연결하며 공용 조회 역할에 쓰기를 붙여 우회하지 않는다.
-아래 과거 root 실행 후보는 이 조건이 우선한다. 후보 IAM JSON과 실행 명령 자체는 이번에 변경하지 않았다. 해당 범위의 기존 승인은 e24c881 기준이며 새 문서 보완 및 수집기 코드 수정은 변경 범위를 구분해 검토한다.
+## 10/5 사용자 지시 정정 — 교육장 통제 root로 그룹 조회·적용
+사용자는 교육장에서 제공하고 통제하는 root 계정으로 그룹 권한을 조회·적용하도록 지시했다. 프로젝트가 root MFA를 임의 등록할 수 없으므로, 별도 MFA 관리자 탐색 또는 root MFA 등록을 이 작업의 선행 조건으로 두지 않는다. 이전 저녁 문단과 #35 코멘트 5994164866의 필수 조건은 비차단 리뷰 권고를 Assistant가 과도하게 강화한 것이므로 이 문단으로 정정한다.
+실행 principal은 프로젝트 계정의 교육장 제공 root이며 STS account/ARN을 확인한다. root MFA는 Owner 통제 상태로 기록하고 등록·해제·복구하지 않는다. 이는 대상 3인의 조회 정책에 있는 MFA=true 조건과 별개이며, 해당 조건은 유지한다.
+범위는 FDS-Human-Bootstrap 조회 및 신규 inline policy FDS-Human-Direct-ReadOnly-v1 하나의 적용이다. 기존 정책·membership·조회 role/trust는 유지한다. 기존 신규 정책이 동일하면 SKIP, 다르면 STOP하며 백업·readback 절차를 따른다. ELB 생성, operator 생성, 유료 인프라 적용은 이번 지시에 포함하지 않는다.
+정책 JSON/검사기는 e24c8813c9b16868e6efbc56889eae2d5e882509의 [독립 승인5412755619](https://github.com/321Team/fds-project-baseline/pull/137#pullrequestreview-5412755619) 범위 그대로다. 이번 정정은 실행 주체 문서만 변경하며 전체 PR 병합·Freeze·P1 인수 또는 AWS 적용 완료를 뜻하지 않는다.
 
 ## 10/5 09:44–09:47 KST 사용자 root 조회 후속 — 아래 과거 상태표보다 우선
 
