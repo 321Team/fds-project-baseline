@@ -101,3 +101,6 @@ aws sts get-caller-identity --output json --no-cli-pager; printf 'IDENTITY_RC=%s
 - 이 후보에는 ELB/TG 생성·Marketplace Subscribe·PassRole·일반 CreateRole·정책 부착/삭제 권한이 없다. ELB 선행 설정이 성공해도 ROSA activation, STS/OIDC, 프로젝트 생성은 별도다.
 
 이번 검증: JSON 구문·허용 Action·정확한 ARN·서비스 조건 정적 대조. AWS policy validator/simulator/API 실행 없음. 정책 부착·서비스 연결 역할 생성·유료 리소스 생성 없음. PR draft / 독립 리뷰 미완료 / 인수 변경 없음.
+
+## 10/5 09:54 KST 기본 세션 조회 변경 준비
+사용자가 역할 전환 없는 조회를 요구하고 권장안 착수를 지시했다. [그룹용 정책 및 적용·복구 절차](../runbooks/20261005-human-direct-readonly.md)를 준비한다. 현행 조회 역할을 유지하면서 FDS-Human-Bootstrap 그룹에 정확한 3인/MFA 조건의 새 inline policy를 추가하는 후보다. 기존 두 조회 정책의 Action/Resource 범위를 유지한다. 이 요청은 준비 착수이며 AWS 적용/독립 리뷰/정본 변경 완료가 아니다. ELB 생성과 구축용 역할은 분리한다.
