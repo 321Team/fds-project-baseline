@@ -1,0 +1,80 @@
+{
+  "SchemaVersion": 1,
+  "EvidenceBasis": "USER_PROVIDED_CLOUDSHELL_TERMINAL_LOG",
+  "OriginalCaptureFilesReceived": false,
+  "DirectAWSRequeryByAssistant": "NOT_RUN",
+  "UserMessageKST": "2026-10-07T01:20:42+09:00",
+  "SummaryUTC": "2026-10-06T16:14:01.215913+00:00",
+  "SummaryKST": "2026-10-07T01:14:01.215913+09:00",
+  "TimestampScope": "COLLECTOR_SUMMARY_TIMESTAMP_BEFORE_IAM_SNAPSHOT_AND_SIMULATION; NOT_COMPLETION_TIME",
+  "Account": "774055931866",
+  "Region": "ap-northeast-2",
+  "ExecutionArn": "arn:aws:iam::774055931866:root",
+  "CaptureDirectory": "/home/cloudshell-user/fds-iac-delta-precheck-j2uxfqvr",
+  "ReviewedCollectorHead": "c55fd28afbba183103dec7636f67d3fa9e365f5a",
+  "CollectorMerge": "c34ca9c12d7cb38d610829cc59460ec6a8d87b1a",
+  "CandidateSourceMerge": "f1e66492ca87f21d99d9848ab8606cd08185b9ff",
+  "CandidateRawSHA256": {
+    "candidates/iac-backend-passrole.candidate.json": "53eb7e501658c54d7e63802899731fccf49cc0d7de4ae18d87c996c7a9561562",
+    "candidates/state-bucket-policy.candidate.json": "05f66bd2f8041dd14f032a166cfe9ab2abfb307024d2d0452e9fef47d6ae5813",
+    "inputs/lead-values.json": "255321f7ea1a91cb27399e49467fa46bcff503d1d31dbad1eb8b14b0fbf50221"
+  },
+  "CollectorRawSHA256": "277f0b08695e486186820ec26d2087502467e2de585d10a64cf6b5f59d3b04f5",
+  "ArchiveSHA256": "d1ff91b564ad8c08ade9ce0e0166cee9e481cc6f81ab013864364771a7efda73",
+  "CloudShellPrecheck": {
+    "ArchiveHash": "PASS_REPORTED",
+    "UnitTests": "16_PASS_REPORTED",
+    "SourceManifestItems": "13_PASS_REPORTED",
+    "CaptureManifestVerification": "NOT_RECEIVED"
+  },
+  "Collection": "COMPLETE_REPORTED",
+  "IAC_DELTA_RC": 0,
+  "ValidatePolicy": {
+    "Result": "NO_FINDINGS_REPORTED",
+    "IdentityFindingCount": 0,
+    "BucketFindingCount": 0,
+    "FindingTypes": {"ERROR": 0, "SECURITY_WARNING": 0, "WARNING": 0, "SUGGESTION": 0}
+  },
+  "CandidateDeltaMatrix": {
+    "Result": "46_CASES_PASS_REPORTED",
+    "PartialIdentityCases": 28,
+    "IAMUserBucketDenyOverrideCases": 18,
+    "ExpectedFromReviewedSourceOnly": {
+      "ActionEvaluationCount": 93,
+      "allowed": 28,
+      "explicitDeny": 50,
+      "implicitDeny": 15
+    },
+    "RawEvaluationCountsReceived": false,
+    "NegativeMissingContextAndMatchedStatementReview": "PENDING_RAW_RESPONSE_SUMMARY"
+  },
+  "IAMSnapshot": {
+    "Roles": {
+      "FDS-IaC-Operator": "ABSENT_AT_CAPTURE_REPORTED",
+      "FDS-Network-Operator": "ABSENT_AT_CAPTURE_REPORTED",
+      "FDS-ReadOnly-Audit": "PRESENT_SNAPSHOT_ONLY_REPORTED",
+      "FDS-Relay-SSM": "ABSENT_AT_CAPTURE_REPORTED"
+    },
+    "RelayProfile": "ABSENT_AT_CAPTURE_REPORTED",
+    "ManagedPolicies": {}
+  },
+  "BucketSnapshot": {
+    "State": "ABSENT_AT_CAPTURE_REPORTED",
+    "Bootstrap": "NOT_RUN",
+    "NameAvailability": "NOT_GUARANTEED",
+    "ProtectionReadback": "NOT_APPLICABLE_BUCKET_ABSENT"
+  },
+  "Runtime": {
+    "Python": "3.13.15",
+    "Platform": "Linux-6.1.186-228.376.amzn2023.x86_64-x86_64-with-glibc2.34",
+    "AWSCLI": "aws-cli/2.37.6 Python/3.14.6 Linux/6.1.186-228.376.amzn2023.x86_64 exec-env/CloudShell exe/x86_64.amzn.2023"
+  },
+  "AWS_MUTATION": "NOT_RUN",
+  "ROLE_GRANT": "NOT_RUN",
+  "USER_RUNTIME": "NOT_TESTED",
+  "ROLE_RESOURCE_POLICY_SIMULATION": "NOT_SUPPORTED_NOT_TESTED",
+  "ROOT_RECOVERY_RUNTIME": "NOT_TESTED",
+  "EFFECTIVE_PERMISSIONS": "NOT_TESTED",
+  "APPLY_READINESS": "NOT_ASSESSED",
+  "ActualEC2RelayEIPOrSessionDocumentInventory": "NOT_COLLECTED_THIS_RUN"
+}
