@@ -1,0 +1,33 @@
+{
+  "STATUS": "UNRESOLVED_REVIEW_INPUT_NOT_FOR_ATTACHMENT",
+  "HumanAction": "ssmmessages:OpenDataChannel",
+  "OfficialSessionExampleCandidate": {
+    "Effect": "Allow",
+    "Action": "ssmmessages:OpenDataChannel",
+    "Resource": "arn:aws:ssm:ap-northeast-2:774055931866:session/${aws:userid}-*",
+    "Condition": {"StringEquals": {"aws:RequestedRegion": "ap-northeast-2"}}
+  },
+  "ServiceAuthorizationResourceCandidate": {
+    "Effect": "Allow",
+    "Action": "ssmmessages:OpenDataChannel",
+    "Resource": "*",
+    "Condition": {"StringEquals": {"aws:RequestedRegion": "ap-northeast-2"}}
+  },
+  "ConfirmedPermissionTemplateIncludesEitherOption": false,
+  "HumanRoleExcludedAgentActions": [
+    "ssmmessages:CreateControlChannel", "ssmmessages:CreateDataChannel",
+    "ssmmessages:OpenControlChannel"
+  ],
+  "ResolutionRequired": [
+    "Central ValidatePolicy and candidate simulation with findings preserved",
+    "Identify the actual approved Session Manager client and plugin path",
+    "Verify first Stage-A Relay connection using session and caller binding without retaining TokenValue",
+    "Review the final selected channel statement; do not silently add all four actions or Resource star",
+    "Resource-star choice does not prove channel-level per-session ARN isolation"
+  ],
+  "Sources": [
+    "https://docs.aws.amazon.com/systems-manager/latest/userguide/getting-started-restrict-access-examples.html",
+    "https://docs.aws.amazon.com/service-authorization/latest/reference/list_ssmmessages.html",
+    "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_StartSession.html"
+  ]
+}
