@@ -1,0 +1,517 @@
+{
+  "STATUS": "USER_STDOUT_RECEIVED_NOT_FULL_PRIVATE_CAPTURE",
+  "ReceivedKST": "2026-10-06T17:54:40+09:00",
+  "CollectorHead": "5bfec301b84b308f3d1d8ae974e70dc81642d189",
+  "CollectorMerge": "8dbc4bcad19eba4e8b1f3d3be859e7484cef640a",
+  "CollectorSHA256": "f955a5c56c42183b93953282bb48851347ca53c0d0ba251849fe339db80d4d42",
+  "SuppliedTextSHA256": "33c5f39504c79da2a416bc18ecff084f5a81e87b09615c60a2f1068ea9277c4e",
+  "SuppliedTextBytes": 24125,
+  "CAPTURE_DIR": "/home/cloudshell-user/fds-network-permission-precheck-bruyz836",
+  "NETWORK_PRECHECK_RC": 0,
+  "NETWORK_CANDIDATE_CAPTURE": "COMPLETE",
+  "Cases": 120,
+  "ExpectedPolicyMatches": 96,
+  "ChannelObservations": 24,
+  "ReusedCases": 32,
+  "FreshCases": 88,
+  "CandidateValidation": {
+    "arn-Bool": "NO_FINDINGS",
+    "arn-BoolIfExists": "NO_FINDINGS",
+    "star-Bool": "NO_FINDINGS",
+    "star-BoolIfExists": "NO_FINDINGS"
+  },
+  "Document": "ABSENT_OR_UNAVAILABLE",
+  "FullPrivateCaptureReceived": false,
+  "CaptureManifestIndependentlyChecked": false,
+  "RawExecutionIdentityReceived": false,
+  "ChannelObservationDetails": [
+    {
+      "Candidate": "arn-Bool",
+      "Label": "channel-observe-own",
+      "Status": "OBSERVED_NOT_RUNTIME_PROOF",
+      "Observed": [
+        {
+          "Action": "ssmmessages:OpenDataChannel",
+          "Resource": "arn:aws:ssm:ap-northeast-2:774055931866:session/AROASYNTHETICNETWORK01:321team-gwonuk-example",
+          "Decision": "implicitDeny",
+          "MissingContextValues": [],
+          "EvidenceLevel": "RESOURCE_SPECIFIC"
+        }
+      ],
+      "Evidence": {
+        "Stdout": "prior-029-arn-Bool-25-stdout.txt",
+        "Stderr": "prior-029-arn-Bool-25-stderr.txt",
+        "Status": "prior-029-arn-Bool-25-status.json"
+      },
+      "Acquisition": "REUSED_VERIFIED_RAW"
+    },
+    {
+      "Candidate": "arn-Bool",
+      "Label": "channel-observe-other",
+      "Status": "OBSERVED_NOT_RUNTIME_PROOF",
+      "Observed": [
+        {
+          "Action": "ssmmessages:OpenDataChannel",
+          "Resource": "arn:aws:ssm:ap-northeast-2:774055931866:session/AROASYNTHETICNETWORK01:321team-jaehwan-example",
+          "Decision": "implicitDeny",
+          "MissingContextValues": [],
+          "EvidenceLevel": "RESOURCE_SPECIFIC"
+        }
+      ],
+      "Evidence": {
+        "Stdout": "prior-030-arn-Bool-26-stdout.txt",
+        "Stderr": "prior-030-arn-Bool-26-stderr.txt",
+        "Status": "prior-030-arn-Bool-26-status.json"
+      },
+      "Acquisition": "REUSED_VERIFIED_RAW"
+    },
+    {
+      "Candidate": "arn-Bool",
+      "Label": "channel-observe-star",
+      "Status": "OBSERVED_NOT_RUNTIME_PROOF",
+      "Observed": [
+        {
+          "Action": "ssmmessages:OpenDataChannel",
+          "Resource": "*",
+          "Decision": "implicitDeny",
+          "MissingContextValues": [],
+          "EvidenceLevel": "SINGLE_RESOURCE_AGGREGATE"
+        }
+      ],
+      "Evidence": {
+        "Stdout": "prior-031-arn-Bool-27-stdout.txt",
+        "Stderr": "prior-031-arn-Bool-27-stderr.txt",
+        "Status": "prior-031-arn-Bool-27-status.json"
+      },
+      "Acquisition": "REUSED_VERIFIED_RAW"
+    },
+    {
+      "Candidate": "arn-Bool",
+      "Label": "channel-observe-outside-region",
+      "Status": "OBSERVED_NOT_RUNTIME_PROOF",
+      "Observed": [
+        {
+          "Action": "ssmmessages:OpenDataChannel",
+          "Resource": "*",
+          "Decision": "implicitDeny",
+          "MissingContextValues": [],
+          "EvidenceLevel": "SINGLE_RESOURCE_AGGREGATE"
+        }
+      ],
+      "Evidence": {
+        "Stdout": "prior-032-arn-Bool-28-stdout.txt",
+        "Stderr": "prior-032-arn-Bool-28-stderr.txt",
+        "Status": "prior-032-arn-Bool-28-status.json"
+      },
+      "Acquisition": "REUSED_VERIFIED_RAW"
+    },
+    {
+      "Candidate": "arn-Bool",
+      "Label": "channel-observe-role-session-name-321team-gwonuk",
+      "Status": "OBSERVED_NOT_RUNTIME_PROOF",
+      "Observed": [
+        {
+          "Action": "ssmmessages:OpenDataChannel",
+          "Resource": "arn:aws:ssm:ap-northeast-2:774055931866:session/321team-gwonuk-0123456789abcdef0",
+          "Decision": "implicitDeny",
+          "MissingContextValues": [],
+          "EvidenceLevel": "RESOURCE_SPECIFIC"
+        }
+      ],
+      "Evidence": {
+        "Stdout": "005-arn-Bool-29-stdout.txt",
+        "Stderr": "005-arn-Bool-29-stderr.txt",
+        "Status": "005-arn-Bool-29-status.json"
+      },
+      "Acquisition": "FRESH"
+    },
+    {
+      "Candidate": "arn-Bool",
+      "Label": "channel-observe-role-session-name-321team-jaehwan",
+      "Status": "OBSERVED_NOT_RUNTIME_PROOF",
+      "Observed": [
+        {
+          "Action": "ssmmessages:OpenDataChannel",
+          "Resource": "arn:aws:ssm:ap-northeast-2:774055931866:session/321team-jaehwan-0123456789abcdef0",
+          "Decision": "implicitDeny",
+          "MissingContextValues": [],
+          "EvidenceLevel": "RESOURCE_SPECIFIC"
+        }
+      ],
+      "Evidence": {
+        "Stdout": "006-arn-Bool-30-stdout.txt",
+        "Stderr": "006-arn-Bool-30-stderr.txt",
+        "Status": "006-arn-Bool-30-status.json"
+      },
+      "Acquisition": "FRESH"
+    },
+    {
+      "Candidate": "arn-BoolIfExists",
+      "Label": "channel-observe-own",
+      "Status": "OBSERVED_NOT_RUNTIME_PROOF",
+      "Observed": [
+        {
+          "Action": "ssmmessages:OpenDataChannel",
+          "Resource": "arn:aws:ssm:ap-northeast-2:774055931866:session/AROASYNTHETICNETWORK01:321team-gwonuk-example",
+          "Decision": "implicitDeny",
+          "MissingContextValues": [],
+          "EvidenceLevel": "RESOURCE_SPECIFIC"
+        }
+      ],
+      "Evidence": {
+        "Stdout": "029-arn-BoolIfExists-25-stdout.txt",
+        "Stderr": "029-arn-BoolIfExists-25-stderr.txt",
+        "Status": "029-arn-BoolIfExists-25-status.json"
+      },
+      "Acquisition": "FRESH"
+    },
+    {
+      "Candidate": "arn-BoolIfExists",
+      "Label": "channel-observe-other",
+      "Status": "OBSERVED_NOT_RUNTIME_PROOF",
+      "Observed": [
+        {
+          "Action": "ssmmessages:OpenDataChannel",
+          "Resource": "arn:aws:ssm:ap-northeast-2:774055931866:session/AROASYNTHETICNETWORK01:321team-jaehwan-example",
+          "Decision": "implicitDeny",
+          "MissingContextValues": [],
+          "EvidenceLevel": "RESOURCE_SPECIFIC"
+        }
+      ],
+      "Evidence": {
+        "Stdout": "030-arn-BoolIfExists-26-stdout.txt",
+        "Stderr": "030-arn-BoolIfExists-26-stderr.txt",
+        "Status": "030-arn-BoolIfExists-26-status.json"
+      },
+      "Acquisition": "FRESH"
+    },
+    {
+      "Candidate": "arn-BoolIfExists",
+      "Label": "channel-observe-star",
+      "Status": "OBSERVED_NOT_RUNTIME_PROOF",
+      "Observed": [
+        {
+          "Action": "ssmmessages:OpenDataChannel",
+          "Resource": "*",
+          "Decision": "implicitDeny",
+          "MissingContextValues": [],
+          "EvidenceLevel": "SINGLE_RESOURCE_AGGREGATE"
+        }
+      ],
+      "Evidence": {
+        "Stdout": "031-arn-BoolIfExists-27-stdout.txt",
+        "Stderr": "031-arn-BoolIfExists-27-stderr.txt",
+        "Status": "031-arn-BoolIfExists-27-status.json"
+      },
+      "Acquisition": "FRESH"
+    },
+    {
+      "Candidate": "arn-BoolIfExists",
+      "Label": "channel-observe-outside-region",
+      "Status": "OBSERVED_NOT_RUNTIME_PROOF",
+      "Observed": [
+        {
+          "Action": "ssmmessages:OpenDataChannel",
+          "Resource": "*",
+          "Decision": "implicitDeny",
+          "MissingContextValues": [],
+          "EvidenceLevel": "SINGLE_RESOURCE_AGGREGATE"
+        }
+      ],
+      "Evidence": {
+        "Stdout": "032-arn-BoolIfExists-28-stdout.txt",
+        "Stderr": "032-arn-BoolIfExists-28-stderr.txt",
+        "Status": "032-arn-BoolIfExists-28-status.json"
+      },
+      "Acquisition": "FRESH"
+    },
+    {
+      "Candidate": "arn-BoolIfExists",
+      "Label": "channel-observe-role-session-name-321team-gwonuk",
+      "Status": "OBSERVED_NOT_RUNTIME_PROOF",
+      "Observed": [
+        {
+          "Action": "ssmmessages:OpenDataChannel",
+          "Resource": "arn:aws:ssm:ap-northeast-2:774055931866:session/321team-gwonuk-0123456789abcdef0",
+          "Decision": "implicitDeny",
+          "MissingContextValues": [],
+          "EvidenceLevel": "RESOURCE_SPECIFIC"
+        }
+      ],
+      "Evidence": {
+        "Stdout": "033-arn-BoolIfExists-29-stdout.txt",
+        "Stderr": "033-arn-BoolIfExists-29-stderr.txt",
+        "Status": "033-arn-BoolIfExists-29-status.json"
+      },
+      "Acquisition": "FRESH"
+    },
+    {
+      "Candidate": "arn-BoolIfExists",
+      "Label": "channel-observe-role-session-name-321team-jaehwan",
+      "Status": "OBSERVED_NOT_RUNTIME_PROOF",
+      "Observed": [
+        {
+          "Action": "ssmmessages:OpenDataChannel",
+          "Resource": "arn:aws:ssm:ap-northeast-2:774055931866:session/321team-jaehwan-0123456789abcdef0",
+          "Decision": "implicitDeny",
+          "MissingContextValues": [],
+          "EvidenceLevel": "RESOURCE_SPECIFIC"
+        }
+      ],
+      "Evidence": {
+        "Stdout": "034-arn-BoolIfExists-30-stdout.txt",
+        "Stderr": "034-arn-BoolIfExists-30-stderr.txt",
+        "Status": "034-arn-BoolIfExists-30-status.json"
+      },
+      "Acquisition": "FRESH"
+    },
+    {
+      "Candidate": "star-Bool",
+      "Label": "channel-observe-own",
+      "Status": "OBSERVED_NOT_RUNTIME_PROOF",
+      "Observed": [
+        {
+          "Action": "ssmmessages:OpenDataChannel",
+          "Resource": "arn:aws:ssm:ap-northeast-2:774055931866:session/AROASYNTHETICNETWORK01:321team-gwonuk-example",
+          "Decision": "implicitDeny",
+          "MissingContextValues": [],
+          "EvidenceLevel": "RESOURCE_SPECIFIC"
+        }
+      ],
+      "Evidence": {
+        "Stdout": "061-star-Bool-25-stdout.txt",
+        "Stderr": "061-star-Bool-25-stderr.txt",
+        "Status": "061-star-Bool-25-status.json"
+      },
+      "Acquisition": "FRESH"
+    },
+    {
+      "Candidate": "star-Bool",
+      "Label": "channel-observe-other",
+      "Status": "OBSERVED_NOT_RUNTIME_PROOF",
+      "Observed": [
+        {
+          "Action": "ssmmessages:OpenDataChannel",
+          "Resource": "arn:aws:ssm:ap-northeast-2:774055931866:session/AROASYNTHETICNETWORK01:321team-jaehwan-example",
+          "Decision": "implicitDeny",
+          "MissingContextValues": [],
+          "EvidenceLevel": "RESOURCE_SPECIFIC"
+        }
+      ],
+      "Evidence": {
+        "Stdout": "062-star-Bool-26-stdout.txt",
+        "Stderr": "062-star-Bool-26-stderr.txt",
+        "Status": "062-star-Bool-26-status.json"
+      },
+      "Acquisition": "FRESH"
+    },
+    {
+      "Candidate": "star-Bool",
+      "Label": "channel-observe-star",
+      "Status": "OBSERVED_NOT_RUNTIME_PROOF",
+      "Observed": [
+        {
+          "Action": "ssmmessages:OpenDataChannel",
+          "Resource": "*",
+          "Decision": "allowed",
+          "MissingContextValues": [],
+          "EvidenceLevel": "SINGLE_RESOURCE_AGGREGATE"
+        }
+      ],
+      "Evidence": {
+        "Stdout": "063-star-Bool-27-stdout.txt",
+        "Stderr": "063-star-Bool-27-stderr.txt",
+        "Status": "063-star-Bool-27-status.json"
+      },
+      "Acquisition": "FRESH"
+    },
+    {
+      "Candidate": "star-Bool",
+      "Label": "channel-observe-outside-region",
+      "Status": "OBSERVED_NOT_RUNTIME_PROOF",
+      "Observed": [
+        {
+          "Action": "ssmmessages:OpenDataChannel",
+          "Resource": "*",
+          "Decision": "implicitDeny",
+          "MissingContextValues": [],
+          "EvidenceLevel": "SINGLE_RESOURCE_AGGREGATE"
+        }
+      ],
+      "Evidence": {
+        "Stdout": "064-star-Bool-28-stdout.txt",
+        "Stderr": "064-star-Bool-28-stderr.txt",
+        "Status": "064-star-Bool-28-status.json"
+      },
+      "Acquisition": "FRESH"
+    },
+    {
+      "Candidate": "star-Bool",
+      "Label": "channel-observe-role-session-name-321team-gwonuk",
+      "Status": "OBSERVED_NOT_RUNTIME_PROOF",
+      "Observed": [
+        {
+          "Action": "ssmmessages:OpenDataChannel",
+          "Resource": "arn:aws:ssm:ap-northeast-2:774055931866:session/321team-gwonuk-0123456789abcdef0",
+          "Decision": "implicitDeny",
+          "MissingContextValues": [],
+          "EvidenceLevel": "RESOURCE_SPECIFIC"
+        }
+      ],
+      "Evidence": {
+        "Stdout": "065-star-Bool-29-stdout.txt",
+        "Stderr": "065-star-Bool-29-stderr.txt",
+        "Status": "065-star-Bool-29-status.json"
+      },
+      "Acquisition": "FRESH"
+    },
+    {
+      "Candidate": "star-Bool",
+      "Label": "channel-observe-role-session-name-321team-jaehwan",
+      "Status": "OBSERVED_NOT_RUNTIME_PROOF",
+      "Observed": [
+        {
+          "Action": "ssmmessages:OpenDataChannel",
+          "Resource": "arn:aws:ssm:ap-northeast-2:774055931866:session/321team-jaehwan-0123456789abcdef0",
+          "Decision": "implicitDeny",
+          "MissingContextValues": [],
+          "EvidenceLevel": "RESOURCE_SPECIFIC"
+        }
+      ],
+      "Evidence": {
+        "Stdout": "066-star-Bool-30-stdout.txt",
+        "Stderr": "066-star-Bool-30-stderr.txt",
+        "Status": "066-star-Bool-30-status.json"
+      },
+      "Acquisition": "FRESH"
+    },
+    {
+      "Candidate": "star-BoolIfExists",
+      "Label": "channel-observe-own",
+      "Status": "OBSERVED_NOT_RUNTIME_PROOF",
+      "Observed": [
+        {
+          "Action": "ssmmessages:OpenDataChannel",
+          "Resource": "arn:aws:ssm:ap-northeast-2:774055931866:session/AROASYNTHETICNETWORK01:321team-gwonuk-example",
+          "Decision": "implicitDeny",
+          "MissingContextValues": [],
+          "EvidenceLevel": "RESOURCE_SPECIFIC"
+        }
+      ],
+      "Evidence": {
+        "Stdout": "093-star-BoolIfExists-25-stdout.txt",
+        "Stderr": "093-star-BoolIfExists-25-stderr.txt",
+        "Status": "093-star-BoolIfExists-25-status.json"
+      },
+      "Acquisition": "FRESH"
+    },
+    {
+      "Candidate": "star-BoolIfExists",
+      "Label": "channel-observe-other",
+      "Status": "OBSERVED_NOT_RUNTIME_PROOF",
+      "Observed": [
+        {
+          "Action": "ssmmessages:OpenDataChannel",
+          "Resource": "arn:aws:ssm:ap-northeast-2:774055931866:session/AROASYNTHETICNETWORK01:321team-jaehwan-example",
+          "Decision": "implicitDeny",
+          "MissingContextValues": [],
+          "EvidenceLevel": "RESOURCE_SPECIFIC"
+        }
+      ],
+      "Evidence": {
+        "Stdout": "094-star-BoolIfExists-26-stdout.txt",
+        "Stderr": "094-star-BoolIfExists-26-stderr.txt",
+        "Status": "094-star-BoolIfExists-26-status.json"
+      },
+      "Acquisition": "FRESH"
+    },
+    {
+      "Candidate": "star-BoolIfExists",
+      "Label": "channel-observe-star",
+      "Status": "OBSERVED_NOT_RUNTIME_PROOF",
+      "Observed": [
+        {
+          "Action": "ssmmessages:OpenDataChannel",
+          "Resource": "*",
+          "Decision": "allowed",
+          "MissingContextValues": [],
+          "EvidenceLevel": "SINGLE_RESOURCE_AGGREGATE"
+        }
+      ],
+      "Evidence": {
+        "Stdout": "095-star-BoolIfExists-27-stdout.txt",
+        "Stderr": "095-star-BoolIfExists-27-stderr.txt",
+        "Status": "095-star-BoolIfExists-27-status.json"
+      },
+      "Acquisition": "FRESH"
+    },
+    {
+      "Candidate": "star-BoolIfExists",
+      "Label": "channel-observe-outside-region",
+      "Status": "OBSERVED_NOT_RUNTIME_PROOF",
+      "Observed": [
+        {
+          "Action": "ssmmessages:OpenDataChannel",
+          "Resource": "*",
+          "Decision": "implicitDeny",
+          "MissingContextValues": [],
+          "EvidenceLevel": "SINGLE_RESOURCE_AGGREGATE"
+        }
+      ],
+      "Evidence": {
+        "Stdout": "096-star-BoolIfExists-28-stdout.txt",
+        "Stderr": "096-star-BoolIfExists-28-stderr.txt",
+        "Status": "096-star-BoolIfExists-28-status.json"
+      },
+      "Acquisition": "FRESH"
+    },
+    {
+      "Candidate": "star-BoolIfExists",
+      "Label": "channel-observe-role-session-name-321team-gwonuk",
+      "Status": "OBSERVED_NOT_RUNTIME_PROOF",
+      "Observed": [
+        {
+          "Action": "ssmmessages:OpenDataChannel",
+          "Resource": "arn:aws:ssm:ap-northeast-2:774055931866:session/321team-gwonuk-0123456789abcdef0",
+          "Decision": "implicitDeny",
+          "MissingContextValues": [],
+          "EvidenceLevel": "RESOURCE_SPECIFIC"
+        }
+      ],
+      "Evidence": {
+        "Stdout": "097-star-BoolIfExists-29-stdout.txt",
+        "Stderr": "097-star-BoolIfExists-29-stderr.txt",
+        "Status": "097-star-BoolIfExists-29-status.json"
+      },
+      "Acquisition": "FRESH"
+    },
+    {
+      "Candidate": "star-BoolIfExists",
+      "Label": "channel-observe-role-session-name-321team-jaehwan",
+      "Status": "OBSERVED_NOT_RUNTIME_PROOF",
+      "Observed": [
+        {
+          "Action": "ssmmessages:OpenDataChannel",
+          "Resource": "arn:aws:ssm:ap-northeast-2:774055931866:session/321team-jaehwan-0123456789abcdef0",
+          "Decision": "implicitDeny",
+          "MissingContextValues": [],
+          "EvidenceLevel": "RESOURCE_SPECIFIC"
+        }
+      ],
+      "Evidence": {
+        "Stdout": "098-star-BoolIfExists-30-stdout.txt",
+        "Stderr": "098-star-BoolIfExists-30-stderr.txt",
+        "Status": "098-star-BoolIfExists-30-status.json"
+      },
+      "Acquisition": "FRESH"
+    }
+  ],
+  "RECOMMENDED_CANDIDATE": "star-Bool",
+  "RECOMMENDATION_STATUS": "PROPOSED_FOR_REVIEW_NOT_RUNTIME_APPROVED",
+  "CHANNEL_SELECTION": "NOT_MADE",
+  "FINAL_APPLY_POLICY": "NOT_CREATED",
+  "ROLE_GRANT": "NOT_RUN",
+  "AWS_MUTATION": "NOT_RUN",
+  "USER_EFFECTIVE_PERMISSION": "NOT_TESTED",
+  "APPLY_READINESS": "NOT_ASSESSED"
+}
