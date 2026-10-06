@@ -44,7 +44,7 @@ TLS Deny는 일반 호출에서 강제하며 AWS service network 문맥 문제�
 
 PutObject는 명시적으로 AES256 외의 SSE header나 SSE-C header를 사용하면 Deny한다. encryption header 생략은 **실제 bucket default가 SSE-S3/AES256임을 확인한 조건**에서 정상 lock writer를 지원한다. 기본 암호화·Versioning/PAB/ACL disabled/TLS 보호가 완성됐다는 증거는 이 JSON만으로 만들 수 없다. 버킷 설정 readback은 중앙 bootstrap에 포함한다. 일반 IaC에는 bucket 보호 변경을 열지 않는다.
 
-정확한 4 state/4 lock 이외의 backup·snapshot·임시 state 객체는 이번 예외 범위에 없다. 새 객체 경로를 저장하기 전에 접근 경계를 별도로 정의한다. 복구는 동일 key의 VersionId 보존 경로를 기본으로 하며 원본 state·binary plan·credentials를 GitHub/stdout에 공개하지 않는다. PSK/장기 credential은 source/plan/state/AMI에 넣지 않는다.
+정확한 4 state/4 lock 이외의 backup·snapshot·임시 state 객체는 이번 예외 범위에 없다. 새 객체 경로를 저장하기 전에 접근 경계를 별도로 정의한다. 복구는 동일 key의 VersionId 보존 경로를 기본으로 하며 원본 state·binary plan·credentials를 GitHub/stdout에 공개하지 않는다. PSK/장기 credential은 source/tfvars/user_data/plan/state/AMI에 넣지 않는다. user_data는 bootstrap 패키지·포워딩 설정까지만 사용하며 비밀은 본인 Session에서 입력한다.
 
 ## 로컬 검증과 다음 실행
 
@@ -59,7 +59,9 @@ sha256sum -c SHA256SUMS
 
 다음 단계는 [integration.md](integration.md)의 actual resource/API 인계와 변경 범위 검증이다. 중앙 policy validation과 identity-side delta simulation은 해당 후보/완성 소스로 진행하되 bucket-policy role 평가의 simulator 지원 범위를 확인한다. 일반 사용자/Audit 음성 및 IaC role의 실제 원문/lock 동작은 비밀 없는 fixture와 본인 역할에서 별도로 받는다. 기존 unchanged identity22/Network120을 전체 재실행할 이유는 없다.
 
-`SOURCE=PARTIAL_CANDIDATE / INDEPENDENT_REVIEW=NOT_RECEIVED / AWS_VALIDATE_POLICY=NOT_RUN / AWS_SIMULATION=NOT_RUN / AWS_MUTATION=NOT_RUN / ROLE_GRANT=NOT_RUN / USER_RUNTIME=NOT_TESTED / APPLY_READINESS=NOT_ASSESSED`
+PR145 HEAD `8c2640e4e6ef9120661d996d0a3d9fed375a99fc`는 하영·재환의 독립 승인 후 2026-10-06 21:57:29 KST에 merge `f1e66492ca87f21d99d9848ab8606cd08185b9ff`로 편입됐다. 승인·병합은 부분 후보 소스에 대한 기록이며 AWS 적용·전체 IaC grant·U1 인수가 아니다. [중앙 delta 수집기](../20261007-iac-delta-precheck/README.md)는 이 병합 소스의 두 정책/고정 입력 bytes를 고정해 읽기 전용 검증 결과를 수집한다. 소스 자체의 과거 `NOT_RUN` 값과 실제 수신 결과를 구분한다.
+
+`SOURCE=PARTIAL_CANDIDATE_PR145_MERGED / PR145_INDEPENDENT_REVIEW=APPROVED / AWS_VALIDATE_POLICY=NOT_RUN_AT_SOURCE_PUBLICATION / AWS_SIMULATION=NOT_RUN_AT_SOURCE_PUBLICATION / AWS_MUTATION=NOT_RUN / ROLE_GRANT=NOT_RUN / USER_RUNTIME=NOT_TESTED / APPLY_READINESS=NOT_ASSESSED`
 
 ## 근거
 
