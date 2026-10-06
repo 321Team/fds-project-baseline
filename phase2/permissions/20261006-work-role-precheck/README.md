@@ -64,6 +64,24 @@ trust/identity JSON과 후속 업무 permissions·적용 코드는 §2/§3의 �
 
 중앙 validation/simulation → 완결된 정책 리뷰 → 중앙 grant/readback/기존 설정 보존 → 해당 본인 일반 계정 MFA 역할 전환 → 업무 허용·거부·모듈 복구 → PR139 결과 양식 회신. 담당자에게 중앙 발급을 맡기거나 발급 전 쓰기 성공을 요구하지 않는다. 비용 설정·유료 구축·#35 전체 AC/Freeze 해제는 별도 기존 조건이다.
 
-로컬 테스트 위치는 이 README 디렉터리, `python3 -m unittest discover -s tests -v`. 현재13개 offline unittest PASS이며 mock은 IAM simulator 실제 실행이 아니다. canonical-integrity CI는 이 단위시험을 실행한 것으로 표시하지 않는다. 실제 AWS 수집/ValidatePolicy/Simulator/role grant는 아직 NOT_RUN이다.
+로컬 테스트 위치는 이 README 디렉터리, `python3 -m unittest discover -s tests -v`. 13개 offline unittest PASS이며 mock은 IAM simulator 실제 실행이 아니다. canonical-integrity CI는 이 단위시험을 실행한 것으로 표시하지 않는다. 준비 시점의 AWS NOT_RUN 상태는 아래 사용자 실행 결과로 갱신한다.
+
+### 중앙 후보 검증 실행 결과 — 2026-10-06
+
+사용자 이권욱의 CloudShell stdout 기준: UTC 2026-10-06T04:50:55.355960+00:00 / KST 13:50:55.355960. 수신 시각은13:53 KST다. 실행 source `ff85a32d79a09895a428e0fdf3fb5283739e9916`, collector SHA256 `aee2a9c4faac0abef9c2d91795250e16d34fce2a503e34c1380e3d2c081b727c`, 파일 checksum OK 및 정상 종료 출력을 수신했다.
+
+| 항목 | 사용자 출력 판정 |
+|---|---|
+| 입력 수집 | CENTRAL_PRECHECK_CAPTURE=COMPLETE |
+| 후보5개 분석 | CANDIDATE_VALIDATION=NO_FINDINGS |
+| identity-side AssumeRole 후보22건 | PASS — 배정/MFA/본인 session name을 만족한4건 허용, 나머지18건 거부 기대 충족 |
+| 현재 역할 | 기존 Audit 존재; IaC·Network ABSENT |
+| 실제 trust·역할 전환 | TRUST_RUNTIME=NOT_TESTED |
+| 업무 permissions 시험·역할 발급 | WORK_ROLE_PERMISSION_SIMULATION=NOT_RUN / ROLE_GRANT=NOT_RUN |
+| AWS 변경·적용 준비 판정 | AWS_MUTATION=NOT_RUN / APPLY_READINESS=NOT_ASSESSED |
+
+CASE04/08/12/22는 MFA=True라도 잘못된 session name의 거부 시험이다. 기존 Audit의 PRESENT_REVIEW_REQUIRED는 역할이 존재한다는 collector 분류이며 Audit 장애 또는 새 승인을 요구하는 판정이 아니다. 역할 부재 상태에서도 후보 simulator는 실행할 수 있으므로 allowed 결과를 실제 역할 존재·전환·쓰기 성공으로 해석하지 않는다.
+
+원본 capture 경로는 `/home/cloudshell-user/fds-work-role-precheck-v0wj2i2q`다. Assistant가 AWS에 직접 접속하거나 capture 원본 파일·manifest를 독립 수신/재해시한 결과는 아니다. 다음은 이 후보 JSON/코드의 독립 리뷰 및 실제 resource implementation/backend/Relay SSM 입력을 받아 업무 쓰기 permissions를 완결하는 단계다. 비용 설정 제외와 각 본인 grant 후 runtime 결과 제출 순서를 유지한다.
 
 공식 근거: [SimulatePrincipalPolicy](https://docs.aws.amazon.com/IAM/latest/APIReference/API_SimulatePrincipalPolicy.html), [ValidatePolicy](https://docs.aws.amazon.com/access-analyzer/latest/APIReference/API_ValidatePolicy.html), [STS condition keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html), [MFA API](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_configure-api-require.html).
