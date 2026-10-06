@@ -4,6 +4,43 @@
 상태: 설계 후보 / AWS 권한 부여·ELB 생성 NOT_RUN / 독립 코드 리뷰 NOT_RUN.
 이 문서는 기존 담당·AC·일정·Freeze 판정을 변경하지 않는다.
 
+## 0. 중앙 검증·적용 → 담당자 본인 검증 — 2026-10-06 13:02 KST 사용자 지시
+
+이 절은 이전 댓글/설명의 실행 순서를 명확히 한다. 비용 설정 보류와 기본 조회 유지, 개별 정책의 각 본인 검증 원칙은 그대로다.
+
+| 단계 | 실행 주체 | 작업·정상 판정 | 다음 단계 |
+|---|---|---|---|
+| C0 정책 고정·독립 코드 리뷰 | 중앙 이권욱/Assistant + 독립 Reviewer | 배정표와 actual source/resource별 trust/Allow/Deny/PassRole/boundary/회수 범위, 파일 SHA 고정·정책 검토 | 리뷰가 필요한 코드/정책 범위만 확정 |
+| C1 중앙 변경 전 검증 | 교육장 root | identity·기존 정책 백업, 지원 API별 validation, 사용자 identity-side Assume와 role permission을 각 대상 principal/조건으로 simulation. 정상/비배정/MFA/리전/타 자원/권한 상승 케이스 | 기대와 일치한 묶음만 적용 |
+| C2 중앙 적용·readback | 교육장 root | IAM role/trust/정책 생성·연결과 exact 개인 Assume 허용. readback·배정표·기존 설정 보존·실제 연결 정책 재simulation. 다른 내용의 기존 역할/정책은 덮어쓰지 않고 STOP | 중앙 CONFIGURATION_PASS + 정책/대상/회수·원복 정보 전달 |
+| U1 본인 권한 실측 | 배정된 각 일반 계정 | MFA 로그인→본인 역할 전환→지정 대표 작업/비파괴 거부 확인. AWS/OCM/OpenShift/Registry/OS/DB의 실제 identity를 각각 기록 | USER_RUNTIME_PASS 또는 FAIL/NOT_RUN 회신 |
+| U2 모듈 정상·실패·복구 | 해당 업무 담당 + 권욱 지원/QA | actual 환경·reviewed source·실행 조건에 맞춰 쓰기와 원복. 실패 시 원복·잔여 확인 | 해당 케이스 MODULE_RUNTIME 결과 |
+| R 결과 취합 | 이권욱/Assistant | 중앙 결과와 사용자×role×환경 결과를 연결, 누락·불일치만 후속 | 실제 확인 단계만 완료 기록 |
+
+- **각 담당자에게 정책 적용·권한 발급을 맡기지 않는다.** 담당자는 현재 설계 리뷰/필수 입력 생산을 하고, 중앙 적용 결과와 검증 방법이 전달된 뒤 본인 계정으로 결과를 회신한다.
+- root는 검증 API의 실행자이다. simulation 대상은 각 IAM 사용자/업무 role이며 root 자체 권한이 아니다. root로 자원 생성이 성공했다는 사실은 사용자 role의 제한/허용 증거가 아니다.
+- identity-side sts:AssumeRole 모의 판정과 trust 정적 검토를 구분한다. 실제 trust/MFA/세션 조건은 본인 AssumeRole 실측으로 확인한다. 모의검증이 실제 서비스 요청이나 전체 SCP/resource/endpoint/세션 정책을 모두 증명한다고 표시하지 않는다.
+- IAM 권한 부여가 끝나도 ROSA/온프레미스 권한이 자동 발급되는 것은 아니다. 해당 층의 기존 관리 주체가 같은 순서로 설정하고 대상 사용자가 실측한다.
+- IAM 연결 전에 사용자의 실제 쓰기 성공을 요구하지 않는다. 정책 연결이 끝난 후 본인 결과를 수신한다. source/대상 미확정인 묶음은 준비 중으로 유지하면서 다른 묶음을 독립 진행한다.
+- 중앙 적용 실패/응답 불명 시 자동 재실행하지 않고 inventory/readback부터 확인한다. 기존 스냅샷 대비 이번 grant만 회수/원복하며 기존 공통 RO/자기관리/Audit를 건드리지 않는다.
+- IAM policy validation/simulator 명령과 변경 코드는 실제 JSON/입력 확정 후 함께 고정·검토한다. API별 region/context/dependent resource 및 pagination을 확인하고 부족한 context를 임의 값으로 PASS 처리하지 않는다.
+
+### 첫 묶음: ELB 초기 설정
+
+이재환(supreme33-kr)의 2026-10-06 12:57 KST APPROVED는 기존 HEAD57901c82의 bootstrap-elb.py/단위시험 및 설계 방향에 한정한다. 실제 IAM JSON/개별 role grant/simulator/AWS 적용 승인이 아니다. 리뷰 결과는 PR139 Reviews를 따른다.
+
+이번 문서 수정으로 ELB Python 코드·단위시험은 바뀌지 않았다. 기존 교육장 root에서 중앙 적용할 첫 묶음은 exact ELB 서비스 연결 역할 생성/검증 한 개다. SHA256 649a3d1d8c7aeb6f90a63a96233c4a8b2bef8ea430303a04a701d01b910a8a80의 기존 검토된 도구를 사용한다. 동작·중단·재조회는 §8을 따른다. 성공 결과를 수신하기 전 ELB_CREATE를 PASS로 올리지 않는다.
+
+### 현재 중앙 준비 상태
+
+| 묶음 | 중앙 상태 | 담당자 실측 |
+|---|---|---|
+| ELB SLR | 독립 검토된 도구 준비 / root 실행 결과 미수신 | 생성 후 일반 RO GetRole·ROSA 화면 확인 |
+| IaC/Network 업무 role | actual JSON·source/backend/target 입력 준비 중 / grant NOT_RUN | 중앙 적용 이후 요청 |
+| ROSA/App/CI/QA/Recovery | 층별 target/identity/binding 준비 중 | 해당 설정 이후 요청 |
+| 비용 설정 | 사용자 지시로 제외 | 요청 없음 |
+
+
 ## 1. 이번 지시와 권장안
 
 - 비용 설정 권한은 보류한다. Budgets/비용 경보/결제 설정/자동 Budget Action 권한을 이번 묶음에 넣지 않는다. 교육장 일일 비용 정보 + 자원 inventory/예상 가동시간/삭제 후 잔여로 통제한다.
@@ -42,6 +79,7 @@
 | ROSA platform / OCM+OpenShift | 플랫폼 모듈 검증 | 주 플랫폼 구성 | 앱 namespace 구성 소비·시험 | namespace-local 우선; 필요 cluster-scope 작업은 별도 시험 프로필 |
 | CI/CD deploy / OpenShift+Registry | 주 파이프라인·배포·롤백 | 플랫폼 지원·모듈 시험 | 앱 구현·배포·모듈 시험 | 전용 인간 그룹과 Runner SA/Robot을 분리 |
 | QA module-test / OpenShift+API+DB | 공통 QA·회귀 | 플랫폼/보안/복구 시험 | App/Hybrid/E2E 시험 | 팀 전용 시험 namespace/fixture; namespace 밖 쓰기·실제업무 데이터 변경 제외 |
+| On-Prem 변경 / OS·DB | vpn-gw01/db01 지원·검증 | 기존 관리 권한 범위의 계정·접근 제공 지원 | 주 OS/DB 구성·검증 | vpn-gw01 IPsec, db01 route/firewalld/pg_hba; AWS IAM과 별도 |
 | Recovery test / AWS+OCM+OpenShift+OS | 지정 시험 실행 | 플랫폼 replacement/복구 | Relay/App/Hybrid 복구 | 역할별 허용 대상 분리, 한 회차 한 장애주입 실행자 |
 | Teardown / Terraform+OCM | 비용 통제에 따른 정리·확인 | 인프라/클러스터 정리 | 담당 임시 workload/fixture/OS 설정 정리 | Terraform/클러스터 정상 삭제 경로; 임의 worker 종료·state 삭제 제외 |
 | DNS / 선택 후 해당 층 | 주 구현·시험 | IaC/platform 지원 | 연결성 시험 | D23 Go 및 exact zone/resolver만 |
@@ -80,6 +118,8 @@
 - IPsec/Libreswan·firewalld·systemd·승인 route/selector 설정·rekey/restart는 host 권한으로 구현한다. 온프레미스 vpn-gw01도 별도 OS 계정 권한을 사용한다.
 - Relay reboot/start/stop은 복구 시험에 필요한 exact instance만. EC2 role 생성, instance profile 교체, 임의 user-data·태그 변경, EIP/route 재구성은 기본 Network 프로필 제외.
 - AWS route/SG/EIP 구조 변경은 IaC profile의 검토된 Terraform 변경으로 수행한다. 재환에게 managed VPN/전체 EC2FullAccess를 주지 않는다.
+- Relay rebuild(Terraform 재생성)는 IaC 실행자 하영 또는 권욱이 수행하고, 재환은 구성 재적용·Tunnel/복구 검증을 수행한다. 재환에게 rebuild를 이유로 전체 IaC 권한을 추가하지 않는다.
+- 온프레미스 계정·sudo/DB role은 해당 호스트의 기존 관리자에게 발급·연결을 요청하며 새로운 계정 발급자를 임의 지정하지 않는다. 재환에게 vpn-gw01 IPsec·db01 route/firewalld/pg_hba 작업 범위를 제공하고 권욱에게 지원·검증 접근을 연결한다. #47 P1-DB carryover3건은 #19 upstream 이관 후 같은 변경 창에 수행하는 기존 조건을 유지한다.
 
 ### D. ROSA 플랫폼 — 하영 구축, 권욱 검증
 
@@ -93,6 +133,7 @@
 ### E. App/CI/CD/QA — namespace와 credential 분리
 
 - App builder(재환): 팀 app namespace의 Deployment/Service/Route/ConfigMap, 승인 Secret reference와 필요한 초기 Secret 설정, probe/security config, 배포·롤백·smoke.
+- App portability/debug 시험 프로필: PG03 실제 UID 확인 등 필요한 경우 팀 app namespace의 pods/log·pods/exec를 재환 및 지정 시험 실행자에게 별도 연결한다. QA 기본에서 exec 제외는 유지한다. namespace 안의 실제 target·접근 Secret·SA·명령/시험 창을 고정하고, RBAC가 라벨/시간/exec 명령 내용을 자체 제한한다고 주장하지 않는다. 실행 후 임시 binding 회수 및 원복을 확인한다.
 - CI/CD operator(권욱): Runner direct deploy, 승인 image digest 업데이트, rollout/status/rollback, Test/Scan 실패 시 deploy 차단. Registry 결정 전 ECR 권한은 자동 추가하지 않는다.
 - Runner deploy identity: namespace-local SA/RBAC, 짧은 수명 token/reference, pipeline OIDC 사용 시 exact repo/environment/audience trust. 인간 MFA 조건을 workload identity에 그대로 붙이지 않는다.
 - Helm 사용은 아직 실제 manifest/설치 방식에 따라 달라진다. Helm release Secret 저장 방식은 QA의 'Secret 읽기 없음'과 충돌할 수 있으므로 무조건 Helm+no-Secret 정책으로 충분하다고 하지 않는다.
