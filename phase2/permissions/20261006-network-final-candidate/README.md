@@ -56,6 +56,14 @@ session ARN 입력4종은 role-id를 포함한 본인/다른 사용자 형식과
 
 비용 설정 보류, 기존 담당/AC/일정/Freeze·티켓 상태는 그대로다. 이번 권고의 수용/리뷰를 역할 grant나 최종 인수로 확대하지 않는다.
 
+## 18:16 병합 후 리뷰 후속
+
+후보 HEAD `87d1bb2533dc05927b64ed9ab7f4d9b9ff1f0ca7`에 재환 review5426140186 APPROVED와 Lead review5426256383을 근거로 PR143은 2026-10-06 18:16:11 KST merge `1059713f1a56a1a9d0d88aa37470c5e582e1d580`에 병합됐다. 하영 review5426272751은 동일 HEAD에 18:17:14 KST 추가 승인했다. 위 PROPOSED_FOR_REVIEW 상태는 제출 당시 기록이다. 현재 후보 소스 리뷰/병합은 완료됐고 실제 bind/grant/client runtime는 여전히 미실행이다.
+
+리뷰 후속은 [실제 bind 의존성 Pre-check](../20261006-network-binding-precheck/README.md)에 연결했다. 문서 구성을 final bind/U1 선행조건으로 명시하고, Start/Resume 토큰 취득 경계와 채널 runtime 증명을 구분하며, 실제 SessionId·owner/target·각 본인 계정 결과를 요구한다. 다른 사람의 진행 중인 업무 세션을 음성 시험 대상으로 삼지 않는다. 진단 DescribeSessions의 타인 metadata 조회 범위를 기록했다. 승인된 후보 JSON/Bool/18 actions는 변경하지 않는다.
+
+추가 수신한 [재환의 구성 결정6013422735](https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-6013422735)은 세션 로깅/KMS/Run As를 사용하지 않는 Standard_Stream 문서를 #35 Terraform에서 생성·readback하도록 정했다. 위 "임의의 무로그/무KMS 설정으로 만들지 않는다"는 제출 당시 경계를 보존하고, 이제 담당 Lead의 명시적 결정으로 인계한다. 실제 생성 source/readback·Relay 의존성·EBS/state KMS·최종 정책/사용자 시험은 아직 확보하지 않았다. 이 결정 자체를 P0·AC 충족으로 판정하지 않는다.
+
 ## 공식 근거 (2026-10-06 확인)
 
 - [ssmmessages action/resource 권한 표](https://docs.aws.amazon.com/service-authorization/latest/reference/list_ssmmessages.html)
