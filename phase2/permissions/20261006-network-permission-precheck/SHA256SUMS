@@ -1,0 +1,5 @@
+f761eb38976a47f1998e6a61fafd3cf9cb2a2c104332c582e7dd666957d05051  ./README.md
+f955a5c56c42183b93953282bb48851347ca53c0d0ba251849fe339db80d4d42  ./capture-network-permission-precheck.py
+f9d87e83994a97eb5298191b3f4bab93d87707d3ec2c46124baef7cca2c997d8  ./inputs/channel-options.review.json
+bf5ff8a8538dbca287e6b3a2372fc15a491d5dbfed3a123aa51ddd30c02dd54f  ./inputs/network-permissions.template.json
+c745aa9794826fe158ffdcf8e7f80d493031bc238c574b42a3364e0e10035947  ./tests/test_capture.py
