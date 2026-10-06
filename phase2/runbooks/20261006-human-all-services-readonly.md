@@ -90,3 +90,28 @@ printf 'PRECHECK_CAPTURE=COMPLETE\nAWS_MUTATION=NOT_RUN\n'
 - https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html
 - https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_aws_deny-requested-region.html
 - https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-choosing-managed-or-inline.html
+
+
+## 2026-10-06 시뮬레이션 결과 — 사용자 실행 출력 수신
+
+사용자 제출 결과 기준이다. Assistant가 AWS에 직접 접속하거나 원본 result JSON을 수신해 독립 검증한 것으로 표시하지 않는다. 수신 기준 시각: 2026-10-06 11:09 KST.
+
+- 사전 백업: /home/cloudshell-user/fds-all-readonly.Yn8Upt.tar.gz, SHA256 5387959256f7ad791f6c6fe8c5edc0492a18d8e92e958a85735df768749cd127. 그룹 관리형 attachment [] 및 Local guard 미존재, PRECHECK_CAPTURE=COMPLETE, AWS_MUTATION=NOT_RUN.
+- 실제 계정에서 조회한 ReadOnlyAccess default version=v190. 공식 웹페이지의 이전 v188 표기를 실계정 현황으로 사용하지 않는다.
+- 최초 요청은 policyInputList ValidationError로 평가 전에 중단했다. 원문 ReadOnlyAccess 146475 characters가 131072 한도를 초과한 것이 진단 출력으로 확인됐다. 허용 외 문자는 0. json.loads 후 ensure_ascii=True/separators=(',',':')로 직렬화하면 94907 characters이며 JSON 내용 동등성을 확인했다. 정책 JSON과 Action/Resource/Condition은 변경하지 않았다. 이 처리는 시뮬레이션 입력 표현의 보정이다.
+- 최초 요청 보존: simulation-awjazmim/01-input.json. 정규화 파일: simulation-awjazmim/01-input.compact.json.
+- 최종 결과 경로: /home/cloudshell-user/fds-all-readonly.Yn8Upt/simulation-compact-l53akbrf. 각 요청/원본 결과 및 SHA256SUMS는 사용자 실행 코드가 해당 경로에 생성하며 실제 파일 재수신/재해시는 별도다.
+- SIMULATOR_MATRIX=PASS CASES=10 READONLY_VERSION=v190; AWS_MUTATION=NOT_RUN.
+
+| 케이스 | 확인된 시뮬레이션 판정 |
+|---|---|
+| 01–03 | 지정 3인 각각 MFA=true/서울: EC2 DescribeVpcs, ELB DescribeLoadBalancers, IAM ListRoles allowed |
+| 04–05 | MFA=false 및 MFA key 누락: EC2 조회 explicitDeny |
+| 06 | 서울 외 EC2 조회 explicitDeny |
+| 07 | 지정 외 principal EC2 조회 explicitDeny |
+| 08–09 | MFA 없는 본인 GetUser allowed / 다른 user GetUser explicitDeny |
+| 10 | ELB CreateServiceLinkedRole implicitDeny |
+
+이 10개 케이스는 위 선택 API/조건 범위의 성공이며 모든 서비스, 모든 자기관리 API 또는 전체 simulator 권고 matrix를 완료했다는 뜻이 아니다. CloudShell/MFA 등록·해제·AssumeRole/S3 객체·비용/Marketplace 등 추가 회귀 영역은 아직 위 출력에서 확인되지 않았다. AWS 원문 v190 및 기존 그룹 정책과 guard를 합산한 후보 평가이며 실제 신규 policy 연결, 3인 확대 조회 Runtime, SCP/permission boundary/resource policy 실효평가, 독립 REVIEW/MERGE는 미수행이다.
+
+후속: 새 정책 범위는 이하영(hayeounglee)의 기존 지정 독립 reviewer 경로로 검토하고 #35 Lead 실행 판단 후 교육장 root에서 guard 생성/대조/연결→ReadOnlyAccess 연결→기존 설정 보존→사용자 기본 세션 검증을 진행한다. 기존 e24c881 승인 범위를 본 확대 정책 승인으로 승계하지 않는다. root MFA나 별도 관리자 생성은 선행조건으로 추가하지 않는다.
