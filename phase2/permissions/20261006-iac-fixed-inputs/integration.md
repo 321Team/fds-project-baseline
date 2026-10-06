@@ -12,8 +12,8 @@ CODEX_ASSISTED. Lead 채택 값은 `inputs/lead-values.json`을 사용한다. �
 | 태그 | Project=fds-hybrid/ManagedBy=terraform/Phase=phase2를 source와 IAM 양쪽에서 확인. 외부/default 자원 retag로 관리 범위 확대·보호 태그 제거의 음성 |
 | backend/provider | 각각 account allow-list; component별 격리 workdir/TF_DATA_DIR; default workspace 검사. credential은 HCL/backend-config/plan에 미저장 |
 | 중앙 bootstrap | 검토된 desired source→before snapshot→bucket 소유/서울/보호 설정→Relay role/profile/trust/정책/version/hash→readback 및 보호 복구. 일반 IaC는 profile data 참조 |
-| Session document | #37 결정의 DocumentType=Session/content.sessionType=Standard_Stream 및 default version/content source. owner/type/version/hash/settings readback. public SSH 미개방 |
-| Agent/profile | actual policy version/hash/API 범위와 Parameter 원문 미조회 통제, Agent Online/OS user/sudo/IMDSv2/management egress. 관리형 정책을 사람 role에 복사하지 않음 |
+| Session document | #37 결정의 DocumentType=Session/content.sessionType=Standard_Stream 및 default version/content source. owner/type/version/hash/settings readback. 후속 full permissions의 CreateDocument/UpdateDocument/UpdateDocumentDefaultVersion은 IaC role의 서울·이 계정 `SSM-SessionManagerRunShell` 문서 ARN으로 제한하고 Network role에는 부여하지 않음. 이 후보에는 해당 Allow가 없으며 action별 생성/갱신 resource·dependent action은 실제 소스와 검증. public SSH 미개방 |
+| Agent/profile | actual policy version/hash/API 범위와 Parameter 원문 미조회 통제, Agent Online/OS user/sudo/IMDSv2/management egress. 관리형 정책을 사람 role에 복사하지 않음. user_data/source/tfvars/plan/state/AMI에 PSK·장기 credential 없음; bootstrap은 패키지·포워딩까지만, 비밀은 본인 Session에서 입력 |
 | EBS | gp3 40GiB encrypted, alias/aws/ebs의 실제 KmsKeyId와 생성/Start 복구 의존성, DeleteOnTermination source 기대·실제값 |
 | #38/ROSA | 실제 prerequisite/runtime 소스가 나온 범위만 IAM/OIDC/Operator/API 추가. 이름/state key 채택만으로 사전 광역 부여하지 않음 |
 
@@ -34,12 +34,12 @@ CODEX_ASSISTED. Lead 채택 값은 `inputs/lead-values.json`을 사용한다. �
 ## 중앙 validation과 실제 시험
 
 1. **실행 소스/정책 완성·검토:** 정확한 PR HEAD, 실제 module/API와 부분 정책의 합성 diff, trust·개인 AssumeRole의 변경 유무를 연결한다. 작성자 외 적격 reviewer가 코드/정책을 검토한다. AI 자체 fixture PASS는 독립 승인이 아니다.
-2. **중앙 순수 사전검증:** 기존 허용 root 경로에서 Account/ARN 확인, 현재 정책·trust·profile·bucket 보호 snapshot/소유 충돌 확인, JSON 변경의 ValidatePolicy와 delta simulation. partial policy만으로 전체 업무 권한 PASS를 표시하지 않는다. resource-policy/role simulator 제한은 별도 표시한다. 이 묶음에는 해당 AWS collector나 apply helper가 없다.
-3. **중앙 적용/readback:** 검토된 source와 승인된 실행 범위에서 새 bootstrap/role 부여분만 적용하며 before/after semantic/bytes hash를 구분한다. bucket Versioning/PAB/Ownership/Encryption/정책과 profile 실제 부여분이 기대와 같아야 한다. 불일치·이름 소유 충돌·잘못된 account/region·예상 밖 IAM/destroy면 STOP.
+2. **중앙 순수 사전검증:** 기존 허용 root 경로에서 Account/ARN 확인, 현재 정책·trust·profile·bucket 보호 snapshot/소유 충돌 확인, JSON 변경의 ValidatePolicy와 delta simulation. [별도 delta 수집기](../20261007-iac-delta-precheck/README.md)는 PR145의 부분 후보만 대상으로 하며 apply helper가 아니다. partial policy만으로 전체 업무 권한 PASS를 표시하지 않는다. resource-policy/role simulator 제한은 별도 표시한다.
+3. **중앙 적용/readback:** 검토된 source와 승인된 실행 범위에서 새 bootstrap/role 부여분만 적용하며 before/after semantic/bytes hash를 구분한다. 중앙 root 사용은 이 회차의 bootstrap·복구·사전 수집에 한정하고 일상 Terraform apply는 본인 IaC role로 실행한다. root 예외의 실제 비밀 없는 fixture 복구 시험 및 before/after 결과를 별도로 남긴다. bucket Versioning/PAB/Ownership/Encryption/정책과 profile 실제 부여분이 기대와 같아야 한다. 불일치·이름 소유 충돌·잘못된 account/region·예상 밖 IAM/destroy면 STOP.
 4. **각 본인 runtime:** 권욱·하영의 IaC MFA AssumeRole/본인 session name, 대표 allow/deny/복구를 각각 수신한다. 일반 사용자 3인·Audit의 비밀 없는 state fixture GetObject/GetObjectVersion 거부, IaC의 정상 state/lock 접근·미허용 key/role/region/PassRole 거부를 확인한다. 공통 ReadOnly 대표 검증 재사용과 개별 write-role 본인 검증을 구분한다.
 5. **backend 정상·실패·복구:** init/lock 경합/정상 해제/중단 후 lock 상태. live writer 부재·lock ID 확인 후에만 force-unlock. 중앙 복구는 before 원본·선택 VersionId·lineage/serial·현재 resource drift·복구 후 plan 비교. 자동 DeleteVersion/강제 copy/force-push로 우회하지 않는다.
 6. **유료 생성·실제 인계:** 기존 #34 Freeze·reviewed plan·교육장 비용 정보/예상 가동·cleanup 조건이 충족된 작업창에서 #35가 구축한다. source/입력 식별/backend/workspace/toolchain/lock/plan SHA/검토 HEAD/apply RC·UTC/actual ID·설정/원본 증적을 manifest로 연결한다. 비용 설정 권한 보류 유지. #37에는 비밀 없는 actual artifact를 전달하고 원문 state 접근을 열지 않는다.
-7. **Network 후속:** 새 actual Relay/profile/document/Agent readback→exact bind/grant→권욱·재환 각각 U1. 교체 시 옛 ARN 제거/새 ARN 추가 및 변경 부분 validation/simulation/readback/U1. 새 인계를 합성 ID로 대신하지 않는다.
+7. **Network 후속:** 새 actual Relay/profile/document/Agent readback→exact bind/grant→권욱·재환 각각 U1. 교체 시 옛 ARN 제거/새 ARN 추가 및 변경 부분 validation/simulation/readback/U1은 [#37 재생성·재결속 절차](https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-6014503123)를 따른다. 새 인계를 합성 ID로 대신하지 않는다.
 
 기존 10/8 actual Stage-A handoff→#37 10/12 착수→#35 Full/#37 10/14 G4 목표와 선행조건을 유지한다. 미완료 인계는 STAGE_A_READY=NO이다. 새 승인 문서를 단계마다 추가하거나 Support 상시 이중승인을 만들지 않는다. 현재 blocker는 실제 implementation/API/full permissions source와 검증 증적이며 채택 값 재회신이 아니다.
 
