@@ -16,7 +16,9 @@
 | 가상 caller | 권욱·재환 이름을 사용한 가상 role-id:RoleSessionName/context; 본인 로그인·trust 평가가 아님 |
 | 범위 | 각 후보8 statements/18 unique actions; PR141의 17개 + OpenDataChannel만. 선택 조회3종/KMS/비용 권한 추가 없음 |
 
-네 조합마다 28개 request 그룹(24개 기대 비교 + 4개 채널 관찰)을 준비한다. 시작/본인 세션/다른 target·문서·owner/필수 context 누락/다른 리전/복구·정확한 조회/서울 account 진단/미허용 구조·권한·Secret·Agent action을 비교한다. 각 action은 요청한 각 resource와 대조한다. 이 결과는 개별 API의 실제 resource 지원/서비스 context/의존 권한 전체를 증명하지 않는다.
+네 조합마다 30개 request 그룹(24개 기대 비교 + 6개 채널 관찰)을 준비한다. 시작/본인 세션/다른 target·문서·owner/필수 context 누락/다른 리전/복구·정확한 조회/서울 account 진단/미허용 구조·권한·Secret·Agent action을 비교한다. 각 action은 요청한 각 resource와 대조한다. 이 결과는 개별 API의 실제 resource 지원/서비스 context/의존 권한 전체를 증명하지 않는다.
+
+[재환의 독립 리뷰](https://github.com/321Team/fds-project-baseline/pull/142#pullrequestreview-5425414640)에 따라 case29/30에 `session/321team-{gwonuk,jaehwan}-0123456789abcdef0` 형태를 추가했다. 역할 ID 없는 SessionId는 **검토자가 제시한 형식 가설**이며 실측값이 아니다. 기존 case01–28과 후보 정책/기대값은 그대로다. 첫 Stage-A에서는 실제 SessionId 형식과 본인 client 데이터 채널 동작을 함께 기록한다.
 
 ## 중앙 실행
 
@@ -45,6 +47,31 @@ exit "$rc"
 
 AWS 호출 없이 실행 자료만 확인하려면 `python3 capture-network-permission-precheck.py --offline`을 사용한다. 이는 **OFFLINE_PREPARED**이며 IAM evaluator 시험이 아니다.
 
+## 60초 중단 후 이어 실행
+
+2026-10-06 사용자 회신의 `/home/cloudshell-user/fds-network-permission-precheck-d_poz3u_`는 arn-Bool case01–28 및 arn-BoolIfExists case01–04를 수집한 뒤 다음 호출에서 TimeoutExpired로 중단됐다. **기대 비교28개와 채널 관찰4개가 보존됐으며, 권한 판정 불일치가 아니다.** 지연의 상세 원인은 터미널 출력만으로 확정하지 않는다. 문서/validation 상태와 채널별 decision도 이 출력만으로 선언하지 않는다.
+
+수정 묶음을 새 작업 디렉터리에 추출하고 source manifest를 검증한 뒤 다음 명령을 실행한다.
+
+```bash
+(
+umask 077
+python3 capture-network-permission-precheck.py \
+  --resume-from "$HOME/fds-network-permission-precheck-d_poz3u_"
+rc=$?
+printf 'NETWORK_PRECHECK_RC=%s\n' "$rc"
+exit "$rc"
+)
+```
+
+- 원본 디렉터리에 쓰지 않는다. 모든 flat regular file을 SHA256SUMS와 대조하고, 원본 collector SHA(최초 PR142 `ec395ac1…` 또는 현재 수집기), PR141 입력·candidate 정책·root/계정·경계 및 transient simulator 실패를 확인한다. 이전 수집기 파일을 실행하지 않는다.
+- 완료로 기록된 각 case의 **request·expectations·raw status/stdout**을 확인하고 현재 파서로 재판정한다. summary의 PASS만 믿고 건너뛰지 않는다. InvalidInput 관찰도 raw 오류를 확인한 검토 항목으로만 재사용한다. byte manifest는 일관성 검증이며 외부 서명/실제 서비스 증명이 아니다.
+- 새 private 디렉터리에 원본 바이트를 `prior-*` 이름으로 복사하고 원본 manifest/collector/UTC 및 case별 evidence 경로를 보존한다. 기존 디렉터리를 수정/삭제하지 않는다. 새 중단도 같은 수집기에서 이어 실행할 수 있다.
+- **현재 root와 기본 문서를 다시 조회**하고 문서 상태/버전/내용 SHA/KMS/logging이 이전 capture와 다르면 중단한다. ValidatePolicy/context keys는 현재 상태로 다시 수집한다. 완료 simulation 요청32개는 반복하지 않고 나머지 및 신규 관찰8개를 호출한다(정상 완료 시 reuse32/fresh88). 각 후보의 신규 case29/30은 해당 후보의 기존 case들 뒤에 실행된다.
+- AWS CLI child에 connect10초/read45초, subprocess60초 및 `AWS_MAX_ATTEMPTS=1`을 적용한다. **SimulateCustomPolicy의 timeout/명시된 연결·throttling 오류에만 3초 후 최대1회 추가 시도**한다(호출 그룹 최대123초). 각 시도의 원본/timeout 조각을 따로 저장한다. 다른 조회는1회이고 AccessDenied/InvalidInput/JSON 오류·판정 불일치는 자동 재시도하지 않는다. 프로필/credential/정책·예상값은 바꾸지 않는다.
+
+CLI 설정은 child process에만 적용하며 계정의 설정 파일을 변경하지 않는다. 반복된 transient 실패는 STOP/RC1로 보존한다. 네 후보 중 채널 ARN 오류를 `*` 권한 적용으로 바꾸지 않는다. 위 timeout/retry 제한은 네트워크 장애나 서비스 장애가 실제 원인임을 단정하는 조치가 아니다.
+
 ## 결과 수신·중단 기준
 
 | RC/표시 | 의미·처리 |
@@ -58,7 +85,7 @@ AWS 호출 없이 실행 자료만 확인하려면 `python3 capture-network-perm
 
 최신 IAM 응답의 action 요약과 `ResourceSpecificResults`를 구분한다. 요청 action/resource 누락·중복·예상 밖 context·truncation은 중단한다. 복수 resource를 최상위 EvalDecision 하나로 통과시키지 않는다. 단일 `*` aggregate 및 정확한 단일 resource를 식별한 과거 응답만 제한적으로 수용한다. 채널 aggregate만 있으면 ARN별 결론 없이 관찰 표시한다.
 
-COMPLETE는 summary와 SHA256SUMS 저장 이후에만 출력한다. COMPLETE 문자열만 확인하지 말고 실제 RC와 manifest를 함께 확인한다. 저장 실패가 있으면 summary에 앞선 계산 결과가 있어도 완결된 증적이 아니다. raw stdout/stderr와 timeout 부분 응답은 private0600으로 보존하며 터미널에 원문을 출력하지 않는다.
+COMPLETE는 summary와 SHA256SUMS 저장 이후에만 출력한다. COMPLETE 문자열만 확인하지 말고 실제 RC와 manifest를 함께 확인한다. 저장 실패가 있으면 summary에 앞선 계산 결과가 있어도 완결된 증적이 아니다. raw stdout/stderr와 timeout 부분 응답은 private0600으로 보존하며 터미널에 원문을 출력하지 않는다. 정상 완료 후 Document 상태, validation/findings 수, 재사용/새 case 수 및 합성 CHANNEL_OBSERVATION만 터미널에 표시한다. 실제 문서 내용·logging/key 설정은 자동 출력하지 않는다.
 
 CAPTURE_DIR 내부에서 다음 검증을 수행하고 터미널 결과·summary.json을 회신한다. 기본 문서 원문을 포함한 전체 수집물은 private 상태로 보존하고 공개 코멘트에 그대로 붙이지 않는다. 실제 credential/TokenValue/PSK/Parameter/Secret/S3 object content는 이 수집기의 조회 대상이 아니다.
 
@@ -87,6 +114,8 @@ KMS 항목은 **SSM 세션 데이터 암호화 설정**이다. Relay EBS Start �
 
 후보 비교를 위한 Pre-check이며 운영 배포 입력이 아니다. 수집기·비배포 fixture/시험·안내를 PR로 공유하고 하영/재환에게 코드·평가 경계 리뷰를 요청한다. [REVIEW_AUTHORITY_POLICY §4](https://github.com/321Team/fds-project-baseline/blob/main/governance/REVIEW_AUTHORITY_POLICY.md)에 따라 병합 전에도 이 read-only 후보 시험을 할 수 있으며, 새 IAM 실행 정책/최종 적용 코드의 독립 리뷰를 대체하지 않는다. 두 명의 별도 필수 서명을 추가하지 않는다.
 
-오프라인 시험은 API 응답 파서의 실패/누락/중복·잘못된 root·쓰기 차단·private raw 보존·timeout·manifest 실패·default-version drift·findings 분기를 검증한다. 모의 IAM evaluator를 만들지 않으며 fixture 결과를 AWS IAM PASS로 표시하지 않는다. 실제 AWS 평가는 중앙 CloudShell 회신 전 NOT_RUN이다.
+오프라인 시험은 API 응답 파서의 실패/누락/중복·잘못된 root·쓰기 차단·private raw 보존·timeout·manifest 실패·default-version drift·findings 및 resume 분기를 검증한다. 29개 unit/mock 시험은 정책 evaluator가 아닌 응답/실행 제어 시험이다. 원본 hash 변조·재서명된 request 변경·summary와 raw 불일치·문서 drift·이중 중단 후 원본 재사용을 다룬다. 최초 AWS 수집은 위 사용자 회신의 부분 결과로 한정하며, 수정 수집기의 실제 이어 실행은 회신 전 NOT_RUN이다.
 
 공식 근거(2026-10-06 확인): [SimulateCustomPolicy](https://docs.aws.amazon.com/IAM/latest/APIReference/API_SimulateCustomPolicy.html), [EvaluationResult](https://docs.aws.amazon.com/IAM/latest/APIReference/API_EvaluationResult.html), [ResourceSpecificResult](https://docs.aws.amazon.com/IAM/latest/APIReference/API_ResourceSpecificResult.html), [ValidatePolicy](https://docs.aws.amazon.com/access-analyzer/latest/APIReference/API_ValidatePolicy.html), [SSM action/resource](https://docs.aws.amazon.com/service-authorization/latest/reference/list_ssm.html), [ssmmessages action/resource](https://docs.aws.amazon.com/service-authorization/latest/reference/list_ssmmessages.html), [Session Manager 예제](https://docs.aws.amazon.com/systems-manager/latest/userguide/getting-started-restrict-access-examples.html), [DescribeDocument](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DescribeDocument.html), [GetDocument](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_GetDocument.html).
+
+CLI 실행 제한 참고: [AWS CLI retry 설정](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-retries.html), [CLI SimulateCustomPolicy 옵션](https://docs.aws.amazon.com/cli/latest/reference/iam/simulate-custom-policy.html). API 성공을 실제 세션 성공으로 해석하지 않는다.

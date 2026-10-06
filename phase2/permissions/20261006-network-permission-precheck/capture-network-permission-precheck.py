@@ -11,11 +11,17 @@ import re
 import subprocess
 import sys
 import tempfile
+import time
 
 ACCOUNT = "774055931866"
 REGION = "ap-northeast-2"
 ROOT = f"arn:aws:iam::{ACCOUNT}:root"
 SOURCE_MERGE = "711ad113246cf9ae6c18918ce702e3c8d3bc569c"
+LEGACY_COLLECTOR_SHA256 = "ec395ac1afd82bba057f3e40d575f2d33a95ace3c2d075f5e2da6a9b29bd6573"
+TRANSIENT_CODES = {"TimeoutExpired", "Throttling", "ThrottlingException",
+                   "RequestTimeout", "RequestTimeoutException", "ServiceUnavailable",
+                   "ReadTimeoutError", "ConnectTimeoutError", "EndpointConnectionError",
+                   "ConnectionClosedError"}
 INPUT_HASHES = {
     "network-permissions.template.json": "bf5ff8a8538dbca287e6b3a2372fc15a491d5dbfed3a123aa51ddd30c02dd54f",
     "channel-options.review.json": "f9d87e83994a97eb5298191b3f4bab93d87707d3ec2c46124baef7cca2c997d8",
@@ -159,6 +165,13 @@ def cases(operator):
             [resource], {}, observe=True)
     add("channel-observe-outside-region", ["ssmmessages:OpenDataChannel"], ["*"], {},
         {"aws:RequestedRegion": "ap-northeast-1"}, observe=True)
+    # Reviewer hypothesis, not an observed SessionId. Append without renumbering
+    # the original 28 cases so their verified responses remain reusable.
+    for actor in ACTORS:
+        uid = "AROASYNTHETICNETWORK01:" + actor
+        role_name_shape = f"arn:aws:ssm:{REGION}:{ACCOUNT}:session/{actor}-0123456789abcdef0"
+        add("channel-observe-role-session-name-" + actor, ["ssmmessages:OpenDataChannel"],
+            [role_name_shape], {}, {"aws:userid": uid, OWNER: uid}, observe=True)
     return rows
 
 
@@ -230,6 +243,7 @@ class Capture:
     def __init__(self, directory, runner=subprocess.run):
         self.directory, self.runner = Path(directory), runner
         self.number = 0
+        self.last_evidence = None
 
     def write(self, name, value):
         path = self.directory / name
@@ -243,12 +257,30 @@ class Capture:
     def call(self, label, service, operation, *args):
         if operation not in READ_OPERATIONS.get(service, set()):
             raise Stop("AWS operation outside read-only precheck allowlist")
+        # Only the read-only simulator gets one bounded retry. No retry of IAM
+        # decisions, malformed output, validation errors or AccessDenied.
+        attempts = 2 if operation == "simulate-custom-policy" else 1
+        for attempt in range(1, attempts + 1):
+            try:
+                return self._attempt(label, service, operation, *args)
+            except AwsError as exc:
+                if exc.code not in TRANSIENT_CODES or attempt == attempts:
+                    raise
+                print(f"AWS_RETRY={operation} LABEL={label} ATTEMPT={attempt + 1}/{attempts} CODE={exc.code}",
+                      flush=True)
+                time.sleep(3)
+
+    def _attempt(self, label, service, operation, *args):
         self.number += 1
         prefix = f"{self.number:03d}-{label}"
         command = ["aws", service, operation, *args, "--region", REGION,
-                   "--output", "json", "--no-cli-pager"]
+                   "--output", "json", "--no-cli-pager", "--no-cli-auto-prompt",
+                   "--cli-connect-timeout", "10", "--cli-read-timeout", "45"]
+        environment = dict(os.environ, AWS_RETRY_MODE="standard", AWS_MAX_ATTEMPTS="1")
+        self.last_evidence = None
         try:
-            response = self.runner(command, capture_output=True, text=True, timeout=60, check=False)
+            response = self.runner(command, capture_output=True, text=True, timeout=60,
+                                   check=False, env=environment)
         except (OSError, subprocess.TimeoutExpired) as exc:
             self.write(prefix + "-partial-stdout.txt", getattr(exc, "stdout", None) or "")
             self.write(prefix + "-partial-stderr.txt", getattr(exc, "stderr", None) or "")
@@ -257,9 +289,20 @@ class Capture:
         self.write(prefix + "-stdout.txt", response.stdout)
         self.write(prefix + "-stderr.txt", response.stderr)
         self.write(prefix + "-status.json", {"Operation": operation, "RC": response.returncode})
+        self.last_evidence = {"Stdout": prefix + "-stdout.txt", "Stderr": prefix + "-stderr.txt",
+                              "Status": prefix + "-status.json"}
         if response.returncode:
             match = re.search(r"\(([A-Za-z0-9]+)\) when calling", response.stderr)
-            raise AwsError(operation, match.group(1) if match else "UNCLASSIFIED")
+            code = match.group(1) if match else "UNCLASSIFIED"
+            for message, classified in (
+                ("Read timeout on endpoint URL", "ReadTimeoutError"),
+                ("Connect timeout on endpoint URL", "ConnectTimeoutError"),
+                ("Could not connect to the endpoint URL", "EndpointConnectionError"),
+                ("Connection was closed before we received a valid response", "ConnectionClosedError"),
+            ):
+                if not match and message in response.stderr:
+                    code = classified
+            raise AwsError(operation, code)
         try:
             data = json.loads(response.stdout)
         except ValueError as exc:
@@ -272,6 +315,143 @@ class Capture:
         paths = sorted(p for p in self.directory.iterdir() if p.is_file() and p.name != "SHA256SUMS")
         return self.write("SHA256SUMS", "".join(
             f"{hashlib.sha256(p.read_bytes()).hexdigest()}  ./{p.name}\n" for p in paths))
+
+
+class ResumeEvidence:
+    """Verify a complete private snapshot and re-parse declared completed cases.
+
+    Read/copy only; never execute the old collector or modify its directory.
+    A manifest proves byte consistency, not an independent AWS attestation.
+    """
+    def __init__(self, directory, inputs):
+        self.directory = Path(directory)
+        if self.directory.is_symlink() or not self.directory.is_dir():
+            raise Stop("Resume requires an ordinary capture directory")
+        self.files = {}
+        for path in self.directory.iterdir():
+            if path.is_symlink() or not path.is_file() or not re.fullmatch(r"[A-Za-z0-9_.-]+", path.name):
+                raise Stop("Unexpected resume path; only flat regular evidence files are accepted")
+            self.files[path.name] = path.read_bytes()
+        manifest = self.files.get("SHA256SUMS", b"").decode("ascii")
+        listed = {}
+        for line in manifest.splitlines():
+            match = re.fullmatch(r"([0-9a-f]{64})  \./([A-Za-z0-9_.-]+)", line)
+            if not match or match[2] in listed or match[2] == "SHA256SUMS":
+                raise Stop("Malformed/duplicate resume manifest entry")
+            listed[match[2]] = match[1]
+        if set(listed) != set(self.files) - {"SHA256SUMS"} or not listed:
+            raise Stop("Resume manifest does not cover every evidence file")
+        for name, digest in listed.items():
+            if hashlib.sha256(self.files[name]).hexdigest() != digest:
+                raise Stop(f"Resume evidence hash mismatch: {name}")
+        source_hash = hashlib.sha256(self.files["collector-source.py"]).hexdigest()
+        accepted = {LEGACY_COLLECTOR_SHA256, hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
+        if source_hash not in accepted:
+            raise Stop("Unrecognized prior collector source")
+        for name, digest in INPUT_HASHES.items():
+            if hashlib.sha256(self.files[name]).hexdigest() != digest:
+                raise Stop("Resume pinned input changed")
+        failure = self.read_json("failure-summary.json")
+        if (failure.get("ErrorType") != "AwsError" or
+            failure.get("Reason") not in {f"simulate-custom-policy: {code}; private raw response preserved"
+                                           for code in TRANSIENT_CODES}):
+            raise Stop("Only a transient simulator interruption can be resumed")
+        self.partial = failure["Partial"]
+        required = {"SourceMerge": SOURCE_MERGE, "InputSHA256": INPUT_HASHES,
+                    "Target": "SYNTHETIC_ONLY", "SyntheticInstanceId": RELAY,
+                    "ExecutionArn": ROOT, "Collection": "STOPPED_PARTIAL",
+                    "CHANNEL_SELECTION": "NOT_MADE", "FINAL_POLICY": "NOT_CREATED",
+                    "ROLE_GRANT": "NOT_RUN", "AWS_MUTATION": "NOT_RUN"}
+        if any(self.partial.get(key) != value for key, value in required.items()) or "Document" not in self.partial:
+            raise Stop("Resume summary provenance/boundary mismatch")
+        identity = self.call("identity", "sts", "get-caller-identity")
+        if identity.get("Arn") != ROOT or identity.get("Account") != ACCOUNT:
+            raise Stop("Prior raw identity disagrees with the required account root")
+        if document_capture(self) != self.partial["Document"]:
+            raise Stop("Prior document summary disagrees with raw capture")
+        self.completed = {}
+        policies = candidates(inputs)
+        for name, state in self.partial["Candidates"].items():
+            if name not in policies:
+                raise Stop("Unknown prior candidate")
+            policy_raw = self.files[name + "-SYNTHETIC-NOT-FOR-ATTACHMENT.json"]
+            if (json.loads(policy_raw) != policies[name] or
+                hashlib.sha256(policy_raw).hexdigest() != state["PolicySHA256"]):
+                raise Stop("Resume candidate policy changed")
+            matrix = cases(name.split("-", 1)[1])
+            by_label = {case["Label"]: (i, case) for i, case in enumerate(matrix, 1)}
+            for entry in state["Cases"]:
+                label = entry["Label"]
+                if label not in by_label or (name, label) in self.completed:
+                    raise Stop("Unknown/duplicate completed case")
+                i, case = by_label[label]
+                if (self.read_json(f"{name}-{i:02d}-input.json") != request(policies[name], case) or
+                    self.read_json(f"{name}-{i:02d}-expectations.json") != case):
+                    raise Stop("Resume case request/expectations changed")
+                evidence = entry.get("Evidence")
+                if evidence is None and source_hash == LEGACY_COLLECTOR_SHA256:
+                    matches = [key for key in self.files if
+                               re.fullmatch(rf"\d+-{re.escape(name)}-{i:02d}-stdout\.txt", key)]
+                    if len(matches) != 1:
+                        raise Stop("Missing/ambiguous legacy simulator response")
+                    prefix = matches[0][:-len("-stdout.txt")]
+                    evidence = {"Stdout": prefix + "-stdout.txt", "Stderr": prefix + "-stderr.txt",
+                                "Status": prefix + "-status.json"}
+                if not isinstance(evidence, dict) or set(evidence) != {"Stdout", "Stderr", "Status"}:
+                    raise Stop("Missing case evidence reference")
+                status = self.read_json(evidence["Status"])
+                if status.get("Operation") != "simulate-custom-policy":
+                    raise Stop("Wrong evidence operation")
+                if status.get("RC") == 0:
+                    observed = inspect_result(self.read_json(evidence["Stdout"]), case)
+                    expected_status = "OBSERVED_NOT_RUNTIME_PROOF" if case["ObservationOnly"] else "EXPECTED_POLICY_MATCH"
+                    if entry.get("Status") != expected_status or entry.get("Observed") != observed:
+                        raise Stop("Saved summary disagrees with re-parsed raw result")
+                elif (case["ObservationOnly"] and
+                      entry.get("Status") == "OBSERVATION_INPUT_REJECTED_REVIEW_REQUIRED" and
+                      entry.get("Code") == "InvalidInput" and
+                      re.search(r"\(InvalidInput\) when calling", self.files[evidence["Stderr"]].decode("utf-8"))):
+                    pass  # Rejected observation remains a review item, never a deny.
+                else:
+                    raise Stop("Completed case has unsuccessful/unsupported raw evidence")
+                saved = copy.deepcopy(entry)
+                saved["Evidence"] = {key: "prior-" + value for key, value in evidence.items()}
+                saved["Acquisition"] = "REUSED_VERIFIED_RAW"
+                self.completed[name, label] = saved
+
+    def read_json(self, name):
+        return json.loads(self.files[name])
+
+    def call(self, label, service, operation, *args):
+        """Read prior identity/document evidence through the current parser; no CLI."""
+        if service not in {"sts", "ssm"} or operation not in READ_OPERATIONS[service]:
+            raise Stop("Unsupported prior metadata operation")
+        matches = [key for key in self.files if re.fullmatch(rf"\d+-{re.escape(label)}-stdout\.txt", key)]
+        if len(matches) != 1:
+            raise Stop("Missing/ambiguous prior metadata response")
+        prefix = matches[0][:-len("-stdout.txt")]
+        status = self.read_json(prefix + "-status.json")
+        if status.get("Operation") != operation:
+            raise Stop("Prior metadata operation mismatch")
+        if status.get("RC") != 0:
+            stderr = self.files[prefix + "-stderr.txt"].decode("utf-8")
+            match = re.search(r"\(([A-Za-z0-9]+)\) when calling", stderr)
+            raise AwsError(operation, match.group(1) if match else "UNCLASSIFIED")
+        result = self.read_json(matches[0])
+        if not isinstance(result, dict):
+            raise Stop("Malformed prior metadata response")
+        return result
+
+    def copy_to(self, cap):
+        for name, raw in sorted(self.files.items()):
+            cap.write("prior-" + name, raw)
+        cap.write("resume-provenance.json", {
+            "PriorDirectory": str(self.directory.resolve()),
+            "PriorManifestSHA256": hashlib.sha256(self.files["SHA256SUMS"]).hexdigest(),
+            "PriorCollectorSHA256": hashlib.sha256(self.files["collector-source.py"]).hexdigest(),
+            "PriorUTC": self.partial["UTC"], "ReusedCaseCount": len(self.completed),
+            "CaseReparse": "MATCH", "OriginalDirectory": "READ_ONLY",
+            "FreshIdentityAndDocument": "REQUIRED", "ValidationAndContextKeys": "RECOLLECTED"})
 
 
 def document_capture(cap):
@@ -306,7 +486,7 @@ def document_capture(cap):
             "CloudWatchLogGroupName": inputs.get("cloudWatchLogGroupName")}
 
 
-def run(cap, inputs, offline=False):
+def run(cap, inputs, offline=False, resume=None):
     summary = {"SourceMerge": SOURCE_MERGE, "InputSHA256": INPUT_HASHES,
         "Target": "SYNTHETIC_ONLY", "SyntheticInstanceId": RELAY,
         "UTC": dt.datetime.now(dt.timezone.utc).isoformat(),
@@ -316,12 +496,20 @@ def run(cap, inputs, offline=False):
         "APPLY_READINESS": "NOT_ASSESSED", "Candidates": {}}
     rc = 0
     try:
+        if offline and resume:
+            raise Stop("Offline preparation and resume cannot be combined")
+        if resume:
+            resume.copy_to(cap)
+            summary["Resume"] = {"ReusedCases": 0, "FreshCases": 0,
+                                 "PriorManifestSHA256": hashlib.sha256(resume.files["SHA256SUMS"]).hexdigest()}
         if not offline:
             identity = cap.call("identity", "sts", "get-caller-identity")
             if identity.get("Arn") != ROOT or identity.get("Account") != ACCOUNT:
                 raise Stop("Requires exact education account root for central candidate collection")
             summary["ExecutionArn"] = identity["Arn"]
             summary["Document"] = document_capture(cap)
+            if resume and summary["Document"] != resume.partial["Document"]:
+                raise Stop("SSM document changed since prior capture; review before reuse")
         for name, policy in candidates(inputs).items():
             operator = name.split("-", 1)[1]
             path = cap.write(name + "-SYNTHETIC-NOT-FOR-ATTACHMENT.json", policy)
@@ -352,6 +540,14 @@ def run(cap, inputs, offline=False):
                 cap.write(f"{name}-{i:02d}-expectations.json", case)
                 if offline:
                     continue
+                if resume and (name, case["Label"]) in resume.completed:
+                    saved = copy.deepcopy(resume.completed[name, case["Label"]])
+                    state["Cases"].append(saved)
+                    summary["Resume"]["ReusedCases"] += 1
+                    if saved["Status"] == "OBSERVATION_INPUT_REJECTED_REVIEW_REQUIRED":
+                        rc = 2
+                    print(f"CANDIDATE={name} CASE={i:02d} RESULT={saved['Status']} SOURCE=REUSED_VERIFIED_RAW", flush=True)
+                    continue
                 try:
                     response = cap.call(f"{name}-{i:02d}", "iam", "simulate-custom-policy",
                                         "--cli-input-json", "file://" + str(input_path))
@@ -361,13 +557,19 @@ def run(cap, inputs, offline=False):
                     # Rejected experimental channel input is not an IAM deny or
                     # proof of service scoping. Preserve it and compare fixed options.
                     state["Cases"].append({"Label": case["Label"],
-                        "Status": "OBSERVATION_INPUT_REJECTED_REVIEW_REQUIRED", "Code": exc.code})
+                        "Status": "OBSERVATION_INPUT_REJECTED_REVIEW_REQUIRED", "Code": exc.code,
+                        "Evidence": cap.last_evidence, "Acquisition": "FRESH"})
+                    if resume:
+                        summary["Resume"]["FreshCases"] += 1
                     rc = 2
                     print(f"CANDIDATE={name} CASE={i:02d} RESULT=OBSERVATION_INPUT_REJECTED", flush=True)
                     continue
                 observed = inspect_result(response, case)
                 status = "OBSERVED_NOT_RUNTIME_PROOF" if case["ObservationOnly"] else "EXPECTED_POLICY_MATCH"
-                state["Cases"].append({"Label": case["Label"], "Status": status, "Observed": observed})
+                state["Cases"].append({"Label": case["Label"], "Status": status, "Observed": observed,
+                                       "Evidence": cap.last_evidence, "Acquisition": "FRESH"})
+                if resume:
+                    summary["Resume"]["FreshCases"] += 1
                 print(f"CANDIDATE={name} CASE={i:02d} LABEL={case['Label']} RESULT={status}", flush=True)
             state["Matrix"] = "OFFLINE_INPUTS_PREPARED" if offline else "COLLECTED"
         summary["Collection"] = "OFFLINE_PREPARED" if offline else (
@@ -382,6 +584,19 @@ def run(cap, inputs, offline=False):
         # No COMPLETE marker if evidence/manifest persistence fails.
         cap.manifest()
     print("OFFLINE_PREPARE=COMPLETE" if offline else "NETWORK_CANDIDATE_CAPTURE=COMPLETE", flush=True)
+    if not offline:
+        print("DOCUMENT_CAPTURE=" + summary["Document"]["State"], flush=True)
+        if resume:
+            print(f"RESUME_REUSED_CASES={summary['Resume']['ReusedCases']} FRESH_CASES={summary['Resume']['FreshCases']}",
+                  flush=True)
+        for name, state in summary["Candidates"].items():
+            print(f"CANDIDATE={name} VALIDATION={state['Validation']} FINDINGS={len(state['Findings'])} MATRIX={state['Matrix']}",
+                  flush=True)
+            # Only synthetic channel observations, never raw CLI streams or
+            # document logging/key configuration, are echoed for review.
+            for row in state["Cases"]:
+                if row["Status"] != "EXPECTED_POLICY_MATCH":
+                    print("CHANNEL_OBSERVATION=" + compact({"Candidate": name, **row}), flush=True)
     print("CHANNEL_SELECTION=NOT_MADE FINAL_POLICY=NOT_CREATED ROLE_GRANT=NOT_RUN AWS_MUTATION=NOT_RUN", flush=True)
     print("APPLY_READINESS=NOT_ASSESSED", flush=True)
     return rc
@@ -392,18 +607,22 @@ def main():
     parser.add_argument("--inputs-dir", type=Path, default=Path(__file__).resolve().parent / "inputs")
     parser.add_argument("--output-parent", type=Path, default=Path.home())
     parser.add_argument("--offline", action="store_true", help="Prepare synthetic inputs; invoke no AWS command")
+    parser.add_argument("--resume-from", type=Path, help="Verify and reuse a prior transient simulator interruption")
     args = parser.parse_args()
     os.umask(0o077)
     directory = None
     try:
         inputs = load_inputs(args.inputs_dir)  # Fail before AWS if sources changed.
+        if args.offline and args.resume_from:
+            raise Stop("Offline preparation and resume cannot be combined")
+        resume = ResumeEvidence(args.resume_from, inputs) if args.resume_from else None
         directory = Path(tempfile.mkdtemp(prefix="fds-network-permission-precheck-", dir=args.output_parent))
         print("CAPTURE_DIR=" + str(directory), flush=True)
         cap = Capture(directory)
         cap.write("collector-source.py", Path(__file__).read_text(encoding="utf-8"))
         for name in INPUT_HASHES:
             cap.write(name, (args.inputs_dir / name).read_text(encoding="utf-8"))
-        return run(cap, inputs, args.offline)
+        return run(cap, inputs, args.offline, resume)
     except (Stop, OSError, ValueError, KeyError, TypeError) as exc:
         print(f"STOP: {exc}", file=sys.stderr)
         if directory:
