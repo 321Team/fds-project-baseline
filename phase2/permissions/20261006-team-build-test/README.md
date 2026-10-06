@@ -172,13 +172,15 @@
 |---|---|---|---|
 | Trust/MFA | 배정 본인 MFA AssumeRole | 미배정 사용자·noMFA·타 계정·비허용 role | 기본 RO/Audit/self-service 유지 |
 | ELB bootstrap | exact ELB SLR 한 개 생성, 기존 존재 SKIP | 타 서비스/일반 role 생성 없음, AccessDenied를 부재로 해석 금지 | timeout/응답 유실 후 조회로 확인, 자동 삭제 없음 |
-| IaC/backend TS01 | 검토된 project plan/apply, state/lock 접근 | 다른 Region·타 Project·다른 state key·protected tag 변경·권한 상승 | lock 경쟁/실패 후 해제, 같은 source 무의도 drift 없음 |
+| IaC/backend TS01(생성 전) | reviewed project plan·계정/backend/lock 권한·입력 검증; apply 실측은 #35 별도 실행 | 다른 Region·타 Project·다른 state key·protected tag 변경·권한 상승 | lock 경쟁/실패 후 해제, 같은 source 무의도 drift 없음 |
 | Relay TS04/06 | 승인 SSM/UDP500·4500/selector/path | 타 instance/document/미허용 source-port·plaintext 우회 | rekey/restart/reboot/rebuild 원복, DB 연결 회귀 |
 | Platform TS02/03/07/14 | restricted-v2 arbitrary UID, namespace handoff | broad SCC/SA/RBAC 우회·engine DB 접근 | 승인 replacement/capacity/Cold pull 복구 |
 | CI TS08/09/10 | 승인 digest Test→Build→Scan→Push→Deploy→Health | anonymous/pull-only push·잘못된 audience·scan 실패 deploy | 이전 승인 digest rollback/health |
 | App/E2E TS11/12 | Normal+4 Rule+DB row 추적 | engine→DB·미승인 client·다른 namespace 쓰기 | DB/engine 장애 기대값 각각 확인, fixture 정리 |
 | 복합 TS15 | 지정 단일 회차 역할별 장애 실행 | scope 밖 Node/DB·동시 장애주입·예외 보안 우회 | VPN+worker/registry/DNS+업무 전체 회귀 |
 | Teardown TS16 | 프로젝트 component 정상 정리 | 타 자원/state/공유 데이터/SLR 삭제 | 잔여 inventory+교육장 비용 자료 비교 |
+
+TS05(D21 raw 수신/hash/cleanup)와 TS13(P1 rollback)은 원본 시험 전략의 추적을 유지하지만 새 업무 role의 기본 권한 실측 표에 넣지 않았다. 각각 기존 증적 인계/원래 P1 권한·변경 창으로 검증하며 이 PR에서 PASS로 올리거나 동일 시험을 다시 강제하지 않는다. TS01의 원본 생성 전/plan/HOLD와 #35 실제 apply를 구분한다.
 
 IAM simulator는 candidate 조합과 resource/context 조건을 검증한다. RBAC can-i는 API authorization만 확인하며 실제 Admission/OS/네트워크/DB 동작을 증명하지 않는다. 실제 거부 시험은 비파괴 방법으로 수행하고 허용되지 않아야 하는 유료 생성 API를 무작정 호출하지 않는다.
 
@@ -198,7 +200,9 @@ IAM simulator는 candidate 조합과 resource/context 조건을 검증한다. RB
 
 ## 8. ELB 도구 사용·중단·복구
 
-동봉 bootstrap-elb.py는 기본 읽기 전용이며 --apply에서만 exact ELB 역할 생성 한 번을 호출한다. 실행 위치는 교육장 AWS CloudShell, Python3/AWS CLI, 승인된 관리자 세션이다. Apply mode는 기존 교육장 root의 정확한 ARN과 account만 허용한다. credential/OTP를 출력하지 않는다.
+동봉 bootstrap-elb.py는 기본 읽기 전용이며 --apply에서만 exact ELB 역할 생성 한 번을 호출한다. 실행 위치는 교육장 AWS CloudShell이며 Python3/AWS CLI를 사용한다. 이번 최초 설정의 실제 실행자는 이권욱이고, 교육장에서 제공한 root 로그인 세션 arn:aws:iam::774055931866:root / account774055931866에서 수행한다. 권욱의 일반 IAM 계정·관리자 IAM 사용자·assumed-role은 이 도구의 --apply 실행 주체가 아니며 STOP이다. Apply mode는 정확한 root ARN과 account만 허용한다. credential/OTP를 출력하지 않는다. root MFA는 교육장 계정 Owner의 통제영역이다. 10/5 사용자 readback은 MFA0이었고 현재 상태를 재검증한 것은 아니다. 이 도구는 root MFA를 등록·해제·복구하거나 사용자의 장기 자격증명을 생성하지 않는다. 기존 외부 위험 기록은 유지하며 일반 사용자 privileged AssumeRole의 본인 MFA 조건과 혼동하지 않는다.
+
+오프라인 테스트 실행 위치는 이 README와 bootstrap-elb.py가 있는 디렉터리이며 명령은 python3 -m unittest discover -s tests -v 이다. AWS credential/network 없이 mock13건을 실행한다. PR의 canonical integrity CI와 이 단위시험은 별도다. 현재13 PASS는 로컬 실행과 Reviewer 재현 결과이며 CI가 이 시험을 실행한 증거가 아니다.
 
 1. 독립 코드 리뷰 대상은 bootstrap-elb.py와 tests/test_bootstrap_elb.py의 exact commit이다. 기존 ReadOnly/guard 승인으로 새 코드를 승인했다고 표시하지 않는다.
 2. 실행자는 리뷰 완료 SHA의 파일을 사용한다. 기본 확인: python3 bootstrap-elb.py. 읽기 권한 부족/다른 계정/예상 밖 기존 ARN/path/trust는 STOP.
