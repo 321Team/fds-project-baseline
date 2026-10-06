@@ -62,6 +62,8 @@ session ARN 입력4종은 role-id를 포함한 본인/다른 사용자 형식과
 
 리뷰 후속은 [실제 bind 의존성 Pre-check](../20261006-network-binding-precheck/README.md)에 연결했다. 문서 구성을 final bind/U1 선행조건으로 명시하고, Start/Resume 토큰 취득 경계와 채널 runtime 증명을 구분하며, 실제 SessionId·owner/target·각 본인 계정 결과를 요구한다. 다른 사람의 진행 중인 업무 세션을 음성 시험 대상으로 삼지 않는다. 진단 DescribeSessions의 타인 metadata 조회 범위를 기록했다. 승인된 후보 JSON/Bool/18 actions는 변경하지 않는다.
 
+추가 수신한 [재환의 구성 결정6013422735](https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-6013422735)은 세션 로깅/KMS/Run As를 사용하지 않는 Standard_Stream 문서를 #35 Terraform에서 생성·readback하도록 정했다. 위 "임의의 무로그/무KMS 설정으로 만들지 않는다"는 제출 당시 경계를 보존하고, 이제 담당 Lead의 명시적 결정으로 인계한다. 실제 생성 source/readback·Relay 의존성·EBS/state KMS·최종 정책/사용자 시험은 아직 확보하지 않았다. 이 결정 자체를 P0·AC 충족으로 판정하지 않는다.
+
 ## 공식 근거 (2026-10-06 확인)
 
 - [ssmmessages action/resource 권한 표](https://docs.aws.amazon.com/service-authorization/latest/reference/list_ssmmessages.html)

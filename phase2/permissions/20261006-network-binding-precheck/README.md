@@ -31,7 +31,9 @@ printf 'NETWORK_BINDING_PRECHECK_RC=%s\n' "$rc"
 
 ## 리뷰 권고 반영과 다음 적용 순서
 
-1. **기본 문서가 final bind 및 U1의 선행조건**이다. 담당 IaC/bootstrap에서 account owner·Session/Standard_Stream·default version/내용 SHA·KMS/S3/CloudWatch 설정과 생성/구성 source를 인계한다. 없는 문서로 발생한 오류를 사람 IAM 허용 부족으로 해석하지 않는다. 중앙 조회가 빈 KMS/logging 값을 반환해도 승인된 무KMS/무로그 설계로 간주하지 않는다.
+새 회신: #37 Lead 재환의 [comment6013422735](https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-6013422735)를 확인했다. `SSM-SessionManagerRunShell`/`Standard_Stream`, S3·CloudWatch 세션 로깅 사용 안 함, 세션 데이터 KMS 사용 안 함, Run As 사용 안 함(기본 ssm-user), 나머지 timeout/shell profile은 AWS 기본값으로 정했다. 세션 안 `script` 기록과 CloudTrail 접속 이력을 증적 경로로 제안하고, 문서는 #35 Terraform에서 생성·readback해 인계하도록 요청했다. 이는 담당 Lead의 **구성 결정**이며 구현·실제 보안/감사 통제 충족을 이 PR이 확인했다는 뜻은 아니다. EBS/state KMS 결정과는 별개다.
+
+1. **기본 문서가 final bind 및 U1의 선행조건**이다. 담당 IaC/bootstrap에서 위 결정에 맞는 account owner·Session/Standard_Stream·default version/내용 SHA·KMS/S3/CloudWatch 설정과 생성/구성 source를 인계한다. 없는 문서로 발생한 오류를 사람 IAM 허용 부족으로 해석하지 않는다. 수집기에 남는 `ConfigurationDecision=HANDOFF_REQUIRED`는 현재 생성 source/readback 인계를 뜻하며, 재환의 결정 재승인을 요구하는 상태가 아니다. 빈 KMS/logging 값만으로 결정 일치·감사 통제 충족을 PASS하지 않는다.
 2. 하영은 actual Relay ID/profile ARN·Agent/SourceDestCheck·EBS 및 구현 PR/SHA를 인계하고, IaC 업무 권한용 state bucket/prefix/4 key·state KMS·Relay role creator/PassRole exact ARN을 확정한다. 현재 draft JSON 전체를 후보 검토의 새 승인 대기로 삼지 않는다. 수집기로 확인 가능한 실제 상태를 먼저 수집한다.
 3. 중앙은 값과 정책/trust/개인 AssumeRole 범위·기존 설정 backup·원복 계획을 연결해 actual-bound 최종 입력과 적용 code를 준비한다. PR143 후보와의 변경 부분을 validation/simulation/필요한 정확한 SHA 리뷰로 확인한 후 권한을 적용한다. 현재 조회 packet에는 적용 code가 없다. 비용 설정은 계속 보류한다.
 4. 이후 권욱·재환은 **각 본인 일반 계정**으로 U1을 수행한다. CLI/plugin과 `--document-name SSM-SessionManagerRunShell`을 명시하고, STS assumed-role ARN/UserId/RoleSessionName, 실제 SessionId, owner/target 시스템 태그, shell, 본인 Resume/Terminate 및 허용된 복구·거부 경계를 제출한다. 실제 서비스에서 태그/context를 수신하지 못하면 추정해서 PASS하지 않는다. Bool 누락/오류를 보고도 BoolIfExists로 자동 완화하지 않는다.
