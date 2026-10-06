@@ -1,0 +1,10 @@
+{
+  "Archive": "fds-iac-delta-precheck-20261007.tar.gz",
+  "ArchiveSHA256": "d1ff91b564ad8c08ade9ce0e0166cee9e481cc6f81ab013864364771a7efda73",
+  "Bytes": 27242,
+  "Files": 15,
+  "CollectorSHA256": "277f0b08695e486186820ec26d2087502467e2de585d10a64cf6b5f59d3b04f5",
+  "ReviewedHead": "c55fd28afbba183103dec7636f67d3fa9e365f5a",
+  "MergedCommit": "c34ca9c12d7cb38d610829cc59460ec6a8d87b1a",
+  "UTC": "2026-10-06T15:46:08.239535+00:00"
+}
