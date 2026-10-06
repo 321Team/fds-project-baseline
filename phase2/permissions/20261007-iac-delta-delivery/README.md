@@ -8,7 +8,7 @@ CODEX_ASSISTED. 기준 시점 2026-10-07 KST. #35 Lead 이하영·#37 Lead 이�
 - PR146은 재환의 해당 HEAD 승인 후 **00:31:47 KST**에 merge `c34ca9c12d7cb38d610829cc59460ec6a8d87b1a`로 편입됐다. 하영의 00:33:05 승인 회신은 병합 뒤 같은 HEAD의 추가 리뷰다. 병합 후 조회에서 head/merge/tree를 확인했으며 실제 GitHub `merged_at`과 마지막 `updated_at`을 구분한다.
 - 이번 배포는 위 소스의 **파일15개 bytes를 변경 없이 묶은 것**이다. 새 helper/권한 JSON/실행 gate를 넣지 않았다. 기존 source 리뷰를 그대로 연결하며 단순 포장 때문에 동일 코드를 다시 승인 대기시키지 않는다.
 - Linux에서 기존 단위시험16 PASS, SHA 기존10+신규3 항목 PASS. reviewer Windows의 mode0600 단언1 실패는 Linux에서 재현되지 않았다. CloudShell에서도 실행 전 같은 시험을 확인한다.
-- AWS 실행은 아직 NOT_RUN. 본 작업 환경에는 AWS 실행 연결이 없으므로 사용자 root CloudShell에서 다음 명령을 실행하고 결과를 전달한다. collector는 IAM/S3 변경 API·S3 state 원문·SSM Parameter 값·credentials를 조회하지 않는다.
+- 최초 배포 시점 AWS 실행은 NOT_RUN이었다. 이후 사용자 root 수집46케이스와 보존 capture 집계를 수신했으며 현재 상태는 [수신 기록](central-result-receipt.md)을 따른다. 본 작업 환경에는 AWS 실행 연결이 없으므로 사용자 root CloudShell에서 다음 명령을 실행하고 결과를 전달한다. collector는 IAM/S3 변경 API·S3 state 원문·SSM Parameter 값·credentials를 조회하지 않는다.
 
 검토 원문: [PR146](https://github.com/321Team/fds-project-baseline/pull/146), [하영 회신](https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-6019776035), [수집 source README](https://github.com/321Team/fds-project-baseline/blob/c55fd28afbba183103dec7636f67d3fa9e365f5a/phase2/permissions/20261007-iac-delta-precheck/README.md).
 

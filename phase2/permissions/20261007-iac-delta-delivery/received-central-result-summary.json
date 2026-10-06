@@ -25,7 +25,8 @@
     "ArchiveHash": "PASS_REPORTED",
     "UnitTests": "16_PASS_REPORTED",
     "SourceManifestItems": "13_PASS_REPORTED",
-    "CaptureManifestVerification": "NOT_RECEIVED"
+    "CaptureManifestVerification": "PASS_REPORTED",
+    "CAPTURE_MANIFEST_RC": 0
   },
   "Collection": "COMPLETE_REPORTED",
   "IAC_DELTA_RC": 0,
@@ -33,7 +34,12 @@
     "Result": "NO_FINDINGS_REPORTED",
     "IdentityFindingCount": 0,
     "BucketFindingCount": 0,
-    "FindingTypes": {"ERROR": 0, "SECURITY_WARNING": 0, "WARNING": 0, "SUGGESTION": 0}
+    "FindingTypes": {
+      "ERROR": 0,
+      "SECURITY_WARNING": 0,
+      "WARNING": 0,
+      "SUGGESTION": 0
+    }
   },
   "CandidateDeltaMatrix": {
     "Result": "46_CASES_PASS_REPORTED",
@@ -45,8 +51,55 @@
       "explicitDeny": 50,
       "implicitDeny": 15
     },
-    "RawEvaluationCountsReceived": false,
-    "NegativeMissingContextAndMatchedStatementReview": "PENDING_RAW_RESPONSE_SUMMARY"
+    "RawEvaluationCountsReceived": true,
+    "NegativeMissingContextAndMatchedStatementReview": "EXPLICIT_DENY_ORIGIN_REPORTED; IMPLICIT_DENY_CONTEXT_COMPLETION_PENDING",
+    "ReportedEvaluationCounts": {
+      "SimulationResponseCount": 46,
+      "ActionEvaluationCount": 93,
+      "allowed": 28,
+      "explicitDeny": 50,
+      "implicitDeny": 15
+    },
+    "ReportedNegativeEvidence": {
+      "NegativeRowsWithMissingContext": 14,
+      "ImplicitDenyRowsWithoutMissingContext": 1,
+      "ExplicitDenyRowsWithoutMatchedStatements": 0,
+      "ExplicitDenySourceCounts": [
+        {
+          "SourcePolicyId": "PolicyInputList.1",
+          "SourcePolicyType": "IAM Policy",
+          "MatchedStatementCount": 8
+        },
+        {
+          "SourcePolicyId": "ResourcePolicy",
+          "SourcePolicyType": "Resource Policy",
+          "MatchedStatementCount": 42
+        }
+      ],
+      "NEGATIVE_EVIDENCE_RC": 0
+    },
+    "ContextCompletionExperiment": {
+      "Cases": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19,
+        23,
+        24
+      ],
+      "ActionCount": 14,
+      "MissingKeys": [
+        "iam:PassedToService",
+        "s3:prefix"
+      ],
+      "AWSExecution": "NOT_RUN",
+      "LocalMock": "NORMAL_WRONG_IDENTITY_CHANGED_DECISION_PASS",
+      "OriginalPolicyAndExistingContext": "PRESERVED",
+      "RoleRuntimeProof": false
+    }
   },
   "IAMSnapshot": {
     "Roles": {
@@ -76,5 +129,6 @@
   "ROOT_RECOVERY_RUNTIME": "NOT_TESTED",
   "EFFECTIVE_PERMISSIONS": "NOT_TESTED",
   "APPLY_READINESS": "NOT_ASSESSED",
-  "ActualEC2RelayEIPOrSessionDocumentInventory": "NOT_COLLECTED_THIS_RUN"
+  "ActualEC2RelayEIPOrSessionDocumentInventory": "NOT_COLLECTED_THIS_RUN",
+  "NegativeEvidenceBasis": "USER_PROVIDED_PRESERVED_CAPTURE_AGGREGATION; RAW_FILES_NOT_RECEIVED"
 }

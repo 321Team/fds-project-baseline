@@ -1,6 +1,6 @@
 # 중앙 IAM delta 수집 결과 수신과 bootstrap 인계
 
-CODEX_ASSISTED. 사용자 CloudShell 출력 수신: 2026-10-07 01:20:42 KST. #35 Lead 이하영·#37 Lead 이재환, 권욱 중앙 검증 지원. 이 문서는 수신 기록·후속 자료이며 정책 적용 입력/신규 apply helper가 아니다.
+CODEX_ASSISTED. 원래 CloudShell 수집 출력과 후속 manifest·음성 집계를 사용자로부터 수신했다. 원래 수집 출력 수신: 2026-10-07 01:20:42 KST. #35 Lead 이하영·#37 Lead 이재환, 권욱 중앙 검증 지원. 이 문서는 수신 기록·후속 자료이며 정책 적용 입력/신규 apply helper가 아니다.
 
 ## 결론과 증적 범위
 
@@ -21,7 +21,15 @@ summary.UTC `2026-10-06T16:14:01.215913+00:00`는 10/7 **01:14:01 KST**다. coll
 
 현재는 **수집·부분 후보 사전검증 단계 통과**이며 전체 업무 권한 부여·bootstrap/Stage-A GO·본인 U1·AC 인수로 올리지 않는다. 일반 사용자/Audit/Network의 실제 S3 state 접근 차단은 bucket 정책이 적용되고 승인된 비밀 없는 fixture/본인 세션이 준비된 뒤 확인한다.
 
-## 재실행 없이 음성 판정 근거 수신
+## 보존 capture 집계 수신과 누락 context 보완
+
+**후속 수신 완료:** capture manifest RC0, jq RC0, response46/action93, allowed28·explicitDeny50·implicitDeny15로 소스 기대값과 일치한다. 아래 기존 manifest/jq 조회는 사용자가 이미 실행했으므로 반복하지 않는다. raw 파일 자체는 미수신이다.
+
+명시적 거부50건의 matched statement 없는 행은0이고 출처 집계는 identity8/resource42다. 암묵적 거부15건 중14 action에 누락 context가 표시됐다: object11 action은 `iam:PassedToService`+`s3:prefix`, ListBucket1은 `iam:PassedToService`, PassRole2는 `s3:prefix`다. 남은 case25/PassRole은 누락 키가 없다.
+
+정책 원문에서 `s3:prefix`는 ListBucket Allow, `iam:PassedToService`는 PassRole Allow에만 있다. 다른 action 문장의 키도 보고된 것으로 추정하며 키를 보완한 응답을 확인하기 전에는 원인을 확정하지 않는다. [9케이스·14 action 보완 명령](context-completion-experiment.md)은 기존 정책/부정 조건을 그대로 두고 누락 키만 추가한다. 현재 AWS 미실행이다. 원래46 전체는 반복하지 않는다.
+
+새 실행 블록은 기존 PR146 source 승인과 구분하며 PR147의 이번 diff는 코드 포함 변경으로 분류한다. 병합 전 후보 시험은 REVIEW_AUTHORITY_POLICY §4 범위에서 수행하고, 새 블록의 병합은 독립 리뷰 후 Lead가 판단한다. 이를 bootstrap source 준비의 새 대기 조건으로 삼지 않는다.
 
 review의 negative MissingContextValues/MatchedStatements 확인을 마무리한다. 아래는 **이미 보존된 파일을 조회·정리**하는 명령이며 AWS API 호출이나 capture 파일 수정이 없다. root46케이스를 다시 실행하지 않는다. 원본 정책·credential·state는 출력하지 않는다.
 
@@ -68,7 +76,7 @@ jq -s '
 printf 'NEGATIVE_EVIDENCE_RC=%s\n' "$?"
 ```
 
-소스상 정상 기준은 response46, action evaluation93, allowed28/explicitDeny50/implicitDeny15다. 이 숫자는 **reviewed source에서 계산한 기대값**이며 아직 수신한 raw 집계가 아니다. negative MissingContext가 있으면 누락 때문에 발생한 거부인지 `Null` 조건에서 의도한 키 부재인지 해당 조건/ResourcePolicy/MatchedStatements를 원본과 대조한다. 배열이 있다는 이유만으로 FAIL로 바꾸지 않는다. explicitDeny의 근거 없는 행도 별도 조사한다. IAM custom input/ResourcePolicy에서 온 source 식별을 확인하고 예상 밖 policy origin을 검토한다. implicitDeny에는 matched statement가 없는 것이 가능하므로 explicitDeny의 근거 검사와 혼동하지 않는다.
+소스상 정상 기준은 response46, action evaluation93, allowed28/explicitDeny50/implicitDeny15다. 이 숫자는 reviewed source의 기대값이며 이번 사용자 집계에서도 동일하게 수신했다. negative MissingContext가 있으면 누락 때문에 발생한 거부인지 `Null` 조건에서 의도한 키 부재인지 해당 조건/ResourcePolicy/MatchedStatements를 원본과 대조한다. 배열이 있다는 이유만으로 FAIL로 바꾸지 않는다. explicitDeny의 근거 없는 행도 별도 조사한다. IAM custom input/ResourcePolicy에서 온 source 식별을 확인하고 예상 밖 policy origin을 검토한다. implicitDeny에는 matched statement가 없는 것이 가능하므로 explicitDeny의 근거 검사와 혼동하지 않는다.
 
 위 집계는 자동 grant/merge gate가 아니라 결과 수신용 조회다. retry의 partial/에러 stdout 때문에 jq parse 실패 또는 response 수 차이가 나면 해당 private 파일·성공 attempt를 구분해서 다시 **조회**한다. 그 이유만으로 AWS46케이스 전체를 재실행하지 않는다. 공개 채널에는 정제 집계만, private 정책/전체 raw는 기존 승인된 비공개 증적 경로로만 전달한다.
 
@@ -98,4 +106,4 @@ printf 'NEGATIVE_EVIDENCE_RC=%s\n' "$?"
 
 이 회차는 AWS 변경이 없어 AWS rollback 대상이 없다. 원본 capture·SHA256SUMS·stdout을 보존하고 잘못된 수신 기록은 새 정정 기록으로 보완한다. 실제 bootstrap/grant 원복은 미래 회차의 before snapshot과 정확한 새 부여분으로 정의하며 운영 backend/state 버전/증적/profile을 일괄 삭제하지 않는다.
 
-`ROOT_CAPTURE=COMPLETE_REPORTED / VALIDATE_POLICY=NO_FINDINGS_REPORTED / DELTA=46_PASS_REPORTED / NEGATIVE_RAW_REVIEW=PENDING / BOOTSTRAP=NOT_RUN / ROLE_GRANT=NOT_RUN / USER_RUNTIME=NOT_TESTED / APPLY_READINESS=NOT_ASSESSED`
+`ROOT_CAPTURE=COMPLETE_REPORTED / VALIDATE_POLICY=NO_FINDINGS_REPORTED / DELTA=46_PASS_REPORTED / NEGATIVE_COUNTS_ORIGINS=RECEIVED / CONTEXT_COMPLETION=NOT_RUN / BOOTSTRAP=NOT_RUN / ROLE_GRANT=NOT_RUN / USER_RUNTIME=NOT_TESTED / APPLY_READINESS=NOT_ASSESSED`
