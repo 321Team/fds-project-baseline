@@ -1,0 +1,5 @@
+eef9806ff13f452a0face5564ed0586872e2431f4abba4e6a236343c70261445  capture-network-binding-precheck.py
+14ebdf56e6b315c849622bc741b84195f337623812cc2c5734a0b968ae622372  README.md
+64f0d252037fdac420063c898d5b9565861c765687dfd5f56d63b3db8fea9745  tests/test_binding.py
+f955a5c56c42183b93953282bb48851347ca53c0d0ba251849fe339db80d4d42  ../20261006-network-permission-precheck/capture-network-permission-precheck.py
+d4c94fc90e3a7ffd46964883f69743befdd0241d2a58068d62ba45bd6ebba2f6  ../20261006-network-final-candidate/network-permissions.proposed.template.json
