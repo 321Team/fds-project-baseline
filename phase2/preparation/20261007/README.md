@@ -5,6 +5,8 @@
 
 ## 적용 기준
 
+2026-10-08 후속: [Phase 2 전용 실행 준비](../20261008/README.md)를 소비한다. 사용자 지시에 따라 이번 후속에서 Phase 1 작업은 제외하며, 기존 자료의 역사 기록과 현재 실행 입력을 구분한다.
+
 - 현행 발행 정본: docs-v3.1.21, 2026-10-04 14:49:12 KST. 발행 기준 커밋 `979facb98de8ca1f1e2ce22f38b27ac3366f3fc3`.
 - 사전 준비 최초 main 기준은 `c34ca9c12d7cb38d610829cc59460ec6a8d87b1a`이며, 이번 시험전략 개정/동기화 기준은 `40ac664b83485745ab86b5018b8e19c386484cc8`이다. 과거 sources.json은 이력으로 보존하고 최신 조회는 audit/phase2-test-plan-20261007/sources.json에 기록한다.
 - [#32 Phase 1 Close](https://github.com/321Team/fds-project-baseline/issues/32)는 OPEN. [#33 공식 Start](https://github.com/321Team/fds-project-baseline/issues/33)는 #32의 잔여·Known Issue/Deferred 인계가 Entry다. 일정 도래만으로 이를 충족했다고 표시하지 않는다.
@@ -33,15 +35,15 @@ AWS/ROSA = P0 IMPLEMENTATION / RUNTIME / ACCEPTANCE
 
 기술적 cluster-admin 권한은 독점·Operator 설치·공용 cluster 장애주입 승인과 다르다. 기존 namespace-local·Quota/Owner·cleanup 경계를 유지한다. [Shared Lab 리허설 준비](shared-lab-rehearsal-preparation.md)를 사용하며 RHOAI는 read-only·RESOURCE_GATE=FAIL·Deferred 권고다. Lab PASS를 ROSA Runtime/인수·Migration Complete·G5/G6 Exit로 승격하지 않는다.
 
-최신 [Test Strategy](../../../../tests/FDS_Phase2_Test_Strategy_20261007.md)와 [Test Plan](../../../../tests/FDS_Phase2_Test_Plan_20261007.md)은 P0/P1·TS01~16·Gate/증적을 기존 AC에 매핑한다. 16 case TSV는 APP/E2E/Delivery의 일부이며 전체 시험범위를 대신하지 않는다.
-발행 v3.1.21은 보존하고 PR150 검토 입력으로 갱신한다. 기존 sources.json/verification.json은 14:14 시점의 이력이다. 이번 조회·검증은 [새 기록](../../../../audit/phase2-test-plan-20261007/README.md)을 따른다.
+최신 [Test Strategy](../../../tests/FDS_Phase2_Test_Strategy_20261007.md)와 [Test Plan](../../../tests/FDS_Phase2_Test_Plan_20261007.md)은 P0/P1·TS01~16·Gate/증적을 기존 AC에 매핑한다. 16 case TSV는 APP/E2E/Delivery의 일부이며 전체 시험범위를 대신하지 않는다.
+발행 v3.1.21은 보존하고 PR150 검토 입력으로 갱신한다. 기존 sources.json/verification.json은 14:14 시점의 이력이다. 이번 조회·검증은 [새 기록](../../../audit/phase2-test-plan-20261007/README.md)을 따른다.
 
 ## 확인된 정합성 쟁점
 
 1. **#50 일정:** 10-22 하루의 Issue 실행 조건과 승인 전략의 10-21 주 시험 / 10-22 최종 회귀가 다르다. [E2E Lead 요청](https://github.com/321Team/fds-project-baseline/issues/50#issuecomment-6013423361)을 기존 #47 handoff와 연결해 결정할 항목이다. 이번 case 초안은 날짜를 확정하지 않는다.
 2. **DNS 선행순서:** #40은 IP Endpoint 기본·P1 DNS Decision, #48은 Go+G5 이후 capacity다. PR137의 Private 관리 DNS 후보는 Basic Ready 전 필요한 subset을 제안한다. 기존 조건을 유지한 채 차이를 검토 입력으로 남긴다.
-3. **ROSA 규모:** #34 최신 Lead 의견은 HCP/m5.xlarge 동의와 1 AZ×3대 제안이다. 기존 후보 3 AZ×1대, N-1/2대 대안과 비용·생명주기 입력은 최종 Freeze 값이 아니다.
-4. **비용:** 저장된 $500/$400/$450 정책과 후속 교육장 한도 기반 운영 입력은 모두 출처를 구분한다. 실제 한도·잔여·생성/삭제시각·총 완료비용을 받기 전 Cost GO를 부여하지 않는다.
+3. **ROSA 규모:** 사용자 선택은 1 AZ·m5.xlarge 3대와 worker 1대 장애·복구 시험이다. actual worker subnet/AZ·platform egress·N-1 용량과 최종 Freeze/생성 GO는 별도 입력이다. AZ 전체 장애 대응은 새 P0가 아니다.
+4. **비용:** 교육장 지원은 확정, 자부담0·목표400/중단450/상한USD500 유지. 사용액·예상 총비용 모두 교육장 리포트 기준이며 총비용에 사용액을 다시 더하지 않는다. 지원 재확인·Billing 접근·자체 견적을 선행조건으로 요구하지 않는다. 보고 금액 미수신은 NOT_ASSESSED이며 독립 사전 준비는 계속한다.
 5. **Phase 1 DB 잔여:** #47의 db01 방화벽·pg_hba·edge01 k3s 정리 3건은 현재 P1 경로를 끊을 수 있다. #19 이관 조건 전 이번 무영향 사전 작업에 포함하지 않는다.
 
 ## 진행과 종료 기준

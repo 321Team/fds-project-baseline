@@ -3,6 +3,8 @@ AI usage: CODEX_ASSISTED.
 현재 작업 위치: 비공개 baseline PR137. PROPOSED / DECISION_NOT_RECORDED / FREEZE_HOLD.
 최신 재조회: baseline #34/#38/#42 comments. 기존 책임·AC·일정을 유지한다.
 
+2026-10-08 현재 소비 기준: [Phase 2 결정 패킷](../preparation/20261008/decision-packet.md)의 D22 단계 계약을 따른다. 아래 10/4~5 관측·PENDING은 이력이며 새 실행 상태로 복제하지 않는다. 교육장 지원은 확정이고 사용액·예상 총비용은 교육장 리포트 기준이다. 본 문서의 자체 견적/비용 입력 대기 표현보다 이 기준이 우선한다. 새 APP Build/Scan 성공과 원격 Push·승인 digest·ROSA Runtime 미완료를 구분한다. P1 Harbor/CICD 수정·실행·인수는 이번 범위에서 제외한다.
+
 ## 1. 검토할 단일 권장안
 기존 On-Prem Harbor를 P2 primary registry 후보로 유지하고, P2 pull principal은 P1과 분리하는 방안을 검토한다.
 Runner push와 P2 node pull은 별도 actor로 관리한다. 생성 전 endpoint/CA/권한/source 규칙을 결정하고, 생성 후 실제 node-source 및 cold-pull 증적으로 최종 인수한다.
@@ -31,7 +33,7 @@ Runner push와 P2 node pull은 별도 actor로 관리한다. 생성 전 endpoint
 - trust: 검토된 공개 CA를 selected HCP 방식에 맞게 사전 입력. insecure/TLS bypass 금지.
 - source: node-pull source와 Pod egress를 별도 관측. 기존 IPsec envelope가 Runner 관리망 경로를 충족한다고 가정하지 않음.
 - fallback: 자동 mirror/failover 없음. 신규 pull 실패 시 신규 rollout 중단, 정상 workload 및 이전 승인 digest 보존.
-- cost: registry 경로 transfer·DNS·network·필요 mirror 총비용 포함. 실제 금액은 사용자10-06 이후 입력 전 null.
+- cost: 선택 경로를 교육장 리포트의 보고 범위와 연결하고 사용액·예상 총비용을 기존 한도와 비교. 실제 미수신 금액은 null, 자체 별도 견적 제출을 필수로 만들지 않음.
 - final: Basic Ready 후 strict TLS/인증/negative/cold-pull/업무/복구 증적 수용으로 판정.
 
 권욱 #42 Lead는 이 후보의 수용/수정/보류를 원 결정 위치에 기록한다. 이 파일 생성은 그 판단을 대신하지 않는다.
@@ -43,7 +45,7 @@ Runner push와 P2 node pull은 별도 actor로 관리한다. 생성 전 endpoint
 3. 결과로 D22 consumer 연결표를 채운다. 권한 부족은 기존 운영자 조회로 해소하고 RBAC를 신설하지 않는다.
 4. platform producer의 selected HCP version/registry CA 입력/지원·capacity 입력을 연결한다. static 자료를 actual platform PASS로 바꾸지 않는다.
 5. APP producer의 최종 동일 digest build→scan→registry→runtime 연결을 소비한다. 타 세션 P1 시험을 중복 수행하지 않는다.
-6. 비용 텍스트 수신 후 한도/기간/as-of/누적/잔여운영·teardown 비용을 연결한다. 미확인 값0 처리 금지.
+6. 교육장 리포트 수신 후 원본/기간/as-of/통화/사용액/예상 총비용을 연결한다. 총비용 중복 가산·미확인 값0 처리 금지.
 
 ## 5. 완료 판정과 실패 처리
 Consumer 조회 RC0는 메타데이터 조회 성공만 의미한다. 실제 credential rotation/pull/권한거부 PASS가 아니다.
