@@ -1,0 +1,411 @@
+{
+  "type": "PREPARATION_SOURCE_INVENTORY_NOT_RUNTIME_EVIDENCE",
+  "authoring": "CODEX_ASSISTED",
+  "baseline_main_head": "c34ca9c12d7cb38d610829cc59460ec6a8d87b1a",
+  "canonical_release": {
+    "tag": "docs-v3.1.21",
+    "source_commit": "979facb98de8ca1f1e2ce22f38b27ac3366f3fc3",
+    "published_at_kst": "2026-10-04T14:49:12+09:00"
+  },
+  "user_environment_input": {
+    "date_kst": "2026-10-07",
+    "origin": "project conversation context",
+    "ocp": "team exclusive test/verification resource",
+    "production_path": "On-Prem to AWS ROSA",
+    "repository_synchronization": "NOT_APPLIED"
+  },
+  "files": [
+    {
+      "repository": "321Team/fds-project-baseline",
+      "ref": "c34ca9c12d7cb38d610829cc59460ec6a8d87b1a",
+      "path": "AGENTS.md",
+      "git_blob_sha": "ac5c0f4ac633e69f5b34fdb7b86ed54b0a01cf9b",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/c34ca9c12d7cb38d610829cc59460ec6a8d87b1a/AGENTS.md",
+      "status": "READ_PINNED_MAIN",
+      "retrieved_text_sha256": "4099193387fb3c5e2f055c2fdc24a57b95c016ad4ae4b75e7d5d66ba2a005bda"
+    },
+    {
+      "repository": "321Team/fds-project-baseline",
+      "ref": "c34ca9c12d7cb38d610829cc59460ec6a8d87b1a",
+      "path": "CURRENT.md",
+      "git_blob_sha": "2e6c37e32ebbd5387db68adcc99eff6946b59844",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/c34ca9c12d7cb38d610829cc59460ec6a8d87b1a/CURRENT.md",
+      "status": "READ_PINNED_MAIN",
+      "retrieved_text_sha256": "25d28056e5d8403eee41f194b43e65253d3af48e0f318d3b5480b4bda8ab4f51"
+    },
+    {
+      "repository": "321Team/fds-project-baseline",
+      "ref": "c34ca9c12d7cb38d610829cc59460ec6a8d87b1a",
+      "path": "governance/REVIEW_AUTHORITY_POLICY.md",
+      "git_blob_sha": "c1ed5607936b54e2bef4daa7fa5594f2cfcbc8a1",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/c34ca9c12d7cb38d610829cc59460ec6a8d87b1a/governance/REVIEW_AUTHORITY_POLICY.md",
+      "status": "READ_PINNED_MAIN",
+      "retrieved_text_sha256": "3f08642d16ecc9fc3a3b548dc5f5a1c5f4a922d7028ca997c3907cb88c818e81"
+    },
+    {
+      "repository": "321Team/fds-project-baseline",
+      "ref": "c34ca9c12d7cb38d610829cc59460ec6a8d87b1a",
+      "path": "audit/phase2-test-strategy-20260930/README.md",
+      "git_blob_sha": "edb6aa223294da93fdba82a3f83eb033e1836e3f",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/c34ca9c12d7cb38d610829cc59460ec6a8d87b1a/audit/phase2-test-strategy-20260930/README.md",
+      "status": "READ_PINNED_MAIN",
+      "retrieved_text_sha256": "266ed11a91a172778637c550ffaa80af568fa897e5d68bfc97c6984109ac5760"
+    },
+    {
+      "repository": "321Team/fds-project-baseline",
+      "ref": "c34ca9c12d7cb38d610829cc59460ec6a8d87b1a",
+      "path": "audit/phase2-cost-policy-20260930/decision-record.md",
+      "git_blob_sha": "ea77b5d1a29c3c0cc9a92847f35cba436c942645",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/c34ca9c12d7cb38d610829cc59460ec6a8d87b1a/audit/phase2-cost-policy-20260930/decision-record.md",
+      "status": "READ_PINNED_MAIN",
+      "retrieved_text_sha256": "fa0eb09b456fd2c40ad1f9defa1eeaa94f20869f918f815961c0693a8fe656a4"
+    },
+    {
+      "repository": "321Team/fds-project-baseline",
+      "ref": "72d798d5c784bf2270566b60374d1632d3152981",
+      "path": "phase2/reviews/20261003-resource-fit-recommended-design.md",
+      "git_blob_sha": "d1a5c7cbd1b2da07c6d8cb5769c72128ef67e141",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/72d798d5c784bf2270566b60374d1632d3152981/phase2/reviews/20261003-resource-fit-recommended-design.md",
+      "status": "OPEN_PR137_CANDIDATE",
+      "retrieved_text_sha256": "a8337f13ecf9567cddfe1ae2b5c4c0fee2b1fc3211208dc94d596ee981781b58"
+    },
+    {
+      "repository": "321Team/fds-project-baseline",
+      "ref": "72d798d5c784bf2270566b60374d1632d3152981",
+      "path": "phase2/reviews/20261004-private-management-bidirectional-dns-contract.md",
+      "git_blob_sha": "183bec8ac7202f53c0db3da5891062a70f436ecb",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/72d798d5c784bf2270566b60374d1632d3152981/phase2/reviews/20261004-private-management-bidirectional-dns-contract.md",
+      "status": "OPEN_PR137_CANDIDATE",
+      "retrieved_text_sha256": "228a83ca27968c10adfffdefaec4ef652af117b46b423360eaa1236b48ef6af1"
+    },
+    {
+      "repository": "321Team/infra-kubernetes",
+      "ref": "c3057906a6a8427a4b315b7e544e063efe0fecf2",
+      "path": "manifests/02-securitycontext.yaml",
+      "git_blob_sha": "4574ede0c56712c8cb4f7c7f0946c58b19fa0006",
+      "url": "https://github.com/321Team/infra-kubernetes/blob/c3057906a6a8427a4b315b7e544e063efe0fecf2/manifests/02-securitycontext.yaml",
+      "status": "READ_PINNED_MAIN",
+      "retrieved_text_sha256": "2cc1f6211068b7cd44f768b03d45fa7a11ad0e1ad2e86cf6361d183d6449e411"
+    },
+    {
+      "repository": "321Team/infra-kubernetes",
+      "ref": "c3057906a6a8427a4b315b7e544e063efe0fecf2",
+      "path": "manifests/03-networkpolicy.yaml",
+      "git_blob_sha": "d51ea194fa856b7e33968207cf5d9250367e6974",
+      "url": "https://github.com/321Team/infra-kubernetes/blob/c3057906a6a8427a4b315b7e544e063efe0fecf2/manifests/03-networkpolicy.yaml",
+      "status": "READ_PINNED_MAIN",
+      "retrieved_text_sha256": "fd1893aaa56171e7135746f110ac82a6df34641107d48c304264aa4912636243"
+    },
+    {
+      "repository": "321Team/infra-kubernetes",
+      "ref": "c3057906a6a8427a4b315b7e544e063efe0fecf2",
+      "path": "manifests/06-rbac.yaml",
+      "git_blob_sha": "550a51ed32e81e90129e5b03335ad6669a451102",
+      "url": "https://github.com/321Team/infra-kubernetes/blob/c3057906a6a8427a4b315b7e544e063efe0fecf2/manifests/06-rbac.yaml",
+      "status": "READ_PINNED_MAIN",
+      "retrieved_text_sha256": "0b65a6cf06f87e8b2ad09156a30c0671008c5f04bb21512c2030733c22e0af1a"
+    },
+    {
+      "repository": "321Team/fds-msa",
+      "ref": "0494ca279882d4e0cab24fb5a25a136a2e8f46c1",
+      "path": "README.md",
+      "git_blob_sha": "f5b437777e95107d438fb0162c5aec8b26a011b6",
+      "url": "https://github.com/321Team/fds-msa/blob/0494ca279882d4e0cab24fb5a25a136a2e8f46c1/README.md",
+      "status": "READ_PINNED_MAIN",
+      "retrieved_text_sha256": "e720b114c6447e149f9273e61f85c1cda2bc5f999643365b8170a0c715ef700e"
+    },
+    {
+      "repository": "321Team/fds-msa",
+      "ref": "0494ca279882d4e0cab24fb5a25a136a2e8f46c1",
+      "path": "references/upstream/kubernetes/d-sec-01/deployment-transaction-api.yaml",
+      "git_blob_sha": "57e2e3f53b9a07a56f9de0c3964ca9893f494a4c",
+      "url": "https://github.com/321Team/fds-msa/blob/0494ca279882d4e0cab24fb5a25a136a2e8f46c1/references/upstream/kubernetes/d-sec-01/deployment-transaction-api.yaml",
+      "status": "READ_PINNED_MAIN",
+      "retrieved_text_sha256": "588454a860b29304394ad52b95a9104b15352df117f6818e38374b8e80cf9016"
+    },
+    {
+      "repository": "321Team/fds-msa",
+      "ref": "0494ca279882d4e0cab24fb5a25a136a2e8f46c1",
+      "path": "references/upstream/kubernetes/d-sec-01/deployment-fds-engine.yaml",
+      "git_blob_sha": "e477f645b38adce51a28c3df4cffcef6c96a736f",
+      "url": "https://github.com/321Team/fds-msa/blob/0494ca279882d4e0cab24fb5a25a136a2e8f46c1/references/upstream/kubernetes/d-sec-01/deployment-fds-engine.yaml",
+      "status": "READ_PINNED_MAIN",
+      "retrieved_text_sha256": "61dc796670c147b78942fcbc332677654011cc7cbd8d5d08bc20a57bc89afa48"
+    },
+    {
+      "repository": "321Team/infra-rosa",
+      "ref": "a37b10628cd59427c45dd28e2f6bd924891e1c54",
+      "path": "precheck/portability/README.md",
+      "git_blob_sha": "c426a932b3eb81d0aa5e7ee5cf5b970c097ce8ec",
+      "url": "https://github.com/321Team/infra-rosa/blob/a37b10628cd59427c45dd28e2f6bd924891e1c54/precheck/portability/README.md",
+      "status": "READ_PINNED_MAIN",
+      "retrieved_text_sha256": "c1601e0ff58e78cb926c74dd7422aa10d135e71d839980a3a19c104b1ee78363"
+    },
+    {
+      "repository": "321Team/infra-cicd",
+      "ref": "1320e17e9d7dd66455e65276267dc2b92517c4b5",
+      "path": "docs/deploy-adapter-core.md",
+      "git_blob_sha": "0fd547c4b3d621f6a847762d6d86c9cbc8fad09a",
+      "url": "https://github.com/321Team/infra-cicd/blob/1320e17e9d7dd66455e65276267dc2b92517c4b5/docs/deploy-adapter-core.md",
+      "status": "READ_PINNED_MAIN",
+      "retrieved_text_sha256": "1261c363c13c13e8a12d44137ad958147fe53c10e59cd67ea6d07655aa882f45"
+    },
+    {
+      "repository": "321Team/infra-cicd",
+      "ref": "1320e17e9d7dd66455e65276267dc2b92517c4b5",
+      "path": "docs/deploy-binding.md",
+      "git_blob_sha": "e704ddeabe74d5f95fb3b3fbe2f27325359b11fa",
+      "url": "https://github.com/321Team/infra-cicd/blob/1320e17e9d7dd66455e65276267dc2b92517c4b5/docs/deploy-binding.md",
+      "status": "READ_PINNED_MAIN",
+      "retrieved_text_sha256": "c4c06dc91279589bc7fc59c34ce47b462d0a86b43593c9b134785397986d1917"
+    },
+    {
+      "repository": "321Team/infra-cicd",
+      "ref": "1320e17e9d7dd66455e65276267dc2b92517c4b5",
+      "path": ".github/workflows/app-test-build-scan.yml",
+      "git_blob_sha": "faa552d5b531bc7a430f1fcef36057eb4dd97795",
+      "url": "https://github.com/321Team/infra-cicd/blob/1320e17e9d7dd66455e65276267dc2b92517c4b5/.github/workflows/app-test-build-scan.yml",
+      "status": "READ_PINNED_MAIN",
+      "retrieved_text_sha256": "40a5dcd56b0bb6feb816bb297eb27bb747524181e914dcf514d614492ace2982"
+    }
+  ],
+  "issues": [
+    {
+      "number": 32,
+      "title": "[MS-P1-CLOSE-01] Phase 1 Close",
+      "state": "open",
+      "updated_at": "2026-10-04T05:59:38Z",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/32",
+      "assignees": [
+        "GWONUK"
+      ],
+      "retrieved_text_sha256": "64c00fa064b0691948276eaa70857bc556fe24d106297369a000c62ad0db44f8"
+    },
+    {
+      "number": 33,
+      "title": "[MS-P2-START-01] Phase 2 Start",
+      "state": "open",
+      "updated_at": "2026-10-04T05:59:41Z",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/33",
+      "assignees": [
+        "GWONUK"
+      ],
+      "retrieved_text_sha256": "b2bd34c277a8752e176ddd97473fcc71a9c0b32ca005ba12961abd05d430fc22"
+    },
+    {
+      "number": 34,
+      "title": "[P2-ARC-01] Hybrid / OCI / AWS / ROSA Architecture Freeze",
+      "state": "open",
+      "updated_at": "2026-10-06T15:34:35Z",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/34",
+      "assignees": [
+        "GWONUK"
+      ],
+      "retrieved_text_sha256": "269177618853d43c633ebd2c93b27cb0a9bff5a3541dffa549d536517b8af4f6"
+    },
+    {
+      "number": 35,
+      "title": "[P2-IAC-01] AWS / ROSA Terraform IaC",
+      "state": "open",
+      "updated_at": "2026-10-07T05:03:30Z",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/35",
+      "assignees": [
+        "hayeounglee"
+      ],
+      "retrieved_text_sha256": "ee034cbddbefa385d61835a60111289da47a62b11876d848cc125b26bb8628e0"
+    },
+    {
+      "number": 36,
+      "title": "[P2-OCI-01] OCI Relay Go / No-Go",
+      "state": "open",
+      "updated_at": "2026-10-04T05:59:52Z",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/36",
+      "assignees": [
+        "GWONUK"
+      ],
+      "retrieved_text_sha256": "398ed3990a8cc5deed6ad50b36783c98653ab34d27da15ca883324f5a87f2d29"
+    },
+    {
+      "number": 37,
+      "title": "[P2-VPN-01] OCI Relay / AWS Site-to-Site VPN",
+      "state": "open",
+      "updated_at": "2026-10-07T03:22:13Z",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/37",
+      "assignees": [
+        "supreme33-kr"
+      ],
+      "retrieved_text_sha256": "9c444d028497da66261798ab49ed2d2be640001c603c40f44f334a661f1439b3"
+    },
+    {
+      "number": 38,
+      "title": "[P2-ROSA-01] ROSA Platform / Security",
+      "state": "open",
+      "updated_at": "2026-10-04T06:21:47Z",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/38",
+      "assignees": [
+        "hayeounglee"
+      ],
+      "retrieved_text_sha256": "5a30f7a38e7e5fde04bfc0a284d4b656a6a0cec5db5b62c8abc622490ba0e7c3"
+    },
+    {
+      "number": 40,
+      "title": "[DEC-P2-DNS-01] Hybrid DNS Scope Decision",
+      "state": "open",
+      "updated_at": "2026-10-04T10:08:44Z",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/40",
+      "assignees": [
+        "GWONUK"
+      ],
+      "retrieved_text_sha256": "b3fb87c5efd7be8aa22b13c7fae25bc1869af98fe2f8d46e07c0543c4fa6a691"
+    },
+    {
+      "number": 41,
+      "title": "[DEC-P2-OP-01] Operator Supply Chain Scope Decision",
+      "state": "open",
+      "updated_at": "2026-10-04T06:00:27Z",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/41",
+      "assignees": [
+        "hayeounglee"
+      ],
+      "retrieved_text_sha256": "0aa8a4d826d9b4aa8378f1a924d53c79d54dff72d56874658ddbfe3e6a26a577"
+    },
+    {
+      "number": 42,
+      "title": "[DEC-P2-REG-01] ROSA Image Registry Source Decision",
+      "state": "open",
+      "updated_at": "2026-10-04T06:40:09Z",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/42",
+      "assignees": [
+        "GWONUK"
+      ],
+      "retrieved_text_sha256": "097a9d64e9daa15ddbeb5b2b8be0ee2312d71a30f0864a2b2eb59762183356d0"
+    },
+    {
+      "number": 43,
+      "title": "[P2-APP-01] ROSA Application Deployment",
+      "state": "open",
+      "updated_at": "2026-10-06T09:32:01Z",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/43",
+      "assignees": [
+        "supreme33-kr"
+      ],
+      "retrieved_text_sha256": "91ce494c26ba157e7d0edcf160c172493d0bea4666673c2ff9984b2f26b8e8af"
+    },
+    {
+      "number": 44,
+      "title": "[P2-OADP-01] OADP / S3 Backup",
+      "state": "open",
+      "updated_at": "2026-10-04T06:00:39Z",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/44",
+      "assignees": [
+        "hayeounglee"
+      ],
+      "retrieved_text_sha256": "6bf4c3c96155aa54a83d11d07258c05fb86d4cdebe38a45f77eed553a270ac99"
+    },
+    {
+      "number": 46,
+      "title": "[P2-CICD-01] Runner to ROSA Delivery",
+      "state": "open",
+      "updated_at": "2026-10-04T06:00:46Z",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/46",
+      "assignees": [
+        "GWONUK"
+      ],
+      "retrieved_text_sha256": "fb70308baa549fb19cf3f2b4e84ce89ce0e7cb3c8df228b89a387c8359890128"
+    },
+    {
+      "number": 47,
+      "title": "[P2-HYB-01] Hybrid DB / Registry Integration",
+      "state": "open",
+      "updated_at": "2026-10-04T15:30:46Z",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/47",
+      "assignees": [
+        "supreme33-kr"
+      ],
+      "retrieved_text_sha256": "29577c58c2b204e1eee6e3020398ca2040eaa3c80a5c87a9d08d537e07c1e50d"
+    },
+    {
+      "number": 48,
+      "title": "[P2-DNS-01] Hybrid DNS Implementation Conditional",
+      "state": "open",
+      "updated_at": "2026-10-04T06:00:54Z",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/48",
+      "assignees": [
+        "GWONUK"
+      ],
+      "retrieved_text_sha256": "cc5ff0ec8620fbfafdde6f69d93e5843e4971751783e8b45531e2f9872688baa"
+    },
+    {
+      "number": 49,
+      "title": "[P2-DOC-01] Cloud / Hybrid Deliverable Freeze",
+      "state": "open",
+      "updated_at": "2026-10-04T06:00:58Z",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/49",
+      "assignees": [
+        "GWONUK"
+      ],
+      "retrieved_text_sha256": "346ecf1a876852f888e177869ea572225e821e0f6af9f5bbf2fb4acce2630ce8"
+    },
+    {
+      "number": 50,
+      "title": "[P2-E2E-01] Hybrid E2E / Regression",
+      "state": "open",
+      "updated_at": "2026-10-06T09:32:06Z",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/50",
+      "assignees": [
+        "supreme33-kr"
+      ],
+      "retrieved_text_sha256": "ce799b772f777f31293b39711eeba58740b4a169dd47f8e4d488d702b7569130"
+    },
+    {
+      "number": 51,
+      "title": "[P2-OP-01] Operator Supply Chain Implementation Conditional",
+      "state": "open",
+      "updated_at": "2026-10-04T06:01:05Z",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/51",
+      "assignees": [
+        "hayeounglee"
+      ],
+      "retrieved_text_sha256": "9ddf25bcdaf2b7b8e74022e08a1c3ddeee3536fcca9869c62fe5902cbecb9dfd"
+    },
+    {
+      "number": 119,
+      "title": "[CR-P1-APP-01-01] P1-APP-01 AC \"DB/FDS 장애 시 /readyz 503\" 문구 정정 — fds-engine fail-open 정합",
+      "state": "closed",
+      "updated_at": "2026-10-04T06:02:47Z",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/119",
+      "assignees": [
+        "supreme33-kr"
+      ],
+      "retrieved_text_sha256": "c22c8c75bf05a7064ae95bea5aa5f0359212d7db4723c81c9e1070536e4dd49c"
+    }
+  ],
+  "receipts": [
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-6030662302",
+      "kind": "USER_OUTPUT_PREPARE_INTAKE"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-6031301706",
+      "kind": "LEAD_CONDITIONAL_GO_FOUR_RESOURCES"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/50#issuecomment-6013423361",
+      "kind": "SCHEDULE_CONFLICT_INPUT"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/119#issuecomment-5928210700",
+      "kind": "APP_LEAD_APPROVED_CONTRACT"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/119#issuecomment-5930828582",
+      "kind": "HISTORICAL_RUNTIME_RESULT_REPORT_NOT_REEXECUTED"
+    }
+  ],
+  "limitations": [
+    "No remote host/AWS/OCP/ROSA session used",
+    "Scoped to listed records; not a project-wide acceptance review",
+    "Original Runtime archives not directly received in this session"
+  ],
+  "retrieval_completed_at_kst": "2026-10-07T14:14:04.406963+09:00"
+}
