@@ -221,6 +221,10 @@ def desired_values(r, fields):
     status = fields.get("Status")
     if status and values["Status"] == "To Do" and "To Do" not in status["options"] and "Todo" in status["options"]:
         values["Status"] = "Todo"
+    # Project display only: preserve Cancelled in the issue and source summary.
+    # Prefer the dedicated option when the board provides it.
+    if status and values["Status"] == "Cancelled" and "Cancelled" not in status["options"]:
+        values["Status"] = "Done"
     return values
 
 def validate_fields(fields, records, allow_missing=False):
