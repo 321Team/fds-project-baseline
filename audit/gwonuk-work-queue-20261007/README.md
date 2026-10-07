@@ -1,13 +1,14 @@
 # 이권욱 Phase 1 현황·착수 대장 — 2026-10-07
 
-## 16:12 KST 후속 갱신 — 아래 15:33까지의 기록보다 우선
-이번 후속 조회는 관련 PR·원본 증적·댓글 범위이며 배정 전체를 다시 조회한 것이 아니다.
-- Ansible#66: HEAD0b0f99e8…, 독립 APPROVED5428521797 유효. Actions queued1/in_progress0, Run37462768493/Job112266199324 queued. 현장 Runner/세션은 미확인. [실제 해소 절차 등록](https://github.com/321Team/infra-ansible/pull/66#issuecomment-6032884200). 코드/리뷰 반복 대신 fresh preflight→기존 v1.3 1-job serve→regression/upload/cleanup→최신 HEAD 병합 판단 순서.
-- OID02: infra-kubernetes#68 후보 HEAD85939569b491aa4b89010a38f108cc8ab6c4ad18, stderr metadata·바이너리 절대 경로/hash·bounded capture 보완. STATIC AST2 및 Windows LOCAL/MOCK39 PASS/RC0, 원격4/4 일치. 새 delta 독립 리뷰 요청, Linux/containerd Runtime NOT_RUN. 기존 승인 c2f543a1/APPROVED5438296911은 이전 버전 결속. v2 후보 ZIP SHA25637dad3b585954074480cc438b9103c0e6a455914810a90f773c432f57b260028; 기존 ZIP9564b588… 보존. Owner18:00 계획/원 Due10/7 유지.
-- APP evidence#136: 원 HEAD4d2098f9… 전체120파일과 원본 archive 검토 완료, 폴더117/117 및 서버 수신110/110 해시 일치. 서버 전용20파일은 미수신. 새 HEAD1742c33cc5b379a0215a613d1ff2bcdbb3d5b136의 정정3파일만 재검토, 폴더117/117·registry APP hash1줄 정합. [실제 delta 리뷰5438839240](https://github.com/321Team/fds-project-evidence/pull/136#pullrequestreview-5438839240): 쓰기14:53:33/주실행14:55:51/관측마지막14:56:46/봉인14:57:08 구분 지적 해소. MON60.964747340초 절차 이탈과 watch 잔존 직접 미확인 유지. COMMENT를 독립 승인·병합·AC/Runtime GO로 확대하지 않음.
-- Harbor#13: [Owner6032702451](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6032702451)의 15:53 verify rc2/failed1로 최신 판정 NO-GO. DOCKER-FORWARD 마지막2규칙 순서 불일치. T0 없음/재시작 미실행. 원본 동등성 검토·별도 변경결정 없이 set 비교 예외를 승인하지 않음. S3/S4 fresh 증적과 원래17:00 상한 유지.
-- 본 갱신은 코드/준비·기술 검토 기록이다. 실제 서버 실행·Runner 공급·새 병합·정본 발행·티켓 종결은 수행하지 않았다.
+## 2026-10-07 16:46:26 KST 최신 재조회·실제 착수
 
+- 전체 배정58건(OPEN29/CLOSED29), Phase1 및 후속13·Phase216. incomplete_results=false. 본인 배정OPEN PR0·본인 작성OPEN PR7을 구분한다. [전체 목록·다음 완료조건](ASSIGNED_WORK_20261007_1618.md).
+- 권장: 시간제한 Harbor지원→OID02 제출/새 delta리뷰→PR66필수CI/Runner운영→최신APP 공급 소비→DOC/FUP/Close입력→G1/G3/Review/Close. DOC/Close 자료준비는 병행한다. 아래 이전snapshot·순서는 당시 이력이다.
+- Harbor: [A″6033171191](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6033171191) 기존조건부승인, START HOLD/Runtime 미완료. 16:16추가DOCKER DROP차이가 A′ 범위밖이었던 NO-GO 이력과 현재A″를 구분. 원verifier FAIL보존·17:00상한/기존시작·복구조건 유지. 지원source [b067a21f](https://github.com/321Team/infra-ansible/commit/b067a21f8ecce0c79052b0ac2ba9f2df54fab882), STATIC2/MOCK18, 4파일원격동일; Linux/CI/원본JSON분석 미실행. 새 영구verifier/서버규칙변경/RuntimeGO 아님.
+- OID02: infra-kubernetes#68 exact85939569, 새delta리뷰대기. 기존LOCAL/MOCK39·Owner오늘18:00계획/原Due10/7유지. 승인5438296911은 이전c2f543a1 대상이다. Linux/containerd수집·AC/OID03 미완료.
+- PR66: exact0b0f99e8 APPROVED5428521797 유효, Run37462768493 queued/conclusionnull. [실제절차6032884200](https://github.com/321Team/infra-ansible/pull/66#issuecomment-6032884200)에 따라 현장fresh preflight→기존v1.3 1jobserve→필수LinuxCI/upload/cleanup→병합판단. #9 sourceef5adb77는 이CI차단해소 뒤 독립리뷰/읽기수집.
+- CICD: [Draft63](https://github.com/321Team/infra-cicd/pull/63) exactf290d41a로 최신producer adc90410 인계문서2개갱신, CI37588042565 success, 이하영리뷰실제요청. producer새source37585637220/supply37585636640 success. APP/test delta0이나lock변경으로 image identity/Scan/신선도새판단필요. 현장원본/staging/Delivery 미완료, 활성config/app-build-scan.json source9658255유지.
+- 기존요구사항/AC·Owner/Due·Status·정본발행·Review/Runtime/Close승인·종결을 이번준비로 변경하지 않는다.
 
 CODEX_ASSISTED. 최초 배정 전수 조회는 14:15 KST, 15:33 KST 후속 조회는 관련 PR·리뷰·CI·변경 댓글 범위다. 아래 배정 건수는 최초 조회값이며 후속 범위로 전체 재조회했다고 표시하지 않는다. 저장소 조회 결과와 작업 준비 기록이다. Runtime 실행·AC 인수·위험 수용·일정 변경·정본 발행·티켓 종결 기록이 아니다.
 

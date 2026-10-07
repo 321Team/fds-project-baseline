@@ -1,12 +1,16 @@
 # Harbor AC04 Docker persistence 지원 인계 — 2026-10-07
 
-## 16:12 KST 최신 판정 — NO-GO
-[Owner#13 댓글6032702451](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6032702451): 15:53 ansible01 ~/p1-ans-01/e1c4458, core2.16.19, tracked 수정0, playbooks/p1-hbr-01-ac04-verify.yml rc2/ok65/failed1. DOCKER-FORWARD original과 현재 목록의 마지막2규칙(docker0 및 br-835092bfcbbc) 순서가 다르다. 원본 verify SHA d355fc1110f852190077cc369e0a3afc40fc51bd979b0457b2d2ebe73d2ee761; NO-GO 뒤 읽기 nodrift SHA f046b92eef67f66f4c237ce17705efb99a74cdb1847528811efef60bb78066f5.
-Owner는 순서만의 동등성으로 추정했으나 현재 verifier는 exact 목록 비교다. 원본 규칙·정본/변경결정 검토 없이 1회 set 비교 예외를 승인하거나 assertion을 현장에서 완화하지 않는다. 별도 최소 수정안/독립 리뷰/승인 후 재검증하는 경로가 권고이며 현재 NO-GO 유지.
-T0 미설정/재시작 미실행. .20 Runner fresh CA HTTP200/S4 공개PC .26 새TCP 및 새counter delta는 수신 전. SSH Too many authentication failures는 기존 승인키 명시·기존경로 안에서 해결하고 새키/인증통제 예외를 만들지 않는다.
-APP 원본·정정은 evidence#136 HEAD1742c33…에서 쓰기14:53:33/읽기약14:56:48/봉인14:57:08로 구분됐다. watch 잔존 직접 확인은 미확인이고 MON60.964747340초는 절차 이탈이다. 이것만으로 HBR Runtime GO가 되지 않는다. 원래17:00 상한/비중첩/S1~S4 유지.
-아래의 조건부 GO 및 T0 예정 설명은 이전 준비 시점 이력이며 이 최신 NO-GO를 대체하지 않는다.
+## 2026-10-07 16:46:26 KST 최신 판정 — 기존 A″ 조건부 승인, START HOLD
 
+[Owner16:16대조6032992856](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6032992856)은 DOCKER-FORWARD tail2 ACCEPT 교환 외 DOCKER filter tail2 DROP 교환을 찾아 A′범위밖 NO-GO를 유지했다. 이후 [실행인계6033023693](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6033023693), [16:30 A″조건부승인6033171191](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6033171191)이 등록됐다. 현재는 A″허용범위와 기존 전체 시작조건을 적용하며 이전 NO-GO를 최신승인부재로 표시하지 않는다.
+
+이번 지원은 [준비sourceb067a21f](https://github.com/321Team/infra-ansible/commit/b067a21f8ecce0c79052b0ac2ba9f2df54fab882)의 offline5chain분석/tool·MOCK시험·runbook·manifest4파일이다. 원격4/4동일, AST2 및 WindowsPython3.12.14 합성18시험PASS/rc0. DOCKER-FORWARD/DOCKER의 정확한tail2쌍만 후보로 식별하고 prefix순서/추가/삭제/중복/인터페이스/NAT/USER/FORWARD변화는 거부한다. 후보출력은 rc2/REVIEW_REQUIRED, fullverifier/runtimeGO/AC=false이며 기존verifier를 대체하지 않는다.
+
+원JSON/현재5chain원본은 이번세션미수신이고 Linux/CI/실제offline원본분석은 미실행이다. 아래명령예시와 기존원verifier order FAIL을 보존한다. 영구verifier수정/서버rule재정렬/봉인변경/새승인은 수행하지 않았다. #66queued중새PR/CI중첩을피하고 준비branch로인계했다.
+
+16:11:24RunnerTLS200/verify0/rc0 및16:16:37hash대조는 Owner제출보고다. A″는 실행직전fresh상태/TLS·공지전송·APP종료+10분·비중첩·.26fresh negative/counter·원본source/prestate/guard계약·복구분기A~E를요구한다. T0상한오늘17:00KST,단일30분창과충분한복구여유유지. START/RUNTIME미완료를 실제실행으로상향하지않는다. 현장실행자는 #13에 실제START또는미실행결과를남기고 HBR Lead는 원본수신후증적/AC별인수를처리한다. 이하영의16:20인계는 새권한/인증완화를포함하지않는다.
+
+아래15:53 NO-GO·기존GO/계획은 당시이력이며 위16:30A″범위와 실제최신START기록이 우선한다.
 
 CODEX_ASSISTED. 이권욱의 infra-ansible#62 지원 범위. #13 이하영 예정 기록6031540537의 source 정합성과 수신 조건을 대조했다. 새로운 Runtime GO/AC 인수가 아니다.
 
