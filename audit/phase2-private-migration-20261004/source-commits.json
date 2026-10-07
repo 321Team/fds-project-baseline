@@ -1,0 +1,758 @@
+[
+  {
+    "sha": "1516a04f4103b75fa2a955b063dadb6589f99975",
+    "parents": [
+      {
+        "sha": "dd90efc09d5ab16e170499374736df97c7ea5559",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/dd90efc09d5ab16e170499374736df97c7ea5559",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/dd90efc09d5ab16e170499374736df97c7ea5559"
+      }
+    ],
+    "message": "docs(phase2): record current adapter contracts and Freeze HOLD inputs",
+    "files": [
+      {
+        "filename": "phase2/README.md",
+        "sha": "2a64d6063d5d06ee93765b8d987d41b5ca0856f2",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "sha": "1e5c6d7b5026751795920fa1dc16dc567563978d",
+    "parents": [
+      {
+        "sha": "1516a04f4103b75fa2a955b063dadb6589f99975",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/1516a04f4103b75fa2a955b063dadb6589f99975",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/1516a04f4103b75fa2a955b063dadb6589f99975"
+      }
+    ],
+    "message": "docs(phase2): review recommended design against Phase 1 R/I/T/P contracts",
+    "files": [
+      {
+        "filename": "phase2/reviews/20261003-design-ritp-deep-review.md",
+        "sha": "beeb281a3a38d8c2b112144f06041173d202466f",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "sha": "53c41a1102a292eda61c02d79e4e34ee23135314",
+    "parents": [
+      {
+        "sha": "1e5c6d7b5026751795920fa1dc16dc567563978d",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/1e5c6d7b5026751795920fa1dc16dc567563978d",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/1e5c6d7b5026751795920fa1dc16dc567563978d"
+      }
+    ],
+    "message": "docs(phase2): link deep review and correct HCP pool and freeze assumptions",
+    "files": [
+      {
+        "filename": "phase2/README.md",
+        "sha": "e634735424fe1432fa30c6753fbe8a3d02791f12",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "sha": "f6117714e74a4f3b713fb38a1f46c50339ee55e3",
+    "parents": [
+      {
+        "sha": "53c41a1102a292eda61c02d79e4e34ee23135314",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/53c41a1102a292eda61c02d79e4e34ee23135314",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/53c41a1102a292eda61c02d79e4e34ee23135314"
+      }
+    ],
+    "message": "docs(phase2): add Gwonuk console readiness and personal follow-up handoff",
+    "files": [
+      {
+        "filename": "phase2/runbooks/20261003-gwonuk-console-readiness.md",
+        "sha": "05cad12df303488dbcf4556613a04db8ec6ee465",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "sha": "95aec4baca70afc364c92c599db5f1c3c670711a",
+    "parents": [
+      {
+        "sha": "f6117714e74a4f3b713fb38a1f46c50339ee55e3",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/f6117714e74a4f3b713fb38a1f46c50339ee55e3",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/f6117714e74a4f3b713fb38a1f46c50339ee55e3"
+      }
+    ],
+    "message": "docs(phase2): prepare guarded team IAM inventory role bootstrap",
+    "files": [
+      {
+        "filename": "phase2/runbooks/20261003-team-iam-readonly-bootstrap.md",
+        "sha": "5c5e555d44ed846cf72fece48849e71a2ca8d60b",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "sha": "0f5313dab54bcd989ff3ce607c6a9ed3c6164109",
+    "parents": [
+      {
+        "sha": "95aec4baca70afc364c92c599db5f1c3c670711a",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/95aec4baca70afc364c92c599db5f1c3c670711a",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/95aec4baca70afc364c92c599db5f1c3c670711a"
+      }
+    ],
+    "message": "docs(phase2): normalize IAM runbook Korean wording",
+    "files": [
+      {
+        "filename": "phase2/runbooks/20261003-team-iam-readonly-bootstrap.md",
+        "sha": "beaf183e4a1ad4cf5daf842eb21bc1cbee47bf07",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "sha": "11690502ae79bd72831680c4eb2afb1e6313a083",
+    "parents": [
+      {
+        "sha": "0f5313dab54bcd989ff3ce607c6a9ed3c6164109",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/0f5313dab54bcd989ff3ce607c6a9ed3c6164109",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/0f5313dab54bcd989ff3ce607c6a9ed3c6164109"
+      }
+    ],
+    "message": "docs(phase2): record local Python syntax validation",
+    "files": [
+      {
+        "filename": "phase2/runbooks/20261003-team-iam-readonly-bootstrap.md",
+        "sha": "571cffdd2ef9021bcffabbca78c973af06c0b570",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "sha": "5fe7c526e630cb7749ae11dd582abdad671a35b3",
+    "parents": [
+      {
+        "sha": "11690502ae79bd72831680c4eb2afb1e6313a083",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/11690502ae79bd72831680c4eb2afb1e6313a083",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/11690502ae79bd72831680c4eb2afb1e6313a083"
+      }
+    ],
+    "message": "fix(phase2): normalize IAM readback and verify rollback after mismatch",
+    "files": [
+      {
+        "filename": "phase2/runbooks/20261003-team-iam-readonly-bootstrap.md",
+        "sha": "aa514068591fb4a3f63d526e573237187ac4049d",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "sha": "9ab889f29ecff09ee417f9063067c7879b633dc8",
+    "parents": [
+      {
+        "sha": "5fe7c526e630cb7749ae11dd582abdad671a35b3",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/5fe7c526e630cb7749ae11dd582abdad671a35b3",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/5fe7c526e630cb7749ae11dd582abdad671a35b3"
+      }
+    ],
+    "message": "docs(phase2): add scoped ROSA prerequisite read-only policy handoff",
+    "files": [
+      {
+        "filename": "phase2/runbooks/20261003-rosa-prereq-readonly.md",
+        "sha": "5f204989254dd82cb0866bb4d940e59b4937f1ae",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "sha": "32539f92b09bea7c78c6310a20d4135c5bbf501d",
+    "parents": [
+      {
+        "sha": "9ab889f29ecff09ee417f9063067c7879b633dc8",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/9ab889f29ecff09ee417f9063067c7879b633dc8",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/9ab889f29ecff09ee417f9063067c7879b633dc8"
+      }
+    ],
+    "message": "docs(phase2): distinguish unresolved design from readiness and runtime observations",
+    "files": [
+      {
+        "filename": "phase2/reviews/20261003-unresolved-design-register.md",
+        "sha": "5842deb6ff9b268790d51ab3aa127544249bb2ba",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "sha": "ca0779ae4f4f9b3dc40c2cceef8badec242e3a71",
+    "parents": [
+      {
+        "sha": "32539f92b09bea7c78c6310a20d4135c5bbf501d",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/32539f92b09bea7c78c6310a20d4135c5bbf501d",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/32539f92b09bea7c78c6310a20d4135c5bbf501d"
+      }
+    ],
+    "message": "docs(phase2): normalize design register terminology",
+    "files": [
+      {
+        "filename": "phase2/reviews/20261003-unresolved-design-register.md",
+        "sha": "b416b13451b38953c117e7cb11eebdbf07567940",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "sha": "9850a32e9105c64dfcf55476c143ef115e4bd0cc",
+    "parents": [
+      {
+        "sha": "ca0779ae4f4f9b3dc40c2cceef8badec242e3a71",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/ca0779ae4f4f9b3dc40c2cceef8badec242e3a71",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/ca0779ae4f4f9b3dc40c2cceef8badec242e3a71"
+      }
+    ],
+    "message": "docs: propose resource-fit Phase 2 configuration with RITP freeze gates",
+    "files": [
+      {
+        "filename": "phase2/reviews/20261003-resource-fit-recommended-design.md",
+        "sha": "19c24903d3fc7f350c5277ffa075f27c86f3b4ed",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "sha": "c421733e702c8923e26f6788fd8ade5e8657badf",
+    "parents": [
+      {
+        "sha": "9850a32e9105c64dfcf55476c143ef115e4bd0cc",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/9850a32e9105c64dfcf55476c143ef115e4bd0cc",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/9850a32e9105c64dfcf55476c143ef115e4bd0cc"
+      }
+    ],
+    "message": "docs: address Phase 2 design review gaps and preserve unresolved gates",
+    "files": [
+      {
+        "filename": "phase2/reviews/20261003-resource-fit-recommended-design.md",
+        "sha": "0ef8766d5ac53d2c777ec6679b8cddcefdaa3990",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "sha": "f140ddcda1fbb35421c6d9323d4376ab77a60a12",
+    "parents": [
+      {
+        "sha": "c421733e702c8923e26f6788fd8ade5e8657badf",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/c421733e702c8923e26f6788fd8ade5e8657badf",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/c421733e702c8923e26f6788fd8ade5e8657badf"
+      }
+    ],
+    "message": "feat: add guarded AWS read-only readiness evidence capture",
+    "files": [
+      {
+        "filename": "phase2/runbooks/phase2-readiness-capture.py",
+        "sha": "71c915705375fed6cbd6f34dde66f227931d0111",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "sha": "61339ae6c7bd9b57948cc30e2eb39c34c113dab6",
+    "parents": [
+      {
+        "sha": "f140ddcda1fbb35421c6d9323d4376ab77a60a12",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/f140ddcda1fbb35421c6d9323d4376ab77a60a12",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/f140ddcda1fbb35421c6d9323d4376ab77a60a12"
+      }
+    ],
+    "message": "docs: define single-operator capture and console evidence handoff",
+    "files": [
+      {
+        "filename": "phase2/runbooks/20261003-readiness-evidence-capture.md",
+        "sha": "d10bd36b0d35f78144408f369afbfa391a0a0bfa",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "sha": "658f0d14d74034ee621a2a509aae6b9e0d4f07a8",
+    "parents": [
+      {
+        "sha": "61339ae6c7bd9b57948cc30e2eb39c34c113dab6",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/61339ae6c7bd9b57948cc30e2eb39c34c113dab6",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/61339ae6c7bd9b57948cc30e2eb39c34c113dab6"
+      }
+    ],
+    "message": "docs: address follow-up capture review without promoting runtime gates",
+    "files": [
+      {
+        "filename": "phase2/reviews/20261003-resource-fit-recommended-design.md",
+        "sha": "e087a7d19a9594c81325da29225de8042e9d84fb",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "sha": "c8a6ca60788d8ca5f7d018f831dd1f13270d117b",
+    "parents": [
+      {
+        "sha": "658f0d14d74034ee621a2a509aae6b9e0d4f07a8",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/658f0d14d74034ee621a2a509aae6b9e0d4f07a8",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/658f0d14d74034ee621a2a509aae6b9e0d4f07a8"
+      }
+    ],
+    "message": "docs(phase2): address source reconciliation security and ownership review",
+    "files": [
+      {
+        "filename": "phase2/reviews/20261003-resource-fit-recommended-design.md",
+        "sha": "2f4a5e48e91f289c30788547106c9ec6dc07c63c",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "sha": "fe73bac2914c3c54f868c999617a742c652eaec9",
+    "parents": [
+      {
+        "sha": "c8a6ca60788d8ca5f7d018f831dd1f13270d117b",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/c8a6ca60788d8ca5f7d018f831dd1f13270d117b",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/c8a6ca60788d8ca5f7d018f831dd1f13270d117b"
+      }
+    ],
+    "message": "docs(iam): clarify MFA completion and protected backup handoff",
+    "files": [
+      {
+        "filename": "phase2/runbooks/20261003-team-iam-readonly-bootstrap.md",
+        "sha": "d0421e38249e3d2fe6e40c4571e370c35b0ccfeb",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "sha": "12ab5923eaa426f95561ff20ec7901bccb368388",
+    "parents": [
+      {
+        "sha": "fe73bac2914c3c54f868c999617a742c652eaec9",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/fe73bac2914c3c54f868c999617a742c652eaec9",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/fe73bac2914c3c54f868c999617a742c652eaec9"
+      }
+    ],
+    "message": "docs(phase2): add reviewable source reconciliation SEC decision candidate",
+    "files": [
+      {
+        "filename": "phase2/reviews/20261004-source-reconciliation-sec-decision-candidate.md",
+        "sha": "612d239e2076d7c7e996a0ced1150684ba4b054d",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "sha": "8b8916963b0b084760b97ad70d245e43df3a8892",
+    "parents": [
+      {
+        "sha": "12ab5923eaa426f95561ff20ec7901bccb368388",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/12ab5923eaa426f95561ff20ec7901bccb368388",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/12ab5923eaa426f95561ff20ec7901bccb368388"
+      }
+    ],
+    "message": "docs(phase2): link SEC decision candidate and cost input handoff",
+    "files": [
+      {
+        "filename": "phase2/reviews/20261003-resource-fit-recommended-design.md",
+        "sha": "c692d74cf4af0476817026924459b7b05a48202a",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "sha": "029809629218cd721924a9c5ed0b75181d72c38a",
+    "parents": [
+      {
+        "sha": "8b8916963b0b084760b97ad70d245e43df3a8892",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/8b8916963b0b084760b97ad70d245e43df3a8892",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/8b8916963b0b084760b97ad70d245e43df3a8892"
+      }
+    ],
+    "message": "docs(phase2): define private management routing and bidirectional DNS contract",
+    "files": [
+      {
+        "filename": "phase2/reviews/20261004-private-management-bidirectional-dns-contract.md",
+        "sha": "7f8b0f675d41fe0daa14153d09a75b092b6d28e4",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "sha": "e4131e4c6ccf0f7a735025c7c1dce5da8306eb1d",
+    "parents": [
+      {
+        "sha": "029809629218cd721924a9c5ed0b75181d72c38a",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/029809629218cd721924a9c5ed0b75181d72c38a",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/029809629218cd721924a9c5ed0b75181d72c38a"
+      }
+    ],
+    "message": "docs(phase2): link DNS contract and HCP API port support boundary",
+    "files": [
+      {
+        "filename": "phase2/reviews/20261003-resource-fit-recommended-design.md",
+        "sha": "5ef5dfc81ed8dc09033ff8b20b5b5d229ffe7cae",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "sha": "8b085dda4168f6c737aefce07aca42ed4c47d5db",
+    "parents": [
+      {
+        "sha": "e4131e4c6ccf0f7a735025c7c1dce5da8306eb1d",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/e4131e4c6ccf0f7a735025c7c1dce5da8306eb1d",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/e4131e4c6ccf0f7a735025c7c1dce5da8306eb1d"
+      }
+    ],
+    "message": "docs(phase2): define Harbor D22 inputs and runtime acceptance",
+    "files": [
+      {
+        "filename": "phase2/reviews/20261004-harbor-d22-input-contract.md",
+        "sha": "c12d70163914fde463758ccf94092004d07d1ecf",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "sha": "bd569cab91fbc19ba1a71e988af4fd3018c3558e",
+    "parents": [
+      {
+        "sha": "8b085dda4168f6c737aefce07aca42ed4c47d5db",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/8b085dda4168f6c737aefce07aca42ed4c47d5db",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/8b085dda4168f6c737aefce07aca42ed4c47d5db"
+      }
+    ],
+    "message": "docs(phase2): connect D22 contract and separate registry authentication",
+    "files": [
+      {
+        "filename": "phase2/reviews/20261003-resource-fit-recommended-design.md",
+        "sha": "e389b044b00c0e984da39cb6441618b413af1f16",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "sha": "f17937e998329426895e54c9c2b1cfbae0af747b",
+    "parents": [
+      {
+        "sha": "bd569cab91fbc19ba1a71e988af4fd3018c3558e",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/bd569cab91fbc19ba1a71e988af4fd3018c3558e",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/bd569cab91fbc19ba1a71e988af4fd3018c3558e"
+      }
+    ],
+    "message": "docs(phase2): prepare public Harbor CA candidate input from pinned evidence",
+    "files": [
+      {
+        "filename": "phase2/inputs/harbor-additional-trusted-ca.candidate.json",
+        "sha": "5a1af46767ccec9fa98ba704d26870ff8b80d35a",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "sha": "9fd68bec63d2aa5d91908a6655244ea3e0e566a7",
+    "parents": [
+      {
+        "sha": "f17937e998329426895e54c9c2b1cfbae0af747b",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/f17937e998329426895e54c9c2b1cfbae0af747b",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/f17937e998329426895e54c9c2b1cfbae0af747b"
+      }
+    ],
+    "message": "docs(phase2): bind recovered CA and observed registry inputs with scope corrections",
+    "files": [
+      {
+        "filename": "phase2/reviews/20261004-harbor-d22-input-contract.md",
+        "sha": "14770be04ac02fd402906124cbd084002411fd13",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "sha": "2e42ee20803bfd2b685d98086947b685ad2bc84d",
+    "parents": [
+      {
+        "sha": "9fd68bec63d2aa5d91908a6655244ea3e0e566a7",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/9fd68bec63d2aa5d91908a6655244ea3e0e566a7",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/9fd68bec63d2aa5d91908a6655244ea3e0e566a7"
+      }
+    ],
+    "message": "docs(phase2): reflect recovered public CA and scoped Harbor evidence",
+    "files": [
+      {
+        "filename": "phase2/reviews/20261003-resource-fit-recommended-design.md",
+        "sha": "785b63f5bc3338f1834d6668a7691c2a54400c87",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "sha": "67abb7fe63f6148fde21b85483ad2184f02bbf57",
+    "parents": [
+      {
+        "sha": "2e42ee20803bfd2b685d98086947b685ad2bc84d",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/2e42ee20803bfd2b685d98086947b685ad2bc84d",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/2e42ee20803bfd2b685d98086947b685ad2bc84d"
+      }
+    ],
+    "message": "docs(phase2): prepare scoped Harbor field intake and image approval binding",
+    "files": [
+      {
+        "filename": "phase2/runbooks/20261004-harbor-d22-readonly-intake.md",
+        "sha": "3b359198787e30a443ba8f1b2fe1b0954eddb8e1",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "sha": "ce1f28410cb0fee45a691d63d83063a8fd59bbd8",
+    "parents": [
+      {
+        "sha": "67abb7fe63f6148fde21b85483ad2184f02bbf57",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/67abb7fe63f6148fde21b85483ad2184f02bbf57",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/67abb7fe63f6148fde21b85483ad2184f02bbf57"
+      }
+    ],
+    "message": "docs(phase2): consume approved P1 resource baseline without asserting ROSA capacity",
+    "files": [
+      {
+        "filename": "phase2/reviews/20261003-resource-fit-recommended-design.md",
+        "sha": "a436013c3d3777a29e41db83df76aaa02e6c85e3",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "sha": "1d2479612aeeab722753eb381418d2162c3107a9",
+    "parents": [
+      {
+        "sha": "ce1f28410cb0fee45a691d63d83063a8fd59bbd8",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/ce1f28410cb0fee45a691d63d83063a8fd59bbd8",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/ce1f28410cb0fee45a691d63d83063a8fd59bbd8"
+      }
+    ],
+    "message": "docs(phase2): bind established image decisions and field intake limits",
+    "files": [
+      {
+        "filename": "phase2/reviews/20261004-harbor-d22-input-contract.md",
+        "sha": "56af8de0537f36d1063b5eb2a2596e6a1f1d50b0",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "sha": "e957eab6f5e146721f3439efe7230f6ded295b61",
+    "parents": [
+      {
+        "sha": "1d2479612aeeab722753eb381418d2162c3107a9",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/1d2479612aeeab722753eb381418d2162c3107a9",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/1d2479612aeeab722753eb381418d2162c3107a9"
+      }
+    ],
+    "message": "docs(phase2): isolate CA trust and qualify TLS collection exit failures",
+    "files": [
+      {
+        "filename": "phase2/runbooks/20261004-harbor-d22-readonly-intake.md",
+        "sha": "06f8e71029d05f1b747f8b19eeb91745a2289caa",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "sha": "c2451973ad99ea9d7192e7f6b0d1d73b576dcf56",
+    "parents": [
+      {
+        "sha": "e957eab6f5e146721f3439efe7230f6ded295b61",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/e957eab6f5e146721f3439efe7230f6ded295b61",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/e957eab6f5e146721f3439efe7230f6ded295b61"
+      }
+    ],
+    "message": "fix(phase2): reject malformed captures and preserve timeout response bytes",
+    "files": [
+      {
+        "filename": "phase2/runbooks/phase2-readiness-capture.py",
+        "sha": "21548b5f3432ea3606aff44b462d955b6eb62c9e",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "sha": "b6c830cd0b6c7b30af2d319c3de6941735b39b3f",
+    "parents": [
+      {
+        "sha": "c2451973ad99ea9d7192e7f6b0d1d73b576dcf56",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/c2451973ad99ea9d7192e7f6b0d1d73b576dcf56",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/c2451973ad99ea9d7192e7f6b0d1d73b576dcf56"
+      }
+    ],
+    "message": "test(phase2): cover collector guards malformed JSON and timeout integrity",
+    "files": [
+      {
+        "filename": "phase2/runbooks/test_phase2_readiness_capture.py",
+        "sha": "ea26294d0143f4bf01368b1ce3bda09cead6b7f2",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "sha": "bfe4f52c2354c1032ffb539eda7339457fd6c1be",
+    "parents": [
+      {
+        "sha": "b6c830cd0b6c7b30af2d319c3de6941735b39b3f",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/b6c830cd0b6c7b30af2d319c3de6941735b39b3f",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/b6c830cd0b6c7b30af2d319c3de6941735b39b3f"
+      }
+    ],
+    "message": "docs(phase2): repin hardened collector and qualify partial capture results",
+    "files": [
+      {
+        "filename": "phase2/runbooks/20261003-readiness-evidence-capture.md",
+        "sha": "a49debc1391f39badba2a7825ca17e5ef9b6613e",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "sha": "0b674c1233d9249abf05f1dd3cadffca78a2ca18",
+    "parents": [
+      {
+        "sha": "bfe4f52c2354c1032ffb539eda7339457fd6c1be",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/bfe4f52c2354c1032ffb539eda7339457fd6c1be",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/bfe4f52c2354c1032ffb539eda7339457fd6c1be"
+      }
+    ],
+    "message": "docs(phase2): record offline defect reproduction and readiness verification scope",
+    "files": [
+      {
+        "filename": "phase2/reviews/20261004-offline-readiness-verification.md",
+        "sha": "98dd5f02dd48ea560283adcec09fd170f691d019",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "sha": "915122a993cf9d0eaaf1f6f6acdb68cbe54330b5",
+    "parents": [
+      {
+        "sha": "0b674c1233d9249abf05f1dd3cadffca78a2ca18",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/0b674c1233d9249abf05f1dd3cadffca78a2ca18",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/0b674c1233d9249abf05f1dd3cadffca78a2ca18"
+      }
+    ],
+    "message": "fix(runbook): isolate Harbor intake failures from interactive terminal",
+    "files": [
+      {
+        "filename": "phase2/runbooks/20261004-harbor-d22-readonly-intake.md",
+        "sha": "015d405e1215c35c25a2db09e928edaae1f95d6a",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "sha": "1fb47001663e7689d9fd7eb9776f50221d5f5542",
+    "parents": [
+      {
+        "sha": "915122a993cf9d0eaaf1f6f6acdb68cbe54330b5",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/915122a993cf9d0eaaf1f6f6acdb68cbe54330b5",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/915122a993cf9d0eaaf1f6f6acdb68cbe54330b5"
+      }
+    ],
+    "message": "docs(phase2): record current Harbor leaf and pinned CA TLS field readback",
+    "files": [
+      {
+        "filename": "phase2/reviews/20261004-harbor-d22-input-contract.md",
+        "sha": "d033308186bb0bec2bd34573e92ae9fdd6b4c75a",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "sha": "d53f24c813aab2aa6fca33d93d12a7c0fedde45b",
+    "parents": [
+      {
+        "sha": "1fb47001663e7689d9fd7eb9776f50221d5f5542",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/1fb47001663e7689d9fd7eb9776f50221d5f5542",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/1fb47001663e7689d9fd7eb9776f50221d5f5542"
+      }
+    ],
+    "message": "feat(phase2): add read-only Harbor robot metadata collector",
+    "files": [
+      {
+        "filename": "phase2/runbooks/harbor-robot-readonly.py",
+        "sha": "57869b63fc1bbd16318ba9eefe3df3599a6ddbed",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "sha": "8312f2fc7d67a534279d40dc8241cc4c8b84ee65",
+    "parents": [
+      {
+        "sha": "d53f24c813aab2aa6fca33d93d12a7c0fedde45b",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/d53f24c813aab2aa6fca33d93d12a7c0fedde45b",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/d53f24c813aab2aa6fca33d93d12a7c0fedde45b"
+      }
+    ],
+    "message": "test(phase2): verify robot metadata filtering and error handling",
+    "files": [
+      {
+        "filename": "phase2/runbooks/test_harbor_robot_readonly.py",
+        "sha": "625a6b5ffcd80f0ac272e6fc616ac42cb1b560a5",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "sha": "d866d324721634b1ebee7556e3bedf952a6914fe",
+    "parents": [
+      {
+        "sha": "8312f2fc7d67a534279d40dc8241cc4c8b84ee65",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/8312f2fc7d67a534279d40dc8241cc4c8b84ee65",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/8312f2fc7d67a534279d40dc8241cc4c8b84ee65"
+      }
+    ],
+    "message": "docs(phase2): document terminal-safe robot metadata intake",
+    "files": [
+      {
+        "filename": "phase2/runbooks/20261004-harbor-robot-readonly.md",
+        "sha": "f4491404ad185cc2c4c30bc363e5ce21b146122d",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "sha": "eeca81caff692d8d18a226101a14a8210f2a4918",
+    "parents": [
+      {
+        "sha": "d866d324721634b1ebee7556e3bedf952a6914fe",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/d866d324721634b1ebee7556e3bedf952a6914fe",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/d866d324721634b1ebee7556e3bedf952a6914fe"
+      }
+    ],
+    "message": "docs(phase2): record robot field readback and rotation consumer checks",
+    "files": [
+      {
+        "filename": "phase2/reviews/20261004-harbor-d22-input-contract.md",
+        "sha": "726a06cb1bf911e6cccbb651db462b14bef5c878",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "sha": "9ff3b32263ae1305fbd3a18781e633173a153452",
+    "parents": [
+      {
+        "sha": "eeca81caff692d8d18a226101a14a8210f2a4918",
+        "url": "https://api.github.com/repos/321Team/fds-project-architecture/commits/eeca81caff692d8d18a226101a14a8210f2a4918",
+        "html_url": "https://github.com/321Team/fds-project-architecture/commit/eeca81caff692d8d18a226101a14a8210f2a4918"
+      }
+    ],
+    "message": "docs(phase2): map Harbor consumers and prepare read-only reference checks",
+    "files": [
+      {
+        "filename": "phase2/runbooks/20261004-harbor-consumer-reference-readonly.md",
+        "sha": "c5ce692e1d1e3f3b56c8e6d6dd13a8b6057afeef",
+        "status": "added"
+      }
+    ]
+  }
+]

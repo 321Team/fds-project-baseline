@@ -1,0 +1,23 @@
+{
+  "status": "AWAITING_USER_TEXT_FROM_2026-10-06",
+  "currency": null,
+  "limit_amount": null,
+  "limit_scope": null,
+  "period_start": null,
+  "period_end": null,
+  "as_of_kst": null,
+  "accrued_gross": null,
+  "credits_or_discounts": null,
+  "remaining_runtime_hours": null,
+  "remaining_fixed_cost": null,
+  "remaining_hourly_cost": null,
+  "remaining_variable_cost": null,
+  "teardown_residual_cost": null,
+  "source_reference": null,
+  "notes": [
+    "미입력 금액을 0으로 해석하지 않는다.",
+    "기존 문서의 예산 제안값을 실제 교육장 한도로 자동 대입하지 않는다.",
+    "비용 수신 전에도 무과금 문서/정적 검증은 진행한다.",
+    "cost-to-complete는 동일 통화·기간·할인 기준을 확인한 뒤 산정한다."
+  ]
+}
