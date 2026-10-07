@@ -1,0 +1,17 @@
+Case ID	Ticket	Purpose	Expected result basis	AC/contract source	Target environment	Required raw	Result	Execution prerequisite	Verification stage	Acceptance boundary
+P2-PREP-01	#38/#43	UID/SCC admission	승인 image와 portable SecurityContext의 admission 관측	#38 PG03	SHARED_OCP_LAB	admission RC·SCC/UID 범위; 전체PG03 PASS 아님	NOT_RUN	실제환경/승인fixture/source/digest/작업창 및 복구 범위 고정	LAB-PRECHECK	NON_ACCEPTANCE; 실제 ROSA에서 재검증
+P2-PREP-02	#38/#43	arbitrary UID actual run	동일 승인 digest Running/Ready·non-root·health·RO filesystem·필요 volume 쓰기	#38/#43	SHARED_OCP_LAB	Pod imageID·uid·health·cleanup	NOT_RUN	실제환경/승인fixture/source/digest/작업창 및 복구 범위 고정	LAB-PRECHECK	NON_ACCEPTANCE; 실제 ROSA에서 재검증
+P2-PREP-03	#43	App/Route	두 workload Ready·API Route health·engine 외부 직접 노출 없음	#43	ROSA	source/manifest/digest/Route/Pod imageID	NOT_RUN	실제환경/승인fixture/source/digest/작업창 및 복구 범위 고정	RUNTIME	실제 ROSA/승인 Hybrid에서 기존 AC로 판정
+P2-PREP-04	#50	Normal transaction	API의 engine 평가 및 API의 DB 저장/조회 일치	#47/#50	ROSA_HYBRID	Transaction ID/API/FDS/DB	NOT_RUN	실제환경/승인fixture/source/digest/작업창 및 복구 범위 고정	RUNTIME	실제 ROSA/승인 Hybrid에서 기존 AC로 판정
+P2-PREP-05	#50	R01	승인 fixture 사전 기대값·DB 저장 결과 일치	#50	ROSA_HYBRID	fixture pin·Transaction ID·raw	NOT_RUN	실제환경/승인fixture/source/digest/작업창 및 복구 범위 고정	RUNTIME	실제 ROSA/승인 Hybrid에서 기존 AC로 판정
+P2-PREP-06	#50	R02	승인 fixture 사전 기대값·DB 저장 결과 일치	#50	ROSA_HYBRID	fixture pin·Transaction ID·raw	NOT_RUN	실제환경/승인fixture/source/digest/작업창 및 복구 범위 고정	RUNTIME	실제 ROSA/승인 Hybrid에서 기존 AC로 판정
+P2-PREP-07	#50	R04	승인 fixture·시각/offset 계약·DB 저장 결과 일치	#50	ROSA_HYBRID	fixture pin·KST/offset·Transaction ID	NOT_RUN	실제환경/승인fixture/source/digest/작업창 및 복구 범위 고정	RUNTIME	실제 ROSA/승인 Hybrid에서 기존 AC로 판정
+P2-PREP-08	#50	R07	승인 fixture 사전 기대값·DB 저장 결과 일치	#50	ROSA_HYBRID	fixture pin·Transaction ID·raw	NOT_RUN	실제환경/승인fixture/source/digest/작업창 및 복구 범위 고정	RUNTIME	실제 ROSA/승인 Hybrid에서 기존 AC로 판정
+P2-PREP-09	#47/#50	Negative DB/source/port	engine→DB 및 미승인 source/port DENY; API 양성 별도	#47/#50	ROSA_HYBRID	actual source·경로·RC·firewall/pg_hba	NOT_RUN	실제환경/승인fixture/source/digest/작업창 및 복구 범위 고정	RUNTIME	실제 ROSA/승인 Hybrid에서 기존 AC로 판정
+P2-PREP-10	#50	DB failure	API readyz503·Endpoint 제외·Liveness 재시작 루프 없음	#15/#119	ROSA_HYBRID	장애 범위·health/endpoints·restartCount·복구	NOT_RUN	실제환경/승인fixture/source/digest/작업창 및 복구 범위 고정	RUNTIME	실제 ROSA/승인 Hybrid에서 기존 AC로 판정
+P2-PREP-11	#50	engine failure	API Ready 유지·HTTP201·fds_evaluation_skipped=true	#15/#119	ROSA_HYBRID	장애/복구 Transaction ID·DB·health	NOT_RUN	실제환경/승인fixture/source/digest/작업창 및 복구 범위 고정	RUNTIME	실제 ROSA/승인 Hybrid에서 기존 AC로 판정
+P2-PREP-12	#37/#47/#50	Tunnel down/recovery	승인 영향/관측 계약 대조 및 recovery 후 동일 E2E	#37/#47/#50	ROSA_HYBRID	SA/route·원본·재개 동일fixture	NOT_RUN	실제환경/승인fixture/source/digest/작업창 및 복구 범위 고정	RUNTIME	실제 ROSA/승인 Hybrid에서 기존 AC로 판정
+P2-PREP-13	#46	RUN-A	Test/Build/Scan/Push/Deploy/Health·digest/imageID 체인	#46	ROSA	각 Run ID/Attempt·SHA·Scan·digest·health	NOT_RUN	실제환경/승인fixture/source/digest/작업창 및 복구 범위 고정	RUNTIME	실제 ROSA/승인 Hybrid에서 기존 AC로 판정
+P2-PREP-14	#46	RUN-B	Test 또는 Scan 실패 시 실제 Deploy 차단	#46	ROSA	원본 실패·후속 단계 미실행 근거	NOT_RUN	실제환경/승인fixture/source/digest/작업창 및 복구 범위 고정	RUNTIME	실제 ROSA/승인 Hybrid에서 기존 AC로 판정
+P2-PREP-15	#46	Rollback	승인된 previous digest 복원 및 health 확인	#46	ROSA	복구승인·previous/runtime digest·health	NOT_RUN	실제환경/승인fixture/source/digest/작업창 및 복구 범위 고정	RUNTIME	실제 ROSA/승인 Hybrid에서 기존 AC로 판정
+P2-PREP-16	#50	Final regression	정상/Rule/Negative/장애복구 계약을 최신 source에서 재대조	#50	ROSA_HYBRID	exact handoff·case results·Known Issue	NOT_RUN	실제환경/승인fixture/source/digest/작업창 및 복구 범위 고정	RUNTIME	실제 ROSA/승인 Hybrid에서 기존 AC로 판정

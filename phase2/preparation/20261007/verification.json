@@ -1,0 +1,26 @@
+{
+  "verified_at_kst": "2026-10-07T14:14:04.406963+09:00",
+  "phase": "STATIC_DOCUMENT_PREPARATION",
+  "utf8_lf_no_bom": "PASS",
+  "source_records": 17,
+  "issue_records": 19,
+  "case_count": 16,
+  "unique_case_ids": "PASS",
+  "case_results_all_NOT_RUN": "PASS",
+  "rollback_and_failed_gate_present": "PASS",
+  "existing_repository_changes_intended": 0,
+  "RUNTIME": "NOT_RUN",
+  "MOCK": "NOT_RUN",
+  "CI": "NOT_RUN",
+  "REVIEW": "NOT_INDEPENDENTLY_REVIEWED",
+  "MERGE": "NOT_RUN",
+  "CANONICAL_PUBLICATION": "NOT_RUN",
+  "final_source_recheck_at_kst": "2026-10-07T14:14:59.877212+09:00",
+  "final_main_head_changes": 0,
+  "credential_pattern_scan": {
+    "private_key_header": 0,
+    "github_token_prefix": 0,
+    "aws_access_key_id_prefix": 0,
+    "scope": "listed preparation files only"
+  }
+}
