@@ -1,0 +1,209 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "FDS central backend and Relay identity bootstrap only; no human work-role grants or compute resources.",
+  "Resources": {
+    "StateBucket": {
+      "Type": "AWS::S3::Bucket",
+      "DeletionPolicy": "Retain",
+      "UpdateReplacePolicy": "Retain",
+      "Properties": {
+        "BucketName": "fds-tfstate-774055931866-ap-northeast-2",
+        "BucketEncryption": {
+          "ServerSideEncryptionConfiguration": [
+            {
+              "ServerSideEncryptionByDefault": {
+                "SSEAlgorithm": "AES256"
+              }
+            }
+          ]
+        },
+        "VersioningConfiguration": {
+          "Status": "Enabled"
+        },
+        "PublicAccessBlockConfiguration": {
+          "BlockPublicAcls": true,
+          "IgnorePublicAcls": true,
+          "BlockPublicPolicy": true,
+          "RestrictPublicBuckets": true
+        },
+        "OwnershipControls": {
+          "Rules": [
+            {
+              "ObjectOwnership": "BucketOwnerEnforced"
+            }
+          ]
+        }
+      }
+    },
+    "StateBucketPolicy": {
+      "Type": "AWS::S3::BucketPolicy",
+      "DeletionPolicy": "Retain",
+      "UpdateReplacePolicy": "Retain",
+      "Properties": {
+        "Bucket": {
+          "Ref": "StateBucket"
+        },
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Sid": "DenyStatePayloadAndMutationOutsideApprovedPrincipals",
+              "Effect": "Deny",
+              "Principal": "*",
+              "Resource": [
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2/phase2/network/terraform.tfstate",
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2/phase2/vpn/terraform.tfstate",
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2/phase2/rosa-prereq/terraform.tfstate",
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2/phase2/rosa-runtime/terraform.tfstate",
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2/phase2/network/terraform.tfstate.tflock",
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2/phase2/vpn/terraform.tfstate.tflock",
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2/phase2/rosa-prereq/terraform.tfstate.tflock",
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2/phase2/rosa-runtime/terraform.tfstate.tflock"
+              ],
+              "Condition": {
+                "ArnNotEquals": {
+                  "aws:PrincipalArn": [
+                    "arn:aws:iam::774055931866:role/FDS-IaC-Operator",
+                    "arn:aws:iam::774055931866:root"
+                  ]
+                }
+              },
+              "NotAction": [
+                "s3:GetObjectAcl",
+                "s3:GetObjectVersionAcl",
+                "s3:GetObjectTagging",
+                "s3:GetObjectVersionTagging",
+                "s3:GetObjectLegalHold",
+                "s3:GetObjectRetention",
+                "s3:ListMultipartUploadParts"
+              ]
+            },
+            {
+              "Sid": "DenyInsecureTransport",
+              "Effect": "Deny",
+              "Principal": "*",
+              "Action": "s3:*",
+              "Resource": [
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2",
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2/*"
+              ],
+              "Condition": {
+                "Bool": {
+                  "aws:SecureTransport": "false",
+                  "aws:PrincipalIsAWSService": "false"
+                }
+              }
+            },
+            {
+              "Sid": "DenyExplicitNonAES256",
+              "Effect": "Deny",
+              "Principal": "*",
+              "Action": "s3:PutObject",
+              "Resource": [
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2/phase2/network/terraform.tfstate",
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2/phase2/vpn/terraform.tfstate",
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2/phase2/rosa-prereq/terraform.tfstate",
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2/phase2/rosa-runtime/terraform.tfstate",
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2/phase2/network/terraform.tfstate.tflock",
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2/phase2/vpn/terraform.tfstate.tflock",
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2/phase2/rosa-prereq/terraform.tfstate.tflock",
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2/phase2/rosa-runtime/terraform.tfstate.tflock"
+              ],
+              "Condition": {
+                "Null": {
+                  "s3:x-amz-server-side-encryption": "false"
+                },
+                "StringNotEquals": {
+                  "s3:x-amz-server-side-encryption": "AES256"
+                }
+              }
+            },
+            {
+              "Sid": "DenySSECustomerKeys",
+              "Effect": "Deny",
+              "Principal": "*",
+              "Action": "s3:PutObject",
+              "Resource": [
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2/phase2/network/terraform.tfstate",
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2/phase2/vpn/terraform.tfstate",
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2/phase2/rosa-prereq/terraform.tfstate",
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2/phase2/rosa-runtime/terraform.tfstate",
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2/phase2/network/terraform.tfstate.tflock",
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2/phase2/vpn/terraform.tfstate.tflock",
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2/phase2/rosa-prereq/terraform.tfstate.tflock",
+                "arn:aws:s3:::fds-tfstate-774055931866-ap-northeast-2/phase2/rosa-runtime/terraform.tfstate.tflock"
+              ],
+              "Condition": {
+                "Null": {
+                  "s3:x-amz-server-side-encryption-customer-algorithm": "false"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "RelayRole": {
+      "Type": "AWS::IAM::Role",
+      "DeletionPolicy": "Retain",
+      "UpdateReplacePolicy": "Retain",
+      "Properties": {
+        "RoleName": "FDS-Relay-SSM",
+        "Path": "/",
+        "MaxSessionDuration": 3600,
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ec2.amazonaws.com"
+              },
+              "Action": "sts:AssumeRole"
+            }
+          ]
+        },
+        "ManagedPolicyArns": [
+          "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
+        ]
+      }
+    },
+    "RelayProfile": {
+      "Type": "AWS::IAM::InstanceProfile",
+      "DeletionPolicy": "Retain",
+      "UpdateReplacePolicy": "Retain",
+      "Properties": {
+        "InstanceProfileName": "FDS-Relay-SSM",
+        "Path": "/",
+        "Roles": [
+          {
+            "Ref": "RelayRole"
+          }
+        ]
+      }
+    }
+  },
+  "Outputs": {
+    "StateBucketName": {
+      "Value": {
+        "Ref": "StateBucket"
+      }
+    },
+    "RelayRoleArn": {
+      "Value": {
+        "Fn::GetAtt": [
+          "RelayRole",
+          "Arn"
+        ]
+      }
+    },
+    "RelayProfileArn": {
+      "Value": {
+        "Fn::GetAtt": [
+          "RelayProfile",
+          "Arn"
+        ]
+      }
+    }
+  }
+}

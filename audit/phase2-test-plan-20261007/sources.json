@@ -1,0 +1,733 @@
+{
+  "kind": "GITHUB_READ_ONLY_PLANNING_SNAPSHOT",
+  "retrieval_completed_at_kst": "2026-10-07T15:57:00+09:00",
+  "baseline": {
+    "repository": "321Team/fds-project-baseline",
+    "default_branch": "main",
+    "head": "40ac664b83485745ab86b5018b8e19c386484cc8",
+    "tree": "c8b402dcf4f614c568a2534161cc04c722c62a8b",
+    "release": "docs-v3.1.21",
+    "release_commit": "979facb98de8ca1f1e2ce22f38b27ac3366f3fc3",
+    "published_at_kst": "2026-10-04T14:49:12+09:00"
+  },
+  "repository_heads": [
+    {
+      "repository": "321Team/fds-project-evidence",
+      "default_branch": "main",
+      "sha": "3bca6b12dbbfa25a37fbae79b2f97d03c5ec6157"
+    },
+    {
+      "repository": "321Team/infra-kubernetes",
+      "default_branch": "main",
+      "sha": "c3057906a6a8427a4b315b7e544e063efe0fecf2"
+    },
+    {
+      "repository": "321Team/infra-cicd",
+      "default_branch": "main",
+      "sha": "1320e17e9d7dd66455e65276267dc2b92517c4b5"
+    },
+    {
+      "repository": "321Team/infra-ansible",
+      "default_branch": "main",
+      "sha": "61a77ad2f984cbf9e74a95f779691e2831a5a2a6"
+    },
+    {
+      "repository": "321Team/infra-db",
+      "default_branch": "main",
+      "sha": "ab603a9c68c59d1d2cdb852ed1c57d19b5f19866"
+    },
+    {
+      "repository": "321Team/infra-rosa",
+      "default_branch": "main",
+      "sha": "a37b10628cd59427c45dd28e2f6bd924891e1c54"
+    },
+    {
+      "repository": "321Team/infra-terraform",
+      "default_branch": "main",
+      "sha": "1f166d5c27ff24316887ae8ee2f2211fbb9a1a7d"
+    }
+  ],
+  "files": [
+    {
+      "path": "tests/FDS_Test_Strategy_v3.1.21.md",
+      "git_blob_sha": "cfbb073ca95b82ac544ca801716c0e893403927d",
+      "source_ref": "40ac664b83485745ab86b5018b8e19c386484cc8"
+    },
+    {
+      "path": "baseline/FDS_Project_Implementation_Baseline_v3.1.21.md",
+      "git_blob_sha": "69e66f3e2847bda49d9e5c4a96cfd20a0523ca2d",
+      "source_ref": "40ac664b83485745ab86b5018b8e19c386484cc8"
+    },
+    {
+      "path": "audit/phase2-test-strategy-20260930/README.md",
+      "git_blob_sha": "edb6aa223294da93fdba82a3f83eb033e1836e3f",
+      "source_ref": "40ac664b83485745ab86b5018b8e19c386484cc8"
+    },
+    {
+      "path": "governance/RELEASE_POLICY.md",
+      "git_blob_sha": "2826decb2ddbdab4102316a93a3feebb164a2f9d",
+      "source_ref": "40ac664b83485745ab86b5018b8e19c386484cc8"
+    }
+  ],
+  "issues": [
+    {
+      "number": 33,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/33",
+      "state": "open",
+      "updated_at": "2026-10-04T05:59:41Z",
+      "properties": {
+        "Record ID": "MS-P2-START-01",
+        "Lead": "이권욱",
+        "Priority": "P0",
+        "Status": "To Do",
+        "Start": "2026-10-07",
+        "End": "2026-10-07",
+        "Exit Criteria": "Phase 1 Close, Phase 2 계정·권한·일정·P0 범위·OCI Go/No-Go 계획을 확인하고 착수 승인"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] Phase 1 Close, Phase 2 계정·권한·일정·P0 범위·OCI Go/No-Go 계획을 확인하고 착수 승인\n- [ ] 관련 Decision/Risk 상태와 Known Issue가 기록된다.\n- [ ] Milestone 결과가 WBS와 Notion에 동일하게 반영된다.\n\n---\n"
+    },
+    {
+      "number": 34,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/34",
+      "state": "open",
+      "updated_at": "2026-10-07T05:26:44Z",
+      "properties": {
+        "Record ID": "P2-ARC-01",
+        "Lead": "이권욱",
+        "Priority": "P0",
+        "Status": "To Do",
+        "Start": "2026-10-08",
+        "End": "2026-10-08",
+        "Exit Criteria": "OCI Relay·AWS VPC/VPN·ROSA·On-Prem 연계 Architecture, Interface IF-17~IF-20, Security, Decision, Exit Criteria Freeze 승인"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] Architecture와 Interface가 이권욱·이하영·이재환 검토 대상으로 배포된다.\n- [ ] P2-OCI/IAC/VPN/ROSA/APP/CICD의 의존성이 연결된다.\n- [ ] D21~D23·D26의 결정 시점과 조건부 범위가 명시된다.\n- [ ] 변경 통제 기준이 승인된다.\n\n---\n"
+    },
+    {
+      "number": 35,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/35",
+      "state": "open",
+      "updated_at": "2026-10-07T06:04:42Z",
+      "properties": {
+        "Record ID": "P2-IAC-01",
+        "Lead": "이하영",
+        "Priority": "P0",
+        "Status": "To Do",
+        "Start": "2026-10-08",
+        "End": "2026-10-14",
+        "Exit Criteria": "AWS VPC 10.20.0.0/16, ROSA 선행 인프라와 IAM/OIDC 최소권한의 Terraform fmt/validate/plan/apply, State·Secret 통제 및 G4 Evidence 확보"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] fmt/validate가 통과한다.\n- [ ] 승인 Plan과 Apply 결과가 일치한다.\n- [ ] 필수 Route/Security/Output과 IAM/OIDC가 생성된다.\n- [ ] State와 Secret 접근이 통제된다.\n- [ ] 재실행 시 비의도 변경이 없다.\n\n---\n"
+    },
+    {
+      "number": 36,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/36",
+      "state": "open",
+      "updated_at": "2026-10-04T05:59:52Z",
+      "properties": {
+        "Record ID": "P2-OCI-01",
+        "Lead": "이권욱",
+        "Priority": "P0",
+        "Status": "To Do",
+        "Start": "2026-10-07",
+        "End": "2026-10-08",
+        "Exit Criteria": "OCI Relay 가능성·권한·Public Endpoint·IPsec/NAT-T·Route를 검증하고 Primary 또는 승인 Fallback 경로를 선택"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] OCI Primary의 실행 가능 여부가 증적으로 판정된다.\n- [ ] Go 또는 단일 Fallback이 승인된다.\n- [ ] P2-VPN-01과 P2-IAC-01 입력값이 확정된다.\n- [ ] 미결 전제와 Owner/Due가 0건이다.\n\n---\n"
+    },
+    {
+      "number": 37,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/37",
+      "state": "open",
+      "updated_at": "2026-10-07T06:04:44Z",
+      "properties": {
+        "Record ID": "P2-VPN-01",
+        "Lead": "이재환",
+        "Priority": "P0",
+        "Status": "To Do",
+        "Start": "2026-10-12",
+        "End": "2026-10-14",
+        "Exit Criteria": "승인 Transit 경로의 Tunnel UP, On-Prem↔VPC Route, UDP 500/4500/IPsec, Source·승인 TCP Path 및 장애 Evidence 확보"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] 승인 Tunnel이 UP이다.\n- [ ] On-Prem↔VPC 승인 TCP 경로가 성공한다.\n- [ ] 미승인 경로가 차단된다.\n- [ ] Tunnel 중단·복구가 Runbook대로 재현된다.\n\n---\n"
+    },
+    {
+      "number": 38,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/38",
+      "state": "open",
+      "updated_at": "2026-10-04T06:21:47Z",
+      "properties": {
+        "Record ID": "P2-ROSA-01",
+        "Lead": "이하영",
+        "Priority": "P0",
+        "Status": "To Do",
+        "Start": "2026-10-15",
+        "End": "2026-10-19",
+        "Exit Criteria": "ROSA Cluster Ready, Namespace/RBAC/NetworkPolicy/SecurityContext, Hybrid Route 및 Application 배포 선행조건과 G5 Evidence 확보"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] ROSA Cluster와 Worker가 Ready다.\n- [ ] 관리·배포 접근이 승인된 계정으로 성공한다.\n- [ ] 기본 보안정책이 적용된다.\n- [ ] On-Prem 승인 경로의 선행 TCP Test가 성공한다.\n\n---\n"
+    },
+    {
+      "number": 39,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/39",
+      "state": "open",
+      "updated_at": "2026-10-04T06:00:03Z",
+      "properties": {
+        "Record ID": "MS-G4-01",
+        "Lead": "이권욱",
+        "Priority": "P0",
+        "Status": "To Do",
+        "Start": "2026-10-14",
+        "End": "2026-10-14",
+        "Exit Criteria": "Terraform 인프라, 승인 Transit/VPN, Route/Security, ROSA 선행조건 및 승인 TCP 경로 준비도 승인"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] Terraform 인프라, 승인 Transit/VPN, Route/Security, ROSA 선행조건 및 승인 TCP 경로 준비도 승인\n- [ ] 관련 Decision/Risk 상태와 Known Issue가 기록된다.\n- [ ] Milestone 결과가 WBS와 Notion에 동일하게 반영된다.\n\n---\n"
+    },
+    {
+      "number": 40,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/40",
+      "state": "open",
+      "updated_at": "2026-10-04T10:08:44Z",
+      "properties": {
+        "Record ID": "DEC-P2-DNS-01",
+        "Lead": "이권욱",
+        "Priority": "P1",
+        "Status": "To Do",
+        "Start": "2026-10-16",
+        "End": "2026-10-16",
+        "Exit Criteria": "P0 IP Endpoint 유지 또는 Hybrid DNS P1 적용을 확정하고 Resolver/Forwarding/Zone/Route/테스트·Cancelled 결정 근거를 승인"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] P0/P1 범위가 단일안으로 승인된다.\n- [ ] 적용 시 Query Path와 Test가 정의된다.\n- [ ] 미적용 시 N/A/Deferred 근거가 기록된다.\n\n---\n"
+    },
+    {
+      "number": 41,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/41",
+      "state": "open",
+      "updated_at": "2026-10-04T06:00:27Z",
+      "properties": {
+        "Record ID": "DEC-P2-OP-01",
+        "Lead": "이하영",
+        "Priority": "P1",
+        "Status": "To Do",
+        "Start": "TBD — G5 이후 P0 잔여 capacity 시",
+        "End": "TBD — 10-26 이전 강제하지 않음",
+        "Exit Criteria": "ROSA Operator 공급망을 Direct Catalog 또는 oc-mirror/Harbor/Custom CatalogSource 중 하나로 결정하고 구현·N/A 기준 승인"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] Direct 또는 Mirror 방식이 하나로 결정된다.\n- [ ] Owner·Due·구현 또는 N/A 기준이 승인된다.\n- [ ] P2-OP-01 상태 전환 조건이 명확하다.\n\n---\n"
+    },
+    {
+      "number": 42,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/42",
+      "state": "open",
+      "updated_at": "2026-10-04T06:40:09Z",
+      "properties": {
+        "Record ID": "DEC-P2-REG-01",
+        "Lead": "이권욱",
+        "Priority": "P0",
+        "Status": "To Do",
+        "Start": "2026-10-15",
+        "End": "2026-10-15",
+        "Exit Criteria": "ROSA Image Source를 On-Prem Harbor 또는 승인 Cloud Registry로 확정하고 Route·TLS·Credential·비용·Fallback을 승인"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] 단일 Image Source와 Fallback이 승인된다.\n- [ ] Pull Route/TLS/Credential Test가 정의된다.\n- [ ] P2-APP/HYB WBS와 Interface IF-19 상태가 갱신된다.\n\n---\n"
+    },
+    {
+      "number": 43,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/43",
+      "state": "open",
+      "updated_at": "2026-10-06T09:32:01Z",
+      "properties": {
+        "Record ID": "P2-APP-01",
+        "Lead": "이재환",
+        "Priority": "P0",
+        "Status": "To Do",
+        "Start": "2026-10-16",
+        "End": "2026-10-19",
+        "Exit Criteria": "Phase 1과 동일한 transaction-api/fds-engine Image/Contract를 ROSA에 배포하고 Route/Health/Rule 기본검증 PASS"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] 두 서비스가 ROSA에서 Ready다.\n- [ ] Route를 통한 transaction-api Health가 성공한다.\n- [ ] fds-engine이 외부에 직접 노출되지 않는다.\n- [ ] 4개 Rule Smoke Test가 통과한다.\n\n---\n"
+    },
+    {
+      "number": 44,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/44",
+      "state": "open",
+      "updated_at": "2026-10-04T06:00:39Z",
+      "properties": {
+        "Record ID": "P2-OADP-01",
+        "Lead": "이하영",
+        "Priority": "P1",
+        "Status": "To Do",
+        "Start": "TBD — G5 이후 P0 잔여 capacity 시",
+        "End": "TBD — 10-26 이전 강제하지 않음",
+        "Exit Criteria": "OADP→S3 443, Backup 대상·Credential·Schedule, Restore 또는 승인 복구검증과 Evidence 확보"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] Backup이 성공하고 Object가 확인된다.\n- [ ] Restore 또는 승인된 복구검증이 성공한다.\n- [ ] Workload Health와 Config 정합성이 확인된다.\n- [ ] Runbook과 Evidence가 저장된다.\n\n---\n"
+    },
+    {
+      "number": 45,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/45",
+      "state": "open",
+      "updated_at": "2026-10-04T06:00:43Z",
+      "properties": {
+        "Record ID": "MS-G5-01",
+        "Lead": "이하영",
+        "Priority": "P0",
+        "Status": "To Do",
+        "Start": "2026-10-20",
+        "End": "2026-10-20",
+        "Exit Criteria": "ROSA Platform/Security, P2-CICD-01 Runner 기반 Delivery, transaction-api/fds-engine Health·Rule Smoke Test와 Registry/DNS/Operator Decision 상태 승인"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] ROSA Platform/Security, P2-CICD-01 Delivery, transaction-api/fds-engine Health·Rule Smoke Test, Registry/DNS Decision 상태를 승인\n- [ ] 관련 Decision/Risk 상태와 Known Issue가 기록된다.\n- [ ] Milestone 결과가 WBS와 Notion에 동일하게 반영된다.\n\n---\n"
+    },
+    {
+      "number": 46,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/46",
+      "state": "open",
+      "updated_at": "2026-10-04T06:00:46Z",
+      "properties": {
+        "Record ID": "P2-CICD-01",
+        "Lead": "이권욱",
+        "Priority": "P0",
+        "Status": "To Do",
+        "Start": "2026-10-20",
+        "End": "2026-10-20",
+        "Exit Criteria": "GitHub→Self-hosted Runner→승인 Registry→ROSA Deploy→Health/Rule Smoke Test 흐름과 실패 시 배포차단 Evidence 확보"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] 정상 Commit이 ROSA까지 배포된다.\n- [ ] Test 또는 Scan 실패 시 배포가 차단된다.\n- [ ] 배포 Image와 Commit을 역추적할 수 있다.\n- [ ] Health와 R01/R02/R04/R07 Smoke Test가 통과한다.\n\n---\n"
+    },
+    {
+      "number": 47,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/47",
+      "state": "open",
+      "updated_at": "2026-10-04T15:30:46Z",
+      "properties": {
+        "Record ID": "P2-HYB-01",
+        "Lead": "이재환",
+        "Priority": "P0",
+        "Status": "To Do",
+        "Start": "2026-10-21",
+        "End": "2026-10-21",
+        "Exit Criteria": "ROSA→On-Prem db01 .55:5432와 승인 Registry 경로의 Route·Security·Source·Application 통합 검증 PASS"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] ROSA에서 DB 5432 승인 연결이 성공한다.\n- [ ] Transaction/FDS Result 저장·조회가 성공한다.\n- [ ] 미승인 Source가 차단된다.\n- [ ] Registry 사용 시 Pull이 성공하고 미사용 시 Cancelled 결정 근거가 있다.\n\n---\n"
+    },
+    {
+      "number": 48,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/48",
+      "state": "open",
+      "updated_at": "2026-10-04T06:00:54Z",
+      "properties": {
+        "Record ID": "P2-DNS-01",
+        "Lead": "이권욱",
+        "Priority": "P1",
+        "Status": "To Do",
+        "Start": "TBD — D23 Go + P0 잔여 capacity 시",
+        "End": "TBD — 10-26 이전 강제하지 않음",
+        "Exit Criteria": "D23이 Hybrid DNS를 선택한 경우 Resolver/Conditional Forwarding/Route/Query Test PASS; IP Endpoint 유지 시 Cancelled 결정 근거 승인"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] Hybrid DNS 선택 시 양방향 승인 Query가 성공한다.\n- [ ] 미승인 Query가 차단된다.\n- [ ] 장애 시 IP Endpoint 또는 승인 Fallback이 동작한다.\n- [ ] IP Endpoint 선택 시 Cancelled 결정 근거가 승인된다.\n\n---\n"
+    },
+    {
+      "number": 49,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/49",
+      "state": "open",
+      "updated_at": "2026-10-04T06:00:58Z",
+      "properties": {
+        "Record ID": "P2-DOC-01",
+        "Lead": "이권욱",
+        "Priority": "P0",
+        "Status": "To Do",
+        "Start": "2026-10-23",
+        "End": "2026-10-23",
+        "Exit Criteria": "Terraform/ROSA/VPN/Hybrid Architecture, CI/CD, Test/Evidence, Backup/Recovery Runbook, D22/D23/D26 Decision, Known Issue 및 Deliverable Freeze 승인"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] Phase 2 P0 Ticket별 Evidence 링크가 존재한다.\n- [ ] As-built와 Baseline 차이가 승인된다.\n- [ ] IaC/Runbook으로 핵심 환경을 재현할 수 있다.\n- [ ] Critical 문서 결함이 0건이다.\n\n---\n"
+    },
+    {
+      "number": 50,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/50",
+      "state": "open",
+      "updated_at": "2026-10-06T09:32:06Z",
+      "properties": {
+        "Record ID": "P2-E2E-01",
+        "Lead": "이재환",
+        "Priority": "P0",
+        "Status": "To Do",
+        "Start": "2026-10-22",
+        "End": "2026-10-22",
+        "Exit Criteria": "ROSA Route→transaction-api, transaction-api→fds-engine:8001 Rule Evaluation, transaction-api→On-Prem PostgreSQL:5432 Persistence, fds-engine→DB DENY를 포함한 Hybrid E2E/Rule/Negative/Recovery Regression PASS와 Critical Issue 0"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] Hybrid 정상 거래가 성공한다.\n- [ ] 4개 Rule 결과와 DB 저장이 일치한다.\n- [ ] 미승인 경로가 차단된다.\n- [ ] Tunnel 복구 후 Regression이 통과한다.\n- [ ] Critical Issue가 0건이다.\n\n---\n"
+    },
+    {
+      "number": 51,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/51",
+      "state": "open",
+      "updated_at": "2026-10-04T06:01:05Z",
+      "properties": {
+        "Record ID": "P2-OP-01",
+        "Lead": "이하영",
+        "Priority": "P1",
+        "Status": "To Do",
+        "Start": "TBD — D26 Mirror + P0 잔여 capacity 시",
+        "End": "TBD — 10-26 이전 강제하지 않음",
+        "Exit Criteria": "D26이 Mirror를 선택한 경우 oc-mirror ImageSet·Harbor Push·Custom CatalogSource·Package 조회 PASS; Direct Catalog 선택 시 Cancelled 결정 근거 승인"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] Mirror 선택 시 Image와 Metadata가 Harbor에 저장된다.\n- [ ] CatalogSource가 Ready다.\n- [ ] 필요 Package/Channel이 조회된다.\n- [ ] Direct 선택 시 Cancelled 결정 근거가 승인된다.\n\n---\n"
+    },
+    {
+      "number": 53,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/53",
+      "state": "open",
+      "updated_at": "2026-10-04T06:01:12Z",
+      "properties": {
+        "Record ID": "MS-G6-01",
+        "Lead": "이권욱",
+        "Priority": "P0",
+        "Status": "To Do",
+        "Start": "2026-10-22",
+        "End": "2026-10-22",
+        "Exit Criteria": "Hybrid DB/Registry Integration, Hybrid E2E/Regression, Critical Issue 0을 승인하고 P1 OADP는 실행 시 결과 또는 Deferred/N/A 근거를 기록"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] Hybrid DB/Registry Integration, Hybrid E2E/Regression, Critical Issue 0을 승인하고 P1 OADP는 실행 시 결과 또는 Deferred/N/A 근거를 기록\n- [ ] 관련 Decision/Risk 상태와 Known Issue가 기록된다.\n- [ ] Milestone 결과가 WBS와 Notion에 동일하게 반영된다.\n\n---\n"
+    },
+    {
+      "number": 54,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/54",
+      "state": "open",
+      "updated_at": "2026-10-04T06:01:15Z",
+      "properties": {
+        "Record ID": "MS-DELIVERABLE-FREEZE-01",
+        "Lead": "이권욱",
+        "Priority": "P0",
+        "Status": "To Do",
+        "Start": "2026-10-23",
+        "End": "2026-10-23",
+        "Exit Criteria": "Architecture/IaC/Test/Runbook/Evidence/Decision/Known Issue의 최종 Version과 변경금지를 승인"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] Architecture/IaC/Test/Runbook/Evidence/Decision/Known Issue의 최종 Version과 변경금지를 승인\n- [ ] 관련 Decision/Risk 상태와 Known Issue가 기록된다.\n- [ ] Milestone 결과가 WBS와 Notion에 동일하게 반영된다.\n\n---\n"
+    },
+    {
+      "number": 55,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/55",
+      "state": "open",
+      "updated_at": "2026-10-04T06:01:19Z",
+      "properties": {
+        "Record ID": "P2-REV-01",
+        "Lead": "이권욱",
+        "Priority": "P0",
+        "Status": "To Do",
+        "Start": "2026-10-23",
+        "End": "2026-10-26",
+        "Exit Criteria": "G6/Deliverable Freeze, Hybrid Demo, P0 Evidence, Decision/Known Issue, 비용·자원 정리 및 Project Close Sign-off 확보"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] Review가 승인된 일정에 수행된다.\n- [ ] Hybrid Demo/Evidence가 승인된다.\n- [ ] Critical Issue가 0건이다.\n- [ ] 잔존 Cloud Resource/Cost가 통제된다.\n- [ ] Project Close Sign-off가 저장된다.\n\n---\n"
+    },
+    {
+      "number": 56,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/56",
+      "state": "open",
+      "updated_at": "2026-10-04T06:01:23Z",
+      "properties": {
+        "Record ID": "MS-P2-REVIEW-01",
+        "Lead": "이권욱",
+        "Priority": "P0",
+        "Status": "To Do",
+        "Start": "2026-10-23",
+        "End": "2026-10-23",
+        "Exit Criteria": "승인된 일정에 Hybrid Demo/산출물/G6/Known Issue/Cloud Resource Review를 수행하고 Action·승인결과를 기록"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] 승인된 일정에 Hybrid Demo/산출물/G6/Known Issue/Cloud Resource Review를 수행하고 Action·승인결과를 기록\n- [ ] 관련 Decision/Risk 상태와 Known Issue가 기록된다.\n- [ ] Milestone 결과가 WBS와 Notion에 동일하게 반영된다.\n\n---\n"
+    },
+    {
+      "number": 57,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/57",
+      "state": "open",
+      "updated_at": "2026-10-04T06:01:26Z",
+      "properties": {
+        "Record ID": "MS-PROJECT-CLOSE-01",
+        "Lead": "이권욱",
+        "Priority": "P0",
+        "Status": "To Do",
+        "Start": "2026-10-26",
+        "End": "2026-10-26",
+        "Exit Criteria": "Review Action, P0 승인, 후속 P1/Known Issue, Cloud Resource/Cost, Source/Deliverable 인계 및 Project Close Sign-off 확보"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] Review Action, P0 승인, 후속 P1/Known Issue, Cloud Resource/Cost, Source/Deliverable 인계 및 Project Close Sign-off 확보\n- [ ] 관련 Decision/Risk 상태와 Known Issue가 기록된다.\n- [ ] Milestone 결과가 WBS와 Notion에 동일하게 반영된다.\n\n---\n"
+    },
+    {
+      "number": 95,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/95",
+      "state": "open",
+      "updated_at": "2026-10-07T06:43:23Z",
+      "properties": {
+        "Record ID": "DEC-P2-RHOAI-01",
+        "Lead": "이하영",
+        "Priority": "P1",
+        "Status": "To Do",
+        "Start": "TBD — Deferred 우선",
+        "End": "TBD — 프로젝트 종료 후 별도 PoC는 Project Scope 밖",
+        "Exit Criteria": "RHOAI 도입/미도입/유예를 단일안으로 결정하고, 도입 시 적용 범위·ROSA 전제(Version/Quota/Operator 공급)·비용·삭제 절차와 Change Request 발행 근거를, 미도입·유예 시 N/A/Deferred 근거를 기록·승인"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] 도입/미도입/유예가 단일안으로 승인된다.\n- [ ] 도입 시 Baseline §3.2에 따른 Change Request와 후속 구현 티켓(Owner/Due)이 발행된다.\n- [ ] 미도입·유예 시 N/A/Deferred 근거가 기록된다.\n- [ ] 결정 결과가 P2-ARC-01·P2-ROSA-01과 차기 정본 후보에 연결된다.\n\n---\n"
+    },
+    {
+      "number": 119,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/119",
+      "state": "closed",
+      "updated_at": "2026-10-04T06:02:47Z",
+      "properties": {
+        "Record ID": "CR-P1-APP-01-01",
+        "Lead": "이재환",
+        "Priority": "P0",
+        "Status": "Done",
+        "Start": "2026-09-29",
+        "End": "2026-10-02",
+        "Exit Criteria": "#15 AC 문구 정정 결정 기록과 Review Owner·G3 확인, #15 본문 AC 교체, FDS 장애 fail-open Runtime 증적, 차기 정본 Ticket Pack 동기화"
+      },
+      "ac_text_snapshot": null
+    },
+    {
+      "number": 120,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/120",
+      "state": "open",
+      "updated_at": "2026-10-04T06:02:51Z",
+      "properties": {
+        "Record ID": "DEC-P2-GITOPS-01",
+        "Lead": "이권욱",
+        "Priority": "P1",
+        "Status": "To Do",
+        "Start": "TBD — G5 이후 P0 잔여 capacity 시",
+        "End": "TBD — 10-26 이전 강제하지 않음",
+        "Exit Criteria": "OpenShift GitOps 도입/미도입/유예를 단일안으로 결정하고, 도입 시 #46 Delivery Contract 변경 CR·권한모델·Git Source·재생성/Rollback·D26 Operator 공급경로를 승인"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] 도입 / 미도입 / 유예가 단일안으로 기록된다.\n- [ ] 미도입 또는 유예 시 기존 #46 Runner Delivery Contract가 그대로 유지됨을 확인한다.\n- [ ] 도입 시 #46의 Deploy 단계 변경을 별도 CR로 승인한다.\n- [ ] Build/Test/Scan/Registry Push와 Runtime Sync의 Producer/Consumer 경계를 명시한다.\n- [ ] Argo CD RBAC/Namespace 권한을 최소권한으로 설계한다.\n- [ ] Source Commit → Registry Digest → Git desired state → Argo CD sync revision → ROSA Runtime imageID → Evidence 체인을 정의한다.\n- [ ] Sync failure/drift/rollback/recreate 검증과 Evidence 위치를 정한다.\n- [ ] P0 G5/G6 지연 예상 시 Deferred로 전환한다.\n\n## Dependency / Relation\n\n- Related: #34 P2-ARC-01, #38 P2-ROSA-01, #41 DEC-P2-OP-01, #46 P2-CICD-01, #49 P2-DOC-01\n- **P0 Blocker: 없음**\n- 도입 결정 시: #46 CR 및 필요하면 별도 구현 Task 발행\n- Milestone: G5 ROSA Application Ready (추적용이며 Gate blocker 아님)\n\n## Decision Control\n\nOpenShift GitOps는 ROSA에서 지원되는 Operator이며 Argo CD를 declarative GitOps engine으로 사용한다. 다만 제품 지원 여부와 프로젝트 채택 여부는 별개다.\n\n도입 전에는 P2-CICD-01 현행 P0 계약을 변경하지 않는다. 결정이 늦어져도 P0는 Runner 직접 Deploy로 진행 가능해야 한다.\n\n공식 참조:\n- https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws/4/html/gitops/about-redhat-openshift-gitops\n- https://docs.redhat.com/en/documentation/red_hat_openshift_gitops/1.19/html/argo_cd_instance/setting-up-argocd-instance\n\n## Completion Record\n\n- Result: PENDING DECISION\n- Runtime: NOT RUN\n- Review: NOT DONE\n"
+    },
+    {
+      "number": 121,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/121",
+      "state": "open",
+      "updated_at": "2026-10-04T06:02:54Z",
+      "properties": {
+        "Record ID": "DEC-P2-COMP-01",
+        "Lead": "이하영",
+        "Priority": "P1",
+        "Status": "To Do",
+        "Start": "TBD — G5 이후 P0 잔여 capacity 시",
+        "End": "TBD — 10-26 이전 강제하지 않음",
+        "Exit Criteria": "Compliance Operator 도입/미도입/유예를 단일안으로 결정하고, 도입 시 ROSA topology(HCP 여부)·지원 Version·Scan profile/suite·결과 처리·Known Issue 경계·Operator 공급경로를 승인"
+      },
+      "ac_text_snapshot": "# Acceptance Criteria\n\n- [ ] 도입 / 미도입 / 유예가 단일안으로 기록된다.\n- [ ] ROSA topology와 Compliance Operator 지원 조건을 확인한다.\n- [ ] HCP 사용 시 control-plane 접근 제약과 Operator scheduling 조건을 반영한다.\n- [ ] 최소 Scan profile/suite와 대상 node/workload 범위를 고정한다.\n- [ ] PASS/FAIL가 아니라 Compliant/NonCompliant/Error/NotApplicable 결과를 구분한다.\n- [ ] NonCompliant 결과는 Severity/적용가능성/P0 영향 검토 후 Known Issue 또는 별도 Task로 이관한다.\n- [ ] Operator Version/Subscription/Scan Source/Result/Evidence SHA를 추적한다.\n- [ ] 재실행 및 cluster recreate 후 동일 Source로 재현 가능함을 검증할 계획을 정한다.\n- [ ] G5/G6 일정 침해 시 Deferred로 전환한다.\n\n## Dependency / Relation\n\n- Related: #34 P2-ARC-01, #38 P2-ROSA-01, #41 DEC-P2-OP-01, #49 P2-DOC-01\n- **P0 Blocker: 없음**\n- 도입 결정 시: 필요하면 별도 P2-COMP-01 구현 Task 발행\n- Milestone: G5 ROSA Application Ready (추적용이며 Gate blocker 아님)\n\n## Decision Control\n\nRed Hat 공식 문서에는 ROSA HCP에서 Compliance Operator를 설치하는 별도 절차가 있으며, Compliance Operator 1.5.0부터 ROSA HCP에 대해 테스트되었다고 명시되어 있다. HCP는 관리형 control plane 접근이 제한되므로 기본 master node scheduling을 그대로 사용할 수 없고 Subscription scheduling 설정을 조정해야 한다.\n\n제품 설치 가능성과 프로젝트 P0 필요성은 별개다. 이번 프로젝트에서는 보안 검증 고도화용 P1 Decision으로만 관리한다.\n\n공식 참조:\n- https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html/security_and_compliance/compliance-operator\n\n## Completion Record\n\n- Result: PENDING DECISION\n- Runtime: NOT RUN\n- Review: NOT DONE\n"
+    },
+    {
+      "number": 125,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/125",
+      "state": "closed",
+      "updated_at": "2026-10-04T06:02:57Z",
+      "properties": {
+        "Record ID": "CR-P1-SEC-01-01",
+        "Lead": "이하영",
+        "Priority": "P1",
+        "Status": "Done",
+        "Start": "2026-09-30",
+        "End": "2026-10-02",
+        "Exit Criteria": "#19 AC-05 처리 결정 기록(backup·rollback P1 유지, 예방 rotation `NOT MET / RISK ACCEPTED`)과 Review Owner 확인, #19 본문/후보 정본 구조 동기화. backup·rollback Runtime 증적은 #19 실행 잔여로 분리"
+      },
+      "ac_text_snapshot": null
+    }
+  ],
+  "comments": [
+    {
+      "issue": 34,
+      "id": 6019747268,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-6019747268",
+      "body": "## #38 Lead 입력 — ROSA 사양 의견 (하영, 2026-10-07)\n\nHCP·m5.xlarge 동의. 배치는 3 AZ×1대 대신 **1 AZ×3대** 제안(AZ 장애 대응은 #38 AC 아님, source 단순화). 비용 계산·근거: [321Team/infra-rosa#3 상세](https://github.com/321Team/infra-rosa/issues/3#issuecomment-6019744131)\n\n**결정 요청:** ① 비용 한도 금액 ② N-1 시험 필요 여부(불필요 시 2대) ③ AZ 장애 대응 필요 여부 ④ 생성·삭제 시점\n\n기존 담당·일정·AC·Freeze 상태 변경 없음.\n"
+    },
+    {
+      "issue": 35,
+      "id": 6031865288,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-6031865288",
+      "body": "CODEX_ASSISTED — 중앙 bootstrap 증적 수신·추적 항목 완료 (2026-10-07 14:48:50 KST 수신)\n\n사용자 출력에서 create·verify 두 보존 capture의 SHA256SUMS 외부 확인 RC0 및 source.json 메타데이터를 수신했습니다. 기존 생성/설정 readback 기록6031821748에 연결합니다.\n\n| 회차 | source UTC → KST | 실행 주체 / helper / Mode | manifest |\n|---|---|---|---|\n| create | 2026-10-07T05:38:45.046003+00:00 → 2026-10-07 14:38:45.046003 KST | arn:aws:iam::774055931866:root / a080cfe60048d8fe5f9244865c5cef83703f3dd62a989ce7705cd55fb0a32290 / create | RC0 |\n| verify | 2026-10-07T05:44:58.541955+00:00 → 2026-10-07 14:44:58.541955 KST | 同root / 同helper / verify | RC0 |\n\nsource UTC는 helper가 root 확인 후 source.json에 기록한 시각이며 create 요청 제출/완료 또는 verify 종료 시각으로 확대하지 않습니다. helper raw hash 두 회차 모두 승인 source e1cac2d39174821c839f2df6068fab16211bf872와 일치합니다. merge40ac664b83485745ab86b5018b8e19c386484cc8의 source/delivery10개 blob 동일성은 병합 시 확인했습니다.\n\n원본 보존:\n- /home/cloudshell-user/fds-central-bootstrap-create-j1_eozi9\n- /home/cloudshell-user/fds-central-bootstrap-verify-22_0s1l3\n\n최종 수신 판정: 중앙 4자원 CREATE_COMPLETE·BOOTSTRAP_SETTINGS_PASS·create/verify RC0·정확한 root/source 시각/helper/manifest 수신 항목 완료. 새 AWS 호출·create/verify 재실행·14시험/46·9 simulation 반복은 없습니다. 실제 사용자 실행 출력 기준이며 assistant 원본 capture 직접 수신/재해시·독립 증적 저장소 편입/심사 완료가 아닙니다. manifest RC0는 파일 무결성 확인이고 설정 PASS는 별도 verify 결과로 판단했습니다.\n\nMERGE=COMPLETE / AWS4자원 생성·설정 검증=PASS_USER_READBACK / CAPTURE_RECEIPT=COMPLETE_USER_READBACK.\nHUMAN_ROLE_GRANT=NOT_RUN / 개인 업무·Relay/Agent Runtime=NOT_TESTED / ROOT_RECOVERY_RUNTIME=NOT_TESTED / STAGE_A_READINESS=NOT_ASSESSED.\n#35 전체 AC 인수·종결, Stage-A GO 또는 full IaC 권한 완성은 선언하지 않습니다.\n\n다음 인계: 하영 #35 Lead의 실제 Terraform implementation PR/SHA + API/dependent-action 목록 + 완결된 FDS-IaC-Operator permissions JSON을 연결합니다. 기존 adopted backend4keys·SSE-S3·EC2 Relay Role/Profile/PassRole 값은 재승인하지 않고 actual readback으로 소비합니다. CloudFormation 소유 bootstrap4자원은 일반 Terraform 재생성/자동편입 대상이 아닙니다. 중앙 역할 grant/readback은 해당 source·검증/리뷰가 완결된 뒤, 권욱·하영 각 본인 MFA 역할 Runtime은 부여 이후 수행합니다.\n\n최신 재조회: infra-terraform main1f166d5c27ff24316887ae8ee2f2211fbb9a1a7d, 열린 구현PR0. 구현 입력이 현재 다음 병목입니다. 별도 미래 ROSA 전체 모듈/새 상시 Support 승인을 초기 작업의 선행조건으로 추가하지 않습니다. 기존 담당·AC·일정·비용 설정 보류·Freeze는 유지합니다."
+    },
+    {
+      "issue": 37,
+      "id": 6031888679,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-6031888679",
+      "body": "## Review Owner 답변 — 터널 MTU/MSS 실측: 새 AC 없음, 기존 AC의 Transport Adapter별 관측 증적 (2026-10-07 15:0x KST)\n\n@supreme33-kr @hayeounglee 아래 두 코멘트에 대한 답입니다.\n- 재환님 회신: [6029703172](https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-6029703172) — \"#37 AC 반영 여부는 Review Owner 승인 필요\"\n- 하영님 요청: [#30 6030980452](https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6030980452) §3-1\n\n기준은 Phase 2 관점의 **재현성·무결성·추적성·이식성**입니다. 함께 볼 기록: [#30 정정 6031884470](https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6031884470).\n\n### 결론\n1. **#37에 MTU/MSS AC를 새로 만들지 않습니다.** 새 AC로 두지도, 하위 AC로 두지도 않습니다.\n2. 터널 경유 MTU/MSS 관측은 기존 AC **\"On-Prem↔VPC 승인 TCP 경로가 성공한다\"의 증적 안에 관측값으로만** 남깁니다. **판정 기준이 아닙니다.** AC의 통과 조건은 원문 그대로입니다.\n3. 이 관측은 #10(P1) Close의 조건이 아닙니다. P1 Close는 이 시험의 결과나 일정에 기대지 않습니다.\n\n### 근거\n- **변경 통제:**\n  - Baseline v3.1.21 §3은 \"Freeze 이후 P0 범위·IP·배치·인터페이스·일정·Exit Criteria 변경은 Change Request와 영향도 검토\"를 요구합니다.\n  - #30 Schedule Note는 \"10-02 cutoff 이후 신규 Scope 확장 금지\"입니다.\n  - #37 정본 AC·Exit Criteria에는 MTU/MSS가 없습니다. 새 AC는 CR 없는 사양 변경이 됩니다.\n- **이식성:** 정본의 P2 이식성 절(DEC-P1-ENTRY-01·DEC-P1-TLS-01)은 **Portable Core + Platform-specific Adapter** 구조입니다. 이 티켓의 D21 Handoff(2026-10-03)도 Transport Adapter를 `aws_ec2_eip_relay`로 두고, OCI Relay를 Portability reference로 보존합니다. 터널 MTU/MSS 값은 Adapter(Libreswan EC2 Relay, NAT-T 오버헤드, 구간별 MTU)에 따라 달라집니다. AC로 고정하면 Adapter를 바꿀 때마다 AC가 깨지므로 **Adapter별 측정값**으로 기록해야 합니다.\n- **위험 검출은 기존 AC로 됩니다.** MTU/MSS 문제로 대용량 전송이 실패하면 \"승인 TCP 경로 성공\"과 Hybrid E2E(#50)가 원문 그대로 실패합니다. 새 AC 없이도 결함이 드러납니다.\n\n### 10/12~14 실행 때 남길 관측 항목 (같은 회차, 범위 확대 아님)\n| 항목 | 내용 |\n|---|---|\n| Adapter 식별 | Transport Adapter ID(`aws_ec2_eip_relay`), Relay와 vpn-gw01의 구성 소스 SHA 또는 설정 해시 |\n| 구간별 MTU | vpn-gw01 interface, Relay ENI·터널 interface MTU |\n| MSS 처리 | MSS clamp 설정 여부와 값(설정이 없으면 \"없음\"으로 기록) |\n| 실측 | ① 승인 TCP 경로의 SYN MSS 관측, ② 대용량 응답 1회의 성공 여부, ③ DF ICMP PMTU는 **보조** |\n\n- **③을 보조로 두는 이유:** SG·NACL·ISP 구간에서 ICMP가 막히면 DF 실측은 결과를 낼 수 없고, Adapter에 따라 재현성도 달라집니다. ①·②는 TCP 기반이라 다른 Adapter에서도 같은 절차로 반복할 수 있습니다. ③이 실패나 무응답이어도 그것만으로 AC를 판정하지 않습니다.\n- **수용 범위:** 재환님이 받지 않겠다고 한 Calico VXLAN 1450 경로 검증은 #10 P1 항목으로 남습니다. #37로 넘어오지 않습니다.\n- **추적성 주의:** 정본 Baseline IF-17 행과 이 티켓 정본 제목은 아직 OCI 경유(PROVISIONAL·D21 PENDING) 문구입니다. 정본 머리말과 D21 Handoff는 AWS EC2+EIP Relay가 최종입니다. 실행 기록에서는 **D21 Handoff 블록을 권위 근거로 명시**해 주십시오. IF-17 정정은 차기 정본(#24) 대상입니다.\n\n이 답변은 #37의 AC·Exit Criteria·본문·체크박스·Status·일정을 바꾸지 않으며 Runtime GO가 아닙니다.\n\nAI 사용: CLAUDE_CODE_ASSISTED. 정본 v3.1.21 Baseline §3·§1.4·IF-17, P2-VPN-01 정본 Description(D21 Handoff 포함), DEC-P1-ENTRY-01·DEC-P1-TLS-01의 P2 이식성 절을 대조했습니다. ROSA·Relay 설정은 조회하지 않았습니다.\n\n---\n_Generated by [Claude Code](https://claude.ai/code)_"
+    },
+    {
+      "issue": 40,
+      "id": 5976875601,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/40#issuecomment-5976875601",
+      "body": "## Private 관리·DNS 계약 검토안 인계 — 2026-10-04\n[반영·검증 기록](https://github.com/321Team/fds-project-architecture/pull/8#issuecomment-5976872467), HEAD `e4131e4c6ccf0f7a735025c7c1dce5da8306eb1d`. PROPOSED / authority수용·독립REVIEW PENDING / FreezeHOLD. 문서만추가; route/selector/SG/DNS권한·서버적용·AC/담당/일정변경 없음. CODEX_ASSISTED.\n\nOn-Prem DNS52/53→inbound와 outbound ENI→DNS52/53을 분리하고 최소 zone/FQDN/TLS/ACL/loop·failover 계약을 정리했습니다. 현재본문의 P1 IP-endpoint/10-16 Decision과 mandatoryPrivateDNSsubset 책임/선행시점의 차이를 명시. #34/#38과 별도 subset계약 수용 전 기존 P1범위를 P0로 변경하지 않습니다. DNS authoritative zone·Harbor/DB FQDN/SAN actual 원본 필요."
+    },
+    {
+      "issue": 40,
+      "id": 5978867156,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/40#issuecomment-5978867156",
+      "body": "## 권욱 DNS 사전 작업 — 기존 완료 증적 재사용 및 신규 입력 차이\nAI 사용: CODEX_ASSISTED. 사용자 “입력 결정 코멘트 확인, 중복이면 내가 하는 일 착수” 지시.\n\n#34/#35/#37/#38/#40/#42/#43 및 PR137 코멘트를 재조회했습니다. 플랫폼·관리 경로·APP digest·D22/비용 요청은 이미 기록돼 있어 동일 요청은 재등록하지 않았습니다. 아래는 새로 확인한 source/evidence 연결 결과입니다.\n\n[기존 DNS 계약 §10 보완](https://github.com/321Team/fds-project-baseline/blob/f6e7a50a7e1c52ec414ebd48822ba1f930d53121/phase2/reviews/20261004-private-management-bidirectional-dns-contract.md), PR137 HEAD `f6e7a50a7e1c52ec414ebd48822ba1f930d53121`.\n- infra-dns main `5f7505f9`의 fds.internal zone에서 Harbor/DB A 레코드·TTL300·NS 두 대 확인. 오늘의 live 응답과 구분.\n- infra-dns #6/#7 최종 기록과 evidence PR61/65 merged API를 확인해 기존 완료 수집·packet/reboot 검증을 재요청하지 않음. 오래된 README PENDING 문구를 현재 미완료로 소비하지 않음.\n- 09-29 dns01/dns02 post raw의 관리망 반환 경로는 `10.250.10.0/24 via10.1.93.58`. 원본2개 size/SHA256 재계산 일치. 이는 DNS 측 과거 관측이며 Runner→vpn-gw 현재 정방향·source보존·접속 PASS는 아님.\n- 09-18 참고 설정의 fds-known-clients가 query/recursion/cache 권한에 공용으로 사용됨. 새 Resolver source의 권위 zone 조회와 Runner recursion 권한을 분리 검토하도록 계약 보완. 실제 ACL/ipset/route 수정 없음.\n\n권욱 담당 source 정합 보완은 완료. 남은 입력은 현재 Runner/local router/vpn-gw L3·source와 drift, selected HCP 지원, 필수 DNS subset 책임/시점·최소 rule 결정입니다. 최종 결정·D23 P1 범위/일정/AC 변경·서버 적용을 대신하지 않습니다. STATIC/원본2개 무결성 확인; 신규 RUNTIME=NOT_RUN / FREEZE=HOLD."
+    },
+    {
+      "issue": 45,
+      "id": 5907191285,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/45#issuecomment-5907191285",
+      "body": "## G5 ROSA Application Ready Gate 정합화 — 2026-09-30 KST\n\n> 기준: **현행 정본 `docs-v3.1.20 / RELEASED`** · 2026-09-30 ROSA/Priority 전수 검수. 차기 정본 후보는 Draft PR #112. 이 코멘트는 최신 운영 delta이며 과거 본문/승인 이력을 삭제하지 않는다.\n\n**Priority P0 유지.** Exit Criteria와 Dependency를 일치시키기 위해 #46 P2-CICD-01을 필수 선행조건에 추가 반영했다.\n\nG5 P0:\n- #38 ROSA Platform/Security\n- #43 App Runtime\n- #46 Runner-based ROSA Delivery\n- #42 Registry Decision\n- #40/#41 등 P1 Decision은 구현 완료가 아니라 **결정상태 또는 Deferred/N/A**만 확인\n\n#44 OADP, #48 DNS 구현, #51 Operator mirror, #95 RHOAI는 G5 blocker가 아니다."
+    },
+    {
+      "issue": 45,
+      "id": 5907552855,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/45#issuecomment-5907552855",
+      "body": "## 2026-09-30 선택 제품 P1 Decision 추가\n\nG5의 신규 선택 제품 검토는 다음 두 건이다.\n\n- #120 OpenShift GitOps(Argo CD) — P1 / non-blocking\n- #121 Compliance Operator — P1 / non-blocking\n\n두 Decision의 미완료 또는 Deferred는 G5 blocker가 아니다. #120 Go 시에만 #46 Delivery Contract 변경 CR을 적용하며, #121 Go 시에만 Compliance 구현 후속을 생성한다."
+    },
+    {
+      "issue": 46,
+      "id": 5948127003,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/46#issuecomment-5948127003",
+      "body": "### 2026-10-02 P2-CICD Delivery Portability 대조\n\n현재 infra-cicd main `52cf494...` 기준:\n- Commit→Test→Build→Scan→Digest 추적 계약은 target-independent하게 재사용 가능\n- 실제 workflow는 `cicd-runner01` hostname/user/runner label과 로컬 offline supply 경로에 결합\n- 확인한 `app-test-build-scan.yml` 자체는 ROSA deploy 완료 증거가 아님\n\nPhase 2에서는 build/scan 로직을 복제하지 않고 deploy target adapter만 분리합니다.\nAdapter 입력:\n- ROSA API endpoint\n- namespace/project\n- short-lived credential/token\n- approved registry/digest\n- kube context\n\n성공 기준은 HCP↔Classic 변경 시 Test/Build/Scan 단계가 바뀌지 않고 target adapter만 교체되는 것입니다.\n\n현재: **PG-06 PARTIAL / ROSA DELIVERY NOT RUN / 기존 AC 변경 없음**."
+    },
+    {
+      "issue": 50,
+      "id": 6013423361,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/50#issuecomment-6013423361",
+      "body": "## #50 일정 확인 요청 — 10-22 하루 실행 vs 시험 전략 (E2E Lead 이재환)\n\n현재 일정과 승인된 시험 전략이 서로 다릅니다. 어느 쪽으로 진행할지 정해 주세요.\n\n| 출처 | 내용 |\n|---|---|\n| 현재 #50 본문 (10/1 일정·Dependency 정합화, 계약 블록) | 10-22 하루. #47 handoff 완료 전 착수 금지. 10-22에 Final Regression |\n| 승인된 [P2-TEST-STRATEGY-01](https://github.com/321Team/fds-project-baseline/blob/main/audit/phase2-test-strategy-20260930/README.md) §4 W3 / 9/30 #50 코멘트 | 10-21에 정상·Rule·DB·Negative·Failure/Recovery 대부분 수행, 10-22는 Final Regression·증적 확정. **\"10-22에 처음으로 전체 E2E를 시작하는 계획은 사용하지 않는다\"** |\n\n지금 본문대로면 E2E 12단계(정상, R01/R02/R04/R07, 미승인 차단, DB 장애, fds-engine 장애, Tunnel down/recovery, 최종 회귀)를 10-22 하루에 처음 시작하게 됩니다. 결함이 하나라도 나오면 10-23은 신규 시험 금지라 고칠 시간이 없습니다.\n\n**제안:** #47과 같은 10-21 Runtime 창에서 #47 양성 경로가 확인되는 즉시 #50 케이스를 이어서 실행하고(같은 ROSA·같은 Relay 상태 재사용), 10-22는 최종 회귀와 증적 확정에만 씁니다. #47 handoff 고정은 10-21 창 안에서 먼저 기록합니다. 일정 속성(Start/End)을 바꿀지, 본문 착수 조건 문구만 정정할지도 함께 정해 주시면 됩니다.\n\n@GWONUK\n\nAI 사용: CLAUDE_ASSISTED\n"
+    },
+    {
+      "issue": 53,
+      "id": 5907197070,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/53#issuecomment-5907197070",
+      "body": "## G6 P0 Gate 축소 — 2026-09-30 KST\n\n> 기준: **현행 정본 `docs-v3.1.20 / RELEASED`** · 2026-09-30 ROSA/Priority 전수 검수. 차기 정본 후보는 Draft PR #112. 이 코멘트는 최신 운영 delta이며 과거 본문/승인 이력을 삭제하지 않는다.\n\n**Priority P0 유지.** #44 OADP는 P1로 하향되어 필수 Blocked By/Exit Criteria에서 제거했다.\n\nG6 P0:\n- #47 Hybrid DB/Registry Integration\n- #50 Hybrid E2E/Regression\n- Critical Issue 0 또는 승인된 예외\n\nP1 #25/#26/#27/#40/#41/#44/#48/#51/#95는 구현 미완료만으로 G6를 차단하지 않는다. 해당 시점에는 Implemented / Deferred / N/A / Cancelled 상태와 Owner/Due가 추적 가능해야 한다."
+    },
+    {
+      "issue": 53,
+      "id": 5907555508,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/53#issuecomment-5907555508",
+      "body": "## 2026-09-30 P1 non-blocking 목록 보완\n\nG6 non-blocking 선택 제품 Decision에 다음을 추가한다.\n\n- #120 DEC-P2-GITOPS-01\n- #121 DEC-P2-COMP-01\n\n미구현/Deferred 상태는 G6 실패가 아니다. Decision 상태와 Adopt 시 연결된 CR/Task만 추적 가능하면 된다."
+    },
+    {
+      "issue": 95,
+      "id": 5907067523,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/95#issuecomment-5907067523",
+      "body": "## 3인 수행범위 재검토 — 2026-09-30 KST\n\n본 Decision은 **Priority P1 유지 / Project Close 비차단 / Deferred 우선**으로 관리한다.\n\nROSA·Hybrid P0의 최소 성공체인은 Terraform/AWS/ROSA, VPN, App, CI/CD, On-Prem DB 통합, E2E 및 산출물 인수다. RHOAI는 현행 v3.1.20 §1.3의 AI Inference Scope Out과도 연결되므로 Phase 2 P0에 편입하지 않는다.\n\n- 10/26 Project Close 이전 구현을 기본 계획으로 잡지 않는다.\n- 도입을 선택하려면 기존 CR 조건, ROSA Version/Quota/MachinePool, D26 Operator 공급망, 비용/결제주체, 설치·삭제시간을 선행 확정한다.\n- 미도입/유예는 G5/G6 실패로 처리하지 않고 Deferred 근거만 남긴다.\n- 10/27 이후 별도 PoC를 하더라도 프로젝트 본체 완료와 비용/리소스 정리를 분리한다.\n\n이 우선순위 원칙은 차기 정본 후보 PR #112의 Phase 2 scope/priority review에 반영한다."
+    },
+    {
+      "issue": 95,
+      "id": 6032524902,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/95#issuecomment-6032524902",
+      "body": "## 2026-10-07 KST — Kolon Benit OCP RHOAI 사전분석 결과 (Read-only)\n\n**성격:** `LAB-PRECHECK / Decision Input`. 본 코멘트는 현행 **P1 / Deferred-first / G5·G6 비차단** 계약을 변경하지 않으며, RHOAI 설치·Runtime 검증·ROSA 인수를 의미하지 않는다.\n\n### 1) 실제 조회 결과\n\n- 대상 OCP: `api.demo1.ocp4lab.com`\n- OCP: **4.20.0**, Kubernetes **v1.33.5**\n- Node: **Master 3 / Worker 2**, 전 노드 `Ready`\n- Worker 자원:\n  - `worker-1`: Capacity **8 CPU / 약 8 GiB RAM**, Allocatable **7.5 CPU / 약 6.65 GiB**\n  - `worker-2`: Capacity **8 CPU / 약 8 GiB RAM**, Allocatable **7.5 CPU / 약 6.65 GiB**\n  - Memory Requests: worker-1 **4677 Mi (68%)**, worker-2 **5011 Mi (73%)**\n- Default StorageClass: `managed-nfs-storage` (`nfs-subdir-external-provisioner`)\n- GPU resource: **없음**\n- RHOAI 현재 설치 상태:\n  - CSV / Subscription 없음\n  - `DataScienceCluster` CRD 없음\n  - `redhat-ods-*` Namespace 없음\n  - 따라서 **RHOAI 미설치 상태**\n- Operator Catalog:\n  - Package: `rhods-operator`\n  - Source: `redhat-operators`\n  - CatalogSource 상태: `READY`\n  - `stable-3.5` / `stable-3.x` / `eus-3.5` → **rhods-operator.3.5.1**\n  - `beta` → 3.6.0 EA (본 프로젝트 사용 비권고)\n- 권한:\n  - Subscription / OperatorGroup / Namespace create = `yes`\n  - `oc auth can-i '*' '*'` = `yes`\n  - 기술적 설치 권한은 **cluster-admin 수준**\n- Catalog metadata에 CPU 계열 Workbench/Pipeline/Serving 이미지와 AutoRAG/Llama Stack 관련 구성요소가 확인되어 **CPU-only RAG 기술 경로는 존재**함.\n\n### 2) Resource Gate 판정\n\nRed Hat RHOAI 3.5 공식 설치 요구사항은 multi-node 기준 **최소 Worker 2대, 각 Worker에서 8 CPU / 32 GiB RAM 수준의 가용 자원**을 요구한다.\n\n현재 Lab은 Worker당 약 **8 GiB RAM**이며 실제 Allocatable은 약 **6.65 GiB**, 기존 OpenShift workload가 이미 68~73% 수준의 Memory Request를 점유하고 있다.\n\n따라서 현재 판정:\n\n```text\nOCP_COMPATIBILITY       = PASS\nRHOAI_CATALOG           = PASS\nRHOAI_3_5_1_AVAILABLE   = PASS\nINSTALL_PERMISSION      = PASS\nDEFAULT_STORAGECLASS    = PASS (PVC Runtime 미검증)\nCPU_ONLY_RAG_PATH       = PASS\nGPU_REQUIRED            = NO (현재 검토 범위)\nRHOAI_INSTALLED         = NO\nRESOURCE_GATE           = FAIL\nRUNTIME_VALIDATION      = NOT_RUN\nFINAL                   = DEFER / RESOURCE_BLOCKED\n```\n\n### 3) 권고\n\n현재 Lab에서는 **RHOAI 설치를 시도하지 않고 Deferred 유지**를 권고한다.\n\n사유:\n1. Worker RAM이 공식 최소 요구사항에 크게 미달\n2. 증설 가능성이 낮음\n3. 설치를 강행할 경우 Pending/OOM/Resource Pressure 가능성이 높고, 결과를 정상적인 기술검증 증적으로 사용하기 어려움\n4. 이 Lab 결과는 **사전 호환성/기술 가능성 검토**까지만 사용하고 실제 Phase 2 인수는 ROSA Runtime에서 별도 검증해야 함\n\n### 4) 미확인 / 잔여\n\n- RHOAI Subscription / Entitlement: **미확인**\n- 실제 PVC Dynamic Provisioning: **미실행**\n- Operator 설치/삭제시간: **미실행**\n- RHOAI Runtime / AutoRAG Runtime: **미실행**\n- ROSA에서의 Version / Quota / MachinePool / 비용 / Entitlement: **별도 확인 필요**\n\n**Decision 영향:** 현행 `Deferred-first` 근거가 실측으로 강화되었으며, 본 Lab의 Resource Gate FAIL은 G5/G6 실패로 보지 않는다. 향후 도입(Go) 전환 시에는 기존 계약대로 CR + ROSA 대상 구현 티켓 + 자원/비용/삭제경로 확정이 선행되어야 한다."
+    },
+    {
+      "issue": 119,
+      "id": 5928210700,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/119#issuecomment-5928210700",
+      "created_at": "2026-10-01T09:02:15Z",
+      "user": "supreme33-kr",
+      "body": "## APP Lead 결정 — CR 승인·#15 AC 교체 (이재환, 2026-10-01)\n\n[G3 수용 권고(5922785388)](https://github.com/321Team/fds-project-baseline/issues/119#issuecomment-5922785388)에 따라 이 CR을 승인하고 #15 AC를 변경안대로 두 줄로 교체했습니다(REVIEW_AUTHORITY_POLICY §4, 10/1 회의 \"대기 없이 진행\" 결정).\n\n- 교체: #15 AC \"DB/FDS 장애 시 `/readyz` 503…\" → ① 외부 DB 장애 ② fds-engine 장애 fail-open. 현재 절만 바꿨고 보관 원문은 그대로입니다. 본문 SHA `e9bbf654…` → `68d03d2f…`\n- 체크: 두 줄 모두 미체크. ②는 fds-engine `replicas=0` 장애 시험 → 증적 독립 리뷰 → 병합 뒤 체크합니다.\n- @hayeounglee 문구 확인은 그대로 받습니다. 이견이 있으면 알려 주세요.\n\nAI 사용: CLAUDE_ASSISTED\n"
+    }
+  ],
+  "open_pr_inventory": [
+    {
+      "url": "https://github.com/321Team/fds-project-evidence/pull/137",
+      "number": 137,
+      "title": "evidence: P1-SEC-01 PSA version label 원본(#128) 정정 기록 — 시험 Pod 정의가 #49와 다름 (2026-10-07)"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-evidence/pull/135",
+      "number": 135,
+      "title": "evidence(P1-K8S-01): mtu-path-run01 MTU 경로 관측 시험 원본 편입 (2026-10-07)"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-evidence/pull/136",
+      "number": 136,
+      "title": "evidence(P1-APP-01): fds-app Worker 분산 적용 창 원본 편입 (2026-10-07 14:40~14:55 KST)"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/pull/149",
+      "number": 149,
+      "title": "docs: Phase1 이권욱 착수·OID 및 Harbor 지원 인계"
+    },
+    {
+      "url": "https://github.com/321Team/fds-msa/pull/20",
+      "number": 20,
+      "title": "build: 검증된 원본으로 OpenSSL r4 builder/runtime lock 갱신"
+    },
+    {
+      "url": "https://github.com/321Team/infra-kubernetes/pull/68",
+      "number": 68,
+      "title": "feat: OID02 pinned cache metadata read-only preparation"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/pull/150",
+      "number": 150,
+      "title": "docs(phase2): Phase 1 사양을 유지한 독립 사전 준비"
+    },
+    {
+      "url": "https://github.com/321Team/infra-cicd/pull/63",
+      "number": 63,
+      "title": "docs: 새 APP 공급물의 CICD 소비 준비 인계"
+    },
+    {
+      "url": "https://github.com/321Team/fds-msa/pull/14",
+      "number": 14,
+      "title": "ci: apko-offline-supply PR 트리거에서 앱 경로 제거"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-evidence/pull/132",
+      "number": 132,
+      "title": "evidence(hbr): Robot 소비자·노드·이미지·Docker 사전 상태 읽기 전용 조사 원본 편입 (2026-10-07)"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-evidence/pull/133",
+      "number": 133,
+      "title": "evidence(hbr): harbor01 guard 규칙 파일 /etc/p1-hbr-ac04.nft 내용·해시 편입 (2026-10-07)"
+    },
+    {
+      "url": "https://github.com/321Team/infra-kubernetes/pull/65",
+      "number": 65,
+      "title": "fix(app): fds-app 두 Deployment에 Worker 분산(topologySpreadConstraints) 추가 (#15)"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/pull/147",
+      "number": 147,
+      "title": "#35 중앙 음성 검증 결과 수신 및 bootstrap 인계"
+    },
+    {
+      "url": "https://github.com/321Team/infra-ansible/pull/66",
+      "number": 66,
+      "title": "fix(ci): distinguish busy matching runners"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/pull/137",
+      "number": 137,
+      "title": "docs(phase2): 공개 저장소의 상세 설계·운영자료를 비공개로 이전"
+    }
+  ],
+  "reused_pr": {
+    "number": 150,
+    "branch": "work/p2-independent-preparation-20261007",
+    "source_head": "cf61668a0ca6c565586679506079463cd0964198",
+    "state": "open",
+    "draft": true,
+    "reason": "Existing Phase 2 test/evidence preparation overlaps; latest Shared Lab boundary supersedes exclusive premise."
+  },
+  "official_references": [
+    {
+      "url": "https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed/3.5/html/installing_and_uninstalling_openshift_ai_self-managed/installing-and-deploying-openshift-ai_install",
+      "retrieved_on_kst": "2026-10-07",
+      "sections": [
+        "3.1 Requirements",
+        "3.1.2 Component requirements"
+      ],
+      "scope": "Worker RAM/minimum and OGX/RAG selected-feature requirements; no installation"
+    }
+  ],
+  "limitations": [
+    "Issue/Comment records are planning inputs, not direct server raw evidence.",
+    "No AWS/OCP/ROSA/On-Prem session used.",
+    "Listed repository HEAD metadata does not mean complete code review of those repositories.",
+    "No new AC, implementation, Runtime, acceptance, merge or publication performed."
+  ],
+  "prewrite_recheck": {
+    "checked_at_kst": "2026-10-07T16:09:19+09:00",
+    "main_head": "40ac664b83485745ab86b5018b8e19c386484cc8",
+    "pr150_head": "cf61668a0ca6c565586679506079463cd0964198"
+  }
+}

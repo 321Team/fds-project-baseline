@@ -21,7 +21,7 @@
 | 같은 파일 | API→engine8001 / API→DB5432; engine→DB 허용 없음 | P2에서도 DB actor=transaction-api 유지. engine에 DB credential/egress를 새로 주지 않음 |
 | 같은 파일 monitoring 경로 | CP/worker 개별 IP, monitor01 10.250.10.30 | P0 앱 base와 full monitoring 이식 책임 분리. 이 값들을 ROSA node 정보로 복제하지 않음 |
 | [06-rbac.yaml](https://github.com/321Team/infra-kubernetes/blob/c3057906a6a8427a4b315b7e544e063efe0fecf2/manifests/06-rbac.yaml) | 앱 SA token automount=false; Runner role은 두 named Deployment get/update/patch | 최소권한 intent를 P2로 연결. target namespace/SA/trust/credential는 #38/#46의 별도 실제 입력 |
-| [infra-rosa W0](https://github.com/321Team/infra-rosa/blob/a37b10628cd59427c45dd28e2f6bd924891e1c54/precheck/portability/README.md) | 조회+server-side dry-run만 수행. 실제 Pod/Namespace/SCC 생성 없음. ENV=SHARED_OCP_LAB 또는 ROSA | 기존 Admission 검증기를 재구현하지 않음. 전제·환경 값 정합화 후 재사용; 실제 Running/Ready/imageID·filesystem·cleanup은 별도 Lab Runtime |
+| [infra-rosa W0](https://github.com/321Team/infra-rosa/blob/a37b10628cd59427c45dd28e2f6bd924891e1c54/precheck/portability/README.md) | 조회+server-side dry-run만 수행. 실제 Pod/Namespace/SCC 생성 없음. ENV=SHARED_OCP_LAB 또는 ROSA | 기존 Admission 검증기를 재구현하지 않음. 전제·환경 값 정합화 후 재사용; 실제 Running/Ready/imageID·filesystem·cleanup은 별도 LAB-PRECHECK 실측 |
 
 ## 준비 결과가 확정하는 범위
 
@@ -34,10 +34,10 @@ DB/FDS 장애 기대결과는 [#119 Lead 승인](https://github.com/321Team/fds-
 | 입력 | 생산 / 확인 |
 |---|---|
 | 실제 OCP cluster identity/version·API/context·허용 계정/권한 | 환경 제공 범위 확인 → #38 |
-| 독점·시험용 자원 경계와 초기 상태·백업·복구 책임 | Lab 실행 계획 |
+| Shared namespace·Quota/허용 범위·초기 상태·cleanup 책임 | Lab 실행 계획 |
 | 승인 두 app digest·base/overlay SHA·resource·Secret key 참조 | #43 |
 | 실제 target namespace·SCC·UID/GID 할당·trust/registry 경로 | #38/#42 |
-| Running/Ready·health·imageID·RO filesystem·허용 volume 쓰기 관측 | Lab Runtime |
+| Running/Ready·health·imageID·RO filesystem·허용 volume 쓰기 관측 | LAB-PRECHECK |
 | before/after resource inventory·cleanup·원본 명령/RC/log | 실행자 → 독립 증적 심사 |
 
 Arbitrary UID 시험을 위해 앱 rebuild가 필요하면 새 SHA/digest의 변경 영향과 P1/P2 회귀를 연결한다. 현재 P1 이미지를 그 시험을 이유로 교체하지 않는다.

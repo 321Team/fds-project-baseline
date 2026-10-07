@@ -7,21 +7,21 @@
 
 | 항목 | 확인한 원본 | 판정 / 다음 단계 |
 |---|---|---|
-| 중앙 bootstrap 소스 | [PR148](https://github.com/321Team/fds-project-baseline/pull/148), HEAD e1cac2d39174821c839f2df6068fab16211bf872 | 독립 리뷰·prepare 수신 기록 존재. 이번 조회 때 OPEN/미병합. 소스 재작성 불필요 |
+| 중앙 bootstrap 소스 | [PR148](https://github.com/321Team/fds-project-baseline/pull/148), HEAD e1cac2d39174821c839f2df6068fab16211bf872 | MERGED, merge40ac664b83485745ab86b5018b8e19c386484cc8. [#35 최종 수신](https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-6031865288): CREATE_COMPLETE·설정 PASS_USER_READBACK. assistant 직접 raw/AWS 재검증과 구분 |
 | 실제 prepare 수신 | [#35 6030662302](https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-6030662302) | manifest RC0·root ARN·source UTC/helper hash의 사용자 출력 수신 완료. assistant의 AWS 직접 실행 아님 |
 | 4자원 생성 조건 | [#35 Lead GO](https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-6031301706) | StateBucket/Policy 및 FDS-Relay-SSM Role/Profile만 조건부 GO. CloudFormation 소유권 채택·복구 책임 명시 |
 | GO 실행 조건 | 같은 기록 C1~C5 | source/helper 동일성, 같은 실행의 fresh before, create 1회, timeout 검사, partial STOP, verify/readback 및 CloudShell 14건 확인 |
 | GO 외 잔여 | 같은 기록 | 사람 role/grant·Stage-A·compute·ROSA·비용 설정·각 개인 Runtime은 별도 잔여 |
 | D21 raw 인계 | [#36 마지막 인계](https://github.com/321Team/fds-project-baseline/issues/36#issuecomment-5966659098) | final responder/raw 수신·재해시·독립 증적 심사 잔여. mismatched PSK round-trip을 production Child SA로 승격하지 않음 |
 
-중앙 실행은 [기존 README](https://github.com/321Team/fds-project-baseline/blob/e1cac2d39174821c839f2df6068fab16211bf872/phase2/permissions/20261007-central-bootstrap/README.md)를 그대로 소비한다. 이번 세션에는 root CloudShell 실행 세션을 사용하지 않았다.
+중앙 실행은 [기존 README](https://github.com/321Team/fds-project-baseline/blob/e1cac2d39174821c839f2df6068fab16211bf872/phase2/permissions/20261007-central-bootstrap/README.md)를 그대로 소비한다. 이번 시험계획 갱신 세션에는 root CloudShell을 사용하지 않았다. 생성/설정 완료는 사용자 실행 출력의 최신 수신 기록으로만 소비한다. CloudFormation 소유권은 유지한다.
 
 ## 결정 입력과 무영향 준비 범위
 
 | 티켓 / 책임 | 지금 정리할 입력 | 적용 전 미확정 / 소비조건 |
 |---|---|---|
-| #34 / 이권욱 | On-Prem→ROSA 이전 경계, 사용자 최신 Lab 전제, P1 인계·source/evidence 참조 | #32 Known Issue 인계, topology/worker count/AZ·지원성·용량·비용 최종값. Architecture Freeze는 HOLD |
-| #35 / 이하영 | 기존 schema/backend/SSM bootstrap 진행 수신 | full IaC·실제 계정/role/source·Stage-A source와 plan. 중앙4자원 GO를 full apply로 확대하지 않음 |
+| #34 / 이권욱 | On-Prem→ROSA 이전 경계, Shared/Test OCP Lab 경계, P1 인계·source/evidence 참조 | #32 Known Issue 인계, topology/worker count/AZ·지원성·용량·비용 최종값. Architecture Freeze는 HOLD |
+| #35 / 이하영 | 기존 schema/backend/SSM bootstrap 진행 수신 | full IaC implementation PR/SHA·API 목록·완결 permissions·Stage-A source/plan. 중앙4자원 readback은 수신됨. 중앙4자원 GO를 full apply로 확대하지 않음 |
 | #38 / 이하영 | #43이 소비할 Namespace/RBAC/SCC/trust/Route handoff 항목 | 실제 Cluster/API/Version·Basic Ready. Lab admission만으로 Ready 처리하지 않음 |
 | #40 / 이권욱 | DB/Harbor IP Endpoint 기본과 Private 관리 FQDN·DNS subset 후보의 차이 | 실제 Runner route/source, endpoint 이름/zone/port, 전달 범위·복구·비용. #48 신규 구현 GO는 별도 |
 | #42 / 이권욱 | Harbor 재사용과 승인 Cloud Registry 비교 항목 | single Primary/Fallback, endpoint/repository, push/pull principal, trust, digest, source path, credential reference, 비용, #38 handoff |

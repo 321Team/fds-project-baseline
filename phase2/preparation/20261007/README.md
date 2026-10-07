@@ -6,7 +6,7 @@
 ## 적용 기준
 
 - 현행 발행 정본: docs-v3.1.21, 2026-10-04 14:49:12 KST. 발행 기준 커밋 `979facb98de8ca1f1e2ce22f38b27ac3366f3fc3`.
-- 이번 작업의 main 기준: `c34ca9c12d7cb38d610829cc59460ec6a8d87b1a`. 최신 Issue·승인·기존 코드에서 준비 입력을 정리했다. 조회 대상과 해시는 sources.json에 기록한다.
+- 사전 준비 최초 main 기준은 `c34ca9c12d7cb38d610829cc59460ec6a8d87b1a`이며, 이번 시험전략 개정/동기화 기준은 `40ac664b83485745ab86b5018b8e19c386484cc8`이다. 과거 sources.json은 이력으로 보존하고 최신 조회는 audit/phase2-test-plan-20261007/sources.json에 기록한다.
 - [#32 Phase 1 Close](https://github.com/321Team/fds-project-baseline/issues/32)는 OPEN. [#33 공식 Start](https://github.com/321Team/fds-project-baseline/issues/33)는 #32의 잔여·Known Issue/Deferred 인계가 Entry다. 일정 도래만으로 이를 충족했다고 표시하지 않는다.
 - 사전 준비는 적용용 사양이 아닌 검토 입력이다. Phase 1 구현·AC·사용 중인 DNS/Harbor/DB/Runner 및 기존 Runtime 설정을 바꾸지 않는다.
 
@@ -14,7 +14,7 @@
 
 | 순서 | 사전 작업 / 연결 티켓 | 이번에 작성·확인한 결과 | 다음 완료조건 / 기존 책임 |
 |---|---|---|---|
-| 1 | 중앙 IaC/backend/Relay 준비 #35·#37 | 기존 PR147·148, prepare 수신 완료 및 Lead 조건부 GO를 재사용하도록 입력표에 연결 | #35 이하영 판단·소유권, 이권욱 중앙 root 실행. 승인된 4자원만 fresh before→1회 create→exact readback. 실제 생성은 이번 세션 미실행 |
+| 1 | 중앙 IaC/backend/Relay 준비 #35·#37 | 기존 PR147·148, prepare 수신 완료 및 Lead 조건부 GO를 재사용하도록 입력표에 연결 | #35 이하영 판단·소유권, 이권욱 중앙 root 실행. 승인된 4자원만 fresh before→1회 create→exact readback. 새 원본 #35 6031865288: 중앙 4자원 CREATE_COMPLETE/PASS_USER_READBACK 수신; full IaC/Stage-A는 별도 |
 | 2 | 아키텍처·이식성 입력 #34·#38·#43 | 최신 소스의 고정값·참고 snapshot·재사용 경계를 정적 대조. portability-inventory.md 작성 | #38 이하영 platform/SCC 입력, #43 이재환 portable base/overlay. 승인 digest의 admission과 실제 arbitrary UID Running/Ready를 구분 |
 | 3 | 관리 DNS·Registry 결정 자료 #40·#42 | input-register.md에 기존 계약과 미확정 값, 영향 없는 준비 범위를 분리 | 이권욱 Decision Lead. route/source·TLS·실제 환경 handoff·비용을 받아 단일안을 결정 |
 | 4 | ROSA Delivery 입력 #46 | 현 P1 adapter·workflow의 고정 대상과 P2 변경 지점을 delivery-preparation.md에 정리 | 이권욱. #38/#43/#42의 실제 입력 후 별도 P2 adapter 구현·리뷰. P1 배포 경로를 바꾸지 않고 준비 |
@@ -22,13 +22,19 @@
 
 새 티켓은 만들지 않았다. 위 산출물은 기존 책임 티켓의 준비 입력으로 연결한다. #43/#50 지원 문서를 작성한 것이 담당 변경이나 실행 인수는 아니다.
 
-## 이번 사용자가 제공한 환경 전제
+## 최신 Shared Lab / 실제 Target 경계
 
-2026-10-07 프로젝트 대화 전제: **코오롱베니트 OCP/RHOAI는 팀 독점 가능한 테스트·검증 자원이며 팀 운영/편입 자원이 아니다. 본 경로는 우리 On-Prem→AWS ROSA 이전이다.**
+2026-10-07 최신 사용자 지시와 [#95 실측 댓글](https://github.com/321Team/fds-project-baseline/issues/95#issuecomment-6032524902)을 적용한다. **Kolon Benit OCP는 Shared/Test Lab이며 실제 Target은 우리 On-Prem→AWS/ROSA다.** 이전 PR 초안의 독점 전제는 현재 실행 입력으로 사용하지 않는다.
 
-기존 #33/#34/#38/#43 등과 W0 도구에는 SHARED_OCP_LAB·namespace-local 전제가 남아 있다. 이 차이를 preparation 입력으로 표시하며, 과거 문서를 다시 써서 승인됐던 것처럼 만들지 않는다. 실제 cluster identity·version·관리 권한·허용 장애 범위·복구 책임·초기 상태 보존은 아직 이번 세션에서 확인하지 못했다.
+```text
+Kolon Benit OCP = LAB-PRECHECK / COMPATIBILITY / REHEARSAL
+AWS/ROSA = P0 IMPLEMENTATION / RUNTIME / ACCEPTANCE
+```
 
-독점 Lab에서 cluster 단위 복구·재현성 시험을 설계할 수 있다. 실제 장애주입·Operator 설치·클러스터 변경은 명확한 시험/복구 범위를 받은 뒤 해당 작업에서 수행한다. Lab 결과는 ROSA HCP/AWS IAM/Hybrid 경로 인수를 대신하지 않는다. 기존 Admission-only 도구의 ENV enum에 새 값을 임의 주입하지 않는다.
+기술적 cluster-admin 권한은 독점·Operator 설치·공용 cluster 장애주입 승인과 다르다. 기존 namespace-local·Quota/Owner·cleanup 경계를 유지한다. [Shared Lab 리허설 준비](shared-lab-rehearsal-preparation.md)를 사용하며 RHOAI는 read-only·RESOURCE_GATE=FAIL·Deferred 권고다. Lab PASS를 ROSA Runtime/인수·Migration Complete·G5/G6 Exit로 승격하지 않는다.
+
+최신 [Test Strategy](../../../../tests/FDS_Phase2_Test_Strategy_20261007.md)와 [Test Plan](../../../../tests/FDS_Phase2_Test_Plan_20261007.md)은 P0/P1·TS01~16·Gate/증적을 기존 AC에 매핑한다. 16 case TSV는 APP/E2E/Delivery의 일부이며 전체 시험범위를 대신하지 않는다.
+발행 v3.1.21은 보존하고 PR150 검토 입력으로 갱신한다. 기존 sources.json/verification.json은 14:14 시점의 이력이다. 이번 조회·검증은 [새 기록](../../../../audit/phase2-test-plan-20261007/README.md)을 따른다.
 
 ## 확인된 정합성 쟁점
 

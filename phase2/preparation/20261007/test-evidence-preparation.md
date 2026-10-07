@@ -17,11 +17,13 @@
 | 환경 | 가능한 준비·시험 | 수용 한계 |
 |---|---|---|
 | STATIC / MOCK / CI | source/manifest·입력·unit/contract/adapter 오류 제거 | 실제 image pull·SCC·DB·Route·복구 증명이 아님 |
-| 독점 교육장 OCP/RHOAI Lab | arbitrary UID·OpenShift admission/Running·health, 허용 범위의 cluster 복구·재현성 시험 | 테스트 자원, 팀 운영편입 아님. 실제 ROSA HCP·AWS IAM·VPN/DB source 인수 별도 |
+| Shared/Test Kolon Benit OCP Lab | LAB-PRECHECK / COMPATIBILITY / REHEARSAL, 허용 namespace의 admission/UID/health·자체 자원 정리 | 실제 Target 아님. ROSA Runtime/Acceptance·Migration Complete·G5/G6로 승격 금지. RHOAI는 read-only·RESOURCE_GATE=FAIL·Deferred 권고 |
 | 실제 ROSA / 승인 Hybrid | #38/#43/#46/#47/#50 Runtime과 실패·복구·최종 회귀 | exact identity·원본·해당 단계 승인·증적 검토에서만 PASS |
 
-Lab API/context/version·허용 scope·초기 상태/복구·사용 이미지가 아직 미수신이므로 이번 세션에서 admission이나 Runtime을 실행하지 않았다.
-교육장 cluster 복구를 본 경로의 full ROSA destroy/recreate P0 AC로 확대하지 않는다.
+Lab identity/version/resource 관측은 [#95 최신 댓글](https://github.com/321Team/fds-project-baseline/issues/95#issuecomment-6032524902)에 있다. APP pin·namespace·허용 작업창/정리는 별도 입력이며 이번 시험계획 갱신에서 admission/Runtime을 실행하지 않았다.
+공용 cluster 복구·Operator 설치는 기본 리허설 범위가 아니다. full ROSA recreate·추가 복합장애는 기존 승인 범위 확인 없이 P0 AC로 추가하지 않는다.
+
+전체 범위·P0/P1·Gate는 [최신 Strategy](../../../../tests/FDS_Phase2_Test_Strategy_20261007.md)와 [Test Plan](../../../../tests/FDS_Phase2_Test_Plan_20261007.md)을 따른다. 16개 초안은 부분 집합이다.
 
 ## 실행 시 수집할 추적값
 
