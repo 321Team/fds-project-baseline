@@ -195,6 +195,40 @@ class SyncTests(unittest.TestCase):
         execute(api)
         self.assertEqual(p.item_values(api.item)['Status'], 'Cancelled')
 
+
+    def test_cancelled_three_state_board_preserves_source_and_is_idempotent(self):
+        api = SyncAPI(fixture('Cancelled'))
+        del api.fields['Status']['options']['Cancelled']
+        original = copy.deepcopy(api.issue)
+        planned = execute(api, False)
+        self.assertEqual(planned['status'], 'CHECK_READY')
+        self.assertEqual(planned['plan'][0]['changes']['Status'], 'Done')
+        self.assertEqual(planned['source_summary']['status'], {'Cancelled': 1})
+        self.assertEqual(api.writes, [])
+        result = execute(api)
+        self.assertEqual(result['status'], 'SYNC_VERIFIED')
+        self.assertEqual(p.item_values(api.item)['Status'], 'Done')
+        self.assertEqual(api.issue, original)
+        writes = copy.deepcopy(api.writes)
+        self.assertEqual(execute(api)['status'], 'SYNC_VERIFIED')
+        self.assertEqual(api.writes, writes)
+
+    def test_cancelled_without_done_option_stops_before_write(self):
+        api = SyncAPI(fixture('Cancelled'))
+        del api.fields['Status']['options']['Cancelled']
+        del api.fields['Status']['options']['Done']
+        with self.assertRaises(p.Stop):
+            execute(api)
+        self.assertEqual(api.writes, [])
+
+    def test_cancelled_display_fallback_does_not_accept_completed_issue(self):
+        api = SyncAPI(fixture('Cancelled'))
+        del api.fields['Status']['options']['Cancelled']
+        api.issue['state_reason'] = 'completed'
+        with self.assertRaises(p.Stop):
+            execute(api)
+        self.assertEqual(api.writes, [])
+
     def test_stale_source_stops_before_item_add(self):
         api = SyncAPI()
         with patch.object(s, 'assert_source', side_effect=p.Stop('stale')):
