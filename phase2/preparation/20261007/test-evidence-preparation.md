@@ -23,7 +23,7 @@
 Lab identity/version/resource 관측은 [#95 최신 댓글](https://github.com/321Team/fds-project-baseline/issues/95#issuecomment-6032524902)에 있다. APP pin·namespace·허용 작업창/정리는 별도 입력이며 이번 시험계획 갱신에서 admission/Runtime을 실행하지 않았다.
 공용 cluster 복구·Operator 설치는 기본 리허설 범위가 아니다. full ROSA recreate·추가 복합장애는 기존 승인 범위 확인 없이 P0 AC로 추가하지 않는다.
 
-전체 범위·P0/P1·Gate는 [최신 Strategy](../../../../tests/FDS_Phase2_Test_Strategy_20261007.md)와 [Test Plan](../../../../tests/FDS_Phase2_Test_Plan_20261007.md)을 따른다. 16개 초안은 부분 집합이다.
+전체 범위·P0/P1·Gate는 [최신 Strategy](../../../tests/FDS_Phase2_Test_Strategy_20261007.md)와 [Test Plan](../../../tests/FDS_Phase2_Test_Plan_20261007.md)을 따른다. 16개 초안은 부분 집합이다.
 
 ## 실행 시 수집할 추적값
 
@@ -33,7 +33,7 @@ Lab identity/version/resource 관측은 [#95 최신 댓글](https://github.com/3
 4. VPN/route/selector·actual source·firewall/pg_hba·Registry/trust 상태. Credential은 reference만.
 5. 명령·종료코드·stdout/stderr 원본, 실패 조건/관측·복구·before/after inventory.
 6. 원본 파일/아카이브 해시, 수신·독립 심사·병합 참조, Known Issue와 실행/인수 단계.
-7. 유료 작업창은 Control Cost·미반영/예상 비용·teardown/잔여를 기존 비용 입력에 연결.
+7. 유료 작업창은 교육장 리포트의 사용액·예상 총비용·기준시점과 teardown/잔여를 연결. 별도 자체 견적을 필수로 요구하지 않음.
 
 해시 일치는 무결성 판정이다. 템플릿과 합성 자료는 실행 증적으로 편입하지 않는다.
 fds-project-evidence 편입에는 기존 독립 리뷰 정책을 적용한다. 이번 준비 파일은 그 저장소에 넣지 않았다.
@@ -41,7 +41,7 @@ fds-project-evidence 편입에는 기존 독립 리뷰 정책을 적용한다. �
 ## #50 일정 쟁점의 처리
 
 [이재환 요청](https://github.com/321Team/fds-project-baseline/issues/50#issuecomment-6013423361): #50 본문의 10-22 하루와 전략의 10-21 대부분 시험/10-22 최종 회귀가 충돌한다.
-권장 입력은 #47 양성 handoff 고정 후 같은 승인 Runtime 창에서 주요 시험을 이어서 실행하고 최종 회귀 시간을 확보하는 것이다.
+권장 입력은 #47의 필수 handoff 전체를 먼저 고정한 뒤 같은 승인 Runtime 창에서 주요 시험을 이어서 실행하고 최종 회귀 시간을 확보하는 것이다. 양성 경로 1건만으로는 부족하다. [최신 검토](https://github.com/321Team/fds-project-baseline/issues/50#issuecomment-6041378478)와 [구체 일정안](../20261008/decision-packet.md)을 사용한다.
 최종 작업창·기한·일정 속성은 기존 책임자가 이 요청에서 판단하며, 이번 tsv에는 날짜를 고정하지 않는다.
 
 ## 다음 단계

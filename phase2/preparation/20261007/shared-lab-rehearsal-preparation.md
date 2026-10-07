@@ -17,9 +17,11 @@ RHOAI Operator 미설치, Catalog3.5.1 제공·기술적 권한/StorageClass 경
 
 ## namespace-local 리허설 순서
 
+2026-10-08 이권욱 확인: Team Code·Namespace·관리자 제약은 모두 '없음'(NONE_REPORTED)이다. 추가 배정 답변을 기다리지 않는다. 이는 API 권한/자원 상태를 새로 조회한 결과가 아니며, 실제 시험에서는 사용할 대상 namespace/context·자기 자원 범위·정리 주체를 실행 입력에 기록한다. ROSA target namespace와 공용 Lab 답변은 별개다.
+
 | 순서 | 준비/관측 | 경계·중단·정리 |
 |---|---|---|
-| L0 | 실제 context/identity·Team namespace·Owner/Quota·초기 inventory 읽기 | 대상/허용 범위 불일치 시 중단 |
+| L0 | 실제 context/identity·시험 대상 namespace·Owner/현재 자원·초기 inventory 읽기 | Team Code 배정 대기 없음. 대상/허용 범위 불일치 시 중단 |
 | L1 | 승인 source/digest의 server-side admission·SCC/UID 조건 | admission을 Running/Ready로 승격하지 않음 |
 | L2 | 허용 시험 workload의 arbitrary UID·imageID·Ready/health·RO filesystem/필요 volume 쓰기 | broad SCC/root 우회 없음, 자기 시험 자원만 |
 | L3 | 같은 pin의 자체 시험 자원 정리·필요 리허설 재생성 | 보존 대상/공유 자원 건드리지 않음, 삭제 전후 inventory·health 확인 |
@@ -33,7 +35,7 @@ RHOAI는 read-only Catalog/support/compatibility만 유지한다. 향후 Go는 �
 ENV=SHARED_OCP_LAB, Cluster/Version, namespace·실행자/호스트·KST, source/manifest SHA·digest/imageID,
 명령/RC/raw·before/after·cleanup·허용범위를 기록한다. 해시는 파일 무결성이고 시험 성공이 아니다.
 자체 시험 자원 범위 밖 영향·비밀 노출·권한/SCC 우회·health/정리 실패 시 후속 변경 중단, 원본 보존 후 책임 Lead에 인계한다.
-실제 ROSA P0 재검증과 [Strategy](../../../../tests/FDS_Phase2_Test_Strategy_20261007.md)/[Plan](../../../../tests/FDS_Phase2_Test_Plan_20261007.md)을 별도 적용한다.
+실제 ROSA P0 재검증과 [Strategy](../../../tests/FDS_Phase2_Test_Strategy_20261007.md)/[Plan](../../../tests/FDS_Phase2_Test_Plan_20261007.md)을 별도 적용한다.
 
 STATIC=문서 정합 검토 / 신규 MOCK·CI·LAB-PRECHECK·RUNTIME·ACCEPTANCE=NOT_RUN.
 REVIEW는 자체 AI 보조 검토이며 사람 독립 승인 아님. MERGE/PUBLICATION은 실제 PR/Release 기록으로 확인한다.

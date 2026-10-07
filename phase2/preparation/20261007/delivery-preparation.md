@@ -2,6 +2,8 @@
 
 기준: [#46 현행 계약](https://github.com/321Team/fds-project-baseline/issues/46), infra-cicd main `1320e17e9d7dd66455e65276267dc2b92517c4b5`.
 상태: **P2 adapter 변경 지점 정리 / 구현·workflow 연결·ROSA deploy 미실행**.
+
+2026-10-08 후속: [P2 target adapter 입력·실패/복구 계약](../20261008/delivery-test-contract.md)을 추가했다. 이 파일 아래의 P1 source 관측은 작성 시점 이력이며 P1 코드는 이번에 변경하지 않는다. 현재 소비 source는 infra-cicd main `4e9324cd8acf0ba67b35f950b4c952db8064540e`, APP main `adc90410f99cb7af5b40bc8ff92c45272e9f8bee`다. PR65 Push 입력은 준비 단계, PR66 Session 연결은 후보이며 실제 CLI/Workflow/ROSA Deploy 완료가 아니다.
 작성 이권욱 지원 / CODEX_ASSISTED.
 
 ## 재사용과 분리 지점
