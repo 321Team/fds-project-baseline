@@ -52,7 +52,7 @@
       "implicitDeny": 15
     },
     "RawEvaluationCountsReceived": true,
-    "NegativeMissingContextAndMatchedStatementReview": "EXPLICIT_DENY_ORIGIN_REPORTED; IMPLICIT_DENY_CONTEXT_COMPLETION_PENDING",
+    "NegativeMissingContextAndMatchedStatementReview": "COMPLETE_FOR_USER_REPORTED_AGGREGATIONS_AND_CONTEXT_COMPLETION",
     "ReportedEvaluationCounts": {
       "SimulationResponseCount": 46,
       "ActionEvaluationCount": 93,
@@ -95,10 +95,99 @@
         "iam:PassedToService",
         "s3:prefix"
       ],
-      "AWSExecution": "NOT_RUN",
+      "AWSExecution": "9_CASES_14_ACTIONS_IMPLICIT_DENY_PASS_REPORTED",
       "LocalMock": "NORMAL_WRONG_IDENTITY_CHANGED_DECISION_PASS",
       "OriginalPolicyAndExistingContext": "PRESERVED",
-      "RoleRuntimeProof": false
+      "RoleRuntimeProof": false,
+      "UserMessageKST": "2026-10-07T09:45:06+09:00",
+      "ExecutionUTC": "NOT_PROVIDED",
+      "CaptureDirectory": "/home/cloudshell-user/fds-iac-context-completion-pbdwn3pg",
+      "OriginalCaptureFilesReceived": false,
+      "CaptureManifestPostRunVerification": "NOT_RECEIVED",
+      "Collection": "COMPLETE_REPORTED",
+      "CasesWithMissingContext": 0,
+      "AllImplicitDeny": true,
+      "CONTEXT_EXPERIMENT_RC": 0,
+      "CasesReported": [
+        {
+          "Case": 11,
+          "Actions": 2,
+          "Decisions": [
+            "implicitDeny",
+            "implicitDeny"
+          ],
+          "MissingContext": []
+        },
+        {
+          "Case": 12,
+          "Actions": 2,
+          "Decisions": [
+            "implicitDeny",
+            "implicitDeny"
+          ],
+          "MissingContext": []
+        },
+        {
+          "Case": 13,
+          "Actions": 2,
+          "Decisions": [
+            "implicitDeny",
+            "implicitDeny"
+          ],
+          "MissingContext": []
+        },
+        {
+          "Case": 14,
+          "Actions": 2,
+          "Decisions": [
+            "implicitDeny",
+            "implicitDeny"
+          ],
+          "MissingContext": []
+        },
+        {
+          "Case": 15,
+          "Actions": 2,
+          "Decisions": [
+            "implicitDeny",
+            "implicitDeny"
+          ],
+          "MissingContext": []
+        },
+        {
+          "Case": 16,
+          "Actions": 1,
+          "Decisions": [
+            "implicitDeny"
+          ],
+          "MissingContext": []
+        },
+        {
+          "Case": 19,
+          "Actions": 1,
+          "Decisions": [
+            "implicitDeny"
+          ],
+          "MissingContext": []
+        },
+        {
+          "Case": 23,
+          "Actions": 1,
+          "Decisions": [
+            "implicitDeny"
+          ],
+          "MissingContext": []
+        },
+        {
+          "Case": 24,
+          "Actions": 1,
+          "Decisions": [
+            "implicitDeny"
+          ],
+          "MissingContext": []
+        }
+      ],
+      "Inference": "ADDING_PREVIOUSLY_MISSING_KEYS_PRESERVING_NEGATIVE_CONDITIONS_DID_NOT_CHANGE_DENIAL_IN_THESE_REQUESTS"
     }
   },
   "IAMSnapshot": {
@@ -130,5 +219,13 @@
   "EFFECTIVE_PERMISSIONS": "NOT_TESTED",
   "APPLY_READINESS": "NOT_ASSESSED",
   "ActualEC2RelayEIPOrSessionDocumentInventory": "NOT_COLLECTED_THIS_RUN",
-  "NegativeEvidenceBasis": "USER_PROVIDED_PRESERVED_CAPTURE_AGGREGATION; RAW_FILES_NOT_RECEIVED"
+  "NegativeEvidenceBasis": "USER_PROVIDED_PRESERVED_CAPTURE_AGGREGATION; RAW_FILES_NOT_RECEIVED",
+  "PR147SourceReview": {
+    "Reviewer": "supreme33-kr",
+    "State": "APPROVED",
+    "Head": "82e0737d7e36e73175dc6ad26c65951b49f1e773",
+    "SubmittedKST": "2026-10-07T09:43:32+09:00",
+    "Scope": "SOURCE_ONLY_NOT_BOOTSTRAP_GRANT_OR_STAGE_A_GO",
+    "ReviewURL": "https://github.com/321Team/fds-project-baseline/pull/147#pullrequestreview-5436212550"
+  }
 }

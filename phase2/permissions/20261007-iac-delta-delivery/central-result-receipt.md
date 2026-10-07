@@ -27,9 +27,9 @@ summary.UTC `2026-10-06T16:14:01.215913+00:00`는 10/7 **01:14:01 KST**다. coll
 
 명시적 거부50건의 matched statement 없는 행은0이고 출처 집계는 identity8/resource42다. 암묵적 거부15건 중14 action에 누락 context가 표시됐다: object11 action은 `iam:PassedToService`+`s3:prefix`, ListBucket1은 `iam:PassedToService`, PassRole2는 `s3:prefix`다. 남은 case25/PassRole은 누락 키가 없다.
 
-정책 원문에서 `s3:prefix`는 ListBucket Allow, `iam:PassedToService`는 PassRole Allow에만 있다. 다른 action 문장의 키도 보고된 것으로 추정하며 키를 보완한 응답을 확인하기 전에는 원인을 확정하지 않는다. [9케이스·14 action 보완 명령](context-completion-experiment.md)은 기존 정책/부정 조건을 그대로 두고 누락 키만 추가한다. 현재 AWS 미실행이다. 원래46 전체는 반복하지 않는다.
+정책 원문에서 `s3:prefix`는 ListBucket Allow, `iam:PassedToService`는 PassRole Allow에만 있다. 사용자09:45:06 KST 출력에서 [보완 실험](context-completion-experiment.md)의9케이스·14 action 모두 `implicitDeny`, 각 `MISSING=[]`, Collection COMPLETE/RC0를 수신했다. 보존 경로는 `/home/cloudshell-user/fds-iac-context-completion-pbdwn3pg`다. 기존 정책·부정 조건을 유지하며 누락 키를 채워도 거부가 유지됐으므로 이 입력 범위에서 단순 누락에 의존한 거부라는 우려를 해소한다. 실행 UTC/새 capture 원문/실행 후 manifest 검증 결과는 미수신이다. 원래46·보완9를 다시 실행하지 않는다.
 
-새 실행 블록은 기존 PR146 source 승인과 구분하며 PR147의 이번 diff는 코드 포함 변경으로 분류한다. 병합 전 후보 시험은 REVIEW_AUTHORITY_POLICY §4 범위에서 수행하고, 새 블록의 병합은 독립 리뷰 후 Lead가 판단한다. 이를 bootstrap source 준비의 새 대기 조건으로 삼지 않는다.
+새 실행 블록은 기존 PR146 승인과 구분한다. PR147 HEAD `82e0737d7e36e73175dc6ad26c65951b49f1e773`는 [이재환 독립 APPROVED](https://github.com/321Team/fds-project-baseline/pull/147#pullrequestreview-5436212550), 10/7 09:43:32 KST를 수신했다. 이번 추가는 결과 기록·경로 재사용 안내·Network 선행 순서이며 실행 블록/collector/정책/archive bytes 변경0이다. 병합 전 후보 시험은 REVIEW_AUTHORITY_POLICY §4 범위에서 수행했고 저장소 병합/업무 인수는 Lead가 판단한다. source 승인을 bootstrap/grant/Stage-A GO로 올리지 않는다.
 
 review의 negative MissingContextValues/MatchedStatements 확인을 마무리한다. 아래는 **이미 보존된 파일을 조회·정리**하는 명령이며 AWS API 호출이나 capture 파일 수정이 없다. root46케이스를 다시 실행하지 않는다. 원본 정책·credential·state는 출력하지 않는다.
 
@@ -90,7 +90,7 @@ printf 'NEGATIVE_EVIDENCE_RC=%s\n' "$?"
 | #35 중앙 Relay identity bootstrap | FDS-Relay-SSM role/profile path `/`, EC2 service trust, 결정된 Agent 정책 source/version/hash와 실제 profile role 연결 readback. IAM role 생성·Agent attach는 사람 work-role grant와 구분. 광역 관리형 정책을 사람 계정에 복사하지 않음 |
 | #35 일반 IaC 역할 | 권욱·하영의 기존 trust/개인 AssumeRole 후보를 연결하고 실제 component/resource/API/dependent-action/full permissions JSON을 backend·PassRole fragment와 합성. 이번28-case fragment만 붙여 Terraform 구축 가능이라고 하지 않음 |
 | #35 actual Stage-A | 승인 profile data 참조·exact PassRole·각 component 자원 소유권, user_data/PSK 비밀 제외, EBS 실제 key/정리 경계, Session document source를 reviewed plan/Freeze·비용/cleanup 조건에서 구축하고 actual output/readback 인계 |
-| #37 Network 역할 | actual Relay instance/profile/document/Agent/EBS 정보 후 exact ARN bind+role permissions source → 중앙 delta grant/readback → 권욱·재환 각각 본인 MFA U1. user fixture18을 Network 역할 세션 시험으로 대체하지 않음 |
+| #37 Network 역할 | 승인 source의 Network role 생성·trust·권욱/재환 개인 AssumeRole 준비가 선행한다. actual Relay instance/profile/document/Agent/EBS 정보 후 exact ARN bind+role permissions source → 중앙 delta grant/readback → 권욱·재환 각각 본인 MFA U1. user fixture18을 Network 역할 세션 시험으로 대체하지 않음 |
 
 **우선 권고:** 준비 가능한 중앙 backend/Relay identity bootstrap source를 최소 범위로 먼저 연결하고, Stage-A 실제 resource/API/full IAM source를 별도 delta로 이어간다. 미래 ROSA/OIDC 모듈 전체 완성을 기다리거나 광역 EC2/IAM 권한을 먼저 부여하지 않는다. 서명/리뷰 절차는 기존 정책을 따르고 동일 채택 값의 재회신·상시 Support 이중승인을 추가하지 않는다.
 
@@ -106,4 +106,4 @@ printf 'NEGATIVE_EVIDENCE_RC=%s\n' "$?"
 
 이 회차는 AWS 변경이 없어 AWS rollback 대상이 없다. 원본 capture·SHA256SUMS·stdout을 보존하고 잘못된 수신 기록은 새 정정 기록으로 보완한다. 실제 bootstrap/grant 원복은 미래 회차의 before snapshot과 정확한 새 부여분으로 정의하며 운영 backend/state 버전/증적/profile을 일괄 삭제하지 않는다.
 
-`ROOT_CAPTURE=COMPLETE_REPORTED / VALIDATE_POLICY=NO_FINDINGS_REPORTED / DELTA=46_PASS_REPORTED / NEGATIVE_COUNTS_ORIGINS=RECEIVED / CONTEXT_COMPLETION=NOT_RUN / BOOTSTRAP=NOT_RUN / ROLE_GRANT=NOT_RUN / USER_RUNTIME=NOT_TESTED / APPLY_READINESS=NOT_ASSESSED`
+`ROOT_CAPTURE=COMPLETE_REPORTED / VALIDATE_POLICY=NO_FINDINGS_REPORTED / DELTA=46_PASS_REPORTED / NEGATIVE_COUNTS_ORIGINS=RECEIVED / CONTEXT_COMPLETION=9_CASES_14_ACTIONS_PASS_REPORTED / BOOTSTRAP=NOT_RUN / ROLE_GRANT=NOT_RUN / USER_RUNTIME=NOT_TESTED / APPLY_READINESS=NOT_ASSESSED`
