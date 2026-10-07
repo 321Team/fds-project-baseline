@@ -1,0 +1,82 @@
+{
+  "schema": "P1-HBR-AC04-verify-source-comparison-1",
+  "recorded_at_utc": "2026-10-07T05:37:19.717Z",
+  "approved_source": "61a77ad2f984cbf9e74a95f779691e2831a5a2a6",
+  "reported_checkout": "e1c4458cf95dacca76870d7b9b012f8615f6974a",
+  "comparison": {
+    "ahead": 24,
+    "behind": 0,
+    "scope": "DIRECT_VERIFY_AND_STATIC_INCLUDE_TASKS_PLUS_EXPLICIT_CONFIG_INVENTORY_GROUP_VARS",
+    "files": [
+      {
+        "path": "ansible.cfg",
+        "old_blob_sha": "81a71a929087a672c3f432516d1569f4ebbac818",
+        "approved_blob_sha": "81a71a929087a672c3f432516d1569f4ebbac818",
+        "equal": true
+      },
+      {
+        "path": "inventory/hbr.yml",
+        "old_blob_sha": "07a1628e81449af89cf32d9a40b1a4b306c6a916",
+        "approved_blob_sha": "07a1628e81449af89cf32d9a40b1a4b306c6a916",
+        "equal": true
+      },
+      {
+        "path": "inventory/group_vars/all.yml",
+        "old_blob_sha": "fb5690fc61af8490cbad79e31cbaf7b2575e859a",
+        "approved_blob_sha": "fb5690fc61af8490cbad79e31cbaf7b2575e859a",
+        "equal": true
+      },
+      {
+        "path": "inventory/group_vars/hbr.yml",
+        "old_blob_sha": "b6882247b83ac624a82282afa877d717c2481e1c",
+        "approved_blob_sha": "b6882247b83ac624a82282afa877d717c2481e1c",
+        "equal": true
+      },
+      {
+        "path": "playbooks/p1-hbr-01-ac04-verify.yml",
+        "old_blob_sha": "378c1c5079486a1d7125b9079a7490c377deb046",
+        "approved_blob_sha": "378c1c5079486a1d7125b9079a7490c377deb046",
+        "equal": true
+      },
+      {
+        "path": "playbooks/tasks/p1-hbr-01-ac04-observe.yml",
+        "old_blob_sha": "7916834fc8de47a7aabdac2bc28ca4b026987349",
+        "approved_blob_sha": "7916834fc8de47a7aabdac2bc28ca4b026987349",
+        "equal": true
+      },
+      {
+        "path": "playbooks/tasks/p1-hbr-01-ac04-forward-observe.yml",
+        "old_blob_sha": "8ad2d61ef71d7ac670ed14b72e36287afa4d88fe",
+        "approved_blob_sha": "8ad2d61ef71d7ac670ed14b72e36287afa4d88fe",
+        "equal": true
+      },
+      {
+        "path": "playbooks/tasks/p1-hbr-01-ac04-nft-verify.yml",
+        "old_blob_sha": "ab83b18091e734279a1537cd70d9ebcf456e49c5",
+        "approved_blob_sha": "ab83b18091e734279a1537cd70d9ebcf456e49c5",
+        "equal": true
+      }
+    ],
+    "all_equal": true
+  },
+  "environment_scope": {
+    "live_checkout_head_verified": false,
+    "live_worktree_bytes_verified": false,
+    "ansible_executable_and_version_verified": false,
+    "environment_cli_vars_overrides_verified": false,
+    "fresh_server_prestate_verified": false
+  },
+  "runtime": {
+    "new_go_issued": false,
+    "restart_executed": false,
+    "ac04_accepted": false,
+    "robot_hold": true,
+    "temporary_sources_removal_hold": true
+  },
+  "references": {
+    "owner_plan": "https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6031540537",
+    "existing_go": "https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6030619054",
+    "mtu_end": "https://github.com/321Team/fds-project-baseline/issues/10#issuecomment-6031350840",
+    "app_window": "https://github.com/321Team/fds-project-baseline/issues/15#issuecomment-6030134751"
+  }
+}

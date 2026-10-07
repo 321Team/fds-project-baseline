@@ -1,6 +1,6 @@
 # 이권욱 Phase 1 현황·착수 대장 — 2026-10-07
 
-CODEX_ASSISTED. 14:15 KST 기준 저장소 조회 결과와 작업 준비 기록이다. Runtime 실행·AC 인수·위험 수용·일정 변경·정본 발행·티켓 종결 기록이 아니다.
+CODEX_ASSISTED. 14:35 KST 기준 저장소 조회 결과와 작업 준비 기록이다. Runtime 실행·AC 인수·위험 수용·일정 변경·정본 발행·티켓 종결 기록이 아니다.
 
 ## 현재 판정과 조회 범위
 
@@ -15,8 +15,8 @@ CODEX_ASSISTED. 14:15 KST 기준 저장소 조회 결과와 작업 준비 기록
 
 | 순서 | 이권욱 배정 대상 | 현재 상태·핵심 잔여 | 이번 착수 / 다음 완료조건 |
 |---|---|---|---|
-| 1 | [baseline #14](https://github.com/321Team/fds-project-baseline/issues/14) | In Progress, OID-02 전체 HOLD·OID-03 미해결 | preloaded 동일 digest 보충안의 준비 인계 작성. kube-controllers 5노드·CoreDNS Worker3노드의 입력·출처·복구·증적 연결 구체안 수신 후 심사 |
-| 2 | [infra-ansible #62](https://github.com/321Team/infra-ansible/issues/62) → HBR #13 | OPEN, 소스 병합과 AC04 인수 구분. Docker persistence 조건부 1회 GO; Robot·임시 .50/.102 제거 HOLD | 기존 GO의 비중첩·fresh prestate·중단/복구/positive-negative·counter 기준을 인수 입력으로 연결. HBR Lead 이하영의 실제 실행 결과와 정리 기록 수신 |
+| 1 | [baseline #14](https://github.com/321Team/fds-project-baseline/issues/14) | In Progress, OID-02 전체 HOLD·OID-03 미해결 | [infra-kubernetes PR68](https://github.com/321Team/infra-kubernetes/pull/68)의 읽기 수집 코드/MOCK26와 실행 인계 제출, 이하영 독립 리뷰 요청. kube-controllers 5노드·CoreDNS Worker3노드의 입력·출처·복구·증적 연결 구체안 수신 후 심사 |
+| 2 | [infra-ansible #62](https://github.com/321Team/infra-ansible/issues/62) → HBR #13 | OPEN, 소스 병합과 AC04 인수 구분. Docker persistence 조건부 1회 GO; Robot·임시 .50/.102 제거 HOLD | Owner의15:50 이후(APP 실제종료+10분) 계획 수신. 직접 verify source8파일의 old/approved blob 동일 확인·인수표 작성. HBR Lead 이하영의 실제 실행 결과와 정리 기록 수신 |
 | 3 | [infra-ansible #9](https://github.com/321Team/infra-ansible/issues/9) | OPEN, worker02 키 복원 읽기 사전검증 source ef5adb77 준비 branch, actual 수집/쓰기복원/wrapper Runtime/엔진 전환 미완료 | 기존 코드/14 MOCK 재작성·재시험 생략. PR66 필수 CI 해소 후 준비 branch의 main 정합·독립 리뷰·worker02 읽기 수집 순서. baseline ANS 종결을 다시 열거나 자동 Close blocker로 확대하지 않음 |
 | 4 | [evidence #4](https://github.com/321Team/fds-project-evidence/issues/4) | OPEN, FUP09 수용·PR25 병합 완료. FUP04/05/06/07 원본·승인·열람 metadata 잔여 | 과거 출처 수신 항목을 DOC 인계표에 고정. 신규 시험·합성 자료로 과거 원본 대체 금지 |
 | 5 | [baseline #18](https://github.com/321Team/fds-project-baseline/issues/18) | To Do, G1 필수 결과 판단 미완료 | 종결 LB/DNS/ANS 및 현재 K8S/HBR/ICR의 충족·잔여를 별도 대조, Gate 판단은 실제 AC/예외로 수행 |
@@ -55,3 +55,9 @@ CODEX_ASSISTED. 14:15 KST 기준 저장소 조회 결과와 작업 준비 기록
 이번 작업은 [Draft PR149](https://github.com/321Team/fds-project-baseline/pull/149)와 [infra-cicd Draft PR63](https://github.com/321Team/infra-cicd/pull/63)으로 준비 기록을 제출하고 #14/#30/#16·infra-cicd#11·infra-ansible#61에 실제 착수 댓글을 등록했다. 기존 source/증적의 무관한 MOCK·해시 검사를 반복하지 않는다. 현장 SSH·Runner 공급·token 발급·서버 변경·새 Runtime·AC/Status/Owner/Due 변경·위험수용·병합·정본 발행·종결은 미실행이다.
 
 운영 명령은 기존 승인 source/런북과 해당 실행자의 fresh Gate를 사용한다. 비밀정보를 출력하거나 known_hosts/TLS/SELinux/방화벽 통제를 완화하지 않는다. 신규 코드는 이번 범위에 추가하지 않았다.
+
+## 14:35 후속 착수
+
+- OID02 source code 준비 [infra-kubernetes PR68](https://github.com/321Team/infra-kubernetes/pull/68), HEAD c2f543a16754926c3dd2ecc35773ba09fe1df3a1. 추가4파일·원격4/4 일치·AST2·Windows Python3.12.14 MOCK26 OK rc0, 독립 리뷰 이하영 실제 요청. 현장/Linux/CI·수집·export/import·AC는 미실행.
+- [Harbor 소스·인수 인계](HBR_AC04_SUPPORT.md) / [8파일 비교](HBR_VERIFY_SOURCE_COMPARISON.json): Owner 새 일정과 GitHub source 정합성을 확인. 현장 actual worktree/환경/prestate와 실제 시험 결과는 미확인.
+- Ansible PR66 필수 run37462768493는14:22 API 재조회에서 QUEUED. #9 준비 branch/기존 MOCK·FUP 원본은 새 근거 없이 재작성·재시험하지 않았다.
