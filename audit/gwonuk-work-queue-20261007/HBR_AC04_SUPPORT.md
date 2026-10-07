@@ -6,7 +6,7 @@ CODEX_ASSISTED. 이권욱의 infra-ansible#62 지원 범위. #13 이하영 예�
 
 Owner는 T0를15:50 이후, APP 실제 종료+10분으로 정하고 T0+5/+20/+30을 먼저 기록했다. 이는 예정이며 시작은 미확인이다.
 #10 MTU 종료 보고6031350840와 #19 종료/회복 보고는 원본 검토 범위와 구분하여 비중첩 판단에 연결한다.
-APP 종료가 늦어지면 실제 종료+10분과 새 시각 기록이 필요하며 오늘30분을 확보하지 못하면 미실행이다.
+APP 종료가 늦어지면 실제 종료+10분과 새 시각 기록이 필요하다. [사전 리뷰6031638955](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6031638955) S1의 **T0상한17:00KST / T0+30상한17:30**을 유지하며17:00까지 시작하지 못하면 미실행이다. [APP 종료6032106480](https://github.com/321Team/fds-project-baseline/issues/15#issuecomment-6032106480)는14:55:51과 최종MON회복을 보고했고 일부 원본에서도 확인됐다. MON60초초과/원복생략 판정은 남아 있으므로 시작 기록에 이 이탈과 실제 현재 비중첩/회복 상태를 연결한다. 기존15:50계획을 임의로 앞당기거나 이 문서를 새 GO로 사용하지 않는다.
 
 Owner 현장 checkout의 신고값 e1c4458cf95dacca76870d7b9b012f8615f6974a와 승인 source61a77ad2f984cbf9e74a95f779691e2831a5a2a6을 GitHub 원본으로 비교했다.
 전체24커밋 차이 중 직접 verify playbook·정적 include3개·명시 config/inventory/group vars의 Git blob8/8은 동일하다.
@@ -32,6 +32,8 @@ verify의 include는 observe/forward-observe/nft-verify3개로 고정되어 있�
 같은 tracked Git blob은 현장 수정/추가 파일, ANSIBLE_CONFIG·실제 CLI/extra-vars·Ansible engine·전역 plugin/environment 및 새 서버 상태를 검증한 결과가 아니다.
 이 항목들은 기존 시작 Gate에서 실제 상태를 기록한다. 자격정보 원문은 증적에 넣지 않는다.
 
+실제 verify는 승인된 기존 실행에서 **`-i inventory/hbr.yml`**을 명시해야 한다. ansible.cfg의 기본 inventory `./inventory/hosts.yml`은 비교한8파일에 포함되지 않으므로 기본값을 사용한 실행까지 동일하다고 주장하지 않는다. inventory/host_vars·group_vars와 playbook 인접 vars, extra-vars·config/plugin 경로가 실제로 읽히는지는 현장에 존재하는 파일/CLI 기준으로 확인·기록한다. 예상 밖 입력이면 시작하지 않으며 비밀 vars 전체 출력으로 확인하지 않는다.
+
 ## 현장 소스 확인 예시 — 읽기 전용, 기존 작업 위치에서만
 
 ansible01 기존 승인 계정의 ~/p1-ans-01, 현재 쓰기 작업 없음, 승인 Git 객체가 이미 로컬에 있어야 한다.
@@ -46,11 +48,22 @@ git cat-file -e "$approved_hbr_source^{commit}" || exit 1
 git diff --quiet "$approved_hbr_source" --   ansible.cfg inventory/hbr.yml inventory/group_vars/all.yml   inventory/group_vars/hbr.yml playbooks/p1-hbr-01-ac04-verify.yml   playbooks/tasks/p1-hbr-01-ac04-observe.yml   playbooks/tasks/p1-hbr-01-ac04-forward-observe.yml   playbooks/tasks/p1-hbr-01-ac04-nft-verify.yml
 rc=$?
 printf "VERIFY_SOURCE_DIFF_RC=%s\n" "$rc"
-exit "$rc"
+[ "$rc" -eq 0 ] || exit "$rc"
+hbr_source_status=$(git status --porcelain -- ansible.cfg inventory/hbr.yml inventory/group_vars/all.yml inventory/group_vars/hbr.yml playbooks/p1-hbr-01-ac04-verify.yml playbooks/tasks/p1-hbr-01-ac04-observe.yml playbooks/tasks/p1-hbr-01-ac04-forward-observe.yml playbooks/tasks/p1-hbr-01-ac04-nft-verify.yml)
+hbr_status_rc=$?
+printf "VERIFY_SOURCE_STATUS_RC=%s\n" "$hbr_status_rc"
+[ "$hbr_status_rc" -eq 0 ] || exit "$hbr_status_rc"
+if [ -n "$hbr_source_status" ]; then
+  printf "%s\n" "$hbr_source_status"
+  printf "VERIFY_SOURCE_WORKTREE_NOT_CLEAN\n"
+  exit 1
+fi
+printf "VERIFY_SOURCE_SCOPED_WORKTREE_CLEAN\n"
+exit 0
 '
 ~~~
 
-RC0은 해당 tracked 실행 파일의 source 정합성뿐이다. RC1/128/기타이면 경로/원인을 보존하고 같은-version 조건을 확인하기 전 시작하지 않는다.
+diff RC0은 해당 tracked 실행 파일의 source 정합성뿐이다. `git status --porcelain -- <8경로>` 보조 조회는 이 경로의 staged/unstaged/untracked 상태를 확인하며 전체 저장소/추가vars 입력의 부재를 뜻하지 않는다. RC1/128/기타이면 경로/원인을 보존하고 같은-version 조건을 확인하기 전 시작하지 않는다.
 diff 내용·Secret/vars 값 전체를 출력하지 않는다. 이 비교를 환경·계정·host/prestate·Runtime 성공으로 기록하지 않는다.
 새 checkout/패치·package 재생성·engine 전환·server 설정 변경을 이 예시로 수행하지 않는다.
 
@@ -75,3 +88,11 @@ Robot 발급/교체/폐기·임시 .50/.102 제거 HOLD 유지. 이번 지원에
 - 기존 조건부1회 GO: https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6030619054
 - MTU 종료: https://github.com/321Team/fds-project-baseline/issues/10#issuecomment-6031350840
 - GitHub compare: https://github.com/321Team/infra-ansible/compare/e1c4458cf95dacca76870d7b9b012f8615f6974a...61a77ad2f984cbf9e74a95f779691e2831a5a2a6
+
+## 시작 기록 S1~S4와 연관 정정
+
+- S1: T0는 계획15:50이후·APP실제종료+10분·상한17:00, +30은17:30이내. 새시각은 #13에 기록하고 자동연장하지 않는다.
+- S2: 실제 checkout HEAD/작업트리·실효 Ansible버전/config/명시inventory·guard/prestate계약을 결속한다. [PR149 갱신 요청6032035771](https://github.com/321Team/fds-project-baseline/pull/149#issuecomment-6032035771)은 사전리뷰의 선택fast-forward를 철회하고 기존checkout+동일8파일 확인 방식으로 통일했다. 전체checkout/main전환을 추가하지 않는다.
+- S3: 승인 Runner10.250.10.20의 CA검증TLS health200과 비승인10.1.93.26의 새TCP443 실패·해당rule counter delta를 시험전후 같은구간에 결속한다. 현재차수의 양성/음성 대조가 없으면 시작Gate를 예전결과로 대신하지 않는다.
+- S4: .26의 실제호스트·연결명령·유한timeout·rc·시도시각, harbor01의 직전/직후counter와 관측Source를 고정한다. 시각대조는 harbor01 기준이며 timeout·누적counter만으로DROP PASS를 선언하지 않는다.
+- 동일코드 Git비교와 현장계약/시험결과를 구분한다. Robot·임시Source HOLD,새서버실행·AC인수 미수행.

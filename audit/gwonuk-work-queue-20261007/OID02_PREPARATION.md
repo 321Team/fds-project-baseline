@@ -34,6 +34,16 @@
 ## Due·Receiver·처분
 
 - 기존 Due: 2026-10-07 유지.
-- Owner가 제시한 다음 초안 제출: 2026-10-08 12:00 KST. 이는 제출 예정 기록이며 Due 연장 또는 승인된 완료일이 아니다.
+- 최신 다음 초안 제출: **2026-10-07 18:00 KST**. Owner의 [14:38:23 정정6031725527](https://github.com/321Team/fds-project-baseline/issues/14#issuecomment-6031725527)이 10/8 12:00을 대체했다. 이는 계획 제출 예정이며 Due 연장 또는 승인된 완료일이 아니다. 18:00 미제출이면 Owner가 사실과 이유를 먼저 기록한다.
 - #30의 준비 자료 수신·검토는 기존 Lead 이권욱의 책임 범위다. 잔여 위험을 실제 인수할 Receiver/후속 완료조건과 APPROVED DEFERRED 여부는 별도 판정 전이다.
 - OID02 전체 HOLD / OID03 HOLD / import·retag·Pod삭제·Drain·egress 미실행 / AC·Status·일정 변경 없음.
+
+## 최신 Review 연결·수집 경로
+
+- [#14 리뷰6031946801](https://github.com/321Team/fds-project-baseline/issues/14#issuecomment-6031946801)와 [정정6032030166](https://github.com/321Team/fds-project-baseline/issues/14#issuecomment-6032030166)을 함께 적용한다.18:00 제출에는 위 source/보존·export/전달 계획, 변경 노드·계정/권한·경로·STOP/추가ref복구 범위와 별도 변경창 GO 요청, 완료조건1~4의 목표 날짜 Due 제안을 담는다.18:00 자체를 완료 Due로 확정하지 않는다.
+- 수집 경로는 **A. PR68 동일 승인HEAD 도구 / B. 기존 수동 읽기** 중 하나만 선택하고 첫 줄에 적는다. 같은 항목의 원본이 이미 있으면 그것을 인계하고 재수집하지 않는다. HBR과 같은 실행자이므로 창/세션 중복을 피한다.
+- A의 코드 승인: c2f543a16754926c3dd2ecc35773ba09fe1df3a1에 이하영 [APPROVED5438296911](https://github.com/321Team/infra-kubernetes/pull/68#pullrequestreview-5438296911). source_commit_declared는 선언값이므로 실행 output의 collector_sha256을 검토된 도구 SHA256 5f3110ccd9fd3d3f0e7bacb0452baf4d96ff22c3f63369b0737ee47d93b9f8b6과 대조한다. 기존 ZIP SHA256은9564b58842d3af2ff5d479b6725eb809d9e9f2450d4c16c0e30af89c0c190202이며 전달 무결성이지 실행 성공 증거가 아니다.
+- stderr 메타데이터 등 후속 의견은 비차단 권고다. 같은계정 기술 의견을 독립 승인으로 계상하지 않으며 수정 소스를 사용할 경우 새HEAD/해시와 해당 변경 검토를 연결한다. 현재 도구는 layer본문 무결성·과거 공급 출처·Pod현상·export/import를 검증하지 않는다.
+- 현재 두 Workload의 Pod 위치·실효 constraint/자원을 읽기 원본으로 연결한다. 공급 완료 전 control01 drain/재부팅·두Workload Pod삭제/재시작을 사전 승인으로 묶는 관리 통제는 리뷰 제안이며 적용 완료로 표시하지 않는다. control01 집중에 따른 DNS/Calico 동시 중단 위험은 조건부 추정이고 시험 결과가 아니다.
+- export/전달/반입한 바이트는 승인 digest 대조를 무결성 기준점으로 삼고 현재 cache의 과거 공급 출처 한계와 구분한다. 이 도구의 metadata/descriptor 일치만으로 layer본문 무결성을 선언하지 않는다. CoreDNS 실제Pod ref와 상위index/플랫폼child 해석은 반입 전후 확인안에 넣는다.
+- P1 KNOWN ISSUE(Owner 이하영)+P0 예외 요청은 #30 Review 입력 권고이며 아직 처분 확정/위험수용이 아니다. Phase2(ROSA) 수신Ticket이 없는 상태에서 APPROVED DEFERRED로 기록하지 않는다. 원Due10/7과 제안 완료Due를 구분한다.
