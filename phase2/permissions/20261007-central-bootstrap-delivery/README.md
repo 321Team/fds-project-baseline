@@ -7,7 +7,7 @@ AI 보조: Codex. 책임: #35, 연계: #37. 상태: 후보 모의 시험 PASS / 
 이 디렉터리의 archive와 sidecar를 검토·병합 SHA로 고정해 함께 다운로드한다. 아래 값과 source SHA256SUMS를 확인한 뒤 같은 리뷰 소스를 실행한다. 패키지 수신·해시 일치가 독립 리뷰 또는 AWS 적용 완료를 뜻하지 않는다.
 
 - archive: `fds-central-bootstrap-20261007.tar.gz`
-- SHA-256: `e91755997610b5a4b0f8c838543bca3d677c447defd0e4e95015ca8ee86fb67c`
+- SHA-256: `10fb148bb96f7e093efaa87dfec9c2cf969e023051644e0c784f0aaaf8323cf1`
 - test: Python unittest 14건 PASS (mock), source policy content 변경 0, template 4개 자원·Retain 검사 PASS
 - 실제 AWS validate/create/readback/runtime: NOT_RUN
 

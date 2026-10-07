@@ -43,7 +43,7 @@ prepare/create는 계정에서 활성화된 모든 AWS region에 대해 `Describ
 3. root CloudShell에서 아래 prepare를 실행한다. 수신 결과와 manifest를 확인한 뒤 같은 검토 소스의 create를 실행한다. create도 부재·Agent 정책·metadata를 새로 조회한다.
 4. `SUBMITTED_NOT_READBACK` 수신 후 exact StackId로 CloudFormation 상태를 확인한다. `CREATE_COMPLETE`일 때만 verify를 실행한다. verify가 설정 대조를 통과해야 bootstrap 완료로 수신한다.
 
-근거는 [REVIEW_AUTHORITY_POLICY §2·§3·§4](../../../governance/REVIEW_AUTHORITY_POLICY.md)다. “작성자 외 적격 검토자 최소 1인의 독립 리뷰 후 Lead가 병합 결정”을 적용한다. 이 패키지는 쓰기·IAM 보안 통제 코드가 섞여 있어 §3.2 Pre-check 병합 예외로 분류하지 않는다. 독립 리뷰 전에는 로컬 모의 시험만 실행하며, root에서 이 혼합 helper의 실행은 검토 소스 확정 후 진행한다.
+근거는 [REVIEW_AUTHORITY_POLICY §2·§3·§4](https://github.com/321Team/fds-project-baseline/blob/c34ca9c12d7cb38d610829cc59460ec6a8d87b1a/governance/REVIEW_AUTHORITY_POLICY.md)다. “작성자 외 적격 검토자 최소 1인의 독립 리뷰 후 Lead가 병합 결정”을 적용한다. 이 패키지는 쓰기·IAM 보안 통제 코드가 섞여 있어 §3.2 Pre-check 병합 예외로 분류하지 않는다. 독립 리뷰 전에는 로컬 모의 시험만 실행하며, root에서 이 혼합 helper의 실행은 검토 소스 확정 후 진행한다.
 
 ## CloudShell 실행
 
