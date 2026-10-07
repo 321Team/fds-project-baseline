@@ -1,6 +1,6 @@
 # 이권욱 Phase 1 현황·착수 대장 — 2026-10-07
 
-CODEX_ASSISTED. 14:07 KST 기준 저장소 조회 결과와 작업 준비 기록이다. Runtime 실행·AC 인수·위험 수용·일정 변경·정본 발행·티켓 종결 기록이 아니다.
+CODEX_ASSISTED. 14:15 KST 기준 저장소 조회 결과와 작업 준비 기록이다. Runtime 실행·AC 인수·위험 수용·일정 변경·정본 발행·티켓 종결 기록이 아니다.
 
 ## 현재 판정과 조회 범위
 
@@ -34,7 +34,7 @@ CODEX_ASSISTED. 14:07 KST 기준 저장소 조회 결과와 작업 준비 기록
 - [SEC #19](https://github.com/321Team/fds-project-baseline/issues/19#issuecomment-6031098692)는 AC05 1회 PASS 보고와 evidence#134 제출·exact43ad5a25 독립 APPROVED가 있다. 본 세션은 그 원본 archive를 재해시하지 않았으며 AC05 인수·Known Issue 해소를 선언하지 않는다.
 - [MON #17](https://github.com/321Team/fds-project-baseline/issues/17#issuecomment-6030071485)의 대표 Source 정책 결속 1줄은 Lead가 수용 조건으로 체크했다. edge6행 INCONCLUSIVE·IF06B8443 귀속 등의 잔여는 해소되지 않았다.
 - OID02 Owner 이하영은 [8개 조합·완료조건 및 10/8 12:00 실행안 초안 제출](https://github.com/321Team/fds-project-baseline/issues/14#issuecomment-6031201210)을 기록했다. 이는 원 Due10/7의 변경 승인·위험수용·APPROVED DEFERRED가 아니다.
-- [MTU 조건부1회 GO](https://github.com/321Team/fds-project-baseline/issues/10#issuecomment-6031080670)와 [APP14:40~15:40 조건부 GO](https://github.com/321Team/fds-project-baseline/issues/15#issuecomment-6030134751)는 실제 시작/종료 확인과 구분한다. 계획시각만으로 현재 실행 중/완료를 단정하지 않는다.
+- [MTU 종료 보고](https://github.com/321Team/fds-project-baseline/issues/10#issuecomment-6031350840)를 14:15 최종 재조회에서 확인했다. 이하영 보고상 14:04:17 생성·14:06:45 종료, UID 결속 삭제/NotFound·tcpdump 잔존0·사후6/6 Ready/etcd 정상이다. 원본은 아직 서버 보관·수집/독립 증적 리뷰 전이며 본 세션이 archive를 검증한 결과는 아니다. SYN MSS1410·호스트 TCP payload8998 관측을 wire MTU 증거로 쓰지 않으며 VXLAN1450·DF/PMTU NOT_VERIFIED 유지. [APP14:40~15:40 조건부 GO](https://github.com/321Team/fds-project-baseline/issues/15#issuecomment-6030134751)의 실제 착수는 미확인이다.
 - LB #9, DNS #12, LNX #66, NET #67, ANS #65와 설계/Decision 종결은 재사용한다. 새 결함/변경 근거 없는 재개·반복시험은 수행하지 않는다.
 
 ## 문서·Review 인계 공백
@@ -46,12 +46,12 @@ CODEX_ASSISTED. 14:07 KST 기준 저장소 조회 결과와 작업 준비 기록
 | FUP04 | SOURCE GAP | 기존 최초 로그·Windows/VMware/관리VM gateway 원본 또는 정확한 보관 위치 |
 | FUP05 | APPROVAL REFERENCE GAP | 당시 Reviewer/Approver·시각·대상·범위가 있는 기존 회신 |
 | FUP06/07 | TRACEABILITY METADATA GAP | 개인별 회신/승인 시각·WBS 바이너리 실제 열람 확인. 정본 편입·한계 수용은 재승인 요구하지 않음 |
-| MTU | 설정 관측·동일서브넷 관측과 VXLAN1450 실측 구분 | #10 이하영의 시험 결과·한계; #37 터널 MTU 수신은 다른 범위. Risk Accepted/유예/AC 확대는 미결정 |
+| MTU | 이하영의14:04~14:06 시험 종료/정리 보고 수신. VXLAN1450·DF/PMTU 미검증 | 서버 원본 수집·증적 PR와 이재환 독립 검토. #37 터널 MTU 수신은 다른 범위. Risk Accepted/유예/AC 확대는 미결정 |
 | SEC AC05 | 원본 PR134·독립 리뷰, AC 판정 별도 | 해당 Lead/Review Owner의 원본/필수 조건·판정. AI 자체 검수를 새 독립 승인으로 계상하지 않음 |
 | CI/CD | Producer GREEN / Consumer·Runtime 미완료 | 아래 소비 준비 기록과 기존 native preflight 패킷 재사용. 과거 scan을 새/이전 이미지에 전용하지 않음 |
 
 ## 수행·한계
 
-이번 작업은 최신 조회와 준비 기록을 구현·PR로 제출한다. 기존 source/증적의 무관한 MOCK·해시 검사를 반복하지 않는다. 현장 SSH·Runner 공급·token 발급·서버 변경·새 Runtime·AC/Status/Owner/Due 변경·위험수용·병합·정본 발행·종결은 미실행이다.
+이번 작업은 [Draft PR149](https://github.com/321Team/fds-project-baseline/pull/149)와 [infra-cicd Draft PR63](https://github.com/321Team/infra-cicd/pull/63)으로 준비 기록을 제출하고 #14/#30/#16·infra-cicd#11·infra-ansible#61에 실제 착수 댓글을 등록했다. 기존 source/증적의 무관한 MOCK·해시 검사를 반복하지 않는다. 현장 SSH·Runner 공급·token 발급·서버 변경·새 Runtime·AC/Status/Owner/Due 변경·위험수용·병합·정본 발행·종결은 미실행이다.
 
 운영 명령은 기존 승인 source/런북과 해당 실행자의 fresh Gate를 사용한다. 비밀정보를 출력하거나 known_hosts/TLS/SELinux/방화벽 통제를 완화하지 않는다. 신규 코드는 이번 범위에 추가하지 않았다.
