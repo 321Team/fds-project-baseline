@@ -1,0 +1,340 @@
+{
+  "purpose": "READ_ONLY_SOURCE_INDEX_NOT_RUNTIME_EVIDENCE",
+  "as_of_kst": "2026-10-08T02:00:41+09:00",
+  "baseline_main": "81365568fd0b946ad93e4d82ae8191add5fcacd0",
+  "canonical": {
+    "tag": "docs-v3.1.21",
+    "commit": "979facb98de8ca1f1e2ce22f38b27ac3366f3fc3"
+  },
+  "issues": [
+    {
+      "number": 30,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/30",
+      "updated_at": "2026-10-07T14:08:15Z",
+      "body_reviewed": true,
+      "comment_query": "per_page=100",
+      "comment_page_counts": [
+        40
+      ],
+      "selected_comments": [
+        {
+          "id": 6035135165,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6035135165",
+          "updated_at": "2026-10-07T09:33:02Z"
+        },
+        {
+          "id": 6036523223,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6036523223",
+          "updated_at": "2026-10-07T11:01:17Z"
+        },
+        {
+          "id": 6039726994,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6039726994",
+          "updated_at": "2026-10-07T14:08:15Z"
+        }
+      ],
+      "note": "Selection only; page counts above record queried coverage."
+    },
+    {
+      "number": 31,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/31",
+      "updated_at": "2026-10-04T05:59:34Z",
+      "body_reviewed": true,
+      "comment_query": "per_page=100",
+      "comment_page_counts": [
+        1
+      ],
+      "selected_comments": [
+        {
+          "id": 5793268104,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/31#issuecomment-5793268104",
+          "updated_at": "2026-09-23T10:33:28Z"
+        }
+      ],
+      "note": "Selection only; page counts above record queried coverage."
+    },
+    {
+      "number": 32,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/32",
+      "updated_at": "2026-10-04T05:59:38Z",
+      "body_reviewed": true,
+      "comment_query": "per_page=100",
+      "comment_page_counts": [
+        2
+      ],
+      "selected_comments": [
+        {
+          "id": 5793056947,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/32#issuecomment-5793056947",
+          "updated_at": "2026-09-23T10:19:03Z"
+        },
+        {
+          "id": 5793206233,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/32#issuecomment-5793206233",
+          "updated_at": "2026-09-23T10:29:08Z"
+        }
+      ],
+      "note": "Selection only; page counts above record queried coverage."
+    },
+    {
+      "number": 33,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/33",
+      "updated_at": "2026-10-04T05:59:41Z",
+      "body_reviewed": true,
+      "comment_query": "per_page=100",
+      "comment_page_counts": [
+        5
+      ],
+      "selected_comments": [
+        {
+          "id": 5863865895,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/33#issuecomment-5863865895",
+          "updated_at": "2026-09-28T05:10:12Z"
+        },
+        {
+          "id": 5907179271,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/33#issuecomment-5907179271",
+          "updated_at": "2026-09-30T08:21:22Z"
+        },
+        {
+          "id": 5912449502,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/33#issuecomment-5912449502",
+          "updated_at": "2026-09-30T13:38:39Z"
+        }
+      ],
+      "note": "Selection only; page counts above record queried coverage."
+    },
+    {
+      "number": 34,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/34",
+      "updated_at": "2026-10-07T16:50:20Z",
+      "body_reviewed": true,
+      "comment_query": "since=2026-10-01T00:00:00Z&per_page=100",
+      "comment_page_counts": [
+        37
+      ],
+      "selected_comments": [
+        {
+          "id": 6041695587,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-6041695587",
+          "updated_at": "2026-10-07T16:00:12Z"
+        },
+        {
+          "id": 6042277643,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-6042277643",
+          "updated_at": "2026-10-07T16:32:42Z"
+        },
+        {
+          "id": 6042621439,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-6042621439",
+          "updated_at": "2026-10-07T16:50:20Z"
+        }
+      ],
+      "note": "Selection only; page counts above record queried coverage."
+    },
+    {
+      "number": 35,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/35",
+      "updated_at": "2026-10-07T16:49:54Z",
+      "body_reviewed": true,
+      "comment_query": "since=2026-10-01T00:00:00Z&per_page=100",
+      "comment_page_counts": [
+        100,
+        33
+      ],
+      "selected_comments": [
+        {
+          "id": 6041696150,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-6041696150",
+          "updated_at": "2026-10-07T16:00:14Z"
+        },
+        {
+          "id": 6042267835,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-6042267835",
+          "updated_at": "2026-10-07T16:32:12Z"
+        },
+        {
+          "id": 6042612350,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-6042612350",
+          "updated_at": "2026-10-07T16:49:54Z"
+        }
+      ],
+      "note": "Selection only; page counts above record queried coverage."
+    },
+    {
+      "number": 36,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/36",
+      "updated_at": "2026-10-04T05:59:52Z",
+      "body_reviewed": true,
+      "comment_query": "since=2026-10-01T00:00:00Z&per_page=100",
+      "comment_page_counts": [
+        98
+      ],
+      "selected_comments": [
+        {
+          "id": 5965637169,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/36#issuecomment-5965637169",
+          "updated_at": "2026-10-03T04:45:22Z"
+        },
+        {
+          "id": 5966287996,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/36#issuecomment-5966287996",
+          "updated_at": "2026-10-03T06:18:03Z"
+        },
+        {
+          "id": 5966659098,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/36#issuecomment-5966659098",
+          "updated_at": "2026-10-03T07:12:27Z"
+        }
+      ],
+      "note": "Selection only; page counts above record queried coverage."
+    },
+    {
+      "number": 37,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/37",
+      "updated_at": "2026-10-07T16:31:51Z",
+      "body_reviewed": true,
+      "comment_query": "since=2026-10-01T00:00:00Z&per_page=100",
+      "comment_page_counts": [
+        76
+      ],
+      "selected_comments": [
+        {
+          "id": 6041369929,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-6041369929",
+          "updated_at": "2026-10-07T15:42:42Z"
+        },
+        {
+          "id": 6041388694,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-6041388694",
+          "updated_at": "2026-10-07T15:43:41Z"
+        },
+        {
+          "id": 6042261563,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-6042261563",
+          "updated_at": "2026-10-07T16:31:51Z"
+        }
+      ],
+      "note": "Selection only; page counts above record queried coverage."
+    },
+    {
+      "number": 38,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/38",
+      "updated_at": "2026-10-04T06:21:47Z",
+      "body_reviewed": true,
+      "comment_query": "since=2026-10-01T00:00:00Z&per_page=100",
+      "comment_page_counts": [
+        19
+      ],
+      "selected_comments": [
+        {
+          "id": 5977008180,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/38#issuecomment-5977008180",
+          "updated_at": "2026-10-04T05:40:44Z"
+        },
+        {
+          "id": 5977086566,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/38#issuecomment-5977086566",
+          "updated_at": "2026-10-04T05:53:10Z"
+        },
+        {
+          "id": 5977271008,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/38#issuecomment-5977271008",
+          "updated_at": "2026-10-04T06:21:47Z"
+        }
+      ],
+      "note": "Selection only; page counts above record queried coverage."
+    },
+    {
+      "number": 39,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/39",
+      "updated_at": "2026-10-04T06:00:03Z",
+      "body_reviewed": true,
+      "comment_query": "since=2026-10-01T00:00:00Z&per_page=100",
+      "comment_page_counts": [
+        1
+      ],
+      "selected_comments": [
+        {
+          "id": 5966008497,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/39#issuecomment-5966008497",
+          "updated_at": "2026-10-03T05:36:01Z"
+        }
+      ],
+      "note": "Selection only; page counts above record queried coverage."
+    },
+    {
+      "number": 52,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/52",
+      "updated_at": "2026-10-04T06:01:08Z",
+      "body_reviewed": true,
+      "comment_query": "per_page=100",
+      "comment_page_counts": [
+        3
+      ],
+      "selected_comments": [
+        {
+          "id": 5779882631,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/52#issuecomment-5779882631",
+          "updated_at": "2026-09-22T16:11:20Z"
+        },
+        {
+          "id": 5907196285,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/52#issuecomment-5907196285",
+          "updated_at": "2026-09-30T08:22:28Z"
+        },
+        {
+          "id": 5907902770,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/52#issuecomment-5907902770",
+          "updated_at": "2026-09-30T09:05:37Z"
+        }
+      ],
+      "note": "Selection only; page counts above record queried coverage."
+    }
+  ],
+  "evidence_tree": {
+    "repository": "321Team/fds-project-evidence",
+    "main_commit": "b1328ea3efd5cfb1ce966fd0285d99bd7a4d28eb",
+    "truncated": false,
+    "checked_prefixes": [
+      "evidence/MS-P1-CLOSE-01/",
+      "evidence/MS-P2-START-01/",
+      "evidence/MS-G4-01/",
+      "evidence/DEC-CAL-P2-01/"
+    ],
+    "matching_paths": [],
+    "scope": "Path inventory only, not a full content audit"
+  },
+  "terraform_pr7": {
+    "url": "https://github.com/321Team/infra-terraform/pull/7",
+    "head": "e4ee0bff2d6aba92a0b147b86e1f4759f315eded",
+    "state": "open",
+    "draft": false,
+    "merged": false,
+    "submitted_reviews": 0,
+    "requested_reviewers": [
+      "hayeounglee",
+      "supreme33-kr"
+    ]
+  },
+  "rosa_readonly": {
+    "url": "https://github.com/321Team/infra-rosa/issues/3#issuecomment-6035898024",
+    "updated_at": "2026-10-07T10:20:20Z"
+  },
+  "user_inputs": {
+    "source": "Current task direct human reply, 2026-10-08 KST",
+    "shared_ocp_team_code": "NONE_REPORTED",
+    "shared_ocp_namespace": "NONE_REPORTED",
+    "shared_ocp_admin_constraints": "NONE_REPORTED",
+    "shared_ocp_raw_reply": "Team Code·Namespace 및 관리자 제약 모두 없음",
+    "runtime_permissions_verified": false,
+    "review_date": "2026-10-23",
+    "review_time": "UNDECIDED",
+    "review_attendees": "UNDECIDED"
+  },
+  "limitations": [
+    "Individual Phase 1 runtime sources were not re-audited",
+    "NOT_RUN: Terraform Plan/Apply, AWS/OCP/ROSA runtime",
+    "Not an acceptance decision or canonical publication"
+  ]
+}
