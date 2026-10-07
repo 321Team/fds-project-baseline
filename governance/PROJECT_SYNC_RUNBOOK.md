@@ -13,7 +13,11 @@
 - Project #1의 Status, Record ID, Phase, Priority, Support, Plan Start, Plan End,
   Schedule Note만 원본에서 갱신한다. Todo는 본문 To Do와 대응한다.
 - 없는 사용자 필드는 첫 apply에서 생성한다. Status 필드와 필요한 상태 선택값은 기존 값이어야 한다.
-  In Review/Blocked/Cancelled가 향후 사용되면 해당 옵션을 먼저 UI에서 추가한다.
+  In Review/Blocked가 사용되면 해당 옵션을 먼저 UI에서 추가한다.
+- 2026-10-07 사용자 승인: 보드에 Cancelled 옵션이 없으면 원본 Cancelled를 보드의 Done으로 표시한다.
+  Cancelled 옵션이 있으면 그대로 사용한다. Done도 없으면 쓰기 전 STOP한다.
+  이슈 본문 Cancelled·status:cancelled·closed/not_planned와 source_summary는 그대로 보존한다.
+  따라서 보드 Done 수에는 철회·반려가 포함될 수 있으며 구현 완료율은 원본 종결 사유로 구분한다.
 - 신규 이슈를 연결하고 차이가 있는 필드만 갱신한다. TBD는 날짜 필드를 비운다.
 - 제목/담당자/라벨/Milestone은 원본 이슈 필드를 그대로 사용한다.
 - 뷰·그룹·필터·로드맵 설정, 프로젝트 이름/공개범위, 원본 body/AC/상태/라벨/담당자는 수정하지 않는다.
@@ -72,6 +76,15 @@
 5. Run workflow → main / mode `apply`. `SYNC_VERIFIED`와 실제 보드 값을 확인한다.
 6. Variable `FDS_PROJECT_SYNC_ENABLED=true`로 변경한다. 이후 주기 실행 활성화.
 7. 이후 정상적인 이슈 갱신 한 건에서 자동 실행 결과를 확인한다. 시험 목적으로 AC/완료 상태를 바꾸지 않는다.
+
+## 2026-10-07 Cancelled 표시 매핑 배포
+
+- 독립 코드 리뷰·main 병합 후 **새 Run**을 main / apply로 실행한다.
+  기존 Run 37612757281 재실행은 이전 커밋을 사용하므로 수정 배포 확인에 사용하지 않는다.
+- 성공 기준: SYNC_VERIFIED, #126~128의 보드 Done, 원본 Cancelled/status:cancelled/not_planned 보존.
+- 실패 시 결과 JSON의 remote_write_state와 journal을 확인하고 추가 수동 편집을 중단한다.
+- 복구: 이 변경을 revert한 PR을 검토·병합한다. 기존 3단계 보드에서는 Cancelled 옵션을
+  추가하기 전 다시 STOP할 수 있다. 보드 옵션 추가와 재동기화 없이 원격 표시가 자동 복구되지는 않는다.
 
 ## 결과·복구
 
