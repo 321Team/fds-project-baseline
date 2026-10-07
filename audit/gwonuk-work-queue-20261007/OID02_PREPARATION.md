@@ -1,5 +1,14 @@
 # OID-02 preloaded 보충안 준비 인계 — 2026-10-07
 
+## 16:12 KST 새 후보 인계 — 아래 이전 버전 이력과 구분
+[infra-kubernetes#68](https://github.com/321Team/infra-kubernetes/pull/68)의 새 HEAD85939569b491aa4b89010a38f108cc8ab6c4ad18에 4파일 보완을 실제 반영했다. 원격4/4 로컬 일치. 새 delta는 hayeounglee 독립 검토 요청/PENDING이며 기존 c2f543a1 승인5438296911을 확대하지 않는다.
+ip/ctr resolve 절대 경로·SHA256/크기, 명령별 시작/종료·RC, stdout/stderr의 크기/hash/완전성/오류 분류를 기록한다. 원문 stderr·config Env/Labels/History는 출력하지 않는다. stdout4MiB/stderr64KiB, ip5초/기타10초/수집 예산45초와 자식 정리최대2초. 부분 hash를 전체 스트림 hash로 표시하지 않는다. 바이너리 식별은 독립 신뢰 인증이 아니다.
+STATIC AST2 PASS / Windows Python3.12.14 LOCAL/MOCK39 OK RC0(합성 자식4건 포함) / Linux-root-containerd Runtime NOT_RUN / main workflow0을 CI PASS로 표시하지 않음.
+새 전달 OID02_Metadata_ReadOnly_v2_Candidate_20261007.zip SHA25637dad3b585954074480cc438b9103c0e6a455914810a90f773c432f57b260028, 16335bytes/6entries/CRC·내부5hash PASS. TRANSFER_RECEIPT에 정확 source와 repository/archive 매핑 결속. 이전 승인본 OID02_Metadata_ReadOnly_20261007.zip SHA9564b58842d3af2ff5d479b6725eb809d9e9f2450d4c16c0e30af89c0c190202 보존.
+mediaType/nonempty layers는 고정 두 서비스의 지원 subset이다. OCI 유효성·프로젝트 AC를 임의 확대하지 않는다. 성공해도 plan_ready/AC/layer/provenance false 유지. Owner10/7 18:00 계획/원Due10/7 유지; import/Pod/egress·OID03·AC/종결 승인 아님.
+아래의 26건 및 c2f543a1 소스·ZIP 설명은 기존 승인본 이력이다.
+
+
 책임 티켓 [#14](https://github.com/321Team/fds-project-baseline/issues/14) / Review 입력 [#30](https://github.com/321Team/fds-project-baseline/issues/30). Owner 이하영, 추적·Review 준비 이권욱. CODEX_ASSISTED.
 
 ## 착수 범위

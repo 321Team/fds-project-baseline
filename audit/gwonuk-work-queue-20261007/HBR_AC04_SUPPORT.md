@@ -1,5 +1,13 @@
 # Harbor AC04 Docker persistence 지원 인계 — 2026-10-07
 
+## 16:12 KST 최신 판정 — NO-GO
+[Owner#13 댓글6032702451](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6032702451): 15:53 ansible01 ~/p1-ans-01/e1c4458, core2.16.19, tracked 수정0, playbooks/p1-hbr-01-ac04-verify.yml rc2/ok65/failed1. DOCKER-FORWARD original과 현재 목록의 마지막2규칙(docker0 및 br-835092bfcbbc) 순서가 다르다. 원본 verify SHA d355fc1110f852190077cc369e0a3afc40fc51bd979b0457b2d2ebe73d2ee761; NO-GO 뒤 읽기 nodrift SHA f046b92eef67f66f4c237ce17705efb99a74cdb1847528811efef60bb78066f5.
+Owner는 순서만의 동등성으로 추정했으나 현재 verifier는 exact 목록 비교다. 원본 규칙·정본/변경결정 검토 없이 1회 set 비교 예외를 승인하거나 assertion을 현장에서 완화하지 않는다. 별도 최소 수정안/독립 리뷰/승인 후 재검증하는 경로가 권고이며 현재 NO-GO 유지.
+T0 미설정/재시작 미실행. .20 Runner fresh CA HTTP200/S4 공개PC .26 새TCP 및 새counter delta는 수신 전. SSH Too many authentication failures는 기존 승인키 명시·기존경로 안에서 해결하고 새키/인증통제 예외를 만들지 않는다.
+APP 원본·정정은 evidence#136 HEAD1742c33…에서 쓰기14:53:33/읽기약14:56:48/봉인14:57:08로 구분됐다. watch 잔존 직접 확인은 미확인이고 MON60.964747340초는 절차 이탈이다. 이것만으로 HBR Runtime GO가 되지 않는다. 원래17:00 상한/비중첩/S1~S4 유지.
+아래의 조건부 GO 및 T0 예정 설명은 이전 준비 시점 이력이며 이 최신 NO-GO를 대체하지 않는다.
+
+
 CODEX_ASSISTED. 이권욱의 infra-ansible#62 지원 범위. #13 이하영 예정 기록6031540537의 source 정합성과 수신 조건을 대조했다. 새로운 Runtime GO/AC 인수가 아니다.
 
 ## 새 제출과 판정

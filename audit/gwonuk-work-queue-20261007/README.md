@@ -1,8 +1,17 @@
 # 이권욱 Phase 1 현황·착수 대장 — 2026-10-07
 
+## 16:12 KST 후속 갱신 — 아래 15:33까지의 기록보다 우선
+이번 후속 조회는 관련 PR·원본 증적·댓글 범위이며 배정 전체를 다시 조회한 것이 아니다.
+- Ansible#66: HEAD0b0f99e8…, 독립 APPROVED5428521797 유효. Actions queued1/in_progress0, Run37462768493/Job112266199324 queued. 현장 Runner/세션은 미확인. [실제 해소 절차 등록](https://github.com/321Team/infra-ansible/pull/66#issuecomment-6032884200). 코드/리뷰 반복 대신 fresh preflight→기존 v1.3 1-job serve→regression/upload/cleanup→최신 HEAD 병합 판단 순서.
+- OID02: infra-kubernetes#68 후보 HEAD85939569b491aa4b89010a38f108cc8ab6c4ad18, stderr metadata·바이너리 절대 경로/hash·bounded capture 보완. STATIC AST2 및 Windows LOCAL/MOCK39 PASS/RC0, 원격4/4 일치. 새 delta 독립 리뷰 요청, Linux/containerd Runtime NOT_RUN. 기존 승인 c2f543a1/APPROVED5438296911은 이전 버전 결속. v2 후보 ZIP SHA25637dad3b585954074480cc438b9103c0e6a455914810a90f773c432f57b260028; 기존 ZIP9564b588… 보존. Owner18:00 계획/원 Due10/7 유지.
+- APP evidence#136: 원 HEAD4d2098f9… 전체120파일과 원본 archive 검토 완료, 폴더117/117 및 서버 수신110/110 해시 일치. 서버 전용20파일은 미수신. 새 HEAD1742c33cc5b379a0215a613d1ff2bcdbb3d5b136의 정정3파일만 재검토, 폴더117/117·registry APP hash1줄 정합. [실제 delta 리뷰5438839240](https://github.com/321Team/fds-project-evidence/pull/136#pullrequestreview-5438839240): 쓰기14:53:33/주실행14:55:51/관측마지막14:56:46/봉인14:57:08 구분 지적 해소. MON60.964747340초 절차 이탈과 watch 잔존 직접 미확인 유지. COMMENT를 독립 승인·병합·AC/Runtime GO로 확대하지 않음.
+- Harbor#13: [Owner6032702451](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6032702451)의 15:53 verify rc2/failed1로 최신 판정 NO-GO. DOCKER-FORWARD 마지막2규칙 순서 불일치. T0 없음/재시작 미실행. 원본 동등성 검토·별도 변경결정 없이 set 비교 예외를 승인하지 않음. S3/S4 fresh 증적과 원래17:00 상한 유지.
+- 본 갱신은 코드/준비·기술 검토 기록이다. 실제 서버 실행·Runner 공급·새 병합·정본 발행·티켓 종결은 수행하지 않았다.
+
+
 CODEX_ASSISTED. 최초 배정 전수 조회는 14:15 KST, 15:33 KST 후속 조회는 관련 PR·리뷰·CI·변경 댓글 범위다. 아래 배정 건수는 최초 조회값이며 후속 범위로 전체 재조회했다고 표시하지 않는다. 저장소 조회 결과와 작업 준비 기록이다. Runtime 실행·AC 인수·위험 수용·일정 변경·정본 발행·티켓 종결 기록이 아니다.
 
-## 현재 판정과 조회 범위
+## 15:33까지의 판정과 조회 범위
 
 - org:321Team / assignee:GWONUK 검색: 전체 58건, OPEN 29 / CLOSED 29, incomplete_results=false. OPEN 중 Phase 1 직접 배정 13건, 나머지 16건은 Phase 2·프로젝트 종료 범위다.
 - Phase 1 OPEN 13건은 실행/후속 업무 9건과 milestone 4건이다. 상위/하위 및 milestone이 중복되므로 이 건수로 구현 진척률을 계산하지 않는다.
