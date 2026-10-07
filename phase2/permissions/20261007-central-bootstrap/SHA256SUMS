@@ -1,0 +1,6 @@
+1e3b1e881af47a781ad2b9e7e082b8a2c3790ce25f9d65984043511ff9d68315  ./README.md
+cdda7894744469d6226b958532014ac3cd3d0d995e56d748ab5b88a989dadbf6  ./agent-policy.expected.json
+a080cfe60048d8fe5f9244865c5cef83703f3dd62a989ce7705cd55fb0a32290  ./bootstrap-central.py
+80bc24b09e3c8c2f37aa0e7e9eacac1ef3120184b55bd8628a828e4c7c143064  ./bootstrap-stack.candidate.json
+922a69e247930b0ec984e80dd7807c3ac604c35d8a82a7dcdc27fd63959c5eb1  ./source-provenance.json
+63e687273594802f2aa017bca42a8acdf6fb74467d40fa5bc3fd5f84c0b385f0  ./tests/test_bootstrap.py

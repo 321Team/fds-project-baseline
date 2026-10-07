@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "LeadDecisionRef": "https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-6015740112",
+  "ImplementationReviewRef": "https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-6015979237",
+  "CandidateSourceMerge": "f1e66492ca87f21d99d9848ab8606cd08185b9ff",
+  "BucketPolicySourceRawSHA256": "05f66bd2f8041dd14f032a166cfe9ab2abfb307024d2d0452e9fef47d6ae5813",
+  "AgentPolicyOfficialRef": "https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AmazonSSMManagedInstanceCore.html",
+  "AgentPolicyVersion": "v2",
+  "AgentPolicyReferenceCheckedKST": "2026-10-07",
+  "AgentPolicyScope": "25 actions including unscoped GetParameter/GetParameters; metadata capture is not a complete effective-access proof",
+  "BootstrapImplementationChoice": "PROPOSED_CLOUDFORMATION_STACK_ONLY_4_RESOURCES",
+  "BootstrapStack": "FDS-Central-Bootstrap-v1",
+  "ApplyScope": "CREATE_ONLY_NEVER_ADOPT_UPDATE_OR_DELETE_EXISTING_RESOURCES",
+  "Excluded": "Human IaC/Network roles and grants, EC2/EIP/EBS/VPC/ROSA, Session document, secrets, cost settings, state object operations"
+}
