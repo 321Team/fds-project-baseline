@@ -2,7 +2,7 @@
 
 CODEX_ASSISTED. 문서 전용 준비안, 실행 설정/새 코드/실제 시험 결과가 아니다. 기존 [Delivery 준비](../20261007/delivery-preparation.md) 및 [16개 case](../20261007/test-case-draft.tsv)를 확장하며 동일 case를 중복 생성하지 않는다.
 
-10-08 오후 후속: [CICD PR68](https://github.com/321Team/infra-cicd/pull/68) a466370은 오프라인 입력 진단만 구현됐고 독립 리뷰 대기다. 실제 adapter/배포 구현은 여전히 미완료다. [실행 자료16행](test-execution-matrix.tsv)과 [최신 수신·도구/장애 잔여](execution-readiness-update.md)를 함께 사용한다. 업무 시험16case NOT_RUN과 PR68 합성 단위시험16 PASS를 구분한다.
+10-08 오후 후속: [CICD PR68](https://github.com/321Team/infra-cicd/pull/68) a466370은 독립 승인 후 merge `8658c332fb5803ca1e53d3b8aefc4d4da179fdf6`로 병합됐다. 구현 범위는 오프라인 입력 진단이다. 실제 adapter/배포 구현은 여전히 미완료다. [실행 자료16행](test-execution-matrix.tsv)과 [최신 수신·도구/장애 잔여](execution-readiness-update.md)를 함께 사용한다. 업무 시험16case NOT_RUN과 PR68 합성 단위시험16 PASS를 구분한다.
 
 ## P2 target adapter 설계
 
