@@ -2,6 +2,8 @@
 
 기준과 실행 경계는 [README](README.md). 이번 기록은 설계·일정 변경 승인, 새 AC, 새로운 상시 Support 승인 절차가 아니다.
 
+10-08 후속: [설계 입력 승인](https://github.com/321Team/infra-rosa/issues/3#issuecomment-6054292320)과 [#34 수용](https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-6054304386)을 수신했다. worker private_a(2a/apne2-az1)·공인 NAT1, fds-app/monitoring-api/ci-cd 및 기본 모니터링 재사용은 설계 방향 수용 상태다. OCM 개인 조직 방향 수용은 billing 연결·팀 접근 완료가 아니며 exact version/N-1/전체 egress·IAM/Freeze는 잔여다. 이후 미결은 이 수용 범위를 반복 요구하지 않는다.
+
 ## 1. #34 Freeze: 생성 전 계약 / 생성 후 관측
 
 | 항목 | 지금 받아 고정할 계약 | 이후 관측값 / 기존 생산 책임 |
@@ -14,11 +16,13 @@
 | DB source·security | worker 교체 source-set 생성/폐기 규칙, inventory/forwarding/DB 방화벽·pg_hba/NP 책임, credential reference, 실패 시 STOP·대체자 | 실제 API source·DB ALLOW, engine/비승인 source DENY·교체/복구. #38/#37/#43/#47 |
 | Registry | D22 생성 전 trust/경로/principal 계약과 아래 2절 최종 선택 시점 분리 | actual node-source·cold-pull·digest/Ready는 Basic Ready 이후. #42 |
 
-정확한 숫자·IAM JSON·worker key·endpoint는 [입력표](input-intake.tsv)에 PENDING으로 남겼다. 과거 추정 sizing, 단일 관측 IP, whole VPC 허용을 자동 채택하지 않는다. source 자동 갱신은 tag만으로 인증하지 않고 cluster/pool/subnet/ENI 대응·실패 시 차단·제한된 변경 범위·원복 조건을 확인한다. 새로운 source controller를 이번에 구현/등록하지 않았다.
+정확한 용량·IAM JSON·endpoint는 [입력표](input-intake.tsv)에 미결로 남겼고 worker key/AZ는 위 승인으로 부분 수용했다. 과거 추정 sizing, 단일 관측 IP, whole VPC 허용을 자동 채택하지 않는다. 단일 AZ/subnet이 단일 DB source IP를 뜻하지 않는다. source 자동 갱신은 tag만으로 인증하지 않고 cluster/pool/subnet/ENI 대응·실패 시 차단·제한된 변경 범위·원복 조건을 확인한다. 새로운 source controller를 이번에 구현/등록하지 않았다.
 
 ## 2. #42 D22: 생성 전 준비와 최종 선택
 
 **권고 후보:** 기존 Harbor 조건부 재사용 + P2 전용 pull-only identity + 승인된 이전 digest 보존. 후보 수용/계정 발급/실제 적용은 미수행이다. Cloud Registry도 아래 같은 기준으로 비교하며 실제 endpoint/credential을 발명하지 않는다.
+
+[10-08 D22 Lead 검토](d22-lead-review.md)에 하영 최신 Primary/Fallback 제안, A 우선 상세화 권고와 B의 배포 중단 영향, 12개 최종 출력, 전환/복귀 조건을 기록했다. VPN 장애의 배포 지속성과 DB 업무 복구를 구분하고 비용 $1 미만·digest 자동 보존·장기 인증을 확정값으로 소비하지 않는다. REGISTRY_MODE/FALLBACK/D22는 PENDING이며 새로운 ECR 자원·권한·복사 승인이 아니다.
 
 | 판단 축 | Harbor 후보 | Cloud Registry 후보 | 결정 시 필요한 것 |
 |---|---|---|---|
@@ -52,6 +56,8 @@
 - 외부 Route는 API만, engine과 metrics 비노출 확인. 시험 DB 성공을 Hybrid DB 인수로 표현하지 않음. 실제 DB role/schema/credential 생성·전환은 이번에 하지 않음.
 
 ## 5. #47→#50 일정·handoff 결정안
+
+생성/삭제·보존·Review는 [이벤트 기준 작업창과 인계](lifecycle-review-preparation.md)를 사용한다. 10/23 정리 목표를 Review 전 자동 삭제로 해석하지 않으며 exact 시각/참석자는 미정이다.
 
 **10/20 준비·10/21 H1 뒤 본시험·10/22 회귀의 구성은 PMO/QA 동의, 실제 실행은 보완 대기다.** [생산자 작업창](https://github.com/321Team/fds-project-baseline/issues/50#issuecomment-6051395052)과 [PARTIAL ACCEPT / 실행 전 CHANGES REQUIRED](https://github.com/321Team/fds-project-baseline/issues/50#issuecomment-6051518639)를 수신했다. 정확한 시각은 제출 계획이며 Runtime GO·본문/날짜 필드 변경과 구분한다.
 

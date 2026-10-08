@@ -2,6 +2,8 @@
 
 2026-10-08 14:50 KST 기준. CODEX_ASSISTED. Phase 1 구현·실행·Close 제외. 현행 발행 정본은 docs-v3.1.21이며 이 문서는 working preparation이다. 담당·AC·일정·권한 범위를 새로 정하지 않는다.
 
+16:23 KST 이후 후속: [설계 방향 승인6054292320](https://github.com/321Team/infra-rosa/issues/3#issuecomment-6054292320)을 반영했다. [D22 Lead 검토·12출력/A-B 선택안](d22-lead-review.md), [생성·삭제·보존·Review 준비](lifecycle-review-preparation.md) 작성 완료. D21 raw는 수신/해시 대조·PR161 제출 완료, 독립 리뷰 미등록/미병합으로 확인했다. 아래 표는 이 후속 상태를 반영한다.
+
 ## 이번에 실제 완료한 것
 
 - CICD [PR68](https://github.com/321Team/infra-cicd/pull/68): 이하영의 정확한 HEAD 독립 승인·CI 2건 SUCCESS와 미해결 차단 없음 확인 후 사용자 착수 지시에 따라 #46 Lead 이권욱 범위에서 수동 병합. HEAD `a466370ed9fcec724b4c5fe4f61f2e71f28d7298`, merge `8658c332fb5803ca1e53d3b8aefc4d4da179fdf6`, 14:47:36 KST. 예상 HEAD 지정 및 병합 후 재조회 완료. [Lead 기록](https://github.com/321Team/infra-cicd/pull/68#issuecomment-6053283635).
@@ -16,17 +18,17 @@
 | 1 | 승인 PR 병합·소스 연결 | 권욱 / 해당 Lead | 이번 단계 완료. Terraform6/7·CICD68·MSA24 병합 소스를 구분해 연결. 실제 실행 수용 SHA는 별도 |
 | 2 | full IAM JSON/trust·정책 SHA·Action/Resource/Condition·AMI/PassRole/backend·회수/복구·simulation 기대표 | #35 하영 → 권욱 중앙 검토 | 입력 대기. 최신 [Lead 준비 수용](https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-6049616674)은 전체 정책 제출·부여 수용이 아님 |
 | 3 | 중앙 검증/부여/readback → 각 본인 MFA·권한·state/lock·거부·복구 | #35 권욱/각 사용자 | 2 이후 실행. 예전 role 부재 관측을 현재 상태로 단정하지 않음. 중앙 검증과 업무 Plan 계정 구분 |
-| 4 | ROSA 상세 topology·worker key/AZ·N-1 용량·disk·CIDR·platform egress·API/Ingress·STS/OIDC | #34/#38 하영 → 권욱 | 입력 대기. 기존 1AZ·m5.xlarge3대·worker1대 장애/복구 유지. 생성 전 actual Node ID는 요구하지 않음 |
+| 4 | ROSA 상세 topology·worker key/AZ·N-1 용량·disk·CIDR·platform egress·API/Ingress·STS/OIDC | #34/#38 하영 → 권욱 | private_a/2a·NAT1·3개 Namespace 방향 수용. NAT 전용EIP/route/태그 IaC, version/용량·API/Ingress·OCM 연결/팀 접근 잔여. 생성 전 actual Node ID는 요구하지 않음 |
 | 5 | Relay Libreswan/repo·조건부 HTTP 근거·EBS 보존/삭제·CPU credit·Session document 소유 | #35/#37 하영/재환 | 입력 대기. 소스 리뷰 차단은 해소. 실제 Stream9 설치·Agent Online은 생성 후 검증이며 새 병합 Gate로 올리지 않음 |
 | 6 | 관리/반환/source·필수 DNS 및 App/DB source-set·NP·credential·복구 소유 | #40/#37/#38/#43/#47 권욱/하영/재환 | 계약 입력 대기. 경로·최소 권한·실패 시 중단과 원복 책임을 연결 |
-| 7 | D22 생성 전 endpoint·CA/trust·pull principal·node-pull 경로 | #42 권욱 + 플랫폼 입력 | 일부 준비. 원본/지원 방식·공급 주체를 확정. 실제 cold-pull·Final 선택은 Basic Ready 이후 |
+| 7 | D22 생성 전 endpoint·CA/trust·pull principal·node-pull 경로 | #42 권욱 + 플랫폼 입력 | HCP CLI CA방식/교체영향 검토, A/B 선택안·12출력 준비 완료. exact host/provider·인증/경로 잔여. 실제 cold-pull·Final 선택은 Basic Ready 이후 |
 | 8 | App base/overlay·시험 DB 전환/정리·Secret·health 및 D-03 실패 경로 | #43 재환/하영 | 구현·실행본 대기. 엔진 timeout/오류 응답/DB 저장 실패 rollback은 각각 원본 필요; engine0/DB 경로 차단으로 대체하지 않음 |
 | 9 | 설계 입력 취합·Freeze 판단과 network Plan 접수 | #34/#35 권욱/하영 | 아래 단계별 준비표 사용. 2~6 조건 중 해당 단계 입력 충족 전 Cloud Plan/Apply 미실행 |
 | 10 | 실제 P2 Delivery adapter/transport·claim/lock/checkpoint·실패/UNKNOWN·복구 연결 | #46 권욱, #38/#42/#43 입력 | 진단 도구만 병합. [기존 계약](delivery-test-contract.md)의 실제 target/권한/approved digest/manifest/health 입력 대기. 입력 진단 RC0은 배포 허가 아님 |
 | 11 | B2 장애·복구안 F1 시간표/F2 관리 접근·관측 보완 | #50 재환 → 권욱 QA | [검토 F1/F2](fault-packet-review.md) 유지. B1 도구 코드 차단은 해소. live P/T/F·관리 도달성은 해당 시험 직전 확정 |
 | 12 | 시험 fixture/criteria·CA·도구 SHA·RUN·DB schema·H1·원본 연결 | #47/#50 재환/권욱 | 도구 버전/무결성 수신 완료, 실제 입력 대기. 기존 [16case](test-execution-matrix.tsv)는 모두 NOT_RUN |
-| 13 | D21 canonical raw 편입 | #36 원본 보유자/권욱 | 원본8706bytes·기존 SHA256 수신/대조 → evidence PR 독립 리뷰/병합. Transport 결정 재개·OCI 재시험 없음 |
-| 14 | 교육장 비용 리포트·운영/삭제/보존 창·Review 참석자/시각·일정 기록 정합 | #34/#52/#55 권욱/각 Lead | 사용액/예상 총비용은 리포트 수신 시 기존 한도와 비교. 10/23 Review 시각/참석자 미정. #47/#50 작업창 구성 동의와 Issue/Projects 날짜 반영·Runtime GO를 구분 |
+| 13 | D21 canonical raw 편입 | #36 원본 보유자/권욱 | 원본8706bytes·기존 SHA256 수신/대조 완료. evidence PR161 fe1381e 독립 리뷰/병합 대기. initiator/cleanup 별도 raw 미확인은 그대로 유지; Transport 결정 재개·OCI 재시험 없음 |
+| 14 | 교육장 비용 리포트·운영/삭제/보존 창·Review 참석자/시각·일정 기록 정합 | #34/#52/#55 권욱/각 Lead | 이벤트별 절차·삭제/보존 책임·Review 의제 작성 완료. 보고금액·exact 창/참석자/시각 미정. 10/23 정리 목표가 Review 전 삭제 허가는 아님 |
 
 2·4~8·11~14의 준비는 병렬 가능하다. 입력 대기 항목의 담당을 재배정하거나 미확정 값을 임의 작성해 통과시키지 않는다.
 
@@ -34,12 +36,14 @@
 
 검증한 최신 통합 소스는 `93d71500e3e881c55f1814cd144ca41f43e77f3d`이다. PR7 검토 HEAD와 network6/vpn10파일 및 기존 manifest가 일치한다. **이는 소스 무결성 수신이며 `accepted_execution_sha`/`accepted_execution_manifest`는 null**이다. 과거 PR6 checkout 또는 오래된 PR7 후보를 실행 소스로 자동 선택하지 않는다.
 
+이번 수용된 NAT 설계를 구현하면 network 소스/권한·자원 수가 달라진다. 이전 `15 create`는 위 SHA의 과거 기대값일 뿐이다. NAT/EIP/default route/subnet tags와 의존성·삭제를 포함한 새 diff/manifest·Plan 기대표를 다시 수용해야 하며, 기존16파일 무결성이나 PR7 승인을 새 코드 승인으로 복제하지 않는다.
+
 | 단계 | 사용할 기존 자료 / 선행 입력 | 완료·중단 기준 |
 |---|---|---|
 | 정책 접수 | [중앙 검증 인계](https://github.com/321Team/infra-terraform/blob/93d71500e3e881c55f1814cd144ca41f43e77f3d/docs/preflight-20261007/central-validation-handoff.md)의 full policy 최소 묶음 | 부분 backend/PassRole 정책만으로 INCOMPLETE 해제 금지. 새 AMI·provider read/cleanup coverage·소유 경계·simulation 입력 대조 |
 | 중앙 검증 | 검토된 policy/trust SHA + 기존 승인 중앙 검증 세션, fresh before | ValidatePolicy/findings·변경 case simulation. 오류나 예상 밖 현재 설정이면 STOP. 검증 결과가 grant 완료는 아님 |
 | 본인 권한 | 해당 grant/readback 후 [본인 U1](https://github.com/321Team/infra-terraform/blob/93d71500e3e881c55f1814cd144ca41f43e77f3d/docs/preflight-20261007/gwonuk-u1-plan.md) | 각 본인 MFA 역할·backend/lock·양성/음성·복구. 타인 세션 재사용 없음 |
-| network saved Plan | 해당 Lead의 실제 source/manifest 수용·정책·입력·개인 FDS-IaC-Operator, [기존 Plan 절차](https://github.com/321Team/infra-terraform/blob/93d71500e3e881c55f1814cd144ca41f43e77f3d/docs/preflight-20261007/plan-runbook.md) | `terraform/network`, default workspace, `phase2/network/terraform.tfstate`. 새 빈 state 기준15create/0update/0delete; 기존 state/drift는 별도 검토. 삭제/교체·중앙 자원 변경·오류면 STOP |
+| network saved Plan | 해당 Lead의 실제 source/manifest 수용·정책·입력·개인 FDS-IaC-Operator, [기존 Plan 절차](https://github.com/321Team/infra-terraform/blob/93d71500e3e881c55f1814cd144ca41f43e77f3d/docs/preflight-20261007/plan-runbook.md) | `terraform/network`, default workspace, `phase2/network/terraform.tfstate`. 93d7150 빈 state의 과거15create 기준을 NAT 추가본에 재사용하지 않음. 새 source/실제 state별 예상 create/update/delete 대조; 예상 밖 삭제/교체·중앙 자원 변경·오류면 STOP |
 | Apply 이후 vpn Plan | 별도 Apply 판단 → 실제 network_handoff + 5의 명시 입력 | 합성 ID 사용 금지. route OFF 유지, actual worker/route 수용 시점 분리. network Plan에 ROSA 생성 후 ID를 선행조건으로 추가하지 않음 |
 
 위 링크 안의 작성 당시 리뷰 대기/구 candidate SHA 문구는 이 수신 기록과 분리한다. 명령의 실제 실행 SHA는 해당 Lead 수용과 깨끗한 checkout 확인으로 고정하며 이 문서 자체를 실행 승인으로 소비하지 않는다. 명령·RC·원본은 개인 경로에 보존하고 state/plan/credential을 공개 기록에 넣지 않는다. 현재 AWS 읽기 재조회/ValidatePolicy/simulation/grant/Plan/Apply 전부 이번 회차 NOT_RUN이다.

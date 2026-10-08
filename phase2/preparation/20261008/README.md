@@ -8,6 +8,8 @@ CODEX_ASSISTED. 사용자 'Phase 1 작업은 제외하고 나머지 건에 대�
 
 14:50 KST 재점검: **[권장 순서·사전 작업 목록·착수 결과](prework-next.md)**를 최신 목록으로 사용한다. CICD PR68 병합 완료, MSA PR24 R1~R4 해소·생산자 병합 수신 완료. [24파일 소스 무결성](merged-source-receipt.json)을 대조했고 전체 IAM/실제 입력/Runtime은 미완료다.
 
+16:23 KST 이후 권욱 선행 작업: [ROSA 설계 승인](https://github.com/321Team/infra-rosa/issues/3#issuecomment-6054292320)을 아래 입력표/결정안에 반영했다. private_a·NAT1·3개 Namespace 방향은 수용됐으며 상세 구현/전체 Freeze는 미완료다. [D22 Lead 검토·A/B 선택안](d22-lead-review.md)과 [생성·운영·삭제·Review 준비](lifecycle-review-preparation.md)를 추가했다. D21 raw는 수신/해시 대조 후 evidence PR161에 제출됐으며 독립 리뷰·병합 대기다. D22 Final/실제 실행 승인은 별도 유지한다.
+
 ## 이번에 구체화한 결과
 
 | 순서 | 결과 | 소비 위치 / 남은 조건 |
