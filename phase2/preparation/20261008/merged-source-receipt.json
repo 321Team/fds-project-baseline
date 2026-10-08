@@ -1,0 +1,174 @@
+{
+  "purpose": "SOURCE_INTEGRITY_RECEIPT_ONLY_NOT_EXECUTION_INPUT_OR_RUNTIME_EVIDENCE",
+  "verified_at_kst": "2026-10-08T14:50:45+09:00",
+  "method": "Compare exact git-show bytes at reviewed HEAD and merge SHA; SHA256 each file; compare Terraform candidate manifest and producer-reported p2e2e SHA256.",
+  "command": "git -C <local-repository> show <exact-sha>:<repository-path>",
+  "scope": "24 listed files only; no code test rerun, AWS/ROSA access, approval creation, Plan or Runtime execution",
+  "infra-cicd": {
+    "reviewed_head": "a466370ed9fcec724b4c5fe4f61f2e71f28d7298",
+    "merge_sha": "8658c332fb5803ca1e53d3b8aefc4d4da179fdf6",
+    "review_url": "https://github.com/321Team/infra-cicd/pull/68#pullrequestreview-5451830074",
+    "files": [
+      {
+        "path": ".github/workflows/p2-intake-validation.yml",
+        "sha256": "0c957fe76deb2dd0d0c5096ccea9fb767cfbb9ca2189406e59db4bbe6eff56e1",
+        "reviewed_equals_merged": true
+      },
+      {
+        "path": "docs/phase2/delivery-intake.md",
+        "sha256": "5198ed00505fcdc929ee19ecf07f807a7ce1a5bbf874a187f3d64620cbc57b76",
+        "reviewed_equals_merged": true
+      },
+      {
+        "path": "templates/phase2/delivery-intake.pending.json",
+        "sha256": "84f76a645927c82ad0a8e20deefcdf4497ff4c6a9c5c069679e0365de0006485",
+        "reviewed_equals_merged": true
+      },
+      {
+        "path": "tools/phase2/delivery_intake.py",
+        "sha256": "531c04ad16b0069ef864d6e8708ea7cb4845c5b7d237b8692914465cc99f398d",
+        "reviewed_equals_merged": true
+      },
+      {
+        "path": "tools/phase2/test_delivery_intake.py",
+        "sha256": "b4d4c61124eb6b15405cf5f0e6b3be92050595940601380d5e09ead0e7f54bcf",
+        "reviewed_equals_merged": true
+      }
+    ]
+  },
+  "fds-msa": {
+    "reviewed_head": "85b20f45ba4e2a4b3afb55d1ab41c970938374ca",
+    "merge_sha": "6a95e1a5d7e7e25ac83694ca932ea1be65699053",
+    "review_url": "https://github.com/321Team/fds-msa/pull/24#pullrequestreview-5452014671",
+    "producer_receipt": "https://github.com/321Team/fds-project-baseline/issues/50#issuecomment-6053198464",
+    "files": [
+      {
+        "path": "tools/regression/p2e2e.py",
+        "sha256": "a00ae029b69782040fa0e120d8a8b763e81325055cb70ca26c6d8d30ce88a07d",
+        "reviewed_equals_merged": true
+      },
+      {
+        "path": "tools/regression/README.md",
+        "sha256": "d50592702b6c99e7db3d68f0752a8f924a47611f61038951fb2137840afd9988",
+        "reviewed_equals_merged": true
+      },
+      {
+        "path": "tools/tests/test_regression_p2e2e.py",
+        "sha256": "daeaacc4098e5be40310d4660e9fa0b1721acc6a8020a543b0848628ead70d0d",
+        "reviewed_equals_merged": true
+      }
+    ]
+  },
+  "infra-terraform": {
+    "reviewed_head": "127921559e41f9667ccaf855bf6a3d3c2876fd5d",
+    "merge_sha": "93d71500e3e881c55f1814cd144ca41f43e77f3d",
+    "review_url": "https://github.com/321Team/infra-terraform/pull/7#pullrequestreview-5450725959",
+    "manifest_path": "validation/relay-agent-rpm-20261008/source.json",
+    "manifest_sha256": "6fe1d41a623316df7613b53fbd7e0a0e1fbacd19c1ac4ea122159fc549175e87",
+    "files": [
+      {
+        "path": "terraform/network/.terraform.lock.hcl",
+        "sha256": "19d9d35be5e84e592d2714ebf7ecd11a75610fd3addc2c22a8d1f9445a6ca38f",
+        "reviewed_equals_merged": true,
+        "matches_candidate_manifest": true
+      },
+      {
+        "path": "terraform/network/backend.hcl.example",
+        "sha256": "e6c4ddf2036b3d46cb7243cc3b0a2b57976d6f6f660795cd4d549417fda920ff",
+        "reviewed_equals_merged": true,
+        "matches_candidate_manifest": true
+      },
+      {
+        "path": "terraform/network/main.tf",
+        "sha256": "f17ef751d08bd83248401eba25f060129ffe76687b8e9c52872e8c4ce524894f",
+        "reviewed_equals_merged": true,
+        "matches_candidate_manifest": true
+      },
+      {
+        "path": "terraform/network/outputs.tf",
+        "sha256": "230dccf8537643aeed9bd2ddd2dd50f9d273fccdc3e4271aa97aa1f66b08c494",
+        "reviewed_equals_merged": true,
+        "matches_candidate_manifest": true
+      },
+      {
+        "path": "terraform/network/tests/network.tftest.hcl",
+        "sha256": "dc55c247820f4243858c43e4a932e8fe5b3b8aae88b332d24ebb9ac52a874435",
+        "reviewed_equals_merged": true,
+        "matches_candidate_manifest": true
+      },
+      {
+        "path": "terraform/network/versions.tf",
+        "sha256": "e653faf7197736809b47bb46b8830a3f5efbe6ddb137f36ac04f436fa0ff3bca",
+        "reviewed_equals_merged": true,
+        "matches_candidate_manifest": true
+      },
+      {
+        "path": "terraform/vpn/.terraform.lock.hcl",
+        "sha256": "19d9d35be5e84e592d2714ebf7ecd11a75610fd3addc2c22a8d1f9445a6ca38f",
+        "reviewed_equals_merged": true,
+        "matches_candidate_manifest": true
+      },
+      {
+        "path": "terraform/vpn/amazon-ssm-agent.gpg",
+        "sha256": "aaa3f054d9c0fb037e3e110e213cf721392429baa4a65c9e5e8b558b64c80fba",
+        "reviewed_equals_merged": true,
+        "matches_candidate_manifest": true
+      },
+      {
+        "path": "terraform/vpn/backend.hcl.example",
+        "sha256": "abdda61dea092f7c3ce467e3db2faf9393d7a0b3634f4353c0fe93bf4e8cfc46",
+        "reviewed_equals_merged": true,
+        "matches_candidate_manifest": true
+      },
+      {
+        "path": "terraform/vpn/bootstrap.sh.tftpl",
+        "sha256": "0acde3c1787b5c3a52b8f4f5329d2bf71c97f3c5c6bd596e93d5a324a7698e93",
+        "reviewed_equals_merged": true,
+        "matches_candidate_manifest": true
+      },
+      {
+        "path": "terraform/vpn/main.tf",
+        "sha256": "29054493be43ce63720ffa5592e10bba728e39c053dd99267c301c168867f2b3",
+        "reviewed_equals_merged": true,
+        "matches_candidate_manifest": true
+      },
+      {
+        "path": "terraform/vpn/outputs.tf",
+        "sha256": "ea9f3d9a5e2be0a339f515ef11cac05efc4ae593f3968cdf7e3cab1aa24e8367",
+        "reviewed_equals_merged": true,
+        "matches_candidate_manifest": true
+      },
+      {
+        "path": "terraform/vpn/session-document.tf",
+        "sha256": "60adebd8f88a4326096cc383594e17053402105f206765fa5556b831bf83b96c",
+        "reviewed_equals_merged": true,
+        "matches_candidate_manifest": true
+      },
+      {
+        "path": "terraform/vpn/tests/vpn.tftest.hcl",
+        "sha256": "8d9ea6dd3ab7d3e500c481efc19823b85e8ef037abed3b78e763f150f8b858d6",
+        "reviewed_equals_merged": true,
+        "matches_candidate_manifest": true
+      },
+      {
+        "path": "terraform/vpn/variables.tf",
+        "sha256": "620f24ff58a4aa4c347b2b82fb9c92ce86450ef51555f1b9c28b66dce755be4e",
+        "reviewed_equals_merged": true,
+        "matches_candidate_manifest": true
+      },
+      {
+        "path": "terraform/vpn/versions.tf",
+        "sha256": "10834006cf0aeca35c112e635b752fecf154da3a0c5ea87c40cb54504870fcca",
+        "reviewed_equals_merged": true,
+        "matches_candidate_manifest": true
+      }
+    ],
+    "accepted_execution_sha": null,
+    "accepted_execution_manifest": null
+  },
+  "result": "INTEGRITY_PASS_24_FILES",
+  "runtime": "NOT_RUN",
+  "cloud_plan": "NOT_RUN",
+  "grant": "NOT_RUN",
+  "execution_authorized": false
+}
