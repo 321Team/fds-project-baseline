@@ -1,0 +1,74 @@
+{
+  "schema": "fds.deploy-preparation-worksheet.v1",
+  "executable": false,
+  "classification": "PLANNING_ONLY_NOT_A_RUNTIME_RECORD",
+  "source_pr": 67,
+  "source_head": "258952bb57d0e9eb91a66132136273a6f73876b5",
+  "runtime_contract_fields": {
+    "PLAN_FIELDS": [
+      "delivery",
+      "kubernetes",
+      "push_execution",
+      "push_receipt_sha256",
+      "request_id",
+      "schema",
+      "targets",
+      "template_only",
+      "workflow"
+    ],
+    "APPROVAL_FIELDS": [
+      "allow_rollback",
+      "approved_by",
+      "expires_at",
+      "not_before",
+      "plan_sha256",
+      "reference",
+      "schema",
+      "template_only",
+      "workflow"
+    ],
+    "KUBERNETES_FIELDS": [
+      "api_server",
+      "service_account",
+      "token_audience",
+      "token_policy_reference",
+      "token_ttl_seconds"
+    ],
+    "TARGET_FIELDS": [
+      "container",
+      "deployment",
+      "namespace",
+      "previous_image",
+      "uid"
+    ]
+  },
+  "known_build": {
+    "workflow_sha": "4e9324cd8acf0ba67b35f950b4c952db8064540e",
+    "run_id": 37642123031,
+    "attempt": 1,
+    "app_source": "adc90410f99cb7af5b40bc8ff92c45272e9f8bee",
+    "local_images": {
+      "transaction-api": "sha256:1d5325089674343f6777751310f124b0dd59049dd1dd5a35c15f6e528b532c71",
+      "fds-engine": "sha256:f531dedff9d5a23182abc305d5aad0e017118adb63b79da2ca8ec8354c6de8d7"
+    }
+  },
+  "open_inputs": {
+    "merged_deploy_workflow_sha": null,
+    "new_push_run_and_receipt": null,
+    "remote_digests": null,
+    "target_namespace_deployment_container_uid": null,
+    "previous_images_and_pullability": null,
+    "app_db_rollback_compatibility": null,
+    "fresh_sa_uid_and_token_policy": null,
+    "current_lead_approval_reference_and_window": null,
+    "allow_rollback_decision": null,
+    "nonoverlap_window": null
+  },
+  "runtime": {
+    "token_request": "NOT_RUN",
+    "push": "NOT_EXECUTED",
+    "deploy": "NOT_EXECUTED",
+    "rollback": "NOT_EXECUTED",
+    "delivery_gate": "NOT_VERIFIED"
+  }
+}

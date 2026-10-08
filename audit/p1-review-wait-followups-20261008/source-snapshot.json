@@ -1,0 +1,151 @@
+{
+  "captured_at_kst": "2026-10-08T03:20:36.597299+09:00",
+  "prs": [
+    {
+      "repository": "infra-cicd",
+      "number": 65,
+      "url": "https://github.com/321Team/infra-cicd/pull/65",
+      "title": "handoff: 새 adc90410 Run의 Push 입력 및 HBR 인계 준비",
+      "state": "open",
+      "merged": false,
+      "draft": false,
+      "head": "3f247aec7a3b027ba2dceb445fb85bc5f8bb7f2c",
+      "base": "4e9324cd8acf0ba67b35f950b4c952db8064540e",
+      "reviews": [
+        {
+          "state": "COMMENTED",
+          "commit_id": "df2e3ed96f5f908183d6afdee52542e59034c583",
+          "user": "supreme33-kr",
+          "submitted_at": "2026-10-07T15:32:56Z"
+        }
+      ]
+    },
+    {
+      "repository": "infra-cicd",
+      "number": 66,
+      "url": "https://github.com/321Team/infra-cicd/pull/66",
+      "title": "feat: Deploy 자격증명·실행·증적 저장 연결부 구성",
+      "state": "open",
+      "merged": false,
+      "draft": true,
+      "head": "0aac611a06ad361e24884f8f676b9460f28a920e",
+      "base": "4e9324cd8acf0ba67b35f950b4c952db8064540e",
+      "reviews": []
+    },
+    {
+      "repository": "infra-cicd",
+      "number": 67,
+      "url": "https://github.com/321Team/infra-cicd/pull/67",
+      "title": "feat: Deploy Workflow와 CP1 자격증명 전달 경로 연결",
+      "state": "open",
+      "merged": false,
+      "draft": true,
+      "head": "258952bb57d0e9eb91a66132136273a6f73876b5",
+      "base": "0aac611a06ad361e24884f8f676b9460f28a920e",
+      "reviews": []
+    },
+    {
+      "repository": "infra-harbor-trivy",
+      "number": 12,
+      "url": "https://github.com/321Team/infra-harbor-trivy/pull/12",
+      "title": "feat(harbor): 로깅 IPv4 주소 후보와 구성 차이 검증기",
+      "state": "open",
+      "merged": false,
+      "draft": true,
+      "head": "2b3b3b17417c9e1c4d6c8a0fdd9cb95cad5a03f7",
+      "base": "a15dbc9925c4c3e3b59488b4f92431d7738028ef",
+      "reviews": []
+    },
+    {
+      "repository": "infra-harbor-trivy",
+      "number": 13,
+      "url": "https://github.com/321Team/infra-harbor-trivy/pull/13",
+      "title": "feat: Harbor logger 및 앱 기동 상태 읽기 전용 관측기",
+      "state": "open",
+      "merged": false,
+      "draft": true,
+      "head": "d093d0afa28b042f22de6d67aad7714565c3d5ac",
+      "base": "a15dbc9925c4c3e3b59488b4f92431d7738028ef",
+      "reviews": []
+    },
+    {
+      "repository": "infra-ansible",
+      "number": 74,
+      "url": "https://github.com/321Team/infra-ansible/pull/74",
+      "title": "feat(ansible): worker02 전용 DNS verify 및 사전 대상 차단",
+      "state": "open",
+      "merged": false,
+      "draft": false,
+      "head": "d8d99efaf2537c74fb8f412fef65b351af08f67a",
+      "base": "da4e273e7e26a9a0b51211e5146066960df072b5",
+      "reviews": []
+    },
+    {
+      "repository": "fds-project-evidence",
+      "number": 147,
+      "url": "https://github.com/321Team/fds-project-evidence/pull/147",
+      "title": "evidence: adc90410 실제 Test Build Scan PASS 및 종료 기록",
+      "state": "open",
+      "merged": false,
+      "draft": false,
+      "head": "dbc5ce9ca5fa097b6016fcf989c8985ab19288be",
+      "base": "b1328ea3efd5cfb1ce966fd0285d99bd7a4d28eb",
+      "reviews": [
+        {
+          "state": "APPROVED",
+          "commit_id": "d54512ec4f7959e17b7cdc719d249196417369e7",
+          "user": "supreme33-kr",
+          "submitted_at": "2026-10-07T15:27:25Z"
+        }
+      ]
+    },
+    {
+      "repository": "fds-project-evidence",
+      "number": 150,
+      "url": "https://github.com/321Team/fds-project-evidence/pull/150",
+      "title": "evidence: Issue9 후보 엔진의 실제 MON verify PASS",
+      "state": "open",
+      "merged": false,
+      "draft": false,
+      "head": "754cfc1dc5b3fc6be3c0f8225331e245a754fd36",
+      "base": "d034e60bc7d31a11f00c231ccd9f5db51c16b0e8",
+      "reviews": []
+    },
+    {
+      "repository": "fds-project-evidence",
+      "number": 153,
+      "url": "https://github.com/321Team/fds-project-evidence/pull/153",
+      "title": "evidence: 운영 호출 경로·Harbor 자동기동 실패 원본과 후속 준비",
+      "state": "open",
+      "merged": false,
+      "draft": false,
+      "head": "50e9a29e878c10dbf140da3da743ba6a686104c1",
+      "base": "d034e60bc7d31a11f00c231ccd9f5db51c16b0e8",
+      "reviews": []
+    },
+    {
+      "repository": "fds-project-evidence",
+      "number": 154,
+      "url": "https://github.com/321Team/fds-project-evidence/pull/154",
+      "title": "evidence: PR74 실제 CI 74개 구문·165개 단위 시험 및 Runner 정리",
+      "state": "open",
+      "merged": false,
+      "draft": false,
+      "head": "8d342e13ec46a37819f8fcb6fa4a888e55aeca19",
+      "base": "b1328ea3efd5cfb1ce966fd0285d99bd7a4d28eb",
+      "reviews": []
+    },
+    {
+      "repository": "fds-project-evidence",
+      "number": 156,
+      "url": "https://github.com/321Team/fds-project-evidence/pull/156",
+      "title": "SEC: 전환 전 Edge P4 Runtime 3경로 및 C0 참고 증적",
+      "state": "open",
+      "merged": false,
+      "draft": false,
+      "head": "f09510c3555db795ad99746c9c2ad2ea981c2fc5",
+      "base": "b1328ea3efd5cfb1ce966fd0285d99bd7a4d28eb",
+      "reviews": []
+    }
+  ]
+}

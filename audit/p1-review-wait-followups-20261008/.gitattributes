@@ -1,0 +1,4 @@
+*.md text eol=lf
+.gitattributes text eol=lf
+*.json text eol=lf
+SHA256SUMS text eol=lf
