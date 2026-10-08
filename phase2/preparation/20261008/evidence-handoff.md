@@ -8,10 +8,10 @@ CODEX_ASSISTED. 실제 원본을 대신하는 문서가 아니다. Phase 1 작�
 
 | 접수 대상 | 알려진 기준 | 이번 실제 상태 |
 |---|---|---|
-| canonical responder raw | d21-ike-observer-20261003T042646Z.log / 8706 bytes / SHA256 e5f754a3d66c6fe452605ff914a6294e87aa85bf6a345ec0fadb981f18745cb0 | 사용자 파일 수신·크기/해시 대조 완료. [PR161](https://github.com/321Team/fds-project-evidence/pull/161) HEAD fe1381e1c37df872fdc9a83cfa72059970e21620에 원본 제출 |
+| canonical responder raw | d21-ike-observer-20261003T042646Z.log / 8706 bytes / SHA256 e5f754a3d66c6fe452605ff914a6294e87aa85bf6a345ec0fadb981f18745cb0 | 사용자 파일 수신·크기/해시 대조 완료. [PR161](https://github.com/321Team/fds-project-evidence/pull/161) HEAD `162892f99a4d779a4f452be2bcf38b8e90bbbe6f`로 독립 승인·CI 후 병합 완료 |
 | 결정·인계 | #36 final 블록과 #34/#35/#37 연결, source/시각/실행자/명령/RC, cleanup 근거 | 기존 기록을 참조. source 없는 실행 필드는 추정하지 않음 |
 | candidate 변경 | D21 당시 AMI와 PR7 최종 Stream9 후보/merge93d7150은 별개 | 원본 역사 AMI를 바꾸지 않고 새 검토/수용 기록으로 연결 |
-| publication | evidence/P2-OCI-01/received-20261008T061032Z-d21-final-responder/ | PR161 OPEN, 독립 review0·미병합(10-08 16:23 KST 조회). final raw 제출과 정본 publication/티켓 Done을 구분 |
+| publication | evidence/P2-OCI-01/received-20261008T061032Z-d21-final-responder/ | PR161 MERGED, 10-08 17:05:38 KST, merge `277893c7865bd2af9751ca73ee00985370c9eaf2`. [편입 기록](https://github.com/321Team/fds-project-baseline/issues/36#issuecomment-6055596216). 원본 편입과 정본 publication/티켓 Done을 구분 |
 
 원본 무변경 편입과 size/SHA 대조는 [수신 기록](https://github.com/321Team/fds-project-baseline/issues/36#issuecomment-6053629791)에 연결했다. 불일치/민감정보가 있으면 공개 게시를 멈추고 원본·공개용 사본을 구분한다. 실제 IKE_AUTH 도달/불일치 PSK 응답은 production SA·Tunnel 인수 증적이 아니다. 권욱 실행/생산 결과의 독립 증적 심사는 하영/재환 등 기존 정책에 따른다.
 

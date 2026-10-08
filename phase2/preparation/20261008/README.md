@@ -2,13 +2,15 @@
 
 CODEX_ASSISTED. 사용자 'Phase 1 작업은 제외하고 나머지 건에 대해서 권장 순서대로 착수' 지시를 적용한다.
 
-현재 상태: **사전 준비 문서 반영 / 결정안 수용·독립 코드 리뷰·실제 실행은 별도**. 이번 패킷은 런타임 설정이나 실행 가능한 tfvars가 아니다. Phase 1 Close/Harbor/기존 CICD 수정·시험·승인·티켓 처리는 범위 밖이다. 해당 생산물을 P2가 소비할 조건만 기록한다.
+현재 상태: **1차 인수 준비 단계 / Phase 2 사전 문서 준비 병행**. 결정안 수용·독립 코드 리뷰·실제 실행은 별도다. 이번 패킷은 런타임 설정이나 실행 가능한 tfvars가 아니다. Phase 1 Close/Harbor/기존 CICD 수정·시험·승인·티켓 처리는 범위 밖이다. 해당 생산물을 P2가 소비할 조건만 기록한다.
 
 10-08 오후 후속: [최신 변경·시험 준비](execution-readiness-update.md), [기존16case 실행 자료](test-execution-matrix.tsv), [장애 패킷 검토](fault-packet-review.md)를 소비한다. Terraform PR6/7은 최신 독립 승인 후 병합됐으며, 아래 최초 준비 시점의 후보/리뷰 대기 표현보다 새 수신 기록을 우선한다. full IAM·Cloud Plan·Runtime은 여전히 별도 잔여다.
 
 14:50 KST 재점검: **[권장 순서·사전 작업 목록·착수 결과](prework-next.md)**를 최신 목록으로 사용한다. CICD PR68 병합 완료, MSA PR24 R1~R4 해소·생산자 병합 수신 완료. [24파일 소스 무결성](merged-source-receipt.json)을 대조했고 전체 IAM/실제 입력/Runtime은 미완료다.
 
-16:23 KST 이후 권욱 선행 작업: [ROSA 설계 승인](https://github.com/321Team/infra-rosa/issues/3#issuecomment-6054292320)을 아래 입력표/결정안에 반영했다. private_a·NAT1·3개 Namespace 방향은 수용됐으며 상세 구현/전체 Freeze는 미완료다. [D22 Lead 검토·A/B 선택안](d22-lead-review.md)과 [생성·운영·삭제·Review 준비](lifecycle-review-preparation.md)를 추가했다. D21 raw는 수신/해시 대조 후 evidence PR161에 제출됐으며 독립 리뷰·병합 대기다. D22 Final/실제 실행 승인은 별도 유지한다.
+16:23 KST 이후 권욱 선행 작업: [ROSA 설계 승인](https://github.com/321Team/infra-rosa/issues/3#issuecomment-6054292320)을 아래 입력표/결정안에 반영했다. private_a·NAT1·3개 Namespace 방향은 수용됐으며 상세 구현/전체 Freeze는 미완료다. [D22 Lead 검토·A/B 선택안](d22-lead-review.md)과 [생성·운영·삭제·Review 준비](lifecycle-review-preparation.md)를 추가했다. D21 raw는 evidence PR161 HEAD `162892f99a4d779a4f452be2bcf38b8e90bbbe6f`의 독립 승인·CI 후 17:05:38 KST 병합됐으며 merge는 `277893c7865bd2af9751ca73ee00985370c9eaf2`다. 원본 편입은 정본 publication/티켓 완료와 구분한다. D22 Final/실제 실행 승인은 별도 유지한다.
+
+17:50 KST 후속: [ROSA 종합 검토](https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-6056087764)를 준비표에 반영했다. **생성 전 계약 → Gate 충족·별도 생성 판단 → 실제 cold-pull → Basic Ready → D22 Final** 순서로 문서의 모순을 정정했다. 버전/Pool·CA는 사전 후보 수용이며 Runner 입력·경로·IAM은 미완결이다. 하영의 후속 정정 댓글과 full IAM/NAT PR은 이번 조회에서 추가 접수되지 않았다.
 
 ## 이번에 구체화한 결과
 
