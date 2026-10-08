@@ -1,6 +1,6 @@
 # Phase 2 결정 입력 — 수용 전 검토안
 
-기준과 실행 경계는 [README](README.md). 이번 기록은 설계·일정 변경 승인, 새 AC, 새로운 상시 Support 승인 절차가 아니다.
+기준과 실행 경계는 [README](README.md). 현재는 **1차 인수 준비 단계**다. 이번 기록은 설계·일정 변경 승인, 새 AC, 새로운 상시 Support 승인 절차가 아니다. Phase 2 사전 준비를 #33 Start·#34 Freeze·생성 GO로 승격하지 않는다.
 
 10-08 후속: [설계 입력 승인](https://github.com/321Team/infra-rosa/issues/3#issuecomment-6054292320)과 [#34 수용](https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-6054304386)을 수신했다. worker private_a(2a/apne2-az1)·공인 NAT1, fds-app/monitoring-api/ci-cd 및 기본 모니터링 재사용은 설계 방향 수용 상태다. OCM 개인 조직 방향 수용은 billing 연결·팀 접근 완료가 아니며 exact version/N-1/전체 egress·IAM/Freeze는 잔여다. 이후 미결은 이 수용 범위를 반복 요구하지 않는다.
 
@@ -14,7 +14,7 @@
 | Relay | Stream9 후보·공식 Agent, exact Libreswan/repo/HTTP 필요 근거, root volume 보존·삭제/CPU credit, Session document 소유·공급 | 실제 Agent Online/firewalld/SELinux/EBS/세션·SA/경로/복구는 생성 후. #35/#37 |
 | 관리/DNS | 아래 3절의 정방향/반환/source·필수 이름/query 권위·ACL·복구 | 실제 경로/IP/Query/strict TLS 관측. #40 권욱 + #35/#37/#38 입력 |
 | DB source·security | worker 교체 source-set 생성/폐기 규칙, inventory/forwarding/DB 방화벽·pg_hba/NP 책임, credential reference, 실패 시 STOP·대체자 | 실제 API source·DB ALLOW, engine/비승인 source DENY·교체/복구. #38/#37/#43/#47 |
-| Registry | D22 생성 전 trust/경로/principal 계약과 아래 2절 최종 선택 시점 분리 | actual node-source·cold-pull·digest/Ready는 Basic Ready 이후. #42 |
+| Registry | D22 생성 전 trust/경로/principal 계약과 아래 2절 최종 선택 시점 분리 | 생성 후 actual node-source·cold-pull·digest를 Basic Ready 입력으로 확보 → Basic Ready → D22 Final. #38/#42 |
 
 정확한 용량·IAM JSON·endpoint는 [입력표](input-intake.tsv)에 미결로 남겼고 worker key/AZ는 위 승인으로 부분 수용했다. 과거 추정 sizing, 단일 관측 IP, whole VPC 허용을 자동 채택하지 않는다. 단일 AZ/subnet이 단일 DB source IP를 뜻하지 않는다. source 자동 갱신은 tag만으로 인증하지 않고 cluster/pool/subnet/ENI 대응·실패 시 차단·제한된 변경 범위·원복 조건을 확인한다. 새로운 source controller를 이번에 구현/등록하지 않았다.
 
@@ -34,7 +34,9 @@
 
 최신 소비 사실: APP `adc90410f99cb7af5b40bc8ff92c45272e9f8bee`의 [Build/Scan 인계](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6041140607)는 존재한다. remote Push/승인 digest/ROSA imageID 완료는 아니다. Harbor [가용성 위험 보고](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6042747313)는 D22 선택의 입력으로만 소비하며 Phase 1 수정·시험·인수는 이번 범위에서 수행하지 않는다.
 
-**생성 전:** 지원 trust 방식/공개 CA·FQDN·principal/route/source 계약·실패 처리 준비. **Basic Ready 후 기존 10-15 Final 목표:** actual TLS/인증/negative/cold-pull·업무/복구 자료로 단일 Primary/Fallback·credential owner 및 #43/#46/#47 소비조건을 확정하고 IF-19에 연결한다. 생성 전 actual ROSA cold-pull을 요구하지 않는다.
+**생성 전:** 지원 trust 방식/공개 CA·image host(IP/FQDN)·principal/route/source 계약·실패 처리 준비. **생성 후 Basic Ready 판정 전:** 승인된 경로에서 실제 cold-pull·digest 등 #4 handoff 입력을 확보한다. **Basic Ready 후 D22 Final:** 이 결과와 TLS/인증/negative·업무/복구 자료를 소비해 단일 Primary/Fallback·credential owner 및 #43/#46/#47 소비조건을 확정하고 IF-19에 연결한다. 생성 전 actual ROSA cold-pull을 요구하지 않고, Basic Ready에 필요한 경로 준비를 D22 Final 이후로 미루지 않는다. 기존 10-15 Final 목표의 실현 가능성은 G4·실제 운영창과 정합화하며 날짜만으로 GO하지 않는다.
+
+17:40 리뷰 수신: [버전·Pool](https://github.com/321Team/infra-rosa/issues/3#issuecomment-6056067368), [Runner](https://github.com/321Team/infra-rosa/issues/10#issuecomment-6056067704), [CA·경로](https://github.com/321Team/infra-rosa/issues/11#issuecomment-6056068014). 4.22.16·300 GiB·IMDSv2·AutoRepair는 설계 후보이며 전체 Freeze가 아니다. 자발적 업그레이드 미계획과 공급자 필수 업데이트를 구분하고, 하위 minor는 생성 전 재선정 후보로만 다룬다. replicas=3은 목표 대수이며 교체 중 실제 대수 불변을 보장하지 않는다. 기존 4건 보고 정정은 수용했지만 Quota PARTIAL·역할 이름 필터 미발견·ROSA 활성화/청구 연결 미확인은 유지한다. Runner 날짜만을 위한 재시험은 요청하지 않으며 OS/CI/Podman trust·실제 principal의 미확인 구분을 먼저 보완한다.
 
 ## 3. #40 관리 경로·DNS 입력
 

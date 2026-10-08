@@ -25,15 +25,17 @@ CODEX_ASSISTED. 권욱 담당 #42/#46 준비 문서. 검토 대상은 [하영 �
 
 ## D22 12개 출력의 현재 준비 상태
 
+17:40 [#10 검토](https://github.com/321Team/infra-rosa/issues/10#issuecomment-6056067704)·[#11 검토](https://github.com/321Team/infra-rosa/issues/11#issuecomment-6056068014)를 수신했다. evidence main `9472f17f13dd6828b6895a47552dcdb9778fb25d`의 leaf·Robot 목록 증적은 각각 PR163·165로 병합됐다. 공개 Root SHA 재대조, leaf 7파일·목록 이미지 1파일 해시 일치 및 FQDN/IP 오프라인 인증서 검증 PASS는 저장된 자료 검증 범위다. 현재 서버 IP TLS·ROSA key 동작·cold-pull 성공은 미검증이다. Runner의 OS/CI/Podman trust 및 실제 principal은 부분 입력이며 날짜만을 위한 P1 재시험은 요청하지 않는다.
+
 | 출력 | 검토 가능한 후보 / 남은 입력 | 책임·소비 |
 |---|---|---|
 | 1 Registry mode | Harbor Primary 후보, A 우선 상세화. 최종 mode/fallback 미선택 | #42 권욱 |
 | 2 endpoint/naming | Harbor 10.1.93.54 또는 harbor.fds.internal 중 실제 image host와 TLS/CA 일치 필요. ECR repository 이름/URI 미정 | #11 하영 / #35·#46 |
 | 3 principal/최소권한 | Runner push와 P2 pull 분리. ECR 선택 시 push/pull 및 token 취득·갱신 범위 제출 | #35·#38·#46 |
-| 4 trust | Harbor 공개 Root 참조 SHA256 20ddfa5e92c346aaf46fc30179fbc0b069e256effd2615a9f4308a8fe719053f. HCP CLI 지원 확인, pinned rhcs/provider 입력 검증 잔여 | #11 하영 |
+| 4 trust | Harbor 공개 Root SHA256 20ddfa5e92c346aaf46fc30179fbc0b069e256effd2615a9f4308a8fe719053f 후보 수용. exact image host/key·JSON/정규화 map·해시·생성 방법·소스 SHA·CLI/provider pin 잔여. PEM 해시만으로 key/실행 설정 무결성을 대신하지 않음 | #11 하영 |
 | 5 digest/tag | 승인 current/previous manifest·index/child digest를 원본과 연결. 값 미수신 | #43 재환 / #46 권욱 |
 | 6 push path | 기존 공급망 소비. ECR 채택 시 repository별 최소권한과 연결 경로 추가안 필요 | #46 권욱 + #35 입력 |
-| 7 pull path | private_a→Relay→Harbor443 후보, return·host/DNS·허용 source 확정 필요. A의 ECR 경로도 별도 | #38·#37 / #11 |
+| 7 pull path | private_a→Relay→Harbor443 후보, source 보존/return·host/DNS·허용 source 계약 필요. P0 IP 후보는 D23 전체 DNS 결정을 무조건 기다리지 않음. 승인된 최소 경로 구현·cold-pull은 Basic Ready 판정 전, Final은 그 결과를 소비. A의 ECR 경로도 별도 | #38·#37 / #11 |
 | 8 fallback | 아래 전환/복귀 절차 후보. 자동 mirror 설정은 미선택 | #42 권욱 |
 | 9 비용 | 교육장 사용액/예상 총비용 리포트 미수신, NOT_ASSESSED. 400/450/500·자부담0·예비50 유지 | #34/#42 권욱 |
 | 10 credential reference | owner/scope/expiry/전달·회수 reference 필요. 원문 토큰/Secret 금지 | #38·#46 |

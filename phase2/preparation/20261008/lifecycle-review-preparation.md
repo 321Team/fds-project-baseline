@@ -1,6 +1,6 @@
 # 생성·운영·삭제·Review 선행 준비
 
-2026-10-08 KST, CODEX_ASSISTED. #34/#52/#55 권욱 담당 준비안. 정확한 생성/삭제 시각·Review 참석자/시각은 미정이다. 기존 날짜를 새로 승인하거나 자원 삭제를 실행하는 문서가 아니다. [#55 계약](https://github.com/321Team/fds-project-baseline/issues/55)과 [기존 인계표](evidence-handoff.md)를 따른다.
+2026-10-08 KST, CODEX_ASSISTED. #34/#52/#55 권욱 담당 준비안. 현재는 **1차 인수 준비 단계**이며 Phase 2 사전 문서 준비와 실제 착수를 구분한다. 정확한 생성/삭제 시각·Review 참석자/시각은 미정이다. 기존 날짜를 새로 승인하거나 자원 삭제를 실행하는 문서가 아니다. [#55 계약](https://github.com/321Team/fds-project-baseline/issues/55)과 [기존 인계표](evidence-handoff.md)를 따른다.
 
 ## 이벤트 기준 작업창
 
@@ -8,13 +8,15 @@
 |---|---|---|
 | 생성 전 | 검토된 IaC/정책·source SHA, 해당 Freeze/단계 판단, 본인 권한, 교육장 리포트 기준 비용통제, 실행·중단·회수 범위 | source/Plan receipt와 실제 시작 KST 기록. 미충족이면 생성하지 않음 |
 | Network/Relay/VPN | network saved Plan 검토→별도 Apply→actual handoff→vpn Plan/Apply→#37 검증 | G4 목표10/14. Agent/SA/경로·positive/negative/recovery 원본. G4 전에 ROSA Ready를 요구하지 않음 |
-| ROSA/App | G4와 생성 선행 계약 충족, #38 생성/접근, Basic Ready 후 D22 Final·App/Delivery | G5 목표10/20. 실제 version/identity/권한/이미지/업무 원본 |
+| ROSA/App | G4와 생성 선행 계약 충족·별도 Create GO → #38 생성/접근 → 승인된 최소 pull 경로·cold-pull → Basic Ready → D22 Final·App/Delivery | G5 목표10/20. 실제 version/identity/권한/이미지/업무 원본 |
 | Hybrid/E2E | #47 H1 수신 후 #50 실행, F1/F2·fixture/DB·원복 조건 충족 | 10/21 본시험 구성, 10/22 회귀/G6. exact 시각은 승인된 실행본에서 고정 |
 | 종료 준비 | 마지막 필요한 시험·재현/시연 방법·원본 보존·삭제 범위 확인. 삭제가 남은 Demo/Review를 막는지 확인 | 10/23 정리 목표와 Review를 조정. Review 전 자동 삭제 없음 |
 | Review | 10/23 #49 집계→#54 산출물 Freeze→#56 Review→#55 Action 접수 | 미완료/차단/잔여 Owner/Due를 사실대로 기록 |
 | Close | 10/26 잔여 Action·Cloud 잔존/비용·Sign-off 대조 | #57 인계. 10/24~25 주말 작업을 자동 배정하지 않음 |
 
 ## 삭제·보존 순서와 책임
+
+일정 충돌은 [17:40 종합 검토](https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-6056087764)를 따른다. infra-rosa#4의 10-13 Cluster Ready 계획은 선행 #39 G4 목표10-14와 동시에 확정 실행 일정으로 사용할 수 없다. 담당자의 정합화 대상이며 새 날짜를 임의로 배정하지 않는다. #33은 Phase 1 Close 결과·Known Issue/Approved Deferred 등 기존 진입조건으로 판단한다. 10-23 Deliverable Freeze/Review는 Architecture Freeze나 자동 삭제 예약이 아니다.
 
 | 대상 | 실행 책임 / 사전 수용 | 안전한 정리·보존 기준 |
 |---|---|---|

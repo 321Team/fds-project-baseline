@@ -1,8 +1,8 @@
 # Phase 2 사전 작업 목록과 착수 결과
 
-2026-10-08 14:50 KST 기준. CODEX_ASSISTED. Phase 1 구현·실행·Close 제외. 현행 발행 정본은 docs-v3.1.21이며 이 문서는 working preparation이다. 담당·AC·일정·권한 범위를 새로 정하지 않는다.
+2026-10-08 17:50 KST 후속 반영(아래 수행 기록은 각 관측 시점 기준). CODEX_ASSISTED. Phase 1 구현·실행·Close 제외. 현행 발행 정본은 docs-v3.1.21이며 이 문서는 working preparation이다. 담당·AC·일정·권한 범위를 새로 정하지 않는다.
 
-16:23 KST 이후 후속: [설계 방향 승인6054292320](https://github.com/321Team/infra-rosa/issues/3#issuecomment-6054292320)을 반영했다. [D22 Lead 검토·12출력/A-B 선택안](d22-lead-review.md), [생성·삭제·보존·Review 준비](lifecycle-review-preparation.md) 작성 완료. D21 raw는 수신/해시 대조·PR161 제출 완료, 독립 리뷰 미등록/미병합으로 확인했다. 아래 표는 이 후속 상태를 반영한다.
+16:23 KST 이후 후속: [설계 방향 승인6054292320](https://github.com/321Team/infra-rosa/issues/3#issuecomment-6054292320)을 반영했다. [D22 Lead 검토·12출력/A-B 선택안](d22-lead-review.md), [생성·삭제·보존·Review 준비](lifecycle-review-preparation.md) 작성 완료. D21 raw는 독립 승인·CI 후 PR161 병합 완료로 갱신했다(17:05:38 KST, merge277893c). 현재 1차 인수 준비 단계이며 [17:40 리뷰](https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-6056087764)의 후보 수용과 잔여를 아래에 반영한다. 이번 변경은 우리 준비 문서의 정정이며 생산자의 #3/#10/#11 보완 완료를 대신하지 않는다.
 
 ## 이번에 실제 완료한 것
 
@@ -18,17 +18,19 @@
 | 1 | 승인 PR 병합·소스 연결 | 권욱 / 해당 Lead | 이번 단계 완료. Terraform6/7·CICD68·MSA24 병합 소스를 구분해 연결. 실제 실행 수용 SHA는 별도 |
 | 2 | full IAM JSON/trust·정책 SHA·Action/Resource/Condition·AMI/PassRole/backend·회수/복구·simulation 기대표 | #35 하영 → 권욱 중앙 검토 | 입력 대기. 최신 [Lead 준비 수용](https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-6049616674)은 전체 정책 제출·부여 수용이 아님 |
 | 3 | 중앙 검증/부여/readback → 각 본인 MFA·권한·state/lock·거부·복구 | #35 권욱/각 사용자 | 2 이후 실행. 예전 role 부재 관측을 현재 상태로 단정하지 않음. 중앙 검증과 업무 Plan 계정 구분 |
-| 4 | ROSA 상세 topology·worker key/AZ·N-1 용량·disk·CIDR·platform egress·API/Ingress·STS/OIDC | #34/#38 하영 → 권욱 | private_a/2a·NAT1·3개 Namespace 방향 수용. NAT 전용EIP/route/태그 IaC, version/용량·API/Ingress·OCM 연결/팀 접근 잔여. 생성 전 actual Node ID는 요구하지 않음 |
+| 4 | ROSA 상세 topology·worker key/AZ·N-1 용량·disk·CIDR·platform egress·API/Ingress·STS/OIDC | #34/#38 하영 → 권욱 | private_a/2a·NAT1·3개 Namespace 방향 및 4.22.16/300GiB/IMDSv2/AutoRepair 후보 수용. 버전/교체 정책 문구·Pool 관리 소유권, NAT IaC·CIDR/용량·API/Ingress·연결 잔여. Quota PARTIAL, 역할 이름 필터 미발견·활성화 미확인. 생성 전 actual Node ID는 요구하지 않음 |
 | 5 | Relay Libreswan/repo·조건부 HTTP 근거·EBS 보존/삭제·CPU credit·Session document 소유 | #35/#37 하영/재환 | 입력 대기. 소스 리뷰 차단은 해소. 실제 Stream9 설치·Agent Online은 생성 후 검증이며 새 병합 Gate로 올리지 않음 |
 | 6 | 관리/반환/source·필수 DNS 및 App/DB source-set·NP·credential·복구 소유 | #40/#37/#38/#43/#47 권욱/하영/재환 | 계약 입력 대기. 경로·최소 권한·실패 시 중단과 원복 책임을 연결 |
-| 7 | D22 생성 전 endpoint·CA/trust·pull principal·node-pull 경로 | #42 권욱 + 플랫폼 입력 | HCP CLI CA방식/교체영향 검토, A/B 선택안·12출력 준비 완료. exact host/provider·인증/경로 잔여. 실제 cold-pull·Final 선택은 Basic Ready 이후 |
+| 7 | D22 생성 전 endpoint·CA/trust·pull principal·node-pull 경로 | #42 권욱 + 플랫폼 입력 | 공개 CA 후보·오프라인 이름 검증 수용. exact key/config/hash/provider·principal/경로 잔여. 생성 후 승인 경로 cold-pull → Basic Ready → D22 Final; P0 IP 후보를 D23 전체 DNS 일정에 묶지 않음 |
 | 8 | App base/overlay·시험 DB 전환/정리·Secret·health 및 D-03 실패 경로 | #43 재환/하영 | 구현·실행본 대기. 엔진 timeout/오류 응답/DB 저장 실패 rollback은 각각 원본 필요; engine0/DB 경로 차단으로 대체하지 않음 |
 | 9 | 설계 입력 취합·Freeze 판단과 network Plan 접수 | #34/#35 권욱/하영 | 아래 단계별 준비표 사용. 2~6 조건 중 해당 단계 입력 충족 전 Cloud Plan/Apply 미실행 |
 | 10 | 실제 P2 Delivery adapter/transport·claim/lock/checkpoint·실패/UNKNOWN·복구 연결 | #46 권욱, #38/#42/#43 입력 | 진단 도구만 병합. [기존 계약](delivery-test-contract.md)의 실제 target/권한/approved digest/manifest/health 입력 대기. 입력 진단 RC0은 배포 허가 아님 |
 | 11 | B2 장애·복구안 F1 시간표/F2 관리 접근·관측 보완 | #50 재환 → 권욱 QA | [검토 F1/F2](fault-packet-review.md) 유지. B1 도구 코드 차단은 해소. live P/T/F·관리 도달성은 해당 시험 직전 확정 |
 | 12 | 시험 fixture/criteria·CA·도구 SHA·RUN·DB schema·H1·원본 연결 | #47/#50 재환/권욱 | 도구 버전/무결성 수신 완료, 실제 입력 대기. 기존 [16case](test-execution-matrix.tsv)는 모두 NOT_RUN |
-| 13 | D21 canonical raw 편입 | #36 원본 보유자/권욱 | 원본8706bytes·기존 SHA256 수신/대조 완료. evidence PR161 fe1381e 독립 리뷰/병합 대기. initiator/cleanup 별도 raw 미확인은 그대로 유지; Transport 결정 재개·OCI 재시험 없음 |
+| 13 | D21 canonical raw 편입 | #36 원본 보유자/권욱 | 원본8706bytes·기존 SHA256 수신/대조 완료. evidence PR161 HEAD162892f 독립 승인·CI 후 merge277893c, 17:05:38 KST 병합 완료. initiator/cleanup 별도 raw 미확인은 그대로 유지; Transport 결정 재개·OCI 재시험 없음 |
 | 14 | 교육장 비용 리포트·운영/삭제/보존 창·Review 참석자/시각·일정 기록 정합 | #34/#52/#55 권욱/각 Lead | 이벤트별 절차·삭제/보존 책임·Review 의제 작성 완료. 보고금액·exact 창/참석자/시각 미정. 10/23 정리 목표가 Review 전 삭제 허가는 아님 |
+
+17:50 KST 조회에서 full IAM/NAT 추가 PR과 하영의 리뷰 후속 정정은 미접수다. 먼저 우리 문서의 단계/상태 모순을 정정했으며 새 AWS 실행은 하지 않았다. #4의 10-13 Ready와 선행 G4 목표10-14 충돌은 담당자의 계획 정합화 대상으로 남긴다. exact 생성/삭제창은 미정이다.
 
 2·4~8·11~14의 준비는 병렬 가능하다. 입력 대기 항목의 담당을 재배정하거나 미확정 값을 임의 작성해 통과시키지 않는다.
 

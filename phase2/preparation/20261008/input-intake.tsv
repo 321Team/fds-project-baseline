@@ -1,17 +1,17 @@
 ID	Ticket	Producer	Needed stage	Required input	Status	Consumer	Completion	Boundary
 I01	#35	이하영	중앙 권한 검토 전	full permissions JSON/trust·source SHA·Action/Resource/Condition·AMI/PassRole/backend·회수	PENDING	중앙 검증/부여	정책 입력과 변경분 검증·단계 판단	정책 제출은 grant 완료 아님
 I02	#35	각 본인 / 중앙 권욱	역할 부여 이후	실제 Role ARN·MFA AssumeRole·권한/lock/거부/복구 결과	NOT_RUN	network Plan	본인 대상 정확한 실행 원본	타인 세션을 본인 결과로 대체하지 않음
-I03	#34/#38	이하영	ROSA 생성 전 계약	private_a(2a/apne2-az1)·1AZ3대 설계 수용; version/N-1 용량·disk·Pod/Service CIDR 잔여	PARTIAL_ACCEPT	Freeze/#38	선택1AZ3대와 지원/용량 계약 일치; OCM billing 연결·팀 접근 확인	actual node ID는 생성 후; 설계승인6054292320
+I03	#34/#38	이하영	ROSA 생성 전 계약	private_a·1AZ3대 방향; 4.22.16/300GiB/IMDSv2/AutoRepair 후보 수용; 버전·교체 정책/Pool 소유·CIDR/N-1 잔여	PARTIAL_ACCEPT	Freeze/#38	선택1AZ3대와 지원/용량 계약 일치; OCM billing 연결·팀 접근 확인	실제 자원은 생성 후; #3 리뷰6056067368. Quota PARTIAL·활성화/연결 미확인
 I04	#35/#38	이하영	ROSA 생성 전 계약	NAT1 방향 수용; 전용EIP/route/subnet태그 IaC·egress·API/Ingress·STS/OIDC 상세 잔여	PARTIAL_ACCEPT	Freeze/#38	route/security/권한/소유 결속; 변경 IaC별 Plan 기대값 재산정	Relay EIP로 platform egress 충족 아님
 I05	#35/#37	이하영/이재환	Relay 실행 입력	Libreswan/repo/HTTP근거·EBS 보존/삭제·CPU credit·Session document 소유	PENDING	vpn Plan/초기 readback	source 입력과 담당 수용	Agent Online/SA는 생성 후
 I06	#40	이권욱 / 경로 운영자	관리 경로 계약	Runner 정방향/return/source·필수 DNS zone/ACL/소유	PENDING	Freeze/#46	경로 최소조건·엄격 TLS	전체 Hybrid DNS P1 자동 활성화 없음
 I07	#38/#37/#43/#47	이하영/이재환	DB 경로 계약	source-set 갱신·NP/credential·forwarding/DB 소유·실패복구	PENDING	Freeze/#47	API ALLOW·engine/비승인 DENY 계약	실제 허용/거부는 Runtime
-I08	#42	이권욱 / 이하영 입력	생성 전 trust 준비	HCP CLI CA방식/교체영향 확인; exact host·provider·pull principal/node경로 잔여	PARTIAL	ROSA 생성/D22	원본 수신·지원 방식/시점 결정; d22-lead-review.md 참조	기존 TLS readback 재사용; ROSA Runtime 아님
-I09	#42	이권욱 / 생산자 입력	Basic Ready 이후	Primary/Fallback A/B 검토안 준비; remote digest·TLS/인증/negative/cold-pull 미실행	PREPARATION_ONLY	D22 Final/#43/#46/#47	실제 결과와 12출력 계약 결속	D22 PENDING/Runtime NOT_RUN; 생성 전 완료 요구 없음
+I08	#42	이권욱 / 이하영 입력	생성 전 trust 준비	공개 CA 후보·오프라인 FQDN/IP 검증 수용; exact host/key/config/hash·CLI/provider·principal/경로 잔여	PARTIAL	ROSA 생성/D22	#11 리뷰6056068014; 실행 config와 source·해시 대응	오프라인 인증서 PASS는 실제 서버 TLS/ROSA cold-pull PASS 아님
+I09	#42	이권욱 / 생산자 입력	생성 후 cold-pull→Basic Ready→D22 Final	후보 계약 선행; 승인 경로 cold-pull은 Basic Ready 입력, Final에서 기존 결과·TLS/인증/negative/복구 소비	PREPARATION_ONLY	D22 Final/#43/#46/#47	실제 결과와 12출력 계약 결속	D22 PENDING/Runtime NOT_RUN; 생성 전 실제 cold-pull 요구 없음
 I10	#43	이재환 / 플랫폼 이하영	앱 구현/실행 전	base/overlay SHA·Route/UID·시험DB 전환/정리·health	PENDING	Delivery/시험	리뷰 가능한 구현과 환경별 인수 경계	Phase1 manifest 변경 없음
 I11	#46	이권욱 / #38/#42/#43 입력	ROSA Delivery 전	target/API/CA/RBAC·단기 credential reference·approved remote/previous digest	PENDING	RUN-A/RUN-B/rollback	입력/실패차단/복구 계약 결속	Secret 원문·가짜 endpoint 없음
 I12	#47/#50	이권욱/이재환	시험창 확정 전	10/20준비·10/21 H1뒤본시험·10/22회귀 구성동의; 시간표 제출/실행조건 보완	PARTIAL_ACCEPT	시험 계획/일정 정합	양쪽 계약/날짜필드 동일 결정 연결	현재 날짜 필드 변경 없음
 I13	#50	이재환 / QA 이권욱	실제 시험 전	fixture SHA/expected·TransactionID·schema·exact runtime·복구; PR24 승인/병합·tool SHA 수신 완료, B2 F1/F2 보완	PARTIAL	기존16case	실행 pin과 원본 수집 준비	case 결과 전부 NOT_RUN
-I14	#36	이권욱 / 원본 보유자	증적 publication 전	D21 responder8706bytes/SHA일치·PR161 fe1381e 제출; initiator/cleanup 별도 원본 미확인	REVIEW_PENDING	evidence PR	PR161 독립 심사·병합 및 publication 상태 구분	로그 합성/새OCI시험 없음; 다른 로그를 final 원본으로 대체하지 않음
+I14	#36	이권욱 / 원본 보유자	증적 publication 전	D21 responder8706bytes/SHA일치·PR161 HEAD162892f 독립 승인/CI·merge277893c 17:05:38 KST; initiator/cleanup raw 미확인	MERGED_RAW_ONLY	evidence PR	원본 편입 완료; 정본 publication/티켓 완료 별도	로그 합성/새OCI시험 없음; 다른 로그를 final 원본으로 대체하지 않음
 I15	#34/#55	이권욱	리포트 수신 시	교육장 보고 사용액·예상 총비용·통화/기간/as-of	NOT_ASSESSED	비용 판단/정리	목표400/중단450/상한500·자부담0 비교	별도 견적/보고주기 없음
-I16	#52/#55	이권욱 / 각 Lead	해당 작업창 전	이벤트별 운영/삭제·보존·Review 의제 작성; exact 창/참석자/수신자 미정	PREPARATION_ONLY	Review/정리	실제 확정 기록 및 복구/잔존 경계; lifecycle-review-preparation.md 참조	10-23/10-26 날짜 재승인·삭제 실행 아님
+I16	#52/#55	이권욱 / 각 Lead	해당 작업창 전	현재1차 인수준비; #4 10-13 Ready/G4 10-14 충돌 정합화·exact 창/참석자/수신자 미정	PREPARATION_ONLY	Review/정리	lifecycle-review-preparation.md; 실제 Gate 이후 창 확정, 날짜만으로 GO 금지	10-23/10-26 날짜 재승인·삭제 실행 아님
