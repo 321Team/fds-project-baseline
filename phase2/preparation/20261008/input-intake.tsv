@@ -10,8 +10,8 @@ I08	#42	이권욱 / 이하영 입력	생성 전 trust 준비	공개 CA/endpoint�
 I09	#42	이권욱 / 생산자 입력	Basic Ready 이후	single Primary/Fallback·remote digest·TLS/인증/negative/cold-pull	NOT_RUN	D22 Final/#43/#46/#47	실제 결과와 12출력 계약 결속	생성 전 완료 요구 없음
 I10	#43	이재환 / 플랫폼 이하영	앱 구현/실행 전	base/overlay SHA·Route/UID·시험DB 전환/정리·health	PENDING	Delivery/시험	리뷰 가능한 구현과 환경별 인수 경계	Phase1 manifest 변경 없음
 I11	#46	이권욱 / #38/#42/#43 입력	ROSA Delivery 전	target/API/CA/RBAC·단기 credential reference·approved remote/previous digest	PENDING	RUN-A/RUN-B/rollback	입력/실패차단/복구 계약 결속	Secret 원문·가짜 endpoint 없음
-I12	#47/#50	이권욱/이재환	시험창 확정 전	10-21 필수handoff→본시험 /10-22회귀 결정·정확 시간	PROPOSED	시험 계획/일정 정합	양쪽 계약/날짜필드 동일 결정 연결	현재 날짜 필드 변경 없음
-I13	#50	이재환 / QA 이권욱	실제 시험 전	fixture SHA/expected·TransactionID·schema·exact runtime·복구	PENDING	기존16case	실행 pin과 원본 수집 준비	case 결과 전부 NOT_RUN
+I12	#47/#50	이권욱/이재환	시험창 확정 전	10/20준비·10/21 H1뒤본시험·10/22회귀 구성동의; 시간표 제출/실행조건 보완	PARTIAL_ACCEPT	시험 계획/일정 정합	양쪽 계약/날짜필드 동일 결정 연결	현재 날짜 필드 변경 없음
+I13	#50	이재환 / QA 이권욱	실제 시험 전	fixture SHA/expected·TransactionID·schema·exact runtime·복구; PR24 R4/B2 보완	PARTIAL	기존16case	실행 pin과 원본 수집 준비	case 결과 전부 NOT_RUN
 I14	#36	이권욱 / 원본 보유자	증적 publication 전	D21 canonical responder raw·manifest·결정/cleanup refs	PENDING_RAW	evidence PR	8706 bytes/기존SHA 대조 및 독립 심사	로그 합성/새OCI시험 없음
 I15	#34/#55	이권욱	리포트 수신 시	교육장 보고 사용액·예상 총비용·통화/기간/as-of	NOT_ASSESSED	비용 판단/정리	목표400/중단450/상한500·자부담0 비교	별도 견적/보고주기 없음
 I16	#52/#55	이권욱 / 각 Lead	해당 작업창 전	Review 시간/참석자·생성/검증/삭제 창·보존 소유자	PENDING	Review/정리	실제 확정 기록 및 복구/잔존 경계	10-23/10-26 날짜 재승인 아님

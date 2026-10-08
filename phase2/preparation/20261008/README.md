@@ -4,11 +4,13 @@ CODEX_ASSISTED. 사용자 'Phase 1 작업은 제외하고 나머지 건에 대�
 
 현재 상태: **사전 준비 문서 반영 / 결정안 수용·독립 코드 리뷰·실제 실행은 별도**. 이번 패킷은 런타임 설정이나 실행 가능한 tfvars가 아니다. Phase 1 Close/Harbor/기존 CICD 수정·시험·승인·티켓 처리는 범위 밖이다. 해당 생산물을 P2가 소비할 조건만 기록한다.
 
+10-08 오후 후속: [최신 변경·시험 준비](execution-readiness-update.md), [기존16case 실행 자료](test-execution-matrix.tsv), [장애 패킷 검토](fault-packet-review.md)를 소비한다. Terraform PR6/7은 최신 독립 승인 후 병합됐으며, 아래 최초 준비 시점의 후보/리뷰 대기 표현보다 새 수신 기록을 우선한다. full IAM·Cloud Plan·Runtime은 여전히 별도 잔여다.
+
 ## 이번에 구체화한 결과
 
 | 순서 | 결과 | 소비 위치 / 남은 조건 |
 |---|---|---|
-| 1 | PR6 운영안 G4=10-14 정합화, 이전 승인 이후 변경분 분리 | Terraform PR6. PR7 e4ee0bf의 독립 리뷰·Lead 판단은 별도 |
+| 1 | PR6/7 최신 독립 승인·병합 결과 수신 | PR6 77c6324 / PR7 1279215 승인, 통합 main93d7150. 실행 수용 SHA/manifest·IAM·Freeze/실행 판단은 별도 |
 | 2 | [Freeze·D22·DNS·APP·일정 결정안](decision-packet.md) | #34/#40/#42/#43/#47/#50. 담당 입력·해당 Lead 결정 전 제안값 |
 | 3 | [Delivery·시험 입력/실패/복구 계약](delivery-test-contract.md) | #46/#50. 가짜 endpoint/ID/credential을 넣어 실행하지 않음 |
 | 4 | [담당별 입력 접수표](input-intake.tsv) | 실제값과 생성 후 관측을 구분. 초안 접수표이며 Runtime 결과 아님 |

@@ -1,0 +1,208 @@
+{
+  "purpose": "READ_ONLY_UPDATE_INDEX_NOT_RUNTIME_EVIDENCE",
+  "query_start_kst": "2026-10-08T13:36:53+09:00",
+  "baseline_main": "fa0faba5a7a2521e6563351aa3417b22ea5eb41f",
+  "main_refs": {
+    "infra-terraform": "93d71500e3e881c55f1814cd144ca41f43e77f3d",
+    "infra-cicd": "920940344d10871768ed095d5fa006d1b6265381",
+    "fds-msa": "adc90410f99cb7af5b40bc8ff92c45272e9f8bee"
+  },
+  "prs": {
+    "tf6": {
+      "url": "https://github.com/321Team/infra-terraform/pull/6",
+      "head": "77c63247d2a1cc8e6c920b80e66d42ffef5545b6",
+      "base": "0eabe8daa75a6b9bf960fe1ea5eeaf6a8818f216",
+      "state": "closed",
+      "merged": true,
+      "merge_commit_sha": "cfe59194cabc37fd9506a0776fe502d9627a0631",
+      "merged_at": "2026-10-08T02:57:31Z",
+      "updated_at": "2026-10-08T02:57:34Z"
+    },
+    "tf7": {
+      "url": "https://github.com/321Team/infra-terraform/pull/7",
+      "head": "127921559e41f9667ccaf855bf6a3d3c2876fd5d",
+      "base": "0eabe8daa75a6b9bf960fe1ea5eeaf6a8818f216",
+      "state": "closed",
+      "merged": true,
+      "merge_commit_sha": "93d71500e3e881c55f1814cd144ca41f43e77f3d",
+      "merged_at": "2026-10-08T02:58:38Z",
+      "updated_at": "2026-10-08T02:58:42Z"
+    },
+    "cicd68": {
+      "url": "https://github.com/321Team/infra-cicd/pull/68",
+      "head": "a466370ed9fcec724b4c5fe4f61f2e71f28d7298",
+      "base": "4e9324cd8acf0ba67b35f950b4c952db8064540e",
+      "state": "open",
+      "merged": false,
+      "merge_commit_sha": null,
+      "merged_at": null,
+      "updated_at": "2026-10-07T18:04:48Z"
+    },
+    "msa24": {
+      "url": "https://github.com/321Team/fds-msa/pull/24",
+      "head": "27f570cd684752ba97046b8432bb0bd668566a89",
+      "base": "adc90410f99cb7af5b40bc8ff92c45272e9f8bee",
+      "state": "open",
+      "merged": false,
+      "merge_commit_sha": null,
+      "merged_at": null,
+      "updated_at": "2026-10-08T04:14:49Z"
+    }
+  },
+  "reviews": {
+    "tf6": [
+      {
+        "id": 5450726246,
+        "head": "77c63247d2a1cc8e6c920b80e66d42ffef5545b6",
+        "state": "APPROVED",
+        "url": "https://github.com/321Team/infra-terraform/pull/6#pullrequestreview-5450726246"
+      }
+    ],
+    "tf7": [
+      {
+        "id": 5450725959,
+        "head": "127921559e41f9667ccaf855bf6a3d3c2876fd5d",
+        "state": "APPROVED",
+        "url": "https://github.com/321Team/infra-terraform/pull/7#pullrequestreview-5450725959"
+      }
+    ],
+    "cicd68": [],
+    "msa24": [
+      {
+        "id": 5451270632,
+        "head": "27f570cd684752ba97046b8432bb0bd668566a89",
+        "state": "CHANGES_REQUESTED",
+        "url": "https://github.com/321Team/fds-msa/pull/24#pullrequestreview-5451270632"
+      }
+    ]
+  },
+  "issue_comment_delta": [
+    {
+      "number": 33,
+      "since": "2026-10-07T18:05:00Z",
+      "comments": []
+    },
+    {
+      "number": 34,
+      "since": "2026-10-07T18:05:00Z",
+      "comments": []
+    },
+    {
+      "number": 35,
+      "since": "2026-10-07T18:05:00Z",
+      "comments": [
+        {
+          "id": 6049616674,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-6049616674",
+          "updated_at": "2026-10-08T00:28:06Z"
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "since": "2026-10-07T18:05:00Z",
+      "comments": []
+    },
+    {
+      "number": 37,
+      "since": "2026-10-07T18:05:00Z",
+      "comments": []
+    },
+    {
+      "number": 38,
+      "since": "2026-10-07T18:05:00Z",
+      "comments": []
+    },
+    {
+      "number": 39,
+      "since": "2026-10-07T18:05:00Z",
+      "comments": []
+    },
+    {
+      "number": 40,
+      "since": "2026-10-07T18:05:00Z",
+      "comments": []
+    },
+    {
+      "number": 42,
+      "since": "2026-10-07T18:05:00Z",
+      "comments": []
+    },
+    {
+      "number": 43,
+      "since": "2026-10-07T18:05:00Z",
+      "comments": [
+        {
+          "id": 6052024894,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/43#issuecomment-6052024894",
+          "updated_at": "2026-10-08T04:10:36Z"
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "since": "2026-10-07T18:05:00Z",
+      "comments": []
+    },
+    {
+      "number": 47,
+      "since": "2026-10-07T18:05:00Z",
+      "comments": [
+        {
+          "id": 6051395413,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/47#issuecomment-6051395413",
+          "updated_at": "2026-10-08T03:12:01Z"
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "since": "2026-10-07T18:05:00Z",
+      "comments": [
+        {
+          "id": 6051395052,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/50#issuecomment-6051395052",
+          "updated_at": "2026-10-08T03:11:59Z"
+        },
+        {
+          "id": 6051518639,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/50#issuecomment-6051518639",
+          "updated_at": "2026-10-08T03:23:45Z"
+        },
+        {
+          "id": 6051891259,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/50#issuecomment-6051891259",
+          "updated_at": "2026-10-08T03:58:55Z"
+        }
+      ]
+    },
+    {
+      "number": 52,
+      "since": "2026-10-07T18:05:00Z",
+      "comments": []
+    },
+    {
+      "number": 55,
+      "since": "2026-10-07T18:05:00Z",
+      "comments": []
+    }
+  ],
+  "external_references": [
+    "https://netfilter.org/projects/nftables/manpage.html",
+    "https://magicstack.github.io/asyncpg/current/api/index.html"
+  ],
+  "scope": "Listed PR metadata/reviews, issue comment deltas, open PR inventory in terraform/rosa/cicd/msa, pinned db.py/main.py and PR24 group/CLI mapping; not an organization-wide runtime audit",
+  "not_run": [
+    "AWS",
+    "IAM_GRANT",
+    "TERRAFORM_PLAN_APPLY",
+    "ROSA_RUNTIME",
+    "FAULT_INJECTION",
+    "TOOL_MOCK_RERUN"
+  ],
+  "case_matrix": {
+    "count": 16,
+    "result": "NOT_RUN",
+    "new_AC": false
+  }
+}

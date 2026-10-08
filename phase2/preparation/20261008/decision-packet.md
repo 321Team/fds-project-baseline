@@ -53,7 +53,7 @@
 
 ## 5. #47→#50 일정·handoff 결정안
 
-**권고안이며 아직 일정/작업창 변경 승인이 아니다.** [기존 검토](https://github.com/321Team/fds-project-baseline/issues/50#issuecomment-6041378478)의 조건을 그대로 구체화한다.
+**10/20 준비·10/21 H1 뒤 본시험·10/22 회귀의 구성은 PMO/QA 동의, 실제 실행은 보완 대기다.** [생산자 작업창](https://github.com/321Team/fds-project-baseline/issues/50#issuecomment-6051395052)과 [PARTIAL ACCEPT / 실행 전 CHANGES REQUIRED](https://github.com/321Team/fds-project-baseline/issues/50#issuecomment-6051518639)를 수신했다. 정확한 시각은 제출 계획이며 Runtime GO·본문/날짜 필드 변경과 구분한다.
 
 | 날짜 | 제안 실행 구간 | 진입/중단/출력 |
 |---|---|---|
@@ -62,4 +62,4 @@
 | 10-22 | 최종 회귀·원본 확정 | 결함 수정으로 source/환경이 바뀐 영향 범위 재시험. 미실행은 NOT_RUN, 미해결은 Gate 판단 입력 |
 | 10-23 | 집계/Freeze/Review | 신규 대규모 시험을 자동 추가하지 않음 |
 
-권욱·재환이 결정할 것은 #47 handoff를 10-21 창 내 먼저 기록하는 시점과 #50 준비/본시험/회귀 경계다. 최종 시간은 아직 미정이다. 승인 시 #47/#50 본문·일정 속성·Test Plan을 같은 결정 링크로 정합화해야 한다. Issue 문단 직접 수정은 저장소 규칙상 금지하므로 현재는 이 검토안과 댓글로 연결한다. 승인 전 본문 교체안을 최종값처럼 적용하지 않는다.
+생산자는 10/21 12:00~12:30 H1, 이후 #50 본시험 등을 제안했다. H1 미충족이면 그 시각이 되어도 시험을 시작하지 않는다. [최신 실행 준비](execution-readiness-update.md)의 도구 PR24 R4·장애 패킷 보완을 수신하고 실제 진입조건을 확인해야 한다. Working Test Plan은 이 수용 범위를 반영하며 Issue 본문/날짜 필드는 이번에 변경하지 않는다. 이 구성을 Runtime GO나 Gate 인수로 표시하지 않는다.

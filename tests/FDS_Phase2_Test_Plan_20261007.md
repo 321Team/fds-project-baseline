@@ -66,10 +66,12 @@ Critical Known Issue를 적었다는 이유만으로 Critical 0 AC를 통과시�
 | W0 | Local/CI/Lab 사전검증 병행 | source/admission/UID·fixture 사전제거. Shared Lab 미실행만으로 차단하지 않음 |
 | W1 / G4 | #34 Freeze 목표10/8, #35 10/8~14, #37 10/12~14, G4 10/14 | D21 최종 handoff→Freeze→검토 IaC Stage-A→VPN→Full G4. 유료 생성은 지원/계정/권한/plan/비용·정리 조건 후 |
 | W2 / G5 | #38 10/15~19, #43 10/16~19, #46/G5 10/20 | Basic Ready→D22 actual 결정→App→Full security→Delivery/G5. #38 생성 전 입력과 actual은 구분 |
-| W3 / G6 | #47 10/21, #50 10/22, G6 10/22 | #47 exact handoff→#50 정상/Rule/negative/실패복구→최종회귀. 10/21 주 시험안은 Lead 요청의 미결이며 자동 확정 안 함 |
+| W3 / G6 | #50 10/20 준비, #47 H1 뒤10/21 본시험, 10/22 영향/최종회귀·G6 목표 | 10/8 생산자 작업창·PMO/QA 구성 동의 반영. 도구/장애 절차 보완·G5/H1 등 실제 진입조건 미충족이면 실행 안 함. 준비를 Hybrid Runtime으로 계산하지 않음 |
 | 종료 | Freeze/teardown10/23, Close10/26 계획 | evidence·cost·inventory 보존 후 승인 범위 삭제/실제 잔여 확인. 별도 승인 live demo 없이 추가 유지/유료시험 안 함 |
 
 이번 조회에서 #35는 중앙 4자원 CREATE_COMPLETE·설정 PASS_USER_READBACK 수신 기록을 가진다. assistant의 AWS 재실행/직접 raw 검증이 아니며 full IaC·업무role/Relay·Stage-A readiness·ROSA는 별도 잔여다. 기존 통과 시험·bootstrap을 문서 수정 때문에 반복하지 않는다.
+
+W3 변경 근거는 [생산자 계획6051395052](https://github.com/321Team/fds-project-baseline/issues/50#issuecomment-6051395052)와 [PMO/QA6051518639](https://github.com/321Team/fds-project-baseline/issues/50#issuecomment-6051518639)다. 정확한 시각은 실행조건을 충족해야 사용할 수 있는 제출 계획이다. Issue 본문/Projects 날짜는 이번에 수정하지 않았고 정본 발행·Runtime GO도 아니다. [기존16case 실행 자료](../phase2/preparation/20261008/test-execution-matrix.tsv)는 [최신 상태·B2 검토](../phase2/preparation/20261008/execution-readiness-update.md)와 함께 소비한다. MSA PR24 R4와 장애 패킷 보완은 해당 시험 실행 전 잔여이며 Phase 2 독립 준비 전체를 막는 조건은 아니다.
 
 ## 5. 실행 Record 작성 순서
 
