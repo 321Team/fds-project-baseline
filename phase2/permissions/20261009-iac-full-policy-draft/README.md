@@ -28,6 +28,32 @@ trust: IaC·Network는 기존 후보 그대로(MFA=true, 본인 RoleSessionName)
 4. **Relay EC2는 정해진 모양만.** AMI `ami-08d855918a18d0cf9` 하나, `t3.medium`만, IMDSv2 필수, 루트 디스크 gp3·암호화·40GiB 이하.
 5. **보호 대상은 명시 거부.** 소유 태그 삭제/변경, 세션 문서 수정·삭제·SendCommand, CloudFormation 스택 변경, state 파일 삭제(기존 후보).
 
+## 왜 state(Terraform 장부)를 역할별로 막나
+
+state는 Terraform이 "무엇을 만들었는지" 적어 두는 장부다(S3 `fds-tfstate-774055931866-ap-northeast-2`, `phase2/` 아래 4개 key).
+
+**팀원을 못 믿어서 막는 것이 아니다. 막는 대상은 사람이 아니라 역할(작업 세션)이다.** 같은 사람이라도 어떤 역할로 들어왔는지에 따라 할 수 있는 일이 달라진다.
+
+| 이유 | 설명 |
+|---|---|
+| 실수 방지 | VPN·Relay 작업 중 잘못된 명령으로 state를 덮어쓰거나 지우면 Terraform이 기존 자원을 "없음"으로 보고 다시 만들거나 지울 수 있다. 그 작업에 필요 없는 권한은 처음부터 없게 한다. |
+| 세션·자격증명 유출 대비 | 한 역할 세션이 노출되어도 피해 범위가 그 역할 권한으로 한정된다. Network 세션이 노출돼도 state와 인프라 생성 권한은 따라가지 않는다. |
+| 민감값 노출 최소화 | state에는 자원 ID·IP·설정값이 평문으로 남을 수 있다. 보기 전용(Audit) 역할은 인벤토리 조회만 하고 state 내용은 읽지 않는다. |
+| 추적성 | state 변경이 항상 `FDS-IaC-Operator/<본인>` 세션으로만 남아 CloudTrail에서 누가 Terraform을 돌렸는지 바로 구분된다. |
+| 기존 결정·Gate 정합 | #35 결정에 "Network 역할 state 접근 금지", #9 완료 조건에 "Work Role 최소권한 리뷰"가 있다. 역할 권한을 넓히면 이 두 기준과 충돌한다. |
+
+역할별 state 접근:
+
+| 역할 | state | 이유 |
+|---|---|---|
+| FDS-IaC-Operator | 읽기·쓰기, `.tflock` 정리 허용, **state 삭제 거부** | Terraform 실행에 필수 |
+| FDS-Network-Operator | **전체 거부** | Relay 접속·재시작 업무에 불필요 |
+| FDS-ReadOnly-Audit | **내용 읽기 거부** | 조회·감사에 state 원문 불필요 |
+
+사람 기준으로는 권욱(IaC·Network·Audit), 하영(IaC·Audit)은 이미 IaC 역할로 state에 접근할 수 있고, 재환(Network·Audit)만 접근하지 못한다.
+
+**선택안 (Lead 결정 필요):** 재환도 state 접근이 필요하면 Network 역할을 넓히지 않고, `trust-FDS-IaC-Operator`와 `assume-321team-jaehwan`에 IaC 역할을 추가한다. "VPN 작업 세션은 state 불가, Terraform 실행 세션만 state 가능"이라는 원칙을 유지한 채 3명 모두 접근할 수 있다. IaC trust 대상(현재 권욱·하영)은 #35 결정 사항이라 이 초안에는 반영하지 않았다.
+
 ## 파일별 statement 표
 
 ### FDS-IaC-Network.json (신규)
