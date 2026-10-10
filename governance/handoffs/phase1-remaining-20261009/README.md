@@ -1,6 +1,6 @@
 # Phase 1 잔여 AC 통합 수행·담당자 인계
 
-작성: 이권욱 / CODEX_ASSISTED · 2026-10-09 KST
+작성: 이권욱 / CODEX_ASSISTED · 2026-10-09 KST, 회신 현행화 2026-10-10 KST
 
 ## 목적과 결정
 
@@ -30,10 +30,13 @@
 2. [공통 실행 순서](EXECUTION.md): 어떤 입력이 어느 회차를 막는지, 회신 대기 중 무엇을 계속할지.
 3. [이하영 인계 요청](HAYEOUNGLEE.md): H01~H07, K8S·SEC·Harbor·정책/원본 경계.
 4. [이재환 인계 요청](SUPREME33_KR.md): J01~J08, APP·DB·MON·HA·운영 인수.
+5. [미확인 입력과 담당자별 보충 회신](OPEN_INPUTS_20261010.md): 확정된 R1/R2, 완료된 legacy Secret 정정, 아직 필요한 답변3건과 이권욱 현장 작업을 구분한다. H/J 전체를 재제출하지 않는다.
 
 GitHub 리뷰 요청은 두 담당자의 **각자 업무 범위**를 대상으로 한다. 이하영은 기존 정본 리뷰 역할도 유지한다. 이재환의 APP/DB/MON/QA 사실·인계 검토를 정본 승인·발행 권한 부여로 해석하지 않는다([계정·권한 기준](../../GITHUB_IDENTITY_MAP.md)). 두 담당자의 모든 행에 대한 동시 회신을 전체 작업의 필수 이중 승인으로 만들지 않는다. 각 입력이 확보되면 그 입력을 소비하는 작업부터 진행한다. 새 코드·증적 PR의 독립 리뷰는 기존 정책을 유지한다.
 
 ## 기준 상태
+
+- 인계 기반 [PR160](https://github.com/321Team/fds-project-baseline/pull/160)은 2026-10-10 03:09:56 KST에 reviewed HEAD `151a60536e6c18a9f6f3b0a1d20bf61db950b763`를 merge `068411bd3bef2747587933a2b0b137810affb903`로 병합했다. 아래 AC/Status 집계와 소스 표는 명시된 과거 조회 기준이다. 이번 현행화는 후속 회신을 연결하며 AC/Status·정본을 갱신하지 않는다.
 
 - AC/Status 기준: 2026-10-09 22:08:28 KST 현행화. 정본 P1 42개는 Done21 / In Progress13 / To Do5 / Cancelled3. 연결29개는 Done17 / In Progress10 / Cancelled2.
 - 정본: [docs-v3.1.21](https://github.com/321Team/fds-project-baseline/releases/tag/docs-v3.1.21), Tag 소스 `979facb98de8ca1f1e2ce22f38b27ac3366f3fc3`. 발행은 Runtime/Close를 의미하지 않는다.
@@ -70,7 +73,7 @@ GitHub 리뷰 요청은 두 담당자의 **각자 업무 범위**를 대상으�
 
 파일 인계에는 원 생산자·대상·실행 시각과 수신 시각, 파일 목록/크기/SHA256·원 Manifest·필요 메타데이터, 보관 위치·접근 주체·보존기간을 연결한다. 해시만으로 내용 진위·시험 성공을 단정하지 않는다. 원본을 덮어쓰거나 재압축하지 않는다.
 
-실행 인수와 보관 책임은 별개다. [증적195](https://github.com/321Team/fds-project-evidence/pull/195)의 K8S archive 보관 인수자는 이하영, APP 공급 ZIP은 이재환, CI/TBS 원본 4묶음은 이권욱이라는 지정을 유지한다. 이재환의 [23:07:58 KST 회신](https://github.com/321Team/fds-project-baseline/pull/160#issuecomment-6082572533)은 APP ZIP의 실제 대조·보관 책임 인수 근거다. 도구를 통한 바이트 검증, 각 보관자의 인수 회신, 공유 서버의 유효 접근통제 확인은 서로 대신하지 않는다.
+실행 인수와 보관 책임은 별개다. [증적195](https://github.com/321Team/fds-project-evidence/pull/195)의 K8S archive 보관 인수자는 이하영, APP 공급 ZIP은 이재환, CI/TBS 원본 4묶음은 이권욱이라는 지정을 유지한다. 이재환의 [23:07:58 KST 회신](https://github.com/321Team/fds-project-baseline/pull/160#issuecomment-6082572533)은 APP ZIP의 실제 대조·보관 책임 인수 근거다. 이하영의 [10/9 H01 회신](https://github.com/321Team/fds-project-baseline/pull/160#issuecomment-6083078172)은 K8S archive의 실제 수령·보관 인수 근거다. 도구를 통한 바이트 검증, 각 보관자의 인수 회신, 공유 서버의 유효 접근통제 확인은 서로 대신하지 않는다.
 
 **비밀키·Token·Password·Secret 값은 PR/댓글/Git에 제출하지 않는다.** 기존 승인된 비공개 보관/전달 경로에서 실제 자료를 확인하고 공개 검토본에는 참조명·공개 지문·검증 결과만 적는다. 접근이 없으면 미확인으로 남기며 이 PR을 권한 확대 근거로 사용하지 않는다.
 
