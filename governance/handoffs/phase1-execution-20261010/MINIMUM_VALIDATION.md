@@ -43,7 +43,7 @@
 
 ## V04 — IF06B 8443 gateway 구간 귀속
 
-연결 H04/J05/S03, #14 AC12/15~17·#17 보조통제. [MON42 원안][if06]을 재사용하고 [H04 회신](https://github.com/321Team/fds-project-baseline/pull/160#issuecomment-6083293377)의 gateway 구간 귀속을 적용한다. 특정 nft rule 귀속은 새 필수조건이 아니다. 기존 T2의 monitor01 SYN 도착 조건과 차이를 실행 기록에 명시한다.
+연결 H04/J05/S03, #14 AC12/15~17·#17 보조통제. [MON42 원안][if06]을 재사용하고 [H04 회신](https://github.com/321Team/fds-project-baseline/pull/160#issuecomment-6083293377)의 gateway 구간 귀속을 적용한다. 특정 nft rule 귀속은 새 필수조건이 아니다. 기존 T2의 monitor01 SYN 도착 조건과 차이를 실행 기록에 명시한다. 실제 AC 문구·수용기준을 바꾸는 경우 기존 Decision/CR에 변경 근거를 연결하며 이 문서만으로 대체 승인하지 않는다.
 
 - 재사용: 증적122의 `.108` Source·wrong-auth401, 증적151의 gateway 원본. 새401 전수 재시험 없음. 과거 handle606에 counter가 없었으므로 해당 handle이나 counter 차이를 고정 기대값으로 쓰지 않는다.
 - 대상: 기존 worker03 송신, mgmt-gw01 양측, monitor01 수신. 정상 계정·sudo/Console·live route/interface/정책·listener·CA·시간 정합·캡처 누락률을 이번 회차에서 확인한다.
@@ -82,7 +82,7 @@ J07/S03, [#22](https://github.com/321Team/fds-project-baseline/issues/22). 증�
 
 J02/J05/S01, [#15](https://github.com/321Team/fds-project-baseline/issues/15)/[#20](https://github.com/321Team/fds-project-baseline/issues/20)/SEC06. [병합된 실행 준비](https://github.com/321Team/fds-msa/blob/61fbf0bf1ace1fa3a5eb983c002de2a0ddac856a/docs/p1-final-regression-readiness-20261010.md)를 소비한다. 이번 작업에서 중복 구현하지 않는다.
 
-새 RUN_ID·실제 최종 digest·기존 criteria/fixture·사전 DB0행·HTTP/Rule·DB22행/metrics·KST/UTC·업무 metrics404/전용 scrape200을 연결한다. 신규 도구 bytes와 APP 공급 Source는 별도 pin이다. 과거 원본은 당시 도구/기준을 보존하며 새 도구 통과를 위해 meta/hash를 고치지 않는다.
+새 RUN_ID·실제 최종 digest·기존 criteria/fixture·사전 DB0행·HTTP/Rule·유효22건의 DB 저장/metrics 및 I01 결과(201이면 총23행·save/evaluated+23, 422이면22행·+22)·KST/UTC·업무 metrics404/전용 scrape200을 연결한다. 신규 도구 bytes와 APP 공급 Source는 별도 pin이다. 과거 원본은 당시 도구/기준을 보존하며 새 도구 통과를 위해 meta/hash를 고치지 않는다.
 
 실제 HTTP readiness/liveness 전이 부족 사례만 AC와 대조한 뒤 선정한다. Ready=false/Endpoint 제외·복귀와 같은 Pod container restart·회복을 구별하며 rollout을 liveness 성공으로 계산하지 않는다. 운영 MON 단일 replica/local PV를 임의 장애 대상으로 고르지 않는다. 실패/관측 불능/DB 오염 우려면 다음 사례 중단, 원본 보존과 정확한 승인 복귀 digest/정리만 수행한다. 이전 image로 복귀하면 업무 metrics 노출도 돌아오는 종료 보안 상태를 함께 기록한다. 구체 회차는 S01 후속 작업에서 준비한다.
 

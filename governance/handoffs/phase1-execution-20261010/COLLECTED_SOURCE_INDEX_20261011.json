@@ -1,0 +1,86 @@
+{
+  "observed_at_utc": "2026-10-11T10:34:10.597022+00:00",
+  "sources": [
+    {
+      "repo": "infra-kubernetes",
+      "ref": "c42ea6cc3ccd197d12993823bed439d40946a54c",
+      "path": "docs/change/ICR-D-NET-01-01/OID02_IMAGE_EVIDENCE_HANDOFF_20261004.md",
+      "url": "https://github.com/321Team/infra-kubernetes/blob/c42ea6cc3ccd197d12993823bed439d40946a54c/docs/change/ICR-D-NET-01-01/OID02_IMAGE_EVIDENCE_HANDOFF_20261004.md",
+      "git_blob": "54059f5c897cfc4a5e982139a46af18f3faedbb5",
+      "sha256": "9099aae05feb66a77c29050c9f47f3db77eb4f92324543ea2f1cb5f9b89ee386",
+      "bytes": 5770
+    },
+    {
+      "repo": "infra-kubernetes",
+      "ref": "c42ea6cc3ccd197d12993823bed439d40946a54c",
+      "path": "docs/change/ICR-D-NET-01-01/OID02_CACHE_METADATA_READONLY_20261007.md",
+      "url": "https://github.com/321Team/infra-kubernetes/blob/c42ea6cc3ccd197d12993823bed439d40946a54c/docs/change/ICR-D-NET-01-01/OID02_CACHE_METADATA_READONLY_20261007.md",
+      "git_blob": "cd653548964cd7a84c710268f2db50dcaeb41c36",
+      "sha256": "222ef108900b42d64c9e9ebd871d034568b86a290c714198916ee5140c11b5db",
+      "bytes": 7800
+    },
+    {
+      "repo": "infra-kubernetes",
+      "ref": "c42ea6cc3ccd197d12993823bed439d40946a54c",
+      "path": "docs/change/ICR-D-NET-01-01/OID02_READONLY_SOURCE_MANIFEST_20261007.json",
+      "url": "https://github.com/321Team/infra-kubernetes/blob/c42ea6cc3ccd197d12993823bed439d40946a54c/docs/change/ICR-D-NET-01-01/OID02_READONLY_SOURCE_MANIFEST_20261007.json",
+      "git_blob": "470e5cb56ce1ea0a84a6abae431df2ef6fa45e9d",
+      "sha256": "64ae8faf026a2ea2e6d14b5690440d96c1d18825e66aae9364e2a88515d321b7",
+      "bytes": 1940
+    },
+    {
+      "repo": "infra-harbor-trivy",
+      "ref": "a3caf48b49320edff2d89e61c8a996f0e34b70eb",
+      "path": "docs/runbooks/harbor-recovery-package-receipt.md",
+      "url": "https://github.com/321Team/infra-harbor-trivy/blob/a3caf48b49320edff2d89e61c8a996f0e34b70eb/docs/runbooks/harbor-recovery-package-receipt.md",
+      "git_blob": "4432a3ebebca513fc2997c55ca2352c54ba8ad7f",
+      "sha256": "104e777df853f29a0a1baa5acec56b7de8bedb52f2f009a3a318fa2b69fc5566",
+      "bytes": 5379
+    },
+    {
+      "repo": "infra-harbor-trivy",
+      "ref": "a3caf48b49320edff2d89e61c8a996f0e34b70eb",
+      "path": "docs/runbooks/harbor-recovery-review-package.md",
+      "url": "https://github.com/321Team/infra-harbor-trivy/blob/a3caf48b49320edff2d89e61c8a996f0e34b70eb/docs/runbooks/harbor-recovery-review-package.md",
+      "git_blob": "dacb070785e991fda6bacdd597b8fbc0a4ef1725",
+      "sha256": "85b9d8d8fcf57708bf332ba78c28752977118e92c9d368d4249a673f58aa5fbb",
+      "bytes": 7788
+    },
+    {
+      "repo": "infra-cicd",
+      "ref": "2d8a14c55ea4b61f53b7ac6d682cd5e97575dda7",
+      "path": "docs/token-policy-900-20261010.md",
+      "url": "https://github.com/321Team/infra-cicd/blob/2d8a14c55ea4b61f53b7ac6d682cd5e97575dda7/docs/token-policy-900-20261010.md",
+      "git_blob": "b8fbcefda37edeac24a6ec7d2ace8f8034cc7bca",
+      "sha256": "b1c692886d9dcbdf02d5a1c1396a7f001f327fea8a855e90a047a5e84ba18855",
+      "bytes": 3868
+    },
+    {
+      "repo": "infra-cicd",
+      "ref": "2d8a14c55ea4b61f53b7ac6d682cd5e97575dda7",
+      "path": "docs/delivery-status-20261009.md",
+      "url": "https://github.com/321Team/infra-cicd/blob/2d8a14c55ea4b61f53b7ac6d682cd5e97575dda7/docs/delivery-status-20261009.md",
+      "git_blob": "38202dd1e9aab73edd05e5cc225905a97da00e35",
+      "sha256": "2d9fed16ce433949a205619f8a5fae8f404a03b1652c1a94fcdf76ba0c31c9dc",
+      "bytes": 6228
+    },
+    {
+      "repo": "fds-msa",
+      "ref": "c2372da3fd5ed01a01374b9ea57e34a58f86d3eb",
+      "path": "docs/p1-final-regression-readiness-20261010.md",
+      "url": "https://github.com/321Team/fds-msa/blob/c2372da3fd5ed01a01374b9ea57e34a58f86d3eb/docs/p1-final-regression-readiness-20261010.md",
+      "git_blob": "bbf0c82951ad6419ea4582f29b30e69e47e9c562",
+      "sha256": "f3148ee7ae6ad17d7e122449e39fa3c5185f9877c9f0085c15ff2436f2ddf929",
+      "bytes": 11216
+    },
+    {
+      "repo": "infra-monitoring",
+      "ref": "0dd0235b07d44ba7965490e3808e0a67a3bd903b",
+      "path": "docs/GRAFANA_ACCESS_LEDGER_20261009.md",
+      "url": "https://github.com/321Team/infra-monitoring/blob/0dd0235b07d44ba7965490e3808e0a67a3bd903b/docs/GRAFANA_ACCESS_LEDGER_20261009.md",
+      "git_blob": "4cb8c915775714723583772a9edc27659060b659",
+      "sha256": "4d1f0d8335af0298ffaaa504d47731fad9906c82101f779e2c4a88f6c647daca",
+      "bytes": 11788
+    }
+  ]
+}
