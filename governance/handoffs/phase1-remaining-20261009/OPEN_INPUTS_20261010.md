@@ -1,5 +1,7 @@
 # Phase 1 인계 보충 회신 — 확인할 입력과 실행 잔여
 
+2026-10-11 수신 현행화: [U01~U03 직접 회신](https://github.com/321Team/fds-project-baseline/pull/161#issuecomment-6098286300)은 모두 수신했다. U01은 기존 db01 콘솔 전달 실사용 확인, U02는 조직 관리자의 Actions Secrets 0건 조회 회신, U03은 서비스 미기동으로 실제 관리 접근 미확인이다. **답변 수신과 현장 실행 가능을 구분한다.** 아래 최초 질문·당시 조회 한계는 이력이며 같은 답변을 다시 요청하지 않는다. [최신 통합 현황](https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6099088195)과 [구축 세션용 수집·인계본](../phase1-execution-20261010/COLLECTED_INPUTS_20261011.md)을 함께 사용한다.
+
 작성: 이권욱 / CODEX_ASSISTED · 2026-10-10 KST
 
 ## 이번 문서의 목적과 기준
@@ -14,14 +16,14 @@
 |---|---|---|
 | H01 | [보관 인수 회신][custody]: K8S archive 162,981B·SHA256 확인 및 책임 인수. 내부38건은 기존 검증 재사용 | C01 유효 접근통제, 실서버 backup/restore |
 | H02 | [H 회신][h-reply]: 17파일 목표 label `system_u:object_r:usr_t:s0`, root:root·0750·기본 ACL, 추가 ACL/capability 없음. 부모 /opt·/opt/fds0755 및 패키지 root/code0750이라는 목표 수신 | 원 관측값과 목표값을 혼동하지 않음. 선택 xattr 관측만으로 모든 xattr/부모 ACL 부재를 단정하지 않음. 복귀 context·호출 배제는 이권욱 회차 준비 |
-| H03·R1 | [정책 의미 확정][h-r12]: 최대 수명과 요청 수명900초. 3600초는 별도 허용이 아니라 정합화할 기존 검증값 | CICD `c9eff5fb…`의 plan/gate/binding/JWT·정책 참조 수정과 시험, 실제 발급/소비 |
+| H03·R1 | [정책 의미 확정][h-r12]: 최대 수명과 요청 수명900초. [CICD74](https://github.com/321Team/infra-cicd/pull/74)의 정합화·시험·독립 리뷰·병합 완료 | 실제 발급/소비와 새 입력·유효기간·복귀값은 별도 |
 | H03 SEC 행 | [증적157 일반 Pod 보강][sec-pod]·[hostNetwork 보강][sec-host]은 기존 IF-03/IF-13A 지정 표본을 보완 | L3/L4 표본·counter 상관의 한계와 전체 AC 인수를 분리. 과거 미검증 문구로 수집 완료 표본을 되돌리지 않음 |
 | H04 | [H 회신][h-reply]의 요구 수준은 gateway 구간 귀속, 특정 rule 귀속은 미요구 | 기존 monitor SYN 기준과의 대체 범위·canary/Console·계정·실제 관측. 단순 TIMEOUT을 차단 PASS로 판정하지 않음 |
 | H05·R2 | [정책 회신][h-r12]: 추가 유지 사유 기록 없음, 현 소비자 확인 후 10/27 전에 정리 가능 | Harbor 계정·edge01 Secret 실제 정리와 AC06 인수 |
 | H05 legacy | [10/1 삭제 기록][legacy-deleted]과 [10/10 정정][j-correction]. GWONUK의 [재대조][review]에서도 archived=true, Actions secret/Environment/Variables/Dependabot secret 각0 | 해당 저장소만 직접 재확인. 조직 단위는403, 전체 비밀값·타 저장소 전수를 이번에 확인한 것은 아님. 과거 로그/CI에 따른 옛 Robot 사용 연계이지 비밀값 바이트 대조가 아님 |
 | J03 | [후속 회신][j-correction]: 10/11(일)19:00 이후 가능. db01 콘솔 server08+sudo와 base64 전달 제안 | U01과 정확한 비중첩 창, 실제 수신. 30분은 담당자의 예상. 일정 확정/전달/Restore 성공 아님 |
 
-## 담당자 보충 요청 — 답변은 U01~U03만
+## 최초 보충 질문과 완료조건 — U01~U03 회신 수신, 질문 이력 보존
 
 ### U01 — db01 콘솔 전달 방법의 실현성
 
@@ -65,7 +67,7 @@
 |---|---|---|
 | C01 원본 접근통제 | 실제 공유 관리자·SMB 권한/허용 계정·그룹과 보관자 접근 확인. NTFS 넓은 ACL만으로 외부 공개를 단정하지 않음 | 기존 사본 분석·관리자 확인 경로 준비. 새 민감 원본 추가 전송과 접근통제 완료 판정은 별도 |
 | H02 K8S | 복귀 metadata 선택·실제 호출자 배제·현장 backup/restore, AC4·T14/T15 및 처분7건 | 수신 목표값과 원본 diff·복귀 설계. 17파일 성공을 #10 전체 완료로 확대하지 않음 |
-| H03 Delivery·SEC | 900초 코드/시험 정합화, 실제 SA/CA/정책 참조·비상 principal/사본, 남은 AC 행 | 기존 표본 재사용·코드/최소 Matrix 준비. 현재 회수 미수행과 SA 단위 무효화 가능성 구분 |
+| H03 Delivery·SEC | 900초 코드/시험 정합화는 CICD74 병합 완료. 실제 SA/CA/정책 참조·비상 principal/사본, 남은 AC 행은 잔여 | 기존 표본·병합 코드 재사용·최소 Matrix 준비. 현재 회수 미수행과 SA 단위 무효화 가능성 구분 |
 | H04·J05·J07 | 귀속 기준과 기존 AC 대응, canary·Console·관측 접근, OID-02 공급/OID-03 경로, ICR reboot·현행 HA 영향 평가 | 기존 증적/형상 비교·회차 설계. 실제 AC 변경은 Decision/CR로 분리 |
 | H05 운영 | 실제 Robot 소비/보관·권한/유효성, worker 10/16·push10/18 만료 전 대응 필요성, trust 참조·fresh scan/DB 시각, .50/.102·IPv6 INPUT | 읽기 확인안·회전/정리 영향과 실패 대응 준비. 만료 시각은 10/8 UI 기반 회신이므로 실행 전 최신값 확인 |
 | H06 복구 | fresh UUID/격리·Python/SELinux·대상 ID/Compose/Engine/StopSignal·예산·원 정책/복구점·private 원문 보존 | 기존 PR32~40을 재사용한 installer·H6/늦은 stop·세대 변경 실패 처리 개발·모의검증 |
