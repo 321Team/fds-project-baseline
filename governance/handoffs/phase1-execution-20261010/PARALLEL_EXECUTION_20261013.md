@@ -112,6 +112,12 @@ Deploy는 기존 source2d8a14c의 controller broker2개와 정적 의존성까�
 
 이번 보완의 검토 대상은 새 관측의 해석·후속 최소 범위다. 이미 답한 입력·기존 소스의 재승인·새 공통 Lead GO를 요구하지 않는다. Push 입력hash13b50485와10:00/12:00 창도 변경하지 않는다.
 
+## 7. APP·HA 공급과 실행 카드
+
+[최종 APP·HA 카드](APP_HA_EXECUTION_CARD_20261013.md)에 기존 도구3개 공급 hash,05:13 누락 필드 GET6건, 최소 단일Worker 시험·배치복구와 회귀 순서를 연결했다.05:01의 affinity 없음은 topology spread 없음이 아니다. 보완 조회에서 두 앱의 기존 `DoNotSchedule` 분산 제약과00:34 spec 동일성, Local endpoint각1·HPA0을 확인했다.10/2 HA 이후 PR65의 분산 조건 변경 영향을 별도로 확인하는 안이며 과거 PASS를 철회하지 않는다.
+
+APP CLI의 분 단위 RUN이 사전 DB 조회 RUN과 달라질 수 있는 문제는 도구 재개발 대신 짧은 실행창의 RUN 후보 전체0행 조회와 실제 생성 RUN 결속으로 보완한다. 새 도구 CI·Phase2 코드·전수 장애시험은 추가하지 않았다. 새 Push/Deploy 결과·창/console·DB/MON 현장 접근·단일Drain/배치복귀 허용은 아직 미확정이다.
+
 [finalread]: https://github.com/321Team/fds-project-evidence/blob/d618846a5e25dbe8f75cdc7487c23b7a36c8e0a8/records/p1-final-test-inputs-20261013.md
 [e208]: https://github.com/321Team/fds-project-evidence/pull/208
 [e207]: https://github.com/321Team/fds-project-evidence/pull/207
