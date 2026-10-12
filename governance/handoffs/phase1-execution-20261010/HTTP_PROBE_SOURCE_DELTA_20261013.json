@@ -1,0 +1,105 @@
+{
+  "schema": "P1_PROBE_CANDIDATE_CHANGE_ANALYSIS_1",
+  "observed_at_utc": "2026-10-12T20:26:41.309292+00:00",
+  "repository": "321Team/fds-msa",
+  "base": "8eac4c982076e3c219840a13686b15c46879981f",
+  "candidate": "affbc69beef9967f7977d09a6fec14f7fb6c0e94",
+  "files": [
+    {
+      "path": "fds-engine/app/main.py",
+      "base_blob": "bc1c48c52a75e1c659fd20a39f57436a7472fc39",
+      "candidate_blob": "7e0196df4358db24a0e243b70c419dd3228f531b",
+      "base_sha256": "7b15e74afd7b60a1d1728c195bfafa9a2869c96c07a2d677db82d71495e1e389",
+      "candidate_sha256": "9a238079bfcb392fe93a1fc8198bce6e93a462a8cca118e55c92bf17e8ba8dc1",
+      "whole_file_identical": false,
+      "functions": [
+        {
+          "name": "health",
+          "identical_ast": true,
+          "base_ast_sha256": "410c51c0c0c7c23b084ab09635685730b33f2c1b66d3e07f6f1726b1a0c56a4d",
+          "candidate_ast_sha256": "410c51c0c0c7c23b084ab09635685730b33f2c1b66d3e07f6f1726b1a0c56a4d"
+        },
+        {
+          "name": "ready",
+          "identical_ast": true,
+          "base_ast_sha256": "ab7b432f14bf6df3e86785cbac0fd0e00a8dd5aba1251f7a9c1b980eace1c66d",
+          "candidate_ast_sha256": "ab7b432f14bf6df3e86785cbac0fd0e00a8dd5aba1251f7a9c1b980eace1c66d"
+        },
+        {
+          "name": "evaluate",
+          "identical_ast": true,
+          "base_ast_sha256": "803e1e45c49c66753964a49cddcbe79fdf35d256113a0331ec8a38f917f3d7a8",
+          "candidate_ast_sha256": "803e1e45c49c66753964a49cddcbe79fdf35d256113a0331ec8a38f917f3d7a8"
+        }
+      ]
+    },
+    {
+      "path": "transaction-api/app/main.py",
+      "base_blob": "6a00b1e86e92b842e71412144d83db3863c02cb6",
+      "candidate_blob": "37cecbe234d0a90b77da4c08aae6a1b6e0011892",
+      "base_sha256": "0a9c175880ec36650e92b1314debbf3f27a035025a5b47c7bc93efdfcc7fd74c",
+      "candidate_sha256": "7be21108a0015af90da54c7c033022e25387cef8f407f19521fd96738dbc84e5",
+      "whole_file_identical": false,
+      "functions": [
+        {
+          "name": "health",
+          "identical_ast": true,
+          "base_ast_sha256": "410c51c0c0c7c23b084ab09635685730b33f2c1b66d3e07f6f1726b1a0c56a4d",
+          "candidate_ast_sha256": "410c51c0c0c7c23b084ab09635685730b33f2c1b66d3e07f6f1726b1a0c56a4d"
+        },
+        {
+          "name": "ready",
+          "identical_ast": true,
+          "base_ast_sha256": "56cb975e13f50250684a371df29de60c8ff4ac55cd0d9c69fee969e4198e9191",
+          "candidate_ast_sha256": "56cb975e13f50250684a371df29de60c8ff4ac55cd0d9c69fee969e4198e9191"
+        },
+        {
+          "name": "create_transaction",
+          "identical_ast": true,
+          "base_ast_sha256": "fd18d90e75591c4579f8c143a64138ad4864d9ba6c2b8b33f4338a2c030887ad",
+          "candidate_ast_sha256": "fd18d90e75591c4579f8c143a64138ad4864d9ba6c2b8b33f4338a2c030887ad"
+        }
+      ]
+    },
+    {
+      "path": "fds-engine/run.py",
+      "base_blob": "8659b986becddb4d7e37fc646a0281a952cbd7e6",
+      "candidate_blob": "8659b986becddb4d7e37fc646a0281a952cbd7e6",
+      "base_sha256": "9e9784d9050ebcb6c61e9ee8a7eb67bade24ca93a98541472ac78fc4d997cc29",
+      "candidate_sha256": "9e9784d9050ebcb6c61e9ee8a7eb67bade24ca93a98541472ac78fc4d997cc29",
+      "whole_file_identical": true,
+      "functions": []
+    },
+    {
+      "path": "transaction-api/run.py",
+      "base_blob": "9280a533c9215d3bb3a392fe989d27916a7a7a46",
+      "candidate_blob": "9280a533c9215d3bb3a392fe989d27916a7a7a46",
+      "base_sha256": "ff41034c7d1434ead9405727d0006879fecfb89020c6279be80c606c9d104572",
+      "candidate_sha256": "ff41034c7d1434ead9405727d0006879fecfb89020c6279be80c606c9d104572",
+      "whole_file_identical": true,
+      "functions": []
+    },
+    {
+      "path": "transaction-api/app/db.py",
+      "base_blob": "60b29467f5c8f91518114328f0ef5ca109a8d761",
+      "candidate_blob": "60b29467f5c8f91518114328f0ef5ca109a8d761",
+      "base_sha256": "e627066df9683018c92a1ffbd0f205333e4acdece73c073cf6f110e5ddc1ea4c",
+      "candidate_sha256": "e627066df9683018c92a1ffbd0f205333e4acdece73c073cf6f110e5ddc1ea4c",
+      "whole_file_identical": true,
+      "functions": []
+    },
+    {
+      "path": "transaction-api/app/fds_client.py",
+      "base_blob": "3da0d2e78bd7f64a0afa9cbddce538f5ece4d4d3",
+      "candidate_blob": "3da0d2e78bd7f64a0afa9cbddce538f5ece4d4d3",
+      "base_sha256": "68e23a4229e77a2b2f91c68af65d7cfe36d3d396f2542a19ef92f7106ffc1519",
+      "candidate_sha256": "68e23a4229e77a2b2f91c68af65d7cfe36d3d396f2542a19ef92f7106ffc1519",
+      "whole_file_identical": true,
+      "functions": []
+    }
+  ],
+  "candidate_scope": "PR27 base to candidate only, not historical deployed binary provenance",
+  "runtime_executed": false,
+  "existing_tests_rerun": false,
+  "source_code_changed": false
+}

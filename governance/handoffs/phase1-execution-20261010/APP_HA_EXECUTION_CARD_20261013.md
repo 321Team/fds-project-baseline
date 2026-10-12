@@ -76,7 +76,7 @@ APP 도구 ref `61fbf0bf1ace1fa3a5eb983c002de2a0ddac856a`는 조회 main `6e7acf
 5. 경로는 edge01→3Worker NodePort 직접이다. 현재 Client→edge upstream 관측과 별도 연결하며, 직접 경로의 성공을 모든 Client/LB 경로 성공으로 바꾸지 않는다. 기존6개 PromQL은 템플릿 하단에 보존했다.
 6. 실패하면 후속 승격 중단·불확정 응답/Transaction ID·DB행·metrics·rc를 보존한다. 기능 시험 거래는 [기존 보존 결정](https://github.com/321Team/fds-project-baseline/issues/11#issuecomment-5887795557)을 유지한다. image 복귀는 별도 허용한 Deploy 경로만 사용한다. 구 image 복귀 시 업무 metrics 노출이 돌아오는 보안 잔여도 기록한다.
 
-HTTP readiness 실패→Endpoint 제외/복귀와 liveness 실패→**동일 Pod UID의 container restart**는 각각 다른 증거다. 이번 정상 회귀·drain·rollout을 그 장애 성공으로 계산하지 않는다. 필요한 추가 Probe 사례의 대상·주입·관측·회수는 별도 구체화 대상이며 MON 단일 replica/local PV에 시험을 확대하지 않는다.
+HTTP readiness 실패→Endpoint 제외/복귀와 liveness 실패→**동일 Pod UID의 container restart**는 각각 다른 증거다. 이번 정상 회귀·drain·rollout을 그 장애 성공으로 계산하지 않는다. [기존 DB/FDS 장애 성공 재사용과 실제 engine HTTP 최소 후속](HTTP_PROBE_REUSE_20261013.md)을 별도로 대조했다. 필요한 추가 Probe 사례의 대상·주입·관측·회수는 별도 구체화 대상이며 MON 단일 replica/local PV에 시험을 확대하지 않는다. Probe 회차를 선택하면 HA와 별도 구간에 두고, 모두 회복된 뒤 최종 거래 회귀를 수행한다.
 
 ## 6. 이번 검증 / 남은 단계
 
