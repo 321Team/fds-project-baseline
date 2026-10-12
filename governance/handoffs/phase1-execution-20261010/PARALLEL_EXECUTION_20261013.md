@@ -93,6 +93,26 @@ O01 제3자 Runbook 재현과 O02는 증거·적격성이 맞는 경우 같은 �
 
 STATIC: 새 문서와 링크·고정 소스 대조. RUNTIME_READ:04:26 정상 CP1 인증/SA GET 및04:28~29 6노드 metadata 수집. 신규 Token/배포/재부팅/정책/Runner 공급은 미실행. 읽기 원본 검토는 [증적208][e208], DB/DR/C01/Grafana는 [PR164][b164]를 사용한다. 이번 문서 때문에 변경 없는 소스 전체를 재리뷰하거나 새 공통 GO를 추가하지 않는다.
 
+## 6. 05:01 추가 읽기로 좁힌 시험 범위
+
+[11개 API GET·정책/배치·Probe 원본][finalread]은 모두 rc0이며 Node6 Ready, 앱 두 종류 replicas3/Ready3·Worker별1/1/1을 확인했다. 순수 읽기 collector의 독립 소스 REVIEW는 미수행(Pre-check)이고 원격 변경은 없다. Secret/환경변수 값과 API 응답 전체를 저장하지 않고 명시 필드의 투영 출력·원 응답 hash를 보존했다.
+
+| 준비 대상 | 현재 관측·기존 근거 | 줄일 수 있는 중복 / 남은 조건 |
+|---|---|---|
+| ICR reboot | 9/27 Worker GNP3 spec과 현재 차이는 tier 미기재→default 명시뿐. 나머지 spec 동일 | 과거 6대 reboot를 전부 무효화하지 않는다. HEP/Felix/다른 정책·route와 필요한 AC18 범위는 별도로 대조하며 이번 읽기로 AC18을 PASS 처리하지 않음 |
+| 단일 Worker 후보 | Worker01/02 PVC Pod0, Worker03에는 MON local PV/PVC Pod3개 | 필요한 시험의 우선 후보는 Worker01/02. Worker03의 MON 관측/복구 영향은 피하고 control01 기존 drain/reboot 제한 유지. 실제 대상/창/콘솔/복귀점은 미확정 |
+| HA/APP 최종 회귀 | 현 앱3/3·각Worker1/1/1, affinity/PVC 없고 앱 PDB 없음 | 새 digest 배포 후 형상을 고정하고 변경 영향에 필요한 HA/최종 E2E만 연결. 현재 상태를 먼저 깨서 시험한 뒤 새 배포 후 다시 반복하지 않음. 새 PDB/배치 정책 개발은 자동 추가하지 않음 |
+| HTTP Probe | engine8001/API8000의 /readyz·/livez, readiness10s×실패3, liveness20s×실패3, timeout1s, startupProbe 없음 | 기존 정의와 최종 앱 동작을 연결하여 필요한 실패 전이/회복 사례만 준비. 없는 startupProbe를 새 필수 AC로 만들지 않음 |
+
+Worker GNP의 tier 차이는 [Calico의 생략 시 default tier 설명](https://docs.tigera.io/calico/latest/network-policy/policy-tiers/tiered-policy)과 정합한다. 이것은 spec 차이 해석이며 전체 dataplane 동일성 증거가 아니다. 단일 reboot와 HA drain도 각각 다른 동작으로 관리하고, 같은 증거를 소비할 수 있더라도 한 동작만으로 둘을 자동 완료하지 않는다.
+
+Runner 구현은 [Ansible PR81](https://github.com/321Team/infra-ansible/pull/81)에 발행했다. 기존 분류기 포함 로컬 MOCK49 PASS/0SKIP이며 알림은 기본 비활성이다. 실제 새 CI Run38300602539/Attempt1/Job114982327738가 발생해 제2운영자 인수에 소비할 수 있는 대상이 생겼다. 이 값은 PR HEAD `bd1e7876382eab9c0df322a8a4d44546d2d8fd94`의 관측이며 공급 직전 최신 identity를 확인한다. 운영자·threshold/주기·수신·새 공급 창은 해당 PR에서 한 번에 받는다. Linux CI·상시 알림 운영·O02는 아직 완료가 아니다.
+
+Deploy는 기존 source2d8a14c의 controller broker2개와 정적 의존성까지11파일을 로컬로 묶었다. remote7-file JSON bundle·manifest 포함13members, archive SHA256 `67df6be5d7f935f2618e55365b7c3f0250bea99b771a579873e7961f9061f261`,266,240bytes다. 로컬 산출물이며 서버 배치/실행은 아니다. 새 Push receipt 뒤 하나의 Deploy 실행/복귀 범위로 연결하고, 기존 Deploy broker에 이미 있는 fresh SA/권한·TokenRequest/TokenReview 검증 앞에 **별도 token 진단 회차를 자동 필수로 추가하지 않는다**. 별도 진단은 실패나 실제 필요 근거가 생겼을 때 해당 범위로 좁힌다.
+
+이번 보완의 검토 대상은 새 관측의 해석·후속 최소 범위다. 이미 답한 입력·기존 소스의 재승인·새 공통 Lead GO를 요구하지 않는다. Push 입력hash13b50485와10:00/12:00 창도 변경하지 않는다.
+
+[finalread]: https://github.com/321Team/fds-project-evidence/blob/d618846a5e25dbe8f75cdc7487c23b7a36c8e0a8/records/p1-final-test-inputs-20261013.md
 [e208]: https://github.com/321Team/fds-project-evidence/pull/208
 [e207]: https://github.com/321Team/fds-project-evidence/pull/207
 [b164]: https://github.com/321Team/fds-project-baseline/pull/164
