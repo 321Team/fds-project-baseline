@@ -8,8 +8,8 @@
 
 | 순서 | 지금 진행하는 일 | 해당 단계 완료조건 / 독립 진행 |
 |---|---|---|
-| 1 | 기존 Push 입력의 독립 검토 수신 | [증적208][e208]의 목표hash13b50485·10:00/12:00 창. 사용자 실행 허용은 이미 수신. 새 Lead GO·PR전체 병합을 추가 gate로 만들지 않음 |
-| 2 | Deploy 인증·기존 소스 bundle·복구 입력 준비 | 아래 §2. 인증 경로는 이번 읽기로 확인. 새 Push receipt·최종 대상/창·복구 범위가 필요. Push 전 가능한 준비는 계속 |
+| 1 | Push 입력 승인·실제 실행 완료 | 목표hash13b50485 독립 승인 후07:51 실제 fresh Scan/두 이미지 Push·정리 PASS. 새 Runtime 증적 편입 검토는 [증적208][e208]에서 진행. 아래 §8 |
+| 2 | Deploy 인증·기존 소스 bundle·복구 입력 준비 | 아래 §2. 인증 경로와 새 Push receipt 확보. 최종 대상/창·복구 범위·실행 직전 관측은 필요 |
 | 3 | OID03 경로와 ICR 부팅 잔여의 분리 | 아래 §3. OID02 실제 반입은 재수행하지 않음. 공급물·경로·보호 처분만 좁혀서 결정 |
 | 4 | Runner 감시/알림과 O02 실운영 인수 | 아래 §4. 기존 분류기·운영자 카드는 재개발하지 않음. 실제 필요한 다음 Job에 제2운영자 인수를 결합 |
 | 병행 | DB/DR/C01/Grafana 기존 회신 | [PR164][b164] D1/C1/C2/G1/G2 사용. 같은 질문을 새 PR에 복제하지 않음 |
@@ -39,7 +39,7 @@ Harbor 운영 manager/H6는 별도 구축 세션의 담당 범위다. 이 문서
 
 ### 2.2 새 Push 후 한 번에 확정할 입력
 
-현재 APP Source affbc69의 두 이미지 후보와 기존 TBS37890963668은 이미 확정돼 있다. [APP Lead 입력 결정][appinput]을 다시 승인받지 않는다. 그러나 **새 Push Run/Attempt·remote digest·정리까지 결속된 receipt는 아직 없다**. 옛 Push 결과나 Build Run으로 채우지 않는다.
+현재 APP Source affbc69의 두 이미지 후보와 기존 TBS37890963668은 이미 확정돼 있다. [APP Lead 입력 결정][appinput]을 다시 승인받지 않는다. **07:51 새 Push Run38318968352/Attempt1·remote digest·정리까지 결속된 receipt를 확보했다**. 아래 §8과 준비 입력에 실제 값을 연결했다. 새 증적 편입 검토와 Deploy 실행 허용은 별도로 유지한다.
 
 1. 새 Push receipt 원문·SHA256·실제 실행 context와 두 이미지 remote digest를 대조한다. 미완료/부분 Push면 Deploy0, claim/증적 보존.
 2. 실행 직전 두 Deployment의 UID·현재 image/spec·replica/readiness, SA UID·CA·현재 main SHA·동시 변경 부재를 다시 읽는다.03:10 스냅샷을 고정 최신값으로 쓰지 않는다.
@@ -116,7 +116,21 @@ Deploy는 기존 source2d8a14c의 controller broker2개와 정적 의존성까�
 
 [최종 APP·HA 카드](APP_HA_EXECUTION_CARD_20261013.md)에 기존 도구3개 공급 hash,05:13 누락 필드 GET6건, 최소 단일Worker 시험·배치복구와 회귀 순서를 연결했다.05:01의 affinity 없음은 topology spread 없음이 아니다. 보완 조회에서 두 앱의 기존 `DoNotSchedule` 분산 제약과00:34 spec 동일성, Local endpoint각1·HPA0을 확인했다.10/2 HA 이후 PR65의 분산 조건 변경 영향을 별도로 확인하는 안이며 과거 PASS를 철회하지 않는다.
 
-APP CLI의 분 단위 RUN이 사전 DB 조회 RUN과 달라질 수 있는 문제는 도구 재개발 대신 짧은 실행창의 RUN 후보 전체0행 조회와 실제 생성 RUN 결속으로 보완한다. 새 도구 CI·Phase2 코드·전수 장애시험은 추가하지 않았다. 새 Push/Deploy 결과·창/console·DB/MON 현장 접근·단일Drain/배치복귀 허용은 아직 미확정이다.
+APP CLI의 분 단위 RUN이 사전 DB 조회 RUN과 달라질 수 있는 문제는 도구 재개발 대신 짧은 실행창의 RUN 후보 전체0행 조회와 실제 생성 RUN 결속으로 보완한다. 새 도구 CI·Phase2 코드·전수 장애시험은 추가하지 않았다. 새 Push 결과는 §8에서 확보했다. Deploy 결과·창/console·DB/MON 현장 접근·단일Drain/배치복귀 허용은 아직 미확정이다.
+
+## 8. 07:51 Push 완료 후 Deploy에 넘기는 실제 입력
+
+[새 Push 원본과 결과][pushruntime]는 main2d8a14c·APP affbc69·TBS37890963668을 사용한 Run38318968352/Attempt1이다. 실행 Job은07:51:02 시작,07:51:27 두 이미지 전송·tag/digest 확인까지 완료했다. fresh Scan HIGH/CRITICAL0, credential-cleanup PASS, 승인된 Actions Robot Secret2개 삭제/readback PASS, 사후 TLS/health PASS다. 기존10:00/12:00 창 안에서1회 실행했고 claim은 보존했다.
+
+[준비 입력 JSON](DEPLOY_AFTER_PUSH_INPUTS_20261013.json)에 실제 Run/context·private receipt 위치·6개 receipt SHA·두 remote digest를 채웠다. 이 파일은 실행기용 최종 record가 아니며 `template_only=true`, `runtime_authorized=false`, request/창/approval 미확정, rollback 미승인을 유지한다. 과거 target/SA/CA 관측을 최신으로 위장하지 않았다.
+
+- engine 새 digest: `sha256:de34afb7a557d6ccc844fb74613ebc971eb493260236acc35ef3051935122813`.
+- API 새 digest: `sha256:ef0afe42feb0f9e50f54b5aaab99a34bbeb01f10bc9fb8a0580519101645dc39`.
+- 서버 원본: `/home/server01_cicd-runner/FDS_CICD_Push.cb_o91gw`. 두 repository의 새 tag는 `delivery-931b66469d0e4946853f44a3ba404bea`.
+
+남은 것은 §2의 Deploy/복귀 실제 범위·창/동시변경 배제·콘솔 인수, 그 시점의 fresh 대상 관측과 exact plan/사용자 승인 결속이다. 이미 확보한 Push 결과나 입력의 재승인을 새 gate로 만들지 않는다. 새 TokenRequest·Deploy·rollback은 이번 Push 허용에 포함되지 않으며 아직 실행하지 않았다. 전체 Delivery/HA/Probe/E2E·AC 인수는 완료가 아니다.
+
+[pushruntime]: https://github.com/321Team/fds-project-evidence/blob/b6e545f48a06bd28ace7167c44c5cf3dfbfd15bd/records/p1-app-push-runtime-20261013.md
 
 [finalread]: https://github.com/321Team/fds-project-evidence/blob/d618846a5e25dbe8f75cdc7487c23b7a36c8e0a8/records/p1-final-test-inputs-20261013.md
 [e208]: https://github.com/321Team/fds-project-evidence/pull/208

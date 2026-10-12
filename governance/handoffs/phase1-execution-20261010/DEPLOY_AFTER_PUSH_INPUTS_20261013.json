@@ -1,0 +1,170 @@
+{
+  "schema": "P1-CICD-preparation-observations-3",
+  "template_only": true,
+  "runtime_authorized": false,
+  "workflow_sha": "2d8a14c55ea4b61f53b7ac6d682cd5e97575dda7",
+  "app_source_sha": "affbc69beef9967f7977d09a6fec14f7fb6c0e94",
+  "cp1_existing_auth": {
+    "verified_at_utc": "2026-10-12T19:26:50.546344+00:00",
+    "host": "k8s-control01",
+    "user": "server02",
+    "controller_key_path": "/home/server01_ansible/.ssh/id_ed25519",
+    "ca_path": "/home/server02/FDS_CICD_PublicCA.uua3ecs6/kubernetes-ca.pem",
+    "ca_sha256": "5e4462b48b67aa3c452119f02578feb5b2ace358782c9b050ba0ad2ea951a49c",
+    "sa_uid": "8f1ddfef-7bec-4b15-8cb7-c4b1a068a176",
+    "scope": "SSH + existing-user SA GET only; native broker, TokenRequest, TokenReview and Runner SA consumption remain unexecuted"
+  },
+  "runner_existing_auth_reference": "evidence PR208 delivery-inputs/03:13 Runner receipt; key p1_ansible_ed25519",
+  "target_observation_reference": "p1-delivery-runner-20261013/cluster; earlier 03:10 observation, refresh before Deploy",
+  "targets_observed": [
+    {
+      "metadata": {
+        "name": "fds-engine",
+        "namespace": "fds-app",
+        "uid": "bf825dec-465b-4603-8b71-f768d195531c",
+        "resourceVersion": "5214670",
+        "generation": 5
+      },
+      "spec_sha256": "e091caa8a78d8a90211a7db9e2f9a5137e319056b14b1b9106e96c85f676f15c",
+      "containers": [
+        {
+          "name": "fds-engine",
+          "image": "10.1.93.54/fds/fds-engine@sha256:5e2a081cd51a957c3fad038b3eab07884c446ea3c2a814a905e3f41c24f67369",
+          "imagePullPolicy": "IfNotPresent"
+        }
+      ],
+      "replicas": 3,
+      "status": {
+        "observedGeneration": 5,
+        "readyReplicas": 3,
+        "availableReplicas": 3,
+        "updatedReplicas": 3
+      }
+    },
+    {
+      "metadata": {
+        "name": "transaction-api",
+        "namespace": "fds-app",
+        "uid": "8a2af808-ec33-41f2-80b5-addde4e28910",
+        "resourceVersion": "5215276",
+        "generation": 9
+      },
+      "spec_sha256": "07cdf04742aa5be6ef220071232ad1f863e87f1033210269e2cc0dbc18949a9e",
+      "containers": [
+        {
+          "name": "transaction-api",
+          "image": "10.1.93.54/fds/transaction-api@sha256:a7093136d12640da00570c18ed278eacbb8e9ba3637c7d509571346eac45cc33",
+          "imagePullPolicy": "IfNotPresent"
+        }
+      ],
+      "replicas": 3,
+      "status": {
+        "observedGeneration": 9,
+        "readyReplicas": 3,
+        "availableReplicas": 3,
+        "updatedReplicas": 3
+      }
+    }
+  ],
+  "new_push_receipt": {
+    "status": "RUNTIME_PUSH_PASS_REVIEW_PENDING",
+    "source_commit": "affbc69beef9967f7977d09a6fec14f7fb6c0e94",
+    "workflow_sha": "2d8a14c55ea4b61f53b7ac6d682cd5e97575dda7",
+    "run_id": "38318968352",
+    "attempt": 1,
+    "run_url": "https://github.com/321Team/infra-cicd/actions/runs/38318968352",
+    "runner_evidence_directory": "/home/server01_cicd-runner/FDS_CICD_Push.cb_o91gw",
+    "record_sha256": "13b50485c6d3fe7bbb155561f88a22c6f06aab6dc73e9f14fb0e8f02696c2d89",
+    "receipts_sha256": {
+      "dispatch.json": "dc5f5f0720de1f08265dfd58e2d4adb3cbca88f18d1833c523e117795e2a6680",
+      "result.json": "012545c60017ab1120ab9b61459451a794c67b7a0a803d4f079798b5ed97f905",
+      "dispatch-result.json": "3f82a9bc8c498553970552ad92f582ff2b6c5481b0aa1294399df614f359390b",
+      "credential-cleanup.json": "ab1efe7275df08dd31b363410107c0f4390ba5350ac98567d8aad5897bbce641",
+      "fresh-scan/result.json": "dc1b25bbede967b760b5a2609530a3bb1d4addc70a35db9d3da9f8256bcea731",
+      "fresh-scan/db/result.json": "6be4e7203a3dcc4dfddd9ee7d1a722b741620abe1a1e33672534b20454b0317e"
+    },
+    "images": {
+      "transaction-api": {
+        "result": "PASS",
+        "registry_repository": "10.1.93.54/fds/transaction-api",
+        "tag": "delivery-931b66469d0e4946853f44a3ba404bea",
+        "manifest_digest": "sha256:ef0afe42feb0f9e50f54b5aaab99a34bbeb01f10bc9fb8a0580519101645dc39"
+      },
+      "fds-engine": {
+        "result": "PASS",
+        "registry_repository": "10.1.93.54/fds/fds-engine",
+        "tag": "delivery-931b66469d0e4946853f44a3ba404bea",
+        "manifest_digest": "sha256:de34afb7a557d6ccc844fb74613ebc971eb493260236acc35ef3051935122813"
+      }
+    },
+    "credential_cleanup": "PASS",
+    "actions_robot_secret_cleanup": "PASS",
+    "evidence_commit": "b6e545f48a06bd28ace7167c44c5cf3dfbfd15bd",
+    "evidence_reference": "https://github.com/321Team/fds-project-evidence/blob/b6e545f48a06bd28ace7167c44c5cf3dfbfd15bd/records/p1-app-push-runtime-20261013.md"
+  },
+  "deploy_request_id": null,
+  "deploy_window": null,
+  "deploy_approval_reference": null,
+  "rollback_approved": false,
+  "rollback_limit": "current previous digests restore the business-port /metrics exposure; no automatic security acceptance",
+  "source_bundle": {
+    "source_sha": "2d8a14c55ea4b61f53b7ac6d682cd5e97575dda7",
+    "files": [
+      {
+        "path": "tools/delivery/deploy_native_probe.py",
+        "git_blob": "a271044f2d72ce26b4b6b7c448a36c82e4bdd2d8",
+        "sha256": "dec7e2aeb9b2706f8abdad234c755530f4b5655d95c658a8a9335720640e4091",
+        "bytes": 27244
+      },
+      {
+        "path": "tools/delivery/deploy_cp1_access.py",
+        "git_blob": "105550bd95c2e7c1297737d935887c47a608b776",
+        "sha256": "529490b0421c0b438be341eded8aa40a3374da680315bed3e896eaf1eacce1ca",
+        "bytes": 21582
+      },
+      {
+        "path": "tools/delivery/deploy_binding.py",
+        "git_blob": "fcb9549782fd99f9ddfd7cf04f9b832fab36b898",
+        "sha256": "9983b53890b9ac251328529726012168bea6b3fbc14667a719ccb87c1955aafb",
+        "bytes": 7998
+      },
+      {
+        "path": "tools/delivery/deploy_credential.py",
+        "git_blob": "4fddeb1f8d2d18456ac9e4bb05702d93883b2213",
+        "sha256": "f098b3525a466e1045eebb739af0560a4a4bfe0a708d5aba5e323e3095dfb967",
+        "bytes": 8459
+      },
+      {
+        "path": "tools/delivery/deploy_transport.py",
+        "git_blob": "ffa296dbb358eaac860827d03ee2d4c7cc6a9238",
+        "sha256": "7417327e92c59aadce5dadb983151db8cc6a7c3509e6ecefa40058776b4e9fa6",
+        "bytes": 10201
+      },
+      {
+        "path": "tools/delivery/deploy_adapter.py",
+        "git_blob": "8ceb27bdfde60ccddcb4613eb1e1600ae912a58e",
+        "sha256": "24dcdaa3dc21720e4d2100dbfcb5ac77050a2b81f0a8435604f232aff3ce5684",
+        "bytes": 16427
+      },
+      {
+        "path": "tools/delivery/delivery_gate.py",
+        "git_blob": "66600a9c0fbf66aee1f099906b0915dd60ddb840",
+        "sha256": "bc9d178d6a6b6faa6a1d65e99b5511f1f0e19b7fb5a53cadcc846d3bd4184fd0",
+        "bytes": 9780
+      }
+    ],
+    "bundle_sha256": "8cfdcce5e4b5eb95001d27e35606e5121edf77d8c2c1f5f481016c79933baa5c",
+    "bytes": 104819,
+    "remote_staging": "NOT_PERFORMED",
+    "token_issued": false,
+    "deploy": "NOT_EXECUTED"
+  },
+  "phase2_included": false,
+  "remaining_inputs": [
+    "Deploy start/end window and conflict exclusion",
+    "Fresh Deployment/SA/CA/main observations at execution time",
+    "Exact request/plan/approval bytes and narrow runtime authorization",
+    "Rollback boundary, security consequence and console operator"
+  ],
+  "observation_notice": "Existing target/CA/SA observations retain their historical timestamps and are not a fresh Deploy preflight. This is preparation data, not an executable Deploy record."
+}
