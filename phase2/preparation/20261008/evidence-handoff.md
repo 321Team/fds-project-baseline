@@ -103,6 +103,22 @@ G4 [입력 요약](https://github.com/321Team/fds-project-baseline/issues/39#iss
 
 비공개 A1/A2 캡처8장과 ledger는 새 결정에서도 직접 수신·재해시 미완료로 명시됐다. 기존 파일/실행 회차로 수용하며 재촬영·재연결·재부착을 요구하지 않는다. Red Hat account number·Organization ID·External ID는 다른 식별자이므로 기존 비공개 자료에서 승인 조직 대응을 확인하고 공개 원문을 추가하지 않는다.
 
+### 10/13 19:55 원본 수신 보완 — A3-1 내용 검토 / network 태그 보고
+
+위 미수신 기록 이후 [A3-1 실행 결과](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6143630905)와 [공유 완료](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6143723258)를 수신했다. **19:46:59 KST 검토자가 지정 비공개 경로에서 원본 TGZ를 실제 수신**했으며 아래 범위까지 직접 검토했다. 원본 Plan/JSON·로그·조직 식별자는 공개 문서에 포함하지 않는다.
+
+| 단계 | 이번 확인 범위 / 잔여 |
+|---|---|
+| 수신·무결성 | `a3-1-plan-20261013-103122.tgz` 13,968 bytes, SHA256 `a5350476112fe1feee13951e5a61ca391bad35d9b86ff64206e3d7197e595368` 일치. 내부 manifest 5/5 일치. run.log는 manifest 대상 외이나 검증된 archive에 포함 |
+| source·변경 범위 | saved Plan 내장 Terraform4파일+lock이 source `f1f8adf66d3b3c9348ebb919fe0dbb4f8fa54fe2`와 5/5 일치. 수신 JSON은 account roles3+attachments4+managed OIDC1+AWS OIDC1 = 9 create, 수정/삭제/operator0. binary→JSON 독립 재생성은 미수행 |
+| STATIC 내용 검토 | 지정 source checker의62항목 통과/STOP0, 외부 subprocess 호출0. DEFERRED는 실제7행(OIDC URL1+역할3개×inline/managed2)이며 보고의 “5종”과 구분. support trust는 Plan 입력과의 자기일치 검증이므로 승인 CLI 원본 대조 완료를 뜻하지 않음 |
+| Apply 판단 전 연결 | 이하영의 기존 CLI trust 원본·조직 대응, exact 명령/RC·private 입력 hash, backend key/workspace·state/lock 전후 기록 → 이권욱 대조. log의plan0과9create를 No changes로 해석하지 않으며 detailed-exitcode 사용 여부는 명령 기록 미수집. 내장 빈 state는 원격 state 부재 증거가 아님. 기존 자료의 누락 연결이며 전체 Plan/시험 재요구 아님 |
+| 후속 실제 검증 | 별도 exact Plan Apply GO 후 role/attachment/inline/boundary 및 OIDC issuer/thumbprint/client IDs readback. 부분 실패는 state·실제 ID 보존 후 중단, 임의 destroy/state rm/재Apply 금지. Stage2/Create·G4 완료는 별도 |
+
+새 source 결함은 확인되지 않았고 JSON의 Stage1 범위는 수용 가능하다. **무결성·STATIC 수용과 Apply 승인·실제 생성 성공은 다르다.** 작성자 검토이며 GitHub 독립 승인·병합·Runtime Apply를 수행하지 않았다.
+
+network 태그 [결과 보고](https://github.com/321Team/infra-terraform/issues/11#issuecomment-6143615282)는19:17 Plan RC2/0add·2change·0destroy, 두 subnet의 ELB tag만으로 보고됐다. 보고된 zip은 검토자의 지정 경로에서 미수신이므로 직접 해시/내용 검토 완료로 올리지 않는다. 보고의 drift5개 설명은 CloudTrail 원인 검증과 구분한다. 실제 태그 Apply/readback·Stage-A Ready·VPN 재Apply GO는 미완료다. A3 원본 수신 때문에 이 행도 수신 완료로 바꾸지 않는다.
+
 ### #49 rolling 집계와 #54 Freeze 연결
 
 10/07~22에는 생산자가 기존 티켓/증적에 결과를 누적하고 이권욱은 **변경된 링크·판정만** 갱신한다. 10/23에 처음 자료 작성을 시작하지 않는다. 다음 묶음을 동일 candidate 목록으로 #54→#56→#55에 전달한다.
