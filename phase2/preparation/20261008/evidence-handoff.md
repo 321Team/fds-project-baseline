@@ -64,14 +64,21 @@ Network 원본 `p37-netop-jaehwan-20261012T121250Z.tgz`의 기존 수신·SHA/ma
 - #46의 [PR75](https://github.com/321Team/infra-cicd/pull/75)는 `39fd173b4fd22e1ca2b4e430cc984ace01947bd1`로 갱신됐다. 기존 source/시험 변화 없이 중단 RUN 복구 검토 문서2개만 보완했으며 새 HEAD CI2 SUCCESS·104중94PASS/10SKIP, 독립 리뷰0·Draft·미병합이다. 운영 재시작 후 journal/active 조정 기능은 미구현 잔여로 명시했다.
 - P2 공급 입력의 관련 상태만 소비한다: [CICD PR76](https://github.com/321Team/infra-cicd/pull/76) `f78033511b542d6241064ca7be3e17b4100be8ad`와 [PR77](https://github.com/321Team/infra-cicd/pull/77) `f323dfc1eaa4c491042d0655dc840e5b1a57920d`는 이미지 권한/격리 기동 검사 후보이며 OPEN이다. 이 채팅은 P1 코드 리뷰·수정·실행을 하지 않는다. P2는 실제 새 이미지/승인 digest·공급 결과가 인계된 뒤 소비하며 후보 수정/CI를 실제 새 이미지 기동 PASS로 올리지 않는다.
 
-### #49 rolling 집계와 #54 Freeze 연결 — 계속
+### 10/13 18:45 추가 대조 — 변경된 PR 상태만 갱신
+
+- [evidence PR214](https://github.com/321Team/fds-project-evidence/pull/214)의 충돌 해소 HEAD는 `5dd4ef0bde529c9d75deaddd6131df3e577a8617`이다. 부모는 기존 승인 HEAD `8b0bf20`와 PR213 병합 main `476cbb2`이며 VPN 폴더의 Git blob 118개·mode가 기존 승인본과 동일하다. main의 대장 2,779줄을 순서대로 보존하고 VPN manifest 1행만 추가됐으며 해당 SHA256 연결을 직접 대조했다. 최신 check SUCCESS·MERGEABLE, 아직 OPEN이다. 이는 변경분 재검증이며 비공개 Plan 전체 수신·새 Runtime·G4 인수가 아니다. 실제 새 HEAD 승인/병합 기록은 PR 원본을 따른다.
+- [CICD PR76](https://github.com/321Team/infra-cicd/pull/76)은 18:29:40 KST `770618173e97c915a769a88760ba35d0de950e5e`, [PR77](https://github.com/321Team/infra-cicd/pull/77)은 18:30:41 KST `fadc07f18b5bf7febc8cf601fa138d8f35e9ccb4`로 병합됐다. [결합된 main의 Source validation](https://github.com/321Team/infra-cicd/actions/runs/38376834597)은 SUCCESS다. P2는 이 사실만 소비하며 새 실제 이미지 기동·remote digest·ROSA imageID는 후속 입력이다.
+- [Terraform PR29](https://github.com/321Team/infra-terraform/pull/29)는 18:29:11 KST `bd3b79c681d580cfceba31d6c62844727c5aeef8`로 병합됐다. 설계/소스 준비 상태의 갱신이며 A2 권한 STOP·실제 생성 선행조건은 각 실행 기록을 계속 따른다.
+- 일반 저장소의 이 문서 전용 PR은 [REVIEW_AUTHORITY_POLICY §2](../../../governance/REVIEW_AUTHORITY_POLICY.md)에 따라 Lead 검토로 처리한다. PR75 코드와 PR214 증적의 독립 리뷰는 별개로 유지한다. 상시 Support 서명을 새 필수 Gate로 추가하지 않는다.
+
+### #49 rolling 집계와 #54 Freeze 연결
 
 10/07~22에는 생산자가 기존 티켓/증적에 결과를 누적하고 이권욱은 **변경된 링크·판정만** 갱신한다. 10/23에 처음 자료 작성을 시작하지 않는다. 다음 묶음을 동일 candidate 목록으로 #54→#56→#55에 전달한다.
 
 | 집계 묶음 | 현재 연결 / 다음 입력 | #49에서 닫는 조건 |
 |---|---|---|
 | Cloud/VPN·Architecture | 위 G4 7개 행, #34/#35/#37/#39 | As-built와 승인 기준 차이·actual ID·기존 Runtime 원본/리뷰/병합 범위 대응 |
-| App/Delivery·Hybrid 시험 | [PR75](https://github.com/321Team/infra-cicd/pull/75) `df7c01c4ad0a5e8aa884cba1a4cb50ecac8ebbaf`: Draft, 리뷰0, CI2 SUCCESS; Linux104 중94PASS/10SKIP. #43/#47/#50 actual 원본은 후속 | source→remote digest→runtime imageID/업무 결과, 실패차단·복구·미실행 분리. PR75 MOCK은 실제 TLS/API/배포 증적 아님 |
+| App/Delivery·Hybrid 시험 | [PR75](https://github.com/321Team/infra-cicd/pull/75) `39fd173b4fd22e1ca2b4e430cc984ace01947bd1`: Draft, 독립 리뷰0, CI2 SUCCESS; Linux104 중94PASS/10SKIP. #43/#47/#50 actual 원본은 후속 | source→remote digest→runtime imageID/업무 결과, 실패차단·복구·미실행 분리. PR75 MOCK은 실제 TLS/API/배포 증적 아님 |
 | Decision·Known Issue | #36 결정, [D22](d22-lead-review.md), [D23](decision-packet.md), 조건부 P1/P2 결정 | 확정/제안·Deferred의 이유/Owner/기한/재검토 조건 구분. 미결 결정값 합성 금지 |
 | 비용·정리·Review | [운영·Review 준비](lifecycle-review-preparation.md) | 원본 보존/수신, 삭제·보존 inventory, 교육장 리포트·잔여 Owner/Due, #52 실제 시간/참석자 기록 |
 

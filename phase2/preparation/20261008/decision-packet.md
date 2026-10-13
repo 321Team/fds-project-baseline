@@ -57,12 +57,14 @@
 | 소비 경로 | 지금 고정할 기준 | 아직 필요한 실제 입력 / 생산 책임 | 실패 시 처리 |
 |---|---|---|---|
 | Runner → ROSA API | public/public 승인, 실제 API DNS 이름·승인 CA·identity 사용 | API URL/CA/identity·Runner의 DNS/443 접근 receipt: #38 이하영 → #46 이권욱 | 이름/TLS/identity 불일치면 배포 STOP. 임의 IP/hosts·검증 해제로 우회하지 않음 |
-| 사용자/시험기 → Route | 실제 Route host와 TLS를 app/render 계약에 결속 | API·engine Route host: #38/#43 이하영·이재환 → #46/#47 | PENDING host이면 실행 입력 생성 STOP. public Ingress가 DB 공개를 뜻하지 않음 |
+| 사용자/시험기 → Route | 실제 Route host와 TLS를 app/render 계약에 결속 | transaction-api의 `transaction-api-api`·`transaction-api-readyz` 두 Route가 공유하는 승인 host 1개: #38/#43 이하영·이재환 → #46/#47 | PENDING host이면 실행 입력 생성 STOP. engine·metrics용 외부 Route를 추가하지 않으며 public Ingress가 DB 공개를 뜻하지 않음 |
 | ROSA APP → DB | DB `10.1.93.55`, 승인 VPN/source/포트 계약 | #37/#47 실제 승인 source·ALLOW/비승인 DENY·원복 결과: 이재환 | 통신 실패를 DNS 변경으로 해결했다고 가정하지 않음. DB runtime 예외의 정확한 범위만 적용 |
 | ROSA node → Harbor | P0 IP `10.1.93.54`; 실제 image host와 CA key/SAN 일치 | #42가 선택할 실제 image reference·pull principal·node 경로: 이하영·이재환 | IP 기반 이미지와 FQDN 기반 이미지를 자동 치환하지 않음. TLS/pull 실패면 신규 rollout STOP |
 | Hybrid DNS 확장 | D23 Go일 때만 #48 착수 | 최소 권위 zone/query source·TCP/UDP53·return·loop 방지·원복: 이권욱, 경로 입력 이하영·이재환 | 기존 DNS 설정 보존. 새 규칙 원복 범위가 없으면 실행하지 않음 |
 
 `fds-app`이 소비 namespace이며 `rosa-app`은 overlay 이름이다. #46 댓글의 표기 차이를 namespace 변경 승인으로 사용하지 않는다. API/Route 이름은 아직 수신하지 않은 값을 생성하지 않는다. Harbor CA/경로의 이미 접수된 입력은 [D22 보완](d22-lead-review.md)을 재사용한다.
+
+10/13 18:45 정합성 검토: Route 대상은 [fds-msa 병합 계약](https://github.com/321Team/fds-msa/blob/6e7acf1053b1e44164d38851e477a2d2d64b9c3a/deploy/delivery/rosa.yaml)의 객체명과 대조했다. 이전 초안의 “API·engine Route host”를 위 두 transaction-api Route로 정정한 문서 변경이며 앱 객체·권한·승인 host 실제값을 변경하지 않는다. PR29는 18:29:11 KST merge `bd3b79c681d580cfceba31d6c62844727c5aeef8`로 병합됐고, 위 17:48 OPEN 표기는 당시 이력이다. 병합을 ROSA 생성/Runtime 완료로 소비하지 않는다.
 
 | 후속 결정 | 권장 담당·기한 / 실제 확정 여부 | 완료조건·재검토 계기 |
 |---|---|---|
