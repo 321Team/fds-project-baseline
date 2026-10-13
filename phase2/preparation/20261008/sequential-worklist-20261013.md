@@ -1,6 +1,38 @@
 # Phase 2 권욱 담당 선행 작업 — 순차 진행표
 
-**10/14 01:35 결정 접수:** 권욱의 “보류”에 따라 [D23 추가 Hybrid DNS=DEFERRED](decision-packet.md#현재-d23-결정--추가-hybrid-dns-보류). 아래의 D23 PENDING은 앞선 검토 시점 이력이다. #48 OPEN·기존10/16 점검 유지, D22는 계속 PENDING. Phase 1 변경·실제 DNS 구현 없음.
+## 현재 작업 목록 — 10/14 02:22 KST 조회
+
+권욱 담당 Phase 2 OPEN은 **16건: P0 13건, 보류한 P1 3건**이다. 우선순위 P1은 프로젝트 Phase 1과 다르다. 아래의 준비 순서를 사용하며, 그 뒤 10/13~10/14 기록은 당시 수행 이력이다. 이 목록은 공식 Status·AC·일정을 변경하지 않는다.
+
+| 순서 | 권욱 책임 티켓 | 지금의 작업 / 전환 조건 |
+|---|---|---|
+| 1 | [#42 Registry D22](https://github.com/321Team/fds-project-baseline/issues/42) | 기존 원본·CA 입력을 재사용해 D22 12개 출력의 현재 상태 정합화. 하영 P2 지원 인증/경로, 재환 앱별 current 채택·previous·clean render 후 Final 판단. 입력 대기 중 2번 진행 |
+| 2 | [#46 ROSA Delivery](https://github.com/321Team/fds-project-baseline/issues/46) | PR75 사전점검과 코어의 namespace 불일치 수정·해당 MOCK. actual identity/권한·운영 연결과 독립 리뷰는 잔여. 그 입력 대기 중 3번 진행 |
+| 3 | [#34 Architecture Freeze](https://github.com/321Team/fds-project-baseline/issues/34) | 승인 설계·Decision·Known Issue와 실제 변경 차이 소비. D23 및 P1 보류를 반영하고 확정되지 않은 As-built·Freeze 판정은 남김 |
+| 4 | [#39 G4](https://github.com/321Team/fds-project-baseline/issues/39) | SSM 부분 수용·후속 독립 검토, OCM/A3/태그 actual·VPN/RUN 원복 인계 잔여를 분리. 10/14 도래만으로 Gate PASS 처리하지 않음 |
+| 5 | [#49 산출물](https://github.com/321Team/fds-project-baseline/issues/49) | 기존 I01~I16·4묶음에 같은 원본을 연결. 새 실제 증적이 없는 행은 기존 검증 재사용·미확인 유지 |
+| 6 | [#52 Review 일정](https://github.com/321Team/fds-project-baseline/issues/52) | 10/23 14:00~15:30 제안·참석 미정 유지. 사용자에게 같은 참석 질문을 반복하지 않고 운영안 준비 범위로 진행 |
+| 7 | [#55 Review/Close 실행 준비](https://github.com/321Team/fds-project-baseline/issues/55) | 기존 의제·Demo·Action·정리/비용·sign-off 준비에 확정 보류와 타 담당 미회신을 구분. 회의 개최·삭제·종결 아님 |
+| 진입 판정 | [#33 Phase 2 Start](https://github.com/321Team/fds-project-baseline/issues/33) | Phase 1 Close 및 승인된 Known Issue/Deferred 입력 수신 후 판정. 현재 사전 준비를 공식 Start로 올리지 않음 |
+| 결정 재사용 | [#36 OCI D21](https://github.com/321Team/fds-project-baseline/issues/36) | FINAL OCI NO-GO/AWS Relay·기존 원본 편입 재사용. 새 OCI 시험·재선택 없이 별도 publication 잔여 구분 |
+| 후속 Gate | [#53 G6](https://github.com/321Team/fds-project-baseline/issues/53) | #47 exact handoff와 #50 실제 E2E/회귀 수신 후 인수 |
+| 후속 Gate | [#54 Deliverable Freeze](https://github.com/321Team/fds-project-baseline/issues/54) | #49 동일 candidate·필수 증적 및 Critical 문서 결함 판정 후 Freeze |
+| 후속 일정 | [#56 Review](https://github.com/321Team/fds-project-baseline/issues/56) | #52 확정과 실제 Review 증적 후 판정 |
+| 후속 종결 | [#57 Close](https://github.com/321Team/fds-project-baseline/issues/57) | 잔여 Action·자원/비용·sign-off 확인 후 별도 종결 판단 |
+
+### 착수에서 제외한 보류 3건
+
+이권욱의 10/14 지시에 따라 [#40 DNS 결정](https://github.com/321Team/fds-project-baseline/issues/40#issuecomment-6150473837), [#48 DNS 구현](https://github.com/321Team/fds-project-baseline/issues/48#issuecomment-6150475259), [#120 GitOps 결정](https://github.com/321Team/fds-project-baseline/issues/120#issuecomment-6150476545)은 보류다. OPEN/기존 상태를 유지하고 취소·완료로 바꾸지 않는다. 기존 10/16 점검은 재검토 시점이며 자동 재개가 아니다. 재개는 권욱의 별도 판단을 따른다. D23=DEFERRED, D22=PENDING.
+
+타 담당자의 P1은 [#34 공통 안내](https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-6150571392)에 따라 각자 착수/보류를 선택한다. 이번 조회에서 새 선택 회신은 확인되지 않았다. 무응답을 자동 보류/취소로 입력하지 않으며, #25~27의 Phase 1 원래 AC/Runtime은 선택 대상에 섞지 않는다.
+
+### 이번 순차 착수에서 달라진 것
+
+1. Registry 표의 이미 접수한 image host·CA JSON·경로 준비를 현재형으로 정정했다. 성공한 원본의 재해시·전체 시험을 반복하지 않았고 P2 채택/Runtime만 잔여로 남겼다.
+2. PR75에서 `rosa-app`을 일관된 namespace로 수용하던 사전점검을 수정했다. 코어와 같은 `fds-app` 계약을 적용하며 잘못된 namespace/형식 7종의 CLI 거부를 포함한 관련 17개 MOCK PASS. 실제 endpoint·승인·네트워크 요청은 없다. 최신 HEAD/CI는 [현재 인수표](evidence-handoff.md)에서 구분한다.
+3. 최신 G4 공급 이슈에는 새 실행/readback 완료 회신이 없어 기존 부분 완료와 미확인을 유지했다. Review 운영안에는 확정된 보류 3건을 실제 결정 이력으로 연결하며 새 Action·기한을 만들지 않는다.
+
+## 이전 수행 이력
 
 ## 10/14 별도 착수 — 현재 결과
 

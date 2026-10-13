@@ -31,6 +31,8 @@
 
 ## 삭제·보존 순서와 책임
 
+10/14 결정 인계: [현재 작업 목록](sequential-worklist-20261013.md#착수에서-제외한-보류-3건)의 권욱 #40/#48/#120은 승인된 보류로 Review/Known Issue에 연결한다. 취소·AC PASS·새 실행 Action으로 바꾸지 않으며 재개는 권욱 별도 판단이다. 타 담당자 P1의 착수/보류는 본인 선택 회신 전 미확인으로 둔다. 우선순위 P1 보류를 Phase 1 미충족의 포괄 인수나 #33 Start 승인으로 확대하지 않는다. 기존 날짜·시간 제안·참석 미정을 유지한다.
+
 일정 충돌은 [17:40 종합 검토](https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-6056087764)를 따른다. infra-rosa#4의 10-13 Cluster Ready 계획은 선행 #39 G4 목표10-14와 동시에 확정 실행 일정으로 사용할 수 없다. 담당자의 정합화 대상이며 새 날짜를 임의로 배정하지 않는다. #33은 Phase 1 Close 결과·Known Issue/Approved Deferred 등 기존 진입조건으로 판단한다. 10-23 Deliverable Freeze/Review는 Architecture Freeze나 자동 삭제 예약이 아니다.
 
 | 대상 | 실행 책임 / 사전 수용 | 안전한 정리·보존 기준 |

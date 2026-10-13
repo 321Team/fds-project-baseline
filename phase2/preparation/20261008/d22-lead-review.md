@@ -32,12 +32,12 @@ CODEX_ASSISTED. 권욱 담당 #42/#46 준비 문서. 검토 대상은 [하영 �
 | 출력 | 검토 가능한 후보 / 남은 입력 | 책임·소비 |
 |---|---|---|
 | 1 Registry mode | Harbor Primary 후보, A 우선 상세화. 최종 mode/fallback 미선택 | #42 권욱 |
-| 2 endpoint/naming | Harbor 10.1.93.54 또는 harbor.fds.internal 중 실제 image host와 TLS/CA 일치 필요. ECR repository 이름/URI 미정 | #11 하영 / #35·#46 |
+| 2 endpoint/naming | 아래 인계 원본의 실제 image host는 `10.1.93.54`. CA JSON의 IP/FQDN 두 key 접수는 완료. P2 채택/실제 TLS·pull 결과는 별도이며 ECR repository 이름/URI는 미정 | #11 하영 / #35·#46 |
 | 3 principal/최소권한 | Runner push와 P2 pull 분리. ECR 선택 시 push/pull 및 token 취득·갱신 범위 제출 | #35·#38·#46 |
-| 4 trust | Harbor 공개 Root SHA256 20ddfa5e92c346aaf46fc30179fbc0b069e256effd2615a9f4308a8fe719053f 후보 수용. exact image host/key·JSON/정규화 map·해시·생성 방법·소스 SHA·CLI/provider pin 잔여. PEM 해시만으로 key/실행 설정 무결성을 대신하지 않음 | #11 하영 |
+| 4 trust | 아래 #11 CLOSED 인계의 exact CA JSON 4,114B·SHA·IP/FQDN key 및 지원/경로 준비 접수 완료를 재사용. 실제 생성 config와 버전/실행 source 결속·trust 적용/cold-pull은 잔여. 이미 받은 JSON/map/hash를 다시 요청하지 않음 | #11 하영 → #38 실제 구현/관측 |
 | 5 digest/tag | 앱2종의 새 P1 Push digest 원본은 아래10/14 대조로 접수. 각 앱의 P2 current 채택·previous와 필요한 index/child 대응은 미확인 | #43 재환 / #46 권욱 |
 | 6 push path | 기존 공급망 소비. ECR 채택 시 repository별 최소권한과 연결 경로 추가안 필요 | #46 권욱 + #35 입력 |
-| 7 pull path | private_a→Relay→Harbor443 후보, source 보존/return·host/DNS·허용 source 계약 필요. P0 IP 후보는 D23 전체 DNS 결정을 무조건 기다리지 않음. 승인된 최소 경로 구현·cold-pull은 Basic Ready 판정 전, Final은 그 결과를 소비. A의 ECR 경로도 별도 | #38·#37 / #11 |
+| 7 pull path | #11의 private_a→Relay→Harbor443·source 보존/return 경로 준비는 재사용. 실제 node-source/반환 경로 구현·allow/deny·cold-pull은 미확인. D23=DEFERRED여도 기존 IP/public DNS 준비는 진행 가능. Basic Ready 전 실제 최소 경로 검증 후 Final에 소비. A의 ECR 경로는 별도 | #38·#37 / #11 |
 | 8 fallback | 아래 전환/복귀 절차 후보. 자동 mirror 설정은 미선택 | #42 권욱 |
 | 9 비용 | [ROSA Cost GO](https://github.com/321Team/infra-rosa/issues/4#issuecomment-6143326582)는 명시 범위 승인. **C3 ECR은 제외**이므로 D22의 ECR 선택/비용으로 자동 승계하지 않음. cutoff·전체 예상 총비용 미확인, 400/450/500·자부담0 유지 | #34/#42 권욱. 같은 ROSA 범위 재승인·구축 담당자 재견적 요구 없음 |
 | 10 credential reference | owner/scope/expiry/전달·회수 reference 필요. 원문 토큰/Secret 금지 | #38·#46 |

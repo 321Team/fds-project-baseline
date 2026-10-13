@@ -4,6 +4,8 @@ CODEX_ASSISTED. 실제 원본을 대신하는 문서가 아니다. Phase 1 작�
 
 ## 10/14 현재 인수표 — 기존 부분 완료와 미확인의 분리
 
+**02:22 KST 재조회:** tf#11/#12/#13·rosa#4/#11 및 권욱 담당 16티켓에 앞선 01:47 이후 새 완료 회신은 없다. 아래 actual 미확인·N1 미실행 판정을 유지하고 같은 Runtime/원본 검사를 반복하지 않았다. P1 보류 3건과 현재 P0 순서는 [현재 작업 목록](sequential-worklist-20261013.md#현재-작업-목록--1014-0222-kst-조회)을 따른다. 이 시각 이후 바뀐 PR75의 코드/CI만 다음 행에 따로 반영했다.
+
 GitHub 조회00:24~00:25 KST와 10/13 사용자 별도 SSM 요청의 실제 원본/수신 기록을 연결한다. [이번 Phase 1 보호 경계](phase-boundary-20261014.md)를 따른다. 아래 최신 행이 과거 본문의 동일 항목 대기 상태를 갱신하며, 작성 당시 기록을 소급 수정하지 않는다.
 
 | 입력 | 현재 수용 가능한 사실 | 잔여 담당·완료조건 |
@@ -17,7 +19,7 @@ GitHub 조회00:24~00:25 KST와 10/13 사용자 별도 SSM 요청의 실제 원�
 | VPN/db01 인계 | PR30 병합·무변경 재Plan 보고, db01/server08·sudo 사용자 실측과 권욱 원복 담당 지정 재사용 | 재환 스크립트 절대경로·RUN·원복 인계 및 터널/TCP/복구 원본 → 권욱 소비. Plan0/담당지정만으로 통신 성공 아님 |
 | ROSA 비용/생성 | public/public source·기승인 ROSA Cost GO는 해소된 조건 | 하영 actual IAM/OIDC/태그/플랫폼, 권욱 #34/#39·exact 생성 Plan/별도 Create 판단. 실제생성/Basic Ready 미확인 |
 | P1 공급 → #46 | [TBS217](https://github.com/321Team/fds-project-evidence/pull/217)/[Push218](https://github.com/321Team/fds-project-evidence/pull/218)/[Deploy219](https://github.com/321Team/fds-project-evidence/pull/219) MERGED·CI각1SUCCESS, [새 Deploy 보고](https://github.com/321Team/infra-cicd/issues/11#issuecomment-6147808781) 확인 | 재환 P2승인current/previous·clean render, 하영 P2대상·권한, 권욱 원본결속. P1실제인수와 P2Runtime 미실행을 구분 |
-| #46 준비 코드 | [PR75](https://github.com/321Team/infra-cicd/pull/75) `50f5f6ef8c35ccbad07fbaed47c021e60eb6db08`, Draft·CI2SUCCESS·독립리뷰0. 읽기전용 journal복원·상태진단 추가 | 권욱 운영 authorizer/actual대조·한정수동조정 연결, 타인독립리뷰. 실제TLS/ROSA/RBAC/복구Runtime 별도 |
+| #46 준비 코드 | [PR75](https://github.com/321Team/infra-cicd/pull/75) `6813585443202c58ddf6309d241c7e0111c98e59`, Draft·독립리뷰0. 사전점검의 임의 namespace 수용을 코어 계약 `fds-app`과 정합화. 관련 로컬 MOCK17 PASS, 새 HEAD [Linux CI](https://github.com/321Team/infra-cicd/actions/runs/38438487575/job/115438603785)123건 중112 PASS/11 SKIP·[validate](https://github.com/321Team/infra-cicd/actions/runs/38438487577/job/115438603804)SUCCESS를 02:26 조회 | 권욱 운영 authorizer/actual대조·한정수동조정 연결, 타인독립리뷰. 실제TLS/ROSA/RBAC/복구Runtime 별도. 이번 수정은 진단 오류 정정이며 실제 오배포 관측은 없음 |
 
 원본 보관은 기존 고정 비공개 공유경로의 `pr31-ssm-review-jaehwan-20261013-2200/followup-2200`을 재사용한다. 공유 완료·수신·재해시·내용 자체 검토·타인 독립 수용을 각각 구분한다. 공개 문서에는 hash와 상태만 연결하고 raw/credential은 편입하지 않는다.
 
