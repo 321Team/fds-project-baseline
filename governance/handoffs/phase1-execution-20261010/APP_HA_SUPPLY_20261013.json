@@ -1,0 +1,58 @@
+{
+  "schema": "P1_FINAL_TEST_SUPPLY_1",
+  "prepared_at_utc": "2026-10-12T20:14:28.709714+00:00",
+  "files": [
+    {
+      "file": "rg.py",
+      "repository": "fds-msa",
+      "reviewed_ref": "61fbf0bf1ace1fa3a5eb983c002de2a0ddac856a",
+      "path": "tools/regression/rg.py",
+      "git_blob": "b4e3ebcb7c5b51ea6962a5c3063c88f693f5a20d",
+      "sha256": "f5dee1069ab96838355cf6269dd6cdff2a08107e880594c5dad98d20424594ed",
+      "bytes": 15604,
+      "current_ref_compared": "6e7acf1053b1e44164d38851e477a2d2d64b9c3a",
+      "current_git_blob": "b4e3ebcb7c5b51ea6962a5c3063c88f693f5a20d",
+      "current_bytes_identical": true
+    },
+    {
+      "file": "ha-probe.py",
+      "repository": "infra-kubernetes",
+      "reviewed_ref": "c55bad39090d4b14cb34bd674e0b91a96f04a5af",
+      "path": "ops/p1-ha-01-availability/probe.py",
+      "git_blob": "f747951c327ab6204ac4329d9d6b68290798331f",
+      "sha256": "e2603769cacef36dab6231052104f29f413b105a78d771b4e4c3db3c0a599804",
+      "bytes": 3344,
+      "current_ref_compared": "92c182fc58de999536e56d90012bb2686d9f07cf",
+      "current_git_blob": "f747951c327ab6204ac4329d9d6b68290798331f",
+      "current_bytes_identical": true
+    },
+    {
+      "file": "ha-judge.py",
+      "repository": "infra-kubernetes",
+      "reviewed_ref": "c55bad39090d4b14cb34bd674e0b91a96f04a5af",
+      "path": "ops/p1-ha-01-availability/judge.py",
+      "git_blob": "2032f625af060d6998d49764baab005ca4b6a5cc",
+      "sha256": "79f54c955991dacd0767885b0db5001fad39080ea7cf4b7c2a3ea13c6f1a6aad",
+      "bytes": 4505,
+      "current_ref_compared": "92c182fc58de999536e56d90012bb2686d9f07cf",
+      "current_git_blob": "2032f625af060d6998d49764baab005ca4b6a5cc",
+      "current_bytes_identical": true
+    }
+  ],
+  "historical_criteria_sha256": "8aad7cc215137b97168230926d0e9655eba4dd3386944bf6efc06bfc83aae8d8",
+  "code_changed": false,
+  "runtime_executed": false,
+  "phase2_files_included": false,
+  "checks": [
+    "Git blob identities",
+    "current pinned bytes equal reviewed bytes",
+    "HA source equal historical runtime source",
+    "AST syntax",
+    "historical criteria bytes"
+  ],
+  "existing_ci": "REUSED_NOT_RERUN",
+  "archive": "p1-final-test-tools.tar",
+  "archive_sha256": "863fb9b07b4e88969efee68a7d2e584ad855f5e9d0020e85cd0a0d4b900034b7",
+  "archive_bytes": 30720,
+  "member_count": 5
+}
