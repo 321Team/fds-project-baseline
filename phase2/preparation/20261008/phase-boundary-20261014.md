@@ -19,7 +19,7 @@
 | 순서 | 이번 진행 | 후속 담당·완료조건 |
 |---|---|---|
 | 1 #46 | PR75 `50f5f6ef8c35ccbad07fbaed47c021e60eb6db08`: 재시작 후 journal 읽기/체인·receipt 검사 CLI, 손상·partial·pending·live writer·FIFO 차단, 원본 보존 및 P1 공급 연결 | 실제 authorizer/target readback·fence 조정·배포 연결은 미완료. 하영 actual 플랫폼/권한, 재환 승인 이미지/clean render 입력 → 권욱 통합 구현·독립 리뷰 후 별도 Runtime |
-| 2 #40/#48 | D23 기존 단일 권고안에 Phase 1과의 접점 및 결정/미실행 분기 연결 | 권욱 최종 선택 전 D23 PENDING, #48 상태 변경 없음. 실제 API/Route값은 생산 인계 후 수용 |
+| 2 #40/#48 | [권욱10/14 추가 Hybrid DNS 보류 결정](decision-packet.md#현재-d23-결정--추가-hybrid-dns-보류) 반영: D23=DEFERRED | Owner 권욱·기존10/16 점검 유지, #48 OPEN/구현 보류. 실제 API/Route값은 생산 인계 후 수용. DNS 전체 미사용·구현 취소가 아님 |
 | 3 #42 | 기존 A/B·인증 갱신/전환/복귀 카드에 새 P1 Push 증적과 P2 credential 구분 연결 | 하영 P2 pull 인증·경로/재환 current·previous 입력 → 권욱 D22 선택. 기존 CA 자료 재요구 없음 |
 | 4 #34/#39 | IAM v2·SSM 후속·N1 미실행·A3/태그 미확인을 인수표에 갱신 | 하영·재환의 actual 입력을 소비하여 권욱 Gate판정. 날짜 도래·PR병합만으로 G4 PASS 아님 |
 | 5 #49/#54~57 | 공급 증적 편입과 운영 인수 구분, 누락 연결만 추적 | 생산자 기존 원본/리뷰를 #49 동일 candidate로 집계. Freeze/Review/삭제/Close 별도 |

@@ -34,7 +34,7 @@ GitHub 조회00:24~00:25 KST와 10/13 사용자 별도 SSM 요청의 실제 원�
 | I01/I02 IAM·역할 | 전체 PENDING/NOT_RUN 아님. 위 PR31/IAM v2의 원본 독립 수용과 권욱 실제 SSM 부분 결과, 재환 본인 접속 보고 재사용 | 다른 정책/작업까지 승인 확대 없음. 새 후속 원본 독립 수용·Resume 셸·미실행 N1 범위만 남김 |
 | I03/I04 플랫폼 | 설계·public/public PR29 병합·A1/A2 기존 수용·NAT/A3/태그 Plan 및 한정 GO의 부분 상태 유지 | OCM basic/A3/태그 actual 반영·지원 버전/용량/경로 계약·생성 판단. 과거 “전체 활성화/연결 미확인”을 이미 수용한 A1/A2로 되돌리지 않음 |
 | I05 Relay | Relay 실제 SSM 접속과 첫 호스트 readback은 위 원본으로 소비 | VPN/Libreswan·SA/포워딩·복구 인수와 구분. 같은 첫 호스트 읽기 재시험 없음 |
-| I06 관리/DNS | public API/Ingress·P0 IP 기준, [D23 AC 대조/결정 필드](decision-packet.md#1014-d23-ac-대조-결과와-결정용-필드) 준비 | D23 실제 선택과 이후 actual API/Route DNS·TLS/identity. private DNS/Resolver를 현재 필수 구축으로 요구하지 않음 |
+| I06 관리/DNS | public API/Ingress·P0 IP 기준, [권욱10/14 D23=DEFERRED 결정](decision-packet.md#현재-d23-결정--추가-hybrid-dns-보류) | Owner 권욱·기존10/16 점검, 이후 actual API/Route DNS·TLS/identity. #48 OPEN/구현 보류이며 private DNS/Resolver를 현재 필수 구축으로 요구하지 않음 |
 | I07 DB 경로 | 기존 source-set·NP·실패복구 계약과 db01/server08·sudo/원복 담당 지정 재사용 | 재환 정확한 스크립트/RUN/원복 인계와 승인된 ALLOW/DENY·복구 원본. 실제 DB/pg_hba 변경은 별도 경계 |
 | I08 CA/경로 | [infra-rosa#11 CLOSED 입력](https://github.com/321Team/infra-rosa/issues/11#issuecomment-6077019042)의 JSON·key·S0~S3 순서·생산자 handoff 수용. exact CA config를 다시 미수신으로 요청하지 않음 | 실제 생성 config 결속·HCP IP key 적용/출발지 보존·cold-pull은 생성/시험 단계 잔여 |
 | I09 D22 | 기존12출력/A·B와 인증 만료·전환·복구 기준 재사용 | 생성 전 준비와 생성 후 Basic Ready→Final 분리. 현재 D22=PENDING |
@@ -51,7 +51,7 @@ GitHub 조회00:24~00:25 KST와 10/13 사용자 별도 SSM 요청의 실제 원�
 | Test/Evidence | SSM의 부분 실행/무결성/독립 수용 범위, P1 공급 source→TBS→Push→Deploy 연결, P2 MOCK/CI | 실제 P2 P0 티켓의 동일 RUN/source/target·결과·증적 링크. P1 HA/DB 회귀를 이 준비 작업으로 실행하지 않음 |
 | As-built | public/public·worker/Relay 분리 및 승인 source 계약 | 실제 자원 inventory·Plan/Apply/readback 대응과 Baseline 차이의 Lead 판단. 계획도를 As-built로 표시하지 않음 |
 | IaC/Runbook | 기존 Plan·복구 절차·버전 고정·실패 중단·영속 기록 검증 | 실제 실행 위치/대상/입력/정리 결과가 연결된 재현 자료. 합성 endpoint/credential/승인으로 빈칸을 채우지 않음 |
-| Decision/Known Issue | D21 기존결정, D22/D23 검토안, N1 미실행·Resume 미확인, 비용/정리 경계 | D22/D23 실제 선택, 차이/잔여의 Owner·완료조건, Critical 문서 결함 판정. 문서 작성만으로 Freeze/AC 체크하지 않음 |
+| Decision/Known Issue | D21 기존결정, D23=DEFERRED, D22 검토안, N1 미실행·Resume 미확인, 비용/정리 경계 | D22 실제 선택, D23 보류 재검토, 차이/잔여의 Owner·완료조건, Critical 문서 결함 판정. 결정/문서 기록만으로 Freeze/AC 체크하지 않음 |
 
 ### 준비 PR의 리뷰 절차 정정
 

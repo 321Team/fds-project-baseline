@@ -2,6 +2,18 @@
 
 기준과 실행 경계는 [README](README.md). 현재는 **1차 인수 준비 단계**다. 이번 기록은 설계·일정 변경 승인, 새 AC, 새로운 상시 Support 승인 절차가 아니다. Phase 2 사전 준비를 #33 Start·#34 Freeze·생성 GO로 승격하지 않는다.
 
+## 현재 D23 결정 — 추가 Hybrid DNS 보류
+
+**D23=DEFERRED / 결정자 이권욱 / 결정 접수·기록 2026-10-14 01:35 KST.** 사용자가 D23 설명과 기존 보류 권고에 대해 “보류”로 결정했다. 아래10/13 및10/14 01:09의 DRAFT/PENDING 문구는 결정 전 검토 이력이며 현재 미결 상태로 다시 사용하지 않는다. D22 Registry 결정은 계속 PENDING이다.
+
+- **결정 범위:** 추가 Hybrid DNS 구축을 보류한다. DB `.55`·Harbor `.54`의 기존 IP 연결 기준과 ROSA public API·Route의 실제 DNS 이름/엄격 TLS 사용은 유지한다. DNS 전체 미사용이나 private zone 구축 승인이 아니다.
+- **보류 근거:** 현재 public/public 및 Harbor IP 후보에서 추가 Hybrid DNS를 지금 활성화할 구체적 P0 위험 감소 근거가 확인되지 않았다. P0 준비와 Phase 1 인계에 불필요한 변경을 추가하지 않는다. 실제 ROSA DNS/통신 성공을 확인했다는 뜻은 아니다.
+- **Owner/재검토:** 이권욱. 기존10/16 D23 점검 시 보류 유지/변경 필요를 확인한다. 그 전에 실제 이름 해석이 P0를 막거나 승인 image host/관리 경로가 바뀌면 영향 구간·최소 구현·비용/일정·원복 조건을 검토한다. 티켓 계획일을 변경하거나 새 상시 승인 절차를 만들지 않는다.
+- **#48:** 구현 보류, OPEN 유지. 일시 Deferred를 Cancelled·AC PASS·종결로 처리하지 않는다. 실제 Go 또는 최종 비구현 결정이 생기면 그 결정 범위에 맞춰 별도 기록한다.
+- **실행 경계:** DNS/Resolver/hosts·route/SG·공용 OCP·Phase 1 설정 변경0. 이 결정은 실제 Apply/Deploy·ROSA 생성·Gate 인수·정본 발행을 승인하지 않는다.
+
+이번 반영 위치는 기존 준비 PR167의 결정 문서다. #40/#48 이슈 본문·상태·AC·일정 변경, 별도 댓글/알림 전송, PR 병합·정본 발행은 수행하지 않았다.
+
 10-08 후속: [설계 입력 승인](https://github.com/321Team/infra-rosa/issues/3#issuecomment-6054292320)과 [#34 수용](https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-6054304386)을 수신했다. worker private_a(2a/apne2-az1)·공인 NAT1, fds-app/monitoring-api/ci-cd 및 기본 모니터링 재사용은 설계 방향 수용 상태다. OCM 개인 조직 방향 수용은 billing 연결·팀 접근 완료가 아니며 exact version/N-1/전체 egress·IAM/Freeze는 잔여다. 이후 미결은 이 수용 범위를 반복 요구하지 않는다.
 
 ## 1. #34 Freeze: 생성 전 계약 / 생성 후 관측
