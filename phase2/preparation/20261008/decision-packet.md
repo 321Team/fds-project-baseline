@@ -38,7 +38,7 @@
 
 17:40 리뷰 수신: [버전·Pool](https://github.com/321Team/infra-rosa/issues/3#issuecomment-6056067368), [Runner](https://github.com/321Team/infra-rosa/issues/10#issuecomment-6056067704), [CA·경로](https://github.com/321Team/infra-rosa/issues/11#issuecomment-6056068014). 4.22.16·300 GiB·IMDSv2·AutoRepair는 설계 후보이며 전체 Freeze가 아니다. 자발적 업그레이드 미계획과 공급자 필수 업데이트를 구분하고, 하위 minor는 생성 전 재선정 후보로만 다룬다. replicas=3은 목표 대수이며 교체 중 실제 대수 불변을 보장하지 않는다. 기존 4건 보고 정정은 수용했지만 Quota PARTIAL·역할 이름 필터 미발견·ROSA 활성화/청구 연결 미확인은 유지한다. Runner 날짜만을 위한 재시험은 요청하지 않으며 OS/CI/Podman trust·실제 principal의 미확인 구분을 먼저 보완한다.
 
-## 3. #40 관리 경로·DNS 입력
+## 3. #40 관리 경로·DNS 입력 — 10/08 당시 전제
 
 | 경로 | 확인할 원본 | 설계 닫는 조건 |
 |---|---|---|
@@ -47,6 +47,31 @@
 | ROSA node→Registry | node-pull source/DNS/443/TLS와 반환 | Pod DB egress/NetworkPolicy로 node pull까지 검증됐다고 표시하지 않음 |
 
 기존 DNS 원본·TLS 관측을 재사용하고 변화/미확인 구간만 기존 계정으로 읽기 수집한다. 준비 완료 전 route/SG/ACL/selector 변경은 수행하지 않는다. [기존 관리 조회 Runbook](../../runbooks/20261004-local-management-route-readonly.md)을 사용하며 그 실행 위치·권한 범위가 맞지 않으면 STOP한다.
+
+### 10/13 보완: D23 결정에 사용할 문안과 소비 계약
+
+**DRAFT / Lead 이권욱 / 실제 D23 판정 PENDING.** 10/13 17:48 KST 확인한 [Terraform PR29](https://github.com/321Team/infra-terraform/pull/29) HEAD `3079ddcb8712a761c7c1c3fe59189689eb2e38fe`의 public API/public Ingress와 [source 승인](https://github.com/321Team/infra-terraform/pull/29#pullrequestreview-5500767150)을 설계 입력으로 소비한다. 승인된 설계를 다시 묻지 않는다. PR은 당시 OPEN이며 실제 API/Route 호스트·DNS/TLS·클러스터 생성 완료가 아니다. 위 private API 경로/Resolver 표를 현재 필수 구축 목록으로 사용하지 않는다.
+
+**권고 결정 문안(미등록·미확정):** “P0 DB/Registry 연결은 기존 IP Endpoint 기준을 유지한다. ROSA public API와 Route는 실제 발급된 DNS 이름 및 엄격한 TLS 검증을 사용한다. 전체 Hybrid DNS는 P1 조건부이며 P0 위험을 줄이는 구체적 필요와 구현 여유가 확인될 때만 Go로 결정한다. 현재는 추가 구현을 보류하고 10/16 D23 판단 때 최종 선택한다. IP 유지로 구현하지 않기로 최종 결정하면 #48의 Cancelled 근거를 남기며, Deferred를 완료/Cancelled로 대체하지 않는다.”
+
+| 소비 경로 | 지금 고정할 기준 | 아직 필요한 실제 입력 / 생산 책임 | 실패 시 처리 |
+|---|---|---|---|
+| Runner → ROSA API | public/public 승인, 실제 API DNS 이름·승인 CA·identity 사용 | API URL/CA/identity·Runner의 DNS/443 접근 receipt: #38 이하영 → #46 이권욱 | 이름/TLS/identity 불일치면 배포 STOP. 임의 IP/hosts·검증 해제로 우회하지 않음 |
+| 사용자/시험기 → Route | 실제 Route host와 TLS를 app/render 계약에 결속 | API·engine Route host: #38/#43 이하영·이재환 → #46/#47 | PENDING host이면 실행 입력 생성 STOP. public Ingress가 DB 공개를 뜻하지 않음 |
+| ROSA APP → DB | DB `10.1.93.55`, 승인 VPN/source/포트 계약 | #37/#47 실제 승인 source·ALLOW/비승인 DENY·원복 결과: 이재환 | 통신 실패를 DNS 변경으로 해결했다고 가정하지 않음. DB runtime 예외의 정확한 범위만 적용 |
+| ROSA node → Harbor | P0 IP `10.1.93.54`; 실제 image host와 CA key/SAN 일치 | #42가 선택할 실제 image reference·pull principal·node 경로: 이하영·이재환 | IP 기반 이미지와 FQDN 기반 이미지를 자동 치환하지 않음. TLS/pull 실패면 신규 rollout STOP |
+| Hybrid DNS 확장 | D23 Go일 때만 #48 착수 | 최소 권위 zone/query source·TCP/UDP53·return·loop 방지·원복: 이권욱, 경로 입력 이하영·이재환 | 기존 DNS 설정 보존. 새 규칙 원복 범위가 없으면 실행하지 않음 |
+
+`fds-app`이 소비 namespace이며 `rosa-app`은 overlay 이름이다. #46 댓글의 표기 차이를 namespace 변경 승인으로 사용하지 않는다. API/Route 이름은 아직 수신하지 않은 값을 생성하지 않는다. Harbor CA/경로의 이미 접수된 입력은 [D22 보완](d22-lead-review.md)을 재사용한다.
+
+| 후속 결정 | 권장 담당·기한 / 실제 확정 여부 | 완료조건·재검토 계기 |
+|---|---|---|
+| D23 단일 선택 | 이권욱 / 기존 10/16 목표, 현재 PENDING | P0 IP 유지와 P1 Go/No-Go/Deferred 이유를 #40에 하나로 연결; #45/#47 소비값 일치 |
+| #48 비구현 처리 | 이권욱 / D23 결정 직후, 권장 순서 | 최종 IP 유지 선택이면 기존 AC에 맞는 Cancelled 근거. 일시 보류면 Owner·다음 검토 시점 명시; 지금 상태 자동 변경 없음 |
+| Deferred 재검토 | 이권욱 / 10/16 이후에는 필요 발생 시, 제안 | 실제 이름 해석 실패가 P0를 막거나 승인 image host가 바뀔 때 영향 구간만 검토. 새 비용/일정 영향은 중앙 판단 |
+| DNS Go 시 인수 | #48 이권욱 / Go 후 실행창 별도 | 승인·미승인 Query, UDP/TCP53, 장애·복구 결과. 기존 52/53 자료는 변경 없는 부분에 재사용 |
+
+현재 단계는 결정 준비다. 실제 DNS/hosts/Resolver·공용 OCP·DNS/LB 설정 변경이나 전체 DNS 시험을 요구하지 않는다. 나중에 Go가 되면 실제 선택 구성에 대한 실행/복구안을 별도로 고정한다.
 
 ## 4. #43 앱/시험 DB 단계안
 

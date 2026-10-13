@@ -53,3 +53,41 @@ CODEX_ASSISTED. 권욱 담당 #42/#46 준비 문서. 검토 대상은 [하영 �
 5. Harbor 복구 후 strict TLS/권한/pull을 확인하고 Lead의 재개 판단으로 primary 복귀한다. image rollback이 DB 데이터 복구를 의미하지 않는다. 임시 권한/credential·불필요 복제본 정리는 보존·증적 확인 후 수행한다.
 
 생성 전에는 trust/경로/principal·실패복구 계약까지만 준비한다. actual ROSA cold-pull은 생성 후 Basic Ready 단계에서 확보하며 이를 생성 전 Gate로 당기지 않는다. 현재 Runtime·ECR 생성/복사·Secret 등록·D22 Final 모두 NOT_RUN/PENDING이다.
+
+## 10/13 보완 — 미결 인증·전환·복귀의 결정 카드
+
+CODEX_ASSISTED. 10/13 17:48 KST까지의 접수 기록을 소비한다. 기존 A/B 비교·12개 출력·5단계 전환 절차는 유지하며 아래는 미결을 닫기 위한 입력이다. **REGISTRY_MODE/FALLBACK/D22 Final=PENDING**, 실제 Secret 발급·갱신·전환 미실행.
+
+### 이미 닫힌 준비 입력
+
+[infra-rosa#11](https://github.com/321Team/infra-rosa/issues/11)은 CA/경로 준비 입력으로 CLOSED다. CA JSON 4,114 bytes, SHA256 `4d86507ecd81789e376669940f68b2dbb27f5989e6fd4315238c9f61a2401da4`, key `10.1.93.54`와 `harbor.fds.internal` 및 [evidence PR170](https://github.com/321Team/fds-project-evidence/pull/170)·[PR186](https://github.com/321Team/fds-project-evidence/pull/186)의 기존 편입/독립 검토를 재사용한다. 이는 위 12개 출력 중 4번의 **준비 입력 잔여**를 갱신한다. 이번 문서 작성에서 원본 재해시나 실제 trust 적용을 수행한 것은 아니다.
+
+Harbor 반환 경로 `10.20.0.0/16 via 10.1.93.51` 및 worker `10.20.10.0/24 → 10.1.93.54:443`는 준비 계약의 후보이며 실제 반영/통신 증적과 구분한다. 경로 준비 → 생성 시 승인 CA 입력 → 생성 후 cold-pull → Basic Ready → D22 Final 순서를 유지한다. CA 자료·기존 A/B 원본의 재제출을 요구하지 않는다.
+
+### 인증 갱신 입력 — 실제 값은 해당 생산자가 한 번 인계
+
+| 대상 | 필요한 최소 필드 | 책임 / 지금의 상태 | 갱신 실패·권한 부족 시 |
+|---|---|---|---|
+| Harbor P2 pull | 승인 image host/project 범위, credential reference·owner·만료 KST, 갱신/폐기 담당, 안전 전달 위치 | #38 이하영·Registry 생산 이재환 → #42/#46; 실제 principal/만료 미수신 | 신규 rollout STOP, 기존 Pod·증적 보존. Phase1 Robot을 이 작업으로 교체하지 않음 |
+| Harbor Runner push | push 대상 project/repository·principal 범위, pull과 분리 여부, current/previous digest receipt | #46 이권욱, 기존 Build/Scan·Registry 생산 입력 소비; 실제 remote digest 미수신 | push 실패를 build/scan 성공으로 대체하지 않음. tag/rebuild로 승인 digest 변경 금지 |
+| ECR fallback A | 지원 ROSA HCP 버전의 pull 인증 방식 근거, token 발급 principal/범위·reference·만료, 갱신 주체·방법·실패 STOP | #38 이하영의 플랫폼 지원 입력 + #46 이권욱의 공급 인계; 방식 PENDING | 지원/갱신 증명 전 A를 “즉시 전환 가능”으로 표시하지 않음. 새 IAM/Secret 발급은 별도 실행 판단 |
+| 공통 검증권한 | 승인 대상·최소 범위와 마지막 필요한 시험/재시험·증적 검토 종료조건 | 기존 결정 재사용; 새 정책 부여/재부착 승인 아님 | 파일 전송/작업창 종료만으로 반복 회수하지 않음. 검증 종료 후 전용 권한 정리, 운영 최소권한 구분 |
+
+ECR authorization token은 발급 IAM principal의 권한 범위를 따르며 12시간 유효하다. Docker credential helper 자체는 MFA를 지원하지 않는다. 이것만으로 ROSA HCP에서 사용 가능한 자동 갱신 방식이나 본인 MFA 예외가 입증되지는 않는다. [AWS 인증 문서](https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry_auth.html), 10/13 조회.
+
+인증 receipt에는 `issued/expires/last_verified KST`, 비밀값 없는 reference, 검증 대상, 갱신 책임, 실제 결과 링크만 남긴다. 갱신 시점은 **남은 작업창과 복구·증적 수집에 필요한 유효시간을 확보하는 조건**으로 정하고 근거 없이 고정 주기나 장기 자격증명을 추가하지 않는다. 실제 지원 방식이 확인되기 전 갱신 자동화 코드를 배포하지 않는다.
+
+### 상태별 권장 판단표 — A/B 최종 선택 아님
+
+| 관측 조건 | 다음 행동 | 재개/복귀 완료조건 |
+|---|---|---|
+| Harbor 정상·승인 current/previous pull 가능 | 선택 Primary 유지, 기존 시험 결과 재사용 | exact host/TLS/principal/digest와 Runtime imageID·health 대응 |
+| Harbor 장애, A 최종 선택 및 ECR 입력 완비 | 기존 5단계 절차의 한정 전환 판단 | 승인 index/child digest 보존, ECR 실제 pull/TLS/권한, 복구 가능한 이전 이미지 확인 |
+| Harbor 장애, A 미선택 또는 auth/이미지 미비 | 신규 rollout 중단·가용 workload 유지 | Harbor 회복 또는 A 계약/해당 실행 승인 충족; 임의 B 최종 선택으로 기록하지 않음 |
+| VPN 장애, ECR pull 성공 | 이미지 경로 결과만 수용; DB 업무 상태 별도 판정 | #47 DB 경로·업무 증적 없으면 Hybrid PASS 금지 |
+| token 갱신 실패/만료 또는 전환 응답 UNKNOWN | 자동 재시도·추가 rollout 중단, 실제 상태 확인 | 기존 승인 범위 내 유효 인증·상태 대조. 재실행은 별도 RUN/대상으로 판단 |
+| Harbor 복구 | strict TLS·정상 pull·이전 digest·업무 영향 확인 후 Lead 복귀 판단 | 양쪽 Registry 원본/변경·복구 기록 수신. 실패하면 추가 변경 중단, 건강한 Pod 보존 |
+
+ECR의 digest pull에는 manifest 형식 자동 변환이 없다. 복사 시 원본 index/child digest와 소비자 지원 형식을 확인하며 변환·재빌드·tag 대체로 같은 이미지라고 간주하지 않는다. [AWS manifest 문서](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-manifest-formats.html), 10/13 조회.
+
+**후속 조건:** #38 지원 인증/경로 계약 → #43/#46 실제 current/previous 공급 → 승인 창의 cold-pull/negative·복구 → #42 D22 Final. 하영·재환은 기존 인계에 누락 필드만 보완한다. 이권욱은 교육장 리포트로 비용을 중앙 판단하며 추가 단가표·중복 비용 승인이나 지금의 ECR 생성을 요구하지 않는다.

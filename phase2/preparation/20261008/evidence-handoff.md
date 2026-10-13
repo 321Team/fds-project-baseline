@@ -39,3 +39,34 @@ initiator/cleanup 별도 raw는 미확인이다. 사용자 Desktop.zip의 local-
 5. 10-23 Review 시간·참석자 미정. 10-26 Close에는 승인된 Review Action·정리·잔여 Owner/Due·sign-off를 소비한다. 이 패킷이 Freeze/Review/Close를 승인하지 않는다.
 
 조건부 DNS/Operator/OADP/GitOps/Compliance/RHOAI는 해당 Lead의 Go/No-Go/Deferred·근거/Owner·재검토 조건을 연결한다. 실제 구현 완료가 P0 필수인 것처럼 Gate를 추가하지 않는다.
+
+## 10/13 보완 — G4 exact 입력별 수신·잔여 연결
+
+기준: [#39 Gate Data / Review Contract](../../../tickets/v3.1.21/descriptions/MS-G4-01.md)의 7개 입력. 외부 PR 상태는 **10/13 17:48 KST** 스냅샷이다. 아래는 Gate 검토 준비이며 `G4=PASS`나 공식 `NO_GO` 발행 기록이 아니다. 실제 판정 직전 변경된 HEAD/입력만 재대조한다.
+
+| 기존 필수 입력 | 현재 소비 가능한 근거와 검증 범위 | 아직 닫히지 않은 조건 / 생산→판단 책임 |
+|---|---|---|
+| 1. #34 Freeze current values | [PR29 source 승인](https://github.com/321Team/infra-terraform/pull/29#pullrequestreview-5500767150), HEAD `3079ddcb8712a761c7c1c3fe59189689eb2e38fe`, public/public·Plan/Apply 승인 경계. OPEN, CI0=NOT_RUN | 생성 전 전체 네트워크·IAM·보안·용량 계약과 변경결정의 정합 수용: 이하영 입력 → #34 이권욱. source 승인만으로 Freeze 완료 아님 |
+| 2. #35 Full IaC + actual identity | [PR28 수정요청](https://github.com/321Team/infra-terraform/pull/28#pullrequestreview-5500767746), HEAD `d46b50fac65ec5368b3502072ea0de5aa5b922c3`. [PR31](https://github.com/321Team/infra-terraform/pull/31) `bd155bb32bac42fa9cd5975c25369b395cff2683` source 승인·OPEN, CI0 | actual VPC/Subnet/Route/IAM/OIDC/State와 단계별 승인·readback. BoolIfExists 후보 source 승인은 실제 IAM 반영·SSM 정상/거부 검증 아님: #35 이하영 → 이권욱 |
+| 3. #36 D21 | 위 PR161 원본 편입·독립 승인·MERGE 및 OCI Primary NO-GO/AWS Relay 결정 재사용 | D21 결정을 새 OCI 시험으로 재개하지 않음. 미확인 initiator/cleanup raw는 미확인 그대로 유지. D21 결과와 #35/#37 actual 연결: 이권욱 |
+| 4. #37 VPN/보안/승인 TCP·복구 | [#13 종료 보고](https://github.com/321Team/infra-terraform/issues/13#issuecomment-6141223429): PR30 merge `6847d906f974136a5a4aad5ffe47d45930f142e7`, Plan16:50:42~58 KST rc0/No changes 보고. [evidence PR214](https://github.com/321Team/fds-project-evidence/pull/214) `8b0bf20fc2e863f22fd959ff32902bbfc73f2124`, 별도 작업의 독립 편입 승인·OPEN·CI1 SUCCESS | 기존 manifest/source 검토 재사용; 이 작성자가 비공개 tar/Plan/JSON 전체 수신·재해시했다고 표시하지 않음. 실제 단계 B·ALLOW/DENY·복구와 db01 script 절대경로/RUN/원복 인계: 이재환 → #37 수용 → #39 이권욱. Plan은 전체 AC-5/G4/재Apply GO 아님 |
+| 5. ROSA 생성 준비 | PR29 설계 source, [#12 A1/A2 확인](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6141247655), [ROSA#11](https://github.com/321Team/infra-rosa/issues/11) CA/경로 준비 CLOSED | Region/Topology/Version/Quota·계정/OCM/user-role·단계별 권한 실제 충족. A1/A2 창과 완료, A3 Apply/Create 승인 구분: 이하영/중앙 권욱 → #38. G4 전에 Cluster Ready 요구하지 않음 |
+| 6. 비용 잔여 여력 | 교육장 리포트 기반 중앙 판단, 목표400/중단450/상한USD500·자부담0 유지 | 10/12 사용량0 사용자 보고는 전체 누적/현재 예상 총비용0 또는 Cost GO가 아님. 최신 보고의 기간·as-of·사용액/예상 총비용: 이권욱. 구축 담당자 재견적 요구 없음 |
+| 7. Critical 잔여 | 위 미충족을 담당자·단계와 함께 기록. 준비 코드/문서 및 부분 증적 수용은 전체 인수 아님 | 각 생산 Lead의 현재 잔여를 소비하여 이권욱이 Gate 판정. 미해결을 지우거나 일정만으로 PASS 금지 |
+
+Network 원본 `p37-netop-jaehwan-20261012T121250Z.tgz`의 기존 수신·SHA/manifest20/20·내용 검토는 [독립 검증 기록](https://github.com/321Team/infra-terraform/issues/11#issuecomment-6126479035)을 재사용한다. `SSM_START=BLOCKED / FULL_T1_T6=PARTIAL / FIRST_HOST_READBACK=NOT_RUN`을 보존한다. 명령·도구/당시 정책 버전 미수집은 다음 시험부터 보완하며 전체 시험 재요구 사유로 삼지 않는다. N7b StateDeny 기대표 정정은 IAM 권한 확대 사유가 아니다.
+
+### #49 rolling 집계와 #54 Freeze 연결
+
+10/07~22에는 생산자가 기존 티켓/증적에 결과를 누적하고 이권욱은 **변경된 링크·판정만** 갱신한다. 10/23에 처음 자료 작성을 시작하지 않는다. 다음 묶음을 동일 candidate 목록으로 #54→#56→#55에 전달한다.
+
+| 집계 묶음 | 현재 연결 / 다음 입력 | #49에서 닫는 조건 |
+|---|---|---|
+| Cloud/VPN·Architecture | 위 G4 7개 행, #34/#35/#37/#39 | As-built와 승인 기준 차이·actual ID·기존 Runtime 원본/리뷰/병합 범위 대응 |
+| App/Delivery·Hybrid 시험 | [PR75](https://github.com/321Team/infra-cicd/pull/75) `df7c01c4ad0a5e8aa884cba1a4cb50ecac8ebbaf`: Draft, 리뷰0, CI2 SUCCESS; Linux104 중94PASS/10SKIP. #43/#47/#50 actual 원본은 후속 | source→remote digest→runtime imageID/업무 결과, 실패차단·복구·미실행 분리. PR75 MOCK은 실제 TLS/API/배포 증적 아님 |
+| Decision·Known Issue | #36 결정, [D22](d22-lead-review.md), [D23](decision-packet.md), 조건부 P1/P2 결정 | 확정/제안·Deferred의 이유/Owner/기한/재검토 조건 구분. 미결 결정값 합성 금지 |
+| 비용·정리·Review | [운영·Review 준비](lifecycle-review-preparation.md) | 원본 보존/수신, 삭제·보존 inventory, 교육장 리포트·잔여 Owner/Due, #52 실제 시간/참석자 기록 |
+
+각 기존 증적 항목에 필요한 연결은 `ticket/AC · producer · source SHA/RUN/대상/관측 KST · 원본 위치 · 공유/수신/재해시/내용검토 각각의 상태 · STATIC/MOCK/CI/RUNTIME · REVIEW/MERGE/PUBLICATION · 잔여 Owner/완료조건`이다. 이미 있는 필드는 링크로 소비하며 새 양식 재제출을 요구하지 않는다. 비공개 원본 Plan/state/credential은 공개 집계에 넣지 않는다.
+
+**집계 중 결함 처리:** 깨진 링크·SHA 불일치·서로 다른 RUN 결합이면 해당 행 수용을 보류하고 원본 생산자에게 누락/차이만 확인한다. 다른 행은 계속 검토한다. Critical 문서 결함0과 기존 #49 AC를 확인하기 전 #54 Freeze 완료로 표시하지 않는다. 증적 저장소 편입/정정은 기존 독립 리뷰 정책을 따른다.

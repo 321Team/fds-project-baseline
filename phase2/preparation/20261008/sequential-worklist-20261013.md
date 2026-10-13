@@ -1,0 +1,32 @@
+# Phase 2 권욱 담당 선행 작업 — 순차 진행표
+
+CODEX_ASSISTED. 2026-10-13 KST 작성. 기준 checkout `c5c854efe3572f65bb2ef7b23dd32b61b7291e8e`, 외부 PR 상태 17:48 KST, #52/#48 본문 재조회 18:01 KST. 이 문서는 정본·AC·담당자·일정을 변경하지 않는다. 최신 실행 여부는 각 원본을 재조회한다.
+
+**진행 원칙:** 한 행이 외부 입력/리뷰에 막히면 현재 결과·남은 담당/완료조건을 남기고 다음 독립 행을 진행한다. 검증을 끝낸 동일 코드/증적은 새로운 변경이나 실패 근거가 있을 때만 재검증한다. 아래 “준비 완료”는 티켓 완료가 아니다.
+
+| 순서·권욱 담당 티켓 | 이번 준비 결과 / 연결 | 다음 행동·담당자 | 실제 완료조건 |
+|---|---|---|---|
+| 1. #46 Delivery | [infra-cicd Draft PR75](https://github.com/321Team/infra-cicd/pull/75): 코어·TLS sender·영속 claim/checkpoint·생산자 bridge·연결 실패/복구 MOCK. HEAD `df7c01c4ad0a5e8aa884cba1a4cb50ecac8ebbaf`, CI2 SUCCESS, 리뷰0·미병합 | 코드 독립 검토 대기와 별개로 2번 진행. 플랫폼 실제 입력 이하영, 승인 Registry/digest·clean render 인계 이재환, 소비·검증 이권욱 | source/환경 identity·권한·승인 결속, 운영 수명주기·중단 후 수동 조정, 해당 SHA 리뷰와 별도 Runtime 조건. MOCK을 TLS handshake/배포 성공으로 사용하지 않음 |
+| 2. #40/#48 D23 | [결정 문안·5개 소비 경로·Deferred 조건](decision-packet.md)의 10/13 보완 작성 | 이권욱이 기존 10/16 목표의 단일 선택 준비. 실제 API/Route는 #38/#43 입력 후 소비. 입력 대기 중 3번 진행 | D23 이유·범위·Owner/재검토 조건; Go이면 기존 Query/거부/복구 AC, IP 최종 선택이면 #48 Cancelled 근거. 이번 상태 변경 없음 |
+| 3. #42 D22 | [기존 A/B·12출력에 인증/전환/복귀 카드 추가](d22-lead-review.md). CA 준비 입력 완료 재사용 | 이하영: 지원 pull 인증/경로; 이재환: Registry/image 원본; 이권욱: 소비 계약/비용/최종 선택. 실제값 대기 중 4번 진행 | 경로·인증·current/previous digest 및 생성 후 cold-pull→Basic Ready→D22 Final. ECR 생성/복사·Phase1 Robot 변경 별도 |
+| 4. #34/#39 Architecture/G4 | [7개 Gate 입력에 최신 PR·수신 범위·잔여 연결](evidence-handoff.md) | #35 이하영·#37 이재환의 actual 원본/Lead 수용을 이권욱이 소비. 한 행 미결이어도 다른 행 검토 | 기존 G4 exact 입력·비용·Critical 잔여에 대한 실제 Lead 판정. PR29 승인·PR214 편입 승인만으로 PASS 아님 |
+| 5. #49/#54 산출물/Freeze | [rolling 집계 4묶음과 결함 처리](evidence-handoff.md) | 생산자가 기존 원본에 누적, 이권욱은 변경분만 연결. 10/23 동일 candidate로 Freeze 검토 | P0 증적·승인된 As-built 차이·재현 가능한 IaC/runbook·Critical 문서 결함0. 정본 발행은 별도 |
+| 6. #52/#55/#56/#57 Review/Close | [90분 시간안·역할·진행표·Action/정리 선후관계](lifecycle-review-preparation.md) | 이권욱이 단일 시각/필수 참석자·승인권자·Demo 방식을 조율; 현재 미확정 | #52 실제 확정/동기화, 10/23 #49→#54→#56→#55, 10/26 잔여/비용/sign-off→#57. 회의/종결 미실행 |
+
+## 다른 담당 티켓을 기다리며 중복 작업하지 않을 항목
+
+| 티켓 | 지금의 권욱 선행 준비 범위 | 다시 작업하는 계기 |
+|---|---|---|
+| #33 Phase 2 Start | Phase1 Close·Known Issue/Approved Deferred 등 기존 진입조건 연결. 사전 문서 준비를 공식 Start로 표시하지 않음 | 기존 진입조건의 새 증적/결정 수신 |
+| #36 D21 | OCI Primary NO-GO/AWS Relay 선택·PR161 원본 편입을 재사용 | 기존 기록의 실제 결함 또는 새 정식 변경결정. 새 OCI 시험 불필요 |
+| #53 G6 | #47 exact handoff → #50 실제 E2E/회귀 결과 소비 순서와 인수표 재사용 | 실제 실행 SHA/RUN·결과 수신. Lab/합성 결과로 ROSA 인수 대체 금지 |
+| #120 GitOps | G5 이후 여력 조건의 선택 항목으로 유지 | 해당 Lead의 Go/No-Go/Deferred 결정·실제 여력 확인. 지금 설치/권한 확대 없음 |
+
+## 이번 변경의 단계와 복구
+
+- STATIC: 기존 문서·Issue AC·PR 상태에 대한 자체 대조. 결과는 이 변경 PR의 검증란에 남긴다.
+- MOCK/RUNTIME: 이번 문서 변경에서는 미실행. PR75의 기존 MOCK/CI는 그 source SHA와 한계 안에서만 인용한다.
+- REVIEW/MERGE/PUBLICATION: 이 문서의 자체 검토, 실제 PR 리뷰, 병합, 정본 발행을 각각 기록한다. 작성자를 타인 독립 승인자로 표시하지 않는다.
+- 실제 AWS/ROSA/DB/Runner/OCP 접속, token/IAM 변경, Apply/Deploy/VPN 단계 B, 자원 생성/삭제, 정본 발행·티켓 종결은 수행하지 않는다.
+- Phase1 DB/pg_hba/영구 방화벽/NetworkManager/route/Harbor CA/Runner/DNS/LB/AC를 보존한다. 문서 복구는 해당 변경 커밋 revert이며 실행 환경 원복과 구분한다.
+- 교육장 지원·자부담0·목표400/중단450/상한USD500, 중앙 비용 판단·검증 완료까지의 최소권한 유지 결정을 재사용한다. 현재 보고가 없으면 비용값/승인값을 합성하지 않는다.

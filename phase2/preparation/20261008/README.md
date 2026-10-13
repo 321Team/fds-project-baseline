@@ -1,5 +1,7 @@
 # Phase 2 전용 사전 준비 — 2026-10-08
 
+**최신 준비 진입점:** [10/13 순차 작업표](sequential-worklist-20261013.md). 본문의 10/08 현황은 당시 기록이며, DNS·D22·G4·Review의 현재 준비는 각 문서의 10/13 보완과 구분해 읽는다.
+
 CODEX_ASSISTED. 사용자 'Phase 1 작업은 제외하고 나머지 건에 대해서 권장 순서대로 착수' 지시를 적용한다.
 
 현재 상태: **1차 인수 준비 단계 / Phase 2 사전 문서 준비 병행**. 결정안 수용·독립 코드 리뷰·실제 실행은 별도다. 이번 패킷은 런타임 설정이나 실행 가능한 tfvars가 아니다. Phase 1 Close/Harbor/기존 CICD 수정·시험·승인·티켓 처리는 범위 밖이다. 해당 생산물을 P2가 소비할 조건만 기록한다.
@@ -43,3 +45,7 @@ Freeze는 생성 전 네트워크/권한/보안 계약을 받아 판단한다. a
 기준 main: baseline `81365568fd0b946ad93e4d82ae8191add5fcacd0`, Terraform `0eabe8daa75a6b9bf960fe1ea5eeaf6a8818f216`, CICD `4e9324cd8acf0ba67b35f950b4c952db8064540e`, APP `adc90410f99cb7af5b40bc8ff92c45272e9f8bee`. 발행 정본 docs-v3.1.21 유지.
 
 Issue 원문/최신 댓글·PR 상태·기존 준비 문서의 정적 대조를 수행한다. 수정 파일의 링크·TSV·UTF-8/LF·민감정보·diff를 검증하고 실제 결과는 PR에 남긴다. 이번 새 MOCK/LAB/AWS/ROSA Runtime=NOT_RUN. 문서 전용이며 복구는 해당 커밋 revert다. canonical 파일·Issue 본문/AC/Status·Phase 1 코드·서버 설정을 변경하지 않는다.
+
+## 10/13 순차 작업 인계
+
+[작업 목록과 다음 행동](sequential-worklist-20261013.md)을 현재 준비의 진입점으로 사용한다. 이 폴더의 10/08 기록과 `input-intake.tsv`는 당시 접수 이력이며, 최신 승인·소스·접수 상태는 작업 목록이 연결한 각 문서의 **10/13 보완**을 우선 참조한다. 위 private 관리 경로 전제는 현재 public/public 승인에 맞춰 [DNS 보완](decision-packet.md)에서 구분했다. 이 보완도 정본 발행·D22/D23 확정·Gate 인수는 아니다.
