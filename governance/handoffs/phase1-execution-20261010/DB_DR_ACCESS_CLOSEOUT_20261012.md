@@ -40,7 +40,18 @@ Harbor 수정·검증은 기존 구축 세션에서 수행한다. 이 문서 작
 
 DB 전체 종결에는 별도 대조가 필요하다. 10/13 조회한 #11에는 핵심 요구의 `transaction-api 승인 경로만 허용`·`Client와 fds-engine 직접 DB 차단`이 미체크인 반면, AC의 `미승인 Source 접속 거부`는 기존 Lead 판정으로 체크돼 있다. 9/23 설명의 DB 포트 전체 허용·edge 허용은 당시 이력이며 10/8 보안 변경 후 현재 정책으로 사용하지 않는다. 체크 상태를 임의로 되돌리거나 올리지 않는다.
 
-다음 최소 작업은 #19/10월 원본에서 승인 Source·DB `client_addr`·현행 allowlist·정상 Listener와 Client/fds-engine의 정책 차단을 대응시키고, **그 대조로도 남는 행만** 최종 APP/SEC 회차에 연결하는 것이다. W4 문안 채택과 이 요구의 충족은 별도 판단이며, 이번 문서 갱신은 그 전체 대조 완료를 주장하지 않는다.
+10/13에는 [증적172 병합본][db-window]의 README·db01 archive와 전사본을 추가 대조했다. db01 archive SHA256은 `73407dcacc966973cb00fc6d01ec9c66fc230eea3b6f29e3a00180b46c88fc68`로 기록과 일치했다. 이는 보존 바이트 대조이며 새 서버 실행이나 AC 인수는 아니다.
+
+| DB 요구의 직접 범위 | 10/8 원본에서 재사용할 근거 | 남는 경계 |
+|---|---|---|
+| 승인 Source와 서버 정책 | `db01-check-203204.log`: `fds_app` 세션 .105/.107/.108 각1, .50 세션0, pg_hba 오류0. `pg_hba.conf.after`: Worker3개 hostssl/SCRAM만. `apply-check-W5.txt`: runtime/permanent의5432 포괄 허용 없음, Worker3개 rich rule | 당시 Worker 경로·DB 정책 근거. 같은 Worker를 쓰는 모든 Pod 중 transaction-api만 허용됨을 단독 증명하지 않음 |
+| 양성 거래·Listener | 전사본 W3/W4: HTTP201·동일 거래 DB 각1행, 새 Pod3개 연결 | 승인 경로의 당시 저장 성공. 새 최종 이미지·전체 회귀는 별도 |
+| Client 음성 연결 | 전사본 N2 edge .50 rc0→rc1, N3 PC .29 rc0→rc124. 증적 요약의 W2 .50 새 SSL 연결 SQLSTATE28000 거부 | 전후 접속 차단은 관측. N2/N3 응답 형태 차이의 원인 미확인, 전사본은 서버 SHA가 없는 자료 |
+| fds-engine 직접 DB | 전사본 W5 N4 `TimeoutError`, rc1 | 변경 전 대조·해당 Pod/정책의 차단 지점 귀속 없음. N1 control01도 변경 전부터 timeout이므로 추가 차단 성공으로 쓰지 않음 |
+
+W5의 `RUNTIME_PERMANENT_MATCH=NO`와 뒤이은 정렬 비교 `RICH_RULES_SET_EQUAL`·`OTHER_LINES_EQUAL`을 함께 보존한다. 정렬 비교는 rich rule 집합과 interfaces를 제외한 나머지 값의 대조이며 전체 원문 동일이라는 뜻이 아니다.
+
+따라서 다음 최소 작업은 기존 #19/9월 MON의 fds-engine 차단 근거와 해당 시점 이후 정책 변경을 연결해 **앱별 허용·차단 귀속에 남는 공백만** 좁히는 것이다. 10/8에 이미 확보한 Worker Source·PC/edge 전후·거래를 미실행으로 되돌리지 않는다. 새 시험이 필요하더라도 이 대조로 남는 행을 최종 APP/SEC 회차에 연결하며 DB 창 전체를 반복하지 않는다. W4 처분과 DB 전체 요구의 인수는 별도다.
 
 ## 3. DR — 기존 요구사항과 실제 증적 대응
 
@@ -140,6 +151,7 @@ W4·DR 사실 오류 없음 회신은 연결했다. 사실 오류가 없다는 �
 [db-go]: https://github.com/321Team/fds-project-baseline/issues/11#issuecomment-6058586541
 [db-result]: https://github.com/321Team/fds-project-baseline/issues/11#issuecomment-6059222263
 [db-risk-closed]: https://github.com/321Team/fds-project-baseline/issues/11#issuecomment-6063472395
+[db-window]: https://github.com/321Team/fds-project-evidence/tree/008eb7e48d52308375481c58a1e22ab38a6ddad9/evidence/P1-DB-01/db-window-20261008T1930
 [dr-evidence]: https://github.com/321Team/fds-project-evidence/tree/2c8f4a36bba58ec4acbf29c95fdfd8abc1ec56bc/evidence/P1-DR-01/received-20260929T0315Z
 [dr-accept]: https://github.com/321Team/fds-project-baseline/issues/21#issuecomment-5883179488
 [runbook-pr]: https://github.com/321Team/infra-db/pull/11
