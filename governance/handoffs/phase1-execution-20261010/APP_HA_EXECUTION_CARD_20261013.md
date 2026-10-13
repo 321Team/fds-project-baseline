@@ -2,6 +2,8 @@
 
 이권욱 / CODEX_ASSISTED · 2026-10-13 05:13 KST 읽기 기준. 준비안이며 새 Deploy·DB 쓰기·drain·재부팅·Probe 장애 허용서가 아니다. [기존 V07/V08](MINIMUM_VALIDATION.md)의 기준과 기존 인수 결정을 유지한다. Harbor manager/H6 구현은 별도 채팅 소유다.
 
+10/13 후속 반영: 07:51 Push 결과와 [이하영의 역할 회신](https://github.com/321Team/fds-project-baseline/pull/165#issuecomment-6136135297)을 §3에 연결했다. 05:13 현장 관측을 현재값으로 갱신한 것은 아니며 새 HA 실행·참여 확정은 없다.
+
 ## 1. 권장 순서와 이번에 줄인 공백
 
 **승인된 Push → 해당 receipt로 별도 허용된 Deploy/복귀 → 최종 형상 확인 → 필요한 단일 Worker HA → 배치·서비스 회복 → 최종 APP 회귀** 순서를 권한다. Probe 장애는 필요한 미입증 사례만 별도 범위로 정하며 정상 회귀 중간에 끼우지 않는다. 같은 초기 형상으로 HA·회귀를 먼저 돌리고 새 이미지에서 반복하지 않는다.09:00 병행 준비 종료와 Push10:00 시작한도/12:00 종료창은 별개다.
@@ -34,11 +36,11 @@ APP 도구 ref `61fbf0bf1ace1fa3a5eb983c002de2a0ddac856a`는 조회 main `6e7acf
 
 | 입력 | 상태 / 실제 채울 값 |
 |---|---|
-| 새 Push receipt와 final image digest2개 | 미생성. 이전 TBS manifest를 성공 Push receipt로 바꾸지 않음 |
+| 새 Push receipt와 image digest2개 | 07:51 Run38318968352/Attempt1의 실제 receipt·두 remote digest 확보, 증적208 병합. [병행 실행안 §8](PARALLEL_EXECUTION_20261013.md)의 원본·준비 입력 사용. 최종 배포 imageID는 Deploy 후 별도 결속 |
 | Deploy 결과·복귀 | 새 회차 미실행. exact Deployment/Pod/imageID·허용 복귀 digest·예산·console를 Deploy 카드에서 인계 |
 | 작업 구간·동시 변경 배제 | 미확정. Harbor 변경/후관측 및 다른 앱·DB writer·MON 변경과 비중첩 |
 | 요청·수집 접근 | edge01 기존 server08, db01 기존 server08, control01 기존 정상 경로. 역사상 계정이 현재 sudo/DB/MON 접근 성공을 보장하지 않음 |
-| 현장 인수 | 이권욱 실행/console; 이재환 기존 HA/E2E 기준·DB/MON 수집 경로 확인, 이하영 기존 정책·격리 경계. 겸임 가능, 새 공통 Lead GO를 만들지 않음 |
+| 현장 인수 | 이권욱 통합 실행/console·인수; 이재환 기존 APP/HA 담당 범위·HA/E2E 기준·DB/MON 경로 연결. 실제 회차 참여는 별도 확정. 이하영은 이 카드 역할을 맡지 않는다는 회신을 반영하며 새 SEC 쟁점이 생기는 경우만 연결. 새 공통 Lead GO 없음 |
 | 새 경로 | edge01의 새 공급/결과 경로, control01 타임라인·원본, db01 SQL/rc·원본. 미확정 이름을 실행값으로 쓰지 않음 |
 | DB 사전 0행·RUN | 아래 §5의 범위 선조회와 실제 생성 RUN 결속. 같은 RUN 재전송 금지 |
 | HA 변경 범위 | 최종 형상에서 **worker02 1대, fds-app 앱만** cordon/drain/uncordon; 필요 시 종료 배치 복구 Eviction 각1개·총2개를 포함하는 구체안. 아직 허용받지 않음 |
