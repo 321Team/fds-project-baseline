@@ -35,7 +35,7 @@ CODEX_ASSISTED. 권욱 담당 #42/#46 준비 문서. 검토 대상은 [하영 �
 | 2 endpoint/naming | Harbor 10.1.93.54 또는 harbor.fds.internal 중 실제 image host와 TLS/CA 일치 필요. ECR repository 이름/URI 미정 | #11 하영 / #35·#46 |
 | 3 principal/최소권한 | Runner push와 P2 pull 분리. ECR 선택 시 push/pull 및 token 취득·갱신 범위 제출 | #35·#38·#46 |
 | 4 trust | Harbor 공개 Root SHA256 20ddfa5e92c346aaf46fc30179fbc0b069e256effd2615a9f4308a8fe719053f 후보 수용. exact image host/key·JSON/정규화 map·해시·생성 방법·소스 SHA·CLI/provider pin 잔여. PEM 해시만으로 key/실행 설정 무결성을 대신하지 않음 | #11 하영 |
-| 5 digest/tag | 승인 current/previous manifest·index/child digest를 원본과 연결. 값 미수신 | #43 재환 / #46 권욱 |
+| 5 digest/tag | 앱2종의 새 P1 Push digest 원본은 아래10/14 대조로 접수. 각 앱의 P2 current 채택·previous와 필요한 index/child 대응은 미확인 | #43 재환 / #46 권욱 |
 | 6 push path | 기존 공급망 소비. ECR 채택 시 repository별 최소권한과 연결 경로 추가안 필요 | #46 권욱 + #35 입력 |
 | 7 pull path | private_a→Relay→Harbor443 후보, source 보존/return·host/DNS·허용 source 계약 필요. P0 IP 후보는 D23 전체 DNS 결정을 무조건 기다리지 않음. 승인된 최소 경로 구현·cold-pull은 Basic Ready 판정 전, Final은 그 결과를 소비. A의 ECR 경로도 별도 | #38·#37 / #11 |
 | 8 fallback | 아래 전환/복귀 절차 후보. 자동 mirror 설정은 미선택 | #42 권욱 |
@@ -110,3 +110,26 @@ ECR의 digest pull에는 manifest 형식 자동 변환이 없다. 복사 시 원
 | B 복구 대기 | A 미충족 때 검토할 대안이며 자동 선택 아님 | Harbor/VPN 복구까지 신규 rollout 중단 영향과 기존 AC 충족 여부를 권욱이 판단. cache만으로 복구 가능 판정 금지 |
 
 복구 완료는 인증 갱신 성공만으로 판정하지 않는다. 선택한 exact host/CA·current 또는 previous 승인 digest·지원 pull 경로·필요 cold-pull·실패/복귀 원본이 같은 P2 대상/RUN에 연결돼야 한다. 기존 CA 자료와 P1 공급 시험은 변경 없는 범위에서 재사용하며, 이번 준비 때문에 원본 전체나 성공한 P1 시험을 다시 요구하지 않는다.
+
+## 10/14 생산 원본 대조 — 앱별 current/previous
+
+병합된 evidence PR218의 고정 커밋 `7e6bb13dafad1e5f60887880576364fe02a461de`에서 [인계 원본](https://github.com/321Team/fds-project-evidence/blob/7e6bb13dafad1e5f60887880576364fe02a461de/evidence/P1-CICD-01/push-run-38404449622-20261013/NEXT_DEPLOY_HANDOFF.json)과 [Push 결과 원본](https://github.com/321Team/fds-project-evidence/blob/7e6bb13dafad1e5f60887880576364fe02a461de/evidence/P1-CICD-01/push-run-38404449622-20261013/execute-originals/result.json)을 이번에 읽었다. 두 파일의 앱별 repository/digest·TBS Run38395350748·Push Run38404449622·workflow `147f760298dd4a683ea58f2a887483769352b97d`가 일치한다. 인계의 APP source는 `affbc69beef9967f7977d09a6fec14f7fb6c0e94`와 기존 승인 reference를 명시한다.
+
+| 앱 | P1 공급 원본의 current 후보 | P2에서 아직 필요한 것 |
+|---|---|---|
+| transaction-api | `10.1.93.54/fds/transaction-api@sha256:338b8a2871507ce8b42deedc916b26e350577ee6efd18df23d7ff2dd4b17dff0` | 이 후보의 P2 채택·clean render 결속, 이 앱의 승인 previous digest·복구 적합성 |
+| fds-engine | `10.1.93.54/fds/fds-engine@sha256:8b257adb08b6d381f72b66d3386efea6112a8f072ecfafcbcd463bcd1c3be89d` | 이 후보의 P2 채택·clean render 결속, 이 앱의 승인 previous digest·복구 적합성 |
+
+여기서 **앱2종과 current/previous 두 역할은 별개**다. 한 앱을 current, 다른 앱을 previous로 매핑하지 않는다. 각 앱마다 current·previous를 연결하며, 값이 같다는 가정도 하지 않는다. P1 롤백 이미지의 기능/보안 경계를 검토하지 않고 P2 previous로 복제하지 않는다. 생산자가 기존 승인 원본에 소비 지정만 보완하면 되며 재빌드/Push/전체 자료 재제출을 요구하지 않는다.
+
+선택한2파일의 [동일 커밋 manifest](https://github.com/321Team/fds-project-evidence/blob/7e6bb13dafad1e5f60887880576364fe02a461de/evidence/P1-CICD-01/push-run-38404449622-20261013/SHA256SUMS) 대조는2/2 일치했다. SHA256은 각각 `79f4f056290b953912dcb229604ea0fc20d3a2412ed8a66ff13e764ef33996f1`, `8be5cef6cc47e0afcd5236f031bc7c180cdec40ba34039729741114c46f38276`다. 이는 이번 조회 파일 무결성/상호 대응 확인이며 전체 archive 재검증·현재 Harbor 실조회·P2 pull/배포 성공·새 독립 승인으로 확대하지 않는다.
+
+### D22에서 다시 받지 않을 것과 남은 최소 입력
+
+- **재사용:** #11 CLOSED의 CA JSON·host key·경로 순서·생산자 인계 수용, 위 앱별 P1 공급 원본, 기존 A/B 비교·실패/복구 절차. 정적 인증서/기존 공급 시험을 새 날짜만을 위해 반복하지 않는다.
+- **생성/경로 준비:** 하영의 실제 HCP 지원 버전·적용 경로·P2 pull credential reference/owner/scope/expiry/갱신 책임. token 원문 없이 기존 handoff의 누락 필드만 연결한다. CA 입력 접수 완료와 실제 설정/통신 완료를 구분한다.
+- **P2 소비 지정:** 재환의 앱별 current/previous 채택·승인 reference·clean render와 권욱의 실행 입력 결속. 새로운 manifest/index 형식을 임의 변환하지 않는다.
+- **생성 후:** 승인 창의 actual node-source·strict TLS·cold-pull/digest·negative·복구 결과 → Basic Ready → D22 Final. 생성 전 실제 cold-pull을 선행조건으로 요구하지 않는다.
+- **A 선택 시에만:** 지원 ECR 인증/갱신·경로·current/previous 보존·전환/복귀·C3 비용의 권욱 중앙 판단. A 미완비는 신규 rollout 중단 조건이며 B 최종 선택을 자동 뜻하지 않는다.
+
+따라서 준비 검토는 진행 가능하고, D22 Final·실제 전환은 미완료다. 기존12출력 중 준비 입력이 수용된 항목을 다시 PENDING 전체로 되돌리지 않는다.

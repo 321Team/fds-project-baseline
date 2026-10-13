@@ -25,6 +25,38 @@ GitHub 조회00:24~00:25 KST와 10/13 사용자 별도 SSM 요청의 실제 원�
 
 기존 4묶음 집계에서 SSM을 전부 미실행으로, P1 Push/Deploy를 전부 준비 대기로 되돌리지 않는다. 새 원본 수신과 실제 플랫폼 입력 미확인은 위처럼 남긴다. 증적 PR 병합은 해당 저장소 편입 단계이며 #34/#39/#49의 AC 충족·정본 발행을 자동 뜻하지 않는다. 실제 G4 판정은 동일 기준의 전체 필수 입력과 Critical 잔여를 권욱이 확인한 뒤 별도로 남긴다.
 
+## 10/14 입력표와 현재 증적의 대조
+
+[input-intake.tsv](input-intake.tsv)는 10/08 당시 접수 이력으로 보존한다. 아래 대조가 현재 소비 상태이며 옛 `PENDING/NOT_RUN`을 전체 재요청 목록으로 사용하지 않는다. 원래16개 ID를 유지해 변경 없는 입력도 찾을 수 있게 했다. 실제 원본의 수신/무결성/내용 검토/독립 수용을 한 상태로 합치지 않는다.
+
+| 기존 ID | 현재 소비 상태 / 근거 | 지금 필요한 잔여 |
+|---|---|---|
+| I01/I02 IAM·역할 | 전체 PENDING/NOT_RUN 아님. 위 PR31/IAM v2의 원본 독립 수용과 권욱 실제 SSM 부분 결과, 재환 본인 접속 보고 재사용 | 다른 정책/작업까지 승인 확대 없음. 새 후속 원본 독립 수용·Resume 셸·미실행 N1 범위만 남김 |
+| I03/I04 플랫폼 | 설계·public/public PR29 병합·A1/A2 기존 수용·NAT/A3/태그 Plan 및 한정 GO의 부분 상태 유지 | OCM basic/A3/태그 actual 반영·지원 버전/용량/경로 계약·생성 판단. 과거 “전체 활성화/연결 미확인”을 이미 수용한 A1/A2로 되돌리지 않음 |
+| I05 Relay | Relay 실제 SSM 접속과 첫 호스트 readback은 위 원본으로 소비 | VPN/Libreswan·SA/포워딩·복구 인수와 구분. 같은 첫 호스트 읽기 재시험 없음 |
+| I06 관리/DNS | public API/Ingress·P0 IP 기준, [D23 AC 대조/결정 필드](decision-packet.md#1014-d23-ac-대조-결과와-결정용-필드) 준비 | D23 실제 선택과 이후 actual API/Route DNS·TLS/identity. private DNS/Resolver를 현재 필수 구축으로 요구하지 않음 |
+| I07 DB 경로 | 기존 source-set·NP·실패복구 계약과 db01/server08·sudo/원복 담당 지정 재사용 | 재환 정확한 스크립트/RUN/원복 인계와 승인된 ALLOW/DENY·복구 원본. 실제 DB/pg_hba 변경은 별도 경계 |
+| I08 CA/경로 | [infra-rosa#11 CLOSED 입력](https://github.com/321Team/infra-rosa/issues/11#issuecomment-6077019042)의 JSON·key·S0~S3 순서·생산자 handoff 수용. exact CA config를 다시 미수신으로 요청하지 않음 | 실제 생성 config 결속·HCP IP key 적용/출발지 보존·cold-pull은 생성/시험 단계 잔여 |
+| I09 D22 | 기존12출력/A·B와 인증 만료·전환·복구 기준 재사용 | 생성 전 준비와 생성 후 Basic Ready→Final 분리. 현재 D22=PENDING |
+| I10/I11 앱·Delivery | 앱 구현 공급과 [P1 Push 원본2개 대조](d22-lead-review.md#1014-생산-원본-대조--앱별-currentprevious), PR75 `50f5f6e` 오프라인 구현·CI2SUCCESS | 앱별 P2 current 채택·previous·clean render·실제 API/CA/UID/RBAC 및 운영 승인/대상 검증 연결. P1 Runtime 권한/결과를 복사하지 않음 |
+| I12/I13 시험 | 기존10/20 준비·10/21 H1 후 본시험·10/22 회귀 방향, tool/fixture 준비의 부분 접수 재사용 | 실제 창·동일 구성/fixture·환경 입력과 기존16case 원본. 이번 새 조회/시험은 없으며 해당 이전 상태를 상향하지 않음 |
+| I14 D21 | 기존 FINAL OCI NO-GO/AWS Relay 결정 및 PR161 responder 원본 편입 재사용 | 전체 initiator/cleanup raw와 정본 publication은 별도. OCI 재시험/재선택 없음 |
+| I15 비용 | 기존 ROSA Cost GO·교육장 지원·자부담0 수용, 목표400/중단450/상한500 유지 | 최신 교육장 리포트의 기준시각/사용액/예상 총비용. 10/12 사용량0을 전체누적0으로 계산하지 않고 구축 담당자 재견적/중복 승인 요구 없음 |
+| I16 Review | 사용자 “아직 미정—기존 제안 유지”와 기존 운영안 | 10/23 14:00~15:30 제안, 참석·시간은 미확정. 준비와 실제 Freeze/Review/정리·Close 분리 |
+
+### #49의 4묶음과 AC 연결
+
+| 묶음 | 재사용할 현재 준비 | 최종 수용에 남은 것 |
+|---|---|---|
+| Test/Evidence | SSM의 부분 실행/무결성/독립 수용 범위, P1 공급 source→TBS→Push→Deploy 연결, P2 MOCK/CI | 실제 P2 P0 티켓의 동일 RUN/source/target·결과·증적 링크. P1 HA/DB 회귀를 이 준비 작업으로 실행하지 않음 |
+| As-built | public/public·worker/Relay 분리 및 승인 source 계약 | 실제 자원 inventory·Plan/Apply/readback 대응과 Baseline 차이의 Lead 판단. 계획도를 As-built로 표시하지 않음 |
+| IaC/Runbook | 기존 Plan·복구 절차·버전 고정·실패 중단·영속 기록 검증 | 실제 실행 위치/대상/입력/정리 결과가 연결된 재현 자료. 합성 endpoint/credential/승인으로 빈칸을 채우지 않음 |
+| Decision/Known Issue | D21 기존결정, D22/D23 검토안, N1 미실행·Resume 미확인, 비용/정리 경계 | D22/D23 실제 선택, 차이/잔여의 Owner·완료조건, Critical 문서 결함 판정. 문서 작성만으로 Freeze/AC 체크하지 않음 |
+
+### 준비 PR의 리뷰 절차 정정
+
+[REVIEW_AUTHORITY_POLICY §2](../../../governance/REVIEW_AUTHORITY_POLICY.md)의 main 원문과 현재 checkout 일치를 확인했다. **PR75는 배포 코드/혼합 변경으로 작성자 외 독립 코드 리뷰가 필요하다. PR167은 P2 Markdown 문서만 바꾸므로 Lead 검토·병합 판단 대상이며, 별도 독립 승인은 필수 조건이 아니다.** 앞선 “두 PR 모두 독립 리뷰 대기” 보고는 이 구분으로 정정한다. 현재 두 PR에 독립 리뷰0이라는 사실과 필수 승인 요건을 구별한다. 자신의 GitHub APPROVE를 만들지 않으며 이번 사용자 착수는 PR 병합·Decision 최종 선택·정본 발행 요청으로 확대하지 않는다. 증적 저장소 PR의 독립 검토 요건은 그대로다.
+
 ## D21 publication 접수
 
 [#36 권위 기록](https://github.com/321Team/fds-project-baseline/issues/36)의 결정은 FINAL / OCI Primary NO-GO / AWS EC2+EIP Libreswan Relay 선택이다. 재선택이나 새 OCI 시험은 불필요하다.

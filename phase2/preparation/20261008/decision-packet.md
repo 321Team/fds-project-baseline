@@ -16,7 +16,7 @@
 | DB source·security | worker 교체 source-set 생성/폐기 규칙, inventory/forwarding/DB 방화벽·pg_hba/NP 책임, credential reference, 실패 시 STOP·대체자 | 실제 API source·DB ALLOW, engine/비승인 source DENY·교체/복구. #38/#37/#43/#47 |
 | Registry | D22 생성 전 trust/경로/principal 계약과 아래 2절 최종 선택 시점 분리 | 생성 후 actual node-source·cold-pull·digest를 Basic Ready 입력으로 확보 → Basic Ready → D22 Final. #38/#42 |
 
-정확한 용량·IAM JSON·endpoint는 [입력표](input-intake.tsv)에 미결로 남겼고 worker key/AZ는 위 승인으로 부분 수용했다. 과거 추정 sizing, 단일 관측 IP, whole VPC 허용을 자동 채택하지 않는다. 단일 AZ/subnet이 단일 DB source IP를 뜻하지 않는다. source 자동 갱신은 tag만으로 인증하지 않고 cluster/pool/subnet/ENI 대응·실패 시 차단·제한된 변경 범위·원복 조건을 확인한다. 새로운 source controller를 이번에 구현/등록하지 않았다.
+10/08 당시 정확한 용량·IAM JSON·endpoint는 [입력표](input-intake.tsv)에 미결로 남겼고 worker key/AZ는 위 승인으로 부분 수용했다. 이후 수용된 IAM·CA·공급 입력의 현재 상태는 [인수표의 I01~I16 대조](evidence-handoff.md#1014-입력표와-현재-증적의-대조)를 따른다. 과거 추정 sizing, 단일 관측 IP, whole VPC 허용을 자동 채택하지 않는다. 단일 AZ/subnet이 단일 DB source IP를 뜻하지 않는다. source 자동 갱신은 tag만으로 인증하지 않고 cluster/pool/subnet/ENI 대응·실패 시 차단·제한된 변경 범위·원복 조건을 확인한다. 새로운 source controller를 이번에 구현/등록하지 않았다.
 
 ## 2. #42 D22: 생성 전 준비와 최종 선택
 
@@ -32,7 +32,7 @@
 | 실패·가용성 | tunnel/Harbor 중단 시 신규 rollout STOP, 정상 workload/이전 digest 보존 | registry/egress/credential 장애 시 같은 경계 | 자동 mirror/rebuild/tag fallback을 새로 승인하지 않음 |
 | 비용/일정 | 네트워크·registry 범위를 교육장 리포트와 연결 | 같은 보고 범위·통화/기간으로 연결 | 보고 사용액·예상 총비용, 미수신 NOT_ASSESSED |
 
-최신 소비 사실: APP `adc90410f99cb7af5b40bc8ff92c45272e9f8bee`의 [Build/Scan 인계](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6041140607)는 존재한다. remote Push/승인 digest/ROSA imageID 완료는 아니다. Harbor [가용성 위험 보고](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6042747313)는 D22 선택의 입력으로만 소비하며 Phase 1 수정·시험·인수는 이번 범위에서 수행하지 않는다.
+10/08 당시 소비 사실: APP `adc90410f99cb7af5b40bc8ff92c45272e9f8bee`의 [Build/Scan 인계](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6041140607)는 존재한다. 당시 remote Push/승인 digest/ROSA imageID 완료는 아니었다. 새 Push 원본의 앱별 digest는 [D22의 10/14 생산 원본 대조](d22-lead-review.md#1014-생산-원본-대조--앱별-currentprevious)를 현재 입력으로 연결한다. Harbor [가용성 위험 보고](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6042747313)는 D22 선택의 입력으로만 소비하며 Phase 1 수정·시험·인수는 이번 범위에서 수행하지 않는다.
 
 **생성 전:** 지원 trust 방식/공개 CA·image host(IP/FQDN)·principal/route/source 계약·실패 처리 준비. **생성 후 Basic Ready 판정 전:** 승인된 경로에서 실제 cold-pull·digest 등 #4 handoff 입력을 확보한다. **Basic Ready 후 D22 Final:** 이 결과와 TLS/인증/negative·업무/복구 자료를 소비해 단일 Primary/Fallback·credential owner 및 #43/#46/#47 소비조건을 확정하고 IF-19에 연결한다. 생성 전 actual ROSA cold-pull을 요구하지 않고, Basic Ready에 필요한 경로 준비를 D22 Final 이후로 미루지 않는다. 기존 10-15 Final 목표의 실현 가능성은 G4·실제 운영창과 정합화하며 날짜만으로 GO하지 않는다.
 
@@ -87,6 +87,23 @@
 | 추가 DNS Go가 필요해지는 경우 | 기존 권위 zone/허용·거부 query/반환·복구 기준 재사용 | 실제 P0 차단 근거와 변경할 최소 zone/source, 비용·일정 영향 및 실행/원복 범위가 구체화된 뒤 별도 판단 |
 
 결정 기록의 `날짜·결정자·선택·이유·적용 경로·변경할 설정 유무·#48 처리·재검토 trigger`는 하나의 D23에 연결한다. 이번에는 선택 제안과 확인 필요를 준비했으며 실제 승인값/회의 기록을 생성하지 않았다. 조건부 항목의 P1 표기는 **우선순위**이고 Phase 1 작업 범위를 뜻하지 않는다.
+
+### 10/14 D23 AC 대조 결과와 결정용 필드
+
+01:09 KST [#40](https://github.com/321Team/fds-project-baseline/issues/40)·[#48](https://github.com/321Team/fds-project-baseline/issues/48)의 현행 Decision Contract/AC와 위 문안을 대조했다. **설계 수준에서 추가 Hybrid DNS를 지금 활성화해야 하는 새 근거는 확인되지 않았다.** 실제 ROSA 이름 해석/통신 성공을 검증했다는 뜻은 아니다. 권고는 기존 Deferred 하나로 유지한다.
+
+| 결정용 필드 | 검토가 끝난 제안 / 남은 사람의 결정 |
+|---|---|
+| P0 정책 | DB `.55`·Harbor `.54`의 IP 경로 유지. public API/Route는 플랫폼이 실제 발급한 DNS 이름과 엄격 TLS. “전체 endpoint를 IP로 통일”하는 결정이 아님 |
+| 추가 Hybrid DNS | Deferred 권고. 구체적 P0 위험 감소 근거·capacity가 확보된 경우에만 Go 재검토 |
+| 이유·변경 영향 | 현재 public/public과 Harbor IP 후보는 private zone 확장을 자동 요구하지 않음. Resolver/forward rule/hosts·기존 Phase 1 DNS 설정의 이번 변경0 |
+| Owner / Due | 기존 Lead 이권욱 / 기존10/16 D23 단일 결정 목표 유지. 일시 Deferred의 후속 Due를 없애지 않음 |
+| #48 처리 | 현재 OPEN 유지. 일시 Deferred는 Cancelled/AC PASS가 아님. 최종 IP 유지로 구현 취소를 결정할 때만 기존 AC에 따른 Cancelled 근거를 별도로 남김 |
+| Go가 되는 경우 | 최소 권위 zone·query source·정방향/반환·UDP/TCP53·허용/거부/NXDOMAIN·장애복구 범위를 선택 구성에 한정해 준비. Reverse/PTR 자동 추가 없음 |
+| 아직 없는 실제값 | ROSA API/Route/namespace UID 및 실제 DNS/TLS 관측은 생성 후 소비 입력. 이를 임의로 채우거나 Deferred 결정 준비의 선행 Runtime으로 요구하지 않음 |
+| 판정 기록 | `D23=PENDING`, `DECISION_DATE=PENDING`, `APPROVED_BY=PENDING`. 이번 착수는 검토 실행이며 최종 선택 등록·AC 수용·일정 변경이 아님 |
+
+[#40의 AC](https://github.com/321Team/fds-project-baseline/issues/40)는 단일안 승인·적용 시 Query/Test 정의·미적용 근거 기록이다. 이 문서로 비교/영향/미적용 근거의 검토 준비를 닫고, Lead의 실제 선택 기록만 별도 남긴다. #48 구현 시험과 실제 ROSA 통신을 D23 사전 검토 완료에 끌어오지 않는다.
 
 ## 4. #43 앱/시험 DB 단계안
 

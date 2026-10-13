@@ -1,6 +1,6 @@
 # Phase 2 전용 사전 준비 — 2026-10-08
 
-**최신 준비 진입점:** [10/14 Phase 1 보호·순차 착수 결과](phase-boundary-20261014.md), [순차 작업표](sequential-worklist-20261013.md). 본문의 10/08 현황은 당시 기록이며 각 문서의 최신 보완과 구분해 읽는다.
+**최신 준비 진입점:** [10/14 Phase 1 보호·순차 착수 결과](phase-boundary-20261014.md), [D23 결정 필드](decision-packet.md#1014-d23-ac-대조-결과와-결정용-필드), [D22 앱별 생산 원본 대조](d22-lead-review.md#1014-생산-원본-대조--앱별-currentprevious), [현재 입력16개·#49 집계](evidence-handoff.md#1014-입력표와-현재-증적의-대조). 본문의 10/08 현황은 당시 기록이며 각 문서의 최신 보완과 구분해 읽는다.
 
 CODEX_ASSISTED. 사용자 'Phase 1 작업은 제외하고 나머지 건에 대해서 권장 순서대로 착수' 지시를 적용한다.
 
@@ -48,4 +48,4 @@ Issue 원문/최신 댓글·PR 상태·기존 준비 문서의 정적 대조를 
 
 ## 10/13 순차 작업 인계
 
-[작업 목록과 다음 행동](sequential-worklist-20261013.md)을 현재 준비의 진입점으로 사용한다. 이 폴더의 10/08 기록과 `input-intake.tsv`는 당시 접수 이력이며, 최신 승인·소스·접수 상태는 작업 목록이 연결한 각 문서의 **10/13 보완**을 우선 참조한다. 위 private 관리 경로 전제는 현재 public/public 승인에 맞춰 [DNS 보완](decision-packet.md)에서 구분했다. 이 보완도 정본 발행·D22/D23 확정·Gate 인수는 아니다.
+[작업 목록과 다음 행동](sequential-worklist-20261013.md)을 재사용한다. 이 폴더의 10/08 기록과 `input-intake.tsv`는 당시 접수 이력이며, 최신 승인·소스·접수 상태는 각 문서의 **10/14 보완**을 우선 참조한다. 위 private 관리 경로 전제는 현재 public/public 승인에 맞춰 [DNS 보완](decision-packet.md)에서 구분했다. 이 보완도 정본 발행·D22/D23 확정·Gate 인수는 아니다. [준비 PR 리뷰 절차](evidence-handoff.md#준비-pr의-리뷰-절차-정정)에 따라 코드 PR75의 독립 리뷰와 문서 PR167의 Lead 판단을 구분한다.
