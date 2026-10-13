@@ -73,6 +73,21 @@ Network 원본 `p37-netop-jaehwan-20261012T121250Z.tgz`의 기존 수신·SHA/ma
 
 18:49 재조회: PR214는 위 `5dd4ef0`에 대한 독립 APPROVED 후 **18:47:20 KST MERGED**, merge `8a931b856551e4d096c6142c1003e3b4f524a2c7`로 확인됐다. 따라서 A 묶음의 충돌 해소·편입 대기는 해소됐고, 다음은 #35/#39의 AC별 소비 연결이다. 이 준비 작업에서는 변경분을 검증했으며 별도 작업에서 이루어진 승인·병합을 직접 수행한 것으로 표시하지 않는다. 기존 비공개 원본 수신·공지 시각·Runtime/인수 한계는 유지한다.
 
+### 10/13 19:00 수신 보완 — A2 연결 보고와 다음 단계 경계
+
+[하영의 A1 종료·A2 결과](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6142922638)(18:51 보고, 18:58 후속 문구 수정)를 수신했다. 아래 상태가 위 18:30의 A2 STOP/미확인 스냅샷 이후 최신 보고다. 현장 ledger·비공개 캡처를 직접 수신/재해시/검토한 상태와 구분한다.
+
+| 항목 | 수신한 결과 | 남은 소비 조건 / 담당 |
+|---|---|---|
+| A1 종료·Subscribe 분리 | 하영의 중앙 실행 `VERIFIED/RC0`, run `b7e0114aba3148658ff83c8d81d21fed`; 기본4+RosaPrereq=5·inline0·Guardrails v2·정책 객체 보존·roles=[] 보고 | `DETACHED_VERIFIED_REPORTED`. 이권욱은 기존 ledger/readback의 users/groups 연결0·최종 미확정 회차0·실제 수행자/시각을 종료 조건과 대조. 요약에 없는 값을 완료로 채우거나 detach 재실행을 요구하지 않음 |
+| A2 연결 | 하영 본인 MFA IAM 사용자 세션에서 18:37 활성화·quota·ELB 확인, 같은 AWS 계정과 기존 Red Hat 계정 연결1회 및 Red Hat 성공 readback 보고. AWS18:47 사전조건은 정상이나 해당 화면에는 연결 상태 별도 표시 없음 | `LINKED_REPORTED`. 기존 비공개 캡처에서 계정/조직 대응을 소비. 표시되지 않는 AWS 연결 필드를 새 AC로 요구하지 않음. 기존 공유 IaC 역할의 조회 권한이 수정됐다는 뜻은 아님 |
+| OCM basic | 기승인된 기본 역할의 조건은 유지하되, 최신 회신은 **다음 작업창 승인 후** 진행으로 정정됨. OCM 실제 실행은 미보고 | 중앙 담당·하영: 고정3파일/동일 계정·조직/기존 객체 fresh 확인 및 OrgAdmin unlink 담당·접근 확인. A1/A2의20:00 창을 OCM에 재사용하지 않음. user-role·A3 Apply·생성 GO와 분리 |
+| A3-1 | saved Plan/JSON 원본 미수신 | 기존 실행 주체가 기존 절차대로 비공개 인계 → 이권욱 exact Plan 검토. source/lock/입력/state 기준과 대조기 결과를 연결하되 Apply GO·작업창은 별도. 중복 Plan/티켓을 만들지 않음 |
+
+추가 Allow·quota 증설·SLR 생성은 필요 없었다는 실행 보고를 소비한다. 같은 활성화/연결 시험이나 구독 재부착을 다시 요구하지 않는다. 이 문서 작업은 AWS/Red Hat 실행·종료 증적 독립 수용·새 권한 또는 비용 승인 기록이 아니다. 실제 명령·ledger·캡처는 기존 비공개 인계 경로에 보존하며 공개 문서로 옮기지 않는다.
+
+G4의 #35 입력에는 [PR31](https://github.com/321Team/infra-terraform/pull/31)의18:29:16 KST 병합(HEAD `bd155bb32bac42fa9cd5975c25369b395cff2683`, merge `f1f8adf66d3b3c9348ebb919fe0dbb4f8fa54fe2`)도 소비한다. 승인된 SSM 수정 후보 소스가 병합된 단계이며 실제 IAM 적용·SSM 정상/거부·FIRST_HOST_READBACK 원본은 별도 잔여다. 기존 Network 부분 결과를 전체 PASS로 올리지 않는다.
+
 ### #49 rolling 집계와 #54 Freeze 연결
 
 10/07~22에는 생산자가 기존 티켓/증적에 결과를 누적하고 이권욱은 **변경된 링크·판정만** 갱신한다. 10/23에 처음 자료 작성을 시작하지 않는다. 다음 묶음을 동일 candidate 목록으로 #54→#56→#55에 전달한다.
