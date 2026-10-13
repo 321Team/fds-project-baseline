@@ -119,6 +119,17 @@ G4 [입력 요약](https://github.com/321Team/fds-project-baseline/issues/39#iss
 
 network 태그 [결과 보고](https://github.com/321Team/infra-terraform/issues/11#issuecomment-6143615282)는19:17 Plan RC2/0add·2change·0destroy, 두 subnet의 ELB tag만으로 보고됐다. 보고된 zip은 검토자의 지정 경로에서 미수신이므로 직접 해시/내용 검토 완료로 올리지 않는다. 보고의 drift5개 설명은 CloudTrail 원인 검증과 구분한다. 실제 태그 Apply/readback·Stage-A Ready·VPN 재Apply GO는 미완료다. A3 원본 수신 때문에 이 행도 수신 완료로 바꾸지 않는다.
 
+### 10/13 20:00 후속 결정 수신 — saved Plan별 한정 Apply GO
+
+19:58 게시된 아래 별도 검토·승인으로, 위19:55 자체 검토의 미확인 사항을 그대로 새 승인 대기로 부과하지 않는다. 이 문서 작성자의 직접 검증 범위와 별도 리뷰의 검증 범위는 구분해 보존한다. 외부 기록을 이 채팅의 실제 AWS/Runtime 실행 권한으로 사용하지 않는다.
+
+| 대상 | 후속 결정과 재사용할 근거 | 실제 잔여 / 실행·판단 책임 |
+|---|---|---|
+| network 태그 | [한정 Apply GO](https://github.com/321Team/infra-terraform/issues/11#issuecomment-6144035652): 같은 source·saved Plan hash의두 subnet tag2건,20:00~21:00. 별도 리뷰에서 zip/manifest/source·binary→JSON 독립 show·backend/state 기록 확인 | 하영 본인 MFA IaC 역할, 시작 직전 state/lock·실제 대상/단일 writer 확인 후1회. 실제 Apply·사후 태그/경계 readback·검증 Plan 결과 미수신. 이 작성자의 zip 직접 수신을 완료로 바꾸지 않음 |
+| A3-1 | [한정 Apply GO](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6144038031): 위 동일 binary/JSON·9create,20:00~21:00. 별도 리뷰는 CLI manual 원본 manifest16/trust3·binary→JSON·저장된 backend까지 확인. plan0은 detailed-exitcode 미사용 보고로 설명. 실행 shell/source archive 미수신을 승인된 saved Plan의 새 차단으로 다시 부과하지 않음 | AWS IAM 중앙 권욱, Red Hat 조직·인증/복구 하영 본인 통제. 진행 중 PR31/OCM 종료·검증 뒤, network 태그 작업과도 현장 쓰기 직렬화. live state/lock/동명 자원 직전 확인 및 role/OIDC 연결·thumbprint·태그 등의 실제 readback 결과 미수신. 권욱이 실행에 참여하면 실행 증적 독립 검토는 재환 등 다른 검토자로 전환 |
+
+같은 Plan·CLI 원본·MOCK을 재요구하지 않는다. **GO 기록 수신과 Apply 성공·AC 수용은 다르다.** 새 IAM 위임/개인 토큰 공유·정책 확대·Stage2·ROSA Create·VPN 재Apply·Stage-A Ready·G4·Phase1 변경 승인이 아니다.21:00 이후 신규 Apply 금지, 진행 중 작업은 해당 승인 기록의 안전 종료·증적 보존 조건을 따른다. 이번 자동 준비 작업은21시 새 작업 종료 규칙을 유지한다.
+
 ### #49 rolling 집계와 #54 Freeze 연결
 
 10/07~22에는 생산자가 기존 티켓/증적에 결과를 누적하고 이권욱은 **변경된 링크·판정만** 갱신한다. 10/23에 처음 자료 작성을 시작하지 않는다. 다음 묶음을 동일 candidate 목록으로 #54→#56→#55에 전달한다.
