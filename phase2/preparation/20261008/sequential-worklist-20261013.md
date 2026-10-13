@@ -1,5 +1,17 @@
 # Phase 2 권욱 담당 선행 작업 — 순차 진행표
 
+## 10/14 별도 착수 — 현재 결과
+
+[Phase 1 보호 경계와 순차 착수표](phase-boundary-20261014.md)를 현재 진입점으로 사용한다. 아래10/13 표는 당시 결과이며 같은 준비를 다시 만드는 작업 목록이 아니다.
+
+1. #46: PR75 `50f5f6ef8c35ccbad07fbaed47c021e60eb6db08`에 오프라인 journal 재구성/검증 CLI·실패 모의시험·새 P1공급 연결을 추가했다. CI2SUCCESS, Linux122중111PASS/11SKIP. actual권한/대상 검증·운영배포·수동fence조정은 잔여이므로 현재 경계에서 더 진행하지 않고 다음 준비로 전환했다.
+2. #40/#48: 기존 단일 DNS 권고안에 Phase1설정 보호·실제입력·Deferred/Cancelled 구분을 추가했다. 최종D23은 PENDING이다.
+3. #42: 기존 A/B에 새 Push증적·P1 Push권한과 P2 pull권한 분리·만료/갱신 실패 중단·복구 수용조건을 연결했다. D22선택/실제전환은 PENDING이다.
+4. #34/#39/#49: 최신 SSM부분완료·N1미실행·A3/태그actual미확인·새공급증적을 [현재 인수표](evidence-handoff.md)에 연결했다. 같은 원본 재제출·시험 반복을 요구하지 않는다.
+5. #52/#54~57: 권욱의 “아직 미정—기존 제안 유지”를 [Review운영안](lifecycle-review-preparation.md)에 반영했다. 일정/참석확정·초대·실행·종결 없음.
+
+새 실제 AWS/DB/Runner/OCP접속·권한/정책·Apply/Deploy/VPN B·자원변경 없이 준비 코드/문서만 진행했다. PR병합·독립승인·정본발행은 수행하지 않는다.
+
 CODEX_ASSISTED. 2026-10-13 KST 작성. 기준 checkout `c5c854efe3572f65bb2ef7b23dd32b61b7291e8e`, 외부 PR 상태 17:48 KST, #52/#48 본문 재조회 18:01 KST. 이 문서는 정본·AC·담당자·일정을 변경하지 않는다. 최신 실행 여부는 각 원본을 재조회한다.
 
 18:45 갱신: PR75 현재 HEAD와 PR214 충돌 해소·PR76/77/29 병합은 [증적 인계표의 추가 대조](evidence-handoff.md)에 연결했다. 최초 시점의 OPEN/이전 HEAD 표기를 현재 미처리 작업으로 다시 세지 않는다.

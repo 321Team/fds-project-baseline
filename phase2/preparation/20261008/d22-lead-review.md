@@ -1,5 +1,7 @@
 # D22 Lead 선행 검토·선택안 — 2026-10-08
 
+**10/14 현재 소비 기준:** 아래 A 우선 상세화·B 대안은 그대로이며 D22 Final은 PENDING이다. 최신 P1 Push 증적·P2 인증 경계는 문서 끝 10/14 보완을 따른다. 과거 “remote Push 미확인”은 작성 당시 이력이며 P2 cold-pull 미실행과 구분한다.
+
 CODEX_ASSISTED. 권욱 담당 #42/#46 준비 문서. 검토 대상은 [하영 제안 6053923723](https://github.com/321Team/fds-project-baseline/issues/42#issuecomment-6053923723)이다. `PREPARATION_REVIEW=COMPLETE / REGISTRY_MODE=PENDING / FALLBACK=PENDING / D22=PENDING`. 이 문서는 ECR 생성·IAM 부여·이미지 복사·Harbor 변경·D22 Final을 승인하지 않는다.
 
 ## 검토 판정과 권고
@@ -93,3 +95,18 @@ ECR의 digest pull에는 manifest 형식 자동 변환이 없다. 복사 시 원
 **후속 조건:** #38 지원 인증/경로 계약 → #43/#46 실제 current/previous 공급 → 승인 창의 cold-pull/negative·복구 → #42 D22 Final. 하영·재환은 기존 인계에 누락 필드만 보완한다. 이권욱은 교육장 리포트로 비용을 중앙 판단하며 추가 단가표·중복 비용 승인이나 지금의 ECR 생성을 요구하지 않는다.
 
 10/13 18:28 추가 수신: [Harbor 운영 후속 기록](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6142413961)은 Harbor10개 healthy·restart=always 유지, 자동복구 관리자 활성화 실패 후 HOLD/정책 원복 완료를 보고한다. **Registry 서비스 상태와 자동복구 관리자 인수 상태를 분리**해 D22에 소비한다. 이번 작성자가 원본/실제 서버를 검증한 것은 아니며 P1 관리자 재활성화·H6·SELinux/lock 수정 시험을 이 준비 범위로 가져오지 않는다. 이 보고만으로 Harbor 서비스 전체 장애 또는 P2 cold-pull/복구 PASS를 선언하지 않는다.
+
+## 10/14 공급 증적·인증 수명·복구 소비 보완
+
+00:25 KST GitHub 조회에서 [새 Push PR218](https://github.com/321Team/fds-project-evidence/pull/218) HEAD `9647a83724dea442c9e8238e60d68bfe2602dc8d`와 [Deploy PR219](https://github.com/321Team/fds-project-evidence/pull/219) HEAD `e7859e3256cfc1cae311a0ae1c897ae7ce8683c3`의 병합·CI1씩 SUCCESS를 확인했다. [실행 보고](https://github.com/321Team/infra-cicd/issues/11#issuecomment-6147808781)를 읽기 자료로 소비한다. 이번 작성자는 실제 Harbor/Runner 접속·raw 독립 검증·P1 재시험을 하지 않았다.
+
+| 구분 | 이번 정리 | 남은 담당·완료조건 |
+|---|---|---|
+| image source | 기존 승인 Test/Build/Scan→Push remote digest/receipt를 재사용할 후보로 연결 | 재환이 P2 current/previous로 채택할 두 이미지 원본·승인 reference 인계, 권욱이 D22/렌더에 결속. P1 deploy digest를 자동 채택하지 않음 |
+| P1 Push 인증 | 보고의 Actions Secret2개 회수와 Harbor Robot 보존은 해당 P1 회차 결과 | P2 pull 권한·Secret이 생성/수용됐다는 뜻이 아님. 현재 P1 Robot/CA/Secret 변경·재발급 없음 |
+| P2 pull 인증 | 기존 owner/scope/expiry/지원 전달/갱신 계약을 P2 플랫폼 identity에 결속 | 하영 기존 handoff에서 실제 방식/만료·갱신 책임 확인. 재환·권욱은 갱신 전후 cold-pull/negative 원본 소비. 토큰 원문/중복 단가표 요청 없음 |
+| 만료·갱신 실패 | 새 rollout/pull 진입 STOP, 기존 건강한 workload와 실패 증적 보존 | 정책 확대·P1 credential 차용·TLS 해제로 해결하지 않음. 지원 방식으로 복구 후 별도 유효 창·원본 연결 |
+| A 수동 ECR 전환 | 기존 후보 유지. source/previous digest 보존과 인증/경로·비용 판단 필요 | C3 비용은 ROSA 기승인 범위 밖. 권욱의 변경분 판단 전 실제 repository/IAM/복사 없음 |
+| B 복구 대기 | A 미충족 때 검토할 대안이며 자동 선택 아님 | Harbor/VPN 복구까지 신규 rollout 중단 영향과 기존 AC 충족 여부를 권욱이 판단. cache만으로 복구 가능 판정 금지 |
+
+복구 완료는 인증 갱신 성공만으로 판정하지 않는다. 선택한 exact host/CA·current 또는 previous 승인 digest·지원 pull 경로·필요 cold-pull·실패/복귀 원본이 같은 P2 대상/RUN에 연결돼야 한다. 기존 CA 자료와 P1 공급 시험은 변경 없는 범위에서 재사용하며, 이번 준비 때문에 원본 전체나 성공한 P1 시험을 다시 요구하지 않는다.

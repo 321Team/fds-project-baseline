@@ -75,6 +75,19 @@
 
 현재 단계는 결정 준비다. 실제 DNS/hosts/Resolver·공용 OCP·DNS/LB 설정 변경이나 전체 DNS 시험을 요구하지 않는다. 나중에 Go가 되면 실제 선택 구성에 대한 실행/복구안을 별도로 고정한다.
 
+### 10/14 D23 선택 직전 대조 — Phase 1 변경 없이 닫는 범위
+
+[이번 작업 경계](phase-boundary-20261014.md)에 따라 위 단일 권고를 유지한다. **추가 Hybrid DNS Deferred 권고 / 실제 Lead 결정 PENDING**이다. public API/Ingress 설계 재승인, DNS/hosts 설정 변경, #48 상태 변경은 수행하지 않았다.
+
+| 선택 입력 | 기존 자료로 준비할 수 있는 것 | 확정 전 남은 것 / 완료조건 |
+|---|---|---|
+| P0 IP 유지 | DB·Harbor의 기존 endpoint와 승인 경로/TLS 계약 연결. 기존 Phase 1 DNS/CA를 바꾸지 않음 | 하영·재환이 전달할 actual ROSA 경로·image host가 기존 계약과 맞는지 권욱이 소비. 새 호스트명을 임의 생성하지 않음 |
+| public API/Route | public/public 병합 source와 두 transaction-api Route의 host1개 계약 | 실제 API/Route DNS·CA·namespace UID 수신 후 동일 source/render에 결속. 아직 없다는 이유로 임시 IP/hosts 우회 금지 |
+| 추가 DNS 보류 | P0가 추가 Resolver 없이 진행 가능한 단일안과 실패 시 STOP/재검토 trigger | 권욱의 D23 최종 선택·이유·Owner/재검토 조건. 단순 Deferred이면 #48 Cancelled로 바꾸지 않음 |
+| 추가 DNS Go가 필요해지는 경우 | 기존 권위 zone/허용·거부 query/반환·복구 기준 재사용 | 실제 P0 차단 근거와 변경할 최소 zone/source, 비용·일정 영향 및 실행/원복 범위가 구체화된 뒤 별도 판단 |
+
+결정 기록의 `날짜·결정자·선택·이유·적용 경로·변경할 설정 유무·#48 처리·재검토 trigger`는 하나의 D23에 연결한다. 이번에는 선택 제안과 확인 필요를 준비했으며 실제 승인값/회의 기록을 생성하지 않았다. 조건부 항목의 P1 표기는 **우선순위**이고 Phase 1 작업 범위를 뜻하지 않는다.
+
 ## 4. #43 앱/시험 DB 단계안
 
 기존 [리뷰 6041356020](https://github.com/321Team/fds-project-baseline/issues/43#issuecomment-6041356020)를 구현 PR에서 확인한다. 권고 위치는 fds-msa/deploy의 base/components/overlays, 플랫폼 Namespace/RBAC/NP 실제 소유는 #38과 충돌하지 않아야 한다.

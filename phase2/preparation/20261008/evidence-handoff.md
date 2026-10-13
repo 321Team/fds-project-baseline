@@ -2,6 +2,29 @@
 
 CODEX_ASSISTED. 실제 원본을 대신하는 문서가 아니다. Phase 1 작업은 제외한다.
 
+## 10/14 현재 인수표 — 기존 부분 완료와 미확인의 분리
+
+GitHub 조회00:24~00:25 KST와 10/13 사용자 별도 SSM 요청의 실제 원본/수신 기록을 연결한다. [이번 Phase 1 보호 경계](phase-boundary-20261014.md)를 따른다. 아래 최신 행이 과거 본문의 동일 항목 대기 상태를 갱신하며, 작성 당시 기록을 소급 수정하지 않는다.
+
+| 입력 | 현재 수용 가능한 사실 | 잔여 담당·완료조건 |
+|---|---|---|
+| PR31/IAM v2 | [재환 독립 수용](https://github.com/321Team/infra-terraform/issues/11#issuecomment-6145949873): Bool→BoolIfExists1곳, v2 기본/v1 보존·주변 불변, 권욱 T4a/T4b/본인Terminate/N2/3세션 정리 원본 수용 | 같은 정책/시험 재수행 불필요. 새 후속 Runtime/원본은 아래 행으로 별도 |
+| 재환 접속 | [22:29 본인 보고](https://github.com/321Team/infra-terraform/issues/11#issuecomment-6146667145): T4a/T4b 성공·N3 상대세션 제공·3개종료. 보고 원문을 조회했다 | T5 본인 Resume→Terminate, 반대 방향 N3 미실행을 보고와 같이 유지. 보고를 전체 원본 독립 수용으로 확대하지 않음 |
+| 권욱 N3 | 10/13 22:25 상대 폐기가능 세션 Resume/Terminate 각1회 AccessDenied, 22:28 Active0/Terminated readback. 원본ZIP SHA `a22d2f75726be565f484655490eff336386b91a6e1e78123d94043f88bdc4873`, manifest15/15 및 내용 자체 검토. 비공개 공유22:31 | 재환 새 원본 수신·독립 수용 회신 미확인. 기존 수용6145949873의 범위를 새 N3까지 넓히지 않음. 완료한 권욱→재환 시험 재요구 없음 |
+| 권욱 Resume | 10/13 22:13 API 성공, 새 client의 실제 셸 재연결 미확인. 생성2세션 종료, 원본 공유 완료 | 권욱: 현재 시험방법/관측 차이 확인 후 필요 부분만 별도 검증. IAM 거부/결함 또는 전체 PASS로 단정하지 않음 |
+| N1 | 10/13 23:04:52 서울 실제 EC2 전체조회 Relay1대/다른대상0. `NOT_RUN_NO_OTHER_REAL_INSTANCE`, StartSession0회. 원본ZIP SHA `7682a0a2931388f1039d700ffd51e6d50ad71a60527e5492b2598486eda0a02f`, manifest8/8·내용 자체 검토/공유 완료 | 권욱: 실제 다른 대상이 생길 때 정확한 대상/소유자/시험·정리 범위를 확인한 잔여 검증만 판단. N1용 자원 생성·없는ID 시험·PASS/면제 처리 없음 |
+| OCM/A3/subnet 태그 | 기존 A1/A2 수용·OCM basic 조건·A3-1 saved Plan9create 및 태그2update 기술 검토/한정 GO 재사용 | 권욱 중앙 IAM 범위·하영 본인 RH/IaC: actual 실행/readback 미확인. 새 유효 창·직전 state/소유/비중첩 조건 후 판단. 10/13 20~21시 만료창을 재사용하지 않음 |
+| VPN/db01 인계 | PR30 병합·무변경 재Plan 보고, db01/server08·sudo 사용자 실측과 권욱 원복 담당 지정 재사용 | 재환 스크립트 절대경로·RUN·원복 인계 및 터널/TCP/복구 원본 → 권욱 소비. Plan0/담당지정만으로 통신 성공 아님 |
+| ROSA 비용/생성 | public/public source·기승인 ROSA Cost GO는 해소된 조건 | 하영 actual IAM/OIDC/태그/플랫폼, 권욱 #34/#39·exact 생성 Plan/별도 Create 판단. 실제생성/Basic Ready 미확인 |
+| P1 공급 → #46 | [TBS217](https://github.com/321Team/fds-project-evidence/pull/217)/[Push218](https://github.com/321Team/fds-project-evidence/pull/218)/[Deploy219](https://github.com/321Team/fds-project-evidence/pull/219) MERGED·CI각1SUCCESS, [새 Deploy 보고](https://github.com/321Team/infra-cicd/issues/11#issuecomment-6147808781) 확인 | 재환 P2승인current/previous·clean render, 하영 P2대상·권한, 권욱 원본결속. P1실제인수와 P2Runtime 미실행을 구분 |
+| #46 준비 코드 | [PR75](https://github.com/321Team/infra-cicd/pull/75) `50f5f6ef8c35ccbad07fbaed47c021e60eb6db08`, Draft·CI2SUCCESS·독립리뷰0. 읽기전용 journal복원·상태진단 추가 | 권욱 운영 authorizer/actual대조·한정수동조정 연결, 타인독립리뷰. 실제TLS/ROSA/RBAC/복구Runtime 별도 |
+
+원본 보관은 기존 고정 비공개 공유경로의 `pr31-ssm-review-jaehwan-20261013-2200/followup-2200`을 재사용한다. 공유 완료·수신·재해시·내용 자체 검토·타인 독립 수용을 각각 구분한다. 공개 문서에는 hash와 상태만 연결하고 raw/credential은 편입하지 않는다.
+
+### #49 집계에 반영할 차이
+
+기존 4묶음 집계에서 SSM을 전부 미실행으로, P1 Push/Deploy를 전부 준비 대기로 되돌리지 않는다. 새 원본 수신과 실제 플랫폼 입력 미확인은 위처럼 남긴다. 증적 PR 병합은 해당 저장소 편입 단계이며 #34/#39/#49의 AC 충족·정본 발행을 자동 뜻하지 않는다. 실제 G4 판정은 동일 기준의 전체 필수 입력과 Critical 잔여를 권욱이 확인한 뒤 별도로 남긴다.
+
 ## D21 publication 접수
 
 [#36 권위 기록](https://github.com/321Team/fds-project-baseline/issues/36)의 결정은 FINAL / OCI Primary NO-GO / AWS EC2+EIP Libreswan Relay 선택이다. 재선택이나 새 OCI 시험은 불필요하다.
