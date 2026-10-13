@@ -1,6 +1,6 @@
 # Phase 1 잔여 작업과 병행 착수 — 2026-10-13 저녁
 
-이권욱 / CODEX_ASSISTED. 사용자 최신 지시의 범위는 **Phase 1**이다. baseline `c5c854efe3572f65bb2ef7b23dd32b61b7291e8e`, CICD `fadc07f18b5bf7febc8cf601fa138d8f35e9ccb4`. 티켓·리뷰·병합 및 GitHub 실행 준비 메타데이터 조회 기준은 18:54~18:57 KST다. 이후 사용자 승인에 따른19:15 TBS 시도와 결과는 §5에 추가했다. 초기 준비 시점과 실제 실행 결과를 구분한다.
+이권욱 / CODEX_ASSISTED. 사용자 최신 지시의 범위는 **Phase 1**이다. baseline `c5c854efe3572f65bb2ef7b23dd32b61b7291e8e`, 실행 CICD `fadc07f18b5bf7febc8cf601fa138d8f35e9ccb4`. 최초 준비 조회 기준은18:54~18:57 KST다. 19:15 TBS 실패 이력은 §5, 토큰 교체 후20:10 새 TBS의 실제 결과와 현재 잔여는 **§6**을 따른다. 초기 준비·과거 실행·현재 상태를 구분한다.
 
 기존 [병행 실행안](PARALLEL_EXECUTION_20261013.md), [최소 검증안](MINIMUM_VALIDATION.md), [APP·HA 카드](APP_HA_EXECUTION_CARD_20261013.md), [운영 인수 카드](SESSION_AND_HANDOVER.md)를 재사용한다. 과거 실행창·미실행 표기를 현재 승인/상태로 재사용하지 않는다. AC·책임자·일정·정본·Status/종결은 변경하지 않는다.
 
@@ -8,7 +8,7 @@
 
 | 묶음 / 기존 책임 | 완료되어 다시 대기하지 않을 것 | 실제 잔여 / 완료조건 |
 |---|---|---|
-| APP·Delivery #15/#16 / 이재환·이권욱 | [PR76](https://github.com/321Team/infra-cicd/pull/76)·[PR77](https://github.com/321Team/infra-cicd/pull/77) 독립 승인·병합, 결합 main [CI SUCCESS](https://github.com/321Team/infra-cicd/actions/runs/38376834597), [실패·복귀 증적213](https://github.com/321Team/fds-project-evidence/pull/213) 병합 | 19:15 새 Run은 Source fetch exit128로 TBS 전 중단. 소스 접근 확인/복구 → 별도 새 TBS 회차 → 새 Push → 새 Deploy. 실패 차단·source→Harbor→manifest→Pod 대응 및 Delivery 인수 |
+| APP·Delivery #15/#16 / 이재환·이권욱 | [PR76](https://github.com/321Team/infra-cicd/pull/76)·[PR77](https://github.com/321Team/infra-cicd/pull/77) 독립 승인·병합, 결합 main [CI SUCCESS](https://github.com/321Team/infra-cicd/actions/runs/38376834597), [실패·복귀 증적213](https://github.com/321Team/fds-project-evidence/pull/213) 병합. 20:10 새 Run에서 소스 인증·시험51개·API Build/save 성공 | API 첫 inspect exit125로 start/probe·engine Build·Scan 미실행. [수정 PR78](https://github.com/321Team/infra-cicd/pull/78) 독립 리뷰·병합 → 별도 새 TBS 회차 → 새 Push → 새 Deploy. 실패 차단·source→Harbor→manifest→Pod 대응 및 Delivery 인수 |
 | HA·최종 회귀·DB #22/#20/#11 / 이재환 | 기존 앱 분산 복구·DR R02 인수, DB 증적211·요구별 대조 | 최종 배포 형상 → 허용된 최소 Worker Drain/복귀 → 최종 HTTP/Rule/DB/metrics 회귀 → DB 인수 판단. 실제 실행 범위/창은 별도 |
 | Harbor #13 / 이하영 | r5 주소 정리, manager15파일 설치, 활성화 실패 후 허용된 정책 원복 | CLI/manager 쓰기 환경·SELinux lock 라벨 정합화와 실제 생성/readback → manager 재활성화 → H6/재시작·복구/로그·인수. 실패 Store/claim 보존 |
 | K8S·ICR·SEC #10/#14/#19 / 이하영·이권욱 | K8S17파일 교체/보존28·OID02 반입·IF06B 관측, 증적207/208 | 실제 도구 호출·정책 rollback, 미입증 Allow/Deny, AC4c/d②/g·T14/T15, OID03·부팅 연속 보호·복합 AC 최소 보완 또는 유효한 처분 |
@@ -67,9 +67,11 @@ Harbor manager/H6 미완료 자체를 새 Delivery Gate로 추가하지 않는�
 - O01: 기존 카드의 적격 제3자·핵심 대상·정상 접근·원복·실제 명령/rc·원본·정리를 충족해야 함. 새 참여자/일정을 임의 확정하지 않고 해시 확인을 전체 재현으로 집계하지 않음.
 - Runner: 18:55 GitHub schedule 조회0건. 이재환의 [기존 추적 계획](https://github.com/321Team/infra-ansible/issues/61#issuecomment-6140626975)을 유지하며 완료 CI rerun·수동 notify로 대체하지 않음. 조회0건의 원인은 이번에 확인하지 않음.
 
-최초 준비 단계의 수행은 읽기 검증·실행 카드/병행 목록·[6개 티켓 잔여 현행화](https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6142901586)다. 실제 파일 배치·dispatch·권한 변경·서버 시험·인수/종결은 하지 않았다. 이 문단까지는 최초 준비 이력이다. 이후 승인된 실행 결과와 현재 다음 조건은 §5를 따른다. Push/Deploy는 성공한 새 결과 수신 뒤 정확한 입력으로 판단한다. 이미 채택한 W4·C01 확인·보관 책임자는 다시 질문하지 않는다. 문서 복구는 변경 커밋 revert다.
+최초 준비 단계의 수행은 읽기 검증·실행 카드/병행 목록·[6개 티켓 잔여 현행화](https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6142901586)다. 실제 파일 배치·dispatch·권한 변경·서버 시험·인수/종결은 하지 않았다. 이 문단까지는 최초 준비 이력이다. 이후 승인된 실행 이력은 §5, 현재 다음 조건은 §6을 따른다. Push/Deploy는 성공한 새 결과 수신 뒤 정확한 입력으로 판단한다. 이미 채택한 W4·C01 확인·보관 책임자는 다시 질문하지 않는다. 문서 복구는 변경 커밋 revert다.
 
-## 5. 승인된 TBS 시도와 현재 차단사항 — 19:15~19:17 KST
+## 5. 최초 승인 TBS 시도와 당시 차단사항 — 19:15~19:17 KST
+
+이 절은 첫 실패 당시의 기록이다. 이후 토큰 교체·실제 인증 성공과 다음 차단사항은 §6에서 갱신한다.
 
 [Run38382090974/Attempt1](https://github.com/321Team/infra-cicd/actions/runs/38382090974), Job115244770236이19:15:23 시작해19:15:34에 FAILURE로 종료했다. source/config/Runner는 승인값과 일치했고 `SOURCE_PRIVATE_FETCH_FAILED`(Git exit128)로 Test/Build/기동/Scan에 도달하지 못했다. **새 이미지 성공 여부는 미검증**, Push·Deploy는 미실행이다. [증적 PR215](https://github.com/321Team/fds-project-evidence/pull/215)는 실패 원본 편입·독립 검토 대기이며 성공 증적이 아니다.
 
@@ -80,3 +82,16 @@ Harbor manager/H6 미완료 자체를 새 Delivery Gate로 추가하지 않는�
 - Runner schedule 읽기 조회는19:12에도0건이다. 기존 이재환 추적 계획은 유지한다. Harbor/SEC/MON의 문서·증적 대조와 O01 준비는 소스 접근 차단과 독립적으로 진행할 수 있으며 실제 인수 완료는 아니다.
 
 이번 작업의 완료 범위는 Phase1 잔여 목록·6개 티켓 현행화, 승인된 TBS1회 시도·실패 원본 회수, 읽기 원인 분리와 증적 PR 준비다. 현재 잔여 순서는 **소스 접근 → 새 TBS → Push → Deploy → 최소 HA/복귀 → 최종 앱 회귀 → DB 판단 → DOC/Review/Sign-off**다. W4·C01·DR 기존 처분과 담당자/AC/Status는 유지한다.
+
+## 6. 토큰 교체 후 새 TBS 결과와 현재 잔여 — 20:10~20:25 KST
+
+사용자가 토큰 교체와 만료일2026-11-12를 확인했다. 정확한 만료 시각·시간대는 미제공이며, Secret metadata updated_at은20:03:38 KST다. [새 실행안](https://github.com/321Team/fds-project-baseline/pull/168#issuecomment-6144160243)에 대한 [새 창 TBS1회 승인](https://github.com/321Team/fds-project-baseline/pull/168#issuecomment-6144183623)에 따라 **20:10~23:35 KST/실제 시작 마감20:20** 조건으로 새 회차를 실행했다. 입력 코드·config·기존 두 앱과 공급은 위 승인값을 유지했다.
+
+[Run38388390767/Attempt1](https://github.com/321Team/infra-cicd/actions/runs/38388390767), Job115265751500은20:10:32에 시작해20:11:19에 FAILURE로 종료했다. **전용 소스 인증 fetch exit0·handoff PASS, 앱 시험51개 PASS, API Build/save PASS**다. API 격리 컨테이너 create 직후 첫 inspect가 exit125로 실패해 **start/probe·engine Build·Scan은 미실행**이다. Push·Deploy도 하지 않았다. API Unit은 해당 APP Source에 대한 기존 승인 범위의 NOT_APPLICABLE이며, engine Unit16/API Contract20/engine Contract15의 합계가51개다.
+
+- 원인: Podman6.1.0 Go template의 `.Id` 조회 오류. 원본 구조체의 exported 이름은 `ID`, JSON tag만 `Id`다. [수정 PR78](https://github.com/321Team/infra-cicd/pull/78) HEAD `7ebf101b88814498f7390a2c7afb2a5b9fd9c96e`에서 `.ID`로 최소 수정했다. STATIC12필드 대조·기존 MOCK9개·[CI](https://github.com/321Team/infra-cicd/actions/runs/38389073992) PASS. MOCK는 실제 Go template 평가가 아니며 수정 후 Runtime은 NOT_RUN이다. 코드 독립 REVIEW/MERGE 대기다.
+- 정리: 자기 CID의 remove exit0·후속 ps 출력 없음·receipt `cleanup=REMOVED`, 사후 Worker0을 확인했다. cidfile은 사후 부재지만 result·create/remove 원본에 CID가 보존돼 있다. 기존 claim1/checkpoint9는 유지한다.
+- [증적 PR216](https://github.com/321Team/fds-project-evidence/pull/216): 새 수집회차에 서버 원본69개·단계 로그64개·GitHub Run/Job·승인·토큰 비밀 외 metadata·collector를 보존했다. receipt/handoff/build/manifest/hash 대조와 layout 검사 PASS, 독립 증적 REVIEW/MERGE 대기다. API archive는 Runner에서 hash만 대조했고 Git에 넣지 않았다. 기존 PR215 실패 이력은 수정하지 않았다.
+- **이번 새 Run1회도 소진했다.** 남은 시간창을 추가 허가로 쓰지 않는다. 자동 재실행·Push·Deploy·보안 통제 완화·새 토큰 발급은 수행하지 않았다. 사용자 직접 교체와 에이전트의 metadata/실제 fetch 검증을 구분한다.
+
+현재 순서는 **PR78 독립 리뷰·병합 → 정확한 새 source/config·Runner/공급·회차/창 결정 → 두 이미지 기동/Scan을 포함한 새 TBS → Push → Deploy → 최소 HA/복귀 → 최종 앱 회귀 → DB 판단 → DOC/Review/Sign-off**다. 앱 시험51개나 API Build 성공만으로 이전 파일 권한 문제의 실제 기동 해결을 선언하지 않는다. Harbor·SEC/MON의 준비/증적 검토와 O01 준비는 병행 가능하지만 실제 서버 변경·인수 완료와 구분한다. 이 회차에서 담당자·AC·Status·종결 결정은 바꾸지 않았다.
