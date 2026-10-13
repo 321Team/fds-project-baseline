@@ -88,6 +88,21 @@ Network 원본 `p37-netop-jaehwan-20261012T121250Z.tgz`의 기존 수신·SHA/ma
 
 G4의 #35 입력에는 [PR31](https://github.com/321Team/infra-terraform/pull/31)의18:29:16 KST 병합(HEAD `bd155bb32bac42fa9cd5975c25369b395cff2683`, merge `f1f8adf66d3b3c9348ebb919fe0dbb4f8fa54fe2`)도 소비한다. 승인된 SSM 수정 후보 소스가 병합된 단계이며 실제 IAM 적용·SSM 정상/거부·FIRST_HOST_READBACK 원본은 별도 잔여다. 기존 Network 부분 결과를 전체 PASS로 올리지 않는다.
 
+### 10/13 19:18 수신 보완 — 별도 작업창·비용 결정 소비
+
+아래는 새 GitHub 결정 기록을 준비표에 연결한 것이다. 이 문서 작성 과정에서 IAM/SSM/Plan을 실행하거나 승인·병합하지 않았다.
+
+| 변경된 입력 | 최신 결정 기록 / 수용 범위 | 잔여와 다음 책임 |
+|---|---|---|
+| SSM 정책·재시험 | [PR31 한정 GO](https://github.com/321Team/infra-terraform/pull/31#issuecomment-6143265039): 10/13 19:30~21:00, 권욱 중앙 IAM 검증·조건 연산자1개 변경 → 권욱·재환 본인 MFA SSM 시험. 중앙 IAM 단계는 OCM 쓰기와 비중첩 | actual 정책 VersionId/readback·정상/거부·첫 호스트 읽기 증적 미수신. live 불일치/버전5개/검증 불가 시 쓰기 STOP, 불명확한 결과에서 버전 생성 반복 금지. 실제 적용 GO와 성공을 구분 |
+| A1/A2 결과·OCM/A3-1 | [#12 새 결정](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6143265341): A1/A2 보고를 다음 단계 준비에 수용, 원본 최종 확인 잔여. OCM basic/A3-1 Plan도19:30~21:00 조건부 창 | OCM 중앙 담당 권욱, link 하영; OrgAdmin unlink 담당/현재 접근 미해결이면 OCM만 HOLD. A3-1 Plan은 하영 본인 MFA IaC 역할·기존 조회 권한으로 독립 준비 가능. root Plan·user-role·Apply·stage2·Create는 해당 창에 포함되지 않음 |
+| network 태그 | [Plan 시작](https://github.com/321Team/infra-terraform/issues/11#issuecomment-6143308963): 하영 단독 writer, main `f1f8adf`, 기대0add/2change/0destroy, 두 subnet의 ELB 태그만 | 시작 보고이며 결과/실제 Plan 원본·Apply·readback은 미수신. 다른 자원 변경·replace/delete이면 기존 절차에 따라 STOP. 시작을 PASS로 소비하지 않음 |
+| ROSA 비용 | [19:14 사용자 명시 Cost GO 기록](https://github.com/321Team/infra-rosa/issues/4#issuecomment-6143326582): 승인한 R1~R9·C1/C4·기간·전체 한도 범위의 비용 승인. 앞선 비용 PENDING 기록을 해소 | 같은 범위 재승인/하영 재견적 불필요. 예상 총비용·cutoff 실측 확인과는 별개. Freeze/G4·actual IAM/OIDC·태그·exact 생성 Plan·Create/Apply GO는 잔여 |
+
+G4 [입력 요약](https://github.com/321Team/fds-project-baseline/issues/39#issuecomment-6143204835)의 승인 대기 항목은 위 후속 결정으로 갱신해 읽는다. “SSM 차단 원인 확인”은 실제 요청의 조건 키 부재가 아직 관측되지 않았으므로 **수정 후보와 후속 검증**으로 구분한다. SSM 한 항목 해소만으로 G4의 다른 입력 충족이나 Critical 전체0을 선언하지 않는다. 요약의 AC-5 PASS 표기를 이번 PR30 follow-up의 Plan/해시·MOCK 결과만으로 새로 입증했다고 표시하지 않는다. 하영의 main MOCK12/12 추가 보고는 화면 전사이며 기존 독립 시험을 재요구할 사유가 아니다.
+
+비공개 A1/A2 캡처8장과 ledger는 새 결정에서도 직접 수신·재해시 미완료로 명시됐다. 기존 파일/실행 회차로 수용하며 재촬영·재연결·재부착을 요구하지 않는다. Red Hat account number·Organization ID·External ID는 다른 식별자이므로 기존 비공개 자료에서 승인 조직 대응을 확인하고 공개 원문을 추가하지 않는다.
+
 ### #49 rolling 집계와 #54 Freeze 연결
 
 10/07~22에는 생산자가 기존 티켓/증적에 결과를 누적하고 이권욱은 **변경된 링크·판정만** 갱신한다. 10/23에 처음 자료 작성을 시작하지 않는다. 다음 묶음을 동일 candidate 목록으로 #54→#56→#55에 전달한다.

@@ -37,7 +37,7 @@ CODEX_ASSISTED. 권욱 담당 #42/#46 준비 문서. 검토 대상은 [하영 �
 | 6 push path | 기존 공급망 소비. ECR 채택 시 repository별 최소권한과 연결 경로 추가안 필요 | #46 권욱 + #35 입력 |
 | 7 pull path | private_a→Relay→Harbor443 후보, source 보존/return·host/DNS·허용 source 계약 필요. P0 IP 후보는 D23 전체 DNS 결정을 무조건 기다리지 않음. 승인된 최소 경로 구현·cold-pull은 Basic Ready 판정 전, Final은 그 결과를 소비. A의 ECR 경로도 별도 | #38·#37 / #11 |
 | 8 fallback | 아래 전환/복귀 절차 후보. 자동 mirror 설정은 미선택 | #42 권욱 |
-| 9 비용 | 교육장 사용액/예상 총비용 리포트 미수신, NOT_ASSESSED. 400/450/500·자부담0·예비50 유지 | #34/#42 권욱 |
+| 9 비용 | [ROSA Cost GO](https://github.com/321Team/infra-rosa/issues/4#issuecomment-6143326582)는 명시 범위 승인. **C3 ECR은 제외**이므로 D22의 ECR 선택/비용으로 자동 승계하지 않음. cutoff·전체 예상 총비용 미확인, 400/450/500·자부담0 유지 | #34/#42 권욱. 같은 ROSA 범위 재승인·구축 담당자 재견적 요구 없음 |
 | 10 credential reference | owner/scope/expiry/전달·회수 reference 필요. 원문 토큰/Secret 금지 | #38·#46 |
 | 11 evidence/source refs | 원제안, [ROSA 설계 승인](https://github.com/321Team/infra-rosa/issues/3#issuecomment-6054292320), #11 raw/지원 결과, 이후 실제 cold-pull/negative/복구 | 각 생산자 → 권욱 |
 | 12 D22 결과 | PENDING. Basic Ready 후 실제 자료로 GO:<mode> 또는 NO_GO와 IF-19·소비조건 기록 | #42 권욱 |
