@@ -1,21 +1,23 @@
 # Phase 1 잔여 작업과 병행 착수 — 2026-10-13 저녁
 
-이권욱 / CODEX_ASSISTED. 사용자 최신 지시의 범위는 **Phase 1**이다. baseline `c5c854efe3572f65bb2ef7b23dd32b61b7291e8e`, 실행 CICD `fadc07f18b5bf7febc8cf601fa138d8f35e9ccb4`. 최초 준비 조회 기준은18:54~18:57 KST다. 19:15 TBS 실패 이력은 §5, 토큰 교체 후20:10 새 TBS의 실제 결과와 현재 잔여는 **§6**을 따른다. 초기 준비·과거 실행·현재 상태를 구분한다.
+이권욱 / CODEX_ASSISTED. 사용자 최신 지시의 범위는 **Phase 1**이다. baseline `c5c854efe3572f65bb2ef7b23dd32b61b7291e8e`, 실행 CICD `fadc07f18b5bf7febc8cf601fa138d8f35e9ccb4`. 최초 준비 조회 기준은18:54~18:57 KST다. 19:15 TBS 실패 이력은 §5, 토큰 교체 후20:10 새 TBS의 결과는 §6, 20:53 이후 리뷰·병합과 현재 잔여는 **§7**을 따른다. 초기 준비·과거 실행·현재 상태를 구분한다.
 
 기존 [병행 실행안](PARALLEL_EXECUTION_20261013.md), [최소 검증안](MINIMUM_VALIDATION.md), [APP·HA 카드](APP_HA_EXECUTION_CARD_20261013.md), [운영 인수 카드](SESSION_AND_HANDOVER.md)를 재사용한다. 과거 실행창·미실행 표기를 현재 승인/상태로 재사용하지 않는다. AC·책임자·일정·정본·Status/종결은 변경하지 않는다.
 
 ## 1. 잔여 목록
 
-| 묶음 / 기존 책임 | 완료되어 다시 대기하지 않을 것 | 실제 잔여 / 완료조건 |
+| 묶음 / 기존 Lead | 완료되어 다시 대기하지 않을 것 | 실제 잔여 / 완료조건 |
 |---|---|---|
-| APP·Delivery #15/#16 / 이재환·이권욱 | [PR76](https://github.com/321Team/infra-cicd/pull/76)·[PR77](https://github.com/321Team/infra-cicd/pull/77) 독립 승인·병합, 결합 main [CI SUCCESS](https://github.com/321Team/infra-cicd/actions/runs/38376834597), [실패·복귀 증적213](https://github.com/321Team/fds-project-evidence/pull/213) 병합. 20:10 새 Run에서 소스 인증·시험51개·API Build/save 성공 | API 첫 inspect exit125로 start/probe·engine Build·Scan 미실행. [수정 PR78](https://github.com/321Team/infra-cicd/pull/78) 독립 리뷰·병합 → 별도 새 TBS 회차 → 새 Push → 새 Deploy. 실패 차단·source→Harbor→manifest→Pod 대응 및 Delivery 인수 |
+| APP·Delivery #15/#16 / 이재환·이권욱 | [PR76](https://github.com/321Team/infra-cicd/pull/76)·[PR77](https://github.com/321Team/infra-cicd/pull/77) 독립 승인·병합, 결합 main [CI SUCCESS](https://github.com/321Team/infra-cicd/actions/runs/38376834597), [실패·복귀 증적213](https://github.com/321Team/fds-project-evidence/pull/213) 병합. 20:10 새 Run에서 소스 인증·시험51개·API Build/save 성공, [수정 PR78](https://github.com/321Team/infra-cicd/pull/78) 독립 승인·20:53 병합 | API 첫 inspect exit125로 start/probe·engine Build·Scan 미실행. 수정본을 사용하는 별도 새 TBS 회차 → 새 Push → 새 Deploy. 실패 차단·source→Harbor→manifest→Pod 대응 및 Delivery 인수 |
 | HA·최종 회귀·DB #22/#20/#11 / 이재환 | 기존 앱 분산 복구·DR R02 인수, DB 증적211·요구별 대조 | 최종 배포 형상 → 허용된 최소 Worker Drain/복귀 → 최종 HTTP/Rule/DB/metrics 회귀 → DB 인수 판단. 실제 실행 범위/창은 별도 |
-| Harbor #13 / 이하영 | r5 주소 정리, manager15파일 설치, 활성화 실패 후 허용된 정책 원복 | CLI/manager 쓰기 환경·SELinux lock 라벨 정합화와 실제 생성/readback → manager 재활성화 → H6/재시작·복구/로그·인수. 실패 Store/claim 보존 |
+| Harbor #13 / 이하영 | r5 주소 정리, manager15파일 설치·활성화 실패 후 정책 원복. [PR61](https://github.com/321Team/infra-harbor-trivy/pull/61) 병합 및 v2 입력·보존전환·설치/probe [대조 완료](https://github.com/321Team/infra-harbor-trivy/pull/61#issuecomment-6144552976) | 기존2파일 보존전환·새15파일 실제 설치/readback → 두 프로세스 probe → manager 재활성화 → H6/재시작·복구/로그·인수. 실패 Store/claim 보존 |
 | K8S·ICR·SEC #10/#14/#19 / 이하영·이권욱 | K8S17파일 교체/보존28·OID02 반입·IF06B 관측, 증적207/208 | 실제 도구 호출·정책 rollback, 미입증 Allow/Deny, AC4c/d②/g·T14/T15, OID03·부팅 연속 보호·복합 AC 최소 보완 또는 유효한 처분 |
 | MON·관리 접근 #17/#19 / 이재환·이하영, 보관/회수 이권욱 | MON23/23·Grafana 조회 증적212, 보관·회수 책임 확정 | 실제 인수·회수, 접근 배타성·감사 공백 처분, 필요한 Probe·최종 인수. 책임자 확정을 Secret 수령/회수 완료로 표시하지 않음 |
 | Runner·운영 문서 #24/Ansible61 / 이권욱, 운영 추적 이재환 | O02 제2운영자 실습/정리·알림 활성화·증적209/210 | 첫 schedule/실제 알림 수신·처리, O01 제3자 핵심 Runbook 재현, As-built/Test/Evidence/Runbook/Known Issue·DOC Freeze |
 | Ansible9 / 이권욱 | worker02 prepare/apply/reapply/동일값 rollback·증적208 | 다른 role·운영 wrapper/venv 전환·복귀·엔진 전체 인수. 원본=목표 회차는 장애 복원·재부팅 지속성 입증 아님 |
 | G1/G2/G3·Review/Close #18/#23/#29~32 / 기존 Lead 유지 | 개별 완료·유효 처분 재사용 | 필수 하위 AC·증적·미결 처분 → 문서 Freeze/Review → Sign-off. PR 병합만으로 Gate 완료 금지 |
+
+표의 기존 Lead는 원래 책임 이력을 뜻한다. [10/9 한시적 이관 결정](https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6082618226)에 따라 해당 Phase1 잔여의 실제 실행·검증·수용/종결 판단은 이권욱이 통합하며, 원 담당자는 보유 입력·제약을 제공하고 필요한 독립 검토에 참여한다. 정본 발행·원본 보관·접근권한 이관이나 Phase2 재배정은 아니다.
 
 [DR #21](https://github.com/321Team/fds-project-baseline/issues/21)은 인수·종결을 유지한다. D01 두 사본의 한시 보존·삭제 조건과10/26 재점검은 자동 삭제 허가가 아니다. W4 전체 HTTP5xx `NOT_MEASURED`, C01 승인 인원 접근 사용자 확인과 직접 실효 ACL `NOT_VERIFIED`를 구분한다. #25~27은 기존 Phase2 이월 결정의 P1 우선순위 항목이며 현재 Phase1 P0 필수 차단으로 합산하지 않는다.
 
@@ -95,3 +97,13 @@ Harbor manager/H6 미완료 자체를 새 Delivery Gate로 추가하지 않는�
 - **이번 새 Run1회도 소진했다.** 남은 시간창을 추가 허가로 쓰지 않는다. 자동 재실행·Push·Deploy·보안 통제 완화·새 토큰 발급은 수행하지 않았다. 사용자 직접 교체와 에이전트의 metadata/실제 fetch 검증을 구분한다.
 
 현재 순서는 **PR78 독립 리뷰·병합 → 정확한 새 source/config·Runner/공급·회차/창 결정 → 두 이미지 기동/Scan을 포함한 새 TBS → Push → Deploy → 최소 HA/복귀 → 최종 앱 회귀 → DB 판단 → DOC/Review/Sign-off**다. 앱 시험51개나 API Build 성공만으로 이전 파일 권한 문제의 실제 기동 해결을 선언하지 않는다. Harbor·SEC/MON의 준비/증적 검토와 O01 준비는 병행 가능하지만 실제 서버 변경·인수 완료와 구분한다. 이 회차에서 담당자·AC·Status·종결 결정은 바꾸지 않았다.
+
+## 7. 독립 리뷰·병합 후 현재 상태 — 20:53 KST 이후
+
+사용자가 권장 순서 병합과 후속 작업을 지시했다. [PR78](https://github.com/321Team/infra-cicd/pull/78)은 이하영의 `7ebf101b88814498f7390a2c7afb2a5b9fd9c96e` 독립 승인·CI·미해결 thread0 확인 후20:53:29에 병합됐다. 실행 예정 main은 `147f760298dd4a683ea58f2a887483769352b97d`이며 리뷰 HEAD와 tree가 같고 [병합 main CI](https://github.com/321Team/infra-cicd/actions/runs/38393360302)도 SUCCESS다. 리뷰어가 같은 필드 구조체로 수행한 Go template 재현/수정 성공은 독립 코드 검토 근거이고 실제 Podman 기동 성공은 아니다. CI에 template 평가 시험을 추가하자는 의견은 비차단 후속 권고로 보존한다.
+
+[증적 PR215](https://github.com/321Team/fds-project-evidence/pull/215)는 이재환의 `127b4d2f44762be130d950bb6f2b3f75eecb81d7` 승인 후20:53:39에 병합(`84ea8fd266fbe8c8afe66f824263fbad7dc9b8a6`)됐다. [PR216](https://github.com/321Team/fds-project-evidence/pull/216)은 이전 HEAD `74c0090`에서 승인됐지만, PR215 병합 후 대장 끝줄 충돌을 양쪽 원문으로 보존해 새 HEAD `ad4afcef2653f4647fd4de193cd5f6bf811e6377`가 됐다. 두 수집회차 바이트/manifest 변경0, 합친 layout PASS이며 [충돌 해소 부분 재검토](https://github.com/321Team/fds-project-evidence/pull/216#issuecomment-6144981023)를 요청했다. 이전 승인을 새 HEAD 승인으로 대체하지 않는다. 정확한 이후 병합 상태는 해당 PR 기록을 따른다.
+
+PR168 기존 문서 HEAD `0250485e8fe84b45a9a2b894188f10825cc6d6cc`는 이하영·이재환이 승인했다. 이번 일반 문서 보완은 리뷰의 비차단 의견 두 가지(기존 Lead와 실제 수행 이관 구분, Harbor PR61·입력 대조 진척)와 새 병합 사실을 반영한 것으로, 이전 리뷰를 수정 HEAD의 독립 승인으로 표시하지 않는다. 일반 문서 Lead 검토 기준과 사용자 병합 지시를 적용한다.
+
+현재 실행 선행은 **병합된 수정 main의 정확한 입력·Runner/공급 확인 → 새 TBS 회차 수/시간창 결정 → 두 이미지 실제 기동·Scan 검증**이다. 기존 두 승인 회차는 소진했고20:20 시작 마감도 지났다. 이번 병합 지시를 자동 재실행·Push/Deploy 허용으로 확대하지 않는다. 실패 원본과 기존 claim은 보존한다. 증적 편입 대기를 별도 새 Runtime Gate로 만들지 않으며, 코드 리뷰·기존 실행 조건과 실제 회차 허용은 유지한다.
