@@ -1,6 +1,6 @@
 # Phase 1 잔여 작업과 병행 착수 — 2026-10-13 저녁
 
-이권욱 / CODEX_ASSISTED. 사용자 최신 지시의 범위는 **Phase 1**이다. baseline `c5c854efe3572f65bb2ef7b23dd32b61b7291e8e`, CICD `fadc07f18b5bf7febc8cf601fa138d8f35e9ccb4`. 티켓·리뷰·병합 및 GitHub 실행 준비 메타데이터 조회 기준은 18:54~18:57 KST다. 실제 서버 상태 재조회·새 Runtime 결과는 아니다.
+이권욱 / CODEX_ASSISTED. 사용자 최신 지시의 범위는 **Phase 1**이다. baseline `c5c854efe3572f65bb2ef7b23dd32b61b7291e8e`, CICD `fadc07f18b5bf7febc8cf601fa138d8f35e9ccb4`. 티켓·리뷰·병합 및 GitHub 실행 준비 메타데이터 조회 기준은 18:54~18:57 KST다. 이후 사용자 승인에 따른19:15 TBS 시도와 결과는 §5에 추가했다. 초기 준비 시점과 실제 실행 결과를 구분한다.
 
 기존 [병행 실행안](PARALLEL_EXECUTION_20261013.md), [최소 검증안](MINIMUM_VALIDATION.md), [APP·HA 카드](APP_HA_EXECUTION_CARD_20261013.md), [운영 인수 카드](SESSION_AND_HANDOVER.md)를 재사용한다. 과거 실행창·미실행 표기를 현재 승인/상태로 재사용하지 않는다. AC·책임자·일정·정본·Status/종결은 변경하지 않는다.
 
@@ -8,7 +8,7 @@
 
 | 묶음 / 기존 책임 | 완료되어 다시 대기하지 않을 것 | 실제 잔여 / 완료조건 |
 |---|---|---|
-| APP·Delivery #15/#16 / 이재환·이권욱 | [PR76](https://github.com/321Team/infra-cicd/pull/76)·[PR77](https://github.com/321Team/infra-cicd/pull/77) 독립 승인·병합, 결합 main [CI SUCCESS](https://github.com/321Team/infra-cicd/actions/runs/38376834597), [실패·복귀 증적213](https://github.com/321Team/fds-project-evidence/pull/213) 병합 | 새 Test/Build/기동/Scan → 새 Push → 새 Deploy. 실패 차단·source→Harbor→manifest→Pod 대응 및 Delivery 인수 |
+| APP·Delivery #15/#16 / 이재환·이권욱 | [PR76](https://github.com/321Team/infra-cicd/pull/76)·[PR77](https://github.com/321Team/infra-cicd/pull/77) 독립 승인·병합, 결합 main [CI SUCCESS](https://github.com/321Team/infra-cicd/actions/runs/38376834597), [실패·복귀 증적213](https://github.com/321Team/fds-project-evidence/pull/213) 병합 | 19:15 새 Run은 Source fetch exit128로 TBS 전 중단. 소스 접근 확인/복구 → 별도 새 TBS 회차 → 새 Push → 새 Deploy. 실패 차단·source→Harbor→manifest→Pod 대응 및 Delivery 인수 |
 | HA·최종 회귀·DB #22/#20/#11 / 이재환 | 기존 앱 분산 복구·DR R02 인수, DB 증적211·요구별 대조 | 최종 배포 형상 → 허용된 최소 Worker Drain/복귀 → 최종 HTTP/Rule/DB/metrics 회귀 → DB 인수 판단. 실제 실행 범위/창은 별도 |
 | Harbor #13 / 이하영 | r5 주소 정리, manager15파일 설치, 활성화 실패 후 허용된 정책 원복 | CLI/manager 쓰기 환경·SELinux lock 라벨 정합화와 실제 생성/readback → manager 재활성화 → H6/재시작·복구/로그·인수. 실패 Store/claim 보존 |
 | K8S·ICR·SEC #10/#14/#19 / 이하영·이권욱 | K8S17파일 교체/보존28·OID02 반입·IF06B 관측, 증적207/208 | 실제 도구 호출·정책 rollback, 미입증 Allow/Deny, AC4c/d②/g·T14/T15, OID03·부팅 연속 보호·복합 AC 최소 보완 또는 유효한 처분 |
@@ -45,9 +45,9 @@ Harbor manager/H6 미완료 자체를 새 Delivery Gate로 추가하지 않는�
 
 **제안 범위:** 새 TBS Run1회로 기존 두 앱의 Test → Build/save → 비루트 기동·파일 읽기·listener 분리 → Scan·증적 보존을 확인한다. Push·Deploy·Token 발급·HA/재부팅·DB 변경·Harbor manager 변경은 포함하지 않는다. 실패 시 자동 rerun 없이 출력·로그·CID/정리 상태를 보존한다.
 
-**작업창 미확정.** workflow의180분 timeout에 결과/정리 여유를 더해 실제 시작 마감·종료·관측 담당을 확정한다. 기존17:00 Deploy 창과 소진한 추가 Run은 재사용하지 않는다. 문서 작성/리뷰는 새 실행 허용이 아니다.
+**사용자 승인·해당 1회 소진.** [승인 기록](https://github.com/321Team/fds-project-baseline/pull/168#issuecomment-6143263724)에 따라 아래 창에서 새 Run을 실행했고 Source fetch 실패로 종료했다. 기존17:00 Deploy 창과 추가 Run, 이번 창의 남은 시간을 재실행 허가로 사용하지 않는다.
 
-**검토 가능한 제안 창:** 2026-10-13 **19:15~22:40 KST**, 실제 Job 시작 마감 **19:25 KST**, TBS1회·자동 재실행 금지. 최종 시작부터180분 및 결과/정리15분을 확보한 안이며 아직 승인되지 않았다. 19:25까지 선행조건/실제 시작을 확인하지 못하면 실행하지 않고, queued 상태면 취소한다. 22:40은 수집/정리까지의 종료 상한이며 실행 중 오류·종료 초과 위험에는 추가 단계 중단·원본/소유 자원 상태를 인계한다. 창 경과를 자동 연장으로 처리하지 않는다.
+**승인된 이번 회차 창:** 2026-10-13 **19:15~22:40 KST**, 실제 Job 시작 마감 **19:25 KST**, TBS1회·자동 재실행 금지. 최종 시작부터180분 및 결과/정리15분을 확보한 범위로 사용자 승인됐다. 19:25까지 선행조건/실제 시작을 확인하지 못하면 실행하지 않고, queued 상태면 취소한다. 22:40은 수집/정리까지의 종료 상한이며 실행 중 오류·종료 초과 위험에는 추가 단계 중단·원본/소유 자원 상태를 인계한다. 창 경과를 자동 연장으로 처리하지 않는다.
 
 1. 확정 창에서 main/config hash, 실제 계정/UID·동시 작업 부재·공급물/공간/Podman·정상 인증을 재확인한다. 필요한 영향 범위만 재검증한다.
 2. 기존 main의 `app-test-build-scan.yml`을 신규 Run1회 시작하고 actual Run/Attempt/Job·source·시각을 결속한다. 별도 자동 dispatch 코드를 추가하지 않는다.
@@ -67,4 +67,16 @@ Harbor manager/H6 미완료 자체를 새 Delivery Gate로 추가하지 않는�
 - O01: 기존 카드의 적격 제3자·핵심 대상·정상 접근·원복·실제 명령/rc·원본·정리를 충족해야 함. 새 참여자/일정을 임의 확정하지 않고 해시 확인을 전체 재현으로 집계하지 않음.
 - Runner: 18:55 GitHub schedule 조회0건. 이재환의 [기존 추적 계획](https://github.com/321Team/infra-ansible/issues/61#issuecomment-6140626975)을 유지하며 완료 CI rerun·수동 notify로 대체하지 않음. 조회0건의 원인은 이번에 확인하지 않음.
 
-이번 수행은 읽기 검증·실행 카드/병행 목록·[6개 티켓 잔여 현행화](https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6142901586)다. 실제 파일 배치·dispatch·권한 변경·서버 시험·인수/종결은 하지 않았다. 다음 실행 결정은 새 TBS1회 작업창/관측 가능 여부이며, Push/Deploy는 새 결과 수신 뒤 정확한 입력으로 판단한다. 이미 채택한 W4·C01 확인·보관 책임자는 다시 질문하지 않는다. 문서 복구는 변경 커밋 revert다.
+최초 준비 단계의 수행은 읽기 검증·실행 카드/병행 목록·[6개 티켓 잔여 현행화](https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6142901586)다. 실제 파일 배치·dispatch·권한 변경·서버 시험·인수/종결은 하지 않았다. 이 문단까지는 최초 준비 이력이다. 이후 승인된 실행 결과와 현재 다음 조건은 §5를 따른다. Push/Deploy는 성공한 새 결과 수신 뒤 정확한 입력으로 판단한다. 이미 채택한 W4·C01 확인·보관 책임자는 다시 질문하지 않는다. 문서 복구는 변경 커밋 revert다.
+
+## 5. 승인된 TBS 시도와 현재 차단사항 — 19:15~19:17 KST
+
+[Run38382090974/Attempt1](https://github.com/321Team/infra-cicd/actions/runs/38382090974), Job115244770236이19:15:23 시작해19:15:34에 FAILURE로 종료했다. source/config/Runner는 승인값과 일치했고 `SOURCE_PRIVATE_FETCH_FAILED`(Git exit128)로 Test/Build/기동/Scan에 도달하지 못했다. **새 이미지 성공 여부는 미검증**, Push·Deploy는 미실행이다. [증적 PR215](https://github.com/321Team/fds-project-evidence/pull/215)는 실패 원본 편입·독립 검토 대기이며 성공 증적이 아니다.
+
+- 서버 result·원본 manifest·source 단계 로그와 GitHub Run/Job 로그를 수신해 해시를 대조했다. handoff/build-scan 디렉터리 없음·사후 Worker0을 확인했다. 서버 원본은 보존했고 자동 재실행·Token 발급·Secret 변경은 하지 않았다.
+- GitHub에 전용 Secret이 등록돼 있고 문자열 형식 검사는 통과했지만, 실제 권한/만료/조직 승인·401/403 등 실패 원인은 미확인이다. 검토된 코드가 인증 원문을 폐기하므로 exit128만으로 만료라고 단정하지 않는다.
+- 읽기 후속 확인에서 Runner DNS·TLS·github.com HTTP200, 익명 Private Git endpoint401을 확인했다. 익명401을 실패한 인증 fetch의 응답으로 인용하지 않는다. 승인 Source Commit은 별도 워크스테이션 인증 경로에서 존재를 확인했다.
+- **다음 선행조건:** 기존 발급·관리 경로에서 `CICD_APP_SOURCE_READ_TOKEN`의 대상321Team/fds-msa·Contents Read-only·유효 기간·조직 승인 확인 및 필요한 최소 조치 → 새 Run 수/창 결정. 토큰 값·hash·화면을 채팅/기록으로 받지 않는다. 일반 사용자 gh 인증이나 과거 checkout으로 우회하지 않는다.
+- Runner schedule 읽기 조회는19:12에도0건이다. 기존 이재환 추적 계획은 유지한다. Harbor/SEC/MON의 문서·증적 대조와 O01 준비는 소스 접근 차단과 독립적으로 진행할 수 있으며 실제 인수 완료는 아니다.
+
+이번 작업의 완료 범위는 Phase1 잔여 목록·6개 티켓 현행화, 승인된 TBS1회 시도·실패 원본 회수, 읽기 원인 분리와 증적 PR 준비다. 현재 잔여 순서는 **소스 접근 → 새 TBS → Push → Deploy → 최소 HA/복귀 → 최종 앱 회귀 → DB 판단 → DOC/Review/Sign-off**다. W4·C01·DR 기존 처분과 담당자/AC/Status는 유지한다.
