@@ -56,7 +56,15 @@ initiator/cleanup 별도 raw는 미확인이다. 사용자 Desktop.zip의 local-
 
 Network 원본 `p37-netop-jaehwan-20261012T121250Z.tgz`의 기존 수신·SHA/manifest20/20·내용 검토는 [독립 검증 기록](https://github.com/321Team/infra-terraform/issues/11#issuecomment-6126479035)을 재사용한다. `SSM_START=BLOCKED / FULL_T1_T6=PARTIAL / FIRST_HOST_READBACK=NOT_RUN`을 보존한다. 명령·도구/당시 정책 버전 미수집은 다음 시험부터 보완하며 전체 시험 재요구 사유로 삼지 않는다. N7b StateDeny 기대표 정정은 IAM 권한 확대 사유가 아니다.
 
-### #49 rolling 집계와 #54 Freeze 연결
+### 10/13 18:30 수신 보완 — 위 17:48 스냅샷 이후
+
+- [A1 성공/A2 STOP 보고](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6142354704)를 수신했다. Subscribe attach는 VERIFIED/RC0, A1은 18:11 KST 활성 상태 확인으로 **보고**됐다. 이 문서 작성자가 AWS·현장 ledger·비공개 캡처를 직접 검증한 것은 아니므로 `A1_RUNTIME=SUCCESS_REPORTED`, 원본 수신/독립 수용은 별도다.
+- A2의 현재 기술 차단은 `servicequotas:ListServiceQuotas` identity-based Allow 부재다. 할당량 자체의 충분 여부는 미확인. [별도 후속 판단 기록](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6142452170)은 하영 본인 MFA IAM 사용자 기존 권한으로 같은 계정·기존 조직 연결만 조건부 1회, 신규 쓰기 착수 종료20:00 KST를 명시한다. **A2 완료·Subscribe 분리 완료는 아직 미확인**이다. 새 권한 확대·A1 재활성화·자동 재부착·OCM/A3/Create GO로 해석하지 않는다. 이 외부 기록은 이번 문서 작성자의 실행 권한이 아니다.
+- [PR28 수정 회신](https://github.com/321Team/infra-terraform/pull/28#issuecomment-6142399307), HEAD `8a80d82b023b9a9b49b42ea96f1dc9e3bc537b2d`: [별도 작업의 18:27 APPROVE](https://github.com/321Team/infra-terraform/pull/28#pullrequestreview-5501472422) 후 **18:29:07 KST MERGED**, merge `a7081810484e8a3141ad060410d093c8d4e1919a`. B2 유지/회수4경로 및 초기/재개 지적 해소를 소비한다. 전체 문서/diff 자체 대조에서도 P2의 `D1~D7 승인`과 현행 A2 identity/시각의 표기 차이를 확인했으며, 별도 리뷰의 처분대로 **비차단 정합화**로 남긴다. 실행은 명시된 단계별 조건·최신 #12 후속 판단·fresh 상태를 우선하며 A1을 다시 실행하지 않는다. CI0=NOT_RUN. 이번 작성자는 해당 PR 승인/병합을 수행하지 않았다.
+- #46의 [PR75](https://github.com/321Team/infra-cicd/pull/75)는 `39fd173b4fd22e1ca2b4e430cc984ace01947bd1`로 갱신됐다. 기존 source/시험 변화 없이 중단 RUN 복구 검토 문서2개만 보완했으며 새 HEAD CI2 SUCCESS·104중94PASS/10SKIP, 독립 리뷰0·Draft·미병합이다. 운영 재시작 후 journal/active 조정 기능은 미구현 잔여로 명시했다.
+- P2 공급 입력의 관련 상태만 소비한다: [CICD PR76](https://github.com/321Team/infra-cicd/pull/76) `f78033511b542d6241064ca7be3e17b4100be8ad`와 [PR77](https://github.com/321Team/infra-cicd/pull/77) `f323dfc1eaa4c491042d0655dc840e5b1a57920d`는 이미지 권한/격리 기동 검사 후보이며 OPEN이다. 이 채팅은 P1 코드 리뷰·수정·실행을 하지 않는다. P2는 실제 새 이미지/승인 digest·공급 결과가 인계된 뒤 소비하며 후보 수정/CI를 실제 새 이미지 기동 PASS로 올리지 않는다.
+
+### #49 rolling 집계와 #54 Freeze 연결 — 계속
 
 10/07~22에는 생산자가 기존 티켓/증적에 결과를 누적하고 이권욱은 **변경된 링크·판정만** 갱신한다. 10/23에 처음 자료 작성을 시작하지 않는다. 다음 묶음을 동일 candidate 목록으로 #54→#56→#55에 전달한다.
 

@@ -91,3 +91,5 @@ ECR authorization token은 발급 IAM principal의 권한 범위를 따르며 12
 ECR의 digest pull에는 manifest 형식 자동 변환이 없다. 복사 시 원본 index/child digest와 소비자 지원 형식을 확인하며 변환·재빌드·tag 대체로 같은 이미지라고 간주하지 않는다. [AWS manifest 문서](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-manifest-formats.html), 10/13 조회.
 
 **후속 조건:** #38 지원 인증/경로 계약 → #43/#46 실제 current/previous 공급 → 승인 창의 cold-pull/negative·복구 → #42 D22 Final. 하영·재환은 기존 인계에 누락 필드만 보완한다. 이권욱은 교육장 리포트로 비용을 중앙 판단하며 추가 단가표·중복 비용 승인이나 지금의 ECR 생성을 요구하지 않는다.
+
+10/13 18:28 추가 수신: [Harbor 운영 후속 기록](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6142413961)은 Harbor10개 healthy·restart=always 유지, 자동복구 관리자 활성화 실패 후 HOLD/정책 원복 완료를 보고한다. **Registry 서비스 상태와 자동복구 관리자 인수 상태를 분리**해 D22에 소비한다. 이번 작성자가 원본/실제 서버를 검증한 것은 아니며 P1 관리자 재활성화·H6·SELinux/lock 수정 시험을 이 준비 범위로 가져오지 않는다. 이 보고만으로 Harbor 서비스 전체 장애 또는 P2 cold-pull/복구 PASS를 선언하지 않는다.
