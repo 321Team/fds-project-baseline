@@ -4,6 +4,8 @@ CODEX_ASSISTED. 실제 원본을 대신하는 문서가 아니다. Phase 1 작�
 
 ## 10/14 현재 인수표 — 기존 부분 완료와 미확인의 분리
 
+**10/14 14시 현재 소비:** [14시 후속 준비·G4 7개 입력·다음 실행 경계](gate-followup-20261014.md)를 추가했다. 최신 GitHub의 기존 독립 검토를 재사용했으며 이번에 동일 원본을 재시험·재해시하지 않았다. PR170도 최종 `d598f9e`·HEAD verify SUCCESS 후13:06:38 병합됐다(`768e5da`). 아래 표의 완료/잔여는 이번 수신 기록으로 정정하며, 다음10:58/11:08 단락은 당시 이력이다.
+
 **10/14 13:04 KST 병합 반영:** [PR80](https://github.com/321Team/infra-cicd/pull/80) HEAD `eeadfd256b5360fb414569e15f0e32c2efd9ea39`는 [이하영 독립 승인](https://github.com/321Team/infra-cicd/pull/80#pullrequestreview-5512480439)·HEAD CI 2 SUCCESS 확인 후13:04:33에 병합됐다(`b183fddb9c65e7119bf008214c34bef3ca4066d2`). Linux MOCK 135건 중124 PASS/11 SKIP이며 실제 verifier·운영 연결·Runtime 인수는 잔여다. 아래10:58/11:08 기록은 당시 조회 이력이다.
 
 당시 GitHub 기준10:58 KST, 중앙 비용 세션11:00 사용자 입력 수신. baseline PR167 최종HEAD `1e807bd`는10:25:40 병합(`ab87d83`), HEAD CI1 SUCCESS·merge check0=NOT_RUN이다. 이 표는 준비본이며 정본·G4 인수를 뜻하지 않는다. 아래10/13 시간별 절은 당시 이력이다.
@@ -21,13 +23,13 @@ GitHub 조회00:24~00:25 KST와 10/13 사용자 별도 SSM 요청의 실제 원�
 | 권욱 N3 | 10/13 22:25 상대 폐기가능 세션 Resume/Terminate 각1회 AccessDenied, 22:28 Active0/Terminated readback. 원본ZIP SHA `a22d2f75726be565f484655490eff336386b91a6e1e78123d94043f88bdc4873`, manifest15/15 및 내용 자체 검토. 비공개 공유22:31 | 재환 새 원본 수신·독립 수용 회신 미확인. 기존 수용6145949873의 범위를 새 N3까지 넓히지 않음. 완료한 권욱→재환 시험 재요구 없음 |
 | 권욱 Resume | 10/13 22:13 API 성공, 새 client의 실제 셸 재연결 미확인. 생성2세션 종료, 원본 공유 완료 | 권욱: 현재 시험방법/관측 차이 확인 후 필요 부분만 별도 검증. IAM 거부/결함 또는 전체 PASS로 단정하지 않음 |
 | N1 | 10/13 23:04:52 서울 실제 EC2 전체조회 Relay1대/다른대상0. `NOT_RUN_NO_OTHER_REAL_INSTANCE`, StartSession0회. 원본ZIP SHA `7682a0a2931388f1039d700ffd51e6d50ad71a60527e5492b2598486eda0a02f`, manifest8/8·내용 자체 검토/공유 완료 | 권욱: 실제 다른 대상이 생길 때 정확한 대상/소유자/시험·정리 범위를 확인한 잔여 검증만 판단. N1용 자원 생성·없는ID 시험·PASS/면제 처리 없음 |
-| OCM/A3/subnet 태그 | [OCM/A3 새 위임](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6158731670): **10/14 10:19:52~12:19:52 KST**, 하영 특별 중앙 IAM root 예외의 exact Stage1 Plan9create·OCM basic만. [태그 새 구간](https://github.com/321Team/infra-terraform/issues/11#issuecomment-6158732085): 하영 본인 MFA IaC,10/14 최초 시작~완료/중단1회, exact2tag | 하영 actual/readback·검증Plan·원본 → 권욱/재환 독립 검토. 직전 identity/조직·state/lock/소유·단일writer와 OCM/A3→root로그아웃→태그 직렬화. 만료/중단 후 자동 재Apply·다음날 이월·Stage2/Create·범위 확대 없음. 새 실행 완료 회신 미확인 |
+| OCM/A3/subnet 태그 | [Stage1 실행 수용](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6160187548), [12:29 보완 API·manual 검토](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6160425675), [태그2개 Apply/readback·No changes 수용](https://github.com/321Team/infra-terraform/issues/11#issuecomment-6160427524) | 하영 Stage1 최종 증적 보완·Stage2 Plan 수집/후속 Apply. 태그 재Apply·Stage1 전체 재시험 대기에서 제외. 오전 root 위임은 종료, 새 Plan/Apply 창으로 전용하지 않음 |
 | VPN/db01 인계 | PR30 병합·무변경 재Plan 보고, db01/server08·sudo 사용자 실측과 권욱 원복 담당 지정 재사용 | 재환 스크립트 절대경로·RUN·원복 인계 및 터널/TCP/복구 원본 → 권욱 소비. Plan0/담당지정만으로 통신 성공 아님 |
-| ROSA 비용/생성 | public/public source·기승인 ROSA Cost GO는 해소된 조건 | 하영 actual IAM/OIDC/태그/플랫폼, 권욱 #34/#39·exact 생성 Plan/별도 Create 판단. 실제생성/Basic Ready 미확인 |
+| ROSA 비용/생성 | public/public source·기승인 ROSA Cost GO 유지, Stage1 roles/OIDC·subnet 태그 실행 수용 | 하영 Stage2 실제 output·생성 준비, 권욱 Freeze/G4·exact 생성 Plan/별도 Create 판단. 실제생성/Basic Ready 미확인 |
 | P1 공급 → #46 | [TBS217](https://github.com/321Team/fds-project-evidence/pull/217)/[Push218](https://github.com/321Team/fds-project-evidence/pull/218)/[Deploy219](https://github.com/321Team/fds-project-evidence/pull/219) MERGED·CI각1SUCCESS, [새 Deploy 보고](https://github.com/321Team/infra-cicd/issues/11#issuecomment-6147808781) 확인 | 재환 P2승인current/previous·clean render, 하영 P2대상·권한, 권욱 원본결속. P1실제인수와 P2Runtime 미실행을 구분 |
 | #46 준비 코드 | [PR75](https://github.com/321Team/infra-cicd/pull/75) source `6813585` 독립2승인·10:00:40 병합 `e39bea7`, HEAD/merge CI각2SUCCESS·Linux123중112PASS/11SKIP. [후속 PR80](https://github.com/321Team/infra-cicd/pull/80) `eeadfd2`: Git 지원·Service 노출 검사·승인/관측 대조, 독립 승인·HEAD CI 2 SUCCESS·13:04:33 병합 `b183fddb9c65e7119bf008214c34bef3ca4066d2` | 하영/재환 actual 입력 후 권욱 진위검증 provider·운영 경로/로그·권한 연결. PR75 리뷰를 PR80 독립 승인으로 복제하지 않음. 실제 TLS/ROSA/RBAC/배포/복구 인수 미실행 |
-| A1/A2 정정·원본 | [정정 수용](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6158731269): 캡처8장 직접 수신·해시8/8·내용 열람. 공유시각 정정과 Organization External ID 구분 수용 | 정확한 AWS/RH 조직 대응·Subscribe ledger 원본 독립 수용만 잔여. A1/A2 전체 재시험·분리 정책 재부착 불필요. 해시는 시험 성공 근거가 아님 |
-| 재환 T5·Relay10/14 | 권욱이 비공개 `p37-relay-read-20261014T014935Z.tgz` 수신·SHA256 `7e884a503834f1902c5f319306993712a6a0c32bc3224a25ddbb6ceb0f0f062e`·manifest21/21·내용 검토. 본인 Resume/Terminate API rc0, Relay 패키지·Enforcing·forward0·bootstrap done, ipsec inactive·VPN 테이블 없음 확인 | 실제 재개 client의 셸 미관측, 첫 세션은 원본에서 Terminating으로 최종Terminated 확인 잔여. 두 번째 세션Terminated 확인. 첫 입력오류 rc254도 보존, 전체T5/정리 PASS로 확대하지 않음. 새 B0 홈 전달 요청은 이번에 승인/실행하지 않음 |
+| A1/A2 정정·원본 | 캡처8장 수용 유지. [Subscribe ledger 24행/8run 수신](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6160187548)으로 ledger 전체 미수신은 해소 | 10/13 분리 이후 엔터티 목록·정확한 현재 조직 대응 등 잔여만. 이전 final-readback은10/12이므로 새 시점으로 소급하지 않음. 재부착 불필요 |
+| 재환 T5·Relay10/14 | 기존 T5 API/호스트 읽기와 [B0 패키지·11:39 후속 원본 수용](https://github.com/321Team/infra-terraform/issues/11#issuecomment-6160185014) 재사용 | 실제 Resume 셸·첫세션 Terminated 미확인. Active0/History Terminating을 정리 완료로 올리지 않음. B0/B1 준비안 수용은 실행 GO/터널 성공과 별개 |
 | Grafana #25 | [조건부 설계 결정](https://github.com/321Team/fds-project-baseline/issues/25#issuecomment-6158755475): ROSA 내부·namespace 한정·P1 dashboard 사본 활용, P0/G5 여력 조건 | 재환·하영 version/D26/RBAC/tenancy·SM/NP·복구 입력 후 해당 단계 검토. Operator/cluster-admin/UWM/설치 Runtime GO 아님.10/19 미준비 시 콘솔 fallback/Deferred 유지 |
 
 원본 보관은 기존 고정 비공개 공유경로의 `pr31-ssm-review-jaehwan-20261013-2200/followup-2200`을 재사용한다. 공유 완료·수신·재해시·내용 자체 검토·타인 독립 수용을 각각 구분한다. 공개 문서에는 hash와 상태만 연결하고 raw/credential은 편입하지 않는다.
@@ -43,7 +45,7 @@ GitHub 조회00:24~00:25 KST와 10/13 사용자 별도 SSM 요청의 실제 원�
 | 기존 ID | 현재 소비 상태 / 근거 | 지금 필요한 잔여 |
 |---|---|---|
 | I01/I02 IAM·역할 | 전체 PENDING/NOT_RUN 아님. 위 PR31/IAM v2의 원본 독립 수용과 권욱 실제 SSM 부분 결과, 재환 본인 접속 보고 재사용 | 다른 정책/작업까지 승인 확대 없음. 새 후속 원본 독립 수용·Resume 셸·미실행 N1 범위만 남김 |
-| I03/I04 플랫폼 | public/public PR29 병합·A1/A2 수용 및 캡처8장 내용검토, 위 OCM/A3/태그 새 한정 GO | 하영 actual·readback/검증Plan과 원본 독립 수용, 정확한 조직 대응/Subscribe ledger. 승인과 실행 보고를 혼합하지 않음 |
+| I03/I04 플랫폼 | public/public PR29·A1/A2·캡처8장 및 Stage1/OCM 실행 수용, 태그 Apply/readback 수용. 위 최신 검토 링크 재사용 | Stage1 최종 증적 일부 보완·Stage2 Plan/Apply/readback·정확한 조직/최신 Subscribe 스냅샷. 이미 받은 ledger/manual/태그 원본 재요구 없음 |
 | I05 Relay | Relay 실제 SSM 접속과 첫 호스트 readback은 위 원본으로 소비 | VPN/Libreswan·SA/포워딩·복구 인수와 구분. 같은 첫 호스트 읽기 재시험 없음 |
 | I06 관리/DNS | public API/Ingress·P0 IP 기준, [권욱10/14 D23=DEFERRED 결정](decision-packet.md#현재-d23-결정--추가-hybrid-dns-보류) | Owner 권욱·기존10/16 점검, 이후 actual API/Route DNS·TLS/identity. #48 OPEN/구현 보류이며 private DNS/Resolver를 현재 필수 구축으로 요구하지 않음 |
 | I07 DB 경로 | 기존 source-set·NP·실패복구 계약과 db01/server08·sudo/원복 담당 지정 재사용 | 재환 정확한 스크립트/RUN/원복 인계와 승인된 ALLOW/DENY·복구 원본. 실제 DB/pg_hba 변경은 별도 경계 |
