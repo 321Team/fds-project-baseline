@@ -194,7 +194,7 @@ network 태그 [결과 보고](https://github.com/321Team/infra-terraform/issues
 | 집계 묶음 | 현재 연결 / 다음 입력 | #49에서 닫는 조건 |
 |---|---|---|
 | Cloud/VPN·Architecture | 위 G4 7개 행, #34/#35/#37/#39 | As-built와 승인 기준 차이·actual ID·기존 Runtime 원본/리뷰/병합 범위 대응 |
-| App/Delivery·Hybrid 시험 | [PR75](https://github.com/321Team/infra-cicd/pull/75) `39fd173b4fd22e1ca2b4e430cc984ace01947bd1`: Draft, 독립 리뷰0, CI2 SUCCESS; Linux104 중94PASS/10SKIP. #43/#47/#50 actual 원본은 후속 | source→remote digest→runtime imageID/업무 결과, 실패차단·복구·미실행 분리. PR75 MOCK은 실제 TLS/API/배포 증적 아님 |
+| App/Delivery·Hybrid 시험 | [PR75](https://github.com/321Team/infra-cicd/pull/75) `6813585443202c58ddf6309d241c7e0111c98e59`: 독립 승인 후 10/14 10:00 KST 병합(`e39bea7c0f35bbd3a02b1265ee82e506a7f389e5`), CI2 SUCCESS; Linux123 중112PASS/11SKIP. 10/14 병합 전 현황 정정이며 위 과거 기록은 유지. #43/#47/#50 actual 원본은 후속 | source→remote digest→runtime imageID/업무 결과, 실패차단·복구·미실행 분리. PR75 MOCK은 실제 TLS/API/배포 증적 아님 |
 | Decision·Known Issue | #36 결정, [D22](d22-lead-review.md), [D23](decision-packet.md), 조건부 P1/P2 결정 | 확정/제안·Deferred의 이유/Owner/기한/재검토 조건 구분. 미결 결정값 합성 금지 |
 | 비용·정리·Review | [운영·Review 준비](lifecycle-review-preparation.md) | 원본 보존/수신, 삭제·보존 inventory, 교육장 리포트·잔여 Owner/Due, #52 실제 시간/참석자 기록 |
 
