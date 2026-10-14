@@ -1,0 +1,399 @@
+{
+  "basis": "User: 1~2번 착수; Phase 1 only. New document analysis and local source characterization; no new server Runtime, acceptance, risk decision, or code change.",
+  "base_pr": 173,
+  "base_head": "b0655f5305a9999faea570b37679b79dfd46cf7c",
+  "baseline_main": "368e3595e4ca608c504a9557b750a5ce8439fab3",
+  "evidence_main": "43e26384ae422f2017f1e96e6c1bb5fe46d087d4",
+  "app_operating": "affbc69beef9967f7977d09a6fec14f7fb6c0e94",
+  "app_main": "6531b51c991535794c1f9705dc14f199001d1961",
+  "monitoring_main": "0dd0235b07d44ba7965490e3808e0a67a3bd903b",
+  "kubernetes_main": "e60e022333a51a9a1690649ef170c0bda92ad9b9",
+  "refs": [
+    {
+      "key": "api",
+      "url": "https://raw.githubusercontent.com/321Team/fds-msa/6531b51c991535794c1f9705dc14f199001d1961/transaction-api/app/main.py",
+      "sha": "6531b51c991535794c1f9705dc14f199001d1961",
+      "path": "transaction-api/app/main.py",
+      "local_reference": "reference/api.py",
+      "saved_text_sha256": "7be21108a0015af90da54c7c033022e25387cef8f407f19521fd96738dbc84e5"
+    },
+    {
+      "key": "rules",
+      "url": "https://raw.githubusercontent.com/321Team/fds-msa/6531b51c991535794c1f9705dc14f199001d1961/fds-engine/app/rules.py",
+      "sha": "6531b51c991535794c1f9705dc14f199001d1961",
+      "path": "fds-engine/app/rules.py",
+      "local_reference": "reference/rules.py",
+      "saved_text_sha256": "b7de0328bf11dd7ce907030e64215afaf3fae787353f8e88c3b389b4ff4a192a"
+    },
+    {
+      "key": "engine",
+      "url": "https://raw.githubusercontent.com/321Team/fds-msa/6531b51c991535794c1f9705dc14f199001d1961/fds-engine/app/main.py",
+      "sha": "6531b51c991535794c1f9705dc14f199001d1961",
+      "path": "fds-engine/app/main.py",
+      "local_reference": "reference/engine.py",
+      "saved_text_sha256": "9a238079bfcb392fe93a1fc8198bce6e93a462a8cca118e55c92bf17e8ba8dc1"
+    },
+    {
+      "key": "contract",
+      "url": "https://raw.githubusercontent.com/321Team/fds-msa/6531b51c991535794c1f9705dc14f199001d1961/docs/transaction-api_fds-engine_contract_v1.0.md",
+      "sha": "6531b51c991535794c1f9705dc14f199001d1961",
+      "path": "docs/transaction-api_fds-engine_contract_v1.0.md",
+      "local_reference": "reference/contract.md",
+      "saved_text_sha256": "63814acd1a8f4ad270e16ed62a16500555b2666b8ba7f5d7caed3be2a7f36c27"
+    },
+    {
+      "key": "model",
+      "url": "https://raw.githubusercontent.com/321Team/fds-msa/6531b51c991535794c1f9705dc14f199001d1961/app/models/models.py",
+      "sha": "6531b51c991535794c1f9705dc14f199001d1961",
+      "path": "app/models/models.py",
+      "local_reference": "reference/model.py",
+      "saved_text_sha256": "f0f90593e0c8ebf7ea9b9b5c71f762139db1a15e0bc0f7a34200f1b8d1492f5f"
+    },
+    {
+      "key": "probe-inventory",
+      "url": "https://raw.githubusercontent.com/321Team/fds-project-evidence/43e26384ae422f2017f1e96e6c1bb5fe46d087d4/evidence/P1-SEC-01/six-probe-inventory-20261009T011520/analysis.json",
+      "sha": "43e26384ae422f2017f1e96e6c1bb5fe46d087d4",
+      "path": "evidence/P1-SEC-01/six-probe-inventory-20261009T011520/analysis.json",
+      "local_reference": "reference/probe-inventory.json",
+      "saved_text_sha256": "becdb0e2db96876c8e404474ad6668cc235416f6ed6d7f0567f6d0340c79bff1"
+    },
+    {
+      "key": "backup",
+      "url": "https://raw.githubusercontent.com/321Team/fds-project-evidence/43e26384ae422f2017f1e96e6c1bb5fe46d087d4/evidence/P1-SEC-01/backup-runtime-20261008/README.md",
+      "sha": "43e26384ae422f2017f1e96e6c1bb5fe46d087d4",
+      "path": "evidence/P1-SEC-01/backup-runtime-20261008/README.md",
+      "local_reference": "reference/backup.md",
+      "saved_text_sha256": "8fdfcc8f6d3f1d7d9b3a54b9cc447a1518a541847d11dec661f3ccff7e9ba4c0"
+    },
+    {
+      "key": "network",
+      "url": "https://raw.githubusercontent.com/321Team/fds-project-evidence/43e26384ae422f2017f1e96e6c1bb5fe46d087d4/evidence/P1-SEC-01/network-gaps-20261008/README.md",
+      "sha": "43e26384ae422f2017f1e96e6c1bb5fe46d087d4",
+      "path": "evidence/P1-SEC-01/network-gaps-20261008/README.md",
+      "local_reference": "reference/network.md",
+      "saved_text_sha256": "d800208aec1a4d76b53c21084f84f376578742c688003af50df63087c0d334c4"
+    },
+    {
+      "key": "hostnetwork",
+      "url": "https://raw.githubusercontent.com/321Team/fds-project-evidence/43e26384ae422f2017f1e96e6c1bb5fe46d087d4/evidence/P1-SEC-01/hostnetwork-20261008/README.md",
+      "sha": "43e26384ae422f2017f1e96e6c1bb5fe46d087d4",
+      "path": "evidence/P1-SEC-01/hostnetwork-20261008/README.md",
+      "local_reference": "reference/hostnetwork.md",
+      "saved_text_sha256": "125fc470677041e1ffcf54f7d3a5ce2e344788cc8cd85982a4b6fe993bb793c0"
+    },
+    {
+      "key": "edge",
+      "url": "https://raw.githubusercontent.com/321Team/fds-project-evidence/43e26384ae422f2017f1e96e6c1bb5fe46d087d4/evidence/P1-SEC-01/edge-cutover-20261008T1800/README.md",
+      "sha": "43e26384ae422f2017f1e96e6c1bb5fe46d087d4",
+      "path": "evidence/P1-SEC-01/edge-cutover-20261008T1800/README.md",
+      "local_reference": "reference/edge.md",
+      "saved_text_sha256": "eeff3e0b8f8f60d38c8745d74ec912a5609333e498360883567682f9059f7388"
+    },
+    {
+      "key": "regression",
+      "url": "https://raw.githubusercontent.com/321Team/fds-project-evidence/43e26384ae422f2017f1e96e6c1bb5fe46d087d4/evidence/P1-E2E-01/final-regression-20261014T1025/RUNTIME_REPORT.md",
+      "sha": "43e26384ae422f2017f1e96e6c1bb5fe46d087d4",
+      "path": "evidence/P1-E2E-01/final-regression-20261014T1025/RUNTIME_REPORT.md",
+      "local_reference": "reference/regression.md",
+      "saved_text_sha256": "446189e8c76e94b4a433ab1a2be36e78c07b00e04b38d3185c0dee0bd0d0b380"
+    },
+    {
+      "key": "outage",
+      "url": "https://raw.githubusercontent.com/321Team/fds-project-evidence/43e26384ae422f2017f1e96e6c1bb5fe46d087d4/evidence/P1-MON-01/w03-outage-hb-20261004T133615Z/README.md",
+      "sha": "43e26384ae422f2017f1e96e6c1bb5fe46d087d4",
+      "path": "evidence/P1-MON-01/w03-outage-hb-20261004T133615Z/README.md",
+      "local_reference": "reference/outage.md",
+      "saved_text_sha256": "484c7d3e21562aa2c1268ba73761b3a051a0944f1932aaf9f7fcb75ea7d4b7a0"
+    },
+    {
+      "key": "edge-before",
+      "url": "https://raw.githubusercontent.com/321Team/fds-project-evidence/43e26384ae422f2017f1e96e6c1bb5fe46d087d4/evidence/P1-E2E-01/final-regression-20261014T1025/before-edge/stdout.json",
+      "sha": "43e26384ae422f2017f1e96e6c1bb5fe46d087d4",
+      "path": "evidence/P1-E2E-01/final-regression-20261014T1025/before-edge/stdout.json",
+      "local_reference": "reference/edge-before.json",
+      "saved_text_sha256": "f82f17c76fc40feac2e64b23b0fd308b456b331da4812cfa43a17e044ca3be31"
+    },
+    {
+      "key": "app-before",
+      "url": "https://raw.githubusercontent.com/321Team/fds-project-evidence/43e26384ae422f2017f1e96e6c1bb5fe46d087d4/evidence/P1-E2E-01/final-regression-20261014T1025/before-app-state/stdout.json",
+      "sha": "43e26384ae422f2017f1e96e6c1bb5fe46d087d4",
+      "path": "evidence/P1-E2E-01/final-regression-20261014T1025/before-app-state/stdout.json",
+      "local_reference": "reference/app-before.json",
+      "saved_text_sha256": "ebec8cf799e296639026cd3aea9d186b4442ac61db926a31e988f769ed092076"
+    },
+    {
+      "key": "db",
+      "url": "https://raw.githubusercontent.com/321Team/fds-msa/6531b51c991535794c1f9705dc14f199001d1961/transaction-api/app/db.py",
+      "sha": "6531b51c991535794c1f9705dc14f199001d1961",
+      "path": "transaction-api/app/db.py",
+      "local_reference": "reference/db.py",
+      "saved_text_sha256": "e627066df9683018c92a1ffbd0f205333e4acdece73c073cf6f110e5ddc1ea4c"
+    },
+    {
+      "key": "context",
+      "url": "https://raw.githubusercontent.com/321Team/fds-msa/6531b51c991535794c1f9705dc14f199001d1961/transaction-api/app/context.py",
+      "sha": "6531b51c991535794c1f9705dc14f199001d1961",
+      "path": "transaction-api/app/context.py",
+      "local_reference": "reference/context.py",
+      "saved_text_sha256": "53caaa7a436a819a03da6eb2a0bf3f4d16bb5d6abeb1aad82407fe4126f2c912"
+    },
+    {
+      "key": "app-change",
+      "url": "https://api.github.com/repos/321Team/fds-msa/compare/affbc69beef9967f7977d09a6fec14f7fb6c0e94...6531b51c991535794c1f9705dc14f199001d1961",
+      "local_reference": "reference/app-change.json",
+      "saved_text_sha256": "d8f3244bd8aa5d773ed6d33c251666cc38b03cd3c2069e42e879e85af16c7846"
+    },
+    {
+      "key": "k8s-change",
+      "url": "https://api.github.com/repos/321Team/infra-kubernetes/compare/81ad791d5a6a611d3c7f0068bd638e60ec8e28f8...e60e022333a51a9a1690649ef170c0bda92ad9b9",
+      "local_reference": "reference/k8s-change.json",
+      "saved_text_sha256": "bb84844de39411de5f42a40b9a39238fd12f7634586f1b6420cbc99f8d33b39f"
+    },
+    {
+      "key": "mon-ledger",
+      "url": "https://raw.githubusercontent.com/321Team/infra-monitoring/0dd0235b07d44ba7965490e3808e0a67a3bd903b/docs/GRAFANA_ACCESS_LEDGER_20261009.md",
+      "local_reference": "reference/mon-ledger.md",
+      "saved_text_sha256": "4d1f0d8335af0298ffaaa504d47731fad9906c82101f779e2c4a88f6c647daca"
+    },
+    {
+      "key": "comment-6039967923",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/19#issuecomment-6039967923",
+      "updated_at": "2026-10-07T14:20:58Z",
+      "local_reference": "reference/comment-6039967923.json",
+      "saved_text_sha256": "9552f4f770b9c25a5c293920d1d0334444841385343e6847af6925c3ea2997c0"
+    },
+    {
+      "key": "comment-6040616297",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/19#issuecomment-6040616297",
+      "updated_at": "2026-10-07T14:54:41Z",
+      "local_reference": "reference/comment-6040616297.json",
+      "saved_text_sha256": "d9e49b52b3f74b7642bed083d6dad27515a881191ce3c0423c7937fc6bc99e2a"
+    },
+    {
+      "key": "comment-6042104660",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/19#issuecomment-6042104660",
+      "updated_at": "2026-10-07T16:23:11Z",
+      "local_reference": "reference/comment-6042104660.json",
+      "saved_text_sha256": "07f7faefe7d052806c627d1e080958056be58daef5fde06eaf7a3a724c60a2d5"
+    },
+    {
+      "key": "comment-6049595085",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/19#issuecomment-6049595085",
+      "updated_at": "2026-10-08T00:26:17Z",
+      "local_reference": "reference/comment-6049595085.json",
+      "saved_text_sha256": "6b0bbc5a8551f8a5d81f7a9e82f1015398e768cccd3c8ddbc5d7fd7df9f1e6ef"
+    },
+    {
+      "key": "comment-6032975302",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/17#issuecomment-6032975302",
+      "updated_at": "2026-10-07T07:16:52Z",
+      "local_reference": "reference/comment-6032975302.json",
+      "saved_text_sha256": "8247cb5edf9178caa88e94147611eda440e6f216e90b8d75a997482886bd1d1f"
+    },
+    {
+      "key": "comment-6035136512",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/17#issuecomment-6035136512",
+      "updated_at": "2026-10-07T09:33:06Z",
+      "local_reference": "reference/comment-6035136512.json",
+      "saved_text_sha256": "4dad1c8dca5047549bfe1fdaf48faa3f8e9905b8ce8447cfb554f0bdfa004da6"
+    },
+    {
+      "key": "comment-6139012660",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/17#issuecomment-6139012660",
+      "updated_at": "2026-10-13T05:35:28Z",
+      "local_reference": "reference/comment-6139012660.json",
+      "saved_text_sha256": "3296aac694038e07be171ef0eaf181cf48b59d7bba81baf5fea2cacc89bbd216"
+    },
+    {
+      "key": "operating-api",
+      "url": "https://raw.githubusercontent.com/321Team/fds-msa/affbc69beef9967f7977d09a6fec14f7fb6c0e94/transaction-api/app/main.py",
+      "local_reference": "reference/operating-api.py",
+      "saved_text_sha256": "7be21108a0015af90da54c7c033022e25387cef8f407f19521fd96738dbc84e5"
+    },
+    {
+      "key": "operating-context",
+      "url": "https://raw.githubusercontent.com/321Team/fds-msa/affbc69beef9967f7977d09a6fec14f7fb6c0e94/transaction-api/app/context.py",
+      "local_reference": "reference/operating-context.py",
+      "saved_text_sha256": "53caaa7a436a819a03da6eb2a0bf3f4d16bb5d6abeb1aad82407fe4126f2c912"
+    },
+    {
+      "key": "operating-rules",
+      "url": "https://raw.githubusercontent.com/321Team/fds-msa/affbc69beef9967f7977d09a6fec14f7fb6c0e94/fds-engine/app/rules.py",
+      "local_reference": "reference/operating-rules.py",
+      "saved_text_sha256": "b7de0328bf11dd7ce907030e64215afaf3fae787353f8e88c3b389b4ff4a192a"
+    },
+    {
+      "key": "cutover-script",
+      "url": "https://raw.githubusercontent.com/321Team/infra-kubernetes/e60e022333a51a9a1690649ef170c0bda92ad9b9/ops/edge01-cutover/edge01-cutover.sh",
+      "local_reference": "reference/cutover-script.sh",
+      "saved_text_sha256": "7e9182533a6ba766eebd728944b1f3922071e3922470819921ba8594a38a8af9"
+    },
+    {
+      "key": "ev144",
+      "url": "https://api.github.com/repos/321Team/fds-project-evidence/pulls/144",
+      "local_reference": "snapshot/ev144.json",
+      "saved_text_sha256": "20b956bea2f7821567f19461253d19735e51564c27eaf159800c6f8ef6296107",
+      "updated_at": "2026-10-07T14:42:37Z",
+      "state": "closed",
+      "head": "08ebf82cdd01aa3aa6df1d71233990df9cfe5156",
+      "merged": true,
+      "merge": "56751dfc5e81c03c9001fcb6e8063c4b18971c73",
+      "body_utf8_sha256": "c1ca2a81a2a4d615142ae0a35bd8cab079f2b90b3e4f6e6d7beb377501aa4442"
+    },
+    {
+      "key": "ev145",
+      "url": "https://api.github.com/repos/321Team/fds-project-evidence/pulls/145",
+      "local_reference": "snapshot/ev145.json",
+      "saved_text_sha256": "5798da7546e0f14d4cbc044b5a1a63e7cc3b4edb542298fcd943f2d0242c0be1",
+      "updated_at": "2026-10-07T16:39:42Z",
+      "state": "closed",
+      "head": "b3334d36f0f76b7a1f9803e2ad285a09ceabbf98",
+      "merged": true,
+      "merge": "b1328ea3efd5cfb1ce966fd0285d99bd7a4d28eb",
+      "body_utf8_sha256": "ccf081dd480f5f60e1ff37bb14fac4d6baeab5ca8898bde738fcfdb8cbc51dda"
+    },
+    {
+      "key": "ev152",
+      "url": "https://api.github.com/repos/321Team/fds-project-evidence/pulls/152",
+      "local_reference": "snapshot/ev152.json",
+      "saved_text_sha256": "1374586aaf66d258b8fd1bc8aba703a4dc95a570c8febc714fa9796febf485fe",
+      "updated_at": "2026-10-08T03:09:34Z",
+      "state": "closed",
+      "head": "461c1c3a4161ddab3811271a843d472ed02cbc00",
+      "merged": true,
+      "merge": "9dbc2f8ba3f913aab143d273eae9e89333b94e96",
+      "body_utf8_sha256": "efc1f3ac8c3976ea87d1349cf056e034b0d364795175976b9ef25ac51c1c32a1"
+    },
+    {
+      "key": "ev157",
+      "url": "https://api.github.com/repos/321Team/fds-project-evidence/pulls/157",
+      "local_reference": "snapshot/ev157.json",
+      "saved_text_sha256": "a94084fd1ee28241a11fdaec319abf6c7e1dd3194c503f167e27cfe6457e59b2",
+      "updated_at": "2026-10-08T03:09:45Z",
+      "state": "closed",
+      "head": "039e6d7c258c7f4ec6bcbeadf78c28c363d5febe",
+      "merged": true,
+      "merge": "6014e9a961af497e78be9c383d270291013db5cf",
+      "body_utf8_sha256": "304140ec675cec566f55256a2d91d7858af16d15b2360d9296b46341c68c2371"
+    },
+    {
+      "key": "ev169",
+      "url": "https://api.github.com/repos/321Team/fds-project-evidence/pulls/169",
+      "local_reference": "snapshot/ev169.json",
+      "saved_text_sha256": "480e11e9f3eb5f9d2c40e493466318d210983e9283e077960322381499378644",
+      "updated_at": "2026-10-08T10:49:35Z",
+      "state": "closed",
+      "head": "2fd658eb0f5516dc4293c57ca3c07d128cc54572",
+      "merged": true,
+      "merge": "df8782cc17e3dbd420c72277005ade3d4f470c3a",
+      "body_utf8_sha256": "4b0a144c5863f4c0a740046727019c52ce770a3d64202cec49e924725b768b6a"
+    },
+    {
+      "key": "ev173",
+      "url": "https://api.github.com/repos/321Team/fds-project-evidence/pulls/173",
+      "local_reference": "snapshot/ev173.json",
+      "saved_text_sha256": "474e8b0cda40947bf8b0e2cea11908f76ee8865dbac6f0b34a85fbe46fe669b4",
+      "updated_at": "2026-10-08T14:06:19Z",
+      "state": "closed",
+      "head": "8be4f2ea11970bcd62710b5dee164c6d08d0aca5",
+      "merged": true,
+      "merge": "dfb2521a8de77686c6566e8752899772f61eb8a1",
+      "body_utf8_sha256": "233a6404092eeb98ade742e495186280ea72306d110ccf0fc57c9f0d4d0d6da9"
+    },
+    {
+      "key": "ev177",
+      "url": "https://api.github.com/repos/321Team/fds-project-evidence/pulls/177",
+      "local_reference": "snapshot/ev177.json",
+      "saved_text_sha256": "64123a6d7170b2e3fcbefb24a13d156e5ff449b0fac765cbb998ccd2399708ec",
+      "updated_at": "2026-10-09T03:59:07Z",
+      "state": "closed",
+      "head": "930f29c26f2a1467aeee862b35e840e448553fc3",
+      "merged": true,
+      "merge": "50f5742cde1ff19fbe607e6d9c4fb091f7ab338f",
+      "body_utf8_sha256": "80c15813c89ec8c1f122bfb989c2bfa80472c0f365f406b1d5ec5665f83f8230"
+    },
+    {
+      "key": "ev180",
+      "url": "https://api.github.com/repos/321Team/fds-project-evidence/pulls/180",
+      "local_reference": "snapshot/ev180.json",
+      "saved_text_sha256": "da1bd8e2fc98fca648d6c900cfc8d9d8b116f46ae67b1e4e595a2f35c44f7fff",
+      "updated_at": "2026-10-09T03:59:20Z",
+      "state": "closed",
+      "head": "cdf23456b184481b4a50fb5d6baafc627d885ff3",
+      "merged": true,
+      "merge": "f381086cc1cd6dc7b1acf035904ef3894bdcfeac",
+      "body_utf8_sha256": "08627f6ab9a74a1147850bc2fbeae524d51df4e72a743d20a1c301e02c19d1ef"
+    },
+    {
+      "key": "ev217",
+      "url": "https://api.github.com/repos/321Team/fds-project-evidence/pulls/217",
+      "local_reference": "snapshot/ev217.json",
+      "saved_text_sha256": "ddf914d99f82a2edb5ea7872f8d69c09fe84cdbaadf8a06997ce10338ca69ca5",
+      "updated_at": "2026-10-13T12:51:02Z",
+      "state": "closed",
+      "head": "47ac79e99ed85e09e0a32fd4db0fd74f97ced920",
+      "merged": true,
+      "merge": "9c10d945f48b59571ae67771f389af9ac4279bb7",
+      "body_utf8_sha256": "04a428545e2a27fb098e265f88d1133cf535e04b837982e1e4da09af24ed7520"
+    },
+    {
+      "key": "ev219",
+      "url": "https://api.github.com/repos/321Team/fds-project-evidence/pulls/219",
+      "local_reference": "snapshot/ev219.json",
+      "saved_text_sha256": "95629eb7f84898f2738a543b1934ffd77c9c3b59de16c9cb8887207b684745f1",
+      "updated_at": "2026-10-13T15:11:19Z",
+      "state": "closed",
+      "head": "e7859e3256cfc1cae311a0ae1c897ae7ce8683c3",
+      "merged": true,
+      "merge": "ac97ed69455eb8792208c076ec7cbe082a42b2e7",
+      "body_utf8_sha256": "ccb18c2af923e0b916f6c893bd697db899fab005774ea33d63059a73234163e1"
+    },
+    {
+      "key": "ev224",
+      "url": "https://api.github.com/repos/321Team/fds-project-evidence/pulls/224",
+      "local_reference": "snapshot/ev224.json",
+      "saved_text_sha256": "cc83aeea79f14be633db48d79a1b93e6f56b8e52f106da6fa34784c42b6ccb8d",
+      "updated_at": "2026-10-14T02:03:26Z",
+      "state": "closed",
+      "head": "05e8891572a21a20ae2761e6b04751b3086670ba",
+      "merged": true,
+      "merge": "89f9d4cbd3ff77aa6fc70cfe3de34a71ffb09758",
+      "body_utf8_sha256": "f412c22f1b5dc2119e302ec44db5f68abfe525e7bf99f02be99ff84e1c5af85f"
+    },
+    {
+      "key": "sec",
+      "url": "https://api.github.com/repos/321Team/fds-project-baseline/issues/19",
+      "local_reference": "snapshot/sec.json",
+      "saved_text_sha256": "71b54e35ff3773fa4311c43d71097fb8cd39a3ce01bae5f38b0b863908cad192",
+      "updated_at": "2026-10-14T16:16:15Z",
+      "state": "open",
+      "body_utf8_sha256": "b0163b0455770079796268123d757c744c574a41fcc0615c58edc41fffcafe1a"
+    },
+    {
+      "key": "mon",
+      "url": "https://api.github.com/repos/321Team/fds-project-baseline/issues/17",
+      "local_reference": "snapshot/mon.json",
+      "saved_text_sha256": "30925fc1d187f63f79c74a335d79a3ac265b65dc2fce678ed2ddcde590ccbc29",
+      "updated_at": "2026-10-14T16:16:04Z",
+      "state": "open",
+      "body_utf8_sha256": "d633a8e0a10fa1370af76eff0877c9032f029f378572b5c0018e3c6f45aec59a"
+    }
+  ],
+  "comments_read_scope": {
+    "issue19": "pages1,3,4 per_page100; selected decisions read in full; page2 not collected this round",
+    "issue17": "pages1,3 per_page100; selected decisions read in full; page2 not collected this round"
+  },
+  "limitations": [
+    "Read selected README summaries, probe analysis JSON, regression JSON projections, issue decisions, current code and Git compare. Did not re-extract or revalidate all sealed archives or historical raw logs.",
+    "Repository compare can include unrelated P2 filenames; no P2 implementation or change made.",
+    "A whole evidence recursive-tree request failed; used specific subtree/PR file lists instead.",
+    "Local reference text normalized to UTF-8/LF; hashes identify saved reference copies, not original binary archives."
+  ],
+  "retrieval_completed_at_kst": "2026-10-15T01:32:54.916653+09:00",
+  "offline_source_replay": {
+    "stage": "OFFLINE_SOURCE_CHARACTERIZATION",
+    "script_sha256": "bd3d2dbf9013253e2636b90a9f32ebcf5a6b73b3af39e943469e4ac8bb5624ff",
+    "result_sha256": "e42da12c1071e5de4a2b68c1a5a63d3f95a6616951b324abb29d62575ec9cd75",
+    "source": "three pinned app sources are byte-identical to operating source; no HTTP/DB/server test"
+  }
+}

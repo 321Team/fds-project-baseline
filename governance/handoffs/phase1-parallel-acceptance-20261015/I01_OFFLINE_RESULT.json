@@ -1,0 +1,89 @@
+{
+  "stage": "OFFLINE_SOURCE_CHARACTERIZATION",
+  "python": "3.12.14",
+  "operating_app_source": "affbc69beef9967f7977d09a6fec14f7fb6c0e94",
+  "inspected_main": "6531b51c991535794c1f9705dc14f199001d1961",
+  "source_sha256": {
+    "rules.py": "b7de0328bf11dd7ce907030e64215afaf3fae787353f8e88c3b389b4ff4a192a",
+    "api.py": "7be21108a0015af90da54c7c033022e25387cef8f407f19521fd96738dbc84e5",
+    "context.py": "53caaa7a436a819a03da6eb2a0bf3f4d16bb5d6abeb1aad82407fe4126f2c912"
+  },
+  "cases": [
+    {
+      "case": "naive",
+      "input": "2026-10-14T02:30:00",
+      "api_forwarded": "2026-10-14T02:30:00",
+      "engine_kst": "2026-10-14T11:30:00+09:00",
+      "r04": false
+    },
+    {
+      "case": "offset_kst",
+      "input": "2026-10-14T02:30:00+09:00",
+      "api_forwarded": "2026-10-14T02:30:00+09:00",
+      "engine_kst": "2026-10-14T02:30:00+09:00",
+      "r04": true
+    },
+    {
+      "case": "same_instant_utc",
+      "input": "2026-10-13T17:30:00Z",
+      "api_forwarded": "2026-10-13T17:30:00+00:00",
+      "engine_kst": "2026-10-14T02:30:00+09:00",
+      "r04": true
+    },
+    {
+      "case": "before_window",
+      "input": "2026-10-14T00:59:59+09:00",
+      "api_forwarded": "2026-10-14T00:59:59+09:00",
+      "engine_kst": "2026-10-14T00:59:59+09:00",
+      "r04": false
+    },
+    {
+      "case": "window_start",
+      "input": "2026-10-14T01:00:00+09:00",
+      "api_forwarded": "2026-10-14T01:00:00+09:00",
+      "engine_kst": "2026-10-14T01:00:00+09:00",
+      "r04": true
+    },
+    {
+      "case": "before_end",
+      "input": "2026-10-14T04:59:59+09:00",
+      "api_forwarded": "2026-10-14T04:59:59+09:00",
+      "engine_kst": "2026-10-14T04:59:59+09:00",
+      "r04": true
+    },
+    {
+      "case": "window_end",
+      "input": "2026-10-14T05:00:00+09:00",
+      "api_forwarded": "2026-10-14T05:00:00+09:00",
+      "engine_kst": "2026-10-14T05:00:00+09:00",
+      "r04": false
+    },
+    {
+      "case": "utc_0230",
+      "input": "2026-10-14T02:30:00Z",
+      "api_forwarded": "2026-10-14T02:30:00+00:00",
+      "engine_kst": "2026-10-14T11:30:00+09:00",
+      "r04": false
+    },
+    {
+      "case": "omitted",
+      "input": null,
+      "api_forwarded": "2026-10-14T01:25:00+00:00",
+      "engine_kst": "2026-10-14T10:25:00+09:00",
+      "r04": false
+    }
+  ],
+  "invalid_input": "ValueError in source expression; HTTP response NOT_TESTED",
+  "history_predicate": {
+    "clock_utc": "2026-10-14T01:25:00+00:00",
+    "candidate_utc": "2026-10-14T02:30:00+00:00",
+    "candidate_is_future": true,
+    "current_10m_lower_bound_matches": true,
+    "current_1h_lower_bound_matches": true,
+    "database_execution": "NOT_RUN"
+  },
+  "http_requests": 0,
+  "database_calls": 0,
+  "server_access": 0,
+  "status": "PASS"
+}

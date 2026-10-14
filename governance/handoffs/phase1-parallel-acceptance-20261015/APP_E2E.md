@@ -2,6 +2,8 @@
 
 2026-10-15 KST · CODEX_ASSISTED. 생산·업무 Lead 이재환, 통합 검토 이권욱. [#15](https://github.com/321Team/fds-project-baseline/issues/15), [#20](https://github.com/321Team/fds-project-baseline/issues/20), [#30](https://github.com/321Team/fds-project-baseline/issues/30)의 기존 AC·담당·일정·상태를 유지한다. 아래는 처분 후보이며 새 최종 승인 또는 면제가 아니다.
 
+**후속 구체화:** [D02·D04·I01 변경 영향과 처분안](D02_D04_I01.md). 실제 Backup/네트워크 증적 재사용은 [MON·SEC 잔여안](RESIDUAL_MON_SEC.md)에 연결한다. I01은 UTC Z 입력 후보와9개 오프라인 소스 사례, R01/R07 이력 영향까지 분석했으며 새 Runtime·계약 승인으로 표시하지 않는다.
+
 ## 1. 이번 대조에서 바뀐 부분
 
 - 기능회귀224: 24 PASS/0 FAIL/1 INFO, HTTP201 23건과 DB23행 거래별 대조. 병합 `89f9d4cbd3ff77aa6fc70cfe3de34a71ffb09758`.
