@@ -2,6 +2,18 @@
 
 CODEX_ASSISTED. 실제 원본을 대신하는 문서가 아니다. Phase 1 작업은 제외한다.
 
+## 10/14 15:47 인수 차이 — 해소와 신규 잔여
+
+| 입력 | 이번 연결 결과 | 다음 담당·완료조건 |
+|---|---|---|
+| I03/I04·#35 | 관리정책4개 보완 수용·Stage2 saved Plan 수용/회차종료. PR226 `025302ac` 독립 승인·CI1SUCCESS·병합 확인 | 하영: 최종 Stage1 별도 잔여 및 수정키트·병합 checker 연결. 원본 전체 재제출/Plan 재수집 불필요 |
+| #34·생성 준비 | version4.22.17/name fds-rosa-hcp 두 입력 고정 | 하영: Stage2 actual·ROSA 제공 목록·최종 tfvars; 권욱: 나머지 Freeze/G4 판정. 전체 Freeze/Create 완료 아님 |
+| Stage2 실행 키트 | 두 원본 수신·해시2/2·[내용 검토](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6162560382), 사후 오류 오판정 재현·제안 수정안5경로 확인 | 하영: 사후 RC/OIDC 판정과 role API 원본 보존 수정·common/MANIFEST 연결 → 권욱 변경 검토. 현재 Apply HOLD |
+| I05·#37 | 재환 B0/B1 승인창15:40~16:10, 이전16:30 창 대체 | [재환15:40 착수 보고](https://github.com/321Team/infra-terraform/issues/11#issuecomment-6162515661) 수신, 완료/실측 원본 미수신. 재환 결과·개별RC·세션정리 → 권욱 수신/무결성/내용검토. 터널 PASS로 확대 금지 |
+| I09~I11 | 이미 수신한 CA/경로·병합 배포 코드 유지 | 하영 actual API/CA/UID/RBAC와 재환 P2 current/previous/clean render 이후 권욱 통합. 합성 승인값 없음 |
+
+상세 근거는 [G4 현재 입력](gate-followup-20261014.md)에 연결했다. 이번 키트 수신과 기존 독립 검토 재사용을 구분하며, 아래10:58~14시 표의 PR226/Plan 대기는 당시 이력이다. 새 Runtime·전체 AC 인수·정본 발행 없음.
+
 ## 10/14 현재 인수표 — 기존 부분 완료와 미확인의 분리
 
 **10/14 14시 현재 소비:** [14시 후속 준비·G4 7개 입력·다음 실행 경계](gate-followup-20261014.md)를 추가했다. 최신 GitHub의 기존 독립 검토를 재사용했으며 이번에 동일 원본을 재시험·재해시하지 않았다. PR170도 최종 `d598f9e`·HEAD verify SUCCESS 후13:06:38 병합됐다(`768e5da`). 아래 표의 완료/잔여는 이번 수신 기록으로 정정하며, 다음10:58/11:08 단락은 당시 이력이다.
