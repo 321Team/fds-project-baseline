@@ -1,6 +1,12 @@
 # Phase 2 전용 사전 준비 — 2026-10-08
 
+**10/14 02:22 KST 현재 작업:** [권욱 P0 13건의 순서와 P1 보류 3건](sequential-worklist-20261013.md#현재-작업-목록--1014-0222-kst-조회)을 따른다. #40/#48/#120은 기존 결정으로 보류하며 이 착수 요청으로 재개하지 않는다. Registry → Delivery → Architecture/G4 → 산출물 → Review 준비를 이어간다. 아래의 과거 목록은 당시 이력이다.
+
+**최신 준비 진입점:** [10/14 Phase 1 보호·순차 착수 결과](phase-boundary-20261014.md), [D23 결정 필드](decision-packet.md#1014-d23-ac-대조-결과와-결정용-필드), [D22 앱별 생산 원본 대조](d22-lead-review.md#1014-생산-원본-대조--앱별-currentprevious), [현재 입력16개·#49 집계](evidence-handoff.md#1014-입력표와-현재-증적의-대조). 본문의 10/08 현황은 당시 기록이며 각 문서의 최신 보완과 구분해 읽는다.
+
 CODEX_ASSISTED. 사용자 'Phase 1 작업은 제외하고 나머지 건에 대해서 권장 순서대로 착수' 지시를 적용한다.
+
+**현재 D23:** 이권욱의10/14 “보류” 결정으로 [추가 Hybrid DNS는 DEFERRED](decision-packet.md#현재-d23-결정--추가-hybrid-dns-보류). 기존 IP/public DNS·TLS 기준과 #48 OPEN을 유지한다. 과거 D23 PENDING은 검토 이력이며 D22는 계속 PENDING이다.
 
 현재 상태: **1차 인수 준비 단계 / Phase 2 사전 문서 준비 병행**. 결정안 수용·독립 코드 리뷰·실제 실행은 별도다. 이번 패킷은 런타임 설정이나 실행 가능한 tfvars가 아니다. Phase 1 Close/Harbor/기존 CICD 수정·시험·승인·티켓 처리는 범위 밖이다. 해당 생산물을 P2가 소비할 조건만 기록한다.
 
@@ -43,3 +49,7 @@ Freeze는 생성 전 네트워크/권한/보안 계약을 받아 판단한다. a
 기준 main: baseline `81365568fd0b946ad93e4d82ae8191add5fcacd0`, Terraform `0eabe8daa75a6b9bf960fe1ea5eeaf6a8818f216`, CICD `4e9324cd8acf0ba67b35f950b4c952db8064540e`, APP `adc90410f99cb7af5b40bc8ff92c45272e9f8bee`. 발행 정본 docs-v3.1.21 유지.
 
 Issue 원문/최신 댓글·PR 상태·기존 준비 문서의 정적 대조를 수행한다. 수정 파일의 링크·TSV·UTF-8/LF·민감정보·diff를 검증하고 실제 결과는 PR에 남긴다. 이번 새 MOCK/LAB/AWS/ROSA Runtime=NOT_RUN. 문서 전용이며 복구는 해당 커밋 revert다. canonical 파일·Issue 본문/AC/Status·Phase 1 코드·서버 설정을 변경하지 않는다.
+
+## 10/13 순차 작업 인계
+
+[작업 목록과 다음 행동](sequential-worklist-20261013.md)을 재사용한다. 이 폴더의 10/08 기록과 `input-intake.tsv`는 당시 접수 이력이며, 최신 승인·소스·접수 상태는 각 문서의 **10/14 보완**을 우선 참조한다. 위 private 관리 경로 전제는 현재 public/public 승인에 맞춰 [DNS 보완](decision-packet.md)에서 구분했다. 이 보완도 정본 발행·D22/D23 확정·Gate 인수는 아니다. [준비 PR 리뷰 절차](evidence-handoff.md#준비-pr의-리뷰-절차-정정)에 따라 코드 PR75의 독립 리뷰와 문서 PR167의 Lead 판단을 구분한다.
