@@ -6,6 +6,8 @@ CODEX_ASSISTED. 실제 원본을 대신하는 문서가 아니다. Phase 1 작�
 
 최신 GitHub 기준10:58 KST, 중앙 비용 세션11:00 사용자 입력 수신. baseline PR167 최종HEAD `1e807bd`는10:25:40 병합(`ab87d83`), HEAD CI1 SUCCESS·merge check0=NOT_RUN이다. 이 표는 준비본이며 정본·G4 인수를 뜻하지 않는다. 아래10/13 시간별 절은 당시 이력이다.
 
+**11:08 추가 수신:** [하영 OCM→A3 시작 기록](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6159231628)과 [재환 T5·Relay 읽기 보고](https://github.com/321Team/infra-terraform/issues/11#issuecomment-6159223210)를 확인했다. 전자는 시작 보고이며 완료/독립 수용은 미확인이다. AWS IAM/Apply는 한정 root, ROSA CLI는 하영 IAM 사용자로 분리했다는 보고이며 원래 승인 대상·창을 확대하지 않는다. 후자는 아래 원본 수신/내용 검토까지 진행했고 API 성공·실제 셸 재연결·정리 완료를 분리한다.
+
 **조회 범위:** tf#11/#12/#13·rosa#4/#5/#11 및 권욱16개를 포함한 관련27이슈, PR75/167/214를10:58 KST 재조회했다. 직전10:40 이후 새 실행 완료 회신은 확인되지 않았다. actual 미확인·N1 미실행을 유지하고 같은 Runtime/원본 검사를 반복하지 않았다. [현재 P0 순서와 보류3건](sequential-worklist-20261013.md#현재-작업-목록--1014-1058-kst-조회)을 따른다.
 
 GitHub 조회00:24~00:25 KST와 10/13 사용자 별도 SSM 요청의 실제 원본/수신 기록을 연결한다. [이번 Phase 1 보호 경계](phase-boundary-20261014.md)를 따른다. 아래 최신 행이 과거 본문의 동일 항목 대기 상태를 갱신하며, 작성 당시 기록을 소급 수정하지 않는다.
@@ -23,6 +25,7 @@ GitHub 조회00:24~00:25 KST와 10/13 사용자 별도 SSM 요청의 실제 원�
 | P1 공급 → #46 | [TBS217](https://github.com/321Team/fds-project-evidence/pull/217)/[Push218](https://github.com/321Team/fds-project-evidence/pull/218)/[Deploy219](https://github.com/321Team/fds-project-evidence/pull/219) MERGED·CI각1SUCCESS, [새 Deploy 보고](https://github.com/321Team/infra-cicd/issues/11#issuecomment-6147808781) 확인 | 재환 P2승인current/previous·clean render, 하영 P2대상·권한, 권욱 원본결속. P1실제인수와 P2Runtime 미실행을 구분 |
 | #46 준비 코드 | [PR75](https://github.com/321Team/infra-cicd/pull/75) source `6813585` 독립2승인·10:00:40 병합 `e39bea7`, HEAD/merge CI각2SUCCESS·Linux123중112PASS/11SKIP. [후속 PR80](https://github.com/321Team/infra-cicd/pull/80) `eeadfd2`: Git 지원·Service 노출 검사·승인/관측 대조, 작성자 MOCK 검증 | PR80 코드 독립 리뷰, 하영/재환 actual 입력 후 권욱 진위검증 provider·운영 경로/로그·권한 연결. PR75 리뷰를 PR80 독립 승인으로 복제하지 않음. 실제 TLS/ROSA/RBAC/배포/복구 인수 미실행 |
 | A1/A2 정정·원본 | [정정 수용](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6158731269): 캡처8장 직접 수신·해시8/8·내용 열람. 공유시각 정정과 Organization External ID 구분 수용 | 정확한 AWS/RH 조직 대응·Subscribe ledger 원본 독립 수용만 잔여. A1/A2 전체 재시험·분리 정책 재부착 불필요. 해시는 시험 성공 근거가 아님 |
+| 재환 T5·Relay10/14 | 권욱이 비공개 `p37-relay-read-20261014T014935Z.tgz` 수신·SHA256 `7e884a503834f1902c5f319306993712a6a0c32bc3224a25ddbb6ceb0f0f062e`·manifest21/21·내용 검토. 본인 Resume/Terminate API rc0, Relay 패키지·Enforcing·forward0·bootstrap done, ipsec inactive·VPN 테이블 없음 확인 | 실제 재개 client의 셸 미관측, 첫 세션은 원본에서 Terminating으로 최종Terminated 확인 잔여. 두 번째 세션Terminated 확인. 첫 입력오류 rc254도 보존, 전체T5/정리 PASS로 확대하지 않음. 새 B0 홈 전달 요청은 이번에 승인/실행하지 않음 |
 | Grafana #25 | [조건부 설계 결정](https://github.com/321Team/fds-project-baseline/issues/25#issuecomment-6158755475): ROSA 내부·namespace 한정·P1 dashboard 사본 활용, P0/G5 여력 조건 | 재환·하영 version/D26/RBAC/tenancy·SM/NP·복구 입력 후 해당 단계 검토. Operator/cluster-admin/UWM/설치 Runtime GO 아님.10/19 미준비 시 콘솔 fallback/Deferred 유지 |
 
 원본 보관은 기존 고정 비공개 공유경로의 `pr31-ssm-review-jaehwan-20261013-2200/followup-2200`을 재사용한다. 공유 완료·수신·재해시·내용 자체 검토·타인 독립 수용을 각각 구분한다. 공개 문서에는 hash와 상태만 연결하고 raw/credential은 편입하지 않는다.
