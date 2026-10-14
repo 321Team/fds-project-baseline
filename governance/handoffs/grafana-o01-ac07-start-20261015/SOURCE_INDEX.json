@@ -1,0 +1,34 @@
+{
+  "baseline_main": "368e3595e4ca608c504a9557b750a5ce8439fab3",
+  "evidence_input": "43e26384ae422f2017f1e96e6c1bb5fe46d087d4",
+  "pr173_head": "2f5e8d55fce9816e35195e39375ed34d3910813d",
+  "pr234_head": "4d6ceb70075038b78788c05abbfdd1cd9b4bdb1b",
+  "ac07_merge": "72375108ec743455ae49c68b1398d211dcc1b669",
+  "ac07_acceptance": "https://github.com/321Team/fds-project-baseline/issues/16#issuecomment-6171164664",
+  "ac07_review": "https://github.com/321Team/fds-project-evidence/pull/231#pullrequestreview-5518576437",
+  "as_of_kst": "2026-10-15T08:33:00+09:00",
+  "scope": "Phase1 preparation; no new server Runtime; third-party execution pending",
+  "human_inputs": {
+    "grafana_receipt": "UNCONFIRMED",
+    "grafana_revocation_record": "UNCONFIRMED",
+    "o01_candidate": "이재환",
+    "candidate_acceptance": "UNCONFIRMED",
+    "candidate_direct_involvement": "UNCONFIRMED",
+    "schedule_kst": "UNCONFIRMED"
+  },
+  "sources": [
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/pull/173#pullrequestreview-5525682711",
+      "purpose": "Preserve review at exact HEAD"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/17#issuecomment-6139012660",
+      "purpose": "Existing custody owner"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/24",
+      "purpose": "O01 AC and current residual scope"
+    }
+  ]
+}
+
