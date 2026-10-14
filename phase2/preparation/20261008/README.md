@@ -1,6 +1,8 @@
 # Phase 2 전용 사전 준비 — 2026-10-08
 
-**10/14 02:22 KST 현재 작업:** [권욱 P0 13건의 순서와 P1 보류 3건](sequential-worklist-20261013.md#현재-작업-목록--1014-0222-kst-조회)을 따른다. #40/#48/#120은 기존 결정으로 보류하며 이 착수 요청으로 재개하지 않는다. Registry → Delivery → Architecture/G4 → 산출물 → Review 준비를 이어간다. 아래의 과거 목록은 당시 이력이다.
+**10/14 10:58 KST 현재 작업:** [권욱 P0 13건의 순서와 P1 보류 3건](sequential-worklist-20261013.md#현재-작업-목록--1014-1058-kst-조회)을 따른다. #40/#48/#120은 기존 결정으로 보류하며 이 착수 요청으로 재개하지 않는다. Delivery 후속 코드 → Architecture/G4 증적 → 중앙 비용 기록 → 산출물/Review 인계 순으로 진행했다. [PR75](https://github.com/321Team/infra-cicd/pull/75)·[PR167](https://github.com/321Team/fds-project-baseline/pull/167)·[PR214](https://github.com/321Team/fds-project-evidence/pull/214)는 병합 완료이고 후속 [PR80](https://github.com/321Team/infra-cicd/pull/80)은 별도 코드 검토 대상이다. 비용은 [10/14 제공액2.85USD](lifecycle-review-preparation.md#1014-1100-중앙-비용-입력-수신)를 수신했으며 기간/cutoff/예상 총비용은 미확인이다. 아래의 과거 목록은 당시 이력이다.
+
+**10/14 13:04 KST 병합 반영:** [PR80](https://github.com/321Team/infra-cicd/pull/80) HEAD `eeadfd256b5360fb414569e15f0e32c2efd9ea39`는 [이하영 독립 승인](https://github.com/321Team/infra-cicd/pull/80#pullrequestreview-5512480439)·HEAD CI 2 SUCCESS 확인 후13:04:33에 병합됐다(`b183fddb9c65e7119bf008214c34bef3ca4066d2`). Linux MOCK 135건 중124 PASS/11 SKIP이며 실제 verifier·운영 연결·Runtime 인수는 잔여다. 아래10:58/11:08 기록은 당시 조회 이력이다.
 
 **최신 준비 진입점:** [10/14 Phase 1 보호·순차 착수 결과](phase-boundary-20261014.md), [D23 결정 필드](decision-packet.md#1014-d23-ac-대조-결과와-결정용-필드), [D22 앱별 생산 원본 대조](d22-lead-review.md#1014-생산-원본-대조--앱별-currentprevious), [현재 입력16개·#49 집계](evidence-handoff.md#1014-입력표와-현재-증적의-대조). 본문의 10/08 현황은 당시 기록이며 각 문서의 최신 보완과 구분해 읽는다.
 

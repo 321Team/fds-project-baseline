@@ -1,18 +1,20 @@
 # Phase 2 권욱 담당 선행 작업 — 순차 진행표
 
-## 현재 작업 목록 — 10/14 02:22 KST 조회
+## 현재 작업 목록 — 10/14 10:58 KST 조회
+
+PR80 상태만10/14 13:04 KST 병합 결과로 보완했다. 티켓 전체 재조회나 Runtime 완료 판정은 아니다.
 
 권욱 담당 Phase 2 OPEN은 **16건: P0 13건, 보류한 P1 3건**이다. 우선순위 P1은 프로젝트 Phase 1과 다르다. 아래의 준비 순서를 사용하며, 그 뒤 10/13~10/14 기록은 당시 수행 이력이다. 이 목록은 공식 Status·AC·일정을 변경하지 않는다.
 
 | 순서 | 권욱 책임 티켓 | 지금의 작업 / 전환 조건 |
 |---|---|---|
-| 1 | [#42 Registry D22](https://github.com/321Team/fds-project-baseline/issues/42) | 기존 원본·CA 입력을 재사용해 D22 12개 출력의 현재 상태 정합화. 하영 P2 지원 인증/경로, 재환 앱별 current 채택·previous·clean render 후 Final 판단. 입력 대기 중 2번 진행 |
-| 2 | [#46 ROSA Delivery](https://github.com/321Team/fds-project-baseline/issues/46) | PR75 사전점검과 코어의 namespace 불일치 수정·해당 MOCK. actual identity/권한·운영 연결과 독립 리뷰는 잔여. 그 입력 대기 중 3번 진행 |
-| 3 | [#34 Architecture Freeze](https://github.com/321Team/fds-project-baseline/issues/34) | 승인 설계·Decision·Known Issue와 실제 변경 차이 소비. D23 및 P1 보류를 반영하고 확정되지 않은 As-built·Freeze 판정은 남김 |
-| 4 | [#39 G4](https://github.com/321Team/fds-project-baseline/issues/39) | SSM 부분 수용·후속 독립 검토, OCM/A3/태그 actual·VPN/RUN 원복 인계 잔여를 분리. 10/14 도래만으로 Gate PASS 처리하지 않음 |
-| 5 | [#49 산출물](https://github.com/321Team/fds-project-baseline/issues/49) | 기존 I01~I16·4묶음에 같은 원본을 연결. 새 실제 증적이 없는 행은 기존 검증 재사용·미확인 유지 |
-| 6 | [#52 Review 일정](https://github.com/321Team/fds-project-baseline/issues/52) | 10/23 14:00~15:30 제안·참석 미정 유지. 사용자에게 같은 참석 질문을 반복하지 않고 운영안 준비 범위로 진행 |
-| 7 | [#55 Review/Close 실행 준비](https://github.com/321Team/fds-project-baseline/issues/55) | 기존 의제·Demo·Action·정리/비용·sign-off 준비에 확정 보류와 타 담당 미회신을 구분. 회의 개최·삭제·종결 아님 |
+| 1 | [#46 ROSA Delivery](https://github.com/321Team/fds-project-baseline/issues/46) | PR75 병합 완료. 후속 [PR80](https://github.com/321Team/infra-cicd/pull/80) `eeadfd2`: Git 기능 사전검사·Service 외부노출 차단·승인/관측 Binding 대조·실패/복구 MOCK. 이하영 독립 승인·HEAD CI 2 SUCCESS 후13:04:33 병합 `b183fddb9c65e7119bf008214c34bef3ca4066d2`. 실제 verifier/운영 연결은 잔여; 아래 문서 준비 진행 |
+| 2 | [#34 Architecture Freeze](https://github.com/321Team/fds-project-baseline/issues/34) | 아래 새 승인·캡처 수용·Grafana 조건부 설계를 기존 인수표에 연결. 실제 차이·필수 입력 전 Freeze/As-built 판정 없음 |
+| 3 | [#39 G4](https://github.com/321Team/fds-project-baseline/issues/39) | OCM/A3/태그 승인과 actual 결과를 분리. 중앙 최신 제공 비용2.85USD 접수, cutoff/예상 총비용 미확인. 날짜 도래·부분 승인만으로 G4 PASS 아님 |
+| 4 | [#49 산출물](https://github.com/321Team/fds-project-baseline/issues/49) | PR75/167/214 병합을 현재 표에 반영하고 원본 수신·독립 수용·Runtime·발행을 분리. I01~I16 및 4묶음에 같은 입력 연결 |
+| 5 | [#55 Review/Close 준비](https://github.com/321Team/fds-project-baseline/issues/55) | [인계 잔여표](lifecycle-review-preparation.md#1014-1058-인계-잔여와-완료조건)에 Owner·선행·완료조건 연결. 회의개최·삭제·Close 없음 |
+| 입력 후 | [#42 Registry D22](https://github.com/321Team/fds-project-baseline/issues/42) | 기존 비교/CA/인증 갱신·전환/복구 준비 재사용. 하영 P2 지원 인증/경로, 재환 앱별 current 채택·previous·clean render 이후 최종 판단 |
+| 회신 후 | [#52 Review 일정](https://github.com/321Team/fds-project-baseline/issues/52) | 10/23 14:00~15:30 제안·권욱 참석 미정 유지. 같은 질문·새 시간안·초대 반복 없음 |
 | 진입 판정 | [#33 Phase 2 Start](https://github.com/321Team/fds-project-baseline/issues/33) | Phase 1 Close 및 승인된 Known Issue/Deferred 입력 수신 후 판정. 현재 사전 준비를 공식 Start로 올리지 않음 |
 | 결정 재사용 | [#36 OCI D21](https://github.com/321Team/fds-project-baseline/issues/36) | FINAL OCI NO-GO/AWS Relay·기존 원본 편입 재사용. 새 OCI 시험·재선택 없이 별도 publication 잔여 구분 |
 | 후속 Gate | [#53 G6](https://github.com/321Team/fds-project-baseline/issues/53) | #47 exact handoff와 #50 실제 E2E/회귀 수신 후 인수 |
@@ -24,9 +26,16 @@
 
 이권욱의 10/14 지시에 따라 [#40 DNS 결정](https://github.com/321Team/fds-project-baseline/issues/40#issuecomment-6150473837), [#48 DNS 구현](https://github.com/321Team/fds-project-baseline/issues/48#issuecomment-6150475259), [#120 GitOps 결정](https://github.com/321Team/fds-project-baseline/issues/120#issuecomment-6150476545)은 보류다. OPEN/기존 상태를 유지하고 취소·완료로 바꾸지 않는다. 기존 10/16 점검은 재검토 시점이며 자동 재개가 아니다. 재개는 권욱의 별도 판단을 따른다. D23=DEFERRED, D22=PENDING.
 
-타 담당자의 P1은 [#34 공통 안내](https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-6150571392)에 따라 각자 착수/보류를 선택한다. 이번 조회에서 새 선택 회신은 확인되지 않았다. 무응답을 자동 보류/취소로 입력하지 않으며, #25~27의 Phase 1 원래 AC/Runtime은 선택 대상에 섞지 않는다.
+타 담당자의 P1은 [#34 공통 안내](https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-6150571392)에 따라 각자 착수/보류를 선택한다. #25는 조건부 설계 수용이 추가됐지만 실행 선택·구체 설치 GO와 구분한다. 기타 새 선택 회신은 확인되지 않았다. 무응답을 자동 보류/취소로 입력하지 않으며, #25~27의 Phase 1 원래 AC/Runtime은 선택 대상에 섞지 않는다.
 
-### 이번 순차 착수에서 달라진 것
+### 10/14 10:58 이후 순차 착수에서 달라진 것
+
+- PR75/167/214 병합을 재조회해 미처리 목록에서 제외했다. PR80은 실질적인 후속 코드 변경이며 PR75의 완료/승인을 되돌리지 않는다.
+- 새 OCM/A3 위임·태그 작업구간·A1/A2 캡처8장 수용·Grafana 설계 결정을 [현재 인수표](evidence-handoff.md)에 연결했다. 10:58 조회까지 새 실행 완료 회신은 없었으며 실제 미실행을 단정하지 않는다.
+- 중앙 비용 기록의10/14 11:00 사용자 제공액2.85USD를 재사용했다. 같은 자료를 다시 제출하도록 요구하지 않는다. Billing period/cutoff/예상 총비용을 합성하지 않는다.
+- [Review/인계 잔여](lifecycle-review-preparation.md#1014-1058-인계-잔여와-완료조건)를 구체화했다. P1 보류3건·Phase1 경계·일정/참석 미정은 유지한다.
+
+### 10/14 02:22 수행 이력
 
 1. Registry 표의 이미 접수한 image host·CA JSON·경로 준비를 현재형으로 정정했다. 성공한 원본의 재해시·전체 시험을 반복하지 않았고 P2 채택/Runtime만 잔여로 남겼다.
 2. PR75에서 `rosa-app`을 일관된 namespace로 수용하던 사전점검을 수정했다. 코어와 같은 `fds-app` 계약을 적용하며 잘못된 namespace/형식 7종의 CLI 거부를 포함한 관련 17개 MOCK PASS. 실제 endpoint·승인·네트워크 요청은 없다. 최신 HEAD/CI는 [현재 인수표](evidence-handoff.md)에서 구분한다.
