@@ -2,11 +2,13 @@
 
 ## 현재 작업 목록 — 10/14 10:58 KST 조회
 
+PR80 상태만10/14 13:04 KST 병합 결과로 보완했다. 티켓 전체 재조회나 Runtime 완료 판정은 아니다.
+
 권욱 담당 Phase 2 OPEN은 **16건: P0 13건, 보류한 P1 3건**이다. 우선순위 P1은 프로젝트 Phase 1과 다르다. 아래의 준비 순서를 사용하며, 그 뒤 10/13~10/14 기록은 당시 수행 이력이다. 이 목록은 공식 Status·AC·일정을 변경하지 않는다.
 
 | 순서 | 권욱 책임 티켓 | 지금의 작업 / 전환 조건 |
 |---|---|---|
-| 1 | [#46 ROSA Delivery](https://github.com/321Team/fds-project-baseline/issues/46) | PR75 병합 완료. 후속 [PR80](https://github.com/321Team/infra-cicd/pull/80) `eeadfd2`: Git 기능 사전검사·Service 외부노출 차단·승인/관측 Binding 대조·실패/복구 MOCK. 코드 독립 리뷰·실제 verifier/운영 연결은 잔여; 대기 중 아래 문서 준비 진행 |
+| 1 | [#46 ROSA Delivery](https://github.com/321Team/fds-project-baseline/issues/46) | PR75 병합 완료. 후속 [PR80](https://github.com/321Team/infra-cicd/pull/80) `eeadfd2`: Git 기능 사전검사·Service 외부노출 차단·승인/관측 Binding 대조·실패/복구 MOCK. 이하영 독립 승인·HEAD CI 2 SUCCESS 후13:04:33 병합 `b183fddb9c65e7119bf008214c34bef3ca4066d2`. 실제 verifier/운영 연결은 잔여; 아래 문서 준비 진행 |
 | 2 | [#34 Architecture Freeze](https://github.com/321Team/fds-project-baseline/issues/34) | 아래 새 승인·캡처 수용·Grafana 조건부 설계를 기존 인수표에 연결. 실제 차이·필수 입력 전 Freeze/As-built 판정 없음 |
 | 3 | [#39 G4](https://github.com/321Team/fds-project-baseline/issues/39) | OCM/A3/태그 승인과 actual 결과를 분리. 중앙 최신 제공 비용2.85USD 접수, cutoff/예상 총비용 미확인. 날짜 도래·부분 승인만으로 G4 PASS 아님 |
 | 4 | [#49 산출물](https://github.com/321Team/fds-project-baseline/issues/49) | PR75/167/214 병합을 현재 표에 반영하고 원본 수신·독립 수용·Runtime·발행을 분리. I01~I16 및 4묶음에 같은 입력 연결 |

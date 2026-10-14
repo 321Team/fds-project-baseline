@@ -4,7 +4,9 @@ CODEX_ASSISTED. 실제 원본을 대신하는 문서가 아니다. Phase 1 작�
 
 ## 10/14 현재 인수표 — 기존 부분 완료와 미확인의 분리
 
-최신 GitHub 기준10:58 KST, 중앙 비용 세션11:00 사용자 입력 수신. baseline PR167 최종HEAD `1e807bd`는10:25:40 병합(`ab87d83`), HEAD CI1 SUCCESS·merge check0=NOT_RUN이다. 이 표는 준비본이며 정본·G4 인수를 뜻하지 않는다. 아래10/13 시간별 절은 당시 이력이다.
+**10/14 13:04 KST 병합 반영:** [PR80](https://github.com/321Team/infra-cicd/pull/80) HEAD `eeadfd256b5360fb414569e15f0e32c2efd9ea39`는 [이하영 독립 승인](https://github.com/321Team/infra-cicd/pull/80#pullrequestreview-5512480439)·HEAD CI 2 SUCCESS 확인 후13:04:33에 병합됐다(`b183fddb9c65e7119bf008214c34bef3ca4066d2`). Linux MOCK 135건 중124 PASS/11 SKIP이며 실제 verifier·운영 연결·Runtime 인수는 잔여다. 아래10:58/11:08 기록은 당시 조회 이력이다.
+
+당시 GitHub 기준10:58 KST, 중앙 비용 세션11:00 사용자 입력 수신. baseline PR167 최종HEAD `1e807bd`는10:25:40 병합(`ab87d83`), HEAD CI1 SUCCESS·merge check0=NOT_RUN이다. 이 표는 준비본이며 정본·G4 인수를 뜻하지 않는다. 아래10/13 시간별 절은 당시 이력이다.
 
 **11:08 추가 수신:** [하영 OCM→A3 시작 기록](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6159231628)과 [재환 T5·Relay 읽기 보고](https://github.com/321Team/infra-terraform/issues/11#issuecomment-6159223210)를 확인했다. 전자는 시작 보고이며 완료/독립 수용은 미확인이다. AWS IAM/Apply는 한정 root, ROSA CLI는 하영 IAM 사용자로 분리했다는 보고이며 원래 승인 대상·창을 확대하지 않는다. 후자는 아래 원본 수신/내용 검토까지 진행했고 API 성공·실제 셸 재연결·정리 완료를 분리한다.
 
@@ -23,7 +25,7 @@ GitHub 조회00:24~00:25 KST와 10/13 사용자 별도 SSM 요청의 실제 원�
 | VPN/db01 인계 | PR30 병합·무변경 재Plan 보고, db01/server08·sudo 사용자 실측과 권욱 원복 담당 지정 재사용 | 재환 스크립트 절대경로·RUN·원복 인계 및 터널/TCP/복구 원본 → 권욱 소비. Plan0/담당지정만으로 통신 성공 아님 |
 | ROSA 비용/생성 | public/public source·기승인 ROSA Cost GO는 해소된 조건 | 하영 actual IAM/OIDC/태그/플랫폼, 권욱 #34/#39·exact 생성 Plan/별도 Create 판단. 실제생성/Basic Ready 미확인 |
 | P1 공급 → #46 | [TBS217](https://github.com/321Team/fds-project-evidence/pull/217)/[Push218](https://github.com/321Team/fds-project-evidence/pull/218)/[Deploy219](https://github.com/321Team/fds-project-evidence/pull/219) MERGED·CI각1SUCCESS, [새 Deploy 보고](https://github.com/321Team/infra-cicd/issues/11#issuecomment-6147808781) 확인 | 재환 P2승인current/previous·clean render, 하영 P2대상·권한, 권욱 원본결속. P1실제인수와 P2Runtime 미실행을 구분 |
-| #46 준비 코드 | [PR75](https://github.com/321Team/infra-cicd/pull/75) source `6813585` 독립2승인·10:00:40 병합 `e39bea7`, HEAD/merge CI각2SUCCESS·Linux123중112PASS/11SKIP. [후속 PR80](https://github.com/321Team/infra-cicd/pull/80) `eeadfd2`: Git 지원·Service 노출 검사·승인/관측 대조, 작성자 MOCK 검증 | PR80 코드 독립 리뷰, 하영/재환 actual 입력 후 권욱 진위검증 provider·운영 경로/로그·권한 연결. PR75 리뷰를 PR80 독립 승인으로 복제하지 않음. 실제 TLS/ROSA/RBAC/배포/복구 인수 미실행 |
+| #46 준비 코드 | [PR75](https://github.com/321Team/infra-cicd/pull/75) source `6813585` 독립2승인·10:00:40 병합 `e39bea7`, HEAD/merge CI각2SUCCESS·Linux123중112PASS/11SKIP. [후속 PR80](https://github.com/321Team/infra-cicd/pull/80) `eeadfd2`: Git 지원·Service 노출 검사·승인/관측 대조, 독립 승인·HEAD CI 2 SUCCESS·13:04:33 병합 `b183fddb9c65e7119bf008214c34bef3ca4066d2` | 하영/재환 actual 입력 후 권욱 진위검증 provider·운영 경로/로그·권한 연결. PR75 리뷰를 PR80 독립 승인으로 복제하지 않음. 실제 TLS/ROSA/RBAC/배포/복구 인수 미실행 |
 | A1/A2 정정·원본 | [정정 수용](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6158731269): 캡처8장 직접 수신·해시8/8·내용 열람. 공유시각 정정과 Organization External ID 구분 수용 | 정확한 AWS/RH 조직 대응·Subscribe ledger 원본 독립 수용만 잔여. A1/A2 전체 재시험·분리 정책 재부착 불필요. 해시는 시험 성공 근거가 아님 |
 | 재환 T5·Relay10/14 | 권욱이 비공개 `p37-relay-read-20261014T014935Z.tgz` 수신·SHA256 `7e884a503834f1902c5f319306993712a6a0c32bc3224a25ddbb6ceb0f0f062e`·manifest21/21·내용 검토. 본인 Resume/Terminate API rc0, Relay 패키지·Enforcing·forward0·bootstrap done, ipsec inactive·VPN 테이블 없음 확인 | 실제 재개 client의 셸 미관측, 첫 세션은 원본에서 Terminating으로 최종Terminated 확인 잔여. 두 번째 세션Terminated 확인. 첫 입력오류 rc254도 보존, 전체T5/정리 PASS로 확대하지 않음. 새 B0 홈 전달 요청은 이번에 승인/실행하지 않음 |
 | Grafana #25 | [조건부 설계 결정](https://github.com/321Team/fds-project-baseline/issues/25#issuecomment-6158755475): ROSA 내부·namespace 한정·P1 dashboard 사본 활용, P0/G5 여력 조건 | 재환·하영 version/D26/RBAC/tenancy·SM/NP·복구 입력 후 해당 단계 검토. Operator/cluster-admin/UWM/설치 Runtime GO 아님.10/19 미준비 시 콘솔 fallback/Deferred 유지 |
@@ -64,7 +66,7 @@ GitHub 조회00:24~00:25 KST와 10/13 사용자 별도 SSM 요청의 실제 원�
 
 ### 준비 PR의 리뷰 절차 정정
 
-[REVIEW_AUTHORITY_POLICY §2](../../../governance/REVIEW_AUTHORITY_POLICY.md)의 main 원문과 현재 checkout 일치를 확인했다. **PR75는 배포 코드/혼합 변경으로 작성자 외 독립 코드 리뷰가 필요하다. PR167은 P2 Markdown 문서만 바꾸므로 Lead 검토·병합 판단 대상이며, 별도 독립 승인은 필수 조건이 아니다.** 앞선 “두 PR 모두 독립 리뷰 대기” 보고는 이 구분으로 정정한다. PR75/167은 위처럼 이미 병합됐고 후속 PR80은 새 코드 리뷰 대상이다. PR167의 하영/재환 승인은 이전9962e81, 최종1e807bd의 한 줄 정정은 권욱 Lead 판단이며 새 HEAD 타인 승인으로 복제하지 않는다. 자신의 GitHub APPROVE를 만들지 않으며 이번 사용자 착수는 PR 병합·Decision 최종 선택·정본 발행 요청으로 확대하지 않는다. 증적 저장소 PR의 독립 검토 요건은 그대로다.
+[REVIEW_AUTHORITY_POLICY §2](../../../governance/REVIEW_AUTHORITY_POLICY.md)의 main 원문과 현재 checkout 일치를 확인했다. **PR75는 배포 코드/혼합 변경으로 작성자 외 독립 코드 리뷰가 필요하다. PR167은 P2 Markdown 문서만 바꾸므로 Lead 검토·병합 판단 대상이며, 별도 독립 승인은 필수 조건이 아니다.** 앞선 “두 PR 모두 독립 리뷰 대기” 보고는 이 구분으로 정정한다. PR75/167은 위처럼 이미 병합됐고 후속 PR80도 위처럼 별도 독립 코드 승인 후 병합됐다. PR167의 하영/재환 승인은 이전9962e81, 최종1e807bd의 한 줄 정정은 권욱 Lead 판단이며 새 HEAD 타인 승인으로 복제하지 않는다. 자신의 GitHub APPROVE를 만들지 않으며 10:58 작성 당시의 착수는 PR 병합·Decision 최종 선택·정본 발행 요청으로 확대하지 않았다. 이후 사용자 지시에 따른 PR80 병합은 위13:04 기록으로 구분하며 Decision 최종 선택·정본 발행은 포함하지 않는다. 증적 저장소 PR의 독립 검토 요건은 그대로다.
 
 ## D21 publication 접수
 
