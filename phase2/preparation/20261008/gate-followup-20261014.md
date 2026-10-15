@@ -1,5 +1,27 @@
 # G4 후속 준비 — 실행 결과 수용과 다음 실행 경계
 
+## 10/15 현재 입력과 후속 조건
+
+2026-10-15 01:51~01:58 KST 원본 검토, 09:41~09:49 KST GitHub 재조회 · 이권욱 / CODEX_ASSISTED. baseline main `e1eb5b99389bccd78b66a9951516993efe9badf7`에 인계할 준비 문서다. **G4는 여전히 NOT_READY다.** 이전15:47의 Stage2 키트 차단/독립 리뷰/PR32 병합 대기는 해소됐으며 아래가 현재 소비 상태다. 이후10/14 절은 당시 판정 이력으로 보존한다.
+
+| 기존 G4 입력 | 실제 확인·재사용 | 다음 담당·완료조건 |
+|---|---|---|
+| #34 Freeze | public/public, version4.22.17/name fds-rosa-hcp 고정 유지 | 권욱: 나머지 승인 설계 입력/AC 대조. 실제 생성 후 API/UID를 생성 전 새 Gate로 요구하지 않음 |
+| #35 Full IaC | [Stage2 v4 기술 수용](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6164637050), [재환 독립 확인](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6164819513), [한정 GO](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6164878057)까지 완료. [PR32](https://github.com/321Team/infra-terraform/pull/32) HEAD ba0f0c9·merge038c490 확인 | [하영 10/15 09:39 보고](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6181672488): 10/14 root 로그인·배치·precheck·Apply 모두 미실행. AWS 독립 조회 결과와 구분한다. [09:46 GO](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6181760266): 새10/15 10:00~12:00·helper29·동일 saved Plan Apply1회 승인 기록 확인. 이번 문서 작성에서 재승인하거나 helper29 시험을 재수행한 것은 아님. 하영 직전 사전조건/비중첩 확인 후 실행·안전 종료 → 권욱 실제 원본/readback/No changes·state/lock 인수. 실행 완료는 미확인 |
+| #36 D21 | OCI NO-GO / AWS Relay 결정·기존 raw 편입 재사용 | 재시험·재선택 없음 |
+| #37 VPN | [B0/B1 수신·9/9·내용 수용](https://github.com/321Team/infra-terraform/issues/11#issuecomment-6163219831). [PR6](https://github.com/321Team/infra-vpn/pull/6) final73ac1cd·merge6432d7e 확인. [17:33 conn/zone 보완](https://github.com/321Team/infra-terraform/issues/11#issuecomment-6164372738)은 생산자 보고 | 재환: 병합본 묶음·양쪽 경로/RUN·Relay 직전 permanent 비교·원복 인계. 권욱: 해당 창 대기/접근 및 하영 실제 반납 후 새 창 판단. 기존21:00 제안 철회 유지. 실제 단계 B 새 실행 보고 미확인 |
+| ROSA 생성 준비 | [v5 검토 결과·최소 시험 보완안](https://github.com/321Team/infra-rosa/issues/4#issuecomment-6181732867) 등록. SHA256SUMS e0824c91…2bbbd·8/8 직접 수신/재해시. v4/v5 코드 정적 검토·단위4 tests·E2E37 PASS, 변조 시험 오판정 가능1건은 별도 재검증해 본체 차단 확인 | 하영: Stage2 실제 output→최종 tfvars/조직 결속·새 키트 해시. 권욱: 변경 입력/원본 인수 후 별도 Plan 창. 준비본 리뷰는 Create GO 아님 |
+| 비용 | 지정 `[클라우드] 비용 통제 정보 입력` 재조회: 최신 사용자10/14 $2.85(EC2 2.62/VPC0.23), Credit0·₩3,911 유지 | 권욱 중앙 판단. 기간/cutoff/예상 총비용 미확인, 전체누적/잔액으로 계산하지 않음. 지원·자부담0·400/450/500 및 기존 Cost GO 유지 |
+| Critical 잔여 | 기존 Stage2 키트/PR6 코드 대기와 새 현장 입력 대기를 구분. [ROSA PR37 보완](https://github.com/321Team/infra-rosa/pull/37#issuecomment-6168044536) HEAD1da3aec 불변·OPEN·직전 검사0은 NOT_RUN | 하영 PR37 F1~F3 수정 후 영향 재검토. #5 bootstrap 준비 차단을 기존 Stage1 실패나 G4 앞의 실제 bootstrap 실행 요구로 확대하지 않음 |
+
+**작업창:** Stage2 GO의10/14 18:15~20:15는 만료됐고 자동 연장·다음 날 재사용은 없다. 10/14 회차는 실행자 미실행 보고를 수신했으므로 존재하지 않는 Runtime 원본을 요구하지 않는다. 새 [10/15 GO](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6181760266)는 기존30/Plan 검토와 helper29 보조 검토를 연결한 기록이며, 여기서는 그 기록을 수신한 사실만 표시한다. 허용 창/고정본/직전 drift·비중첩 등 조건이 모두 충족돼야 실행할 수 있다. 새 승인 기록만으로 실행 완료·반납·G4를 인정하지 않는다. Harbor 작업창을 별도 선행조건으로 추가하지 않는다. N1의 `NOT_RUN_NO_OTHER_REAL_INSTANCE`, 기존 SSM 정리 잔여, Phase1 경계는 유지한다.
+
+**v5 리뷰 한계:** precheck manifest 값은 Plan ledger의 참조이며 PASS 원본/시각·실제 RHCS token 조직을 자동 검증하지 않는다. 실행 전 같은 승인 회차 원본·인증 결속이 필요하다. 실패 중단 시 정상 사후 state/lock 단계에 도달하지 않을 수 있으므로 안전 종료/반납 기록을 인수한다. 최종 입력의 FILL_ME를 지금 합성해 채우지 않는다. 본 검토자의 기존 수정 가이드를 사용한 부분은 타인의 독립 승인으로 기재하지 않는다.
+
+v5 STATIC/MOCK은 01:51~01:58 수행분을 재사용했다. 기술 검토 의견은 GitHub에 등록했고 문서는 리뷰용 PR 인계 대상이다. 이 문서의 CI는 해당 PR 조회 결과로 구분하며, RUNTIME/공식 G4 인수/정본 PUBLICATION·티켓 종결은 수행하지 않았다.
+
+## 10/14 15:47 당시 기록 — 현재 잔여로 재사용하지 않음
+
 이권욱 · CODEX_ASSISTED. GitHub·공유폴더 조회 **2026-10-14 15:35~15:47 KST**. 기준 baseline main `9b68b1ad4324595fa94c2af11a2fd10fbd0e95e3`, infra-terraform main `f1f8adf66d3b3c9348ebb919fe0dbb4f8fa54fe2`, infra-vpn main `f473ffb87b38ac863d650548694b4ad3af2c9ec7`. 기존 Plan·정책 검토는 재사용하고, 이번에는 새 실행 키트2개를 직접 수신·해시/내용 검토했다. 사후 스크립트의 실패 경로만 오프라인 MOCK으로 재현·수정안 검증했으며 AWS/RH/서버 실행은 없다. 기존14시 준비본의 변경 이력은 PR171에 보존한다.
 
 **현재 판단: 사전 준비를 계속할 수 있으나 G4 PASS를 뒷받침할 전체 입력은 아직 없다.** 증적 PR226 편입 완료와 Stage2 키트의 새 결함·미확인 의존성, Apply 미승인, VPN 실제 증적 잔여를 서로 구분한다. 정본·AC·티켓 상태·담당자·일정·권한을 변경하지 않는다.
