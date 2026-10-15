@@ -1,6 +1,6 @@
 # O01 후속 후보 — Probe223 원본 탐색과 오프라인 판독
 
-2026-10-15 KST · 자료 준비·결과 검수 이권욱 · CODEX_ASSISTED. 실제 수행자·참여·일시는 미확정이며 새 수행은 미실행이다.
+2026-10-15 KST · 자료 준비·결과 검수 이권욱 · CODEX_ASSISTED. 이재환이 10:37:44~10:39:05 KST에 기존 참여자 재확인으로 수행한 결과를 수신·검토했다. 아래 절차는 해당 회차의 판독 기준이며, 후속 서버 작업이나 새 장애 주입 승인이 아니다.
 
 ## 목적과 입력
 
@@ -57,6 +57,25 @@ AC07과 다른 실패·회복 사례에서 제3자가 Runbook의 경로·근거�
 - kubelet journal은 No entries다. 원인 연결은 같은 Pod UID의 Kubernetes liveness/Killing 이벤트를 근거로 한다.
 - 관측기·회복 보충은 당시 pure observer 범위이고 독립 코드 리뷰가 수행됐다고 바꾸지 않는다.
 - 고정 출력의 evidence review PENDING은 PR223 승인·병합 이전 값이다. final_APP/DB/W4 등은 해당 회차 당시 범위다. 최신 타 티켓 상태나 최종 인수로 확대하지 않는다.
+
+
+## 시각 기준과 호스트 간 비교 한계
+
+2026-10-15 재확인에서 제기한 경미 후보 P1의 판독 보완이다. 아래 값은 evidence `43e26384`의 봉인 원본을 그대로 읽었다.
+
+| 기록 | 원본 시각 | 기준·해석 |
+|---|---|---|
+| `apply-once/receipt.json`의 `finished_at_kst` | 2026-10-14 09:52:03.669644+09:00 | Windows 조정측의 SSH 호출 수신 완료 기록으로 해석. `route`의 ansible01은 SSH 중계 경로이며 시계 출처를 뜻하지 않음 |
+| `remote-originals/events.jsonl`의 `ORIGINAL_EXIT_OBSERVED_NOT_PROBE_PASS` | 2026-10-14 00:52:04.267843+00:00 (09:52:04.267843 KST) | worker02 실행기가 원 PID 종료를 관측한 기록 |
+| 두 값의 차이 | worker02 이벤트 − receipt 종료 = +0.598199초 | 서로 다른 시계의 표시값 차이. 실제 인과 순서·전송 지연·정확한 clock offset으로 해석하지 않음 |
+
+receipt 원본의 `command`는 `C:/Windows/System32/OpenSSH/ssh.exe`이고, 기존 로컬 `read_transport.py`의 `datetime.now(...)`는 outer SSH 호출 전후에 실행된다. 따라서 제출 양식의 “ansible01 기록”은 조정 PC 측 receipt와 구분해야 한다. 검토에 사용한 로컬 보조 소스의 경로·SHA256은 SOURCE_INDEX에 기록했다. 이 보조 소스는 Probe223 봉인 Manifest에 결속된 파일이 아니다. 현재 남아있는 수집 구조를 설명하는 보조 자료이며, 이 해시만으로 당시 실행된 보조 소스와의 바이트 동일성을 입증하지 않는다. 정확한 조정 PC 식별과 당시 양측 동기화 상태·오차 상한은 이 자료에서 확정하지 않는다. `cluster/stdout.json`의 control01과 `edge/stdout.json`·`recovery-edge/stdout.json`의 edge01 chrony 기록은 존재하지만, 비교 대상인 Windows 조정 PC와 worker02의 동시점 오차를 입증하는 자료는 아니다.
+
+“호스트 간 초 단위 오차가 있다”는 확정 문구나 임의의 허용 오차를 추가하지 않는다. 시계 차이는 가능한 설명이며 원인은 미확인이다. UTC↔KST 변환만으로 호스트 시계 차이가 보정되지는 않는다. 원본 시각·Manifest는 그대로 보존한다.
+
+같은 worker02 실행기의 `STOP_SENT` → `ORIGINAL_EXIT_OBSERVED_NOT_PROBE_PASS` 간 차이는 wall clock 81.785631초, monotonic 약81.785639초다. 기록 순서와 같은 호스트의 경과값을 함께 읽을 수 있지만 이를 다른 호스트 시각의 동기화 증거로 확대하지 않는다.
+
+기존 verifier는 apply-once receipt의 rc를 검사하지만 receipt 종료와 worker02 종료 이벤트의 선후를 비교하지 않는다. 수신 verifier 출력은 고정 입력의 기존 오프라인 판정과 일치한다. 따라서 이번 문서 보완은 해당 범위의 결과 접수를 차단하지 않으며, 전역 정밀 시각 정합성이 검증됐다는 뜻도 아니다. 정확한 호스트 간 선후·지연을 요구하는 별도 검증이 필요하면 동시점 동기화/offset 증적부터 확보해야 한다. 현재 서버 시계를 조회해 과거 상태를 소급 입증하거나, 이번 판독을 이유로 장애를 재주입하지 않는다.
 
 ## 중단·복구와 완료 범위
 
