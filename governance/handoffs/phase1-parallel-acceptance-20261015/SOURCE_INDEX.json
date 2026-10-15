@@ -1,0 +1,413 @@
+{
+  "schema_version": 1,
+  "assembled_at_kst": "2026-10-15T01:12:38.153118+09:00",
+  "scope": "Phase 1 only; preparation and evidence mapping; no new Runtime or acceptance",
+  "baseline_main": "368e3595e4ca608c504a9557b750a5ce8439fab3",
+  "issues": [
+    {
+      "number": 11,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/11",
+      "state": "closed",
+      "updated_at": "2026-10-14T02:12:27Z",
+      "body_sha256": "410534fa4eddebc3ee1489d3131d9b8db051bfe10aa3fa4136ac3a4d2b6f4ed0"
+    },
+    {
+      "number": 125,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/125",
+      "state": "closed",
+      "updated_at": "2026-10-09T13:06:52Z",
+      "body_sha256": "9c54cbf645861dc692e0e7c7488384f2021bbfc8aca39939f2a8af70174cd2a6"
+    },
+    {
+      "number": 15,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/15",
+      "state": "open",
+      "updated_at": "2026-10-14T15:36:40Z",
+      "body_sha256": "7026aeb944c263ade659ed565cad56891ef0cea7afb32e0e304877d29fec421c"
+    },
+    {
+      "number": 16,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/16",
+      "state": "open",
+      "updated_at": "2026-10-14T14:50:26Z",
+      "body_sha256": "7d1b6ff9d9f45f31b877196ee65bf7fdce46cc6e23cebcabc118f87fc7387b90"
+    },
+    {
+      "number": 17,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/17",
+      "state": "open",
+      "updated_at": "2026-10-13T06:58:05Z",
+      "body_sha256": "d633a8e0a10fa1370af76eff0877c9032f029f378572b5c0018e3c6f45aec59a"
+    },
+    {
+      "number": 19,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/19",
+      "state": "open",
+      "updated_at": "2026-10-13T08:02:12Z",
+      "body_sha256": "b0163b0455770079796268123d757c744c574a41fcc0615c58edc41fffcafe1a"
+    },
+    {
+      "number": 20,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/20",
+      "state": "open",
+      "updated_at": "2026-10-14T15:36:37Z",
+      "body_sha256": "59f312f1414ab9d37685d42e3769dce9d54be88fb81c8d071e128880ad727112"
+    },
+    {
+      "number": 21,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/21",
+      "state": "closed",
+      "updated_at": "2026-10-13T04:47:01Z",
+      "body_sha256": "b4d14ad09ff7c275c14d92171547e9eb4111ffb3cb08076b00bf7addd717d623"
+    },
+    {
+      "number": 24,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/24",
+      "state": "open",
+      "updated_at": "2026-10-14T11:15:13Z",
+      "body_sha256": "7dc85c8883870679939b28c95ab1a8b7c118dfd8ee7d897e7a2777396ad14d9e"
+    },
+    {
+      "number": 30,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/30",
+      "state": "open",
+      "updated_at": "2026-10-14T15:36:43Z",
+      "body_sha256": "d6e891d52a90551db850015a8f5e4722dbd8d97ebaf5361c00b40061e871a1b0"
+    }
+  ],
+  "comments": [
+    {
+      "issue_number": 15,
+      "scope": "last page, per_page=10; not all historical comments",
+      "count": 2,
+      "entries": [
+        {
+          "id": 6171728201,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/15#issuecomment-6171728201",
+          "updated_at": "2026-10-14T15:18:23Z",
+          "body_sha256": "af58e0c2f6f019178d5540e1fda79250a040989503e9d6d2bb0ada6c84567e3d"
+        },
+        {
+          "id": 6172099897,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/15#issuecomment-6172099897",
+          "updated_at": "2026-10-14T15:36:40Z",
+          "body_sha256": "05b86af84c04afb58cde91e985d633453c160ab3493eb09f37265445157cb0a8"
+        }
+      ]
+    },
+    {
+      "issue_number": 17,
+      "scope": "last page, per_page=10; not all historical comments",
+      "count": 6,
+      "entries": [
+        {
+          "id": 6117453988,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/17#issuecomment-6117453988",
+          "updated_at": "2026-10-12T03:55:37Z",
+          "body_sha256": "cf288480992ede8a602bc1f4cede8e040987a4f07fccc1eea47b6b6cc2b69c53"
+        },
+        {
+          "id": 6120674866,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/17#issuecomment-6120674866",
+          "updated_at": "2026-10-12T08:34:54Z",
+          "body_sha256": "97de5d9b666d984b181b9ca6618e7005fce8adaf146b9b1a56e116c4b2d028ff"
+        },
+        {
+          "id": 6125683917,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/17#issuecomment-6125683917",
+          "updated_at": "2026-10-12T13:53:23Z",
+          "body_sha256": "f84e7666aa54fbd123507bc2c67fe31b7fef5450d6749697118bffb8b7a1d0aa"
+        },
+        {
+          "id": 6138620793,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/17#issuecomment-6138620793",
+          "updated_at": "2026-10-13T05:02:00Z",
+          "body_sha256": "e0aa18c146f9727627245d21fb5c860200fdf4eec423e0e1f31b36c91407e91d"
+        },
+        {
+          "id": 6139012660,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/17#issuecomment-6139012660",
+          "updated_at": "2026-10-13T05:35:28Z",
+          "body_sha256": "c5f98545344ed1084712437b71a20cf012da474ee6abce9a9a60f8a522615142"
+        },
+        {
+          "id": 6140114763,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/17#issuecomment-6140114763",
+          "updated_at": "2026-10-13T06:58:05Z",
+          "body_sha256": "d2147ecbd5720a23462e13090523acd726e6d7565b5eeda8ec62a730f31a6d56"
+        }
+      ]
+    },
+    {
+      "issue_number": 19,
+      "scope": "last page, per_page=10; not all historical comments",
+      "count": 2,
+      "entries": [
+        {
+          "id": 6140116292,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/19#issuecomment-6140116292",
+          "updated_at": "2026-10-13T06:58:11Z",
+          "body_sha256": "ba0d6d4098e17905131d6a9492ea3e7bbfc7a501f54a9c513dea41d97ac675cb"
+        },
+        {
+          "id": 6141092408,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/19#issuecomment-6141092408",
+          "updated_at": "2026-10-13T08:02:12Z",
+          "body_sha256": "dbebb0cd8ad61eafcd4bed3e2757efac3f960308a767820bb1b403621237225b"
+        }
+      ]
+    },
+    {
+      "issue_number": 20,
+      "scope": "last page, per_page=10; not all historical comments",
+      "count": 4,
+      "entries": [
+        {
+          "id": 6171614364,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-6171614364",
+          "updated_at": "2026-10-14T15:12:41Z",
+          "body_sha256": "94d842b0955a656de7eeb23048fa591027db9f413c9db10a2306b3fb673cd774"
+        },
+        {
+          "id": 6171727527,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-6171727527",
+          "updated_at": "2026-10-14T15:18:21Z",
+          "body_sha256": "af58e0c2f6f019178d5540e1fda79250a040989503e9d6d2bb0ada6c84567e3d"
+        },
+        {
+          "id": 6171930117,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-6171930117",
+          "updated_at": "2026-10-14T15:28:19Z",
+          "body_sha256": "818765f8dbfe8aa77f6baf5ce3d6225e15fab144a1432bd3d29d4b96326c92c0"
+        },
+        {
+          "id": 6172099041,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-6172099041",
+          "updated_at": "2026-10-14T15:36:37Z",
+          "body_sha256": "05b86af84c04afb58cde91e985d633453c160ab3493eb09f37265445157cb0a8"
+        }
+      ]
+    },
+    {
+      "issue_number": 24,
+      "scope": "last page, per_page=10; not all historical comments",
+      "count": 8,
+      "entries": [
+        {
+          "id": 6044273552,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/24#issuecomment-6044273552",
+          "updated_at": "2026-10-07T18:30:36Z",
+          "body_sha256": "d51590fe28962dbec0a28f745146b621f56192066552eb43a4b52eeff2a649ee"
+        },
+        {
+          "id": 6052968350,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/24#issuecomment-6052968350",
+          "updated_at": "2026-10-08T05:24:18Z",
+          "body_sha256": "cd07484ddecaa7f8582463020f5d44c744de36efa4001383baf4ef65b5b21a71"
+        },
+        {
+          "id": 6099087456,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/24#issuecomment-6099087456",
+          "updated_at": "2026-10-10T15:27:18Z",
+          "body_sha256": "bc9f9a83007aec9ec43f8104f91832d96ba425e87053892cf115b253f6455592"
+        },
+        {
+          "id": 6138624885,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/24#issuecomment-6138624885",
+          "updated_at": "2026-10-13T05:02:22Z",
+          "body_sha256": "5a9e813e64df7aaafda0da93d71f41e966784fed447fd09ac94d8303c8f9cefe"
+        },
+        {
+          "id": 6139014766,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/24#issuecomment-6139014766",
+          "updated_at": "2026-10-13T05:35:39Z",
+          "body_sha256": "5a0cf96a56becb8dee0d5a850d1d78e983834640b0b590adc09ba0b75d0979f7"
+        },
+        {
+          "id": 6140117921,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/24#issuecomment-6140117921",
+          "updated_at": "2026-10-13T06:58:17Z",
+          "body_sha256": "3d126b5cd3aa2d50dc970488487be9bb4a20abd42b8a511c50596e8f3e829bd1"
+        },
+        {
+          "id": 6141094240,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/24#issuecomment-6141094240",
+          "updated_at": "2026-10-13T08:02:19Z",
+          "body_sha256": "6d6e5d6f9d4c1715a85ae6ba7a5af945ddb74d6c365850c3ee68ed651c96cd9a"
+        },
+        {
+          "id": 6142899725,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/24#issuecomment-6142899725",
+          "updated_at": "2026-10-13T09:50:25Z",
+          "body_sha256": "24c89d971e393c83e2ad39a612d93472623d7be1671f5d31cabad46bcb3090dc"
+        }
+      ]
+    },
+    {
+      "issue_number": 30,
+      "scope": "last page, per_page=10; not all historical comments",
+      "count": 1,
+      "entries": [
+        {
+          "id": 6172100905,
+          "url": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6172100905",
+          "updated_at": "2026-10-14T15:36:42Z",
+          "body_sha256": "05b86af84c04afb58cde91e985d633453c160ab3493eb09f37265445157cb0a8"
+        }
+      ]
+    },
+    {
+      "scope": "specific prior decision",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/19#issuecomment-6033026240",
+      "updated_at": "2026-10-07T07:20:30Z",
+      "body_sha256": "4a8cb73646857626ee7dd50e389d41e74edfd12dd22e45360ca17504af56ec88"
+    },
+    {
+      "scope": "specific prior decision",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-5989190539",
+      "updated_at": "2026-10-05T06:19:53Z",
+      "body_sha256": "fea2231e0dfc0508333ab7ab1b1d08c67d488bac0b10cab81fa1b631112e390b"
+    }
+  ],
+  "evidence_prs": [
+    {
+      "number": 207,
+      "url": "https://github.com/321Team/fds-project-evidence/pull/207",
+      "state": "closed",
+      "head": "6f52069b84506b4eab2c72df5b4b83e8bcfdcd28",
+      "merged": true,
+      "merge_commit": "3d9826959c2351bdacc84e413246ef21145b3d68",
+      "merged_at": "2026-10-13T01:01:11Z",
+      "read_scope": "PR metadata/body and fixed README"
+    },
+    {
+      "number": 212,
+      "url": "https://github.com/321Team/fds-project-evidence/pull/212",
+      "state": "closed",
+      "head": "d4cb2f7f38108e04972ecdd721528e4db0cdc340",
+      "merged": true,
+      "merge_commit": "44beaf0f4b44b0286b26e1d08196db8223ef7a1e",
+      "merged_at": "2026-10-13T06:38:14Z",
+      "read_scope": "PR metadata/body and fixed README"
+    },
+    {
+      "number": 223,
+      "url": "https://github.com/321Team/fds-project-evidence/pull/223",
+      "state": "closed",
+      "head": "e2d6d5aa4a09bec034ecfe33171ea1a2fe608adc",
+      "merged": true,
+      "merge_commit": "ddd1e38c1c07d7d0dd99281df8e619c317db764b",
+      "merged_at": "2026-10-14T01:25:58Z",
+      "read_scope": "PR metadata/body and fixed README"
+    },
+    {
+      "number": 224,
+      "url": "https://github.com/321Team/fds-project-evidence/pull/224",
+      "state": "closed",
+      "head": "05e8891572a21a20ae2761e6b04751b3086670ba",
+      "merged": true,
+      "merge_commit": "89f9d4cbd3ff77aa6fc70cfe3de34a71ffb09758",
+      "merged_at": "2026-10-14T01:58:22Z",
+      "read_scope": "PR metadata/body"
+    },
+    {
+      "number": 228,
+      "url": "https://github.com/321Team/fds-project-evidence/pull/228",
+      "state": "closed",
+      "head": "25c8626d5f243727afa3b60b6b2f54ad7c3bb445",
+      "merged": true,
+      "merge_commit": "ee4a9a25212dc5b7eb76c1125f4368d68026ff0a",
+      "merged_at": "2026-10-14T05:43:35Z",
+      "read_scope": "PR metadata/body"
+    },
+    {
+      "number": 229,
+      "url": "https://github.com/321Team/fds-project-evidence/pull/229",
+      "state": "closed",
+      "head": "203e054cd6ef0950552a1e0f6ddeebd5e2333aac",
+      "merged": true,
+      "merge_commit": "d0cd94fa60bc0fbf163cf34bc89af40186903269",
+      "merged_at": "2026-10-14T12:21:42Z",
+      "read_scope": "PR metadata/body"
+    },
+    {
+      "number": 231,
+      "url": "https://github.com/321Team/fds-project-evidence/pull/231",
+      "state": "closed",
+      "head": "5086b2079e3996b533de17666f95c241ca4f85d6",
+      "merged": true,
+      "merge_commit": "72375108ec743455ae49c68b1398d211dcc1b669",
+      "merged_at": "2026-10-14T13:36:25Z",
+      "read_scope": "PR metadata/body and fixed README"
+    },
+    {
+      "number": 233,
+      "url": "https://github.com/321Team/fds-project-evidence/pull/233",
+      "state": "open",
+      "head": "fc5714488453bc28eba6d0a676a75728649a1d1e",
+      "merged": false,
+      "merge_commit": null,
+      "merged_at": null,
+      "read_scope": "PR metadata/body and fixed README"
+    }
+  ],
+  "local_reference_integrity": [
+    {
+      "name": "AGENTS.md",
+      "sha256": "c5ef703d86c664cd42cfbbab015eee880fc95b12b9253f202674af5e136a7cff"
+    },
+    {
+      "name": "evidence-207-README.md",
+      "sha256": "210c9e578179dc288322115458195298d1bd5a988387c1c52ee297fd68edc433"
+    },
+    {
+      "name": "evidence-212-README.md",
+      "sha256": "2cbd753d766533407f86e4b9f025c302a87f8cbce7f773e76d978a592d8950fd"
+    },
+    {
+      "name": "evidence-223-README.md",
+      "sha256": "25f25770df2ad943611245958a8870e720c929d14a28cfdc3d74c78145a5ad79"
+    },
+    {
+      "name": "evidence-231-README.md",
+      "sha256": "32714f8fccfd121800e0ed9056eaa0013d4c822c2e0193fd17b5761728500931"
+    },
+    {
+      "name": "evidence-233-README.md",
+      "sha256": "1bcb3b939c5d936f6d8f3594e035af68aa81c0a9f1ecd9aecbc2c44609a7944c"
+    },
+    {
+      "name": "governance/handoffs/phase1-execution-20261010/PARALLEL_EXECUTION_20261013.md",
+      "sha256": "23474189aae061cb5de83cfe51395be088c7d64904e98d00e723f7deb586e7a7"
+    },
+    {
+      "name": "governance/REVIEW_AUTHORITY_POLICY.md",
+      "sha256": "25000e38cf303f3bc99732dc22258131c0c48e9a20b2de09ce5abc7324e02bc3"
+    },
+    {
+      "name": "tests/FDS_Test_Strategy_v3.1.21.md",
+      "sha256": "e385bdefee65c269b0e66d068d6d4239512c3a034f4deeef28e1e7cde47319c9"
+    },
+    {
+      "name": "tickets/v3.1.21/descriptions/P1-APP-01.md",
+      "sha256": "25a50290d0e9035e7b1f34323c31dffcac07c5b16726c05c825bf6dce087550f"
+    },
+    {
+      "name": "tickets/v3.1.21/descriptions/P1-DOC-01.md",
+      "sha256": "257cb796408ea870b5ba0aef3c4c27ccc1ca2652ce6e652f964f97aae8475890"
+    },
+    {
+      "name": "tickets/v3.1.21/descriptions/P1-E2E-01.md",
+      "sha256": "7bdc56f20591bfbd769aa830cabf78b46ed2bf3ea9544014bd0f3f13a28d4c63"
+    },
+    {
+      "name": "tickets/v3.1.21/descriptions/P1-MON-01.md",
+      "sha256": "467370a4f662d966c22f15f77ee0aaac3f00b90ac6c89963ae33589e3db460a2"
+    },
+    {
+      "name": "tickets/v3.1.21/descriptions/P1-SEC-01.md",
+      "sha256": "80dd616f145f90ef6a23e2ef48323c011fbcf3b9beefae786130ea97bf4522f5"
+    }
+  ],
+  "integrity_note": "Hashes identify collected text snapshots; not new Runtime success or complete original archive validation."
+}
