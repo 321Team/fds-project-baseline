@@ -1,5 +1,21 @@
 # D22 Lead 선행 검토·선택안 — 2026-10-08
 
+## 10/15 미결 선택을 위한 소비 순서
+
+기존12출력·인증 갱신·A/B 비교·앱별 current/previous 표를 재검토했다. **권고는 Harbor Primary 준비 + A 수동 ECR 대안의 조건 검토를 유지**한다. D22 Final/실제 A 채택은 아직 PENDING이며 권욱의 새 선택으로 기록하지 않는다. 이번에는 새 Registry 설정이나 P1 인증 갱신을 수행하지 않았다.
+
+| 지금 판단 가능한 것 | 준비 판단 | 최종 판단을 바꾸는 실제 입력 |
+|---|---|---|
+| P0 IP와 D23 관계 | #40/#48 보류가 기존 IP 기반 CA/경로 검토를 막지 않음 | 실제 선택 endpoint의 TLS/CA·node pull 계약. DNS 보류를 해제하지 않음 |
+| 인증 갱신 실패 | 신규 rollout STOP·기존 정상 workload 보존, 지원된 동일 범위 복구 후 재개 판단 | 하영 P2 pull 방식·owner·만료/갱신 reference 및 권한, 비밀값 제외. 이미 받은 CA 재제출 없음 |
+| A 전환/복귀 | 자동 전환·자동 복귀 없음. current와 previous 공급을 먼저 보존해야 복구 후보가 됨 | 재환 app별 P2 채택/previous·원본 receipt, 하영 지원 auth/경로. 권욱 C3 비용 변경분 판단은 기존 ROSA Cost GO와 분리 |
+| A 미준비 | 신규 rollout 중단은 안전 조치이고 B 최종 선택이 아님 | B 채택 시 배포 지속성 제한·기존 AC 영향/승인 대안을 권욱이 결정 |
+| 완료 시점 | 생성 전 계약 → 승인 생성 → cold-pull → Basic Ready → D22 Final | 실제 Runtime 및 실패/복귀 원본이 필요. cold-pull을 생성 전 새 차단으로 요구하지 않음 |
+
+지금의 생산자 요청 범위는 기존 인계의 **실제 P2 인증 방식/갱신 책임, 앱별 P2 채택 current/previous** 미결뿐이다. 재빌드/Push·상세 단가 재계산·전체 재시험은 요구하지 않는다. 10/15 08:57 KST 지정 비용 세션 재조회에서도 최신 입력은10/14 $2.85이고 기간/cutoff/예상은 미확인이다. 새 비용/Runtime 승인을 발행하지 않았다.
+
+아래10/08~10/14 비교·증적은 해당 시점 자료로 재사용한다.
+
 **10/14 현재 소비 기준:** 아래 A 우선 상세화·B 대안은 그대로이며 D22 Final은 PENDING이다. 최신 P1 Push 증적·P2 인증 경계는 문서 끝 10/14 보완을 따른다. 과거 “remote Push 미확인”은 작성 당시 이력이며 P2 cold-pull 미실행과 구분한다.
 
 CODEX_ASSISTED. 권욱 담당 #42/#46 준비 문서. 검토 대상은 [하영 제안 6053923723](https://github.com/321Team/fds-project-baseline/issues/42#issuecomment-6053923723)이다. `PREPARATION_REVIEW=COMPLETE / REGISTRY_MODE=PENDING / FALLBACK=PENDING / D22=PENDING`. 이 문서는 ECR 생성·IAM 부여·이미지 복사·Harbor 변경·D22 Final을 승인하지 않는다.
