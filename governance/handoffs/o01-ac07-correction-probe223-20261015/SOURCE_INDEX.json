@@ -1,0 +1,60 @@
+{
+  "recorded_on_kst": "2026-10-15",
+  "stage": "HANDOFF_PREPARATION_NOT_THIRD_PARTY_EXECUTION",
+  "baseline_base": "e1eb5b99389bccd78b66a9951516993efe9badf7",
+  "ac07": {
+    "input_sha": "43e26384ae422f2017f1e96e6c1bb5fe46d087d4",
+    "receipt_record": "https://github.com/321Team/fds-project-baseline/issues/24#issuecomment-6181949828",
+    "fix_pr": "https://github.com/321Team/infra-cicd/pull/85",
+    "review": "https://github.com/321Team/infra-cicd/pull/85#pullrequestreview-5526788558",
+    "reviewed_head": "62cefb6936cc5329e10115305fae4c50912cf510",
+    "merge": "0b0412a293dfb00fa1437d484ca012d1a4898412",
+    "merged_at_kst": "2026-10-15T10:19:32+09:00",
+    "postmerge_blobs": [
+      {
+        "path": "docs/deploy-native-auth-probe.md",
+        "sha": "0f7877cd04842116516ce2397215dca40b8edc0f"
+      },
+      {
+        "path": "docs/o01-ac07-reading-notes-20261015.md",
+        "sha": "d3f1daacd99c50a28d6c1ff585e6b182de49db7f"
+      }
+    ],
+    "performer_correction_confirmation": "NOT_RECEIVED"
+  },
+  "probe223": {
+    "input_sha": "43e26384ae422f2017f1e96e6c1bb5fe46d087d4",
+    "folder": "evidence/P1-K8S-01/http-probe-runtime-20261014T0950",
+    "manifest_sha256": "46d41a1a733caec603209280f4277e3f41592070d14f47ecd6f030fb4b08e8fe",
+    "file_count": 109,
+    "manifest_entries": 108,
+    "evidence_pr": "https://github.com/321Team/fds-project-evidence/pull/223",
+    "evidence_review": "https://github.com/321Team/fds-project-evidence/pull/223#pullrequestreview-5511991541",
+    "evidence_head": "e2d6d5aa4a09bec034ecfe33171ea1a2fe608adc",
+    "evidence_merge": "ddd1e38c1c07d7d0dd99281df8e619c317db764b",
+    "code_pr": "https://github.com/321Team/infra-kubernetes/pull/86",
+    "code_review": "https://github.com/321Team/infra-kubernetes/pull/86#pullrequestreview-5511744639",
+    "code_head": "d53ce00f318785b97577d41c07d8309ff581c2a8",
+    "code_merge": "e60e022333a51a9a1690649ef170c0bda92ad9b9"
+  },
+  "participation": {
+    "chosen_performer": null,
+    "accepted": false,
+    "scheduled_kst": null,
+    "prior_reviewer": "이재환 / supreme33-kr",
+    "prior_verifier_execution": "REPORTED_IN_EVIDENCE223_REVIEW",
+    "suggested_new_participant": "이하영",
+    "suggestion_is_assignment": false,
+    "off_platform_involvement": "UNCONFIRMED",
+    "new_run": "NOT_EXECUTED",
+    "qualification_note": "No new AC disqualification rule; distinguish new reading from repeat verification"
+  },
+  "scope": {
+    "phase2": false,
+    "new_server_execution": false,
+    "new_fault_injection": false,
+    "new_token_issuance": false,
+    "overall_o01_acceptance": false,
+    "doc_freeze": false
+  }
+}
