@@ -1,0 +1,40 @@
+{
+  "stage": "AUTHOR_LOCAL_PRECHECK",
+  "operator": "이권욱 / CODEX_ASSISTED",
+  "independent_third_party": false,
+  "server_access": false,
+  "started_at_kst": "2026-10-15T08:33:08.943108+09:00",
+  "finished_at_kst": "2026-10-15T08:33:09.054360+09:00",
+  "python": "3.12.14",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "input_commit": "43e26384ae422f2017f1e96e6c1bb5fe46d087d4",
+  "command": [
+    "python",
+    "-I",
+    "-B",
+    "evidence/P1-CICD-01/ac07-native-runtime-20261014/verify.py"
+  ],
+  "cwd": "fds-project-evidence repository root",
+  "rc": 0,
+  "stdout_sha256": "41059f588cbee4ed17e02e2e3cda8a07577057179f3ebaffea7daae3da30ee0e",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "manifest_sha256": "8ef7fa2bbadae05a526cd9890dd69d16915f227c7d549d883513996a0a22bfb2",
+  "target_files": 117,
+  "source_before_after_unchanged": true,
+  "target_git_status_after": "",
+  "current_status_note": "Embedded REVIEW_PENDING is historical; evidence231 merged and AC07 accepted per separate source links. O01 is pending.",
+  "verifier_result": {
+    "OFFLINE_CONSISTENCY": "PASS",
+    "manifest_files": 116,
+    "receipts": 20,
+    "source_files": 8,
+    "SSAR": 25,
+    "allow": 6,
+    "deny": 19,
+    "GET": 2,
+    "ReadyPods": 6,
+    "token_ttl_seconds": 900,
+    "AC07": "RUNTIME_OBSERVED_EVIDENCE_REVIEW_PENDING",
+    "AC08": "NOT_EXECUTED"
+  }
+}
