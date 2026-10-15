@@ -20,7 +20,11 @@
         "sha": "d3f1daacd99c50a28d6c1ff585e6b182de49db7f"
       }
     ],
-    "performer_correction_confirmation": "NOT_RECEIVED"
+    "performer_correction_confirmation": "CONFIRMED_D1_D5_NO_REMAINING_ISSUES_PER_RECEIVED_FORM",
+    "confirmation_period_kst": {
+      "reported_start": "2026-10-15T10:34:45+09:00",
+      "reported_transition_to_probe": "2026-10-15T10:37:44+09:00"
+    }
   },
   "probe223": {
     "input_sha": "43e26384ae422f2017f1e96e6c1bb5fe46d087d4",
@@ -38,16 +42,22 @@
     "code_merge": "e60e022333a51a9a1690649ef170c0bda92ad9b9"
   },
   "participation": {
-    "chosen_performer": null,
-    "accepted": false,
+    "chosen_performer": "이재환 / supreme33-kr",
+    "accepted": true,
     "scheduled_kst": null,
     "prior_reviewer": "이재환 / supreme33-kr",
     "prior_verifier_execution": "REPORTED_IN_EVIDENCE223_REVIEW",
-    "suggested_new_participant": "이하영",
+    "suggested_new_participant": "이하영 (superseded preparation suggestion)",
     "suggestion_is_assignment": false,
     "off_platform_involvement": "UNCONFIRMED",
-    "new_run": "NOT_EXECUTED",
-    "qualification_note": "No new AC disqualification rule; distinguish new reading from repeat verification"
+    "new_run": "OFFLINE_RECONFIRMATION_RESULT_RECEIVED_AND_REVIEWED",
+    "qualification_note": "No new AC disqualification rule; distinguish new reading from repeat verification",
+    "acceptance_basis": "USER_SELECTED_RECONFIRMATION_AND_PERFORMER_RETURNED_RESULTS",
+    "session_type": "PRIOR_PARTICIPANT_RECONFIRMATION",
+    "actual_period_kst": {
+      "start": "2026-10-15T10:37:44+09:00",
+      "end": "2026-10-15T10:39:05+09:00"
+    }
   },
   "scope": {
     "phase2": false,
@@ -56,5 +66,129 @@
     "new_token_issuance": false,
     "overall_o01_acceptance": false,
     "doc_freeze": false
+  },
+  "received_result": {
+    "form_sha256": "55284b894de2570c64ca61496864edf22618d0a8ce7f419c7353e7c83580da90",
+    "collected_at_kst": "2026-10-15T10:45:54.4180587+09:00",
+    "source": "\\\\10.1.93.150\\HybridCloud과정공유디렉토리\\07_프로젝트\\제01조\\02차 프로젝트\\o01-probe223-20261015",
+    "method": "Read-only copy; SHA256 source/copy comparison",
+    "files": [
+      {
+        "name": "00-start.txt",
+        "bytes": 44,
+        "sha256": "72a7600e047bfa1f2ee5267b0dce650443474e9d24d47823656da9bc56bccd2d"
+      },
+      {
+        "name": "01-head.txt",
+        "bytes": 98,
+        "sha256": "596a80b265a1aa6bc9584babaff01d3eeabb0add908bf8cc3de63a42660876e8"
+      },
+      {
+        "name": "02-status-before.txt",
+        "bytes": 26,
+        "sha256": "08ae3a4af1420efc2a93479bcfa8971a7561498eccbf409ca8d15bfa69e253a1"
+      },
+      {
+        "name": "03-python.txt",
+        "bytes": 44,
+        "sha256": "f88af89199a2e44c528e7c56e030ec6f0f8b9b26d2b5fb2a3f8f585c87ab5c4e"
+      },
+      {
+        "name": "04-manifest.txt",
+        "bytes": 144,
+        "sha256": "d455a3822ddb0fd1294ae67b9a9a5d4a79b73caca91339a26d7502171d308acc"
+      },
+      {
+        "name": "05-explore.txt",
+        "bytes": 15560,
+        "sha256": "64bf933b544d9e277faedfbad37edd02eb10eb21467020a99df108d469fc65c5"
+      },
+      {
+        "name": "06-verify.meta.txt",
+        "bytes": 114,
+        "sha256": "d64f425b99b6121568334c98f66f5ecbd36dd07ec7c89e4b89a65579e046ffdc"
+      },
+      {
+        "name": "06-verify.stderr.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "06-verify.stdout.txt",
+        "bytes": 3778,
+        "sha256": "f65e59982b3b65aacc4ffb04458cfa1141ebc2d3a27b078adfe8fd8af12fb7f3"
+      },
+      {
+        "name": "07-status-after.txt",
+        "bytes": 14,
+        "sha256": "4c057aeb93463384dbbcc3b3d7e4806f3216b52f0315b5d2d9628f421c258e98"
+      },
+      {
+        "name": "08-end.txt",
+        "bytes": 44,
+        "sha256": "551203a9919b546b957b3e2784ed560c10f3e4dacd64760db37024c28ea14cf3"
+      },
+      {
+        "name": "O01_PROBE223_RESULT.md",
+        "bytes": 8583,
+        "sha256": "55284b894de2570c64ca61496864edf22618d0a8ce7f419c7353e7c83580da90"
+      },
+      {
+        "name": "p223_explore.py",
+        "bytes": 5916,
+        "sha256": "7e8c957c908622a8e5343a7729d8774f7d00e9173be12c50489b6abeeb5f53be"
+      }
+    ],
+    "raw_repository_publication": false
+  },
+  "review": {
+    "reviewed_at_kst": "2026-10-15T10:45:55.613766+09:00",
+    "source_sha": "43e26384ae422f2017f1e96e6c1bb5fe46d087d4",
+    "received_files": 13,
+    "form_sha256_verified": true,
+    "raw_copy_hashes_verified": 13,
+    "manifest_entries_verified": 108,
+    "frozen_files_unchanged": 109,
+    "received_verify_matches_prior_author_precheck": true,
+    "helper_replay_rc": 0,
+    "helper_text_matches_after_encoding_newline_normalization": true,
+    "participant": {
+      "name": "이재환",
+      "type": "PRIOR_PARTICIPANT_RECONFIRMATION",
+      "ai": "CLAUDE_ASSISTED",
+      "ac07_start_kst_reported": "2026-10-15T10:34:45+09:00",
+      "ac07_D1_D5": "CONFIRMED_NO_REMAINING_ISSUES_PER_PERFORMER_FORM",
+      "probe_start_kst": "2026-10-15 10:37:44",
+      "probe_end_kst": "2026-10-15 10:39:05",
+      "verify_meta": "start=2026-10-15 10:39:05 end=2026-10-15 10:39:05 rc=0"
+    },
+    "timestamp": {
+      "receipt_finished_kst": "2026-10-14T09:52:03.669644+09:00",
+      "worker_original_exit_utc": "2026-10-14T00:52:04.267843+00:00",
+      "worker_event_minus_receipt_end_seconds": 0.598199,
+      "same_worker_wall_hold_seconds": 81.785631,
+      "same_worker_monotonic_hold_seconds": 81.78563868498895,
+      "receipt_origin": "Windows coordination-side receipt; ansible01 is the SSH relay",
+      "origin_basis": "Frozen receipt command plus existing local read_transport.py timing code",
+      "local_transport_sha256": "f40a69629e801178a6536d4bd8dba4dd4113dfc997f8ca24ba8e15d2a9f0c0d8",
+      "local_transport_limit": "This local helper snapshot is not bound by the frozen Probe223 Manifest",
+      "root_cause": "CLOCK_OFFSET_OR_OTHER_TIMEBASE_DIFFERENCE_NOT_PROVEN",
+      "offset_or_sync_bound": "UNCONFIRMED",
+      "verifier_impact": "No check compares receipt.finished_at_kst with the worker event; existing bounded verdict unchanged",
+      "limitation": "Do not derive an exact cross-host total order, latency, or clock offset from these timestamps"
+    },
+    "limits": [
+      "Browser reading and no server execution are performer declarations, not independently observed session telemetry",
+      "Git/version raw files reviewed in report context; not remote inspection of participant PC",
+      "APP224/DB11 subsequent status claims in performer report are outside this review; not adopted as freshly verified facts",
+      "New Runtime, whole O01 acceptance and DOC Freeze were not performed"
+    ],
+    "local_review_path": "deliverables/o01-probe223-review-20261015/VALIDATION.json"
+  },
+  "timestamp_reference": {
+    "local_path": "deliverables/p1-redistribution-20261013/read_transport.py",
+    "sha256": "f40a69629e801178a6536d4bd8dba4dd4113dfc997f8ca24ba8e15d2a9f0c0d8",
+    "evidence_manifest_bound": false,
+    "read_only_inspection": true
   }
 }
