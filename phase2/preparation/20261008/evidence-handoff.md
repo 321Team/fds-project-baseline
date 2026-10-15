@@ -6,7 +6,7 @@
 
 | 기존 ID/묶음 | 지금 편입할 변화 | 아직 편입할 수 없는 것 |
 |---|---|---|
-| I03/I04·IaC | Stage2 v4 기술·독립 검토 완료, PR32 병합, 과거 exact 회차 GO와10/14 미실행 보고 | 새10/15 10:00~12:00 창/helper29 요청은 판단 대기. 승인·실행 후 Apply/readback·최종 outputs·안전 종료를 인수. 미실행 회차의 원본을 중복 요구하지 않음 |
+| I03/I04·IaC | Stage2 v4 기술·독립 검토 완료, PR32 병합, 과거 exact 회차 GO와10/14 미실행 보고 | 새10/15 10:00~12:00 GO 기록 수신, 실제 실행은 미확인. 해당 회차 Apply/readback·최종 outputs·안전 종료를 인수. 미실행 회차의 원본을 중복 요구하지 않음 |
 | I05·VPN | B0/B1 원본 수용9/9와 새 세션 정리, PR6 final73ac1cd 병합 | 단계 B 실측, 새 병합 묶음·직전 Relay 방화벽·원복 접근/대기 인수. 전체 B1 재시험 요구 없음 |
 | #34·생성 준비 | 키트 v5 원본 수신8/8·정적/모의 검토, 역할 이름8개 source 규칙 대조 | 최종 tfvars/조직/키트 해시, 실제 Plan 및 ROSA 생성은 별도 |
 | I09~I11·D22/Delivery | 기존 CA/공급·PR75/80 재사용, 운영 verifier/CLI 인터페이스·실패 시험 설계 | 실제 운영 verifier 구현·플랫폼 입력/P2 current·previous 채택·cold-pull/Runtime 인수 |
