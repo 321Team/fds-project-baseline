@@ -19,6 +19,10 @@ CODEX_ASSISTED · 이권욱의 “phase 2 제외 후 권장 순서대로 착수�
 
 정본 요구사항은 v3.1.21과 유효한 후속 결정, 실제 진행은 최신 이슈·증적 PR과 고정 커밋의 기록으로 구분한다. Description의 과거 `CANDIDATE`, `NOT_RUN`, 체크 상태를 현재 완료 판정으로 복제하지 않는다.
 
+### Grafana·CICD 확정 기록 후속 — 2026-10-15
+
+[DOC_O01의 확정 기록 연결](DOC_O01.md#grafana-cicd-followup-20261015)에 Grafana 한정 처분, CICD AC02·AC09/PR240 결과, APP Lead 19:36 정상 Health/E2E 소비 판단과 중앙 19:46 CICD AC01~10 최종 인수·#11/#16 종결을 연결했다. 위 준비 단계의 미확정 표기는 당시 이력이다. APP·HBR·Ansible의 별도 잔여, F1 최종 문서 목록/버전 고정과 F2 미대응 핵심 절의 재현성 판단, O01/Freeze·문서 Critical0·Review는 남아 있다. 정본 관리 인계와 새 Release 발행을 구분하며 이 연결로 전체 Phase 1 인수·새 Runtime을 승인하지 않는다.
+
 ## 이번 작업의 단계
 
 | 단계 | 이번 수행 범위 |

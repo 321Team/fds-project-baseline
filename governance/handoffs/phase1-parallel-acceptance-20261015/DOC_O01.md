@@ -15,6 +15,24 @@
 
 기존 10/13 문서와 정본의 과거 시점 기록은 보존하고 이 후속을 연결한다. 파일 전체 재작성이나 최신 실행 원본의 덮어쓰기는 하지 않는다. 최종 source/digest와 현재 운영 설정은 Freeze 직전 해당 담당의 마지막 유효 결과로 고정한다.
 
+<a id="grafana-cicd-followup-20261015"></a>
+
+### 1.1 Grafana·CICD 확정 기록 연결 — 2026-10-15
+
+**기준 시각: 2026-10-15 19:49:46 KST.** 다음은 위 초기 준비표와 아래 실행 준비 카드의 작성 당시 상태에 추가하는 후속 기록이다. 기존 원본·AC·명령은 보존하고 확정된 범위만 소비한다. 기존 O01 수행 범위는 [PR238 병합본 O01_COVERAGE](https://github.com/321Team/fds-project-evidence/blob/3bc75f62cffa23fc5184660b9564eaefa55ad18f/evidence/P1-DOC-01/o01-receipts-20261015/O01_COVERAGE.md)를 재사용하며, 이 문서에서 새 수행이나 전체 인수를 선언하지 않는다.
+
+| 대상 | 확정 기록·소비 범위 | 유지할 경계 |
+|---|---|---|
+| Grafana 관리 접근·감사·C1 | [SEC 정정 18:54:33](https://github.com/321Team/fds-project-baseline/issues/17#issuecomment-6189359354)을 반영한 [#30 사용자 승인 한정 처분](https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6189715333)이 19:14:40 KST부터 유효. PF 기술배타성 NOT_MET + 한정 NOT_MET_RISK_ACCEPTED, E1/E2/E4 조건부 예외·E3 정상 사용 금지, 과거 감사 공백 한정수용, C1 APPROVED_DEFERRED | 실제 회전·인계·회수 완료가 아님. 미검증 데이터 경로·사람 사본 위험과 결정문의 기존 사용자/위치·발동·기록·비상 조건을 보존. 새 서버 작업·권한 확대의 포괄 승인 아님 |
+| CICD 최종 인수·정본 인계 | [19:46:40 중앙 최종 결정](https://github.com/321Team/fds-project-baseline/issues/16#issuecomment-6190258707)에 따라 AC01~10·전체 Delivery 인수 완료. [infra-cicd #11](https://github.com/321Team/infra-cicd/issues/11)·[baseline #16](https://github.com/321Team/fds-project-baseline/issues/16)은 각각 19:47:54·19:47:58 KST Closed/completed 확인. AC02 한정수용, [AC09 Lead 단회 한정수용](https://github.com/321Team/infra-cicd/issues/11#issuecomment-6187579176), [증적 PR240 편입](https://github.com/321Team/fds-project-evidence/pull/240)을 유지 | AC09 원본 PATCH NOT_MEASURED·엄격 시각상한 UNPROVEN·사전 DB0행 미수집과 16:20 위험수용 종료를 유지. AC09 실제 실행 소스 fddc76e1c261cd938f06211b7ed035fdcb32e606의 결과를 새 실행 권한으로 재사용하지 않음. 정본 관리 인계와 새 Release 발행은 구분 |
+| 정상 Health/E2E 소비 | [19:21 최종판단 요청](https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-6189833532)에 대한 [APP Lead 이재환 19:36:55 회신](https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-6190096759): 기존 169+234+224/228의 D04 결합을 정상 Health/E2E로 소비 가능하며 그 소비에 추가 필수 조건 없음 | 현행 이미지의 새 Client→edge POST나 전체 include/정책 동등성 실측이 아님. I01 naive/미래 이력, D02/D03 및 전체 APP Critical0·종결은 별도 잔여. 위 CICD AC03·AC10 최종 수용을 APP/E2E 전체 인수로 확대하지 않음 |
+
+CICD의 독립 리뷰 범위도 최종 결정대로 보존한다. PR219의 실행 결과 HEAD 승인과 최종 결합 HEAD의 추가 APPROVED 부재를 구분하며, PR10은 COMMENTED 기술검토다. transport의 원본 `PURE_READ_PRECHECK` 오표기는 소급 수정하지 않고 실제 POST 2건으로 계상하며 다음 사용 전 표시 수정·검토 의무를 유지한다. APP·HBR·Ansible의 별도 잔여 및 O01/Freeze·전체 Phase 1은 이 CICD 종결로 완료하지 않는다.
+
+Grafana 위험 소유·기록 보관/집계는 이권욱, 사용 기록 검토는 Phase 1 최종 인수 전 SEC 이하영이다. C1의 5종 트리거(ClusterIP 외 노출, 상시 PF 신설, 팀원 변경/이탈, 사본 유출 의심, Worker 셸 접근자의 보고된 E1 보유 3명 밖 확대)와 재검토·미래 회전의 PARTIAL 복구/세션 검증 조건은 확정 처분 원문을 따른다. 접근자가 3명뿐이거나 모든 접근에 클러스터 자격증명이 필수라고 단정하지 않는다.
+
+**O01/Freeze의 정확한 잔여:** F1은 Architecture/As-built·Test/Evidence Index·전체 핵심 Runbook의 최종 제출 목록과 Source/Version, 실제 형상 차이·유효 Change/Known Issue 연결의 확정이다. F2는 AC07·Probe223·O02의 기존 재사용 범위와 미대응 핵심 절을 요구에 대응한 DOC Review 판정이다. 특히 [MON Runbook 고정본](https://github.com/321Team/infra-monitoring/blob/0dd0235b07d44ba7965490e3808e0a67a3bd903b/docs/RUNBOOK_P1_MON_01_20261002.md)의 §4.2 PVC 재바인딩·§4.4 Silence·§5.1 객체 Rollback 및 §5 미실행 행은 문서화와 실제 재현을 구분해 판단해야 한다. NOT_RUN을 전수 현장시험의 새 필수조건으로 바꾸지 않는다. F1/F2, 다른 필수 인수 입력·미해결 책임, 문서 Critical0·Version/Source·Review 및 인계가 남아 **O01 전체·DOC Freeze·문서 Critical0는 미판정**이다. 아래 기존 Freeze 조건은 그대로 적용한다.
+
 ## 2. O01 실행 준비 카드
 
 이 카드는 제3자가 따라갈 절차의 준비안이다. 작성자의 오프라인 확인을 제3자 실습으로 집계하지 않는다. 이미 성공한 장애 주입/배포를 재현 실적 확보 목적으로 반복하지 않는다.
