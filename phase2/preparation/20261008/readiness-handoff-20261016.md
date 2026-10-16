@@ -1,20 +1,20 @@
 # Phase 2 사전 준비·인계 갱신 — 2026-10-16
 
-조회 기준: 2026-10-16 17:02 KST. 이권욱 / CODEX_ASSISTED. 기존 준비표의 최신 인계이며 실행 승인·정본·As-built가 아니다. 과거 문서/댓글은 당시 이력으로 보존한다. #34/#39/#42/#46/#49/#52/#55와 관련 milestone·선행 #30~#33을 재조회했다.
+조회 기준: 2026-10-16 18:25 KST. 이권욱 / CODEX_ASSISTED. 기존 준비표의 최신 인계이며 실행 승인·정본·As-built가 아니다. 과거 문서/댓글은 당시 이력으로 보존한다. 17:02의 #34/#39/#42/#46/#49/#52/#55 및 선행 #30~#33 조회를 재사용하고, 이번에는 PR33/41/87 새 리뷰·변경·병합과 #12 D7 수신분만 갱신했다.
 
 ## 순차 수행 결과와 잔여
 
 | 순서 | 실제 결과 | 다음 담당·완료조건 |
 |---|---|---|
-| 1 IAM 소스 리뷰 | [Terraform PR33 답변](https://github.com/321Team/infra-terraform/pull/33#issuecomment-6210747849), `de5e1666`: 실제 부착 snapshot 대조. 기존31검사에는 MFA 조회/실제 AssumeRole 미포함 | 재환: probe 포함 변경 독립 리뷰. 하영: 10/17 실제05·Expiration·실패 시 키 정리. IAM 재적용·10/18 확대 없음 |
-| 2 ROSA 코드 | [PR40](https://github.com/321Team/infra-rosa/pull/40) `7e609540` 전체 승인·merge `3742118e` 완료. [PR41](https://github.com/321Team/infra-rosa/pull/41#pullrequestreview-5544602545) `4db908d1` R1~R5 해결, 기존 delta15 MOCK 재사용 | 재환: PR41 권욱 제안 반영분 독립 확인. 하영: rev4.1 시간/권한 문구 정합화. 첫 설정/정책 Apply·DB 창은 별도 |
-| 3 #46 | [CICD Draft PR87](https://github.com/321Team/infra-cicd/pull/87) `fb30d01f`: verifier/session/차단 CLI·객체 대조. Windows154 PASS/41 SKIP, Linux184 PASS/11 SKIP, CI2 SUCCESS | 하영·재환 독립 코드 리뷰. 권욱: 원본 인증/철회·bounded I/O·actual provider/CLI·완료 관측 연결. 아직 실제 배포 불가 |
-| 4 #42 | [A 방향 채택](https://github.com/321Team/fds-project-baseline/issues/42#issuecomment-6207939448)을 [기존12출력](d22-lead-review.md#1016-a안-채택과-소비-완료조건)에 연결 | 하영 플랫폼/auth/cold-pull·재환 공급 원본 → 권욱 Final/전환 판단. 방향 재선택·중복 빌드 요구 없음 |
+| 1 IAM 소스 리뷰 | [Terraform PR33 답변](https://github.com/321Team/infra-terraform/pull/33#issuecomment-6212218502), `35a177ef`: 재환 지적 수용·주어 정정·probe manifest LF 고정, autocrlf 체크아웃5/5. 정책 바이트 불변. 기존 키 Create 종료일의10/18 KST 포함 연장은17:49 실제 반영/로그아웃 기록으로 대체 | 하영: 남은 Network probe 독립 코드 검토. 재환 COMMENT는 본인이 수혜자 확인으로 한정했으므로 독립 승인으로 승격하지 않음. 05 실제 검증은 하영의 기존10/17 책임, 이 PR 대기가 새 Create 차단은 아님 |
+| 2 ROSA 코드 | [PR40](https://github.com/321Team/infra-rosa/pull/40) merge `3742118e` 유지. [PR41 전체 승인](https://github.com/321Team/infra-rosa/pull/41#pullrequestreview-5545583298)은 재환5545343602의 동일 `4db908d1` 권욱 기여분 독립 확인을 연결했고,18:16 merge `0e011ee6` 재조회 완료 | 하영: rev4.1 시간/권한 문구 정합화. 기존90/15 MOCK과 독립110을 재사용. 첫 설정/정책 Apply·DB 창은 별도 |
+| 3 #46 | [CICD Draft PR87 답변](https://github.com/321Team/infra-cicd/pull/87#issuecomment-6212216602) `b0fddb13`: annotations 맵의 빈 `.`만 허용, ACK/단조성/다른 필드 가드 유지. 객체36 PASS, Windows delivery163 PASS/32 SKIP, Linux전체201 PASS/11 SKIP, CI2 SUCCESS | 재환: 새3파일 delta 독립 재검토. 하영 `8f17e75d` credential 검토는 변경 없는 부분만 재사용. 권욱: 인증/철회·bounded I/O·actual provider/CLI·완료 관측 연결. 실제 배포 차단 유지 |
+| 4 #42 | [A 방향 채택](https://github.com/321Team/fds-project-baseline/issues/42#issuecomment-6207939448) 유지. [D7 원본 소비](d22-lead-review.md#1016-1825-d7-원본-소비-완료): 수신·내부5/5·앱2개 승인 digest·config ID/amd64 연결 완료 | 하영 플랫폼/auth/cold-pull·재환 실제 Registry/host의 clean render → 권욱 #46/Final 소비. D7 원본 재제출·방향 재선택·중복 빌드 요구 없음 |
 | 5 #34/#39/#33 | 아래 7입력 및 공식 Start 경계 정합화 | 권욱은 실제 원본 수신/검토 부분만 갱신. 생성·PR 병합으로 Gate 완료 처리하지 않음 |
 | 6 #49/#55 | 아래 candidate·위험/정리/Review 대응표 준비 | 기존 생산자 원본 → 권욱 수신·검토/고정 → 해당 단계 승인. Freeze/Review/Close 미완료 |
 | 7 #52 | 10/23 날짜·14:00~15:30 제안·권욱 참석 미정 유지 | 실제 회신 후 시간/참석/대체·Demo 확정. 준비 작업의 차단 아님 |
 
-PR40/41/33의 CI0은 NOT_RUN이며 PR87의 CI2와 구분한다. PR40 권욱 작성분의 독립 확인은 [재환5542425469](https://github.com/321Team/infra-rosa/pull/40#pullrequestreview-5542425469)·[5542886163](https://github.com/321Team/infra-rosa/pull/40#pullrequestreview-5542886163), 최종 전체 승인은 [5544582691](https://github.com/321Team/infra-rosa/pull/40#pullrequestreview-5544582691)이다. PR87 자체 검토를 타인의 독립 승인으로 표시하지 않는다.
+PR40/41/33의 CI0은 NOT_RUN이며 PR87의 CI2와 구분한다. PR40 권욱 작성분의 독립 확인은 [재환5542425469](https://github.com/321Team/infra-rosa/pull/40#pullrequestreview-5542425469)·[5542886163](https://github.com/321Team/infra-rosa/pull/40#pullrequestreview-5542886163), 최종 전체 승인은 [5544582691](https://github.com/321Team/infra-rosa/pull/40#pullrequestreview-5544582691)이다. PR41은 [재환5545343602](https://github.com/321Team/infra-rosa/pull/41#pullrequestreview-5545343602)와 기존 전체 검토를 연결했다. PR33/87은 Draft·미병합이며 자체 검토를 타인의 독립 승인으로 표시하지 않는다.
 
 ## #34 / #39 G4의 7개 입력
 
@@ -28,7 +28,7 @@ PR40/41/33의 CI0은 NOT_RUN이며 PR87의 CI2와 구분한다. PR40 권욱 작�
 | 6 비용 | 지정 비용 채팅의 10/16 사용자 표 $7.95/₩10,860. 교육장 지원·자부담0·400/450/500 유지 | 권욱 중앙 판단. 동일 청구기간·예상 총액 미확인, 하루 사용료/전체 누적/잔여예산으로 임의 확대하지 않음 |
 | 7 Critical/예외 | [Create-only G4 예외](https://github.com/321Team/fds-project-baseline/issues/39#issuecomment-6207939140), G4 NOT_READY. [F5 위험 수용](https://github.com/321Team/fds-project-baseline/issues/38#issuecomment-6207939779) 별도 | 권욱: 대상·잔여·소유/완료조건 보존. 재생성 NOT_RUN을 PASS로 바꾸지 않고 나머지 Full/P0 충족 판단 |
 
-D1은 최신 사용자 결정으로 **10800 고정**이며 예전 생성 후3600 원복 문구는 적용하지 않는다. [#35 IAM 기록](https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-6209035655)은 설정값과 실제 세션 발급을 구분한다. 10/17 최초 실행·관찰/정리·반출 경계는 GO 원문을 따른다. 10/18 새 키/30 재시도·기한 연장을 이 표에서 허용하지 않으며, 조건 충족 시 권욱의 추가 실시간 GO 대기를 일률 요구하지 않는다.
+D1은 최신 사용자 결정으로 **10800 고정**이며 예전 생성 후3600 원복 문구는 적용하지 않는다. [#35 IAM 기록](https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-6209035655)은 설정값과 실제 세션 발급을 구분한다. [17:49 키 준비 기간 반영](https://github.com/321Team/infra-rosa/issues/4#issuecomment-6211727415)에 따라 본인 MFA 키 Create는10/17~18 KST가 기술적으로 허용된다. 이는10/18 새30/재Apply GO가 아니다. 실제30은 기존10/17 최초1회·Lead 위임·관찰/정리/반출 경계를 따르며, 조건 충족 시 권욱의 추가 실시간 GO 대기를 일률 요구하지 않는다.
 
 ### 공식 Start와 Phase1 인계
 

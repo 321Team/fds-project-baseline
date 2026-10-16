@@ -1,5 +1,22 @@
 # D22 Lead 선행 검토·선택안 — 2026-10-08
 
+## 10/16 18:25 D7 원본 소비 완료
+
+이권욱 / CODEX_ASSISTED. [재환 D7 전달](https://github.com/321Team/infra-rosa/issues/12#issuecomment-6209302835)과 [하영 수신·SEC 사후 수용](https://github.com/321Team/infra-rosa/issues/12#issuecomment-6209352775)을 확인한 뒤, 고정 비공개 공유 경로의 `d7-manifest-20261016` 6파일을 직접 수신했다. `SHA256SUMS` SHA256은 `27c38649f135b927305d0543d9b996bacc9dc67d61f6430828ff0910527280f6`, 내부 **5/5 일치**다. 작성자 전달·하영 수신·이번 권욱 수신/재해시/내용검토를 구분한다. 공개 저장소에는 raw·헤더·credential을 추가하지 않는다.
+
+| 앱 | 이번 수신 manifest SHA256 = P2 current digest | 내용 검토 |
+|---|---|---|
+| transaction-api | `338b8a2871507ce8b42deedc916b26e350577ee6efd18df23d7ff2dd4b17dff0` | 1,168B, OCI image manifest, 4 layers, 최대25,903,816B·합계48,917,992B |
+| fds-engine | `8b257adb08b6d381f72b66d3386efea6112a8f072ecfafcbcd463bcd1c3be89d` | 1,167B, OCI image manifest, 4 layers, 최대25,903,816B·합계38,487,502B |
+
+두 원문은 index가 아니므로 이 입력에 별도 child manifest를 요구하지 않는다. 최대 layer는 모두 키트의4MiB 기준을 충족한다. 이는 수신 manifest의 선언 크기 확인이며 layer 다운로드·압축 해제·이미지 실행 확인이 아니다. redacted 헤더의 HTTP200·Content-Length/Type·Docker-Content-Digest 대응 및 sid 가림을 확인했다. live TLS·인증·쿠키/토큰 삭제 실측을 뜻하지 않는다.
+
+추적 경로는 기존 source `affbc69` → TBS38395350748 → Push38404449622 → [P2 채택 PR37의 병합된 계약](https://github.com/321Team/fds-msa/blob/c9c42cc1cc0c135320b81480984941f2a118f592/deploy/DELIVERY-CONTRACT-rosa.md) → 이번 raw digest로 연결한다. 최초 **previous=NONE**을 유지한다. manifest 자체에는 플랫폼 필드가 없다. config digest `ab34196b…ffee`/`b82d35a6…f4fc`를 기존 공급 [api-image.json](https://github.com/321Team/fds-project-evidence/blob/7ec3d5e162b5042b8201b107b0fd5142e182f714/evidence/P1-APP-01/d03-isolated-runtime-20261014T2110/received/supply/FDS_D03_Supply_202610142110/api-image.json)·[engine-image.json](https://github.com/321Team/fds-project-evidence/blob/7ec3d5e162b5042b8201b107b0fd5142e182f714/evidence/P1-APP-01/d03-isolated-runtime-20261014T2110/received/supply/FDS_D03_Supply_202610142110/engine-image.json)의 Id와 대조해 **linux/amd64 기록**에 연결했다. 두 참조 파일 SHA256은 각각 `98101108302bf5f758cc444e9aeefe4b00de4c2ffca13914e8a8f13cc0752cfc`, `8eefe814efa468c9d85631c0edae3e4deb12c59b7e91cdbe5655933169ef36f9`다. 실제 ROSA SCC/UID 실행은 미검증이다.
+
+`robot$push` 사용은 생산자가 사전 HBR 확인 없이 수행했다고 보고했고, 하영은 해당2GET에 한해 사후 수용했다. 이를 사전 승인·새 용도 허용·권욱의 실제 정리 검증으로 바꾸지 않는다. 다음 원문 조회/cold-pull은 기존 #13의 P2 pull-only 계약을 따른다. 이번 준비를 이유로 P1 Robot·CA·Harbor 설정을 변경하거나 이미 받은 manifest를 재수집하지 않는다.
+
+**해소:** 기존12출력 중5/11의 current 원문·형식·선언 크기·공급 연결 및 #12 D7 소비 입력. **잔여:** 하영의 P2 실제 endpoint·pull 인증 reference/수명·승인 경로/cold-pull, 재환의 승인 host/Registry를 반영한 clean render, 권욱 #46의 actual provider/CLI와 소비 검증. ECR 사본의 digest 보존·인증·전환/복귀는 해당 실행 시 확인한다. `D7_INPUT=ACCEPTED / D22_FINAL=PENDING_RUNTIME / 새 RUNTIME=NOT_RUN`; 생성 전에 cold-pull·중복 빌드/전체 시험을 요구하지 않는다.
+
 ## 10/16 A안 채택과 소비 완료조건
 
 2026-10-16 17:02 KST · CODEX_ASSISTED. [#42 채택6207939448](https://github.com/321Team/fds-project-baseline/issues/42#issuecomment-6207939448)에 따라 **REGISTRY_DIRECTION=HARBOR_PRIMARY_ECR_MANUAL_A / D22_FINAL=PENDING_RUNTIME**이다. 아래 과거 미선택 문구를 현재 미결로 재사용하지 않는다. A 방향 재선택은 필요 없고 지원 인증·실측·완료조건은 남는다.
