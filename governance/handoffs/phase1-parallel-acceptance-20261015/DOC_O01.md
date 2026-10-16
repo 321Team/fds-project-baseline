@@ -69,3 +69,18 @@ python -B evidence/P1-CICD-01/ac07-native-runtime-20261014/verify.py
 - O01 제3자 결과와 Critical 문서 결함 처분, 해당 Gate/Review 결과가 모인 뒤 #24→#30의 Freeze/Close를 판단한다. 현재는 준비 단계다.
 
 이 문서는 금융 규제 준수 완료를 주장하지 않으며, 서버 설정·보안 통제·비밀값을 변경하거나 수집하지 않는다.
+
+<!-- o01-s08-human-review-20261016:start -->
+## S08 Silence 문서 판독 회신 수신 — 2026-10-16 KST
+
+[요청6194658963](https://github.com/321Team/fds-project-baseline/issues/17#issuecomment-6194658963)에 대한 [MON Lead 이재환의 회신6205472774](https://github.com/321Team/fds-project-baseline/issues/17#issuecomment-6205472774)을 S08 §4.4의 2·3단계 문서 검토·판독으로 연결한다. 같은 실행 문맥/정확 ID/STOP, Silence 만료와 Alert 상태의 구분, firing 지속 가정의 판독에 동의했고 차단 결함0을 밝혔다. 선택 권고3건은 반영하지 않아도 된다는 의견이므로 고정 후보를 유지한다.
+
+- 대상: infra-monitoring source `0dd0235b07d44ba7965490e3808e0a67a3bd903b`의 Runbook과 요청 댓글 diff. 결과 후보 SHA256 `eec8025c1433f494110c2649be08e16916d39248766a45e0bd9d975b141a8e98`(24,350 B).
+- 관여·방법: 원 Runbook 작성자인 이재환이 이권욱의 새 정정문을 검토했다. 중앙 파일 직접 수령/열람이 아니라 고정 원문+댓글 diff 적용 결과의 hash를 확인한 보고다. Claude Code의 조회·patch/hash·설정 대조·초안 보조와 본인의 판단을 공개했다.
+- 시각: GitHub 작성/수정은09:49:34 KST, 본문에 신고한 검토 범위는09:40~09:55 KST다. 관측된 게시 시각과 자기신고 기간을 구분하며 정밀 종료시각을 독립 입증한 것으로 쓰지 않는다.
+- 실행: 본인 PC의 파일 내려받기·patch·sha256sum을 보고했다. 서버/kubectl/amtool/SSH 및 Silence 생성·종료는 미실행이다. 해당 local 명령의 raw rc/stdout/stderr는 이 댓글에 포함되지 않았으며 만들어 보충하지 않는다.
+- 재사용: S07/S10은 MON PR39의 해당 절 승인, S14는 DB PR11의 전체 문서 승인을 그대로 소비한다. 이번 회신도 세 절을 다시 판독하지 않았다고 명시했다.
+- 판정 경계: S08 문서 검토·판독 회신 대기는 해소됐다. 이는 issue 댓글의 문서 검토이며 새 독립 코드 승인/GitHub PR APPROVED가 아니다. §4.4 NOT_RUN·실제 amtool 가용성·MON 전체 인수·전체 O01/Freeze는 별도로 유지한다. 원 저장소 반영·병합·정본 발행은 실제 결과로 구분한다.
+
+이 기록은 S08 수신 범위만 최신화한다. F1 문서군과 F2 전체 절의 최종 버전/범위 Review, 다른 원천 인수·Known Issue 및 Critical 문서결함0 판단을 대신하지 않는다. CODEX_ASSISTED · 문서 수신 연결.
+<!-- o01-s08-human-review-20261016:end -->
