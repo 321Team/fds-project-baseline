@@ -1,5 +1,7 @@
 # Phase 2 사전 작업 목록과 착수 결과
 
+**10/16 현재 작업 순서·완료조건:** [최신 순차 수행/인계](readiness-handoff-20261016.md). PR40 병합·PR33/41 독립 검토 잔여·CICD PR87 및 D22 A채택/G4/Review 준비를 우선 읽는다. 아래10/08 당시 권한/Plan/코어 미구현 목록을 현재 미실행으로 다시 적용하지 않는다.
+
 2026-10-08 17:50 KST 후속 반영(아래 수행 기록은 각 관측 시점 기준). CODEX_ASSISTED. Phase 1 구현·실행·Close 제외. 현행 발행 정본은 docs-v3.1.21이며 이 문서는 working preparation이다. 담당·AC·일정·권한 범위를 새로 정하지 않는다.
 
 16:23 KST 이후 후속: [설계 방향 승인6054292320](https://github.com/321Team/infra-rosa/issues/3#issuecomment-6054292320)을 반영했다. [D22 Lead 검토·12출력/A-B 선택안](d22-lead-review.md), [생성·삭제·보존·Review 준비](lifecycle-review-preparation.md) 작성 완료. D21 raw는 독립 승인·CI 후 PR161 병합 완료로 갱신했다(17:05:38 KST, merge277893c). 현재 1차 인수 준비 단계이며 [17:40 리뷰](https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-6056087764)의 후보 수용과 잔여를 아래에 반영한다. 이번 변경은 우리 준비 문서의 정정이며 생산자의 #3/#10/#11 보완 완료를 대신하지 않는다.
