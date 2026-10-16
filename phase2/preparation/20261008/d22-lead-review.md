@@ -1,5 +1,22 @@
 # D22 Lead 선행 검토·선택안 — 2026-10-08
 
+## 10/16 A안 채택과 소비 완료조건
+
+2026-10-16 17:02 KST · CODEX_ASSISTED. [#42 채택6207939448](https://github.com/321Team/fds-project-baseline/issues/42#issuecomment-6207939448)에 따라 **REGISTRY_DIRECTION=HARBOR_PRIMARY_ECR_MANUAL_A / D22_FINAL=PENDING_RUNTIME**이다. 아래 과거 미선택 문구를 현재 미결로 재사용하지 않는다. A 방향 재선택은 필요 없고 지원 인증·실측·완료조건은 남는다.
+
+| 기존 출력 | 현재 소비 계약 / 완료조건 |
+|---|---|
+| 1 mode / 8 fallback | Harbor Primary + P2 pull-only + ECR 수동 A 채택. 자동 전환/복귀 없음. A 미준비면 신규 rollout STOP, B 자동 선택 아님 |
+| 2 endpoint / 4 trust / 7 path | 기존 CA/map·IP/경로 준비 접수 재사용. 하영 actual endpoint·동일 source의 CA/config/지원 버전·승인 경로 strict TLS/node cold-pull은 생성 후 연결. P1 CA/route 임의 변경 없음 |
+| 3 principal / 10 credential | 하영 지원 P2 pull 방식·owner/scope/expiry/갱신·폐기 reference → 권욱 소비. 만료/갱신 실패면 신규 rollout STOP·기존 Pod/증적 보존. 실제 비밀/추가 IAM은 이 문서에 없음 |
+| 5 digest / 6 push | [#43 P2 current 채택 수용](https://github.com/321Team/fds-project-baseline/issues/43#issuecomment-6186106346)과 기존 source/build/scan/push 원본 재사용. **앱별 최초 previous=NONE**. ECR 사본 index/child digest·형식·지원 pull 확인. 재빌드/재Push 중복 요구 없음 |
+| 9 비용 | 교육장 리포트 기반 권욱 중앙 판단. 지원·자부담0·400/450/500 유지. 10/16 표 $7.95/₩10,860, 기간/예상 미확인. 방향 채택은 ECR 자원/추가 비용 실행 GO가 아님 |
+| 11 원본 / 12 Final | 공유→수신→재해시→내용검토 분리. 생성 후 승인 경로/cold-pull→Basic Ready→전환/실패/복귀 및 기존12출력 검토로 Final 판단. 문서/해시만으로 Final 아님 |
+
+첫 배포 실패·부분 적용·timeout/UNKNOWN은 STOP·readback·원본 보존이며 가짜 previous/P1 롤백 이미지를 사용하지 않는다. 검증·승인된 첫 P2 배포를 다음 previous로 쓸 때 source/render/contract/digest/설정·승인 reference를 함께 결속한다. 재환은 Registry/host 확정 후 clean render를 연결하고 권욱은 #46에서 소비한다. PENDING host/actual UID 합성 금지.
+
+아래 전환/복귀5단계를 재사용한다. Harbor 장애 중 복구 불가한 Harbor로 자동 복귀하지 않으며 A는 이미지 공급만 대체한다. VPN/DB 업무 복구와 실제 ECR/IAM/복사/Secret/Harbor 변경은 별도 판단이다. [전체 Gate·인계 갱신](readiness-handoff-20261016.md)을 함께 소비한다.
+
 ## 10/15 미결 선택을 위한 소비 순서
 
 기존12출력·인증 갱신·A/B 비교·앱별 current/previous 표를 재검토했다. **권고는 Harbor Primary 준비 + A 수동 ECR 대안의 조건 검토를 유지**한다. D22 Final/실제 A 채택은 아직 PENDING이며 권욱의 새 선택으로 기록하지 않는다. 이번에는 새 Registry 설정이나 P1 인증 갱신을 수행하지 않았다.

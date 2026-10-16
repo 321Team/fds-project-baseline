@@ -1,5 +1,7 @@
 # Phase 2 전용 사전 준비 — 2026-10-08
 
+**10/16 최신 진입점:** [순차 수행·D22·G4·Freeze/Review 인계](readiness-handoff-20261016.md). PR40 병합과 PR87 검토본, D1 고정·10/17 Create 조건·D22 A채택을 연결했다. 아래 과거 현황은 당시 이력이며 D22 Final/G4/공식 Start는 계속 미완료다.
+
 **10/15 최신 준비:** [현재 G4 입력](gate-followup-20261014.md#1015-현재-입력과-후속-조건), [권욱 순차 수행](sequential-worklist-20261013.md#1015-권장-순서-착수-결과), [증적 인수](evidence-handoff.md#1015-인수표-변경분)를 우선 소비한다. 아래10/08~10/14 표는 각 시점의 이력이다. Stage2 v4 독립 검토·한정 GO는 기존 이력이며, [10/15 09:39 실행자 보고](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6181672488)에서 10/14 작업은 미실행으로 확인됐다. 이후 [09:46 새 한정 GO](https://github.com/321Team/infra-terraform/issues/12#issuecomment-6181760266)가 등록됐다. 해당 창·고정본·직전 사전조건 범위만 유효하고 실제 Apply 결과는 아직 미확인이다. VPN PR6와 TF PR32는 병합 완료다. 생성 Plan 키트 v5 직접 수신·검토를 마쳤고 실행 전 입력은 남았다. 이번 변경은 GitHub 인계용 준비 문서이며 새 GO·정본 발행이 아니다.
 
 **10/14 15:47 후속:** [G4 현재 입력·실행 키트 검토·다음 담당](gate-followup-20261014.md). Stage2 Plan/정책4개 보완·PR226 편입 완료, version4.22.17/name 고정, 재환 B0/B1 15:40 착수 보고·완료 원본 미수신을 반영했다. Stage2 Apply는 키트 수정·의존성/병합본 검사 후 별도 GO 대상이다. Harbor 창 반납을 선행조건으로 추가하지 않는다. 아래 이전 시각 표시는 당시 이력이다.
