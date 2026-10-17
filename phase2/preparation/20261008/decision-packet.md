@@ -1,5 +1,7 @@
 # Phase 2 결정 입력 — 수용 전 검토안
 
+**10/18 현재 결정 대조:** [Architecture Freeze 통합 사양표](architecture-freeze-candidate-20261018.md)를 먼저 읽는다. D22는 A 방향 채택/FINAL PENDING_RUNTIME, D23 보류, D1 최대10800초 고정이며 아래 과거 미결·일시 설정 문구를 현재값으로 재사용하지 않는다. 새 권고의 채택과 실제 실행은 별도다.
+
 기준과 실행 경계는 [README](README.md). 현재는 **1차 인수 준비 단계**다. 이번 기록은 설계·일정 변경 승인, 새 AC, 새로운 상시 Support 승인 절차가 아니다. Phase 2 사전 준비를 #33 Start·#34 Freeze·생성 GO로 승격하지 않는다.
 
 ## 현재 D23 결정 — 추가 Hybrid DNS 보류
