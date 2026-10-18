@@ -1,0 +1,546 @@
+{
+  "record_kind": "SELECTED_PUBLIC_RECEIPTS_AND_LOCAL_SOURCE_INDEX_NOT_CREDENTIAL_CONTENT",
+  "source_final_result": {
+    "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/FINAL_RESULT.json",
+    "sha256": "dd78b641d8131fd452d876e4b3150158e9d9f6f9e58d0cdc09cc0026e2c6889a",
+    "bytes": 18166,
+    "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+  },
+  "source_final_status": "FOUR_TEMPORARY_PAIRS_RETIRED_SOURCE_TWO_RETAINED",
+  "scope_sha256": "a38aa9f7b98eed2cc5dd108ba412f81ea823ed748c270d43779278bfdb7b82b5",
+  "cleanup_id": "667a9adb4c9f449890b316eaab94f620",
+  "original_pins": {
+    "attempt031": "d0bf2d23427c2a9f6d9a48c67c3f0ce29f51d31a411530508583bf607ab80938",
+    "completion": "0da37dec00a6dca3e712e2decf65ffaa8187501d2cead3d98251234d85e6ceaa",
+    "request": "5e1057cdd8b67f7b0d2552cdfbd9adf9879d4d70f4dd230cd09f49d3807b573e",
+    "stop": "1b0cd5daded1a04138c26893a9c11ee852841deb108f233b16f156b127fb7fd6"
+  },
+  "original_not_after": "2026-10-18T12:51:59.201653+00:00",
+  "cleanup_not_before": "2026-10-18T13:12:52.962926+00:00",
+  "cleanup_not_after": "2026-10-18T13:42:52.962926+00:00",
+  "console_exit_acceptance": {
+    "actual_exit": 0,
+    "user_reported": true,
+    "received_at_kst": "2026-10-18T22:18:23.068212+09:00",
+    "finished_at": "2026-10-18T13:17:40.929784+00:00",
+    "original_result_sha256": "c8352ec80328abb22ca7b227a06956b21f7e50f5722d9521144e7d390578e2cc",
+    "user_response": "CONFIRMED with CLEANUP_OBSERVE_EXIT=0; matched scope/host/boot/times/input/checks/GET body hashes",
+    "original_remote_collection_rc": 0
+  },
+  "observation_reference": {
+    "original_receipt_sha256": "c8352ec80328abb22ca7b227a06956b21f7e50f5722d9521144e7d390578e2cc",
+    "started_at": "2026-10-18T13:17:37.827992+00:00",
+    "finished_at": "2026-10-18T13:17:40.929784+00:00",
+    "collection_only_does_not_prove_exit": true,
+    "original_exit_source": "CONSOLE_EXIT_ACCEPTANCE.json user_reported actual_exit0"
+  },
+  "retired_receipts": [
+    {
+      "action": "retire",
+      "binding": {
+        "cleanup_id": "667a9adb4c9f449890b316eaab94f620",
+        "old_invocation": "27bef91a07a64a0f92c779fe47bcf66c",
+        "original_pins": {
+          "attempt031": "d0bf2d23427c2a9f6d9a48c67c3f0ce29f51d31a411530508583bf607ab80938",
+          "completion": "0da37dec00a6dca3e712e2decf65ffaa8187501d2cead3d98251234d85e6ceaa",
+          "request": "5e1057cdd8b67f7b0d2552cdfbd9adf9879d4d70f4dd230cd09f49d3807b573e",
+          "stop": "1b0cd5daded1a04138c26893a9c11ee852841deb108f233b16f156b127fb7fd6"
+        },
+        "purpose": "CLEANUP_ONLY_AFTER_EXPIRED_EXECUTION_V1",
+        "scope_sha256": "a38aa9f7b98eed2cc5dd108ba412f81ea823ed748c270d43779278bfdb7b82b5"
+      },
+      "boot_id": "8c78b577-62f8-4546-aac1-0b371b707bc5",
+      "finished_at": "2026-10-18T13:18:24.381719+00:00",
+      "host": "k8s-control01",
+      "input_sha256": "9fa73356b3566cb7a7da9e55f71e4f7127fed354e50612738137023c832b07dc",
+      "proof": {
+        "checks_sha256": "a93f74dfaea6f03d7882eb6eafbbc1f00866eaf5a01d16a319f9f521fc315f8f",
+        "observation_sha256": "c8352ec80328abb22ca7b227a06956b21f7e50f5722d9521144e7d390578e2cc",
+        "paths": [
+          "/run/fds-hbr-worker-rotation-20261015/27bef91a07a64a0f92c779fe47bcf66c/credential.json",
+          "/run/fds-hbr-worker-rotation-20261015/27bef91a07a64a0f92c779fe47bcf66c/credential-owner.json"
+        ],
+        "previous_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "state": "RETIRED_CURRENT_PAIR"
+      },
+      "started_at": "2026-10-18T13:18:24.289629+00:00",
+      "status": "CONFIRMED"
+    },
+    {
+      "action": "retire",
+      "binding": {
+        "cleanup_id": "667a9adb4c9f449890b316eaab94f620",
+        "old_invocation": "27bef91a07a64a0f92c779fe47bcf66c",
+        "original_pins": {
+          "attempt031": "d0bf2d23427c2a9f6d9a48c67c3f0ce29f51d31a411530508583bf607ab80938",
+          "completion": "0da37dec00a6dca3e712e2decf65ffaa8187501d2cead3d98251234d85e6ceaa",
+          "request": "5e1057cdd8b67f7b0d2552cdfbd9adf9879d4d70f4dd230cd09f49d3807b573e",
+          "stop": "1b0cd5daded1a04138c26893a9c11ee852841deb108f233b16f156b127fb7fd6"
+        },
+        "purpose": "CLEANUP_ONLY_AFTER_EXPIRED_EXECUTION_V1",
+        "scope_sha256": "a38aa9f7b98eed2cc5dd108ba412f81ea823ed748c270d43779278bfdb7b82b5"
+      },
+      "boot_id": "bc7023a8-d697-45cb-afdb-d56b162965ce",
+      "finished_at": "2026-10-18T13:18:25.336101+00:00",
+      "host": "k8s-worker01",
+      "input_sha256": "5fec854e7e0d97cae06b7314d00b3d0d79185adeaed3cbfa334d66efaf1440ee",
+      "proof": {
+        "checks_sha256": "a93f74dfaea6f03d7882eb6eafbbc1f00866eaf5a01d16a319f9f521fc315f8f",
+        "observation_sha256": "c8352ec80328abb22ca7b227a06956b21f7e50f5722d9521144e7d390578e2cc",
+        "paths": [
+          "/run/fds-hbr-worker-rotation-20261015/27bef91a07a64a0f92c779fe47bcf66c/credential.json",
+          "/run/fds-hbr-worker-rotation-20261015/27bef91a07a64a0f92c779fe47bcf66c/credential-owner.json"
+        ],
+        "previous_sha256": "9d8f876a0c359443f9c62e7e93c3bf03bc72b798fb92e86bb41d07f9baf67e95",
+        "state": "RETIRED_CURRENT_PAIR"
+      },
+      "started_at": "2026-10-18T13:18:25.238118+00:00",
+      "status": "CONFIRMED"
+    },
+    {
+      "action": "retire",
+      "binding": {
+        "cleanup_id": "667a9adb4c9f449890b316eaab94f620",
+        "old_invocation": "27bef91a07a64a0f92c779fe47bcf66c",
+        "original_pins": {
+          "attempt031": "d0bf2d23427c2a9f6d9a48c67c3f0ce29f51d31a411530508583bf607ab80938",
+          "completion": "0da37dec00a6dca3e712e2decf65ffaa8187501d2cead3d98251234d85e6ceaa",
+          "request": "5e1057cdd8b67f7b0d2552cdfbd9adf9879d4d70f4dd230cd09f49d3807b573e",
+          "stop": "1b0cd5daded1a04138c26893a9c11ee852841deb108f233b16f156b127fb7fd6"
+        },
+        "purpose": "CLEANUP_ONLY_AFTER_EXPIRED_EXECUTION_V1",
+        "scope_sha256": "a38aa9f7b98eed2cc5dd108ba412f81ea823ed748c270d43779278bfdb7b82b5"
+      },
+      "boot_id": "2747f3a9-6b9d-43ea-a374-d0d38de92ca0",
+      "finished_at": "2026-10-18T13:18:26.230529+00:00",
+      "host": "k8s-worker02",
+      "input_sha256": "bb2054f8d128d6f33789cb8edfe1847277fe1b31240e18af6f61451247f61610",
+      "proof": {
+        "checks_sha256": "a93f74dfaea6f03d7882eb6eafbbc1f00866eaf5a01d16a319f9f521fc315f8f",
+        "observation_sha256": "c8352ec80328abb22ca7b227a06956b21f7e50f5722d9521144e7d390578e2cc",
+        "paths": [
+          "/run/fds-hbr-worker-rotation-20261015/27bef91a07a64a0f92c779fe47bcf66c/credential.json",
+          "/run/fds-hbr-worker-rotation-20261015/27bef91a07a64a0f92c779fe47bcf66c/credential-owner.json"
+        ],
+        "previous_sha256": "d98d93cfdf99cc6eac41bc9732ebbd483617cb079f386cc7ba8f5d7aa572e25a",
+        "state": "RETIRED_CURRENT_PAIR"
+      },
+      "started_at": "2026-10-18T13:18:26.147329+00:00",
+      "status": "CONFIRMED"
+    },
+    {
+      "action": "retire",
+      "binding": {
+        "cleanup_id": "667a9adb4c9f449890b316eaab94f620",
+        "old_invocation": "27bef91a07a64a0f92c779fe47bcf66c",
+        "original_pins": {
+          "attempt031": "d0bf2d23427c2a9f6d9a48c67c3f0ce29f51d31a411530508583bf607ab80938",
+          "completion": "0da37dec00a6dca3e712e2decf65ffaa8187501d2cead3d98251234d85e6ceaa",
+          "request": "5e1057cdd8b67f7b0d2552cdfbd9adf9879d4d70f4dd230cd09f49d3807b573e",
+          "stop": "1b0cd5daded1a04138c26893a9c11ee852841deb108f233b16f156b127fb7fd6"
+        },
+        "purpose": "CLEANUP_ONLY_AFTER_EXPIRED_EXECUTION_V1",
+        "scope_sha256": "a38aa9f7b98eed2cc5dd108ba412f81ea823ed748c270d43779278bfdb7b82b5"
+      },
+      "boot_id": "2e3c5d9a-b386-4c20-8c0b-f5f7f0e10b0c",
+      "finished_at": "2026-10-18T13:18:27.189305+00:00",
+      "host": "k8s-worker03",
+      "input_sha256": "fe452a6297447d1143f1f81a82b4c92b13a7bc5dd147a92cef2daf04f4c557c5",
+      "proof": {
+        "checks_sha256": "a93f74dfaea6f03d7882eb6eafbbc1f00866eaf5a01d16a319f9f521fc315f8f",
+        "observation_sha256": "c8352ec80328abb22ca7b227a06956b21f7e50f5722d9521144e7d390578e2cc",
+        "paths": [
+          "/run/fds-hbr-worker-rotation-20261015/27bef91a07a64a0f92c779fe47bcf66c/credential.json",
+          "/run/fds-hbr-worker-rotation-20261015/27bef91a07a64a0f92c779fe47bcf66c/credential-owner.json"
+        ],
+        "previous_sha256": "0aabd5e5f0ae629d4101920b690ab3ca0a788ecd0756621467307b32032b0d61",
+        "state": "RETIRED_CURRENT_PAIR"
+      },
+      "started_at": "2026-10-18T13:18:27.104178+00:00",
+      "status": "CONFIRMED"
+    }
+  ],
+  "retained_receipt": {
+    "action": "retain",
+    "binding": {
+      "cleanup_id": "667a9adb4c9f449890b316eaab94f620",
+      "old_invocation": "27bef91a07a64a0f92c779fe47bcf66c",
+      "original_pins": {
+        "attempt031": "d0bf2d23427c2a9f6d9a48c67c3f0ce29f51d31a411530508583bf607ab80938",
+        "completion": "0da37dec00a6dca3e712e2decf65ffaa8187501d2cead3d98251234d85e6ceaa",
+        "request": "5e1057cdd8b67f7b0d2552cdfbd9adf9879d4d70f4dd230cd09f49d3807b573e",
+        "stop": "1b0cd5daded1a04138c26893a9c11ee852841deb108f233b16f156b127fb7fd6"
+      },
+      "purpose": "CLEANUP_ONLY_AFTER_EXPIRED_EXECUTION_V1",
+      "scope_sha256": "a38aa9f7b98eed2cc5dd108ba412f81ea823ed748c270d43779278bfdb7b82b5"
+    },
+    "boot_id": "8c78b577-62f8-4546-aac1-0b371b707bc5",
+    "finished_at": "2026-10-18T13:18:27.998331+00:00",
+    "host": "k8s-control01",
+    "input_sha256": "1e372fcfb91ec4f1bca73c9bf641b8cc50b6ff9720eab2c07afcedab19695926",
+    "proof": {
+      "retired_sha256": "11a1e6f1eb2d8c252cc7550d0e8d11bcb04d2b434a98f382cce065c2d79c835a",
+      "source_metadata": [
+        {
+          "bytes": 155,
+          "context": "unconfined_u:object_r:admin_home_t:s0",
+          "device": 64768,
+          "gid": 0,
+          "inode": 101956604,
+          "kind": "regular",
+          "mode": 384,
+          "nlink": 1,
+          "path": "/root/fds-hbr-worker-rotation-20261015/issuance-7fadd8679c964f6497c4c6bfdaeb3a64/http-4-body.bin",
+          "present": true,
+          "uid": 0
+        },
+        {
+          "bytes": 154,
+          "context": "unconfined_u:object_r:admin_home_t:s0",
+          "device": 64768,
+          "gid": 0,
+          "inode": 101956606,
+          "kind": "regular",
+          "mode": 384,
+          "nlink": 1,
+          "path": "/root/fds-hbr-worker-rotation-20261015/issuance-7fadd8679c964f6497c4c6bfdaeb3a64/created-private.json",
+          "present": true,
+          "uid": 0
+        }
+      ],
+      "state": "S1_RETAINED_PENDING_OWNER_DISPOSITION"
+    },
+    "started_at": "2026-10-18T13:18:27.912075+00:00",
+    "status": "CONFIRMED"
+  },
+  "execution_results": {
+    "retire-k8s-control01": {
+      "status": "ACTUAL_EXIT_AND_RECEIPT_VERIFIED",
+      "host": "k8s-control01",
+      "kind": "cleanup_retire",
+      "started_at_kst": "2026-10-18T22:18:24.026336+09:00",
+      "rc": 0,
+      "scope_sha256": "a38aa9f7b98eed2cc5dd108ba412f81ea823ed748c270d43779278bfdb7b82b5",
+      "finished_at_kst": "2026-10-18T22:18:24.736006+09:00",
+      "elapsed_seconds": 0.7189999999991414,
+      "stdout_sha256": "598364f8eab2915901823d83426fa9e82619cbeeb1828c36a0d3d36c49853b86",
+      "stderr_sha256": "dfc99ff74412e639f09a7320527eefcdccfadb42a844885eee0b3abc236deb43",
+      "remote_status": "CONFIRMED",
+      "first_error": null
+    },
+    "retire-k8s-worker01": {
+      "status": "ACTUAL_EXIT_AND_RECEIPT_VERIFIED",
+      "host": "k8s-worker01",
+      "kind": "cleanup_retire",
+      "started_at_kst": "2026-10-18T22:18:25.002801+09:00",
+      "rc": 0,
+      "scope_sha256": "a38aa9f7b98eed2cc5dd108ba412f81ea823ed748c270d43779278bfdb7b82b5",
+      "finished_at_kst": "2026-10-18T22:18:25.689440+09:00",
+      "elapsed_seconds": 0.6869999999998981,
+      "stdout_sha256": "ca5916bffcb895e7114c6664f21b22a56223b7a89ee44c759cf0b1f830fab1d1",
+      "stderr_sha256": "94263487ff5c8c583853faf8907bdd3f371f1eb773d02c15125ee061466bd17e",
+      "remote_status": "CONFIRMED",
+      "first_error": null
+    },
+    "retire-k8s-worker02": {
+      "status": "ACTUAL_EXIT_AND_RECEIPT_VERIFIED",
+      "host": "k8s-worker02",
+      "kind": "cleanup_retire",
+      "started_at_kst": "2026-10-18T22:18:25.950546+09:00",
+      "rc": 0,
+      "scope_sha256": "a38aa9f7b98eed2cc5dd108ba412f81ea823ed748c270d43779278bfdb7b82b5",
+      "finished_at_kst": "2026-10-18T22:18:26.584771+09:00",
+      "elapsed_seconds": 0.6409999999996217,
+      "stdout_sha256": "44abbd1ea9343539850f182bde0d3be4c6ffdab8d6ee2e1c8ce4f303e67603ab",
+      "stderr_sha256": "ecd5468e073d24e668e7078c656bebce40e28b479a323771b6a082f604d92bb2",
+      "remote_status": "CONFIRMED",
+      "first_error": null
+    },
+    "retire-k8s-worker03": {
+      "status": "ACTUAL_EXIT_AND_RECEIPT_VERIFIED",
+      "host": "k8s-worker03",
+      "kind": "cleanup_retire",
+      "started_at_kst": "2026-10-18T22:18:26.854932+09:00",
+      "rc": 0,
+      "scope_sha256": "a38aa9f7b98eed2cc5dd108ba412f81ea823ed748c270d43779278bfdb7b82b5",
+      "finished_at_kst": "2026-10-18T22:18:27.545967+09:00",
+      "elapsed_seconds": 0.7029999999995198,
+      "stdout_sha256": "59b01846e97a39c2fea0e1103c2c8ca765827bd737b1ad8d7c50f5575bb2f985",
+      "stderr_sha256": "f23b9ff521eaed47c48ded7e4eeea65ec90a2d52eef788aeb18b5dc73d4b5932",
+      "remote_status": "CONFIRMED",
+      "first_error": null
+    },
+    "retain-k8s-control01": {
+      "status": "ACTUAL_EXIT_AND_RECEIPT_VERIFIED",
+      "host": "k8s-control01",
+      "kind": "cleanup_retain",
+      "started_at_kst": "2026-10-18T22:18:27.815402+09:00",
+      "rc": 0,
+      "scope_sha256": "a38aa9f7b98eed2cc5dd108ba412f81ea823ed748c270d43779278bfdb7b82b5",
+      "finished_at_kst": "2026-10-18T22:18:28.352906+09:00",
+      "elapsed_seconds": 0.5319999999992433,
+      "stdout_sha256": "fc5b48579ff94bbc13cb6438ed0508f17f4d9c4755bb013e4b7326d14d80c7c9",
+      "stderr_sha256": "8d53b5c8d24d726177abf5d649cd127c724abb0d1127970eb21f755a6cca1ce6",
+      "remote_status": "CONFIRMED",
+      "first_error": null
+    }
+  },
+  "transport_returned": {
+    "retire-k8s-control01": {
+      "spawned": true,
+      "child_pid": 8612,
+      "returned": true,
+      "actual_rc": 0,
+      "retry": false,
+      "phase": "RETURNED"
+    },
+    "retire-k8s-worker01": {
+      "spawned": true,
+      "child_pid": 8644,
+      "returned": true,
+      "actual_rc": 0,
+      "retry": false,
+      "phase": "RETURNED"
+    },
+    "retire-k8s-worker02": {
+      "spawned": true,
+      "child_pid": 8676,
+      "returned": true,
+      "actual_rc": 0,
+      "retry": false,
+      "phase": "RETURNED"
+    },
+    "retire-k8s-worker03": {
+      "spawned": true,
+      "child_pid": 8708,
+      "returned": true,
+      "actual_rc": 0,
+      "retry": false,
+      "phase": "RETURNED"
+    },
+    "retain-k8s-control01": {
+      "spawned": true,
+      "child_pid": 8740,
+      "returned": true,
+      "actual_rc": 0,
+      "retry": false,
+      "phase": "RETURNED"
+    }
+  },
+  "source2_metadata_equal_before_and_after": true,
+  "absence_confirmation_contract": {
+    "local_source": {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-only-after-expiry/cleanup_once.py",
+      "sha256": "c685964c78f6610f42c52b28c600da7ec20182e5f337ff806e94c31f35dbe610",
+      "bytes": 29911,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    "lines": [
+      271,
+      282,
+      501,
+      505
+    ],
+    "meaning": "Exact pair removal followed by rh.absent for both paths before RETIRED_CURRENT_PAIR receipt. DOC checked this bounded contract, not a new full code review."
+  },
+  "original_finish_retried": false,
+  "robot_or_consumer_changes": 0,
+  "secret_body_exports": 0,
+  "source_final_disposition": "PENDING_OWNER",
+  "phase1_acceptance": false,
+  "local_sources": [
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/FINAL_RESULT.json",
+      "sha256": "dd78b641d8131fd452d876e4b3150158e9d9f6f9e58d0cdc09cc0026e2c6889a",
+      "bytes": 18166,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/CONSOLE_EXIT_ACCEPTANCE.json",
+      "sha256": "f6f7117046bae8d841ca823eeff6de63d9eb5491b8c832a0f087d75767b8abc6",
+      "bytes": 419,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/scope.json",
+      "sha256": "a38aa9f7b98eed2cc5dd108ba412f81ea823ed748c270d43779278bfdb7b82b5",
+      "bytes": 90137,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/REVIEW_ACCEPTANCE.json",
+      "sha256": "25a0f2d601fa0dae5cc60452ae45c21c1557f2c5be2e762be7acfdddad48237e",
+      "bytes": 610,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-only-after-expiry/cleanup_once.py",
+      "sha256": "c685964c78f6610f42c52b28c600da7ec20182e5f337ff806e94c31f35dbe610",
+      "bytes": 29911,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/execution/check-k8s-control01/stdout.json",
+      "sha256": "f933180d455446d3f10e51f98bbb9cd5e87ebf45043f26ca4b8e0cfc092c9024",
+      "bytes": 1986,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/execution/check-k8s-worker01/stdout.json",
+      "sha256": "0add55b743691e9972b0f3b582e0e81b2709a39e2bd982ab64420496ff3dbad6",
+      "bytes": 1435,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/execution/check-k8s-worker02/stdout.json",
+      "sha256": "02e22cc2464c0e61a8ffd27bb0739fb25cfca7db453d20a0d52021b10e20a439",
+      "bytes": 1435,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/execution/check-k8s-worker03/stdout.json",
+      "sha256": "2900ff9e9dec6c9b0a6dbb941317c3de51d9f02ae72e5f12bc32b994a93d018b",
+      "bytes": 1437,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/execution/retire-k8s-control01/RESULT.json",
+      "sha256": "ed5a72bc0ebe1985a6aee44b668c0aaa29b911558a284eb8ab6b1e08fd79a2d3",
+      "bytes": 600,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/execution/retire-k8s-control01/stdout.json",
+      "sha256": "598364f8eab2915901823d83426fa9e82619cbeeb1828c36a0d3d36c49853b86",
+      "bytes": 1358,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/execution/retire-k8s-control01/stderr.txt",
+      "sha256": "dfc99ff74412e639f09a7320527eefcdccfadb42a844885eee0b3abc236deb43",
+      "bytes": 253,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/retire-k8s-control01-input.json",
+      "sha256": "9fa73356b3566cb7a7da9e55f71e4f7127fed354e50612738137023c832b07dc",
+      "bytes": 11707,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/execution/retire-k8s-worker01/RESULT.json",
+      "sha256": "9dc00e5d76e9757f8d8c4d7053491f272370bfbabf1eeb36573c61d5fdf4d6dc",
+      "bytes": 599,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/execution/retire-k8s-worker01/stdout.json",
+      "sha256": "ca5916bffcb895e7114c6664f21b22a56223b7a89ee44c759cf0b1f830fab1d1",
+      "bytes": 1357,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/execution/retire-k8s-worker01/stderr.txt",
+      "sha256": "94263487ff5c8c583853faf8907bdd3f371f1eb773d02c15125ee061466bd17e",
+      "bytes": 253,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/retire-k8s-worker01-input.json",
+      "sha256": "5fec854e7e0d97cae06b7314d00b3d0d79185adeaed3cbfa334d66efaf1440ee",
+      "bytes": 13064,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/execution/retire-k8s-worker02/RESULT.json",
+      "sha256": "adf73cb12cf7686c736b9e108178554883cd186976d4b09b254948500de34877",
+      "bytes": 599,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/execution/retire-k8s-worker02/stdout.json",
+      "sha256": "44abbd1ea9343539850f182bde0d3be4c6ffdab8d6ee2e1c8ce4f303e67603ab",
+      "bytes": 1357,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/execution/retire-k8s-worker02/stderr.txt",
+      "sha256": "ecd5468e073d24e668e7078c656bebce40e28b479a323771b6a082f604d92bb2",
+      "bytes": 253,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/retire-k8s-worker02-input.json",
+      "sha256": "bb2054f8d128d6f33789cb8edfe1847277fe1b31240e18af6f61451247f61610",
+      "bytes": 14421,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/execution/retire-k8s-worker03/RESULT.json",
+      "sha256": "51fe84151b48f23c177e67212b59c29a315e6ea08d832a3d6a47d0fb05d16e56",
+      "bytes": 599,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/execution/retire-k8s-worker03/stdout.json",
+      "sha256": "59b01846e97a39c2fea0e1103c2c8ca765827bd737b1ad8d7c50f5575bb2f985",
+      "bytes": 1357,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/execution/retire-k8s-worker03/stderr.txt",
+      "sha256": "f23b9ff521eaed47c48ded7e4eeea65ec90a2d52eef788aeb18b5dc73d4b5932",
+      "bytes": 253,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/retire-k8s-worker03-input.json",
+      "sha256": "fe452a6297447d1143f1f81a82b4c92b13a7bc5dd147a92cef2daf04f4c557c5",
+      "bytes": 15778,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/execution/retain-k8s-control01/RESULT.json",
+      "sha256": "7374fb2b62b93159227bf070c930701c0abd1f3d3f34bd5bfc365a07c96eba27",
+      "bytes": 600,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/execution/retain-k8s-control01/stdout.json",
+      "sha256": "fc5b48579ff94bbc13cb6438ed0508f17f4d9c4755bb013e4b7326d14d80c7c9",
+      "bytes": 1578,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/execution/retain-k8s-control01/stderr.txt",
+      "sha256": "8d53b5c8d24d726177abf5d649cd127c724abb0d1127970eb21f755a6cca1ce6",
+      "bytes": 253,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/retain-k8s-control01-input.json",
+      "sha256": "1e372fcfb91ec4f1bca73c9bf641b8cc50b6ff9720eab2c07afcedab19695926",
+      "bytes": 17135,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/execution/collect-observe/RESULT.json",
+      "sha256": "c21e611f46881ba580257cfe1804772a7a84f02b1f700adf46cb92aa720014e7",
+      "bytes": 661,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/execution/collect-observe/stdout.json",
+      "sha256": "570cb5fcc91067e46894825b327fef67f3daa2788f5f9abdcd2c9a81849f9c4d",
+      "bytes": 6231,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/cleanup-after-expiry-runtime/execution/collect-observe/stderr.txt",
+      "sha256": "e4adeec1cdffc8a02fb52ca17f48ad3806fd5a741c1073624afda727ae639e81",
+      "bytes": 253,
+      "availability": "LOCAL_RETAINED_NOT_PUBLISHED"
+    }
+  ],
+  "publication": "LOCAL_CANDIDATE_ONLY; original full evidence is retained locally and not claimed published"
+}

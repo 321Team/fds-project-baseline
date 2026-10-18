@@ -1,0 +1,47 @@
+{
+  "record_kind": "ACTUAL_AFTER_EXPIRY_CLEANUP_RESULT_NOT_ORIGINAL_FINISH_RETRY",
+  "prepared_at_kst": "2026-10-18T22:22:32.840050+09:00",
+  "actual_finished_at_kst": "2026-10-18T22:18:28.484026+09:00",
+  "status": "FOUR_TEMPORARY_PAIRS_RETIRED_SOURCE_TWO_RETAINED",
+  "cleanup_id": "667a9adb4c9f449890b316eaab94f620",
+  "scope_sha256": "a38aa9f7b98eed2cc5dd108ba412f81ea823ed748c270d43779278bfdb7b82b5",
+  "retired_pairs": 4,
+  "retired_files": 8,
+  "hosts": [
+    "k8s-control01",
+    "k8s-worker01",
+    "k8s-worker02",
+    "k8s-worker03"
+  ],
+  "execution_span_kst": [
+    "2026-10-18T22:18:24.026336+09:00",
+    "2026-10-18T22:18:28.352906+09:00"
+  ],
+  "retire_rc_each": 0,
+  "transport_returned_rc_each": 0,
+  "exact_pair_absence_confirmed_by_checked_retire_receipt_contract": true,
+  "source2": "METADATA_UNCHANGED_RETAINED_PENDING_OWNER_DISPOSITION",
+  "original_finish_retried": false,
+  "robot_or_consumer_changes": 0,
+  "secret_body_exports": 0,
+  "proof": {
+    "path": "runtime-sources/20261018T2218/CLEANUP_PROOF.json",
+    "sha256": "8a4e21951ee579c48454695bb6a415ab6b1cf9a907b776f4b76776068ff5536d"
+  },
+  "preserved_originals": [
+    "20:43 STOP",
+    "original deadline 21:51:59 KST",
+    "original request/claim/31 consumer results",
+    "source-set71",
+    "19:02 observation",
+    "20:47 Harbor and MON",
+    "PR244 reference"
+  ],
+  "limits": [
+    "Only temporary4pairs blocker resolved",
+    "source2 final disposition incomplete",
+    "old Robot2/Push3 usage/auth and other AC remain unchanged",
+    "shared17 human direct read and four existing final judgments incomplete",
+    "No DOC server calls, no new approval requirement, no whole Phase1 acceptance"
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "captured_at_kst": "2026-10-18T20:52:31.987445+09:00",
+  "source_kind": "LOCAL_SOURCE_LOCATORS_AND_INTEGRITY_BINDINGS_NOT_PUBLICATION_OF_RAW_FILES",
+  "source_set71_modified": false,
+  "raw_storage": "로컬 보관·미공개. 아래 경로는 이권욱 프로젝트 폴더 기준이며 GitHub 상대 링크가 아니다.",
+  "entries": [
+    {
+      "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/CURRENT_TASK.md",
+      "sha256": "9716a68cbd6c19bcf651f2b13c5876901f6e2b101ebf85440874f132a6e0049d",
+      "bytes": 4491,
+      "storage": "LOCAL_ONLY_NOT_PUBLISHED",
+      "display": "로컬 보관·미공개"
+    },
+    {
+      "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/ACTUAL_CHAIN_REVIEW.json",
+      "sha256": "ab8c347d436a1f899a226fd6176dfbb0d65f96b26aa23a5cf269ed44b47af7c7",
+      "bytes": 11036,
+      "storage": "LOCAL_ONLY_NOT_PUBLISHED",
+      "display": "로컬 보관·미공개"
+    },
+    {
+      "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/operational-transition/proof-linkage/completion/deliver/ACTUAL_PROOF.json",
+      "sha256": "0da37dec00a6dca3e712e2decf65ffaa8187501d2cead3d98251234d85e6ceaa",
+      "bytes": 31723,
+      "storage": "LOCAL_ONLY_NOT_PUBLISHED",
+      "display": "로컬 보관·미공개"
+    },
+    {
+      "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/operational-transition/proof-linkage/after/deliver/ACTUAL_PROOF.json",
+      "sha256": "370e778439ada7eec3eaca2d16e768a23fb142582dae9b38f846f0d838532dc9",
+      "bytes": 4338,
+      "storage": "LOCAL_ONLY_NOT_PUBLISHED",
+      "display": "로컬 보관·미공개"
+    },
+    {
+      "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/FINISH_INPUT_SIZE_FINDING.json",
+      "sha256": "633e0201f07c279d006e816b487f52817be3571fd18fb196295e3ce0eb05c0db",
+      "bytes": 470,
+      "storage": "LOCAL_ONLY_NOT_PUBLISHED",
+      "display": "로컬 보관·미공개"
+    },
+    {
+      "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/APP/READY.json",
+      "sha256": "2a9aa881179b5bc69e7d7aa099bf9b7b503a4fe50b9d2775d14a56d890daf923",
+      "bytes": 5272,
+      "storage": "LOCAL_ONLY_NOT_PUBLISHED",
+      "display": "로컬 보관·미공개"
+    },
+    {
+      "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/MON7_CURRENT_CENTRAL_ACCEPTANCE.json",
+      "sha256": "0dedd353e5d12c7d7a69398696d1ef05f8713f494bf7bfa0950a6de7b6ff4b63",
+      "bytes": 637,
+      "storage": "LOCAL_ONLY_NOT_PUBLISHED",
+      "display": "로컬 보관·미공개"
+    },
+    {
+      "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/APP/mon-after-transition-2045/CURRENT_TASK.json",
+      "sha256": "5b7bd17aa4becb0676a81ab3079aef08f37ca8805f2942d8e79209a47592195d",
+      "bytes": 2863,
+      "storage": "LOCAL_ONLY_NOT_PUBLISHED",
+      "display": "로컬 보관·미공개"
+    },
+    {
+      "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/APP/mon-after-transition-2045/HANDOFF.json",
+      "sha256": "ca41bf7ed0054fd16b05513ac9d59a55f91782006c761443572fd965934474fb",
+      "bytes": 1830,
+      "storage": "LOCAL_ONLY_NOT_PUBLISHED",
+      "display": "로컬 보관·미공개"
+    },
+    {
+      "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/APP/mon-after-transition-2045/RESULT.json",
+      "sha256": "400e3c198c6c47bb106504417ed43e6776f03a3174d22e31344d874f1603c837",
+      "bytes": 14509,
+      "storage": "LOCAL_ONLY_NOT_PUBLISHED",
+      "display": "로컬 보관·미공개"
+    },
+    {
+      "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/APP/mon-after-transition-2045/RECEIPT.json",
+      "sha256": "1e0e01e2f4c240c8a4a5219f9445b6410d2f1b11531bd065b584bf84ec6d8f9a",
+      "bytes": 575,
+      "storage": "LOCAL_ONLY_NOT_PUBLISHED",
+      "display": "로컬 보관·미공개"
+    },
+    {
+      "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/APP/mon-after-transition-2045/VALIDATION.json",
+      "sha256": "fa53426e34dc15a12e5bccd2d54a9c93a30112c7b164ed5573af2090f774cf3f",
+      "bytes": 2815,
+      "storage": "LOCAL_ONLY_NOT_PUBLISHED",
+      "display": "로컬 보관·미공개"
+    },
+    {
+      "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/APP/mon-after-transition-2045/FINDINGS.md",
+      "sha256": "cdf00f0722b21de3cc835e7ef1401fe78a7c75c17c4a15f6871467c91514747a",
+      "bytes": 2972,
+      "storage": "LOCAL_ONLY_NOT_PUBLISHED",
+      "display": "로컬 보관·미공개"
+    },
+    {
+      "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/APP/mon-after-transition-2045/SOURCE.py",
+      "sha256": "a67165531088f1d0402441ecbf46c7d020006efb036bb9c0aaa19dd385413266",
+      "bytes": 19901,
+      "storage": "LOCAL_ONLY_NOT_PUBLISHED",
+      "display": "로컬 보관·미공개"
+    },
+    {
+      "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/APP/mon-after-transition-2045/stdout.json",
+      "sha256": "7cfd83cd1aff9d70e7f29db134d0c0c62ca6af02e19ff074dde787c246f1d3b6",
+      "bytes": 33826,
+      "storage": "LOCAL_ONLY_NOT_PUBLISHED",
+      "display": "로컬 보관·미공개"
+    },
+    {
+      "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/APP/mon-after-transition-2045/stderr.txt",
+      "sha256": "27d33dcec4cc2c44b467b770dd92e9803eca7e9ced1689a5dd3be04ae99efd5f",
+      "bytes": 253,
+      "storage": "LOCAL_ONLY_NOT_PUBLISHED",
+      "display": "로컬 보관·미공개"
+    },
+    {
+      "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/APP/mon-after-transition-2045/INTENT.json",
+      "sha256": "a4cff5f418a296d39c7221121c67fac733603a53f7e7ab7009e7b426d046829f",
+      "bytes": 1389,
+      "storage": "LOCAL_ONLY_NOT_PUBLISHED",
+      "display": "로컬 보관·미공개"
+    },
+    {
+      "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/APP/mon-after-transition-2045/SPAWN.json",
+      "sha256": "29874504f30b2b88930649351fe8436ed06ef482a18f7b6f0b58668062a2ed7e",
+      "bytes": 93,
+      "storage": "LOCAL_ONLY_NOT_PUBLISHED",
+      "display": "로컬 보관·미공개"
+    }
+  ],
+  "credential_boundary": "source2·임시 인증자료의 실제 값/파일은 DOC가 조회·복사·공개하지 않았다. 실행 공개 영수증·보고의 보관 경계만 소비했다."
+}

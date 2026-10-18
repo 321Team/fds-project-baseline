@@ -1,10 +1,10 @@
 {
   "source_revision_proposal": "p1-as-built-20261018-r1",
-  "created_at_kst": "2026-10-18T19:26:56.241970+09:00",
-  "state": "FINAL_DOCUMENT_PR_CANDIDATE_NOT_PUBLISHED_NOT_HUMAN_ADOPTED",
+  "created_at_kst": "2026-10-18T22:22:32.840050+09:00",
+  "state": "LOCAL_CLEANUP_COMPLETE_FINAL_PUBLICATION_CANDIDATE_NOT_PUBLISHED",
   "self_excluded": true,
   "requirements_baseline": "docs-v3.1.21",
-  "previous_candidate_manifest_sha256": "0196ebf5ffd50863d2cb600dde3be96efda6a65b674988e6be64dc37597e42d8",
+  "previous_candidate_manifest_sha256": "0e977bce6330dc595bf2521606c5c30c01edebc9e3618053e3deb628af908cce",
   "observation_cutoff_kst": "2026-10-18T19:02:42+09:00",
   "files": [
     {
@@ -16,26 +16,74 @@
     {
       "path": "AS_BUILT.md",
       "repository_path": "architecture/as-built/p1-as-built-20261018-r1/AS_BUILT.md",
-      "bytes": 20943,
-      "sha256": "14f42cf6eb1a85dbfc014f71426f3df16ff2599c9a7ae542767c548b9c5c0c74"
+      "bytes": 29133,
+      "sha256": "75dff4043397b38de0b318696bc1ff2de04051ef4fdd04ebdfff8b9d77ab5d31"
     },
     {
       "path": "DERIVATIVE_PROVENANCE.json",
       "repository_path": "architecture/as-built/p1-as-built-20261018-r1/DERIVATIVE_PROVENANCE.json",
-      "bytes": 6803,
-      "sha256": "130c86dbe8798aeec8f9f7902283d68f0c21bdbb7cdfd61caeb80304d5d6590d"
+      "bytes": 10491,
+      "sha256": "2b5f83195a13d0bff36f6d986affb45c5729d40a57fb25f5930b9aa498157209"
     },
     {
       "path": "README.md",
       "repository_path": "architecture/as-built/p1-as-built-20261018-r1/README.md",
-      "bytes": 4004,
-      "sha256": "65d353f1603ead80f9a7a5495312005dfe1b42750a9d9afea7df0051debaaae0"
+      "bytes": 4788,
+      "sha256": "8a3beaf2697a153e2b30b938e267bb746e317a6275902a7ef2657175619aea43"
     },
     {
       "path": "observations/20261018T1902.json",
       "repository_path": "architecture/as-built/p1-as-built-20261018-r1/observations/20261018T1902.json",
-      "bytes": 2615,
-      "sha256": "8c084c38b76de33e3f7597c9da523effcb5bb5212b462a54e504953742f5908b"
+      "bytes": 5738,
+      "sha256": "4b03f823a1b7de4d2ae7b62784c4b49971b4b64135aac5f3cbf36d5e93abf593"
+    },
+    {
+      "path": "observations/20261018T2047-harbor.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/observations/20261018T2047-harbor.json",
+      "bytes": 4398,
+      "sha256": "c8e00d7fc6d1e160fb0d7fd28d911327bdd5ca038cd57e8fc2208ac2566b0b34"
+    },
+    {
+      "path": "observations/20261018T2047-mon.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/observations/20261018T2047-mon.json",
+      "bytes": 8245,
+      "sha256": "50d9c45ca333ec445dfebadaf67ab64a35b90132fad67836d83c725a02bb3408"
+    },
+    {
+      "path": "observations/20261018T2203-ansible244.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/observations/20261018T2203-ansible244.json",
+      "bytes": 13522,
+      "sha256": "049decf92ce3e7865f0702115fed5cf410350c22e21bbdc56d2a0a6b1a83c458"
+    },
+    {
+      "path": "observations/20261018T2218-harbor-cleanup.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/observations/20261018T2218-harbor-cleanup.json",
+      "bytes": 1691,
+      "sha256": "e2a3f75bff97c7f8afbdb4fa8b66e34d8dce61c40edc13e757f07600a26933bd"
+    },
+    {
+      "path": "runtime-sources/20261018T2047/HARBOR_PUBLIC_COMMENT.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/runtime-sources/20261018T2047/HARBOR_PUBLIC_COMMENT.json",
+      "bytes": 2567,
+      "sha256": "59fe4b6ca1b0ff58d27639c39e58076c67d680f98ec16b11bf15562db7264405"
+    },
+    {
+      "path": "runtime-sources/20261018T2047/LOCAL_SOURCE_INDEX.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/runtime-sources/20261018T2047/LOCAL_SOURCE_INDEX.json",
+      "bytes": 6706,
+      "sha256": "a581b0da6d9529e766a523b3a570cfe9dc83e1e040d50a77f8f4deecd12c862b"
+    },
+    {
+      "path": "runtime-sources/20261018T2047/MON_READY_SOURCE.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/runtime-sources/20261018T2047/MON_READY_SOURCE.json",
+      "bytes": 1888,
+      "sha256": "eb92131cd1aeb25a1a23712d8c47bd93d2e1c9370c65ab23b1c386b260791ac8"
+    },
+    {
+      "path": "runtime-sources/20261018T2218/CLEANUP_PROOF.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/runtime-sources/20261018T2218/CLEANUP_PROOF.json",
+      "bytes": 27480,
+      "sha256": "8a4e21951ee579c48454695bb6a415ab6b1cf9a907b776f4b76776068ff5536d"
     },
     {
       "path": "source-set/ADOPTION_DECISION_CARD.md",
@@ -464,5 +512,24 @@
       "sha256": "512bdca10164aa43bb137638f35fbb5157cc92c7e21bcd3684d07f055af6b6e1"
     }
   ],
-  "packaging_note": "Directory-scoped -text preserves original bytes through Git checkout. Original 71 source-set files and prior candidate content remain byte-identical; manifest adds only this packaging entry."
+  "packaging_note": "Directory-scoped -text preserves original bytes through Git checkout. Original 71 source-set files and prior candidate content remain byte-identical; manifest adds only this packaging entry.",
+  "review_followup_base": {
+    "commit": "b6a2381e501ef48ae380b9904c443a2ebfffafac",
+    "review_url": "https://github.com/321Team/fds-project-baseline/pull/183#pullrequestreview-5562637138",
+    "observed_span_unchanged": [
+      "2026-10-18T19:00:23+09:00",
+      "2026-10-18T19:02:42+09:00"
+    ],
+    "later_harbor_runtime_included": true
+  },
+  "runtime_scope": "19:02/20:43STOP/20:47/PR244 records preserved. Separate22:18 actual temporary4pairs cleanup complete; source2 retained pending final disposition; other acceptance incomplete.",
+  "publication_followup": "PR244 evidence merge retained unchanged; separate actual cleanup added. No DOC server call or new acceptance.",
+  "cleanup_followup": {
+    "observed_finished_at_kst": "2026-10-18T22:18:28.484026+09:00",
+    "scope_sha256": "a38aa9f7b98eed2cc5dd108ba412f81ea823ed748c270d43779278bfdb7b82b5",
+    "original_deadline_unchanged": "2026-10-18T12:51:59.201653+00:00",
+    "new_cleanup_deadline": "2026-10-18T13:42:52.962926+00:00",
+    "temporary_pairs_retired": 4,
+    "source2_disposition_complete": false
+  }
 }

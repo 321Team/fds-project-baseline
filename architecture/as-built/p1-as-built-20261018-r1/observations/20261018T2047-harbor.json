@@ -1,0 +1,94 @@
+{
+  "record_kind": "BOUND_RUNTIME_SOURCE_SUMMARY_NOT_DOC_EXECUTION",
+  "prepared_at_kst": "2026-10-18T20:52:31.987445+09:00",
+  "public_record": {
+    "url": "https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6249538316",
+    "created_at_utc": "2026-10-18T11:47:11Z",
+    "updated_at_utc": "2026-10-18T11:47:11Z",
+    "body_sha256_utf8": "e95d2984876101ecbd6c8dec35a206cbcdb04a3e67df7d75dae16734a8cb3b6d",
+    "repository_snapshot_path": "runtime-sources/20261018T2047/HARBOR_PUBLIC_COMMENT.json"
+  },
+  "execute_span_kst": [
+    "2026-10-18T20:38:54.823050+09:00",
+    "2026-10-18T20:42:15.359888+09:00"
+  ],
+  "completion_at_kst": "2026-10-18T20:42:15.393572+09:00",
+  "after_at_kst": "2026-10-18T20:43:05.053649+09:00",
+  "finish_stop_at_kst": "2026-10-18T20:43:43+09:00",
+  "finish_time_source": "public comment6249538316; second precision",
+  "continuation_id": "27bef91a07a64a0f92c779fe47bcf66c",
+  "request_sha256": "5e1057cdd8b67f7b0d2552cdfbd9adf9879d4d70f4dd230cd09f49d3807b573e",
+  "candidate_sha256": "4b337f9e69c2f01262cc5cd593cb2f6f3df75214143a5d8c1f640439cd3cdfe5",
+  "status": "CONSUMERS_VERIFIED_FINISH_STOP_CLEANUP_INCOMPLETE",
+  "central_chain_verified_results": 31,
+  "ledger_sha256": "408c00c8daeefa96b1ccf361f3e71e2ecfb67b85cc8000ac90a0fbead4e2a135",
+  "worker_nodes_pass": [
+    "k8s-worker01",
+    "k8s-worker02",
+    "k8s-worker03"
+  ],
+  "test_pod_receipts_pass": [
+    "pod-fds-app-k8s-worker01",
+    "pod-fds-app-k8s-worker02",
+    "pod-fds-app-k8s-worker03",
+    "pod-monitoring-api-k8s-worker03",
+    "pod-monitoring-node-k8s-worker01"
+  ],
+  "secret_receipts_pass": [
+    "secret-fds-app",
+    "secret-monitoring-api",
+    "secret-monitoring-node"
+  ],
+  "worker01_file_pass": true,
+  "robot_new_issue_refresh_permission_change": false,
+  "before_after_robot_metadata": "Bodies for Robot2/3/23 and list identical per published central report; not a new DOC API/runtime probe",
+  "finish": {
+    "status": "RELAY_BUDGET_OR_INPUT_STOP",
+    "input_bytes": 37122,
+    "transport_limit": 32768,
+    "remote_retire_spawned": false,
+    "temporary_pairs_total": 4,
+    "temporary_pairs_retired": 0,
+    "source_disposition_complete": false,
+    "source2_custody": "Host-local protected preservation pending disposition; no credential contents collected by DOC",
+    "automatic_retry": false
+  },
+  "limits": [
+    "Actual temporary credential cleanup0/4; source2 disposition incomplete at this STOP",
+    "Push3 consumer/current authentication, old-generation/S1 disposition, independent evidence review and final AC acceptance remain separate",
+    "Test Pod5 success is distinct from existing production MON7 status and from all7 fresh pulls",
+    "DOC consumed central sources; did not independently rerun execute31 or contact servers"
+  ],
+  "sources": {
+    "chain": {
+      "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/ACTUAL_CHAIN_REVIEW.json",
+      "sha256": "ab8c347d436a1f899a226fd6176dfbb0d65f96b26aa23a5cf269ed44b47af7c7",
+      "bytes": 11036,
+      "storage": "LOCAL_ONLY_NOT_PUBLISHED",
+      "display": "로컬 보관·미공개"
+    },
+    "completion": {
+      "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/operational-transition/proof-linkage/completion/deliver/ACTUAL_PROOF.json",
+      "sha256": "0da37dec00a6dca3e712e2decf65ffaa8187501d2cead3d98251234d85e6ceaa",
+      "bytes": 31723,
+      "storage": "LOCAL_ONLY_NOT_PUBLISHED",
+      "display": "로컬 보관·미공개"
+    },
+    "after": {
+      "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/operational-transition/proof-linkage/after/deliver/ACTUAL_PROOF.json",
+      "sha256": "370e778439ada7eec3eaca2d16e768a23fb142582dae9b38f846f0d838532dc9",
+      "bytes": 4338,
+      "storage": "LOCAL_ONLY_NOT_PUBLISHED",
+      "display": "로컬 보관·미공개"
+    },
+    "finish_size_finding": {
+      "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Harbor/FINISH_INPUT_SIZE_FINDING.json",
+      "sha256": "633e0201f07c279d006e816b487f52817be3571fd18fb196295e3ce0eb05c0db",
+      "bytes": 470,
+      "storage": "LOCAL_ONLY_NOT_PUBLISHED",
+      "display": "로컬 보관·미공개"
+    },
+    "local_index": "runtime-sources/20261018T2047/LOCAL_SOURCE_INDEX.json"
+  },
+  "final_acceptance": false
+}

@@ -1,12 +1,12 @@
 {
   "proposed_source_revision": "p1-as-built-20261018-r1",
-  "approval_state": "SELECTED_FOR_DOCUMENT_PR_PREPARATION_NOT_HUMAN_ADOPTED",
+  "approval_state": "LOCAL_CLEANUP_COMPLETE_FOLLOWUP_NOT_REVIEWED_NOT_PUBLISHED",
   "requirements_baseline": "docs-v3.1.21 / 979facb98de8ca1f1e2ce22f38b27ac3366f3fc3",
   "as_built_explanation": {
     "repository_path": "architecture/as-built/p1-as-built-20261018-r1/AS_BUILT.md",
-    "sha256": "14f42cf6eb1a85dbfc014f71426f3df16ff2599c9a7ae542767c548b9c5c0c74",
+    "sha256": "75dff4043397b38de0b318696bc1ff2de04051ef4fdd04ebdfff8b9d77ab5d31",
     "source_sha256": "4c746a65cb58c4fe772d57fe37a1031c8aa72aaf9b6d81541b92f81e029d6a59",
-    "change_scope": "Prior explanation changes plus only fixed 19:00-19:02 observation rows; no MMD/renderer/SVG change."
+    "change_scope": "Only actual22:18 temporary4pairs cleanup delta added to the prior PR244 candidate. Historical STOP/deadline/source-set and all previous observation bytes preserved. source2 final disposition remains pending."
   },
   "original_adoption_manifest_sha256": "1695abbaba1e4ca563b80ed1349fab1115787a469891c77d9562a31458daf693",
   "reuse": "Existing render/visual review, no rerender or new visual certification",
@@ -113,15 +113,83 @@
   ],
   "render_contract": "Mermaid 11.17.0 + exact renderer/config + PM -> MGW label translate(160,12); MMD alone does not reproduce selected SVG.",
   "source_set_policy": "Prior package bytes unchanged; diagnostic originals and D07 row are provenance, not new selected derivative or acceptance",
-  "previous_candidate_manifest_sha256": "0196ebf5ffd50863d2cb600dde3be96efda6a65b674988e6be64dc37597e42d8",
+  "previous_candidate_manifest_sha256": "0e977bce6330dc595bf2521606c5c30c01edebc9e3618053e3deb628af908cce",
   "observation_binding": {
     "path": "observations/20261018T1902.json",
-    "sha256": "8c084c38b76de33e3f7597c9da523effcb5bb5212b462a54e504953742f5908b",
+    "sha256": "4b03f823a1b7de4d2ae7b62784c4b49971b4b64135aac5f3cbf36d5e93abf593",
     "observed_span_kst": [
       "2026-10-18T19:00:23+09:00",
       "2026-10-18T19:02:42+09:00"
     ],
     "runtime_claim": "Read-only observations only; no authentication/transition/recovery/whole-integrity acceptance."
   },
-  "central_selection_scope": "Version/path/71-file set selected for document PR preparation only. Human As-built adoption and Freeze not granted."
+  "central_selection_scope": "Version/path/71-file set selected for document PR preparation only. Human As-built adoption and Freeze not granted.",
+  "review_followup": {
+    "source_pr": "https://github.com/321Team/fds-project-baseline/pull/183",
+    "review_url": "https://github.com/321Team/fds-project-baseline/pull/183#pullrequestreview-5562637138",
+    "reviewed_head": "943eded6b827ceb4f116d3af23fc6712eab146e4",
+    "merged_source_commit": "b6a2381e501ef48ae380b9904c443a2ebfffafac",
+    "source_merge_at_utc": "2026-10-18T11:13:22Z",
+    "candidate_prepared_at_kst": "2026-10-18T20:17:39.769306+09:00",
+    "source_review_scope": "Document PR merge only; no As-built final adoption, DOC/O01 Freeze or Phase1 acceptance",
+    "candidate_review": "NOT_PERFORMED",
+    "harbor_later_runtime": "SEPARATELY_BOUND_EXECUTE31_AFTER_AND_FINISH_STOP; NOT_FINAL_ACCEPTANCE",
+    "source_set_file_count_unchanged": 71
+  },
+  "runtime_observation_bindings": [
+    {
+      "path": "observations/20261018T2047-harbor.json",
+      "sha256": "c8e00d7fc6d1e160fb0d7fd28d911327bdd5ca038cd57e8fc2208ac2566b0b34",
+      "scope": "Actual consumers verified; finish STOP and cleanup0/4 preserved"
+    },
+    {
+      "path": "observations/20261018T2047-mon.json",
+      "sha256": "50d9c45ca333ec445dfebadaf67ab64a35b90132fad67836d83c725a02bb3408",
+      "scope": "Same UID/image7 Ready/started one observation; no all7 fresh-pull, sustained service or MON acceptance"
+    }
+  ],
+  "new_runtime_source_bindings": [
+    {
+      "path": "runtime-sources/20261018T2047/HARBOR_PUBLIC_COMMENT.json",
+      "sha256": "59fe4b6ca1b0ff58d27639c39e58076c67d680f98ec16b11bf15562db7264405"
+    },
+    {
+      "path": "runtime-sources/20261018T2047/MON_READY_SOURCE.json",
+      "sha256": "eb92131cd1aeb25a1a23712d8c47bd93d2e1c9370c65ab23b1c386b260791ac8"
+    },
+    {
+      "path": "runtime-sources/20261018T2047/LOCAL_SOURCE_INDEX.json",
+      "sha256": "a581b0da6d9529e766a523b3a570cfe9dc83e1e040d50a77f8f4deecd12c862b"
+    }
+  ],
+  "current_task_binding": {
+    "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/DOC/cleanup-complete-followup-2219/CURRENT_TASK.json",
+    "sha256": "38dd7722f10dd67c33b3d6a2eb9c9369e6fb05fca45f8d7abbd26f8795592781",
+    "previous_current_task_binding": {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/DOC/merge244-followup-2212/CURRENT_TASK.json",
+      "sha256": "51c0526d515e1a97aa7d6d546974f096c143ad3102717bb3f6af15b9371a8ab5",
+      "parent_current_task": {
+        "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/CURRENT_TASK.md",
+        "sha256": "9716a68cbd6c19bcf651f2b13c5876901f6e2b101ebf85440874f132a6e0049d",
+        "bytes": 4491
+      }
+    }
+  },
+  "additional_publication_bindings": [
+    {
+      "path": "observations/20261018T2203-ansible244.json",
+      "sha256": "049decf92ce3e7865f0702115fed5cf410350c22e21bbdc56d2a0a6b1a83c458",
+      "scope": "PR244 evidence merge only; shared17 human read and operational acceptance incomplete"
+    }
+  ],
+  "cleanup_result_binding": {
+    "path": "observations/20261018T2218-harbor-cleanup.json",
+    "sha256": "e2a3f75bff97c7f8afbdb4fa8b66e34d8dce61c40edc13e757f07600a26933bd",
+    "scope": "Only temporary4pairs cleanup complete; source2 retained pending owner; no overall acceptance"
+  },
+  "cleanup_source_binding": {
+    "path": "runtime-sources/20261018T2218/CLEANUP_PROOF.json",
+    "sha256": "8a4e21951ee579c48454695bb6a415ab6b1cf9a907b776f4b76776068ff5536d",
+    "scope": "Selected exact public receipts plus execution results and local original hash index; no credential body"
+  }
 }
