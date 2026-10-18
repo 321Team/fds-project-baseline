@@ -60,5 +60,74 @@
   "db_mon_source": "User direct console results, not independently recaptured by DOC",
   "db_mon_source_sha256": "ec38863480bba4187535c8ec8b7d3b0a7702413478d1246a8bb7ec45a921ec96",
   "etcd_status_alarm_scope": "Three status/alarm readings; no reported error/alarm per #30 comment6248602739; not full etcd integrity",
-  "authentication_or_transition_executed": false
+  "authentication_or_transition_executed": false,
+  "source_storage": {
+    "snapshot_sha256": {
+      "status": "LOCAL_ONLY_NOT_PUBLISHED",
+      "display": "로컬 보관·미공개",
+      "location_basis": "이권욱 프로젝트 작업 폴더 기준 상대경로",
+      "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/CURRENT_RESOURCE_SNAPSHOT.json",
+      "sha256": "723e9fe75f3f7a5a747e9c2537d7af937a3d059aaa646cdd90678fd59f9678b7",
+      "public_raw_url": null
+    },
+    "db_mon_source_sha256": {
+      "status": "LOCAL_ONLY_NOT_PUBLISHED",
+      "display": "로컬 보관·미공개",
+      "location_basis": "이권욱 프로젝트 작업 폴더 기준 상대경로",
+      "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/DB_MON_USER_RESULTS.json",
+      "sha256": "ec38863480bba4187535c8ec8b7d3b0a7702413478d1246a8bb7ec45a921ec96",
+      "public_raw_url": null
+    }
+  },
+  "linux_unobserved_hosts": [
+    "k8s-api-lb01",
+    "dns01",
+    "mgmt-gw01",
+    "dns02",
+    "vpn-gw01"
+  ],
+  "linux_unobserved_scope": "19:00:23~19:02:42 KST의 Linux 게스트 내부 상태 미관측. 장애·정지·접근 실패를 뜻하지 않으며 이후 상태를 판단하지 않음.",
+  "linux_scope_derivation": {
+    "basis": "기존 18대 대상 목록과 고정 CURRENT_RESOURCE_SNAPSHOT의 결속 원본에서 확인된 게스트 13대의 차집합",
+    "inventory": {
+      "local_project_relative_path": "deliverables/o01-scope-finalization-20261015/safe-return-inventory-20261018/TARGETS.json",
+      "bytes": 39447,
+      "sha256": "844d5bcc8c54d3f56ea55e4723de9f7d020e4c76ef890e891f7c836c0821eec4",
+      "storage": "LOCAL_ONLY_NOT_PUBLISHED",
+      "purpose": "Historical identity/scope only; previous shutdown plan is not reactivated"
+    },
+    "observed_guest_hosts": [
+      "k8s-control01",
+      "k8s-control02",
+      "k8s-control03",
+      "k8s-worker01",
+      "k8s-worker02",
+      "k8s-worker03",
+      "harbor01",
+      "ansible01",
+      "db01",
+      "monitor01",
+      "edge01",
+      "cicd-runner01",
+      "egress-proxy01"
+    ],
+    "server01_vm_list_only_guests": [
+      "k8s-api-lb01",
+      "dns01",
+      "mgmt-gw01"
+    ],
+    "server01_vm_list_note": "SERVER01 vmrun에 위 3대 VM 실행 목록은 존재한다. 게스트 OS·서비스 내부 상태 관측과 구분하며 Linux 13/18 집계에 더하지 않는다.",
+    "server01_vm_list_source": {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/WINDOWS_CURRENT_VM_READ.json",
+      "bytes": 586,
+      "sha256": "948def27bc19b3ddd6b3d1b4eb9f5f450cdc58823ad667b879238f06a3a61366",
+      "storage": "LOCAL_ONLY_NOT_PUBLISHED"
+    }
+  },
+  "documentation_supplement": {
+    "prepared_at_kst": "2026-10-18T20:17:39.769306+09:00",
+    "review_url": "https://github.com/321Team/fds-project-baseline/pull/183#pullrequestreview-5562637138",
+    "scope": "원 관측 구간·수치·해시를 유지한 출처 보관 및 범위 설명 보충; 새 서버 관측 없음",
+    "later_harbor_runtime": "NOT_INCLUDED_PENDING_CENTRAL_SOURCE_BINDING"
+  }
 }

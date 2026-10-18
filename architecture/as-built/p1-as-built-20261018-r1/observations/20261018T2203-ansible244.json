@@ -1,0 +1,235 @@
+{
+  "record_kind": "MERGE_AND_EXISTING_RUNTIME_LINKAGE_NOT_NEW_EXECUTION",
+  "prepared_at_kst": "2026-10-18T22:09:40.796752+09:00",
+  "publication": {
+    "url": "https://github.com/321Team/fds-project-evidence/pull/244",
+    "head": "820e562347c452dec9cc93657494250a4ee452ed",
+    "base": "417dbdec9f0dade9260f95c3894c7df6bc519722",
+    "state": "closed",
+    "merged": true,
+    "merged_at": "2026-10-18T13:02:57Z",
+    "merge_commit": "b46e3e56584980c8e79ed186a91829f7255edbd8"
+  },
+  "review": {
+    "id": 5562856473,
+    "url": "https://github.com/321Team/fds-project-evidence/pull/244#pullrequestreview-5562856473",
+    "head": "820e562347c452dec9cc93657494250a4ee452ed",
+    "state": "APPROVED",
+    "author": "hayeounglee",
+    "submitted_at": "2026-10-18T11:53:03Z",
+    "body": "@GWONUK exact HEAD `820e562`를 기준으로 원본 바이트·실행 결과·범위 문구를 대조했습니다. 차단 사항이 없어 **증적 편입 병합에 대해 승인**합니다. 공유 원본 17개 사람 직접 열람 회신, #9 운영 인수, NTP 전체 AC 승인은 아닙니다.\n\n**재현 대조 (STATIC, sparse clone 기준)**\n\n| 항목 | 결과 |\n|---|---|\n| 상위 `SHA256SUMS` | `40bc1fe4…1c74`, PR 본문과 일치. 170/170 해시 일치, 목록 밖 파일은 SHA256SUMS 자신뿐 |\n| OS/DNS `SHA256SUMS` | `533b5083…821b` 일치. 49/49 |\n| `REGISTRY_SHA256SUMS` | 해당 행만 `58a57994…` → `40bc1fe4…` 갱신, 실제 파일 해시와 일치 |\n| `PUBLICATION_COPY_MAP` | 상위 118/118, OS/DNS 45/45 해시 일치 |\n| 민감정보 정적 패턴 | 개인키·GitHub/AWS 토큰·JWT·password/secret/token 할당 0건 |\n\n**실행 원문 대조**\n\n| 주장 | 원문 |\n|---|---|\n| legacy 후보 2.21.3 / 복귀 2.16.19 CLI 각 4 rc0 | `cli/*.rc` 8개 모두 0, `ansible [core 2.21.3]` / `[core 2.16.19]` 출력 확인 |\n| legacy precheck rc2, PASS 아님 | `PRECHECK_RC=2`, PLAY RECAP 6대 모두 failed=1 |\n| paired 6대 changed/unreachable/failed 0 | PLAY RECAP control01 ok23, 나머지 ok22, 전부 changed0·unreachable0·failed0. `RESULT.json` precheck_rc 0, source/runtime-vars unchanged |\n| OS/DNS 66명령 rc0, DNS 질의 30건 | 6대 `stdout.json` 합계 66건, rc≠0 0건, DNS 조회 명령 30건 |\n| 범위 | `SCOPE=NTP_PRECHECK_ONLY_NO_APPLY_NO_ROLLBACK`. 생략된 100ms·client source·upstream assert와 \"모든 쓰기 0 아님\"도 README에 그대로 적혀 있음 |\n\n**참고 (병합 차단 아님, 후속 갱신 때 반영 권장)**\n\n1. **실행 source와 main의 관계를 한 줄 적어 주세요.** 두 회차 source `0d58598`은 infra-ansible main(= PR87 merge `b3557df`)보다 20커밋 앞선 조상입니다. 그 사이 non-test 변경은 shutdown 도구·CI queue alert·`hbr.yml` 등이고, NTP/DNS role·precheck playbook·guard 변경은 없음을 확인했습니다. README에 \"main 대비 20커밋 이전, NTP/DNS 경로 변경 없음\"이 있으면, 이 결과를 현재 main의 결과로 읽어도 되는지 독자가 따로 확인하지 않아도 됩니다.\n2. **로컬 작업 경로.** `provenance/PAIRED_IDENTITY_CHECK.json` 등에 `C:\\Users\\soldesk\\.codex\\…` 형태의 작업 PC 경로가 남아 있습니다. 비밀값은 아니고 Private 저장소이므로 그대로 두어도 됩니다. 추적 메타데이터라는 기존 설명 범위로 이해했습니다.\n3. **상위 README 첫 줄의 상태 표현.** \"Git 게시·독립 리뷰·병합은 미실행\"은 병합 후에는 사실과 달라집니다. 하위 PREPARATION_ONLY처럼 작성 시점 상태로 보존하려는 의도라면, \"작성 시점 기준\"이라고 한 단어만 덧붙이면 오해가 없겠습니다.\n\n이번 리뷰는 저장소 안 원문의 STATIC 대조이며 서버 재조회·재실행은 하지 않았습니다. **이 리뷰는 공유 원본 17개 직접 열람 회신을 대신하지 않습니다.** 해당 항목은 미완료로 유지합니다.\n\n— 이하영 · AI 사용: CLAUDE_ASSISTED\n"
+  },
+  "ci": {
+    "count": 1,
+    "head": "820e562347c452dec9cc93657494250a4ee452ed",
+    "conclusion": "SUCCESS",
+    "url": "https://github.com/321Team/fds-project-evidence/actions/runs/39123393768/job/117663442933"
+  },
+  "scope": "EVIDENCE_PUBLICATION_ONLY",
+  "issue9_record": {
+    "url": "https://github.com/321Team/infra-ansible/issues/9#issuecomment-6250250401",
+    "created_at": "2026-10-18T13:03:54Z",
+    "updated_at": "2026-10-18T13:03:54Z"
+  },
+  "runtime": {
+    "legacy_time_kst": "2026-10-18 19:27:45~55",
+    "legacy_selected_cli4_rc": 0,
+    "legacy_precheck_rc": 2,
+    "legacy_return_cli4_rc": 0,
+    "paired_span_kst": [
+      "2026-10-18T19:56:36.013445+09:00",
+      "2026-10-18T19:56:52.874734+09:00"
+    ],
+    "paired_rc": 0,
+    "paired_targets": 6,
+    "paired_changed_unreachable_failed_each": 0,
+    "same_configuration_baseline_files": 18,
+    "temporary_parser_and_evidence_writes": true,
+    "os_dns_window_kst": [
+      "2026-10-18T20:19:10.747250+09:00",
+      "2026-10-18T20:19:14.502430+09:00"
+    ],
+    "os_dns_targets": 6,
+    "os_dns_commands_rc0": 66,
+    "dns_queries_rc0": 30,
+    "same_hostname_machine_boot_as_paired": true,
+    "configuration_service_package_changes": 0
+  },
+  "evidence": {
+    "readme": "https://github.com/321Team/fds-project-evidence/blob/b46e3e56584980c8e79ed186a91829f7255edbd8/evidence/P1-ANS-01/issue9-engine-optin-precheck-20261018/README.md",
+    "paired_analysis": "https://github.com/321Team/fds-project-evidence/blob/b46e3e56584980c8e79ed186a91829f7255edbd8/evidence/P1-ANS-01/issue9-engine-optin-precheck-20261018/analysis/paired.json",
+    "os_dns_analysis": "https://github.com/321Team/fds-project-evidence/blob/b46e3e56584980c8e79ed186a91829f7255edbd8/evidence/P1-ANS-01/issue9-engine-optin-precheck-20261018/current-os-dns-20261018/analysis/CURRENT_OS_DNS.json",
+    "top_manifest_sha256": "40bc1fe47476775eca86de58c05f8871b63530a06e59d1a3613b9d3d55841c74",
+    "top_manifest_entries": 170,
+    "os_dns_manifest_sha256": "533b50832dea471d8822b12e047b0d6553b63a9df4ddb320e6cdbaee682a821b",
+    "os_dns_manifest_entries": 49,
+    "DOC_check_scope": "Manifest raw text SHA and three local analysis bytes against exact merged manifest; not a new 170-file review"
+  },
+  "source_main_relationship": {
+    "at_kst": "2026-10-18T22:09:40.796752+09:00",
+    "source": "0d58598d8a3ce77ccd7eaa9e1dfba820b0a436ea",
+    "main": "b3557dfb7691b9904bd84701da70f14b4ee0d485",
+    "compare_url": "https://github.com/321Team/infra-ansible/compare/0d58598d8a3ce77ccd7eaa9e1dfba820b0a436ea...b3557dfb7691b9904bd84701da70f14b4ee0d485",
+    "source_is_ancestor": true,
+    "main_ahead_commits": 20,
+    "diff_file_count": 68,
+    "complete_trees": true,
+    "protected_file_count": 25,
+    "protected_git_blobs_equal": [
+      {
+        "path": "library/fds_ntp_gnp_followup.py",
+        "source_blob": "c0067b41cd35d816c65e530aaec116b9c938ce69",
+        "main_blob": "c0067b41cd35d816c65e530aaec116b9c938ce69"
+      },
+      {
+        "path": "library/fds_ntp_migration.py",
+        "source_blob": "11a7dec1083cf6099d5a8a78da0d9fbae8be7d2d",
+        "main_blob": "11a7dec1083cf6099d5a8a78da0d9fbae8be7d2d"
+      },
+      {
+        "path": "library/fds_ntp_probe.py",
+        "source_blob": "d67137e049ed1eeb747ed980ce218736ab290c1c",
+        "main_blob": "d67137e049ed1eeb747ed980ce218736ab290c1c"
+      },
+      {
+        "path": "module_utils/fds_ntp_gnp_contract.py",
+        "source_blob": "6bad096ba95f9d9806c7ab034d9e1255cd42460e",
+        "main_blob": "6bad096ba95f9d9806c7ab034d9e1255cd42460e"
+      },
+      {
+        "path": "module_utils/fds_ntp_hep_kernel.py",
+        "source_blob": "91e65ef0da6c1966bceaba69d4ce78c9d80b1622",
+        "main_blob": "91e65ef0da6c1966bceaba69d4ce78c9d80b1622"
+      },
+      {
+        "path": "module_utils/fds_ntp_policy.py",
+        "source_blob": "aaa2f73c4e464300b6fbbaf283467cdc380b7707",
+        "main_blob": "aaa2f73c4e464300b6fbbaf283467cdc380b7707"
+      },
+      {
+        "path": "playbooks/precheck.yml",
+        "source_blob": "ca56a322fce6d09f330e81d67cdc5a5ece4dc4b9",
+        "main_blob": "ca56a322fce6d09f330e81d67cdc5a5ece4dc4b9"
+      },
+      {
+        "path": "roles/dns_resolver/tasks/main.yml",
+        "source_blob": "ccde817809c9ff3bcc1f3f7dcbbfdfb11bcee279",
+        "main_blob": "ccde817809c9ff3bcc1f3f7dcbbfdfb11bcee279"
+      },
+      {
+        "path": "roles/dns_resolver/tasks/session-bind.yml",
+        "source_blob": "9855ce6ab288da111b95e8b4b85d0b1a6356991c",
+        "main_blob": "9855ce6ab288da111b95e8b4b85d0b1a6356991c"
+      },
+      {
+        "path": "roles/dns_resolver/tasks/session-rollback.yml",
+        "source_blob": "eda86a173d9ea5d9d9cf7c3a9fdceeadf3ca9aa1",
+        "main_blob": "eda86a173d9ea5d9d9cf7c3a9fdceeadf3ca9aa1"
+      },
+      {
+        "path": "roles/dns_resolver/tasks/verify.yml",
+        "source_blob": "f4c91e649456857bd61bef4f848a441d09a79558",
+        "main_blob": "f4c91e649456857bd61bef4f848a441d09a79558"
+      },
+      {
+        "path": "roles/ntp_source/tasks/_check_state_dir.yml",
+        "source_blob": "56b8ea1ff3851fe2cea15d18f244291e6304debc",
+        "main_blob": "56b8ea1ff3851fe2cea15d18f244291e6304debc"
+      },
+      {
+        "path": "roles/ntp_source/tasks/_followup_gate.yml",
+        "source_blob": "cedf3196dc2519899961295d8f9cdcf0a478c34a",
+        "main_blob": "cedf3196dc2519899961295d8f9cdcf0a478c34a"
+      },
+      {
+        "path": "roles/ntp_source/tasks/_legacy.yml",
+        "source_blob": "7fd85bfecb2f231554c975e38ebdf17f7f50fe45",
+        "main_blob": "7fd85bfecb2f231554c975e38ebdf17f7f50fe45"
+      },
+      {
+        "path": "roles/ntp_source/tasks/_migration.yml",
+        "source_blob": "dd011b58ee44796593abfa2fd44fe96f5a63c322",
+        "main_blob": "dd011b58ee44796593abfa2fd44fe96f5a63c322"
+      },
+      {
+        "path": "roles/ntp_source/tasks/_read_original.yml",
+        "source_blob": "746ed63c3a2e3ff4d672b96af54ce88dd04e382d",
+        "main_blob": "746ed63c3a2e3ff4d672b96af54ce88dd04e382d"
+      },
+      {
+        "path": "roles/ntp_source/tasks/_restore_dropin.yml",
+        "source_blob": "28c0e012517f6b2ffae1c740634e356a435eda7f",
+        "main_blob": "28c0e012517f6b2ffae1c740634e356a435eda7f"
+      },
+      {
+        "path": "roles/ntp_source/tasks/_restore_pair.yml",
+        "source_blob": "f02b996d2e4423915e6433f4438e6e0dc37e5505",
+        "main_blob": "f02b996d2e4423915e6433f4438e6e0dc37e5505"
+      },
+      {
+        "path": "roles/ntp_source/tasks/_validate_state.yml",
+        "source_blob": "8dd605f9d25ffa2663d8657c243549a64063817f",
+        "main_blob": "8dd605f9d25ffa2663d8657c243549a64063817f"
+      },
+      {
+        "path": "roles/ntp_source/tasks/main.yml",
+        "source_blob": "0d81b758ab5b5c585e3e075d78173f2626b7174f",
+        "main_blob": "0d81b758ab5b5c585e3e075d78173f2626b7174f"
+      },
+      {
+        "path": "roles/ntp_source/tasks/verify.yml",
+        "source_blob": "ef44faa1e58d0eb0125ac89575a53b7d5feb3bca",
+        "main_blob": "ef44faa1e58d0eb0125ac89575a53b7d5feb3bca"
+      },
+      {
+        "path": "roles/ntp_source/templates/chrony-client-source.conf.j2",
+        "source_blob": "5f1628b1fffcd57ae827e1ae13d5a824838234db",
+        "main_blob": "5f1628b1fffcd57ae827e1ae13d5a824838234db"
+      },
+      {
+        "path": "roles/ntp_source/templates/chrony-source-allow.conf.j2",
+        "source_blob": "35e9ee5961b75866bb08ab61802c11be8dfd1702",
+        "main_blob": "35e9ee5961b75866bb08ab61802c11be8dfd1702"
+      },
+      {
+        "path": "scripts/cr-p1-ntp-01-01-run.sh",
+        "source_blob": "be0ae5feb43b059fe38ea4d29cbec82b67696b63",
+        "main_blob": "be0ae5feb43b059fe38ea4d29cbec82b67696b63"
+      },
+      {
+        "path": "scripts/lib/ansible-engine.sh",
+        "source_blob": "235759df469aed4c46becae420a0fb4d4afd9735",
+        "main_blob": "235759df469aed4c46becae420a0fb4d4afd9735"
+      }
+    ],
+    "changed_test_files": [
+      "tests/ntp_source/test_migration.py",
+      "tests/ntp_source/test_module_transport.py",
+      "tests/ntp_source/test_ntp_source.py",
+      "tests/ntp_source/test_rollout_serial.py",
+      "tests/ntp_source/test_wrapper.py",
+      "tests/test_ntp_harness_inputs.py"
+    ],
+    "conclusion": "NTP/DNS role, precheck, wrapper and engine-helper paths unchanged; repository as a whole differs. No claim that main was executed or globally revalidated."
+  },
+  "review_followups": {
+    "1": "Direct source-main diff and relevant Git blobs checked; scoped equivalence documented, tests differ",
+    "2": "Existing local PC paths retained as provenance metadata; not credentials or public access URLs",
+    "3": "Evidence README unpublished/review/merge-pending wording treated as preparation-time state; actual22:02 merge linked here. Evidence repository README itself was not edited by DOC."
+  },
+  "limits": [
+    "Child-only candidate engine use, no global engine change",
+    "No service apply/rollback or full NTP AC acceptance",
+    "Shared17 human direct-read reply and whole issue9 operational acceptance remain incomplete",
+    "No additional approval requirement or new test gate"
+  ],
+  "latest_cleanup_central_relay": {
+    "old_deadline_kst": "2026-10-18T21:51:59+09:00",
+    "old_cleanup_v1_executed": false,
+    "new_cleanup_code_review": "IN_PROGRESS_AS_RELAYED",
+    "temporary_pairs_cleanup_complete": false,
+    "source2": "PROTECTED_PRESERVATION_DISPOSITION_INCOMPLETE",
+    "source": "Central delegation; no new cleanup result supplied or server read by DOC"
+  },
+  "runtime_calls_by_DOC": 0
+}

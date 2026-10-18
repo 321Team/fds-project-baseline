@@ -1,0 +1,39 @@
+{
+  "source_kind": "SELECTED_FIELDS_OF_APP_READY_JSON_NOT_FULL_ORIGINAL",
+  "source": {
+    "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/APP/READY.json",
+    "sha256": "2a9aa881179b5bc69e7d7aa099bf9b7b503a4fe50b9d2775d14a56d890daf923",
+    "bytes": 5272,
+    "storage": "LOCAL_ONLY_NOT_PUBLISHED",
+    "display": "로컬 보관·미공개"
+  },
+  "at_kst": "2026-10-18T20:48:30.538828+09:00",
+  "role": "APP",
+  "status": "MON7_RECOVERY_OBSERVED_SAME_UID_DIGEST_RESTART_DELTAS_RETAINED",
+  "completed_mon_observation": [
+    "MON7 actual20:47 one-read: sameUID/imageID7, Running/Ready/started7; node-exporter+1 each, conditionalUIDevents3; GET10 rc0"
+  ],
+  "next_exact_execution": "None queued. Central consume MON7 recovery observation and independent Harbor cleanup result; later selected work needs its own current scope.",
+  "mon_handoff": {
+    "path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/APP/mon-after-transition-2045/HANDOFF.json",
+    "sha256": "ca41bf7ed0054fd16b05513ac9d59a55f91782006c761443572fd965934474fb",
+    "bytes": 1830,
+    "storage": "LOCAL_ONLY_NOT_PUBLISHED",
+    "display": "로컬 보관·미공개"
+  },
+  "central_acceptance": {
+    "at_kst": "2026-10-18T20:49:29.945465+09:00",
+    "status": "MON7_BOUNDED_RUNTIME_RECOVERY_CENTRALLY_VERIFIED",
+    "observation": "2026-10-18T20:47:03.126600+09:00",
+    "raw_source_hash": "7cfd83cd1aff9d70e7f29db134d0c0c62ca6af02e19ff074dde787c246f1d3b6",
+    "result_sha256": "400e3c198c6c47bb106504417ed43e6776f03a3174d22e31344d874f1603c837",
+    "file_hashes_checked": 10,
+    "queries_rc0": 10,
+    "same_uid_ready_started_image_matches": 7,
+    "node_exporter_restart_delta_each": 1,
+    "runtime_mutations": 0,
+    "mon_final_acceptance": false,
+    "fresh_pull_for_all7_claimed": false,
+    "sustained_availability_claimed": false
+  }
+}
