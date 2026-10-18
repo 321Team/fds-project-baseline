@@ -1,0 +1,30 @@
+{
+  "at_kst": "2026-10-16T17:41:38.303726+09:00",
+  "status": "READ_ONLY_CORE_METADATA_ACCEPTED_BUILD_PROVENANCE_UNCONFIRMED",
+  "source": "\\\\?\\C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\p1-harbor-review-publication-20261015\\effect-contract-remediation-20261016\\build-and-expiry-readiness\\harbor01-metadata-correction\\metadata-one-attempt",
+  "receipt_sha256": "83f5e51cbdb7f1343dc9e470ebcc43a9f406bb5dc04975a5535d6ab835711680",
+  "stdout_sha256": "5167da6460489e8388f26f9fef66b9c0ec37e93fc3ffd25161cc547c07151283",
+  "core": {
+    "config_image": "goharbor/harbor-core:v2.13.1",
+    "container_id": "2a7a49699e246e0d86a3e81e37fc506ff6e2d0cab4d4be30ec77b1e5d97d9cf2",
+    "image_id": "sha256:a22b58594cea54a78d1c670a81b9dfa3c5af8b4bdd1f89750fdf1c5876c72eab"
+  },
+  "image": {
+    "org.label-schema.build-date": "",
+    "org.label-schema.vcs-ref": "",
+    "org.label-schema.version": "",
+    "org.opencontainers.image.created": "",
+    "org.opencontainers.image.revision": "",
+    "org.opencontainers.image.source": "",
+    "org.opencontainers.image.version": "",
+    "repo_digests": [
+      "goharbor/harbor-core@sha256:a22b58594cea54a78d1c670a81b9dfa3c5af8b4bdd1f89750fdf1c5876c72eab"
+    ]
+  },
+  "boot_id": "7de1ad2b-b730-488e-a47b-02be9fac5646",
+  "remote_api_calls": 0,
+  "server_changes": 0,
+  "auth_success_claimed": false,
+  "health_claimed": false,
+  "image_digest_is_not_source_build_proof": true
+}

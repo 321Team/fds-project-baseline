@@ -1,0 +1,184 @@
+{
+  "at_kst": "2026-10-16T17:45:09.355360+09:00",
+  "status": "READINESS_EVIDENCE_ACCEPTED_RUNTIME_HOLD",
+  "binding_sha256": "33d176a74542ee167443ecbd5faa3eed67a54b793903848d50cf18078c17ef38",
+  "files_verified": [
+    {
+      "path": "bind_saved_evidence.py",
+      "bytes": 8958,
+      "sha256": "acbd0363b65cb55fa923b2c0caf90f3dc5a6c54f8461493ad504bef804f989e6"
+    },
+    {
+      "path": "BUILD_AND_SERIALIZER_FINDINGS.json",
+      "bytes": 14419,
+      "sha256": "e7c78fd0393171d7470252392d4f1bcf0c6a93d486cec66237afdaa408283553"
+    },
+    {
+      "path": "collect_metadata_once.py",
+      "bytes": 2750,
+      "sha256": "87dac0e0c0c32749305ec6521ccafcd7affd1b13486a7949abff481caed43fc8"
+    },
+    {
+      "path": "CURRENT_TASK.md",
+      "bytes": 2997,
+      "sha256": "246b073c89b5db2061ba426a3824fdf5f2a9574c2e843b79ff4c694df2ff4932"
+    },
+    {
+      "path": "EXPIRY_OPTIONS.md",
+      "bytes": 5088,
+      "sha256": "308fbf3c16b5e31e52fc9a4408141ba1e3b62d17417d6cd85afd659d5da710e3"
+    },
+    {
+      "path": "fetch_build_sources.py",
+      "bytes": 1845,
+      "sha256": "eaf22b0b16768c53ca29f33bf538c3a3e7ed865aca83904ace1fd27a8c0050c3"
+    },
+    {
+      "path": "finalize_readiness.py",
+      "bytes": 6247,
+      "sha256": "15992442d275200420cd13c5d677851560a33e888480d796ac29835285d7c6fb"
+    },
+    {
+      "path": "FINDINGS.md",
+      "bytes": 7858,
+      "sha256": "a520147a415e7dd8afb3d4e24b507ceaea419e6aac19170cfd65f709b4f87576"
+    },
+    {
+      "path": "HANDOFF.md",
+      "bytes": 3076,
+      "sha256": "1dc0fc381ff92b6e8fb78cf0bf8a3fd723d19e02f15fa8ff014f4e29e03f40c3"
+    },
+    {
+      "path": "harbor01-metadata-correction/collect_metadata_once.py",
+      "bytes": 2776,
+      "sha256": "59a95e259bedfd9e85246654faca75ee3c667d944c30d29d89b5defc1a87cf33"
+    },
+    {
+      "path": "harbor01-metadata-correction/collect_metadata_once.py.target-only.diff",
+      "bytes": 1888,
+      "sha256": "52f6bf7c97bbddb8e9ab9a52600dcead2a8e0b097651cade7ccfe7fcdfd559d6"
+    },
+    {
+      "path": "harbor01-metadata-correction/metadata-one-attempt/receipt.json",
+      "bytes": 1756,
+      "sha256": "83f5e51cbdb7f1343dc9e470ebcc43a9f406bb5dc04975a5535d6ab835711680"
+    },
+    {
+      "path": "harbor01-metadata-correction/metadata-one-attempt/started.json",
+      "bytes": 1463,
+      "sha256": "698609f41d58e1247c3ec306654fc8a6fba73735eb190849686fc29ad59a69b4"
+    },
+    {
+      "path": "harbor01-metadata-correction/metadata-one-attempt/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "harbor01-metadata-correction/metadata-one-attempt/stdout.json",
+      "bytes": 2559,
+      "sha256": "5167da6460489e8388f26f9fef66b9c0ec37e93fc3ffd25161cc547c07151283"
+    },
+    {
+      "path": "harbor01-metadata-correction/metadata_read_once.py",
+      "bytes": 2466,
+      "sha256": "24b80318a1867bdf16640bb9ec29ff3a0b3c183fe0cfec1be8675a36fd741062"
+    },
+    {
+      "path": "harbor01-metadata-correction/metadata_read_once.py.target-only.diff",
+      "bytes": 441,
+      "sha256": "5facfb4eabb0d9a09a122330dc002ec710e32bdc2bb04d6cc98d4b59fa4cbd38"
+    },
+    {
+      "path": "HISTORICAL_SCOPE_FINDINGS.json",
+      "bytes": 36587,
+      "sha256": "e7286f13242ac30f0e2dbe4429dd4a4f12ca45b5ee29ad6c2993a045fce3d74a"
+    },
+    {
+      "path": "LOCAL_ARTIFACT_CHECK.json",
+      "bytes": 245,
+      "sha256": "78cb50d39acd92e16bc4ad7c506b1aa57ba8ff654eeba4fdf108ce003d3a92d0"
+    },
+    {
+      "path": "metadata-one-attempt/receipt.json",
+      "bytes": 1762,
+      "sha256": "5aeeff3cf90a57aada0c77da10166e1b1e8a4847f1a18f739802f39cc3a27cdc"
+    },
+    {
+      "path": "metadata-one-attempt/started.json",
+      "bytes": 1470,
+      "sha256": "b4f92d90becd52ac6b231e4a3aa0c6125bd5cdfe5da1b725c5669be579d743fc"
+    },
+    {
+      "path": "metadata-one-attempt/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "metadata-one-attempt/stdout.json",
+      "bytes": 282,
+      "sha256": "35ce2db5bc9ef5a7e39b3641f268952a6bb181ccd57500b2bed64ee97bd55f2c"
+    },
+    {
+      "path": "metadata_read_once.py",
+      "bytes": 2431,
+      "sha256": "40ed343fc16648635fbadf55165fb113d1e4304ee0c46a7402759fc585bd0bce"
+    },
+    {
+      "path": "official-build/core.Dockerfile",
+      "bytes": 837,
+      "sha256": "a5d4c49b2d7e5bc38d040713e217877b236d630dca2aba185edbf8a95c89bf12"
+    },
+    {
+      "path": "official-build/dockerhub-tag.json",
+      "bytes": 819,
+      "sha256": "21bfd1112f88a364430cac00247eed5af7e07fb4f431bec97ec63c652bd505e1"
+    },
+    {
+      "path": "official-build/Makefile",
+      "bytes": 24180,
+      "sha256": "cc545f19c1fd25280fc7ba56c1079fa30e6efe2411a83242588e7e5115dec3ad"
+    },
+    {
+      "path": "official-build/photon.Makefile",
+      "bytes": 11487,
+      "sha256": "ec30a4dbb802e93c3a02a8c1f0e250c363cdeece7e589d025d33961092508837"
+    },
+    {
+      "path": "official-build/SOURCE_INDEX.json",
+      "bytes": 2818,
+      "sha256": "866544d484c6d1d61e870bf9e24259cea18b2aca78937b49a3528b37050b5563"
+    },
+    {
+      "path": "official-build/swagger.Dockerfile",
+      "bytes": 163,
+      "sha256": "f90ac0a1284c4c2b10463964582f76ce3eb4a6e520325c7f95be5d7b11078c72"
+    },
+    {
+      "path": "PARENT_PRESERVATION.json",
+      "bytes": 449,
+      "sha256": "04951ea5c8750e8482fe73f184053c304717cc1754bd50ce5f382f74c5c97dd8"
+    },
+    {
+      "path": "SCOPE_AND_CHECKS.json",
+      "bytes": 1627,
+      "sha256": "f940a12b5d8f1f0612f8f71d2d9a443275b2c00ea63903f7da1e05ebc33d92d7"
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "bytes": 11049,
+      "sha256": "d18fe6ad349b02ee6aaa9d2fcacf7762868a4463fc37949abed5887e28db097f"
+    }
+  ],
+  "core_metadata_central": "HARBOR_CORE_METADATA_CENTRAL_20261016.json",
+  "facts": [
+    "Current core image metadata observed at17:38KST",
+    "Historical DB effect empty vs GET missing documented",
+    "Current source/build/generated serializer relationship remains unproven",
+    "Recorded ID2 expiry passed; old rollback not assumed available"
+  ],
+  "runtime_go": false,
+  "server_changes": 0,
+  "new_admin_api_calls": 0,
+  "profile_anchor_created": false,
+  "next": "Exact build/serializer/profile proof or equivalently scoped verification; current consumer impact and post-expiry recovery plan; diagnostic helper/context delivery linkage"
+}

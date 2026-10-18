@@ -1,0 +1,50 @@
+{
+  "checked_at_kst": "2026-10-15T20:31:14+09:00",
+  "repositories": [
+    {
+      "repo": "fds-project-baseline",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351"
+    },
+    {
+      "repo": "fds-project-evidence",
+      "commit": "f0279ed4af8071917bae7d0de10ff553d4394d6e"
+    },
+    {
+      "repo": "fds-project-architecture",
+      "commit": "dd90efc09d5ab16e170499374736df97c7ea5559"
+    },
+    {
+      "repo": "infra-db",
+      "commit": "57f050eff31bdbfb05d6e75327d296047f89b1f0"
+    },
+    {
+      "repo": "infra-monitoring",
+      "commit": "0dd0235b07d44ba7965490e3808e0a67a3bd903b"
+    },
+    {
+      "repo": "infra-cicd",
+      "commit": "fddc76e1c261cd938f06211b7ed035fdcb32e606"
+    },
+    {
+      "repo": "infra-ansible",
+      "commit": "fd5c56624256700e8c2e76f17ebd976b6b553b11"
+    },
+    {
+      "repo": "infra-kubernetes",
+      "commit": "e60e022333a51a9a1690649ef170c0bda92ad9b9"
+    },
+    {
+      "repo": "infra-harbor-trivy",
+      "commit": "35f3c24314e2cac0e9377c5d3484967c92f6c79c"
+    },
+    {
+      "repo": "infra-lb",
+      "commit": "070c8883fb692e5b82d2ab48b0a71837abc43da1"
+    },
+    {
+      "repo": "fds-msa",
+      "commit": "c9c42cc1cc0c135320b81480984941f2a118f592"
+    }
+  ],
+  "errors": []
+}

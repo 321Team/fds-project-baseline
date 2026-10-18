@@ -1,0 +1,227 @@
+{
+  "at_kst": "2026-10-16T17:47:47.033965+09:00",
+  "status": "LOCAL_HANDOFF_ACCEPTED_NO_NEW_RUNTIME_OR_PUBLICATION",
+  "binding_sha256": "215d594ab31e690f11f80a71f0dcd030b9024fc1e2b6c1ca0a7a20e07d6fc78b",
+  "verified_files": [
+    {
+      "path": "candidate-head.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "candidate-head.stdout",
+      "sha256": "56580ef00e1db58ef6b9f975f64bce39b84969d732b70ba1228640729a162f89",
+      "bytes": 41
+    },
+    {
+      "path": "candidate-local_refs.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "candidate-local_refs.stdout",
+      "sha256": "a119f5799646a3d17d9afa92fde7f647c534bb00e4917c4e56e8c279b79cce7d",
+      "bytes": 88
+    },
+    {
+      "path": "candidate-status.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "candidate-status.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "candidate-tree.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "candidate-tree.stdout",
+      "sha256": "7b1916c472be7f3da670cb7451af401c53b74a0a972e6675982a51834d83bfab",
+      "bytes": 41
+    },
+    {
+      "path": "collect_local_basis.py",
+      "sha256": "e2ea255931c74d8ae1f34f7025b36bfbda42f5f7753a645d0aef7f9bb7045923",
+      "bytes": 7649
+    },
+    {
+      "path": "CURRENT_TASK.md",
+      "sha256": "8a41c657a6eda2381198a154b8e75392c311994cf73d87f6487d75cf5c779416",
+      "bytes": 1256
+    },
+    {
+      "path": "DOCUMENT_VERIFICATION.json",
+      "sha256": "21847c8cd53dd727c2441cef046333eb8f2320768fe1661c4b9734d19e1e7c56",
+      "bytes": 739
+    },
+    {
+      "path": "EXACT_INPUTS_AND_AC.json",
+      "sha256": "15d0c570b3048cd63093b47c4f54575e9b5abcb1147ef4a8dffe1b017bd5943d",
+      "bytes": 22559
+    },
+    {
+      "path": "finalize_document_only.py",
+      "sha256": "92bf5b65ad3ac44317ccca8a66bfdbdffc1344053d3ec3ef691a2110ead9d2df",
+      "bytes": 4105
+    },
+    {
+      "path": "finish_handoff.py",
+      "sha256": "68339517691043fe1993ad69d80f00f310c13b3a4645ca817330631afdc2f5cd",
+      "bytes": 16045
+    },
+    {
+      "path": "IMPACT_ROWS.json",
+      "sha256": "a06df3bde40e23decda8fab1d6a224da4e94fe273df56b2d4b744f884a609117",
+      "bytes": 2437
+    },
+    {
+      "path": "ISSUE9_AC_EXCERPT.json",
+      "sha256": "366577d5d6e2dfca64f0812e6df98d3ef68b96d45cb283ceb4158229fb362680",
+      "bytes": 3964
+    },
+    {
+      "path": "LOCAL_GIT_READS.json",
+      "sha256": "c5861be3d5620d07d56871436c0d727106b5f547a6c536a1b9f67b7e43be3edf",
+      "bytes": 8931
+    },
+    {
+      "path": "LOCAL_SOURCE_STATE.json",
+      "sha256": "10d6841b1d0c9fe04859b5f5934b1a1a296c9f5b271184ad63ac9959705b4b86",
+      "bytes": 9074
+    },
+    {
+      "path": "ONE_PAGE_HANDOFF.md",
+      "sha256": "e68e599658c4d24acd8a2b1310dfc0dfeee482e57de026ebb501a762035c52c7",
+      "bytes": 7319
+    },
+    {
+      "path": "OPERATING_INPUTS_LAST_OBSERVED.json",
+      "sha256": "9bf95ab9e1626c9721f19ce6ca4fa128d929460095e7ba7cc15951722d338992",
+      "bytes": 10261
+    },
+    {
+      "path": "operating_readiness_checkout-head.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "operating_readiness_checkout-head.stdout",
+      "sha256": "f52ed0bf60becf05514b228d8f3a0b58db75f6a2c90adca59499a15813c82c1f",
+      "bytes": 41
+    },
+    {
+      "path": "operating_readiness_checkout-local_refs.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "operating_readiness_checkout-local_refs.stdout",
+      "sha256": "a7d2a9f16fc2996b6bcf2d17df22d5a85b334060feb254b9c1dc74de463034e6",
+      "bytes": 7209
+    },
+    {
+      "path": "operating_readiness_checkout-status.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "operating_readiness_checkout-status.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "operating_readiness_checkout-tree.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "operating_readiness_checkout-tree.stdout",
+      "sha256": "6ca7f6a79203a4c6962caa2fc38ddc81199174076e4521657a469def8db7e597",
+      "bytes": 41
+    },
+    {
+      "path": "source_identity.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "source_identity.stdout",
+      "sha256": "3782fe6726d01988c6afa3dc5afd952d9bb6f804d91f050571a611c893f16f02",
+      "bytes": 231
+    },
+    {
+      "path": "SOURCE_REFERENCES.json",
+      "sha256": "1a92f0d2890236f8333836885a3273b2ea02e02a67f1b8006bffec20d9bffdd0",
+      "bytes": 8157
+    },
+    {
+      "path": "unpublished_diff.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "unpublished_diff.stdout",
+      "sha256": "ea76824876c31433ba58717e402b709d0b19d1af64616d566fbc9ae13b8e96ab",
+      "bytes": 32707
+    },
+    {
+      "path": "unpublished_diffstat.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "unpublished_diffstat.stdout",
+      "sha256": "52315ec6783bfa2ad09f4bb31f766bc9af64326094db7a0a7d19e810a1ae5ef0",
+      "bytes": 342
+    },
+    {
+      "path": "unpublished_name_status.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "unpublished_name_status.stdout",
+      "sha256": "2806ce718431ad944994987a9eb295aabba4474e839a89e293efe6a471c000b8",
+      "bytes": 192
+    }
+  ],
+  "scope": {
+    "fixed_inputs_candidate_and_originals_preserved": true,
+    "runtime_185_result": "Already verified and centrally accepted; no repeat execution or audit.",
+    "prior_pr85_and_pr86": "MERGED; not unpublished work.",
+    "new_unpublished_test_diff": "Five fixture test files: affaad6b1a31d680164d9e3d5ef5d2a9d3fce95a versus 32f8d21e6951178e51a8e82aadf4fe70368ca389.",
+    "standalone_tools": "Preserve exact executed sources as evidence; no new operating installation proposed.",
+    "evidence_publication": "New record and allowed separate archive URI remain; not published.",
+    "operating_caller": "Actual caller/action and adopted source/config/targets remain undecided."
+  },
+  "remaining_judgments": [
+    {
+      "id": "PUBLICATION_STORAGE",
+      "needed_for": "Evidence publication",
+      "value": null,
+      "details": "Allowed archive/large supply URI and existing access scope; no secret values. Local paths already known."
+    },
+    {
+      "id": "OPERATING_ADOPTION",
+      "needed_for": "Actual engine transition",
+      "value": null,
+      "details": "Real caller/action, exact adopted source/checkout/cwd, config/inventory/vars hash and actual target set. Existing #9 Lead/owner is GWONUK; not a request to appoint another Lead."
+    },
+    {
+      "id": "PUBLICATION_HEAD_AND_REVIEW",
+      "needed_for": "At actual publication only",
+      "value": null,
+      "details": "Fresh target HEAD, resulting new PR HEAD, eligible reviewer and existing required checks. Current central main fd5c566 known; do not use stale local refs."
+    },
+    {
+      "id": "OPERATING_ROUND_BINDING",
+      "needed_for": "Only after operating action is concrete",
+      "value": null,
+      "details": "Existing valid scoped permission, necessary coordination/console/backup/recovery and transition before/after evidence. Not this fixture permission and no new time card requested now."
+    }
+  ]
+}

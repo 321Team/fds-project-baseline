@@ -1,0 +1,385 @@
+{
+  "as_of_kst": "2026-10-16T14:21:40.086315+09:00",
+  "mode": "LOCAL_D02_ONLY_OVERLAY_ORIGINALS_PRESERVED",
+  "source_authority": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6208668917",
+  "central_posted_at_kst": "2026-10-16T14:19:02+09:00",
+  "apply_rule": "Read these D02-only replacements over the dated source rows. Do not physically edit prior handoffs, sealed evidence, sources, shared central files, or unrelated APP/Harbor rows.",
+  "rows": [
+    {
+      "id": "MON_SOURCE_VERSION",
+      "source_file": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/publication-linkage/DOCUMENT_SOURCE_VERSIONS.json",
+      "source_sha256": "ef4e20a356d2f2dada7ca49a9fd7b228ab82636d311150488ba57233a2d8b8cb",
+      "locator": {
+        "json_pointer": "/versions/0",
+        "line": 5,
+        "text": "      \"repo\": \"infra-monitoring\","
+      },
+      "before": {
+        "repo": "infra-monitoring",
+        "path": "docs/RUNBOOK_P1_MON_01_20261002.md",
+        "merge_sha": "e2898851ec51179f7a8adfc9ec9ce7e1f93c42fd",
+        "git_blob": "3307e2a225ca3226ebba175049d21f667b62aedf",
+        "url": "https://github.com/321Team/infra-monitoring/blob/e2898851ec51179f7a8adfc9ec9ce7e1f93c42fd/docs/RUNBOOK_P1_MON_01_20261002.md",
+        "observed_main_sha": "e2898851ec51179f7a8adfc9ec9ce7e1f93c42fd",
+        "observed_at_kst": "2026-10-16T11:00:15.499744+09:00",
+        "parents": [
+          "0dd0235b07d44ba7965490e3808e0a67a3bd903b",
+          "ae0ab617c26d2c16c6bcd8e9df96f584f464a128"
+        ],
+        "pr_ci": {
+          "id": 38837826268,
+          "head_sha": "ae0ab617c26d2c16c6bcd8e9df96f584f464a128",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/321Team/infra-monitoring/actions/runs/38837826268"
+        },
+        "pr_job_count": 1,
+        "pr_jobs": [
+          {
+            "id": 116770798243,
+            "name": "validate",
+            "head_sha": "ae0ab617c26d2c16c6bcd8e9df96f584f464a128",
+            "status": "completed",
+            "conclusion": "success"
+          }
+        ],
+        "main_runs": [
+          {
+            "id": 38838142586,
+            "head_sha": "e2898851ec51179f7a8adfc9ec9ce7e1f93c42fd",
+            "head_branch": "main",
+            "event": "push",
+            "status": "completed",
+            "conclusion": "success",
+            "html_url": "https://github.com/321Team/infra-monitoring/actions/runs/38838142586",
+            "updated_at": "2026-10-16T02:00:49Z"
+          }
+        ],
+        "main_log_consumed": false
+      },
+      "after": {
+        "repo": "infra-monitoring",
+        "path": "docs/RUNBOOK_P1_MON_01_20261002.md",
+        "merge_sha": "466d29e995a1a7e97f3d8ed09015250282a34dfe",
+        "head_sha": "ba047ded90d8e28b2d47e1b4d5fd65bc496c809c",
+        "sha256": "44adad0cbd671738c20f77f7ac8436cbdaf434af17ec156712e92e6e7bb8b567",
+        "url": "https://github.com/321Team/infra-monitoring/blob/466d29e995a1a7e97f3d8ed09015250282a34dfe/docs/RUNBOOK_P1_MON_01_20261002.md",
+        "parents": [
+          "e2898851ec51179f7a8adfc9ec9ce7e1f93c42fd",
+          "ba047ded90d8e28b2d47e1b4d5fd65bc496c809c"
+        ],
+        "source_observed_at_kst": "2026-10-16T14:10:48+09:00",
+        "pr_ci": 38851148183,
+        "main_ci": 38854191629,
+        "ci_status": "Existing PR/main attempt1 SUCCESS receipts consumed; no rerun or log rereview in this linkage task",
+        "prior_mon43": "e2898851ec51179f7a8adfc9ec9ce7e1f93c42fd S08 correction preserved",
+        "canonical_release": false,
+        "final_d02_link": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6208668917"
+      },
+      "affects": [
+        "F1-07",
+        "P1-MON-01",
+        "DOC source/version"
+      ],
+      "authority": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6208668917",
+      "physical_original_edit": false
+    },
+    {
+      "id": "D02_EVENT_STATUS",
+      "source_file": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/publication-linkage/PUBLICATION_LINKAGE.json",
+      "source_sha256": "fd6799d43ab5dfec2523e542e9390b4bec929ab8324d1a0481753e9dc9d8c7fc",
+      "locator": {
+        "json_pointer": "/events/1",
+        "line": 26,
+        "text": "      \"id\": \"D02_REQUEST_POSTED\","
+      },
+      "before": {
+        "id": "D02_REQUEST_POSTED",
+        "source_receipt": "D02",
+        "affects": [
+          "F1-18",
+          "P1-MON-01",
+          "P1-REV-01",
+          "KNOWN_ISSUE_INPUTS:D02",
+          "FINAL_ACCEPTANCE_INPUTS:D02"
+        ],
+        "url": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6206200315",
+        "posted_at_kst": "2026-10-16T10:50:03+09:00",
+        "status": "REQUEST_POSTED_AND_BODY_VERIFIED; SEC_RESPONSE_PENDING",
+        "supersedes": "D02 SEC 요청 초안 완료·미게시",
+        "remaining": "HTTPS NOT_MET 및 SEC 범위·위험 판단 미결정. 수동 확인 담당/시점/기간은 기존 회신 범위 그대로. 요청 게시를 위험수용이나 MON/Phase1 인수로 처리하지 않음."
+      },
+      "after": {
+        "status": "UNDERTAKING_DOCUMENT_AND_FINAL_LINK_RECORDED",
+        "final_link": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6208668917",
+        "posted_at_kst": "2026-10-16T14:19:02+09:00",
+        "scope": "D02 새 MON 통제 수행 인수·문서 반영 대기만 해소; 기존 조건 아래 한정 비차단 연결",
+        "risk_owner": "이권욱",
+        "remaining": "HTTPS NOT_MET·평문·자동 Probe/외부 통보 공백과 실제 점검 이행·전체 인수/Close 경계 유지"
+      },
+      "affects": [
+        "F1-18",
+        "P1-MON-01",
+        "P1-REV-01",
+        "KNOWN_ISSUE_INPUTS:D02",
+        "FINAL_ACCEPTANCE_INPUTS:D02"
+      ],
+      "authority": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6208668917",
+      "physical_original_edit": false
+    },
+    {
+      "id": "D02_KNOWN_ISSUE",
+      "source_file": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/KNOWN_ISSUE_INPUTS.json",
+      "source_sha256": "3cc85ed31f3a4a94f7745bbe1e8093354522d913adac9d8711c417f96dfaa8ad",
+      "locator": {
+        "json_pointer": "/items/1",
+        "line": 27,
+        "text": "      \"label\": \"D02 HTTPS·자동 통보 공백\","
+      },
+      "before": {
+        "source_rows": [
+          "D02_MANUAL_OWNER",
+          "D02_DELAY",
+          "D02_HTTPS",
+          "D02_APP_SCOPE"
+        ],
+        "label": "D02 HTTPS·자동 통보 공백",
+        "owner": "이하영(SEC 판단), 이재환(MON 수동 운영), 이권욱(통합)",
+        "status": "HTTPS NOT_MET; SEC 초안 완료·미게시·미판정; APP 비차단 처분 수신",
+        "remaining_risk": "자동 통보 없음. 확인 일정 준수 시 다음 수동 확인까지 인지 지연, 근무 외에는 다음 근무일 시작까지 가능. 계측 SLA·공유 Worker 장애의 서비스 영향0 아님.",
+        "due": null,
+        "due_state": "SEC 판단·게시 기한 미확정",
+        "operating_condition": "근무일 시작 1회·변경 창 전후·이상 의심 시 §3 monitor01 4항목; 이상 시 §4.5/#17, 정상 기록 없음; 10/26 P1 자원 회수까지. 이는 운영 기간이며 위험수용 만료/문서 Due가 아님.",
+        "completion": "SEC 요구 범위·위험/대체통제 판단 및 통합 처분. 기존 Grafana/Worker 처분으로 대체하지 않음."
+      },
+      "after": {
+        "source_rows": [
+          "D02_MANUAL_OWNER",
+          "D02_DELAY",
+          "D02_HTTPS",
+          "D02_APP_SCOPE"
+        ],
+        "label": "D02 HTTPS·자동 통보 공백",
+        "owner": "이하영(SEC 판단), 이재환(MON 수동 운영), 이권욱(통합)",
+        "status": "HTTPS NOT_MET 유지; MON 수행 인수·문서 반영·최종 연결 기록 완료; 기존 조건 아래 한정 비차단",
+        "remaining_risk": "자동 통보 없음. 확인 일정 준수 시 다음 수동 확인까지 인지 지연, 근무 외에는 다음 근무일 시작까지 가능. 계측 SLA·공유 Worker 장애의 서비스 영향0 아님.",
+        "due": null,
+        "due_state": "수행 인수·문서 반영·최종 연결 게시 완료. 새 문서 Due 지정 없음.",
+        "operating_condition": "근무일 시작 monitor01 네 항목 및 edge /readyz HTTP200; 부재일 본인 원격 또는 날짜·사유 미수행 기록; 시연 직전 양쪽 확인 및 정상도 한 줄 기록. 접근 전제·이상 진단/기록·하루 이상 불가 재검토 유지. 일상 정상 미기록. 실습망 시험/합성 데이터·현재 edge HTTP80·2026-10-26 P1 자원 회수까지 한정, 자동 연장 없음.",
+        "completion": "기존 조건부 처분의 수행 인수·문서 반영 대기를 https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6208668917 로 해소. 실제 점검 이행·HTTPS 충족·전체 Phase1 Close는 이 기록의 완료 대상이 아님.",
+        "risk_owner": "이권욱"
+      },
+      "affects": [
+        "F1-18",
+        "D02 Known Issue",
+        "P1-MON-01",
+        "P1-REV-01"
+      ],
+      "authority": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6208668917",
+      "physical_original_edit": false
+    },
+    {
+      "id": "DOC_ACCEPTANCE_D02",
+      "source_file": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/FINAL_ACCEPTANCE_INPUTS.md",
+      "source_sha256": "9f1f722b513fa04981e26dbbc878fddc355bf1aa5e54d1a7b8eda8391d06180c",
+      "locator": {
+        "line": 11
+      },
+      "before": "| D02 HTTPS·수동 통보 한계 | SEC의 요구 범위·위험/대체통제 판단, 필요한 통합 처분 | 이하영(SEC), 이재환(MON 운영), 이권욱(통합). 초안 완료·미게시·미판정, HTTPS NOT_MET. 운영 담당/시점/기간 결정과 실제 수행 기록은 구분 |",
+      "after": "| D02 HTTPS·수동 통보 한계 | 수행 인수·MON PR44 문서 반영·최종 연결 기록 완료: [6208668917](https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6208668917) | 위험 소유자 이권욱, MON 수행자 이재환. 기존 한정 조건·2026-10-26 기한/재검토 유지. HTTPS NOT_MET·평문·자동 통보 공백과 실제 점검 이행/전체 인수는 별도 |",
+      "affects": [
+        "P1-DOC-01 final inputs",
+        "P1-REV-01"
+      ],
+      "authority": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6208668917",
+      "physical_original_edit": false
+    },
+    {
+      "id": "DOC_D02_SUPPLEMENT",
+      "source_file": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/publication-linkage/IMPACT_SUPPLEMENT.md",
+      "source_sha256": "312d1d51e84297e2ee8874b536c19baf5b45ceaf9eb31550c0619cadeff6e5dd",
+      "locator": {
+        "line": 10
+      },
+      "before": "| F1-18 / MON·REV / D02 Known Issue·SEC 입력 | [D02 SEC 요청6206200315](https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6206200315), 10:50:03 게시·본문 대조 완료 | SEC 회신·범위/위험 판단 대기. HTTPS NOT_MET 유지. 요청 게시를 위험수용이나 전체 MON 인수로 바꾸지 않음 |",
+      "after": "| F1-18 / MON·REV / D02 Known Issue·SEC 입력 | 수행 인수6207323866·연결6207853701, MON PR44 승인/병합466d29e9 및 [최종 연결6208668917](https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6208668917) 수신 | 수행 인수·문서 반영·최종 연결 대기 해소. HTTPS NOT_MET·평문·자동 Probe/외부 통보 공백, 기존 적용 조건·기한 및 실제 점검 이행/전체 Close 경계 유지 |",
+      "affects": [
+        "F1-18",
+        "P1-MON-01",
+        "P1-REV-01"
+      ],
+      "authority": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6208668917",
+      "physical_original_edit": false
+    },
+    {
+      "id": "MON_RUNBOOK",
+      "source_file": "deliverables/o01-scope-finalization-20261015/d02-reply-consumption-20261016/mon-undertaking-consumption-20261016/ROW_DISPOSITIONS.json",
+      "source_sha256": "ac9b8823b6cb62707f0755f9613b5011c4855c6a33d6e0be086549e9a3d9ae3e",
+      "locator": {
+        "json_pointer": "/rows/10",
+        "line": 119,
+        "text": "      \"id\": \"RUNBOOK\","
+      },
+      "before": {
+        "id": "RUNBOOK",
+        "current": "NEW_LOCAL_MINIMAL_CANDIDATE",
+        "change": "§3 edge행1개 + §3.1 확인/기록 규칙; original S08 and other content preserved",
+        "review": "MON Lead가 반영안 문서 리뷰하겠다고 회신; 새 문안 검토/PR APPROVED는 아직 없음"
+      },
+      "after": {
+        "id": "RUNBOOK",
+        "current": "HUMAN_APPROVED_MERGED_PR44",
+        "review_url": "https://github.com/321Team/infra-monitoring/pull/44#pullrequestreview-5543174277",
+        "approved_head": "ba047ded90d8e28b2d47e1b4d5fd65bc496c809c",
+        "merge_sha": "466d29e995a1a7e97f3d8ed09015250282a34dfe",
+        "document_sha256": "44adad0cbd671738c20f77f7ac8436cbdaf434af17ec156712e92e6e7bb8b567",
+        "scope": "same one file +12/-0; source and CI receipts reused, no new review or test"
+      },
+      "affects": [
+        "D02",
+        "F1-07",
+        "F1-03 Test/Evidence D02 linkage",
+        "F1-18",
+        "P1-DOC-01"
+      ],
+      "authority": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6208668917",
+      "physical_original_edit": false
+    },
+    {
+      "id": "MON_FINAL_NONBLOCKING",
+      "source_file": "deliverables/o01-scope-finalization-20261015/d02-reply-consumption-20261016/mon-undertaking-consumption-20261016/ROW_DISPOSITIONS.json",
+      "source_sha256": "ac9b8823b6cb62707f0755f9613b5011c4855c6a33d6e0be086549e9a3d9ae3e",
+      "locator": {
+        "json_pointer": "/rows/11",
+        "line": 125,
+        "text": "      \"id\": \"FINAL_NONBLOCKING\","
+      },
+      "before": {
+        "id": "FINAL_NONBLOCKING",
+        "current": "INTEGRATED_FINALIZATION_AND_PUBLICATION_PENDING",
+        "limit": "수행 인수 회신 수신만으로 조건부 비차단 마감/전체 MON·Phase1 Close 자동 확정하지 않음."
+      },
+      "after": {
+        "id": "FINAL_NONBLOCKING",
+        "current": "LIMITED_NONBLOCKING_FINAL_LINK_RECORDED",
+        "url": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6208668917",
+        "posted_at_kst": "2026-10-16T14:19:02+09:00",
+        "limit": "D02 수행 인수·문서 반영 대기만 해소. 기존 조건·기한·기술 미충족 유지. 전체 MON/Phase1 Close 또는 실제 점검 소급 생성 아님"
+      },
+      "affects": [
+        "D02",
+        "F1-07",
+        "F1-03 Test/Evidence D02 linkage",
+        "F1-18",
+        "P1-DOC-01"
+      ],
+      "authority": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6208668917",
+      "physical_original_edit": false
+    },
+    {
+      "id": "LATEST_MON_D02_REMAINING",
+      "source_file": "deliverables/o01-scope-finalization-20261015/d02-reply-consumption-20261016/mon-undertaking-consumption-20261016/publication/FINAL_BINDING.json",
+      "source_sha256": "d63209a9dcbf47a7753c528c5eae3b92e0d05adb99445c8e6117ff040407432f",
+      "locator": {
+        "json_pointers": [
+          "/remaining/final_d02_external_disposition",
+          "/next_owner"
+        ],
+        "line": 129,
+        "text": "    \"final_d02_external_disposition\": \"Separate central-owner step; not performed in this publication scope.\","
+      },
+      "before": {
+        "remaining": "Separate central-owner step; not performed in this publication scope.",
+        "next_owner": "Central owner may consume completed MON doc/approval/merge/CI receipts for separate final D02 disposition. PowerShell wording remains nonblocking next Runbook change."
+      },
+      "after": {
+        "remaining": "중앙이 https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6208668917 를 14:19:02 KST 게시·본문 대조 완료. DOC에서는 이 결과를 로컬 소비했으며 새 외부 처분 행위는 0. D02 한정 연결 대기는 해소하고 실제 점검 이행·기술 미충족·전체 인수 경계 유지.",
+        "next_owner": "D02 최종 연결 재요청 불필요. PowerShell 표기는 다음 Runbook 개정의 비차단 후속, 별도 운영 이행과 다른 인수 잔여는 기존 책임 범위 유지."
+      },
+      "affects": [
+        "DOC latest remaining",
+        "D02 final link"
+      ],
+      "authority": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6208668917",
+      "physical_original_edit": false
+    },
+    {
+      "id": "LATEST_MON_HANDOFF_D02",
+      "source_file": "deliverables/o01-scope-finalization-20261015/d02-reply-consumption-20261016/mon-undertaking-consumption-20261016/publication/FINAL_HANDOFF.md",
+      "source_sha256": "3c17e3d79177847cfc4223f37050d6ab3b70ce0e5e3de6549e384008abc646c1",
+      "locator": {
+        "line": 36
+      },
+      "before": "문서 병합·CI 완료와 D02 최종 외부 처분, 운영 점검, 정본 발행, 티켓 Close는 구분한다. 이들 후속은 미실행이며 최종 D02 통합 기록은 중앙 소유자의 별도 범위다. APP/Harbor·Phase2·중앙 공통 파일을 수정하지 않았다. 추가 사람 요청·자동병합 예약·지속 polling은 없다.",
+      "after": "문서 병합·CI 완료에 이어 중앙의 D02 최종 연결 기록 [6208668917](https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6208668917)이 14:19:02 KST 게시·본문 대조됐다. 수행 인수·문서 반영·최종 연결 대기만 해소한다. 실제 점검 이행·정본 발행·티켓 Close는 별도이며 HTTPS NOT_MET·평문·자동 통보 공백과 기존 조건·기한을 유지한다. 이 DOC 연결 작업의 외부 게시·새 요청은 0이다.",
+      "affects": [
+        "DOC latest handoff",
+        "D02 remaining"
+      ],
+      "authority": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6208668917",
+      "physical_original_edit": false
+    },
+    {
+      "id": "SOURCE_HANDOFF_D02_FRAGMENT",
+      "source_file": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/publication-linkage/FINAL_HANDOFF.md",
+      "source_sha256": "dc596a3ef3677c1fd57db81889c97ea611e9c4863bd4478f0e4397bc1fe48785",
+      "locator": {
+        "line": 14,
+        "fragment_only": "D02 SEC 회신·처분"
+      },
+      "before": "D02 SEC 회신·처분",
+      "after": "D02 수행 인수·문서 반영·최종 연결 기록 완료([6208668917](https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6208668917)); 기술 미충족·기존 조건 유지",
+      "affects": [
+        "DOC final source remaining"
+      ],
+      "authority": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6208668917",
+      "physical_original_edit": false
+    }
+  ],
+  "preserved": {
+    "risk_owner": "이권욱",
+    "performer": "이재환",
+    "until": "2026-10-26 P1 자원 회수까지",
+    "scope": [
+      "현재 edge01 HTTP80",
+      "실습망의 시험/합성 데이터"
+    ],
+    "technical_not_met": [
+      "HTTPS NOT_MET",
+      "HTTP 평문 전송",
+      "자동 Probe·외부 통보 공백"
+    ],
+    "review_triggers": [
+      "회수 지연",
+      "하루 이상 확인 불가",
+      "노출/감시 구성 변경",
+      "실제 데이터 유입"
+    ],
+    "automatic_extension": false,
+    "actual_check_execution_not_created": true,
+    "phase1_close": false,
+    "canonical_publication": false,
+    "other_acceptance_not_inferred": true,
+    "powershell": "다음 Runbook 개정용 비차단 의견; 승인 HEAD 변경 없음"
+  },
+  "app_guard": {
+    "status": "APP PR38 8줄 수정 게시·추가 CI 별도 승인/APP 담당 진행 중이라는 중앙 전달",
+    "new_head_human_approval": "UNCONFIRMED",
+    "treated_as_approved": false,
+    "independently_queried": false,
+    "scope": "APP rows untouched; D02 record does not approve APP I01 or negative-amount Major",
+    "basis": "Current central delegation from thread 01a13d84-e226-7d62-9134-0a8c0f322e41"
+  },
+  "actions_this_task": {
+    "external_queries": 0,
+    "external_mutations": 0,
+    "new_pr": 0,
+    "new_requests": 0,
+    "product_tests": 0,
+    "ci_runs": 0,
+    "previous_validation_reruns": 0,
+    "server_runtime": 0,
+    "original_file_edits": 0,
+    "shared_status_control_round_edits": 0
+  }
+}

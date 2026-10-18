@@ -1,0 +1,53 @@
+%% CODEX_ASSISTED; Version: 20261016-CURRENT-FACTS-CANDIDATE; NOT APPROVED / NOT RELEASED
+%% Authority and evidence: ../../P1_AS_BUILT_CANDIDATE.md
+%% Existing evidence observations, not a fresh live inventory or complete acceptance.
+flowchart TB
+  CLIENT["Client / existing evidence 169 + 234 + 224/228 reuse"]
+  GITHUB["GitHub Actions / accepted CICD chain"]
+  subgraph MGMT["Management network: 10.250.10.0/24"]
+    ANS["ansible01 .10 / O02 reused; role185 LOCAL-MOCK 185 PASS + cleanup; operating adoption pending"]
+    RUN["cicd-runner01 .20"]
+    MON["monitor01 .30 / external receiver + Watchdog"]
+    MGW["mgmt-gw01 / management .1 + physical .58"]
+  end
+  subgraph PHY["Physical network: 10.1.93.0/24"]
+    EDGE["edge01 .50 / nginx HTTP80; D02 limited disposition; HTTPS NOT_MET"]
+    LB["API LB .109:6443 / HAProxy TCP passthrough"]
+    HBR["Harbor .54:443 / existing accepted push-pull; code reviewed, operating HOLD; provenance-auth-health unverified"]
+    DB["db01 .55:5432 / existing DB-DR acceptance"]
+    DNS["dns01 .52 + dns02 .53 / inherited P1 placement"]
+    subgraph K8S["Kubernetes: 3 Control Plane + 3 Worker"]
+      CP["Control Plane .102 / .103 / .104"]
+      WK["Worker .105 / .107 / .108 / NodePort30080"]
+      API["transaction-api Service80 to 8000 / 3 replicas observed"]
+      ENG["fds-engine 8001 / 3 replicas observed"]
+      PM["monitoring-api / Prometheus; single replica + local PV"]
+      AM["Alertmanager / single replica + local PV"]
+      GF["Grafana / ClusterIP + local PV / access disposition"]
+      EXP["KSM + monitoring-node node-exporter / kubelet metrics"]
+      SEC["Default Deny + allowlist; RBAC; HEP/GNP; Secretbox / remaining AC dispositions"]
+    end
+  end
+  GITHUB --> RUN
+  RUN -->|"443 push; existing evidence"| HBR
+  RUN -->|"6443 deploy; source .20 preserved"| LB
+  LB -->|"6443"| CP
+  WK -->|"443 image pull"| HBR
+  CLIENT -->|"HTTP80; combined evidence reuse"| EDGE
+  EDGE -->|"30080; source .50 only in observed policy"| WK
+  WK --> API
+  API -->|"8001"| ENG
+  API -->|"5432; approved source policy"| DB
+  PM -->|"9091"| API
+  PM -->|"9090"| ENG
+  PM -->|"9100 / 10250; scoped targets"| EXP
+  PM -->|"9093"| AM
+  GF --> PM
+  PM -->|"remote write; observed source worker03 .108"| MGW
+  MGW -->|".30:443 to nginx8443 to localhost19090"| MON
+  MON -->|"Blackbox TCP6443"| LB
+  ANS -->|"approved SSH/management paths"| MGW
+  SEC --- API
+  SEC --- ENG
+  LIMIT["Internal source NAT prohibited; return route via .58; VMnet8 workload NIC prohibited. Design requirements retained; no new all-host verification."]
+  LIMIT --- MGW

@@ -1,0 +1,64 @@
+{
+  "at_kst": "2026-10-18T19:07:40.236511+09:00",
+  "observed_span_kst": [
+    "2026-10-18T19:00:23+09:00",
+    "2026-10-18T19:02:42+09:00"
+  ],
+  "linux_observed_count": 13,
+  "linux_scope_total": 18,
+  "windows_observed_count": 1,
+  "windows_scope_total": 8,
+  "server01_running_vm_count": 6,
+  "harbor_healthy": 10,
+  "robot_metadata": {
+    "2": "EXPIRED",
+    "3": "EXPIRED",
+    "23": "NOT_EXPIRED_PULL_ONLY_AUTH_NOT_TESTED"
+  },
+  "k8s_nodes_ready": 6,
+  "app_pods_ready": 6,
+  "app_worker": "k8s-worker03",
+  "mon_k8s_not_ready": 7,
+  "mon_k8s_reported_cause": "401 Unauthorized ImagePullBackOff",
+  "separate_mon_containers_running": 3,
+  "db_read_rc": 0,
+  "db_prepared_transactions_current_database": 0,
+  "server_changes": 0,
+  "whole_integrity_proven": false,
+  "source_type": "Central fixed observation summary and four published records; DOC performed no server reads",
+  "snapshot_sha256": "723e9fe75f3f7a5a747e9c2537d7af937a3d059aaa646cdd90678fd59f9678b7",
+  "published_records": [
+    {
+      "id": 6248601196,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6248601196",
+      "created_at": "2026-10-18T10:09:56Z",
+      "updated_at": "2026-10-18T10:09:56Z",
+      "body_sha256": "7ee3dce557f43b28c087242d985a22bcc451c9c5cd2a62ebf6337953d59aeded"
+    },
+    {
+      "id": 6248601609,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/17#issuecomment-6248601609",
+      "created_at": "2026-10-18T10:09:59Z",
+      "updated_at": "2026-10-18T10:09:59Z",
+      "body_sha256": "9ace9052c5ccd70637239a96982455cb7a3790d57c91c837a6eba8d45e994bb8"
+    },
+    {
+      "id": 6248602308,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/24#issuecomment-6248602308",
+      "created_at": "2026-10-18T10:10:04Z",
+      "updated_at": "2026-10-18T10:10:04Z",
+      "body_sha256": "ea6b7d5c69cdff1a2acaacd4639f62ad79138d9f17eb94732a43e3c4da18213f"
+    },
+    {
+      "id": 6248602739,
+      "url": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6248602739",
+      "created_at": "2026-10-18T10:10:07Z",
+      "updated_at": "2026-10-18T10:10:07Z",
+      "body_sha256": "97b4a01995fbe8cfb65fcf90358b1941bb223bdf037b7b2f6afe73e833822a1e"
+    }
+  ],
+  "db_mon_source": "User direct console results, not independently recaptured by DOC",
+  "db_mon_source_sha256": "ec38863480bba4187535c8ec8b7d3b0a7702413478d1246a8bb7ec45a921ec96",
+  "etcd_status_alarm_scope": "Three status/alarm readings; no reported error/alarm per #30 comment6248602739; not full etcd integrity",
+  "authentication_or_transition_executed": false
+}

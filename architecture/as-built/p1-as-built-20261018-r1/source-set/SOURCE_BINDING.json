@@ -1,0 +1,1045 @@
+{
+  "at_kst": "2026-10-16 20:19:05 KST",
+  "scope": "WORKSPACE_BOUND_ADOPTION_REVIEW_PACKAGE; NOT A PUBLISHED OR PORTABLE SOURCE RELEASE",
+  "copied_files": [
+    {
+      "path": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\P1_AS_BUILT_CANDIDATE.md",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/P1_AS_BUILT_CANDIDATE.md",
+      "sha256": "4c746a65cb58c4fe772d57fe37a1031c8aa72aaf9b6d81541b92f81e029d6a59",
+      "bytes": 13716,
+      "role": "FROZEN_SOURCE_OR_SOURCE_BINDING"
+    },
+    {
+      "path": "payload/current/candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\candidate\\architecture\\P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "sha256": "3093735816f09f1234d1e3b4a2ae0c2109e70ce773b705a76d74c52d4ff696b5",
+      "bytes": 2581,
+      "role": "FROZEN_SOURCE_OR_SOURCE_BINDING"
+    },
+    {
+      "path": "payload/current/candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\candidate\\architecture\\P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "sha256": "f28d7d469609810059da3d3bf4eb960c243313644929099482271fe864660922",
+      "bytes": 1454,
+      "role": "FROZEN_SOURCE_OR_SOURCE_BINDING"
+    },
+    {
+      "path": "payload/current/SOURCE_BINDING.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\SOURCE_BINDING.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/SOURCE_BINDING.json",
+      "sha256": "248316e61c36358279053fff01f4fb91d670de83de92f1035239926c156d2772",
+      "bytes": 6529,
+      "role": "FROZEN_SOURCE_OR_SOURCE_BINDING"
+    },
+    {
+      "path": "payload/current/FINAL_BINDING.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\FINAL_BINDING.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/FINAL_BINDING.json",
+      "sha256": "c73b14b5d9cb15f247ff1a15cdc84bea70f068a279fe923e80e7391e0f32240d",
+      "bytes": 9445,
+      "role": "FROZEN_SOURCE_OR_SOURCE_BINDING"
+    },
+    {
+      "path": "payload/current/references/ANSIBLE_ROLE185_FINAL_HANDOFF_CENTRAL.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\ANSIBLE_ROLE185_FINAL_HANDOFF_CENTRAL.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/references/ANSIBLE_ROLE185_FINAL_HANDOFF_CENTRAL.json",
+      "sha256": "d7c1fbb8efbbc4f608afcfed05f23786233d67956f5de6f89014e9757d2fd53e",
+      "bytes": 9913,
+      "role": "EXISTING_RECEIPT_SNAPSHOT"
+    },
+    {
+      "path": "payload/current/references/ANSIBLE_POST_PASS_HANDOFF_CENTRAL.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\ANSIBLE_POST_PASS_HANDOFF_CENTRAL.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/references/ANSIBLE_POST_PASS_HANDOFF_CENTRAL.json",
+      "sha256": "7185297864be34d82d29fa0d3552a909af2f0ff8027b49221861f82e82ebe117",
+      "bytes": 8329,
+      "role": "EXISTING_RECEIPT_SNAPSHOT"
+    },
+    {
+      "path": "payload/current/references/ANSIBLE_RESULT_CENTRAL_VERIFICATION.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\ANSIBLE_RESULT_CENTRAL_VERIFICATION.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/references/ANSIBLE_RESULT_CENTRAL_VERIFICATION.json",
+      "sha256": "b4b1dd45c35492ef9bf7727021ac0390f198bf9354b3b395f3384938f0d854fe",
+      "bytes": 4241,
+      "role": "EXISTING_RECEIPT_SNAPSHOT"
+    },
+    {
+      "path": "payload/current/references/ANSIBLE_RUNTIME_FINAL_HANDOFF.md",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\ANSIBLE_RUNTIME_FINAL_HANDOFF.md",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/references/ANSIBLE_RUNTIME_FINAL_HANDOFF.md",
+      "sha256": "bd64738a8cd2f14aeb000dd5765a629c8f62dbd15c96652c8c85e0dc386c0cb9",
+      "bytes": 4808,
+      "role": "EXISTING_RECEIPT_SNAPSHOT"
+    },
+    {
+      "path": "payload/current/references/ANSIBLE_POST_PASS_ONE_PAGE_HANDOFF.md",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\ANSIBLE_POST_PASS_ONE_PAGE_HANDOFF.md",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/references/ANSIBLE_POST_PASS_ONE_PAGE_HANDOFF.md",
+      "sha256": "e68e599658c4d24acd8a2b1310dfc0dfeee482e57de026ebb501a762035c52c7",
+      "bytes": 7319,
+      "role": "EXISTING_RECEIPT_SNAPSHOT"
+    },
+    {
+      "path": "payload/current/references/D02_IMPACT_ROWS.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\D02_IMPACT_ROWS.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/references/D02_IMPACT_ROWS.json",
+      "sha256": "36b60b1b7c289a07249eb4a9890ff0d06533bcb13b7007ace15fa0b38257aaf3",
+      "bytes": 20680,
+      "role": "EXISTING_RECEIPT_SNAPSHOT"
+    },
+    {
+      "path": "payload/current/references/D07_CENTRAL_ACCEPTANCE.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\D07_CENTRAL_ACCEPTANCE.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/references/D07_CENTRAL_ACCEPTANCE.json",
+      "sha256": "3889d7c5fb630462fceeeb5336d987ac03b225a0142f3a8a71fd80316143cdf1",
+      "bytes": 5504,
+      "role": "EXISTING_RECEIPT_SNAPSHOT"
+    },
+    {
+      "path": "payload/current/references/D07_LEAD_REPLY.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\D07_LEAD_REPLY.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/references/D07_LEAD_REPLY.json",
+      "sha256": "f0292a53f4e9591e56b01df56c36354b21cd626d62ab3ffa7ac55119122e2e84",
+      "bytes": 4245,
+      "role": "EXISTING_RECEIPT_SNAPSHOT"
+    },
+    {
+      "path": "payload/current/references/APP39_MERGE_RECEIPT.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\APP39_MERGE_RECEIPT.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/references/APP39_MERGE_RECEIPT.json",
+      "sha256": "7f70e38932776ac3d5fa4b1e95c943c19b1a608f8353492134b863e6150c0a8a",
+      "bytes": 739,
+      "role": "EXISTING_RECEIPT_SNAPSHOT"
+    },
+    {
+      "path": "payload/current/references/APP39_CI_RECEIPT.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\APP39_CI_RECEIPT.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/references/APP39_CI_RECEIPT.json",
+      "sha256": "0ee0d01bf037388a4d95c113ee270645a1358ed539a4476e25ecaa8e524b4c98",
+      "bytes": 1986,
+      "role": "EXISTING_RECEIPT_SNAPSHOT"
+    },
+    {
+      "path": "payload/current/references/HARBOR_EFFECT_FULL_REVIEW_CENTRAL.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\HARBOR_EFFECT_FULL_REVIEW_CENTRAL.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/references/HARBOR_EFFECT_FULL_REVIEW_CENTRAL.json",
+      "sha256": "3a755d3469cbe8eb6b7f549d50da6f86730c6686429a69b89c18865a4129ae03",
+      "bytes": 5637,
+      "role": "EXISTING_RECEIPT_SNAPSHOT"
+    },
+    {
+      "path": "payload/current/references/HARBOR_BUILD_EXPIRY_READINESS_CENTRAL.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\HARBOR_BUILD_EXPIRY_READINESS_CENTRAL.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/references/HARBOR_BUILD_EXPIRY_READINESS_CENTRAL.json",
+      "sha256": "a0225950f6484d80fe341c7b0dc98976dd68c155da85bb26b169e7efb7e4224c",
+      "bytes": 6610,
+      "role": "EXISTING_RECEIPT_SNAPSHOT"
+    },
+    {
+      "path": "payload/current/references/HARBOR_CORE_METADATA_CENTRAL.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\HARBOR_CORE_METADATA_CENTRAL.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/references/HARBOR_CORE_METADATA_CENTRAL.json",
+      "sha256": "a00c0ef95e451a0c2951b3e687e457f70566cece172e7862243103e6b774bd1b",
+      "bytes": 1500,
+      "role": "EXISTING_RECEIPT_SNAPSHOT"
+    },
+    {
+      "path": "payload/current/references/HARBOR_OFFICIAL_IMAGE_HANDOFF.md",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\HARBOR_OFFICIAL_IMAGE_HANDOFF.md",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/references/HARBOR_OFFICIAL_IMAGE_HANDOFF.md",
+      "sha256": "dde7bca5434db9177cf67247da00e5a432d6b21779da4390dcdb6fff58461299",
+      "bytes": 2086,
+      "role": "EXISTING_RECEIPT_SNAPSHOT"
+    },
+    {
+      "path": "payload/current/references/HARBOR_OFFICIAL_IMAGE_BINDING.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\HARBOR_OFFICIAL_IMAGE_BINDING.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/references/HARBOR_OFFICIAL_IMAGE_BINDING.json",
+      "sha256": "95dad8324dfcbba2709d9e8c75191d26e16468a240020dd7424c708eece2d544",
+      "bytes": 1415,
+      "role": "EXISTING_RECEIPT_SNAPSHOT"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/physical.svg",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\physical.svg",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/physical.svg",
+      "sha256": "dbf1907319184d721aa21cdc001cda34fe0e304421d2616a803bcd48694da2ff",
+      "bytes": 35002,
+      "role": "REUSED_QA_NO_RERUN"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/physical.png",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\physical.png",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/physical.png",
+      "sha256": "e0ce62569a54a2bfcf5c2f0237c5c6b8eb33ab2bcc3990ce1994984e1102a52d",
+      "bytes": 79543,
+      "role": "REUSED_QA_NO_RERUN"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/logical.svg",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\logical.svg",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/logical.svg",
+      "sha256": "8b01b7470952555b415909c0e02f816e18450b0d141293ba59ed2e3ab4e22af8",
+      "bytes": 54502,
+      "role": "REUSED_QA_NO_RERUN"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/RENDER_RECEIPT.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\RENDER_RECEIPT.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/RENDER_RECEIPT.json",
+      "sha256": "2f6fbba735f50675d9575cdafe29e6647b3e70e8fc622f4f455e7beb36b78f02",
+      "bytes": 6242,
+      "role": "REUSED_QA_NO_RERUN"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/RENDERER_ASSET_MANIFEST.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\RENDERER_ASSET_MANIFEST.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/RENDERER_ASSET_MANIFEST.json",
+      "sha256": "6310c6f77def1db1fdd40a119019029947ee141b692697380434448c2e1f2ddb",
+      "bytes": 8332,
+      "role": "REUSED_QA_NO_RERUN"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/RENDER_CONFIG.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\RENDER_CONFIG.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/RENDER_CONFIG.json",
+      "sha256": "03e8d93d7f8029793be59f6008c71799c2daac71933a2486376da7103a47c337",
+      "bytes": 380,
+      "role": "REUSED_QA_NO_RERUN"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/render-local.cjs",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\render-local.cjs",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/render-local.cjs",
+      "sha256": "bbcd2667ce64a7c06cf8c12a63edc4d9a367102c5f5c81757c308c917e8f7128",
+      "bytes": 10188,
+      "role": "REUSED_QA_NO_RERUN"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/VISUAL_REVIEW.md",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\VISUAL_REVIEW.md",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/VISUAL_REVIEW.md",
+      "sha256": "8c232efceb2a8ff844fabf8d327ef97ab527766c6f1403e280bc78c7b3526b32",
+      "bytes": 5354,
+      "role": "REUSED_QA_NO_RERUN"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/SOURCE_SEMANTICS_CHECK.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\SOURCE_SEMANTICS_CHECK.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/SOURCE_SEMANTICS_CHECK.json",
+      "sha256": "e242af7c4314e8e8040cf18dbf5d1bb76a4e20bd134551c9c61ca0d3f6d00282",
+      "bytes": 539,
+      "role": "REUSED_QA_NO_RERUN"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/GEOMETRY_REVIEW.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\GEOMETRY_REVIEW.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/GEOMETRY_REVIEW.json",
+      "sha256": "412eb4b8784281136530e2783a73a5df082166a0de66fc4e4c26db37c2c39ca1",
+      "bytes": 2340,
+      "role": "REUSED_QA_NO_RERUN"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/PROPOSAL_GEOMETRY_REVIEW.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\PROPOSAL_GEOMETRY_REVIEW.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/PROPOSAL_GEOMETRY_REVIEW.json",
+      "sha256": "dfd84838fe8188d8d1e1b126ecdadbbe5a487a41932d0a67f63484d325388e16",
+      "bytes": 554,
+      "role": "REUSED_QA_NO_RERUN"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/LAYOUT_ONLY_PROPOSAL.patch",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\LAYOUT_ONLY_PROPOSAL.patch",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/LAYOUT_ONLY_PROPOSAL.patch",
+      "sha256": "d75fb97bbdde94c8d30cc060ca38a167a240e446c9e3a90ce3179d5f81215bc2",
+      "bytes": 479,
+      "role": "REUSED_QA_NO_RERUN"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/RENDERER_LAYOUT_PROPOSAL.patch",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\RENDERER_LAYOUT_PROPOSAL.patch",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/RENDERER_LAYOUT_PROPOSAL.patch",
+      "sha256": "9959fef2ccc5f0797b547dc04fc4523c29143f6e52f8451a7aa90b8161199405",
+      "bytes": 2884,
+      "role": "REUSED_QA_NO_RERUN"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/FINAL_BINDING.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\FINAL_BINDING.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/FINAL_BINDING.json",
+      "sha256": "ccd7a9e9129d4df7546777df12437f94d3fc5f9e887804673deaa12ef48142e7",
+      "bytes": 13703,
+      "role": "REUSED_QA_NO_RERUN"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/P1_LOGICAL_LAYOUT_PROPOSAL.mmd",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\proposal-layout-constraints\\P1_LOGICAL_LAYOUT_PROPOSAL.mmd",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/proposal-layout-constraints/P1_LOGICAL_LAYOUT_PROPOSAL.mmd",
+      "sha256": "829890b4125006812b739ca87fbfe68c4a614e1198706c34e8015420a4340e9a",
+      "bytes": 2710,
+      "role": "SELECTED_LOGICAL_LAYOUT_PROPOSAL"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/render-proposal.cjs",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\proposal-layout-constraints\\render-proposal.cjs",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/proposal-layout-constraints/render-proposal.cjs",
+      "sha256": "439f766a97e65e7c87c2dbe9f81cbaaa7be706ee0aaa0d5a44705f030f7b4569",
+      "bytes": 10932,
+      "role": "SELECTED_LOGICAL_LAYOUT_PROPOSAL"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/RENDER_CONFIG.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\proposal-layout-constraints\\RENDER_CONFIG.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/proposal-layout-constraints/RENDER_CONFIG.json",
+      "sha256": "03e8d93d7f8029793be59f6008c71799c2daac71933a2486376da7103a47c337",
+      "bytes": 380,
+      "role": "SELECTED_LOGICAL_LAYOUT_PROPOSAL"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/RENDER_RECEIPT.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\proposal-layout-constraints\\RENDER_RECEIPT.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/proposal-layout-constraints/RENDER_RECEIPT.json",
+      "sha256": "f1887203e3a5dd5a63c051ab2bcbfa4a2120980b8b1c1f8da38c7bbb8e2fd5df",
+      "bytes": 5885,
+      "role": "SELECTED_LOGICAL_LAYOUT_PROPOSAL"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/RENDERER_ASSET_MANIFEST.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\proposal-layout-constraints\\RENDERER_ASSET_MANIFEST.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/proposal-layout-constraints/RENDERER_ASSET_MANIFEST.json",
+      "sha256": "6310c6f77def1db1fdd40a119019029947ee141b692697380434448c2e1f2ddb",
+      "bytes": 8332,
+      "role": "SELECTED_LOGICAL_LAYOUT_PROPOSAL"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/logical.svg",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\proposal-layout-constraints\\logical.svg",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/proposal-layout-constraints/logical.svg",
+      "sha256": "a45c0fe005db339625f6ddc8f470eaa6bbe46589a888cea24c8eac97f9375d85",
+      "bytes": 60608,
+      "role": "SELECTED_LOGICAL_LAYOUT_PROPOSAL"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/logical.png",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\proposal-layout-constraints\\logical.png",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/proposal-layout-constraints/logical.png",
+      "sha256": "9a1a416018188f2366c92153350b21b880bf89d58615ae960743936098a35aab",
+      "bytes": 227151,
+      "role": "SELECTED_LOGICAL_LAYOUT_PROPOSAL"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/logical-geometry.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\proposal-layout-constraints\\logical-geometry.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/proposal-layout-constraints/logical-geometry.json",
+      "sha256": "994870ee39713b0f6a8bf9c0c38eb0d023bcbfe531122d4a6bc4829a28323ca8",
+      "bytes": 25223,
+      "role": "SELECTED_LOGICAL_LAYOUT_PROPOSAL"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/final-label-inspection.png",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\proposal-layout-constraints\\final-label-inspection.png",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/proposal-layout-constraints/final-label-inspection.png",
+      "sha256": "3350d599e3430603637076e5d2718f078ba74da0f8f4e55b4daa709e0480401a",
+      "bytes": 22505,
+      "role": "SELECTED_LOGICAL_LAYOUT_PROPOSAL"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/final-left-inspection.png",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\proposal-layout-constraints\\final-left-inspection.png",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/proposal-layout-constraints/final-left-inspection.png",
+      "sha256": "59f6cf92bcea594384b8daa44bf5c3732a24a66f1c7abf155345dec0c1912daf",
+      "bytes": 100042,
+      "role": "SELECTED_LOGICAL_LAYOUT_PROPOSAL"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/final-right-inspection.png",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\proposal-layout-constraints\\final-right-inspection.png",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/proposal-layout-constraints/final-right-inspection.png",
+      "sha256": "a24460088e4079ed753e5e3bc248fa0d6495ec4af701394bc9e41a80f9cc4053",
+      "bytes": 80292,
+      "role": "SELECTED_LOGICAL_LAYOUT_PROPOSAL"
+    },
+    {
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/FINAL_INSPECTION_CROPS.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\proposal-layout-constraints\\FINAL_INSPECTION_CROPS.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-current-facts-20261016/render-validation-20261016/proposal-layout-constraints/FINAL_INSPECTION_CROPS.json",
+      "sha256": "9c09cc3d93ae77e81ce1675d5a6e2d9e0f695386f3ff6a8829d1e76350a37061",
+      "bytes": 573,
+      "role": "SELECTED_LOGICAL_LAYOUT_PROPOSAL"
+    },
+    {
+      "path": "references/ARCHITECTURE_RULE.md",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\references\\N02--README.md",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/references/N02--README.md",
+      "sha256": "ece5d836bdcfdc6093635dd9cdfd4a966b014fb6c027a091f37d8fe1ddcddf48",
+      "bytes": 235,
+      "role": "EXISTING_APPROVED_SOURCE_DERIVATIVE_RULE"
+    },
+    {
+      "path": "references/D07/D07_LEDGER_ROW.md",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\D07_LEDGER_ROW.md",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/defect-d07-reply-linkage-20261016/D07_LEDGER_ROW.md",
+      "sha256": "749468df858a8ec511d49f53a2596cf563e39a4bc5cc339ab3bf642ac6dd5957",
+      "bytes": 1291,
+      "role": "EXISTING_D07_CANDIDATE_EXACT_COPY_NO_NEW_ROW"
+    },
+    {
+      "path": "references/D07/FINAL_HANDOFF.md",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\FINAL_HANDOFF.md",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/defect-d07-reply-linkage-20261016/FINAL_HANDOFF.md",
+      "sha256": "966e783882210cd33fa1de1670cda97c44c561645d613aba957e66e7b51e9750",
+      "bytes": 6964,
+      "role": "EXISTING_D07_CANDIDATE_EXACT_COPY_NO_NEW_ROW"
+    },
+    {
+      "path": "references/D07/D07_IMPACT.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\D07_IMPACT.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/defect-d07-reply-linkage-20261016/D07_IMPACT.json",
+      "sha256": "e02309b874eef0b6a04e2594b3bff2fac875f40e6d5972747f4c2b09158b740e",
+      "bytes": 8969,
+      "role": "EXISTING_D07_CANDIDATE_EXACT_COPY_NO_NEW_ROW"
+    },
+    {
+      "path": "references/D07/FINAL_BINDING.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\FINAL_BINDING.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/defect-d07-reply-linkage-20261016/FINAL_BINDING.json",
+      "sha256": "b8cf79e39f9649aecd6208a74a6218c358a2cfeb7e0b52194830a2939ee6fa31",
+      "bytes": 8329,
+      "role": "EXISTING_D07_CANDIDATE_EXACT_COPY_NO_NEW_ROW"
+    },
+    {
+      "path": "references/D07/SOURCE_BINDING.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\SOURCE_BINDING.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/defect-d07-reply-linkage-20261016/SOURCE_BINDING.json",
+      "sha256": "79096f07e37bf769224a1758701e4ba9b97e28aec6493ad0cda69224fcaa9f16",
+      "bytes": 4272,
+      "role": "EXISTING_D07_CANDIDATE_EXACT_COPY_NO_NEW_ROW"
+    },
+    {
+      "path": "references/D07/references/COMMENT_6211817978.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\references\\COMMENT_6211817978.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/defect-d07-reply-linkage-20261016/references/COMMENT_6211817978.json",
+      "sha256": "f0292a53f4e9591e56b01df56c36354b21cd626d62ab3ffa7ac55119122e2e84",
+      "bytes": 4245,
+      "role": "EXISTING_D07_CANDIDATE_EXACT_COPY_NO_NEW_ROW"
+    },
+    {
+      "path": "references/app-contract-sections5-7-ready-20261016/references/BASE_CONTRACT.md",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\app-contract-sections5-7-ready-20261016\\references\\BASE_CONTRACT.md",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/app-contract-sections5-7-ready-20261016/references/BASE_CONTRACT.md",
+      "sha256": "512bdca10164aa43bb137638f35fbb5157cc92c7e21bcd3684d07f055af6b6e1",
+      "bytes": 11924,
+      "role": "EXISTING_D07_HANDOFF_DEPENDENCY"
+    },
+    {
+      "path": "SOURCE_INDEX.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\SOURCE_INDEX.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/SOURCE_INDEX.json",
+      "sha256": "6186893d3ed357d15e69c5bf2f95519247284b5fd77ff6e79851af9c3eb364c4",
+      "bytes": 168998,
+      "role": "EXISTING_PROVENANCE_INDEX_NO_SOURCE_REREVIEW"
+    },
+    {
+      "path": "FINAL_HEAD_READBACK.json",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\FINAL_HEAD_READBACK.json",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/FINAL_HEAD_READBACK.json",
+      "sha256": "9f6f34d037568c67999d38f62abab1c6ef46f42854afecc88736f83b70192cc5",
+      "bytes": 1242,
+      "role": "HISTORICAL_HEAD_READBACK_NOT_LIVE"
+    },
+    {
+      "path": "payload/as-built-candidate/P1_AS_BUILT_CANDIDATE.md",
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-candidate\\P1_AS_BUILT_CANDIDATE.md",
+      "source_workspace_relative": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-candidate/P1_AS_BUILT_CANDIDATE.md",
+      "sha256": "6108ef73a402850b80d52cb656ade6c5239305e8d2e882ee35009b200909cf3c",
+      "bytes": 10073,
+      "role": "HISTORICAL_COMPARISON_ONLY_NOT_SELECTED"
+    }
+  ],
+  "workspace_provenance_references": [
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\A1_UPDATED_DECISION_CARD.md",
+      "sha256": "fb0fa9219ccd1c3a423ec52ee1ae401a17ee434f9c8097ef3bef5bf3739ce75b",
+      "bytes": 6118,
+      "role": "WORKSPACE_PROVENANCE_REFERENCE_NOT_SELECTED_FOR_ADOPTION"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\SOURCE_INDEX.json",
+      "sha256": "6186893d3ed357d15e69c5bf2f95519247284b5fd77ff6e79851af9c3eb364c4",
+      "bytes": 168998,
+      "role": "WORKSPACE_PROVENANCE_REFERENCE_NOT_SELECTED_FOR_ADOPTION"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\FINAL_HEAD_READBACK.json",
+      "sha256": "9f6f34d037568c67999d38f62abab1c6ef46f42854afecc88736f83b70192cc5",
+      "bytes": 1242,
+      "role": "WORKSPACE_PROVENANCE_REFERENCE_NOT_SELECTED_FOR_ADOPTION"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-candidate\\P1_AS_BUILT_CANDIDATE.md",
+      "sha256": "6108ef73a402850b80d52cb656ade6c5239305e8d2e882ee35009b200909cf3c",
+      "bytes": 10073,
+      "role": "WORKSPACE_PROVENANCE_REFERENCE_NOT_SELECTED_FOR_ADOPTION"
+    }
+  ],
+  "originals": [
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\P1_AS_BUILT_CANDIDATE.md",
+      "sha256": "4c746a65cb58c4fe772d57fe37a1031c8aa72aaf9b6d81541b92f81e029d6a59",
+      "expected_sha256": "4c746a65cb58c4fe772d57fe37a1031c8aa72aaf9b6d81541b92f81e029d6a59",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\candidate\\architecture\\P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "sha256": "3093735816f09f1234d1e3b4a2ae0c2109e70ce773b705a76d74c52d4ff696b5",
+      "expected_sha256": "3093735816f09f1234d1e3b4a2ae0c2109e70ce773b705a76d74c52d4ff696b5",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\candidate\\architecture\\P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "sha256": "f28d7d469609810059da3d3bf4eb960c243313644929099482271fe864660922",
+      "expected_sha256": "f28d7d469609810059da3d3bf4eb960c243313644929099482271fe864660922",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\FINAL_BINDING.json",
+      "sha256": "c73b14b5d9cb15f247ff1a15cdc84bea70f068a279fe923e80e7391e0f32240d",
+      "expected_sha256": "c73b14b5d9cb15f247ff1a15cdc84bea70f068a279fe923e80e7391e0f32240d",
+      "unchanged": true
+    }
+  ],
+  "prior_qa_binding": {
+    "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\FINAL_BINDING.json",
+    "sha256": "ccd7a9e9129d4df7546777df12437f94d3fc5f9e887804673deaa12ef48142e7",
+    "status": "LOCAL_RENDER_VISUAL_REVIEW_COMPLETE_WITH_SEPARATE_PROPOSAL"
+  },
+  "prior_54_artifacts": [
+    {
+      "path": "CURRENT_TASK.md",
+      "expected_sha256": "f8dad76c0c5d4a51041a6a2311846d9778d035a3932c030aced29c03270f9897",
+      "current_sha256": "f8dad76c0c5d4a51041a6a2311846d9778d035a3932c030aced29c03270f9897",
+      "unchanged": true
+    },
+    {
+      "path": "finalize-packet.py",
+      "expected_sha256": "1e6229cba4c391976d7cb5cc2bdb540ad14f27e94dae06887e8db784b457c950",
+      "current_sha256": "1e6229cba4c391976d7cb5cc2bdb540ad14f27e94dae06887e8db784b457c950",
+      "unchanged": true
+    },
+    {
+      "path": "GEOMETRY_REVIEW.json",
+      "expected_sha256": "412eb4b8784281136530e2783a73a5df082166a0de66fc4e4c26db37c2c39ca1",
+      "current_sha256": "412eb4b8784281136530e2783a73a5df082166a0de66fc4e4c26db37c2c39ca1",
+      "unchanged": true
+    },
+    {
+      "path": "HANDOFF.md",
+      "expected_sha256": "99d2ca98dc0b99552ba4dd0116a76fe5c2c7660048289bc725c12628347c957d",
+      "current_sha256": "99d2ca98dc0b99552ba4dd0116a76fe5c2c7660048289bc725c12628347c957d",
+      "unchanged": true
+    },
+    {
+      "path": "inspect-rendered.cjs",
+      "expected_sha256": "960ca5e421137c6203bb7a0fbb46486f04e7484a195b0cffdfe92ff0ac9f58c7",
+      "current_sha256": "960ca5e421137c6203bb7a0fbb46486f04e7484a195b0cffdfe92ff0ac9f58c7",
+      "unchanged": true
+    },
+    {
+      "path": "INSPECTION_CROPS.json",
+      "expected_sha256": "38749a94bfb0c8a6e61c12bf61f02cb956b5167e97d0122a95ca092faf751479",
+      "current_sha256": "38749a94bfb0c8a6e61c12bf61f02cb956b5167e97d0122a95ca092faf751479",
+      "unchanged": true
+    },
+    {
+      "path": "LAYOUT_ONLY_PROPOSAL.patch",
+      "expected_sha256": "d75fb97bbdde94c8d30cc060ca38a167a240e446c9e3a90ce3179d5f81215bc2",
+      "current_sha256": "d75fb97bbdde94c8d30cc060ca38a167a240e446c9e3a90ce3179d5f81215bc2",
+      "unchanged": true
+    },
+    {
+      "path": "logical-geometry.json",
+      "expected_sha256": "d31ef974caf44142e82bf8839dd16713829632cbea63c07677ee0fce72ab6c8d",
+      "current_sha256": "d31ef974caf44142e82bf8839dd16713829632cbea63c07677ee0fce72ab6c8d",
+      "unchanged": true
+    },
+    {
+      "path": "logical-left-inspection.png",
+      "expected_sha256": "12fa919f6d71a9d763ecbf9a57c4b3cdd12633a7c92d52ae4851ffa932ebc785",
+      "current_sha256": "12fa919f6d71a9d763ecbf9a57c4b3cdd12633a7c92d52ae4851ffa932ebc785",
+      "unchanged": true
+    },
+    {
+      "path": "logical-overview.png",
+      "expected_sha256": "1f22e39d0507b85b35ac392a163c457c51a0c49a471306449d33c1deecf0ca39",
+      "current_sha256": "1f22e39d0507b85b35ac392a163c457c51a0c49a471306449d33c1deecf0ca39",
+      "unchanged": true
+    },
+    {
+      "path": "logical-right-inspection.png",
+      "expected_sha256": "e636221c0f30fc32455bb26888e60aaf2722e02c4a94141ff0368bd8a900cbf5",
+      "current_sha256": "e636221c0f30fc32455bb26888e60aaf2722e02c4a94141ff0368bd8a900cbf5",
+      "unchanged": true
+    },
+    {
+      "path": "logical.png",
+      "expected_sha256": "ceebd96f3f5adc297631f31f36cd308f7323a743fa7bbc346a09e09eec5aa970",
+      "current_sha256": "ceebd96f3f5adc297631f31f36cd308f7323a743fa7bbc346a09e09eec5aa970",
+      "unchanged": true
+    },
+    {
+      "path": "logical.svg",
+      "expected_sha256": "8b01b7470952555b415909c0e02f816e18450b0d141293ba59ed2e3ab4e22af8",
+      "current_sha256": "8b01b7470952555b415909c0e02f816e18450b0d141293ba59ed2e3ab4e22af8",
+      "unchanged": true
+    },
+    {
+      "path": "physical-geometry.json",
+      "expected_sha256": "2262be4884a3bff05593210877e5792c5a8deaac7a7145c513b5143824a06487",
+      "current_sha256": "2262be4884a3bff05593210877e5792c5a8deaac7a7145c513b5143824a06487",
+      "unchanged": true
+    },
+    {
+      "path": "physical-left-inspection.png",
+      "expected_sha256": "3b39a11212ca785150975486b65beb2b07542d68e73f222187db2757c47eef25",
+      "current_sha256": "3b39a11212ca785150975486b65beb2b07542d68e73f222187db2757c47eef25",
+      "unchanged": true
+    },
+    {
+      "path": "physical-overview.png",
+      "expected_sha256": "9f69c17ede009eac7ea23c5f8487629ced2242ad2c42768ed2ac95bc5e17c65e",
+      "current_sha256": "9f69c17ede009eac7ea23c5f8487629ced2242ad2c42768ed2ac95bc5e17c65e",
+      "unchanged": true
+    },
+    {
+      "path": "physical-right-inspection.png",
+      "expected_sha256": "25e08b70641c3ab72ff2298339841f2e245dacd936e9ce1ec53e1bb7f3ec0919",
+      "current_sha256": "25e08b70641c3ab72ff2298339841f2e245dacd936e9ce1ec53e1bb7f3ec0919",
+      "unchanged": true
+    },
+    {
+      "path": "physical.png",
+      "expected_sha256": "e0ce62569a54a2bfcf5c2f0237c5c6b8eb33ab2bcc3990ce1994984e1102a52d",
+      "current_sha256": "e0ce62569a54a2bfcf5c2f0237c5c6b8eb33ab2bcc3990ce1994984e1102a52d",
+      "unchanged": true
+    },
+    {
+      "path": "physical.svg",
+      "expected_sha256": "dbf1907319184d721aa21cdc001cda34fe0e304421d2616a803bcd48694da2ff",
+      "current_sha256": "dbf1907319184d721aa21cdc001cda34fe0e304421d2616a803bcd48694da2ff",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-check/logical-geometry.json",
+      "expected_sha256": "8a3557715cac6b3d63dbb55faa6a510ad3d47a3b87afae31da559590f1f64a5b",
+      "current_sha256": "8a3557715cac6b3d63dbb55faa6a510ad3d47a3b87afae31da559590f1f64a5b",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-check/logical-overview.png",
+      "expected_sha256": "6d1b66e786b86f16fdaab30310fe81ff625d3bf91054ff6fdecf60599a19b28a",
+      "current_sha256": "6d1b66e786b86f16fdaab30310fe81ff625d3bf91054ff6fdecf60599a19b28a",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-check/logical.png",
+      "expected_sha256": "c81f4a7b20a591e5f476f877df9e4741a76a96741f1bb7ec535fb1b9b8c2c336",
+      "current_sha256": "c81f4a7b20a591e5f476f877df9e4741a76a96741f1bb7ec535fb1b9b8c2c336",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-check/logical.svg",
+      "expected_sha256": "af68ae164b719cdd2245d33bdb4921cd57af521ff5b386a5a67de87a5a0a7c88",
+      "current_sha256": "af68ae164b719cdd2245d33bdb4921cd57af521ff5b386a5a67de87a5a0a7c88",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-check/P1_LOGICAL_LAYOUT_PROPOSAL.mmd",
+      "expected_sha256": "8c52c160438c085fe9d2c06aaf8514c698a7bd9c4f8ba517bf828ec2ba63d778",
+      "current_sha256": "8c52c160438c085fe9d2c06aaf8514c698a7bd9c4f8ba517bf828ec2ba63d778",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-check/render-proposal.cjs",
+      "expected_sha256": "ffb04761abd7c9af0cd9ee63e4d3e12997393e72485f68955f26c7e99158c918",
+      "current_sha256": "ffb04761abd7c9af0cd9ee63e4d3e12997393e72485f68955f26c7e99158c918",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-check/RENDER_CONFIG.json",
+      "expected_sha256": "03e8d93d7f8029793be59f6008c71799c2daac71933a2486376da7103a47c337",
+      "current_sha256": "03e8d93d7f8029793be59f6008c71799c2daac71933a2486376da7103a47c337",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-check/RENDER_RECEIPT.json",
+      "expected_sha256": "6345d7e8a5d0538f87bc29f43120798d427e8a7eb1b630bef58cec9713d89693",
+      "current_sha256": "6345d7e8a5d0538f87bc29f43120798d427e8a7eb1b630bef58cec9713d89693",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-check/RENDERER_ASSET_MANIFEST.json",
+      "expected_sha256": "6310c6f77def1db1fdd40a119019029947ee141b692697380434448c2e1f2ddb",
+      "current_sha256": "6310c6f77def1db1fdd40a119019029947ee141b692697380434448c2e1f2ddb",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/final-label-inspection.png",
+      "expected_sha256": "3350d599e3430603637076e5d2718f078ba74da0f8f4e55b4daa709e0480401a",
+      "current_sha256": "3350d599e3430603637076e5d2718f078ba74da0f8f4e55b4daa709e0480401a",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/final-left-inspection.png",
+      "expected_sha256": "59f6cf92bcea594384b8daa44bf5c3732a24a66f1c7abf155345dec0c1912daf",
+      "current_sha256": "59f6cf92bcea594384b8daa44bf5c3732a24a66f1c7abf155345dec0c1912daf",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/final-right-inspection.png",
+      "expected_sha256": "a24460088e4079ed753e5e3bc248fa0d6495ec4af701394bc9e41a80f9cc4053",
+      "current_sha256": "a24460088e4079ed753e5e3bc248fa0d6495ec4af701394bc9e41a80f9cc4053",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/FINAL_INSPECTION_CROPS.json",
+      "expected_sha256": "9c09cc3d93ae77e81ce1675d5a6e2d9e0f695386f3ff6a8829d1e76350a37061",
+      "current_sha256": "9c09cc3d93ae77e81ce1675d5a6e2d9e0f695386f3ff6a8829d1e76350a37061",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/label-inspection.png",
+      "expected_sha256": "7acee2857030812164cc1dc98a81b9a2b3b83e67eaee4bfa268bca006d19a508",
+      "current_sha256": "7acee2857030812164cc1dc98a81b9a2b3b83e67eaee4bfa268bca006d19a508",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/logical-geometry.json",
+      "expected_sha256": "994870ee39713b0f6a8bf9c0c38eb0d023bcbfe531122d4a6bc4829a28323ca8",
+      "current_sha256": "994870ee39713b0f6a8bf9c0c38eb0d023bcbfe531122d4a6bc4829a28323ca8",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/logical-overview.png",
+      "expected_sha256": "2ca3549ff214698d23d92455e2382e5425434540a977f17e929338765a0f58b9",
+      "current_sha256": "2ca3549ff214698d23d92455e2382e5425434540a977f17e929338765a0f58b9",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/logical.png",
+      "expected_sha256": "9a1a416018188f2366c92153350b21b880bf89d58615ae960743936098a35aab",
+      "current_sha256": "9a1a416018188f2366c92153350b21b880bf89d58615ae960743936098a35aab",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/logical.svg",
+      "expected_sha256": "a45c0fe005db339625f6ddc8f470eaa6bbe46589a888cea24c8eac97f9375d85",
+      "current_sha256": "a45c0fe005db339625f6ddc8f470eaa6bbe46589a888cea24c8eac97f9375d85",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/P1_LOGICAL_LAYOUT_PROPOSAL.mmd",
+      "expected_sha256": "829890b4125006812b739ca87fbfe68c4a614e1198706c34e8015420a4340e9a",
+      "current_sha256": "829890b4125006812b739ca87fbfe68c4a614e1198706c34e8015420a4340e9a",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/pre-spacing-logical.svg",
+      "expected_sha256": "1ec81e3ef406052f51ce30afe863529dda1b9867b77402b0f72d2c09b09fd5d3",
+      "current_sha256": "1ec81e3ef406052f51ce30afe863529dda1b9867b77402b0f72d2c09b09fd5d3",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/PRE_SPACING_BASELINE.json",
+      "expected_sha256": "6f5301bedc68c656fa1d2967ce5236fdbd81605347a947d1df934d9afa21b0fe",
+      "current_sha256": "6f5301bedc68c656fa1d2967ce5236fdbd81605347a947d1df934d9afa21b0fe",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/render-proposal.cjs",
+      "expected_sha256": "439f766a97e65e7c87c2dbe9f81cbaaa7be706ee0aaa0d5a44705f030f7b4569",
+      "current_sha256": "439f766a97e65e7c87c2dbe9f81cbaaa7be706ee0aaa0d5a44705f030f7b4569",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/RENDER_CONFIG.json",
+      "expected_sha256": "03e8d93d7f8029793be59f6008c71799c2daac71933a2486376da7103a47c337",
+      "current_sha256": "03e8d93d7f8029793be59f6008c71799c2daac71933a2486376da7103a47c337",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/RENDER_RECEIPT.json",
+      "expected_sha256": "f1887203e3a5dd5a63c051ab2bcbfa4a2120980b8b1c1f8da38c7bbb8e2fd5df",
+      "current_sha256": "f1887203e3a5dd5a63c051ab2bcbfa4a2120980b8b1c1f8da38c7bbb8e2fd5df",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/RENDERER_ASSET_MANIFEST.json",
+      "expected_sha256": "6310c6f77def1db1fdd40a119019029947ee141b692697380434448c2e1f2ddb",
+      "current_sha256": "6310c6f77def1db1fdd40a119019029947ee141b692697380434448c2e1f2ddb",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/SPACING_TRIAL_1.json",
+      "expected_sha256": "9ea132abd206b5b0ae06556909f08521617850be5e93779fabb7acc372e2778c",
+      "current_sha256": "9ea132abd206b5b0ae06556909f08521617850be5e93779fabb7acc372e2778c",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/SPACING_TRIAL_2.json",
+      "expected_sha256": "3e92c64a2b4b5b7c49ea84ea51e401cc7d38cde6a0b22224024fc6eb0b2de64d",
+      "current_sha256": "3e92c64a2b4b5b7c49ea84ea51e401cc7d38cde6a0b22224024fc6eb0b2de64d",
+      "unchanged": true
+    },
+    {
+      "path": "PROPOSAL_GEOMETRY_REVIEW.json",
+      "expected_sha256": "dfd84838fe8188d8d1e1b126ecdadbbe5a487a41932d0a67f63484d325388e16",
+      "current_sha256": "dfd84838fe8188d8d1e1b126ecdadbbe5a487a41932d0a67f63484d325388e16",
+      "unchanged": true
+    },
+    {
+      "path": "render-local.cjs",
+      "expected_sha256": "bbcd2667ce64a7c06cf8c12a63edc4d9a367102c5f5c81757c308c917e8f7128",
+      "current_sha256": "bbcd2667ce64a7c06cf8c12a63edc4d9a367102c5f5c81757c308c917e8f7128",
+      "unchanged": true
+    },
+    {
+      "path": "RENDER_CONFIG.json",
+      "expected_sha256": "03e8d93d7f8029793be59f6008c71799c2daac71933a2486376da7103a47c337",
+      "current_sha256": "03e8d93d7f8029793be59f6008c71799c2daac71933a2486376da7103a47c337",
+      "unchanged": true
+    },
+    {
+      "path": "RENDER_RECEIPT.json",
+      "expected_sha256": "2f6fbba735f50675d9575cdafe29e6647b3e70e8fc622f4f455e7beb36b78f02",
+      "current_sha256": "2f6fbba735f50675d9575cdafe29e6647b3e70e8fc622f4f455e7beb36b78f02",
+      "unchanged": true
+    },
+    {
+      "path": "RENDERER_ASSET_MANIFEST.json",
+      "expected_sha256": "6310c6f77def1db1fdd40a119019029947ee141b692697380434448c2e1f2ddb",
+      "current_sha256": "6310c6f77def1db1fdd40a119019029947ee141b692697380434448c2e1f2ddb",
+      "unchanged": true
+    },
+    {
+      "path": "RENDERER_LAYOUT_PROPOSAL.patch",
+      "expected_sha256": "9959fef2ccc5f0797b547dc04fc4523c29143f6e52f8451a7aa90b8161199405",
+      "current_sha256": "9959fef2ccc5f0797b547dc04fc4523c29143f6e52f8451a7aa90b8161199405",
+      "unchanged": true
+    },
+    {
+      "path": "SOURCE_SEMANTICS_CHECK.json",
+      "expected_sha256": "e242af7c4314e8e8040cf18dbf5d1bb76a4e20bd134551c9c61ca0d3f6d00282",
+      "current_sha256": "e242af7c4314e8e8040cf18dbf5d1bb76a4e20bd134551c9c61ca0d3f6d00282",
+      "unchanged": true
+    },
+    {
+      "path": "VISUAL_REVIEW.md",
+      "expected_sha256": "8c232efceb2a8ff844fabf8d327ef97ab527766c6f1403e280bc78c7b3526b32",
+      "current_sha256": "8c232efceb2a8ff844fabf8d327ef97ab527766c6f1403e280bc78c7b3526b32",
+      "unchanged": true
+    }
+  ],
+  "installed_renderer_assets": [
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\chunk-2KBWIZHB.js",
+      "bytes": 38388,
+      "sha256": "9349a25f96c088a07e9a560674cd69bd78b676526f4cefeea440a05a10ed9b32",
+      "current_sha256": "9349a25f96c088a07e9a560674cd69bd78b676526f4cefeea440a05a10ed9b32",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\chunk-3CEAP2V5.js",
+      "bytes": 108714,
+      "sha256": "f5ceca2a3d9b98e5ab254a8b9e0e60e072f2e8e327826f464f2f2afb1b9c1aaf",
+      "current_sha256": "f5ceca2a3d9b98e5ab254a8b9e0e60e072f2e8e327826f464f2f2afb1b9c1aaf",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\chunk-4AUIAGYT.js",
+      "bytes": 5876,
+      "sha256": "dc9991271c7bd77723df1f0e96ee64a4c61e0bcfaad22125affcc425f1d266af",
+      "current_sha256": "dc9991271c7bd77723df1f0e96ee64a4c61e0bcfaad22125affcc425f1d266af",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\chunk-6LQNQPBM.js",
+      "bytes": 156,
+      "sha256": "db25c7615162582a9a162279563ba063a43b7823caea8a77f0517f8d2dc5385e",
+      "current_sha256": "db25c7615162582a9a162279563ba063a43b7823caea8a77f0517f8d2dc5385e",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\chunk-A3DHMJKP.js",
+      "bytes": 10098,
+      "sha256": "31c31157ca2b358ea228f32fb39226d6989713ee5384a0b122e38131d3290372",
+      "current_sha256": "31c31157ca2b358ea228f32fb39226d6989713ee5384a0b122e38131d3290372",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\chunk-CBQW2LLN.js",
+      "bytes": 1412,
+      "sha256": "d9d78824063c0e4b66b6f2fd16aca5dcf422e5d51bb7e003300f543eb01166d4",
+      "current_sha256": "d9d78824063c0e4b66b6f2fd16aca5dcf422e5d51bb7e003300f543eb01166d4",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\chunk-CQFFNO72.js",
+      "bytes": 2527,
+      "sha256": "7dce3492ac20138282ed68d3cc3006a420820e46504d64b1b4323612c68d5fb8",
+      "current_sha256": "7dce3492ac20138282ed68d3cc3006a420820e46504d64b1b4323612c68d5fb8",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\chunk-EWILYK3H.js",
+      "bytes": 27373,
+      "sha256": "a808a0b9549904d5c6a26f05b50176dbc2bbae52aabb9ef683c11d1f3c6823f6",
+      "current_sha256": "a808a0b9549904d5c6a26f05b50176dbc2bbae52aabb9ef683c11d1f3c6823f6",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\chunk-EWVD6AUZ.js",
+      "bytes": 359,
+      "sha256": "25bd2e934fa82fb4bd81385aa441e7135d11381a5d545fe0990c4c0aa9992a40",
+      "current_sha256": "25bd2e934fa82fb4bd81385aa441e7135d11381a5d545fe0990c4c0aa9992a40",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\chunk-FH3BATM5.js",
+      "bytes": 261,
+      "sha256": "6f431389d821934c4c1af9b7a55786602d1ff361eda33d93c4a048b9d3ee55c4",
+      "current_sha256": "6f431389d821934c4c1af9b7a55786602d1ff361eda33d93c4a048b9d3ee55c4",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\chunk-JAORNH2M.js",
+      "bytes": 18234,
+      "sha256": "2ed7bb89a03c8b989d81ff585f0137336ab6dc6fe820f59d96ac2f0c6f8d6729",
+      "current_sha256": "2ed7bb89a03c8b989d81ff585f0137336ab6dc6fe820f59d96ac2f0c6f8d6729",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\chunk-JBQZ5UCE.js",
+      "bytes": 1895,
+      "sha256": "f707c3d1a1855883c54b313c6f15ba03d7820d0ec3c34583d3ab15b90d317436",
+      "current_sha256": "f707c3d1a1855883c54b313c6f15ba03d7820d0ec3c34583d3ab15b90d317436",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\chunk-JXCTOEX6.js",
+      "bytes": 25645,
+      "sha256": "bcb03b8870cac8f8be07f812b938132cb9c426d120a91b503bdac8068e201e63",
+      "current_sha256": "bcb03b8870cac8f8be07f812b938132cb9c426d120a91b503bdac8068e201e63",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\chunk-LK6KML2S.js",
+      "bytes": 36387,
+      "sha256": "5aee09d0191b0055a4bae41d8c809efdb8d1ad31860907f32bee77095c4631e0",
+      "current_sha256": "5aee09d0191b0055a4bae41d8c809efdb8d1ad31860907f32bee77095c4631e0",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\chunk-NLCJ5AKJ.js",
+      "bytes": 238071,
+      "sha256": "6e905339612c818692278bf783ba6c35ca82f1b15697d268257cf2ede9a8ae7b",
+      "current_sha256": "6e905339612c818692278bf783ba6c35ca82f1b15697d268257cf2ede9a8ae7b",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\chunk-OOJM4CTU.js",
+      "bytes": 638,
+      "sha256": "9dbaaa1b267ebd74b96fc498735a78d76804f1e96e532871291c937cf83694e7",
+      "current_sha256": "9dbaaa1b267ebd74b96fc498735a78d76804f1e96e532871291c937cf83694e7",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\chunk-RBL2QVA3.js",
+      "bytes": 9729,
+      "sha256": "42b5c6f26348a3b1a2260f47df9c8ba046a44f30cc075b3e595b17cd936ce732",
+      "current_sha256": "42b5c6f26348a3b1a2260f47df9c8ba046a44f30cc075b3e595b17cd936ce732",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\chunk-TGD3YKTU.js",
+      "bytes": 47128,
+      "sha256": "d2cf68d5396dbf7722c6b6edb08f49b303272a2c7032f9ea69e9270347f5a849",
+      "current_sha256": "d2cf68d5396dbf7722c6b6edb08f49b303272a2c7032f9ea69e9270347f5a849",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\chunk-TGYBLZFN.js",
+      "bytes": 557,
+      "sha256": "e9259f956f74964064cca12d65881ec43bd7425524578d07bf93e6df2f061e01",
+      "current_sha256": "e9259f956f74964064cca12d65881ec43bd7425524578d07bf93e6df2f061e01",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\chunk-U3E5RSXE.js",
+      "bytes": 105555,
+      "sha256": "6a3de1222e1b18db378ddbe259f6a6e66f35cc7f005893618fa245ad50a8aaea",
+      "current_sha256": "6a3de1222e1b18db378ddbe259f6a6e66f35cc7f005893618fa245ad50a8aaea",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\chunk-U7TCJVVP.js",
+      "bytes": 2020,
+      "sha256": "4b95c45e438a7a16ae60c70c4bca91ce9f71e633b2518632358648ca03003b5a",
+      "current_sha256": "4b95c45e438a7a16ae60c70c4bca91ce9f71e633b2518632358648ca03003b5a",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\chunk-WVYKIHVG.js",
+      "bytes": 308,
+      "sha256": "9e4346632301ce09c15e72cfb69e51178aeec2812abda6c42350041464529b98",
+      "current_sha256": "9e4346632301ce09c15e72cfb69e51178aeec2812abda6c42350041464529b98",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\chunk-XCMS6RVA.js",
+      "bytes": 1942,
+      "sha256": "fe58e2bcc30f55f352b92e2b1f548df5b5b8c2b35ad3c46779ece086da28dc1b",
+      "current_sha256": "fe58e2bcc30f55f352b92e2b1f548df5b5b8c2b35ad3c46779ece086da28dc1b",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\chunk-ZU7JKVUR.js",
+      "bytes": 62034,
+      "sha256": "d5e94a4c9484ccf998887d73aba447ba4554973479fad3c8fe41087d70ee723b",
+      "current_sha256": "d5e94a4c9484ccf998887d73aba447ba4554973479fad3c8fe41087d70ee723b",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\chunk-ZYRITDEB.js",
+      "bytes": 52534,
+      "sha256": "60baafac2345cea749401a9ad5a75a1da8eb3334333cf9c7adc3d496d067f701",
+      "current_sha256": "60baafac2345cea749401a9ad5a75a1da8eb3334333cf9c7adc3d496d067f701",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\dagre-3AP2YEHR-CUFPL4A5.js",
+      "bytes": 10999,
+      "sha256": "cca04f51e5c49679948365c1a9148c75919eb926cb7848ff6132d9d3c4192830",
+      "current_sha256": "cca04f51e5c49679948365c1a9148c75919eb926cb7848ff6132d9d3c4192830",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\flowDiagram-A5DVABFB-M6K5X26V.js",
+      "bytes": 652,
+      "sha256": "9e87ce07a1d48f75d53c4df7d945637a6d88cc68f136faf396d8a576d2a5702b",
+      "current_sha256": "9e87ce07a1d48f75d53c4df7d945637a6d88cc68f136faf396d8a576d2a5702b",
+      "hash_matches": true
+    },
+    {
+      "file": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\mermaid.core-S5KCHHL2.js",
+      "bytes": 28700,
+      "sha256": "537eeee78e7978252c8dd8c7f31c508c334bfd4ee59de8eb5b6f5826a74ae03a",
+      "current_sha256": "537eeee78e7978252c8dd8c7f31c508c334bfd4ee59de8eb5b6f5826a74ae03a",
+      "hash_matches": true
+    }
+  ],
+  "render_QA_rerun": false,
+  "external_fetches": 0
+}

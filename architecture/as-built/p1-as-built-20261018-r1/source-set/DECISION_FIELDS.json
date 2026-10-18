@@ -1,0 +1,88 @@
+{
+  "status": "UNDECIDED_TEMPLATE_NOT_APPROVAL",
+  "prepared_at_kst": "2026-10-16 20:23:51 KST",
+  "new_approver_assigned": false,
+  "fields": [
+    {
+      "id": "source_scope",
+      "value": null,
+      "recommendation": "Select manifest explanation+addendum, layout-only logical, unchanged physical, mandatory renderer/config and bound derivatives together."
+    },
+    {
+      "id": "official_source_version_and_release_relation",
+      "value": {
+        "official_source_version": null,
+        "release_relation": null
+      },
+      "recommendation": "Preserve requirements baseline docs-v3.1.21; explicitly decide source revision and relation to an official Release. Do not promote local date filenames to version numbers."
+    },
+    {
+      "id": "destination",
+      "value": {
+        "repository": null,
+        "files": {
+          "explanation": null,
+          "addendum_or_integrated_explanation": null,
+          "logical_mmd": null,
+          "physical_mmd": null,
+          "renderer": null,
+          "config": null,
+          "logical_svg": null,
+          "physical_svg": null,
+          "manifest": null
+        }
+      },
+      "recommendation": {
+        "repository": "321Team/fds-project-baseline",
+        "directory": "architecture/",
+        "exact_filenames": "Decision required for each file; no official path assigned by this task."
+      }
+    },
+    {
+      "id": "distribution_format",
+      "value": {
+        "primary": null,
+        "include_png": null,
+        "include_pdf": null
+      },
+      "recommendation": {
+        "primary": "SVG",
+        "editable_sources": "MMD + explanation/addendum",
+        "png": "QA/reference unless selected",
+        "pdf": "Not generated"
+      }
+    },
+    {
+      "id": "adoption_review_record",
+      "value": {
+        "decision": null,
+        "decision_maker": null,
+        "recorded_at_kst": null,
+        "exact_manifest_sha256": null,
+        "record_location": null
+      },
+      "recommendation": "Record actual decision and exact target; no new approver assigned."
+    },
+    {
+      "id": "D07_ledger_linkage",
+      "value": {
+        "adopt_or_link": null,
+        "existing_ledger_location": null,
+        "receipt_location": null
+      },
+      "recommendation": "Reuse existing D07_LEDGER_ROW.md exactly; connect to existing #20 ledger, no duplicate issue or new row authored."
+    },
+    {
+      "id": "publication_and_freeze",
+      "value": {
+        "source_adoption": null,
+        "architecture_approval": null,
+        "publication": null,
+        "critical_document_defects_zero": null,
+        "DOC_O01_acceptance": null,
+        "Freeze": null
+      },
+      "recommendation": "Keep each decision distinct. Local rendering/package integrity does not fill these fields."
+    }
+  ]
+}

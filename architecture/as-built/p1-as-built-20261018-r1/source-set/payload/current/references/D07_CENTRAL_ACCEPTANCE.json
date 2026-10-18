@@ -1,0 +1,80 @@
+{
+  "at_kst": "2026-10-16T18:04:29.148090+09:00",
+  "state": "ACCEPTED_LEAD_REPLY_AND_LOCAL_LINKAGE_NOT_EXTERNAL_ADOPTION",
+  "binding_sha256": "b8cf79e39f9649aecd6208a74a6218c358a2cfeb7e0b52194830a2939ee6fa31",
+  "output_files_verified": 11,
+  "original_inputs_unchanged": 12,
+  "source_reply": {
+    "url": "https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-6211817978",
+    "author": "supreme33-kr",
+    "created_at_kst": "2026-10-16T17:52:26+09:00",
+    "body_sha256": "2a3b47629ec36f92258b314545902eeb9ec400c75e1617818a1787689bdfc107",
+    "ledger_row_sha256": "3f5de9224aea8d7a92108eb4f1d8b4f72ab55296db15fd9318a579dd1847d515"
+  },
+  "confirmed": {
+    "ID": "D-07",
+    "Owner": "이재환(APP Lead)",
+    "first_recheck": "APP 최종 인수 판정 직전",
+    "fix_due_date": null,
+    "p2_transfer": null,
+    "risk_acceptance_expiry": null,
+    "Severity": "Major",
+    "P1_code_change": "NONE_SELECTED",
+    "remaining_risk": "음수 이력에 의한 R07 합계 감소 가능성; 실제 음수 저장/후속 미탐 NOT_RUN",
+    "runtime_db01_constraints": "NOT_VERIFIED",
+    "I01": "Separate Minor, unchanged",
+    "existing_critical0_regression_defect_approval": "PRESERVED_PER_LEAD6206804605_AND_PR38",
+    "lead_management_fields": "CONFIRMED_IN_RECEIVED_REPLY",
+    "central_final_adoption": "NOT_PERFORMED_BY_DOC / separate central decision",
+    "external_issue_body_write": "NOT_PERFORMED",
+    "whole_APP_or_Phase1_acceptance": "NOT_DETERMINED_BY_THIS_TASK"
+  },
+  "checks": [
+    {
+      "path": "\\\\?\\C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\CURRENT_TASK.md",
+      "sha256": "b5178bea53671bb445647b4fc0f51524c166d75eb8da77b3806c9e61a4fbd9bd"
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\D07_IMPACT.json",
+      "sha256": "e02309b874eef0b6a04e2594b3bff2fac875f40e6d5972747f4c2b09158b740e"
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\D07_LEDGER_ROW.md",
+      "sha256": "749468df858a8ec511d49f53a2596cf563e39a4bc5cc339ab3bf642ac6dd5957"
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\FINAL_HANDOFF.md",
+      "sha256": "966e783882210cd33fa1de1670cda97c44c561645d613aba957e66e7b51e9750"
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\references\\CENTRAL_comments20.json",
+      "sha256": "d7278722b32958eead45f673cd248daaafadc6fb84bb5ef011c0288525267749"
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\references\\CENTRAL_SUMMARY.json",
+      "sha256": "4f88deaeb56c00d5ada88ae260223cccf0628451936dd1a7feb16c56e0054396"
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\references\\COMMENT_6211314367.json",
+      "sha256": "6bd3b9ffbb0062be716041646f4880e1ba53c31ac7fbdcd490e7ecf82c20b407"
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\references\\COMMENT_6211817978.json",
+      "sha256": "f0292a53f4e9591e56b01df56c36354b21cd626d62ab3ffa7ac55119122e2e84"
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\references\\ISSUE20_CURRENT.json",
+      "sha256": "eb36efd411cb0843b0246720434940a233b490c674f2ee4caf160dc0964678b6"
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\references\\PRIOR_LEAD_6206804605.json",
+      "sha256": "73f198e07825c07ebb096dff62937dfc98a4fe1f10c8e8abc2971f0cb8c94c4f"
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\SOURCE_BINDING.json",
+      "sha256": "79096f07e37bf769224a1758701e4ba9b97e28aec6493ad0cda69224fcaa9f16"
+    }
+  ],
+  "external_write": false,
+  "phase1_acceptance": false
+}

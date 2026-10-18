@@ -1,0 +1,468 @@
+{
+  "source_revision_proposal": "p1-as-built-20261018-r1",
+  "created_at_kst": "2026-10-18T19:26:56.241970+09:00",
+  "state": "FINAL_DOCUMENT_PR_CANDIDATE_NOT_PUBLISHED_NOT_HUMAN_ADOPTED",
+  "self_excluded": true,
+  "requirements_baseline": "docs-v3.1.21",
+  "previous_candidate_manifest_sha256": "0196ebf5ffd50863d2cb600dde3be96efda6a65b674988e6be64dc37597e42d8",
+  "observation_cutoff_kst": "2026-10-18T19:02:42+09:00",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/.gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": "AS_BUILT.md",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/AS_BUILT.md",
+      "bytes": 20943,
+      "sha256": "14f42cf6eb1a85dbfc014f71426f3df16ff2599c9a7ae542767c548b9c5c0c74"
+    },
+    {
+      "path": "DERIVATIVE_PROVENANCE.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/DERIVATIVE_PROVENANCE.json",
+      "bytes": 6803,
+      "sha256": "130c86dbe8798aeec8f9f7902283d68f0c21bdbb7cdfd61caeb80304d5d6590d"
+    },
+    {
+      "path": "README.md",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/README.md",
+      "bytes": 4004,
+      "sha256": "65d353f1603ead80f9a7a5495312005dfe1b42750a9d9afea7df0051debaaae0"
+    },
+    {
+      "path": "observations/20261018T1902.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/observations/20261018T1902.json",
+      "bytes": 2615,
+      "sha256": "8c084c38b76de33e3f7597c9da523effcb5bb5212b462a54e504953742f5908b"
+    },
+    {
+      "path": "source-set/ADOPTION_DECISION_CARD.md",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/ADOPTION_DECISION_CARD.md",
+      "bytes": 3073,
+      "sha256": "5ca4070dd4748031cc6ebe3ec7433a89a23da7b1e4bde2865d6f4234965d3f76"
+    },
+    {
+      "path": "source-set/ADOPTION_MANIFEST.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/ADOPTION_MANIFEST.json",
+      "bytes": 3781,
+      "sha256": "1695abbaba1e4ca563b80ed1349fab1115787a469891c77d9562a31458daf693"
+    },
+    {
+      "path": "source-set/CURRENT_TASK.md",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/CURRENT_TASK.md",
+      "bytes": 1485,
+      "sha256": "45850ae131341e7f95d5d0e5fa6e3104253b3c7aca665dc045eb7ed7e8bc857d"
+    },
+    {
+      "path": "source-set/D07_LINKAGE.md",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/D07_LINKAGE.md",
+      "bytes": 2244,
+      "sha256": "2341c95cd8a2ba31d20b0a09720d9eb296cab407167c20a261dabca3a6ec3890"
+    },
+    {
+      "path": "source-set/DECISION_FIELDS.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/DECISION_FIELDS.json",
+      "bytes": 2794,
+      "sha256": "498cc07ba1afb9fd09699a70fc4eb35a03c951363ad63d4a19ffc4c5c057b60e"
+    },
+    {
+      "path": "source-set/FINAL_BINDING.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/FINAL_BINDING.json",
+      "bytes": 16749,
+      "sha256": "d5c1935ab4ed3eaa4d579ce879d30b9960e90b2261f3dd075cdd2aca8e5b4683"
+    },
+    {
+      "path": "source-set/FINAL_HEAD_READBACK.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/FINAL_HEAD_READBACK.json",
+      "bytes": 1242,
+      "sha256": "9f6f34d037568c67999d38f62abab1c6ef46f42854afecc88736f83b70192cc5"
+    },
+    {
+      "path": "source-set/HANDOFF.md",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/HANDOFF.md",
+      "bytes": 6005,
+      "sha256": "e07fc6e94a80ae653d89112680cb0c7e00bc5a87092b284f0d1660f54217e7eb"
+    },
+    {
+      "path": "source-set/PACKAGE_CHECKS.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/PACKAGE_CHECKS.json",
+      "bytes": 16753,
+      "sha256": "b8c7562918cd4ec77f74a6a1c4e1f7bfdf4cd85bee6fe27b24bb396b1e0a4834"
+    },
+    {
+      "path": "source-set/RENDERER_DEPENDENCIES.md",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/RENDERER_DEPENDENCIES.md",
+      "bytes": 3534,
+      "sha256": "83cfa6e562cefb21cf790bcc99bf2c70a7dc48bb2470fd931fb2c75ce3972984"
+    },
+    {
+      "path": "source-set/RENDER_ADOPTION_ADDENDUM.md",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/RENDER_ADOPTION_ADDENDUM.md",
+      "bytes": 2981,
+      "sha256": "ff24ca5054321f67c1332ac05f23cf8e1baf3d38d55fa0a82f9e69e76cf6f84e"
+    },
+    {
+      "path": "source-set/SOURCE_BINDING.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/SOURCE_BINDING.json",
+      "bytes": 70883,
+      "sha256": "705cdc1f5e57f20cb8c54a3a2699ea49e70adbce642510ba15a4572e73ad29ce"
+    },
+    {
+      "path": "source-set/SOURCE_INDEX.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/SOURCE_INDEX.json",
+      "bytes": 168998,
+      "sha256": "6186893d3ed357d15e69c5bf2f95519247284b5fd77ff6e79851af9c3eb364c4"
+    },
+    {
+      "path": "source-set/SOURCE_LINK_MAP.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/SOURCE_LINK_MAP.json",
+      "bytes": 68502,
+      "sha256": "596417e558ea1ef702bb4ed6e4f3860c0a346f9ed5cda529942c7aeba8813905"
+    },
+    {
+      "path": "source-set/finalize-package.cjs",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/finalize-package.cjs",
+      "bytes": 12115,
+      "sha256": "431d0506c196e7863e3b5ea7f29f8a1b83143cf168ab620582aead962a29369b"
+    },
+    {
+      "path": "source-set/payload/as-built-candidate/P1_AS_BUILT_CANDIDATE.md",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/as-built-candidate/P1_AS_BUILT_CANDIDATE.md",
+      "bytes": 10073,
+      "sha256": "6108ef73a402850b80d52cb656ade6c5239305e8d2e882ee35009b200909cf3c"
+    },
+    {
+      "path": "source-set/payload/current/FINAL_BINDING.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/FINAL_BINDING.json",
+      "bytes": 9445,
+      "sha256": "c73b14b5d9cb15f247ff1a15cdc84bea70f068a279fe923e80e7391e0f32240d"
+    },
+    {
+      "path": "source-set/payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "bytes": 13716,
+      "sha256": "4c746a65cb58c4fe772d57fe37a1031c8aa72aaf9b6d81541b92f81e029d6a59"
+    },
+    {
+      "path": "source-set/payload/current/SOURCE_BINDING.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/SOURCE_BINDING.json",
+      "bytes": 6529,
+      "sha256": "248316e61c36358279053fff01f4fb91d670de83de92f1035239926c156d2772"
+    },
+    {
+      "path": "source-set/payload/current/candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "bytes": 2581,
+      "sha256": "3093735816f09f1234d1e3b4a2ae0c2109e70ce773b705a76d74c52d4ff696b5"
+    },
+    {
+      "path": "source-set/payload/current/candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "bytes": 1454,
+      "sha256": "f28d7d469609810059da3d3bf4eb960c243313644929099482271fe864660922"
+    },
+    {
+      "path": "source-set/payload/current/references/ANSIBLE_POST_PASS_HANDOFF_CENTRAL.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/references/ANSIBLE_POST_PASS_HANDOFF_CENTRAL.json",
+      "bytes": 8329,
+      "sha256": "7185297864be34d82d29fa0d3552a909af2f0ff8027b49221861f82e82ebe117"
+    },
+    {
+      "path": "source-set/payload/current/references/ANSIBLE_POST_PASS_ONE_PAGE_HANDOFF.md",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/references/ANSIBLE_POST_PASS_ONE_PAGE_HANDOFF.md",
+      "bytes": 7319,
+      "sha256": "e68e599658c4d24acd8a2b1310dfc0dfeee482e57de026ebb501a762035c52c7"
+    },
+    {
+      "path": "source-set/payload/current/references/ANSIBLE_RESULT_CENTRAL_VERIFICATION.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/references/ANSIBLE_RESULT_CENTRAL_VERIFICATION.json",
+      "bytes": 4241,
+      "sha256": "b4b1dd45c35492ef9bf7727021ac0390f198bf9354b3b395f3384938f0d854fe"
+    },
+    {
+      "path": "source-set/payload/current/references/ANSIBLE_ROLE185_FINAL_HANDOFF_CENTRAL.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/references/ANSIBLE_ROLE185_FINAL_HANDOFF_CENTRAL.json",
+      "bytes": 9913,
+      "sha256": "d7c1fbb8efbbc4f608afcfed05f23786233d67956f5de6f89014e9757d2fd53e"
+    },
+    {
+      "path": "source-set/payload/current/references/ANSIBLE_RUNTIME_FINAL_HANDOFF.md",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/references/ANSIBLE_RUNTIME_FINAL_HANDOFF.md",
+      "bytes": 4808,
+      "sha256": "bd64738a8cd2f14aeb000dd5765a629c8f62dbd15c96652c8c85e0dc386c0cb9"
+    },
+    {
+      "path": "source-set/payload/current/references/APP39_CI_RECEIPT.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/references/APP39_CI_RECEIPT.json",
+      "bytes": 1986,
+      "sha256": "0ee0d01bf037388a4d95c113ee270645a1358ed539a4476e25ecaa8e524b4c98"
+    },
+    {
+      "path": "source-set/payload/current/references/APP39_MERGE_RECEIPT.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/references/APP39_MERGE_RECEIPT.json",
+      "bytes": 739,
+      "sha256": "7f70e38932776ac3d5fa4b1e95c943c19b1a608f8353492134b863e6150c0a8a"
+    },
+    {
+      "path": "source-set/payload/current/references/D02_IMPACT_ROWS.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/references/D02_IMPACT_ROWS.json",
+      "bytes": 20680,
+      "sha256": "36b60b1b7c289a07249eb4a9890ff0d06533bcb13b7007ace15fa0b38257aaf3"
+    },
+    {
+      "path": "source-set/payload/current/references/D07_CENTRAL_ACCEPTANCE.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/references/D07_CENTRAL_ACCEPTANCE.json",
+      "bytes": 5504,
+      "sha256": "3889d7c5fb630462fceeeb5336d987ac03b225a0142f3a8a71fd80316143cdf1"
+    },
+    {
+      "path": "source-set/payload/current/references/D07_LEAD_REPLY.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/references/D07_LEAD_REPLY.json",
+      "bytes": 4245,
+      "sha256": "f0292a53f4e9591e56b01df56c36354b21cd626d62ab3ffa7ac55119122e2e84"
+    },
+    {
+      "path": "source-set/payload/current/references/HARBOR_BUILD_EXPIRY_READINESS_CENTRAL.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/references/HARBOR_BUILD_EXPIRY_READINESS_CENTRAL.json",
+      "bytes": 6610,
+      "sha256": "a0225950f6484d80fe341c7b0dc98976dd68c155da85bb26b169e7efb7e4224c"
+    },
+    {
+      "path": "source-set/payload/current/references/HARBOR_CORE_METADATA_CENTRAL.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/references/HARBOR_CORE_METADATA_CENTRAL.json",
+      "bytes": 1500,
+      "sha256": "a00c0ef95e451a0c2951b3e687e457f70566cece172e7862243103e6b774bd1b"
+    },
+    {
+      "path": "source-set/payload/current/references/HARBOR_EFFECT_FULL_REVIEW_CENTRAL.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/references/HARBOR_EFFECT_FULL_REVIEW_CENTRAL.json",
+      "bytes": 5637,
+      "sha256": "3a755d3469cbe8eb6b7f549d50da6f86730c6686429a69b89c18865a4129ae03"
+    },
+    {
+      "path": "source-set/payload/current/references/HARBOR_OFFICIAL_IMAGE_BINDING.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/references/HARBOR_OFFICIAL_IMAGE_BINDING.json",
+      "bytes": 1415,
+      "sha256": "95dad8324dfcbba2709d9e8c75191d26e16468a240020dd7424c708eece2d544"
+    },
+    {
+      "path": "source-set/payload/current/references/HARBOR_OFFICIAL_IMAGE_HANDOFF.md",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/references/HARBOR_OFFICIAL_IMAGE_HANDOFF.md",
+      "bytes": 2086,
+      "sha256": "dde7bca5434db9177cf67247da00e5a432d6b21779da4390dcdb6fff58461299"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/FINAL_BINDING.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/FINAL_BINDING.json",
+      "bytes": 13703,
+      "sha256": "ccd7a9e9129d4df7546777df12437f94d3fc5f9e887804673deaa12ef48142e7"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/GEOMETRY_REVIEW.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/GEOMETRY_REVIEW.json",
+      "bytes": 2340,
+      "sha256": "412eb4b8784281136530e2783a73a5df082166a0de66fc4e4c26db37c2c39ca1"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/LAYOUT_ONLY_PROPOSAL.patch",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/LAYOUT_ONLY_PROPOSAL.patch",
+      "bytes": 479,
+      "sha256": "d75fb97bbdde94c8d30cc060ca38a167a240e446c9e3a90ce3179d5f81215bc2"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/PROPOSAL_GEOMETRY_REVIEW.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/PROPOSAL_GEOMETRY_REVIEW.json",
+      "bytes": 554,
+      "sha256": "dfd84838fe8188d8d1e1b126ecdadbbe5a487a41932d0a67f63484d325388e16"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/RENDERER_ASSET_MANIFEST.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/RENDERER_ASSET_MANIFEST.json",
+      "bytes": 8332,
+      "sha256": "6310c6f77def1db1fdd40a119019029947ee141b692697380434448c2e1f2ddb"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/RENDERER_LAYOUT_PROPOSAL.patch",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/RENDERER_LAYOUT_PROPOSAL.patch",
+      "bytes": 2884,
+      "sha256": "9959fef2ccc5f0797b547dc04fc4523c29143f6e52f8451a7aa90b8161199405"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/RENDER_CONFIG.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/RENDER_CONFIG.json",
+      "bytes": 380,
+      "sha256": "03e8d93d7f8029793be59f6008c71799c2daac71933a2486376da7103a47c337"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/RENDER_RECEIPT.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/RENDER_RECEIPT.json",
+      "bytes": 6242,
+      "sha256": "2f6fbba735f50675d9575cdafe29e6647b3e70e8fc622f4f455e7beb36b78f02"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/SOURCE_SEMANTICS_CHECK.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/SOURCE_SEMANTICS_CHECK.json",
+      "bytes": 539,
+      "sha256": "e242af7c4314e8e8040cf18dbf5d1bb76a4e20bd134551c9c61ca0d3f6d00282"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/VISUAL_REVIEW.md",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/VISUAL_REVIEW.md",
+      "bytes": 5354,
+      "sha256": "8c232efceb2a8ff844fabf8d327ef97ab527766c6f1403e280bc78c7b3526b32"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/logical.svg",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/logical.svg",
+      "bytes": 54502,
+      "sha256": "8b01b7470952555b415909c0e02f816e18450b0d141293ba59ed2e3ab4e22af8"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/physical.png",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/physical.png",
+      "bytes": 79543,
+      "sha256": "e0ce62569a54a2bfcf5c2f0237c5c6b8eb33ab2bcc3990ce1994984e1102a52d"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/physical.svg",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/physical.svg",
+      "bytes": 35002,
+      "sha256": "dbf1907319184d721aa21cdc001cda34fe0e304421d2616a803bcd48694da2ff"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/proposal-layout-constraints/FINAL_INSPECTION_CROPS.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/proposal-layout-constraints/FINAL_INSPECTION_CROPS.json",
+      "bytes": 573,
+      "sha256": "9c09cc3d93ae77e81ce1675d5a6e2d9e0f695386f3ff6a8829d1e76350a37061"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/proposal-layout-constraints/P1_LOGICAL_LAYOUT_PROPOSAL.mmd",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/proposal-layout-constraints/P1_LOGICAL_LAYOUT_PROPOSAL.mmd",
+      "bytes": 2710,
+      "sha256": "829890b4125006812b739ca87fbfe68c4a614e1198706c34e8015420a4340e9a"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/proposal-layout-constraints/RENDERER_ASSET_MANIFEST.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/proposal-layout-constraints/RENDERER_ASSET_MANIFEST.json",
+      "bytes": 8332,
+      "sha256": "6310c6f77def1db1fdd40a119019029947ee141b692697380434448c2e1f2ddb"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/proposal-layout-constraints/RENDER_CONFIG.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/proposal-layout-constraints/RENDER_CONFIG.json",
+      "bytes": 380,
+      "sha256": "03e8d93d7f8029793be59f6008c71799c2daac71933a2486376da7103a47c337"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/proposal-layout-constraints/RENDER_RECEIPT.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/proposal-layout-constraints/RENDER_RECEIPT.json",
+      "bytes": 5885,
+      "sha256": "f1887203e3a5dd5a63c051ab2bcbfa4a2120980b8b1c1f8da38c7bbb8e2fd5df"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/proposal-layout-constraints/final-label-inspection.png",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/proposal-layout-constraints/final-label-inspection.png",
+      "bytes": 22505,
+      "sha256": "3350d599e3430603637076e5d2718f078ba74da0f8f4e55b4daa709e0480401a"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/proposal-layout-constraints/final-left-inspection.png",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/proposal-layout-constraints/final-left-inspection.png",
+      "bytes": 100042,
+      "sha256": "59f6cf92bcea594384b8daa44bf5c3732a24a66f1c7abf155345dec0c1912daf"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/proposal-layout-constraints/final-right-inspection.png",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/proposal-layout-constraints/final-right-inspection.png",
+      "bytes": 80292,
+      "sha256": "a24460088e4079ed753e5e3bc248fa0d6495ec4af701394bc9e41a80f9cc4053"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/proposal-layout-constraints/logical-geometry.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/proposal-layout-constraints/logical-geometry.json",
+      "bytes": 25223,
+      "sha256": "994870ee39713b0f6a8bf9c0c38eb0d023bcbfe531122d4a6bc4829a28323ca8"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/proposal-layout-constraints/logical.png",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/proposal-layout-constraints/logical.png",
+      "bytes": 227151,
+      "sha256": "9a1a416018188f2366c92153350b21b880bf89d58615ae960743936098a35aab"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/proposal-layout-constraints/logical.svg",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/proposal-layout-constraints/logical.svg",
+      "bytes": 60608,
+      "sha256": "a45c0fe005db339625f6ddc8f470eaa6bbe46589a888cea24c8eac97f9375d85"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/proposal-layout-constraints/render-proposal.cjs",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/proposal-layout-constraints/render-proposal.cjs",
+      "bytes": 10932,
+      "sha256": "439f766a97e65e7c87c2dbe9f81cbaaa7be706ee0aaa0d5a44705f030f7b4569"
+    },
+    {
+      "path": "source-set/payload/current/render-validation-20261016/render-local.cjs",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/render-local.cjs",
+      "bytes": 10188,
+      "sha256": "bbcd2667ce64a7c06cf8c12a63edc4d9a367102c5f5c81757c308c917e8f7128"
+    },
+    {
+      "path": "source-set/prepare-package.cjs",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/prepare-package.cjs",
+      "bytes": 5642,
+      "sha256": "11f8580d503bdc750e2588c4eebf86150daa78c6769d475a30aa1b0541b36f46"
+    },
+    {
+      "path": "source-set/references/ARCHITECTURE_RULE.md",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/references/ARCHITECTURE_RULE.md",
+      "bytes": 235,
+      "sha256": "ece5d836bdcfdc6093635dd9cdfd4a966b014fb6c027a091f37d8fe1ddcddf48"
+    },
+    {
+      "path": "source-set/references/D07/D07_IMPACT.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/references/D07/D07_IMPACT.json",
+      "bytes": 8969,
+      "sha256": "e02309b874eef0b6a04e2594b3bff2fac875f40e6d5972747f4c2b09158b740e"
+    },
+    {
+      "path": "source-set/references/D07/D07_LEDGER_ROW.md",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/references/D07/D07_LEDGER_ROW.md",
+      "bytes": 1291,
+      "sha256": "749468df858a8ec511d49f53a2596cf563e39a4bc5cc339ab3bf642ac6dd5957"
+    },
+    {
+      "path": "source-set/references/D07/FINAL_BINDING.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/references/D07/FINAL_BINDING.json",
+      "bytes": 8329,
+      "sha256": "b8cf79e39f9649aecd6208a74a6218c358a2cfeb7e0b52194830a2939ee6fa31"
+    },
+    {
+      "path": "source-set/references/D07/FINAL_HANDOFF.md",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/references/D07/FINAL_HANDOFF.md",
+      "bytes": 6964,
+      "sha256": "966e783882210cd33fa1de1670cda97c44c561645d613aba957e66e7b51e9750"
+    },
+    {
+      "path": "source-set/references/D07/SOURCE_BINDING.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/references/D07/SOURCE_BINDING.json",
+      "bytes": 4272,
+      "sha256": "79096f07e37bf769224a1758701e4ba9b97e28aec6493ad0cda69224fcaa9f16"
+    },
+    {
+      "path": "source-set/references/D07/references/COMMENT_6211817978.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/references/D07/references/COMMENT_6211817978.json",
+      "bytes": 4245,
+      "sha256": "f0292a53f4e9591e56b01df56c36354b21cd626d62ab3ffa7ac55119122e2e84"
+    },
+    {
+      "path": "source-set/references/app-contract-sections5-7-ready-20261016/references/BASE_CONTRACT.md",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/references/app-contract-sections5-7-ready-20261016/references/BASE_CONTRACT.md",
+      "bytes": 11924,
+      "sha256": "512bdca10164aa43bb137638f35fbb5157cc92c7e21bcd3684d07f055af6b6e1"
+    }
+  ],
+  "packaging_note": "Directory-scoped -text preserves original bytes through Git checkout. Original 71 source-set files and prior candidate content remain byte-identical; manifest adds only this packaging entry."
+}

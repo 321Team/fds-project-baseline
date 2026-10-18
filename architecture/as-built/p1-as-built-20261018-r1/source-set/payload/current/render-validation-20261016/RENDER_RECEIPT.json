@@ -1,0 +1,153 @@
+{
+  "started_at_kst": "2026-10-16 19:18:06 KST",
+  "command": [
+    "C:\\Users\\soldesk\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+    "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\render-local.cjs"
+  ],
+  "cwd": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016",
+  "mode": "LOCAL_EXISTING_BUNDLE_ONLY",
+  "source_preservation_before": [
+    {
+      "path": "../candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "sha256": "3093735816f09f1234d1e3b4a2ae0c2109e70ce773b705a76d74c52d4ff696b5",
+      "bytes": 2581
+    },
+    {
+      "path": "../candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "sha256": "f28d7d469609810059da3d3bf4eb960c243313644929099482271fe864660922",
+      "bytes": 1454
+    },
+    {
+      "path": "../P1_AS_BUILT_CANDIDATE.md",
+      "sha256": "4c746a65cb58c4fe772d57fe37a1031c8aa72aaf9b6d81541b92f81e029d6a59",
+      "bytes": 13716
+    },
+    {
+      "path": "../FINAL_BINDING.json",
+      "sha256": "c73b14b5d9cb15f247ff1a15cdc84bea70f068a279fe923e80e7391e0f32240d",
+      "bytes": 9445
+    }
+  ],
+  "diagrams": [
+    {
+      "name": "logical",
+      "source": "../candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "source_sha256": "3093735816f09f1234d1e3b4a2ae0c2109e70ce773b705a76d74c52d4ff696b5",
+      "width": 3502,
+      "height": 1466,
+      "node_count": 21,
+      "expected_node_count": 21,
+      "edge_count": 22,
+      "expected_edge_count": 22,
+      "label_shape_overflow_count": 0,
+      "files": [
+        {
+          "path": "logical.svg",
+          "sha256": "8b01b7470952555b415909c0e02f816e18450b0d141293ba59ed2e3ab4e22af8",
+          "bytes": 54502
+        },
+        {
+          "path": "logical.png",
+          "sha256": "ceebd96f3f5adc297631f31f36cd308f7323a743fa7bbc346a09e09eec5aa970",
+          "bytes": 215369
+        },
+        {
+          "path": "logical-overview.png",
+          "sha256": "1f22e39d0507b85b35ac392a163c457c51a0c49a471306449d33c1deecf0ca39",
+          "bytes": 125087
+        },
+        {
+          "path": "logical-geometry.json",
+          "sha256": "d31ef974caf44142e82bf8839dd16713829632cbea63c07677ee0fce72ab6c8d",
+          "bytes": 20707
+        }
+      ],
+      "parse_render": "PASS"
+    },
+    {
+      "name": "physical",
+      "source": "../candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "source_sha256": "f28d7d469609810059da3d3bf4eb960c243313644929099482271fe864660922",
+      "width": 3778,
+      "height": 520,
+      "node_count": 17,
+      "expected_node_count": 17,
+      "edge_count": 16,
+      "expected_edge_count": 16,
+      "label_shape_overflow_count": 0,
+      "files": [
+        {
+          "path": "physical.svg",
+          "sha256": "dbf1907319184d721aa21cdc001cda34fe0e304421d2616a803bcd48694da2ff",
+          "bytes": 35002
+        },
+        {
+          "path": "physical.png",
+          "sha256": "e0ce62569a54a2bfcf5c2f0237c5c6b8eb33ab2bcc3990ce1994984e1102a52d",
+          "bytes": 79543
+        },
+        {
+          "path": "physical-overview.png",
+          "sha256": "9f69c17ede009eac7ea23c5f8487629ced2242ad2c42768ed2ac95bc5e17c65e",
+          "bytes": 46063
+        },
+        {
+          "path": "physical-geometry.json",
+          "sha256": "2262be4884a3bff05593210877e5792c5a8deaac7a7145c513b5143824a06487",
+          "bytes": 14576
+        }
+      ],
+      "parse_render": "PASS"
+    }
+  ],
+  "status": "RENDER_COMPLETE_VISUAL_REVIEW_PENDING",
+  "renderer": {
+    "mermaid_version": "11.17.0",
+    "version_source": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\infoDiagram-RXCK75RN-2T6V4JS2.js",
+    "version_source_sha256": "1863f91a1e3585d80b6fc626ef665fdd586f30449dd17c800a88709c807967d0",
+    "module": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\mermaid.core-S5KCHHL2.js",
+    "module_sha256": "537eeee78e7978252c8dd8c7f31c508c334bfd4ee59de8eb5b6f5826a74ae03a",
+    "vscode_version": "1.138.0",
+    "node_version": "v24.19.0",
+    "playwright_version": "1.62.1",
+    "chromium_version": "155.0.8059.80",
+    "chromium_executable": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+    "config_path": "RENDER_CONFIG.json",
+    "config_sha256": "03e8d93d7f8029793be59f6008c71799c2daac71933a2486376da7103a47c337"
+  },
+  "rc": 0,
+  "finished_at_kst": "2026-10-16 19:18:08 KST",
+  "external_requests_blocked": [],
+  "browser_messages": [],
+  "source_preservation_after": [
+    {
+      "path": "../candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "sha256": "3093735816f09f1234d1e3b4a2ae0c2109e70ce773b705a76d74c52d4ff696b5",
+      "bytes": 2581,
+      "after_sha256": "3093735816f09f1234d1e3b4a2ae0c2109e70ce773b705a76d74c52d4ff696b5",
+      "unchanged": true
+    },
+    {
+      "path": "../candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "sha256": "f28d7d469609810059da3d3bf4eb960c243313644929099482271fe864660922",
+      "bytes": 1454,
+      "after_sha256": "f28d7d469609810059da3d3bf4eb960c243313644929099482271fe864660922",
+      "unchanged": true
+    },
+    {
+      "path": "../P1_AS_BUILT_CANDIDATE.md",
+      "sha256": "4c746a65cb58c4fe772d57fe37a1031c8aa72aaf9b6d81541b92f81e029d6a59",
+      "bytes": 13716,
+      "after_sha256": "4c746a65cb58c4fe772d57fe37a1031c8aa72aaf9b6d81541b92f81e029d6a59",
+      "unchanged": true
+    },
+    {
+      "path": "../FINAL_BINDING.json",
+      "sha256": "c73b14b5d9cb15f247ff1a15cdc84bea70f068a279fe923e80e7391e0f32240d",
+      "bytes": 9445,
+      "after_sha256": "c73b14b5d9cb15f247ff1a15cdc84bea70f068a279fe923e80e7391e0f32240d",
+      "unchanged": true
+    }
+  ],
+  "asset_manifest_sha256": "6310c6f77def1db1fdd40a119019029947ee141b692697380434448c2e1f2ddb"
+}

@@ -1,0 +1,62 @@
+{
+  "at_kst": "2026-10-16T18:02:01.425750+09:00",
+  "state": "completed",
+  "run_id": 38877485275,
+  "url": "https://github.com/321Team/fds-msa/actions/runs/38877485275",
+  "head": "93800f09d2f5de61f6e2336771e62881f036c9ff",
+  "attempt": 1,
+  "conclusion": "success",
+  "run_started_at": "2026-10-16T09:00:26Z",
+  "jobs": [
+    {
+      "id": 116895931492,
+      "name": "validate",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-10-16T09:00:29Z",
+      "completed_at": "2026-10-16T09:01:47Z"
+    },
+    {
+      "id": 116896446033,
+      "name": "candidate-images",
+      "status": "completed",
+      "conclusion": "skipped",
+      "started_at": "2026-10-16T09:01:48Z",
+      "completed_at": "2026-10-16T09:01:47Z"
+    },
+    {
+      "id": 116896446053,
+      "name": "candidate-images-apko",
+      "status": "completed",
+      "conclusion": "skipped",
+      "started_at": "2026-10-16T09:01:48Z",
+      "completed_at": "2026-10-16T09:01:47Z"
+    }
+  ],
+  "observation": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\p1-app-final-disposition-20261015\\contract-sections5-7-publication-20261016\\merge-20261016\\observations\\180200",
+  "actual_runner_jobs": 1,
+  "skipped_jobs": 2,
+  "timeout_minutes": 15,
+  "Docker_max": 1,
+  "logs_sha256": "476aad465a9ad9c45482bb815a0819a4d689f03fbcbd232c124219d7bede66ae",
+  "test_log_lines": [
+    {
+      "entry": "2_validate.txt",
+      "line": "2026-10-16T09:01:19.1307987Z Ran 223 tests in 43.843s"
+    },
+    {
+      "entry": "2_validate.txt",
+      "line": "2026-10-16T09:01:19.1309070Z OK (skipped=3)"
+    },
+    {
+      "entry": "2_validate.txt",
+      "line": "2026-10-16T09:01:35.9285005Z 20 passed, 1 warning in 0.93s"
+    },
+    {
+      "entry": "2_validate.txt",
+      "line": "2026-10-16T09:01:45.5453956Z 31 passed, 1 warning in 0.54s"
+    }
+  ],
+  "dispatch": 0,
+  "rerun": 0
+}

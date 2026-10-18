@@ -1,0 +1,19 @@
+{
+  "at_kst": "2026-10-16T18:00:25.107652+09:00",
+  "state": "MERGED_AND_READBACK_VERIFIED",
+  "merge_sha": "93800f09d2f5de61f6e2336771e62881f036c9ff",
+  "head": "9589230853f9fb491f3b4dc0412c22a513338ef5",
+  "base_before": "9bc510bbd6e12b775be892ffdcfe656e4e6a1a71",
+  "pr": "https://github.com/321Team/fds-msa/pull/39",
+  "merged_at": "2026-10-16T09:00:23Z",
+  "merged_by": "GWONUK",
+  "parents": [
+    "9bc510bbd6e12b775be892ffdcfe656e4e6a1a71",
+    "9589230853f9fb491f3b4dc0412c22a513338ef5"
+  ],
+  "tree_equals_approved_head": true,
+  "document_sha256": "3a721545aa469527dc03f0f3624c7be20d04f67c2e93b71f1553db5752e96c6c",
+  "merge_count": 1,
+  "admin_override": false,
+  "main_CI": "AUTOMATIC_PENDING_OBSERVATION"
+}

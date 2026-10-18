@@ -1,0 +1,127 @@
+{
+  "proposed_source_revision": "p1-as-built-20261018-r1",
+  "approval_state": "SELECTED_FOR_DOCUMENT_PR_PREPARATION_NOT_HUMAN_ADOPTED",
+  "requirements_baseline": "docs-v3.1.21 / 979facb98de8ca1f1e2ce22f38b27ac3366f3fc3",
+  "as_built_explanation": {
+    "repository_path": "architecture/as-built/p1-as-built-20261018-r1/AS_BUILT.md",
+    "sha256": "14f42cf6eb1a85dbfc014f71426f3df16ff2599c9a7ae542767c548b9c5c0c74",
+    "source_sha256": "4c746a65cb58c4fe772d57fe37a1031c8aa72aaf9b6d81541b92f81e029d6a59",
+    "change_scope": "Prior explanation changes plus only fixed 19:00-19:02 observation rows; no MMD/renderer/SVG change."
+  },
+  "original_adoption_manifest_sha256": "1695abbaba1e4ca563b80ed1349fab1115787a469891c77d9562a31458daf693",
+  "reuse": "Existing render/visual review, no rerender or new visual certification",
+  "entries": [
+    {
+      "role": "explanation_original",
+      "path": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "sha256": "4c746a65cb58c4fe772d57fe37a1031c8aa72aaf9b6d81541b92f81e029d6a59",
+      "bytes": 13716,
+      "status": "PROPOSED_WITH_ADDENDUM",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "selected": true
+    },
+    {
+      "role": "render_status_addendum",
+      "path": "RENDER_ADOPTION_ADDENDUM.md",
+      "sha256": "ff24ca5054321f67c1332ac05f23cf8e1baf3d38d55fa0a82f9e69e76cf6f84e",
+      "bytes": 2981,
+      "status": "REQUIRED_COMPANION_FOR_EXPLANATION",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/RENDER_ADOPTION_ADDENDUM.md",
+      "selected": true
+    },
+    {
+      "role": "logical_source",
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/P1_LOGICAL_LAYOUT_PROPOSAL.mmd",
+      "sha256": "829890b4125006812b739ca87fbfe68c4a614e1198706c34e8015420a4340e9a",
+      "bytes": 2710,
+      "status": "PROPOSED_EDITABLE_SOURCE",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/proposal-layout-constraints/P1_LOGICAL_LAYOUT_PROPOSAL.mmd",
+      "selected": true
+    },
+    {
+      "role": "physical_source",
+      "path": "payload/current/candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "sha256": "f28d7d469609810059da3d3bf4eb960c243313644929099482271fe864660922",
+      "bytes": 1454,
+      "status": "PROPOSED_EDITABLE_SOURCE",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "selected": true
+    },
+    {
+      "role": "logical_renderer",
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/render-proposal.cjs",
+      "sha256": "439f766a97e65e7c87c2dbe9f81cbaaa7be706ee0aaa0d5a44705f030f7b4569",
+      "bytes": 10932,
+      "status": "REQUIRED_RENDER_CONTRACT",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/proposal-layout-constraints/render-proposal.cjs",
+      "selected": true
+    },
+    {
+      "role": "renderer_config",
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/RENDER_CONFIG.json",
+      "sha256": "03e8d93d7f8029793be59f6008c71799c2daac71933a2486376da7103a47c337",
+      "bytes": 380,
+      "status": "REQUIRED_RENDER_CONTRACT",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/proposal-layout-constraints/RENDER_CONFIG.json",
+      "selected": true
+    },
+    {
+      "role": "logical_svg",
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/logical.svg",
+      "sha256": "a45c0fe005db339625f6ddc8f470eaa6bbe46589a888cea24c8eac97f9375d85",
+      "bytes": 60608,
+      "status": "PROPOSED_DERIVATIVE",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/proposal-layout-constraints/logical.svg",
+      "selected": true
+    },
+    {
+      "role": "physical_svg",
+      "path": "payload/current/render-validation-20261016/physical.svg",
+      "sha256": "dbf1907319184d721aa21cdc001cda34fe0e304421d2616a803bcd48694da2ff",
+      "bytes": 35002,
+      "status": "PROPOSED_DERIVATIVE",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/physical.svg",
+      "selected": true
+    },
+    {
+      "role": "original_logical_source",
+      "path": "payload/current/candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "sha256": "3093735816f09f1234d1e3b4a2ae0c2109e70ce773b705a76d74c52d4ff696b5",
+      "bytes": 2581,
+      "status": "COMPARISON_ONLY_NOT_SELECTED",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "selected": false
+    },
+    {
+      "role": "original_logical_svg",
+      "path": "payload/current/render-validation-20261016/logical.svg",
+      "sha256": "8b01b7470952555b415909c0e02f816e18450b0d141293ba59ed2e3ab4e22af8",
+      "bytes": 54502,
+      "status": "DIAGNOSTIC_ONLY_VISUAL_FINDINGS_REMAIN",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/payload/current/render-validation-20261016/logical.svg",
+      "selected": false
+    },
+    {
+      "role": "d07_existing_row",
+      "path": "references/D07/D07_LEDGER_ROW.md",
+      "sha256": "749468df858a8ec511d49f53a2596cf563e39a4bc5cc339ab3bf642ac6dd5957",
+      "bytes": 1291,
+      "status": "SEPARATE_EXISTING_LEDGER_ADOPTION_DECISION",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/references/D07/D07_LEDGER_ROW.md",
+      "selected": false
+    }
+  ],
+  "render_contract": "Mermaid 11.17.0 + exact renderer/config + PM -> MGW label translate(160,12); MMD alone does not reproduce selected SVG.",
+  "source_set_policy": "Prior package bytes unchanged; diagnostic originals and D07 row are provenance, not new selected derivative or acceptance",
+  "previous_candidate_manifest_sha256": "0196ebf5ffd50863d2cb600dde3be96efda6a65b674988e6be64dc37597e42d8",
+  "observation_binding": {
+    "path": "observations/20261018T1902.json",
+    "sha256": "8c084c38b76de33e3f7597c9da523effcb5bb5212b462a54e504953742f5908b",
+    "observed_span_kst": [
+      "2026-10-18T19:00:23+09:00",
+      "2026-10-18T19:02:42+09:00"
+    ],
+    "runtime_claim": "Read-only observations only; no authentication/transition/recovery/whole-integrity acceptance."
+  },
+  "central_selection_scope": "Version/path/71-file set selected for document PR preparation only. Human As-built adoption and Freeze not granted."
+}
