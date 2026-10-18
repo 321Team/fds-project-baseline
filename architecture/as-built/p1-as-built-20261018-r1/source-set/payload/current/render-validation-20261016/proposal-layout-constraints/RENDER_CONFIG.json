@@ -1,0 +1,17 @@
+{
+  "startOnLoad": false,
+  "securityLevel": "strict",
+  "theme": "default",
+  "fontFamily": "Arial",
+  "fontSize": 16,
+  "deterministicIds": true,
+  "deterministicIDSeed": "p1-asbuilt-current-facts-20261016-render-v1",
+  "flowchart": {
+    "htmlLabels": false,
+    "useMaxWidth": false,
+    "curve": "basis",
+    "nodeSpacing": 50,
+    "rankSpacing": 50,
+    "padding": 15
+  }
+}

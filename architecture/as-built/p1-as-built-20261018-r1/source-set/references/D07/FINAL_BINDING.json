@@ -1,0 +1,182 @@
+{
+  "completed_at_kst": "2026-10-16T18:02:51.106991+09:00",
+  "result": "D07_REPLY_LOCAL_LINKAGE_COMPLETE",
+  "scope": "one D-07 logical row, six DOC readthrough locations; no F1/F2 or completed-document re-review",
+  "checks": {
+    "one_logical_D07": true,
+    "quoted_ledger_row_exact": true,
+    "reply_body_sha256_exact": true,
+    "owner_and_trigger_match_received_reply": true,
+    "no_invented_dates": true,
+    "consumed_existing_inputs_unchanged": true
+  },
+  "source_reply": {
+    "url": "https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-6211817978",
+    "author": "supreme33-kr",
+    "created_at_kst": "2026-10-16T17:52:26+09:00",
+    "body_sha256": "2a3b47629ec36f92258b314545902eeb9ec400c75e1617818a1787689bdfc107",
+    "ledger_row_sha256": "3f5de9224aea8d7a92108eb4f1d8b4f72ab55296db15fd9318a579dd1847d515"
+  },
+  "confirmed": {
+    "ID": "D-07",
+    "Owner": "이재환(APP Lead)",
+    "first_recheck": "APP 최종 인수 판정 직전",
+    "fix_due_date": null,
+    "p2_transfer": null,
+    "risk_acceptance_expiry": null,
+    "Severity": "Major",
+    "P1_code_change": "NONE_SELECTED",
+    "remaining_risk": "음수 이력에 의한 R07 합계 감소 가능성; 실제 음수 저장/후속 미탐 NOT_RUN",
+    "runtime_db01_constraints": "NOT_VERIFIED",
+    "I01": "Separate Minor, unchanged",
+    "existing_critical0_regression_defect_approval": "PRESERVED_PER_LEAD6206804605_AND_PR38",
+    "lead_management_fields": "CONFIRMED_IN_RECEIVED_REPLY",
+    "central_final_adoption": "NOT_PERFORMED_BY_DOC / separate central decision",
+    "external_issue_body_write": "NOT_PERFORMED",
+    "whole_APP_or_Phase1_acceptance": "NOT_DETERMINED_BY_THIS_TASK"
+  },
+  "separate_decisions": [
+    "Adopt/connect D-07 management values to the existing #20 ledger; do not duplicate issue.",
+    "Consume named residual and first-recheck trigger for final acceptance/handoff; existing APP approvals stay valid, overall acceptance is separate."
+  ],
+  "APP39_merge_consumed": false,
+  "existing_inputs": [
+    {
+      "path": "deliverables/phase1-central-control-20261015/followup-check-20261016-175610/comments20.json",
+      "captured_sha256": "d7278722b32958eead45f673cd248daaafadc6fb84bb5ef011c0288525267749",
+      "finish_sha256": "d7278722b32958eead45f673cd248daaafadc6fb84bb5ef011c0288525267749",
+      "unchanged": true
+    },
+    {
+      "path": "deliverables/phase1-central-control-20261015/followup-check-20261016-175610/SUMMARY.json",
+      "captured_sha256": "4f88deaeb56c00d5ada88ae260223cccf0628451936dd1a7feb16c56e0054396",
+      "finish_sha256": "4f88deaeb56c00d5ada88ae260223cccf0628451936dd1a7feb16c56e0054396",
+      "unchanged": true
+    },
+    {
+      "path": "deliverables/p1-app-final-disposition-20261015/defect-registration-ready-20261016/REGISTRATION_AND_ACCEPTANCE.md",
+      "captured_sha256": "b8fb9f67fd4ddf9224174bab9509e7281ea648ccdb2055b67b6e9a485d2006eb",
+      "finish_sha256": "b8fb9f67fd4ddf9224174bab9509e7281ea648ccdb2055b67b6e9a485d2006eb",
+      "unchanged": true
+    },
+    {
+      "path": "deliverables/p1-app-final-disposition-20261015/defect-registration-ready-20261016/references/ledger-comment-5980751335.json",
+      "captured_sha256": "3b1e543f5e0cfeeb906974116cabed83802181a5cf06f37ae20088d0155efafc",
+      "finish_sha256": "3b1e543f5e0cfeeb906974116cabed83802181a5cf06f37ae20088d0155efafc",
+      "unchanged": true
+    },
+    {
+      "path": "deliverables/p1-app-final-disposition-20261015/defect-registration-ready-20261016/references/ledger-comment-5981501458.json",
+      "captured_sha256": "d48fed8033ab62aff8dd8e85bf91951cc78c54af3f13e1808195c606f29b7536",
+      "finish_sha256": "d48fed8033ab62aff8dd8e85bf91951cc78c54af3f13e1808195c606f29b7536",
+      "unchanged": true
+    },
+    {
+      "path": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/app-contract-sections5-7-ready-20261016/references/BASE_CONTRACT.md",
+      "captured_sha256": "512bdca10164aa43bb137638f35fbb5157cc92c7e21bcd3684d07f055af6b6e1",
+      "finish_sha256": "512bdca10164aa43bb137638f35fbb5157cc92c7e21bcd3684d07f055af6b6e1",
+      "unchanged": true
+    },
+    {
+      "path": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/app38-final-linkage-20261016/APP38_IMPACT_ROWS.json",
+      "captured_sha256": "058649496456f3a0987cba1166c1db2c422b32a97e6bbbaf44d0b9d89e1b8803",
+      "finish_sha256": "058649496456f3a0987cba1166c1db2c422b32a97e6bbbaf44d0b9d89e1b8803",
+      "unchanged": true
+    },
+    {
+      "path": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/acceptance-ready-20261016/KNOWN_ISSUE_HANDOFF.md",
+      "captured_sha256": "4763e0ddb33846e91f38270eef79b4326da826bbe318c5f4350a2881a73ef83a",
+      "finish_sha256": "4763e0ddb33846e91f38270eef79b4326da826bbe318c5f4350a2881a73ef83a",
+      "unchanged": true
+    },
+    {
+      "path": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/acceptance-ready-20261016/DECISION_TABLE.md",
+      "captured_sha256": "f94024389db11ba016272b205d54d281ef13476f1ac3228960bb9b69332ebd85",
+      "finish_sha256": "f94024389db11ba016272b205d54d281ef13476f1ac3228960bb9b69332ebd85",
+      "unchanged": true
+    },
+    {
+      "path": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/acceptance-ready-20261016/REVIEW_OUTPUT.json",
+      "captured_sha256": "66ea12761a5587c4a4e6e5b66667293fdab9318ced2333fe3d502cf91bd0d9d6",
+      "finish_sha256": "66ea12761a5587c4a4e6e5b66667293fdab9318ced2333fe3d502cf91bd0d9d6",
+      "unchanged": true
+    },
+    {
+      "path": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/acceptance-ready-20261016/P1_DOC_01_FINAL_CANDIDATE.md",
+      "captured_sha256": "02012e1b65335e2c3ec3838ccf607476c3781dbfd2b71ae6ca0e5b87d98b5110",
+      "finish_sha256": "02012e1b65335e2c3ec3838ccf607476c3781dbfd2b71ae6ca0e5b87d98b5110",
+      "unchanged": true
+    },
+    {
+      "path": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/acceptance-ready-20261016/FINAL_HANDOFF.md",
+      "captured_sha256": "1f131741c588cb174262e8b3250ac8de8b6341fb988c1dd0203480e3bfde5311",
+      "finish_sha256": "1f131741c588cb174262e8b3250ac8de8b6341fb988c1dd0203480e3bfde5311",
+      "unchanged": true
+    }
+  ],
+  "files": [
+    {
+      "path": "CURRENT_TASK.md",
+      "sha256": "b5178bea53671bb445647b4fc0f51524c166d75eb8da77b3806c9e61a4fbd9bd",
+      "bytes": 1555
+    },
+    {
+      "path": "D07_IMPACT.json",
+      "sha256": "e02309b874eef0b6a04e2594b3bff2fac875f40e6d5972747f4c2b09158b740e",
+      "bytes": 8969
+    },
+    {
+      "path": "D07_LEDGER_ROW.md",
+      "sha256": "749468df858a8ec511d49f53a2596cf563e39a4bc5cc339ab3bf642ac6dd5957",
+      "bytes": 1291
+    },
+    {
+      "path": "FINAL_HANDOFF.md",
+      "sha256": "966e783882210cd33fa1de1670cda97c44c561645d613aba957e66e7b51e9750",
+      "bytes": 6964
+    },
+    {
+      "path": "references/CENTRAL_comments20.json",
+      "sha256": "d7278722b32958eead45f673cd248daaafadc6fb84bb5ef011c0288525267749",
+      "bytes": 6726
+    },
+    {
+      "path": "references/CENTRAL_SUMMARY.json",
+      "sha256": "4f88deaeb56c00d5ada88ae260223cccf0628451936dd1a7feb16c56e0054396",
+      "bytes": 9006
+    },
+    {
+      "path": "references/COMMENT_6211314367.json",
+      "sha256": "6bd3b9ffbb0062be716041646f4880e1ba53c31ac7fbdcd490e7ecf82c20b407",
+      "bytes": 2952
+    },
+    {
+      "path": "references/COMMENT_6211817978.json",
+      "sha256": "f0292a53f4e9591e56b01df56c36354b21cd626d62ab3ffa7ac55119122e2e84",
+      "bytes": 4245
+    },
+    {
+      "path": "references/ISSUE20_CURRENT.json",
+      "sha256": "eb36efd411cb0843b0246720434940a233b490c674f2ee4caf160dc0964678b6",
+      "bytes": 36127
+    },
+    {
+      "path": "references/PRIOR_LEAD_6206804605.json",
+      "sha256": "73f198e07825c07ebb096dff62937dfc98a4fe1f10c8e8abc2971f0cb8c94c4f",
+      "bytes": 5896
+    },
+    {
+      "path": "SOURCE_BINDING.json",
+      "sha256": "79096f07e37bf769224a1758701e4ba9b97e28aec6493ad0cda69224fcaa9f16",
+      "bytes": 4272
+    }
+  ],
+  "actions": {
+    "external_writes": 0,
+    "PR_or_publication": 0,
+    "server_actions": 0,
+    "product_tests": 0,
+    "F1_F2_or_completed_document_rereviews": 0,
+    "shared_record_edits": 0
+  }
+}

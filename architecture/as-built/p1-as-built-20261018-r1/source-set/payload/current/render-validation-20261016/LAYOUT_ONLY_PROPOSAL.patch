@@ -1,0 +1,12 @@
+--- a/candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd
++++ b/candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd
+@@ -51,3 +51,9 @@
+   SEC --- ENG
+   LIMIT["Internal source NAT prohibited; return route via .58; VMnet8 workload NIC prohibited. Design requirements retained; no new all-host verification."]
+   LIMIT --- MGW
++
++  %% Layout-only invisible constraints; these are not network connections.
++  EXP ~~~ API
++  HBR ~~~ LB
++  RUN ~~~ PM
++  DB ~~~ HBR

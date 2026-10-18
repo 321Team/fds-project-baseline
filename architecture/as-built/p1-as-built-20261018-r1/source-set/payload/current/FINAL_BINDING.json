@@ -1,0 +1,268 @@
+{
+  "completed_at_kst": "2026-10-16T18:15:03.886422+09:00",
+  "result": "LOCAL_CURRENT_FACTS_CANDIDATE_COMPLETE_NOT_ADOPTED",
+  "scope": "Existing three-file As-built candidate: status and evidence links only",
+  "candidate_files": [
+    {
+      "path": "P1_AS_BUILT_CANDIDATE.md",
+      "original_sha256": "6108ef73a402850b80d52cb656ade6c5239305e8d2e882ee35009b200909cf3c",
+      "candidate_sha256": "4c746a65cb58c4fe772d57fe37a1031c8aa72aaf9b6d81541b92f81e029d6a59",
+      "bytes": 13716,
+      "changed": true,
+      "additions": 17,
+      "deletions": 7
+    },
+    {
+      "path": "candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "original_sha256": "ef8a3c43428123cf7945496e493ca94c18d033d0c64c8e679fa8698cc5278927",
+      "candidate_sha256": "3093735816f09f1234d1e3b4a2ae0c2109e70ce773b705a76d74c52d4ff696b5",
+      "bytes": 2581,
+      "changed": true,
+      "additions": 4,
+      "deletions": 4
+    },
+    {
+      "path": "candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "original_sha256": "f28d7d469609810059da3d3bf4eb960c243313644929099482271fe864660922",
+      "candidate_sha256": "f28d7d469609810059da3d3bf4eb960c243313644929099482271fe864660922",
+      "bytes": 1454,
+      "changed": false,
+      "additions": 0,
+      "deletions": 0
+    }
+  ],
+  "patch": {
+    "path": "AS_BUILT_CURRENT_FACTS.patch",
+    "sha256": "57682bf310ea8333453fb53e89fdf5acecfda0756db3b09b244bb74975fdd2af",
+    "changed_files": 2,
+    "additions": 21,
+    "deletions": 11
+  },
+  "original_three_files_and_card_preserved": true,
+  "status_diff_check": {
+    "path": "STATUS_DIFF_CHECK.json",
+    "sha256": "9c58a436f90d6965ef2730b3e51b752be83c3172b1fbe1ab1250272bb60ff197",
+    "result": "PASS",
+    "scope": "ONLY_NEW_STATUS_DIFF_AND_LINKS_NO_SOURCE_REAUDIT_TEST_CI_OR_RENDER"
+  },
+  "decision_card": {
+    "path": "A1_UPDATED_DECISION_CARD.md",
+    "sha256": "fb0fa9219ccd1c3a423ec52ee1ae401a17ee434f9c8097ef3bef5bf3739ce75b",
+    "new_card_links": [
+      {
+        "path": "../AS_BUILT_DECISION_CARD.md",
+        "exists": true
+      },
+      {
+        "path": "../as-built-candidate/P1_AS_BUILT_CANDIDATE.md",
+        "exists": true
+      },
+      {
+        "path": "P1_AS_BUILT_CANDIDATE.md",
+        "exists": true
+      },
+      {
+        "path": "candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd",
+        "exists": true
+      },
+      {
+        "path": "candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd",
+        "exists": true
+      },
+      {
+        "path": "AS_BUILT_CURRENT_FACTS.patch",
+        "exists": true
+      },
+      {
+        "path": "SOURCE_BINDING.json",
+        "exists": true
+      },
+      {
+        "path": "../../references/N02--README.md",
+        "exists": true
+      },
+      {
+        "path": "STATUS_DIFF_CHECK.json",
+        "exists": true
+      }
+    ]
+  },
+  "consumed_receipts": {
+    "count": 15,
+    "binding_path": "SOURCE_BINDING.json",
+    "binding_sha256": "248316e61c36358279053fff01f4fb91d670de83de92f1035239926c156d2772",
+    "APP39_only_merge_and_CI_final_receipts": true
+  },
+  "supporting_existing_references": [
+    {
+      "path": "deliverables/o01-scope-finalization-20261015/references/N02--README.md",
+      "sha256": "ece5d836bdcfdc6093635dd9cdfd4a966b014fb6c027a091f37d8fe1ddcddf48"
+    },
+    {
+      "path": "deliverables/p1-harbor-review-publication-20261015/effect-contract-remediation-20261016/build-and-expiry-readiness/EXPIRY_OPTIONS.md",
+      "sha256": "308fbf3c16b5e31e52fc9a4408141ba1e3b62d17417d6cd85afd659d5da710e3"
+    }
+  ],
+  "remaining_A1_choices": {
+    "adopt_exact_three_files": null,
+    "official_version": null,
+    "repository_and_final_paths": null,
+    "distribution_format": null
+  },
+  "recommendation_not_decision": {
+    "repository_directory": "321Team/fds-project-baseline/architecture/",
+    "authoritative_sources": "MMD + explanation MD",
+    "preferred_derivative": "SVG bound to adopted source version; not generated"
+  },
+  "not_performed": {
+    "architecture_approval": true,
+    "whole_acceptance": true,
+    "DOC_O01_Freeze": true,
+    "canonical_publication": true,
+    "external_comments_PR_requests": true,
+    "server_or_CI_or_product_tests": true,
+    "render_QA": true,
+    "source_inventory_research": true,
+    "shared_STATUS_CONTROL_ROUND_changes": true
+  },
+  "D07": "Lead ID/Owner/first-recheck and central local-linkage acceptance only; official ledger adoption/whole acceptance separate",
+  "Harbor": "Code review complete, operating HOLD; recorded ID2 expiry and config-ID mismatch retained, provenance/current auth/health unverified",
+  "closed_scope": "This local candidate preparation is complete. No additional task created.",
+  "outputs_excluding_self": [
+    {
+      "path": "A1_UPDATED_DECISION_CARD.md",
+      "sha256": "fb0fa9219ccd1c3a423ec52ee1ae401a17ee434f9c8097ef3bef5bf3739ce75b",
+      "bytes": 6118
+    },
+    {
+      "path": "apply-check/candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "sha256": "3093735816f09f1234d1e3b4a2ae0c2109e70ce773b705a76d74c52d4ff696b5",
+      "bytes": 2581
+    },
+    {
+      "path": "apply-check/candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "sha256": "f28d7d469609810059da3d3bf4eb960c243313644929099482271fe864660922",
+      "bytes": 1454
+    },
+    {
+      "path": "apply-check/P1_AS_BUILT_CANDIDATE.md",
+      "sha256": "4c746a65cb58c4fe772d57fe37a1031c8aa72aaf9b6d81541b92f81e029d6a59",
+      "bytes": 13716
+    },
+    {
+      "path": "AS_BUILT_CURRENT_FACTS.patch",
+      "sha256": "57682bf310ea8333453fb53e89fdf5acecfda0756db3b09b244bb74975fdd2af",
+      "bytes": 14990
+    },
+    {
+      "path": "candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "sha256": "3093735816f09f1234d1e3b4a2ae0c2109e70ce773b705a76d74c52d4ff696b5",
+      "bytes": 2581
+    },
+    {
+      "path": "candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "sha256": "f28d7d469609810059da3d3bf4eb960c243313644929099482271fe864660922",
+      "bytes": 1454
+    },
+    {
+      "path": "CHANGE_SCOPE.json",
+      "sha256": "c8199504c7f66f08a9f179e677e925cf30285cc94eb6742b8db60f4489059f9b",
+      "bytes": 7744
+    },
+    {
+      "path": "CURRENT_TASK.md",
+      "sha256": "f9063b277b2693e193e8ff075334d690b39a5c5c19bb350d01fdb9bda97f3113",
+      "bytes": 1626
+    },
+    {
+      "path": "P1_AS_BUILT_CANDIDATE.md",
+      "sha256": "4c746a65cb58c4fe772d57fe37a1031c8aa72aaf9b6d81541b92f81e029d6a59",
+      "bytes": 13716
+    },
+    {
+      "path": "references/ANSIBLE_POST_PASS_HANDOFF_CENTRAL.json",
+      "sha256": "7185297864be34d82d29fa0d3552a909af2f0ff8027b49221861f82e82ebe117",
+      "bytes": 8329
+    },
+    {
+      "path": "references/ANSIBLE_POST_PASS_ONE_PAGE_HANDOFF.md",
+      "sha256": "e68e599658c4d24acd8a2b1310dfc0dfeee482e57de026ebb501a762035c52c7",
+      "bytes": 7319
+    },
+    {
+      "path": "references/ANSIBLE_RESULT_CENTRAL_VERIFICATION.json",
+      "sha256": "b4b1dd45c35492ef9bf7727021ac0390f198bf9354b3b395f3384938f0d854fe",
+      "bytes": 4241
+    },
+    {
+      "path": "references/ANSIBLE_ROLE185_FINAL_HANDOFF_CENTRAL.json",
+      "sha256": "d7c1fbb8efbbc4f608afcfed05f23786233d67956f5de6f89014e9757d2fd53e",
+      "bytes": 9913
+    },
+    {
+      "path": "references/ANSIBLE_RUNTIME_FINAL_HANDOFF.md",
+      "sha256": "bd64738a8cd2f14aeb000dd5765a629c8f62dbd15c96652c8c85e0dc386c0cb9",
+      "bytes": 4808
+    },
+    {
+      "path": "references/APP39_CI_RECEIPT.json",
+      "sha256": "0ee0d01bf037388a4d95c113ee270645a1358ed539a4476e25ecaa8e524b4c98",
+      "bytes": 1986
+    },
+    {
+      "path": "references/APP39_MERGE_RECEIPT.json",
+      "sha256": "7f70e38932776ac3d5fa4b1e95c943c19b1a608f8353492134b863e6150c0a8a",
+      "bytes": 739
+    },
+    {
+      "path": "references/D02_IMPACT_ROWS.json",
+      "sha256": "36b60b1b7c289a07249eb4a9890ff0d06533bcb13b7007ace15fa0b38257aaf3",
+      "bytes": 20680
+    },
+    {
+      "path": "references/D07_CENTRAL_ACCEPTANCE.json",
+      "sha256": "3889d7c5fb630462fceeeb5336d987ac03b225a0142f3a8a71fd80316143cdf1",
+      "bytes": 5504
+    },
+    {
+      "path": "references/D07_LEAD_REPLY.json",
+      "sha256": "f0292a53f4e9591e56b01df56c36354b21cd626d62ab3ffa7ac55119122e2e84",
+      "bytes": 4245
+    },
+    {
+      "path": "references/HARBOR_BUILD_EXPIRY_READINESS_CENTRAL.json",
+      "sha256": "a0225950f6484d80fe341c7b0dc98976dd68c155da85bb26b169e7efb7e4224c",
+      "bytes": 6610
+    },
+    {
+      "path": "references/HARBOR_CORE_METADATA_CENTRAL.json",
+      "sha256": "a00c0ef95e451a0c2951b3e687e457f70566cece172e7862243103e6b774bd1b",
+      "bytes": 1500
+    },
+    {
+      "path": "references/HARBOR_EFFECT_FULL_REVIEW_CENTRAL.json",
+      "sha256": "3a755d3469cbe8eb6b7f549d50da6f86730c6686429a69b89c18865a4129ae03",
+      "bytes": 5637
+    },
+    {
+      "path": "references/HARBOR_OFFICIAL_IMAGE_BINDING.json",
+      "sha256": "95dad8324dfcbba2709d9e8c75191d26e16468a240020dd7424c708eece2d544",
+      "bytes": 1415
+    },
+    {
+      "path": "references/HARBOR_OFFICIAL_IMAGE_HANDOFF.md",
+      "sha256": "dde7bca5434db9177cf67247da00e5a432d6b21779da4390dcdb6fff58461299",
+      "bytes": 2086
+    },
+    {
+      "path": "SOURCE_BINDING.json",
+      "sha256": "248316e61c36358279053fff01f4fb91d670de83de92f1035239926c156d2772",
+      "bytes": 6529
+    },
+    {
+      "path": "STATUS_DIFF_CHECK.json",
+      "sha256": "9c58a436f90d6965ef2730b3e51b752be83c3172b1fbe1ab1250272bb60ff197",
+      "bytes": 4595
+    }
+  ]
+}

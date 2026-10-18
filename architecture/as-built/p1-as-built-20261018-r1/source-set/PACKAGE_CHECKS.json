@@ -1,0 +1,578 @@
+{
+  "at_kst": "2026-10-16 20:23:51 KST",
+  "result": "PASS_MINIMUM_LOCAL_REVIEW_PACKAGE",
+  "copied_files": [
+    {
+      "path": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/SOURCE_BINDING.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/FINAL_BINDING.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/references/ANSIBLE_ROLE185_FINAL_HANDOFF_CENTRAL.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/references/ANSIBLE_POST_PASS_HANDOFF_CENTRAL.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/references/ANSIBLE_RESULT_CENTRAL_VERIFICATION.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/references/ANSIBLE_RUNTIME_FINAL_HANDOFF.md",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/references/ANSIBLE_POST_PASS_ONE_PAGE_HANDOFF.md",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/references/D02_IMPACT_ROWS.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/references/D07_CENTRAL_ACCEPTANCE.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/references/D07_LEAD_REPLY.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/references/APP39_MERGE_RECEIPT.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/references/APP39_CI_RECEIPT.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/references/HARBOR_EFFECT_FULL_REVIEW_CENTRAL.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/references/HARBOR_BUILD_EXPIRY_READINESS_CENTRAL.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/references/HARBOR_CORE_METADATA_CENTRAL.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/references/HARBOR_OFFICIAL_IMAGE_HANDOFF.md",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/references/HARBOR_OFFICIAL_IMAGE_BINDING.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/physical.svg",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/physical.png",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/logical.svg",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/RENDER_RECEIPT.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/RENDERER_ASSET_MANIFEST.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/RENDER_CONFIG.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/render-local.cjs",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/VISUAL_REVIEW.md",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/SOURCE_SEMANTICS_CHECK.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/GEOMETRY_REVIEW.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/PROPOSAL_GEOMETRY_REVIEW.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/LAYOUT_ONLY_PROPOSAL.patch",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/RENDERER_LAYOUT_PROPOSAL.patch",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/FINAL_BINDING.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/P1_LOGICAL_LAYOUT_PROPOSAL.mmd",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/render-proposal.cjs",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/RENDER_CONFIG.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/RENDER_RECEIPT.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/RENDERER_ASSET_MANIFEST.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/logical.svg",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/logical.png",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/logical-geometry.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/final-label-inspection.png",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/final-left-inspection.png",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/final-right-inspection.png",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/FINAL_INSPECTION_CROPS.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "references/ARCHITECTURE_RULE.md",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "references/D07/D07_LEDGER_ROW.md",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "references/D07/FINAL_HANDOFF.md",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "references/D07/D07_IMPACT.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "references/D07/FINAL_BINDING.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "references/D07/SOURCE_BINDING.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "references/D07/references/COMMENT_6211817978.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "references/app-contract-sections5-7-ready-20261016/references/BASE_CONTRACT.md",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "SOURCE_INDEX.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "FINAL_HEAD_READBACK.json",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "payload/as-built-candidate/P1_AS_BUILT_CANDIDATE.md",
+      "copy_hash_matches": true,
+      "source_unchanged": true
+    }
+  ],
+  "originals": [
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\P1_AS_BUILT_CANDIDATE.md",
+      "sha256": "4c746a65cb58c4fe772d57fe37a1031c8aa72aaf9b6d81541b92f81e029d6a59",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\candidate\\architecture\\P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "sha256": "3093735816f09f1234d1e3b4a2ae0c2109e70ce773b705a76d74c52d4ff696b5",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\candidate\\architecture\\P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "sha256": "f28d7d469609810059da3d3bf4eb960c243313644929099482271fe864660922",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\FINAL_BINDING.json",
+      "sha256": "c73b14b5d9cb15f247ff1a15cdc84bea70f068a279fe923e80e7391e0f32240d",
+      "unchanged": true
+    }
+  ],
+  "prior_QA_54_unchanged": [
+    {
+      "path": "CURRENT_TASK.md",
+      "unchanged": true
+    },
+    {
+      "path": "finalize-packet.py",
+      "unchanged": true
+    },
+    {
+      "path": "GEOMETRY_REVIEW.json",
+      "unchanged": true
+    },
+    {
+      "path": "HANDOFF.md",
+      "unchanged": true
+    },
+    {
+      "path": "inspect-rendered.cjs",
+      "unchanged": true
+    },
+    {
+      "path": "INSPECTION_CROPS.json",
+      "unchanged": true
+    },
+    {
+      "path": "LAYOUT_ONLY_PROPOSAL.patch",
+      "unchanged": true
+    },
+    {
+      "path": "logical-geometry.json",
+      "unchanged": true
+    },
+    {
+      "path": "logical-left-inspection.png",
+      "unchanged": true
+    },
+    {
+      "path": "logical-overview.png",
+      "unchanged": true
+    },
+    {
+      "path": "logical-right-inspection.png",
+      "unchanged": true
+    },
+    {
+      "path": "logical.png",
+      "unchanged": true
+    },
+    {
+      "path": "logical.svg",
+      "unchanged": true
+    },
+    {
+      "path": "physical-geometry.json",
+      "unchanged": true
+    },
+    {
+      "path": "physical-left-inspection.png",
+      "unchanged": true
+    },
+    {
+      "path": "physical-overview.png",
+      "unchanged": true
+    },
+    {
+      "path": "physical-right-inspection.png",
+      "unchanged": true
+    },
+    {
+      "path": "physical.png",
+      "unchanged": true
+    },
+    {
+      "path": "physical.svg",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-check/logical-geometry.json",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-check/logical-overview.png",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-check/logical.png",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-check/logical.svg",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-check/P1_LOGICAL_LAYOUT_PROPOSAL.mmd",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-check/render-proposal.cjs",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-check/RENDER_CONFIG.json",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-check/RENDER_RECEIPT.json",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-check/RENDERER_ASSET_MANIFEST.json",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/final-label-inspection.png",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/final-left-inspection.png",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/final-right-inspection.png",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/FINAL_INSPECTION_CROPS.json",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/label-inspection.png",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/logical-geometry.json",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/logical-overview.png",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/logical.png",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/logical.svg",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/P1_LOGICAL_LAYOUT_PROPOSAL.mmd",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/pre-spacing-logical.svg",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/PRE_SPACING_BASELINE.json",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/render-proposal.cjs",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/RENDER_CONFIG.json",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/RENDER_RECEIPT.json",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/RENDERER_ASSET_MANIFEST.json",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/SPACING_TRIAL_1.json",
+      "unchanged": true
+    },
+    {
+      "path": "proposal-layout-constraints/SPACING_TRIAL_2.json",
+      "unchanged": true
+    },
+    {
+      "path": "PROPOSAL_GEOMETRY_REVIEW.json",
+      "unchanged": true
+    },
+    {
+      "path": "render-local.cjs",
+      "unchanged": true
+    },
+    {
+      "path": "RENDER_CONFIG.json",
+      "unchanged": true
+    },
+    {
+      "path": "RENDER_RECEIPT.json",
+      "unchanged": true
+    },
+    {
+      "path": "RENDERER_ASSET_MANIFEST.json",
+      "unchanged": true
+    },
+    {
+      "path": "RENDERER_LAYOUT_PROPOSAL.patch",
+      "unchanged": true
+    },
+    {
+      "path": "SOURCE_SEMANTICS_CHECK.json",
+      "unchanged": true
+    },
+    {
+      "path": "VISUAL_REVIEW.md",
+      "unchanged": true
+    }
+  ],
+  "prior_QA_binding_unchanged": true,
+  "renderer_relative_inputs": [
+    {
+      "path": "P1_LOGICAL_LAYOUT_PROPOSAL.mmd",
+      "exists": true
+    },
+    {
+      "path": "../../candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "exists": true
+    },
+    {
+      "path": "../../candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "exists": true
+    },
+    {
+      "path": "../../P1_AS_BUILT_CANDIDATE.md",
+      "exists": true
+    },
+    {
+      "path": "../../FINAL_BINDING.json",
+      "exists": true
+    }
+  ],
+  "installed_renderer_asset_hashes_verified": 28,
+  "active_local_links_checked": 59,
+  "missing_active_local_links": [],
+  "history_link_scope": "Archive-only prior relative links may depend on their original workspace context; exact map retained, not falsely reported as a standalone publication link pass.",
+  "minimum_required_roles": [
+    "explanation_original",
+    "render_status_addendum",
+    "logical_source",
+    "physical_source",
+    "logical_renderer",
+    "renderer_config",
+    "logical_svg",
+    "physical_svg",
+    "original_logical_source",
+    "original_logical_svg",
+    "d07_existing_row"
+  ],
+  "existing_semantic_receipt_consumed": true,
+  "rerender_or_visual_QA_rerun": false,
+  "product_tests": 0,
+  "CI_runs": 0,
+  "external_writes": 0,
+  "server_actions": 0,
+  "official_version_or_new_approver_assigned": false
+}

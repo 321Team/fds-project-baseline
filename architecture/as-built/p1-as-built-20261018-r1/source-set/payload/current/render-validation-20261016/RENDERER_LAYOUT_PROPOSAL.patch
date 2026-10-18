@@ -1,0 +1,37 @@
+--- a/render-local.cjs
++++ b/proposal-layout-constraints/render-proposal.cjs
+@@ -14,12 +14,9 @@
+ const hashFile = p => hash(fs.readFileSync(p));
+ const now = () => new Date().toLocaleString('sv-SE', { timeZone: 'Asia/Seoul' }) + ' KST';
+ const save = (name, data) => fs.writeFileSync(path.join(out, name), typeof data === 'string' ? data : JSON.stringify(data, null, 2) + '\n');
+-const inputs = [
+-  { name: 'logical', file: '../candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd' },
+-  { name: 'physical', file: '../candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd' }
+-];
++const inputs = [{ name: 'logical', file: './P1_LOGICAL_LAYOUT_PROPOSAL.mmd' }];
+ const preserved = [
+-  ...inputs.map(x => x.file), '../P1_AS_BUILT_CANDIDATE.md', '../FINAL_BINDING.json'
++  ...inputs.map(x => x.file), '../../candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd', '../../candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd', '../../P1_AS_BUILT_CANDIDATE.md', '../../FINAL_BINDING.json'
+ ].map(rel => ({ path: rel, sha256: hashFile(path.resolve(out, rel)), bytes: fs.statSync(path.resolve(out, rel)).size }));
+ const config = {
+   startOnLoad: false, securityLevel: 'strict', theme: 'default',
+@@ -62,6 +59,7 @@
+   const infoText = fs.readFileSync(path.join(assetRoot, 'infoDiagram-RXCK75RN-2T6V4JS2.js'), 'utf8');
+   const version = infoText.match(/version:"([0-9.]+)"/)[1];
+   receipt.renderer = {
++    layout_adjustment: { edge: 'PM -> MGW', label: 'remote write; observed source worker03 .108', translate_svg_units: [160, 12], reason: 'Separate label from EDGE -> WK label without changing content or edge geometry' },
+     mermaid_version: version, version_source: path.join(assetRoot, 'infoDiagram-RXCK75RN-2T6V4JS2.js'),
+     version_source_sha256: hash(infoText), module: path.join(assetRoot, moduleName), module_sha256: hashFile(path.join(assetRoot, moduleName)),
+     vscode_version: JSON.parse(fs.readFileSync(path.join(vsRoot, 'package.json'), 'utf8')).version,
+@@ -77,6 +75,11 @@
+       document.getElementById('drawing').innerHTML = rendered.svg;
+       await document.fonts.ready;
+       const svg = document.querySelector('#drawing > svg');
++      // Layout-only derivative adjustment: place this label farther along the same edge.
++      const remoteLabels = [...svg.querySelectorAll('g.edgeLabel')].filter(e => e.textContent.replace(/\s/g,'') === 'remotewrite;observedsourceworker03.108');
++      if(remoteLabels.length !== 1) throw new Error('Expected exactly one remote-write edge label');
++      const remoteLabel = remoteLabels[0];
++      remoteLabel.setAttribute('transform', (remoteLabel.getAttribute('transform') || '') + ' translate(160 12)');
+       const vb = svg.viewBox.baseVal;
+       svg.setAttribute('width', String(Math.ceil(vb.width)));
+       svg.setAttribute('height', String(Math.ceil(vb.height)));

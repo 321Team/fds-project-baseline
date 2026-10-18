@@ -1,0 +1,85 @@
+{
+  "at_kst": "2026-10-16T17:24:46.267294+09:00",
+  "status": "PASS_LOCAL_ROLE_FIXTURES_CENTRALLY_VERIFIED",
+  "session": "p1-role-cc7e9fc7dd9049a4",
+  "cid": "b0d9da1071bd48759f1866549d37f682888b01f9c8dca6017823725cd65aec79",
+  "source_head": "affaad6b1a31d680164d9e3d5ef5d2a9d3fce95a",
+  "manifest_sha256": "21fb6757bc0661df8d21dae21b10b0fa656e6469c7939f5cd42dc4b272090636",
+  "suite_results": [
+    {
+      "suite": "mon-2.16.19",
+      "passed": 45,
+      "total": 45,
+      "result_sha256": "62576ca3e2fa65259ebfeeb183f150c3e914085b12ce20a5edd48157634b33cf",
+      "receipt_sha256": "fbdf52fba9fd6503eb412840c87bfd3b9f385e5d6559c859cc587b195ce47e31",
+      "scope": "localhost CLI/task tests and interruption model; no Squid/firewalld/SSH runtime"
+    },
+    {
+      "suite": "mon-2.21.3",
+      "passed": 45,
+      "total": 45,
+      "result_sha256": "62576ca3e2fa65259ebfeeb183f150c3e914085b12ce20a5edd48157634b33cf",
+      "receipt_sha256": "2a0577106a71f843b1afdef7eb9006bafcf00e5b038664c7196255d19a2ba208",
+      "scope": "localhost CLI/task tests and interruption model; no Squid/firewalld/SSH runtime"
+    },
+    {
+      "suite": "ntp-legacy",
+      "passed": 48,
+      "total": 48,
+      "result_sha256": "e439212ba76474a9ce6a225f5532eef9168ba1b83779f75baa1d7ede0ba59d61",
+      "receipt_sha256": "e58b4e06f02fd22fe2f13a205b4fd0b14ecf355ee3f603d157f994b0563771d0",
+      "scope": "LOCAL/MOCK; host commands and chronyd parser replaced; no runtime acceptance"
+    },
+    {
+      "suite": "ntp-flow",
+      "passed": 25,
+      "total": 25,
+      "result_sha256": "ed90196a7990beb319dcb9b3ab5dad8a2ea4a3761a6b1aa0f39068b90a76803d",
+      "receipt_sha256": "03ea90a9ad9c0191770ac1ed66680b0afb41bc378658553ae0ee646e589f7743",
+      "scope": "LOCAL: real file transactions and chronyd -p parsing; service/chronyc observations mocked; ownership lstat mocked when uid namespace forbids chown; no host runtime acceptance"
+    },
+    {
+      "suite": "ntp-serial",
+      "passed": 1,
+      "total": 1,
+      "result_sha256": "2b9bc74c4278de3618046e67c8de666b2645c20e243038515708e6f082e36ebe",
+      "receipt_sha256": "7481f537620bec19d819ed46ea829b3ba11ef3ff1a8bee5ceac6b5ceb74a4125",
+      "scope": "LOCAL Ansible/files/parser; service and chronyc mocked; no host/network acceptance"
+    },
+    {
+      "suite": "ntp-transport",
+      "passed": 2,
+      "total": 2,
+      "result_sha256": "dd79ba06f4b5759453bed8b19546f776ced63bc2d988f370d4e7d11275a4b155",
+      "receipt_sha256": "ddc1eb1be0ab51fe8a0d78a4f36469df950f04434a8a5d2b381c0f2c0bb6dbcd",
+      "scope": "Actual Ansible module_utils transport and unsupported-provider early guards.\n\nRun locally only. Invalid provider inputs must fail before any managed-host\nobservation or transaction; no SSH, NTP packet, daemon or clock change occurs.\n"
+    },
+    {
+      "suite": "ntp-wrapper",
+      "passed": 19,
+      "total": 19,
+      "result_sha256": "d05dca9077d8fece957a369c52edde08b27db3c5e25c3b5f0bccd74daf5c26b7",
+      "receipt_sha256": "2661a368b9f769a4902552b4e277aebe296d9155efe3fbe332c48952c006705b",
+      "scope": "LOCAL/MOCK wrapper only; no managed host execution"
+    }
+  ],
+  "pass_total": 185,
+  "case_total": 185,
+  "setup_cases_added": 0,
+  "command_receipts": 18,
+  "create_start_remove_each": 1,
+  "removed_at_utc": "2026-10-16T08:13:55.626166+00:00",
+  "post_observation_kst": "2026-10-16T17:17:55.927957+09:00",
+  "exact_absence_rc": 1,
+  "controllers": 0,
+  "read_errors": 0,
+  "host_final_sha256": "ca886157505249aceb9fa750579b6e8852432faeea5a5394d2b142a3b35a2371",
+  "session_result_sha256": "70370aaadeebe8b1fcf106a0e78809f705f4abdf9aeeed5ea123729fdc46cec7",
+  "isolation_sha256": "d86b55382aeea58cdd8d2b5d20057f2bd3b6781638d7e00d3ec5961b5dc5acae",
+  "source_ledger": "ORIGINAL_INTEGRITY.json",
+  "central_actual_runtime_commands": 0,
+  "new_test_runs": 0,
+  "production_runtime": false,
+  "phase1_acceptance": false,
+  "classification": "Executed fixed local fixtures inside isolated Linux container. Includes actual Ansible/module transfer and file/parser checks, plus named mocked service/host/wrapper cases. Not managed-host NTP/Squid/firewall/SSH acceptance."
+}

@@ -1,0 +1,91 @@
+{
+  "prepared_at_kst": "2026-10-16 20:23:51 KST",
+  "status": "READY_FOR_LOCAL_ADOPTION_REVIEW_NOT_ADOPTED",
+  "official_source_version": null,
+  "official_destination": null,
+  "official_distribution_format": null,
+  "adopted": false,
+  "source_requirements_baseline": "docs-v3.1.21 / 979facb98de8ca1f1e2ce22f38b27ac3366f3fc3",
+  "entries": [
+    {
+      "role": "explanation_original",
+      "path": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "sha256": "4c746a65cb58c4fe772d57fe37a1031c8aa72aaf9b6d81541b92f81e029d6a59",
+      "bytes": 13716,
+      "status": "PROPOSED_WITH_ADDENDUM"
+    },
+    {
+      "role": "render_status_addendum",
+      "path": "RENDER_ADOPTION_ADDENDUM.md",
+      "sha256": "ff24ca5054321f67c1332ac05f23cf8e1baf3d38d55fa0a82f9e69e76cf6f84e",
+      "bytes": 2981,
+      "status": "REQUIRED_COMPANION_FOR_EXPLANATION"
+    },
+    {
+      "role": "logical_source",
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/P1_LOGICAL_LAYOUT_PROPOSAL.mmd",
+      "sha256": "829890b4125006812b739ca87fbfe68c4a614e1198706c34e8015420a4340e9a",
+      "bytes": 2710,
+      "status": "PROPOSED_EDITABLE_SOURCE"
+    },
+    {
+      "role": "physical_source",
+      "path": "payload/current/candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "sha256": "f28d7d469609810059da3d3bf4eb960c243313644929099482271fe864660922",
+      "bytes": 1454,
+      "status": "PROPOSED_EDITABLE_SOURCE"
+    },
+    {
+      "role": "logical_renderer",
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/render-proposal.cjs",
+      "sha256": "439f766a97e65e7c87c2dbe9f81cbaaa7be706ee0aaa0d5a44705f030f7b4569",
+      "bytes": 10932,
+      "status": "REQUIRED_RENDER_CONTRACT"
+    },
+    {
+      "role": "renderer_config",
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/RENDER_CONFIG.json",
+      "sha256": "03e8d93d7f8029793be59f6008c71799c2daac71933a2486376da7103a47c337",
+      "bytes": 380,
+      "status": "REQUIRED_RENDER_CONTRACT"
+    },
+    {
+      "role": "logical_svg",
+      "path": "payload/current/render-validation-20261016/proposal-layout-constraints/logical.svg",
+      "sha256": "a45c0fe005db339625f6ddc8f470eaa6bbe46589a888cea24c8eac97f9375d85",
+      "bytes": 60608,
+      "status": "PROPOSED_DERIVATIVE"
+    },
+    {
+      "role": "physical_svg",
+      "path": "payload/current/render-validation-20261016/physical.svg",
+      "sha256": "dbf1907319184d721aa21cdc001cda34fe0e304421d2616a803bcd48694da2ff",
+      "bytes": 35002,
+      "status": "PROPOSED_DERIVATIVE"
+    },
+    {
+      "role": "original_logical_source",
+      "path": "payload/current/candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "sha256": "3093735816f09f1234d1e3b4a2ae0c2109e70ce773b705a76d74c52d4ff696b5",
+      "bytes": 2581,
+      "status": "COMPARISON_ONLY_NOT_SELECTED"
+    },
+    {
+      "role": "original_logical_svg",
+      "path": "payload/current/render-validation-20261016/logical.svg",
+      "sha256": "8b01b7470952555b415909c0e02f816e18450b0d141293ba59ed2e3ab4e22af8",
+      "bytes": 54502,
+      "status": "DIAGNOSTIC_ONLY_VISUAL_FINDINGS_REMAIN"
+    },
+    {
+      "role": "d07_existing_row",
+      "path": "references/D07/D07_LEDGER_ROW.md",
+      "sha256": "749468df858a8ec511d49f53a2596cf563e39a4bc5cc339ab3bf642ac6dd5957",
+      "bytes": 1291,
+      "status": "SEPARATE_EXISTING_LEDGER_ADOPTION_DECISION"
+    }
+  ],
+  "render_semantics": "Reuses unchanged prior SOURCE_SEMANTICS_CHECK: 21 nodes / 22 visible edges / same labels; four invisible constraints only.",
+  "render_contract": "Mermaid 11.17.0 + exact renderer/config + PM -> MGW label translate(160,12); MMD alone does not reproduce selected SVG.",
+  "formal_approval_or_freeze": false
+}

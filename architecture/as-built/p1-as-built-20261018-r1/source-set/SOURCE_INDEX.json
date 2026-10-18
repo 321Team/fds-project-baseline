@@ -1,0 +1,5919 @@
+{
+  "repositories": [
+    {
+      "repo": "fds-project-baseline",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351"
+    },
+    {
+      "repo": "fds-project-architecture",
+      "commit": "dd90efc09d5ab16e170499374736df97c7ea5559"
+    },
+    {
+      "repo": "infra-db",
+      "commit": "57f050eff31bdbfb05d6e75327d296047f89b1f0"
+    },
+    {
+      "repo": "fds-project-evidence",
+      "commit": "f0279ed4af8071917bae7d0de10ff553d4394d6e"
+    },
+    {
+      "repo": "infra-kubernetes",
+      "commit": "e60e022333a51a9a1690649ef170c0bda92ad9b9"
+    },
+    {
+      "repo": "infra-lb",
+      "commit": "070c8883fb692e5b82d2ab48b0a71837abc43da1"
+    },
+    {
+      "repo": "infra-harbor-trivy",
+      "commit": "35f3c24314e2cac0e9377c5d3484967c92f6c79c"
+    },
+    {
+      "repo": "infra-ansible",
+      "commit": "fd5c56624256700e8c2e76f17ebd976b6b553b11"
+    },
+    {
+      "repo": "fds-msa",
+      "commit": "c9c42cc1cc0c135320b81480984941f2a118f592"
+    }
+  ],
+  "documents": [
+    {
+      "id": "N01",
+      "repo": "fds-project-baseline",
+      "path": "CURRENT.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/CURRENT.md",
+      "git_blob": "2e6c37e32ebbd5387db68adcc99eff6946b59844",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "25d28056e5d8403eee41f194b43e65253d3af48e0f318d3b5480b4bda8ab4f51",
+      "bytes": 2163,
+      "local_path": "references/N01--CURRENT.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# Current Canonical Release"
+        },
+        {
+          "line": 25,
+          "title": "## Preserved publication history"
+        }
+      ]
+    },
+    {
+      "id": "N02",
+      "repo": "fds-project-baseline",
+      "path": "architecture/README.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/architecture/README.md",
+      "git_blob": "e75018290a93af166eb012c06581d4fe811e7795",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "ece5d836bdcfdc6093635dd9cdfd4a966b014fb6c027a091f37d8fe1ddcddf48",
+      "bytes": 235,
+      "local_path": "references/N02--README.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# Architecture"
+        }
+      ]
+    },
+    {
+      "id": "N03",
+      "repo": "fds-project-baseline",
+      "path": "architecture/v3.1.21/Approved_Change_View.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/architecture/v3.1.21/Approved_Change_View.md",
+      "git_blob": "fbcccd8d31ff5747721d2edc5f328947868026ea",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "0f35db77f3ed4fcb42df87af8f41e5ece20b84709bd33a57afdc760f9a10d930",
+      "bytes": 2065,
+      "local_path": "references/N03--Approved_Change_View.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# v3.1.21 Architecture authority view"
+        }
+      ]
+    },
+    {
+      "id": "N04",
+      "repo": "fds-project-baseline",
+      "path": "tests/FDS_Test_Strategy_v3.1.21.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/tests/FDS_Test_Strategy_v3.1.21.md",
+      "git_blob": "cfbb073ca95b82ac544ca801716c0e893403927d",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "04ecc2e74fae33362a1a1e1ac02337dd8b33a87dee7c7c78d44865280f87535a",
+      "bytes": 10895,
+      "local_path": "references/N04--FDS_Test_Strategy_v3.1.21.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# FDS v3.1.21 테스트 전략 재검토"
+        },
+        {
+          "line": 5,
+          "title": "## 판정과 정정"
+        },
+        {
+          "line": 15,
+          "title": "## 실행 창과 선행조건"
+        },
+        {
+          "line": 28,
+          "title": "## 테스트·증적 추적표"
+        },
+        {
+          "line": 51,
+          "title": "## 실행·중단·재시험 공통 규칙"
+        },
+        {
+          "line": 59,
+          "title": "## 검토 근거와 한계"
+        }
+      ]
+    },
+    {
+      "id": "N05",
+      "repo": "fds-project-baseline",
+      "path": "tests/README.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/tests/README.md",
+      "git_blob": "196b8d7d7da4220979e6979578ccba2541e77e02",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "5f36ed5c9d75fcfccc5a00865a310e4e4a87105b21f258313d39e35ee782a6e2",
+      "bytes": 888,
+      "local_path": "references/N05--README.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# Test Strategy / Test Plan 색인"
+        }
+      ]
+    },
+    {
+      "id": "N06",
+      "repo": "fds-project-baseline",
+      "path": "releases/v3.1.21/README.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/releases/v3.1.21/README.md",
+      "git_blob": "c419f92f7704364637f405babca0e67cae7c5255",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "cff5f09e15bb880266d4e98a5e6d3c37b9a76e9cb3a3eecc8085ea7df5d616eb",
+      "bytes": 1896,
+      "local_path": "references/N06--README.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# v3.1.21 Release set"
+        }
+      ]
+    },
+    {
+      "id": "N07",
+      "repo": "fds-project-baseline",
+      "path": "governance/handoffs/phase1-execution-20261010/DB_DR_ACCESS_CLOSEOUT_20261012.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/governance/handoffs/phase1-execution-20261010/DB_DR_ACCESS_CLOSEOUT_20261012.md",
+      "git_blob": "d7821cedf81209ec116319f4a1a6f18222c4e00c",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "f453c4265b728f97202f59c2b781310a04a7fdea785ee2a5f41f8be76eb05c44",
+      "bytes": 23239,
+      "local_path": "references/N07--DB_DR_ACCESS_CLOSEOUT_20261012.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# Phase 1 DB·DR 인수안과 보관·관리 접근 잔여"
+        },
+        {
+          "line": 9,
+          "title": "## 1. 현재 판정과 작업 경계"
+        },
+        {
+          "line": 22,
+          "title": "## 2. DB W4 — 그대로 사용할 처분 문안"
+        },
+        {
+          "line": 30,
+          "title": "### 근거와 재작업을 생략하는 이유"
+        },
+        {
+          "line": 37,
+          "title": "### 인수 판단에 넘길 항목"
+        },
+        {
+          "line": 56,
+          "title": "## 3. DR — 기존 요구사항과 실제 증적 대응"
+        },
+        {
+          "line": 74,
+          "title": "### D01과 9/29 dump의 구분·보존"
+        },
+        {
+          "line": 83,
+          "title": "### 최종 인수 기록안 — 아직 미채택"
+        },
+        {
+          "line": 89,
+          "title": "## 4. C01 — 원본 증적 6개 보관 접근, 사용자 확인 수신"
+        },
+        {
+          "line": 101,
+          "title": "## 5. Grafana — 이미 받은 입력과 남은 입력"
+        },
+        {
+          "line": 112,
+          "title": "### 10/13 수신한 현재 사실과 남은 판단"
+        },
+        {
+          "line": 122,
+          "title": "## 6. 회신 수신 상태와 남은 판단"
+        },
+        {
+          "line": 136,
+          "title": "## 7. 권장 처리 순서·완료 기록"
+        }
+      ]
+    },
+    {
+      "id": "N08",
+      "repo": "fds-project-baseline",
+      "path": "tickets/v3.1.21/descriptions/P1-DOC-01.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/tickets/v3.1.21/descriptions/P1-DOC-01.md",
+      "git_blob": "009be2ea3b4c413aeaa9cd2daf85ac3bfbf71f87",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "4ac20b7b4410f6b33f77d3d000f366a1349310b29829a8d9205c5321264d66f0",
+      "bytes": 36864,
+      "local_path": "references/N08--P1-DOC-01.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# P1-DOC-01 — Architecture / Test / Runbook Freeze"
+        },
+        {
+          "line": 30,
+          "title": "## Source checklist"
+        },
+        {
+          "line": 50,
+          "title": "## Source body snapshot"
+        },
+        {
+          "line": 55,
+          "title": "## 최신 판정 — 2026-09-27 KST"
+        },
+        {
+          "line": 61,
+          "title": "### 현재 선행·잔여"
+        },
+        {
+          "line": 69,
+          "title": "### Freeze 완료 조건"
+        },
+        {
+          "line": 84,
+          "title": "## 증적 경로 일괄 변경 — 2026-09-23"
+        },
+        {
+          "line": 97,
+          "title": "## 독립 승인·병합 완료 — 2026-09-20 KST"
+        },
+        {
+          "line": 114,
+          "title": "## monitor01 PKI 증적·TLS 구성 문서 후속 — 2026-09-19"
+        },
+        {
+          "line": 129,
+          "title": "## 2026-09-18 요구사항·AC 증적 대조"
+        },
+        {
+          "line": 138,
+          "title": "## 사양·기록 전수 점검 후속 — 2026-09-14 점검 반영"
+        },
+        {
+          "line": 148,
+          "title": "### A01 — NTP 실행·인수 입력"
+        },
+        {
+          "line": 154,
+          "title": "### A02 — CNI·MTU·CP1 인수"
+        },
+        {
+          "line": 160,
+          "title": "### A03 — Worker Drain 합격 기준"
+        },
+        {
+          "line": 166,
+          "title": "### A04 — 현재 앱·Rule·시간 계약"
+        },
+        {
+          "line": 172,
+          "title": "### A05 — 정본 Monitoring 배포 입력"
+        },
+        {
+          "line": 178,
+          "title": "### A06 — OID·IF-06B 경로 인계"
+        },
+        {
+          "line": 184,
+          "title": "### A07 — 프록시 As-built·운영 계정 인계"
+        },
+        {
+          "line": 190,
+          "title": "### R01 — Harbor/CA/CICD 결정 동기화"
+        },
+        {
+          "line": 196,
+          "title": "### R02 — DB 병합·운영·복구 기록"
+        },
+        {
+          "line": 202,
+          "title": "### R03 — 최신 리뷰·증적 보관"
+        },
+        {
+          "line": 208,
+          "title": "### R04 — 종결 승인·원본 참조"
+        },
+        {
+          "line": 214,
+          "title": "### R05 — 발행 메타데이터·v19 실제 편입"
+        },
+        {
+          "line": 220,
+          "title": "### R06 — native 속성·보조 ID 매핑"
+        },
+        {
+          "line": 235,
+          "title": "# P1-DOC-01 — Architecture / Test / Runbook Freeze"
+        },
+        {
+          "line": 240,
+          "title": "## 티켓 속성"
+        },
+        {
+          "line": 263,
+          "title": "## 최신 운영 기록의 보존"
+        },
+        {
+          "line": 269,
+          "title": "## 정본에 반영된 실행·검토 상태 — 작성 시점 기록"
+        },
+        {
+          "line": 275,
+          "title": "## 일정 권장안"
+        },
+        {
+          "line": 279,
+          "title": "## 적용 기준"
+        },
+        {
+          "line": 286,
+          "title": "# User Story"
+        },
+        {
+          "line": 292,
+          "title": "# Scope"
+        },
+        {
+          "line": 294,
+          "title": "## In Scope"
+        },
+        {
+          "line": 303,
+          "title": "## Out of Scope"
+        },
+        {
+          "line": 309,
+          "title": "# 핵심 요구사항"
+        },
+        {
+          "line": 320,
+          "title": "# Acceptance Criteria"
+        },
+        {
+          "line": 330,
+          "title": "# 검증 및 증적"
+        },
+        {
+          "line": 341,
+          "title": "# Dependency"
+        },
+        {
+          "line": 350,
+          "title": "# Decision / Risk Control"
+        },
+        {
+          "line": 359,
+          "title": "# Completion Record"
+        },
+        {
+          "line": 367,
+          "title": "## 갱신 전 원문 보관"
+        },
+        {
+          "line": 376,
+          "title": "# P1-DOC-01 — Architecture / Test / Runbook Freeze"
+        },
+        {
+          "line": 380,
+          "title": "## Notion 데이터 속성"
+        },
+        {
+          "line": 402,
+          "title": "## 이관 기준 및 확인 사항"
+        },
+        {
+          "line": 409,
+          "title": "## 원본 및 변경 출처"
+        },
+        {
+          "line": 416,
+          "title": "## Description — 보관 입력본"
+        },
+        {
+          "line": 420,
+          "title": "# 🎯 User Story"
+        },
+        {
+          "line": 426,
+          "title": "# 📌 Scope"
+        },
+        {
+          "line": 428,
+          "title": "## In Scope"
+        },
+        {
+          "line": 437,
+          "title": "## Out of Scope"
+        },
+        {
+          "line": 443,
+          "title": "# 📋 핵심 요구사항"
+        },
+        {
+          "line": 452,
+          "title": "# ✅ Acceptance Criteria"
+        },
+        {
+          "line": 461,
+          "title": "# 🧪 검증 및 증적"
+        },
+        {
+          "line": 472,
+          "title": "# 🔗 Dependency"
+        },
+        {
+          "line": 481,
+          "title": "# ⚖️ Decision / Risk Control"
+        },
+        {
+          "line": 490,
+          "title": "# 📝 Completion Record"
+        }
+      ]
+    },
+    {
+      "id": "N09",
+      "repo": "fds-project-baseline",
+      "path": "tickets/v3.1.21/descriptions/P1-MON-01.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/tickets/v3.1.21/descriptions/P1-MON-01.md",
+      "git_blob": "79be9c7a3bc6bb8b5ed2eaef9260a905169a6cd6",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "d3a357313e6f600ad7ca04247ae68866120f7a7d61ebec9a3329eb0ee9903dc2",
+      "bytes": 95905,
+      "local_path": "references/N09--P1-MON-01.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# P1-MON-01 — Kubernetes-Integrated Hybrid Monitoring 구축 및 검증"
+        },
+        {
+          "line": 30,
+          "title": "## Source checklist"
+        },
+        {
+          "line": 88,
+          "title": "## Source body snapshot"
+        },
+        {
+          "line": 93,
+          "title": "## 증적 경로 일괄 변경 — 2026-09-23"
+        },
+        {
+          "line": 105,
+          "title": "## 현행 배포 상태·검수 후속 — 2026-09-23 KST"
+        },
+        {
+          "line": 119,
+          "title": "## CP 관리 경로 복구·MON 인계 범위 갱신 — 2026-09-21 14:01 KST"
+        },
+        {
+          "line": 131,
+          "title": "## API 회복 후 정본 MON sender 준비 필요 확인 — 2026-09-21 12:40:18 KST"
+        },
+        {
+          "line": 151,
+          "title": "## MON 선행 API 복구 절차 준비 — 2026-09-21 10:14 KST"
+        },
+        {
+          "line": 161,
+          "title": "## MON 선행 장애의 3CP 비교 완료 — 2026-09-21 09:42~09:43 KST"
+        },
+        {
+          "line": 171,
+          "title": "## MON 선행 API 장애의 원인 범위 축소 — 2026-09-21 00:34~00:43 KST"
+        },
+        {
+          "line": 181,
+          "title": "## MON 후속의 API 차단 조사 갱신 — 2026-09-21 00:20 KST"
+        },
+        {
+          "line": 191,
+          "title": "## CP1 API 리스너 부재 확인 — 2026-09-21 00:08 KST"
+        },
+        {
+          "line": 212,
+          "title": "## API LB 접근 실패 관측 — 2026-09-20 23:34~23:35 KST"
+        },
+        {
+          "line": 228,
+          "title": "## 독립 승인·병합 완료 — 2026-09-20 KST"
+        },
+        {
+          "line": 237,
+          "title": "### MON 배포 입력 인계 — 이 표를 한 번에 확정"
+        },
+        {
+          "line": 257,
+          "title": "### 후속 책임과 권욱님 착수 범위 — 2026-09-20 KST"
+        },
+        {
+          "line": 288,
+          "title": "## monitor01 PKI 현장 검증 완료 및 TLS 연동 후속 — 2026-09-19"
+        },
+        {
+          "line": 309,
+          "title": "### 하위작업 진행 체크 — 2026-09-19 재조회"
+        },
+        {
+          "line": 327,
+          "title": "## monitor01 현장 수신 구성 확인 — 2026-09-18"
+        },
+        {
+          "line": 374,
+          "title": "## 사양·기록 전수 점검 후속 — 2026-09-14 점검 반영"
+        },
+        {
+          "line": 399,
+          "title": "# P1-MON-01 — Kubernetes-Integrated Hybrid Monitoring 구축 및 검증"
+        },
+        {
+          "line": 404,
+          "title": "## 티켓 속성"
+        },
+        {
+          "line": 427,
+          "title": "## 최신 운영 기록의 보존"
+        },
+        {
+          "line": 435,
+          "title": "## 정본에 반영된 실행·검토 상태 — 작성 시점 기록"
+        },
+        {
+          "line": 441,
+          "title": "## 일정 권장안"
+        },
+        {
+          "line": 445,
+          "title": "## 적용 기준"
+        },
+        {
+          "line": 453,
+          "title": "# Technical Story"
+        },
+        {
+          "line": 459,
+          "title": "# Scope"
+        },
+        {
+          "line": 461,
+          "title": "## In Scope"
+        },
+        {
+          "line": 478,
+          "title": "## Out of Scope"
+        },
+        {
+          "line": 491,
+          "title": "# 핵심 요구사항"
+        },
+        {
+          "line": 495,
+          "title": "## 1. Kubernetes 내부 배치"
+        },
+        {
+          "line": 503,
+          "title": "## 2. 보안 및 최소권한"
+        },
+        {
+          "line": 515,
+          "title": "## 3. 저장·Dashboard·Alert"
+        },
+        {
+          "line": 524,
+          "title": "## 4. 외부 Watchdog"
+        },
+        {
+          "line": 536,
+          "title": "# Acceptance Criteria"
+        },
+        {
+          "line": 564,
+          "title": "## 필수 보조통제 — 14개 Runtime Acceptance와 별도 집계"
+        },
+        {
+          "line": 573,
+          "title": "# 검증 및 증적"
+        },
+        {
+          "line": 591,
+          "title": "# Dependency"
+        },
+        {
+          "line": 601,
+          "title": "# Interface"
+        },
+        {
+          "line": 615,
+          "title": "# Decision / Risk Control"
+        },
+        {
+          "line": 624,
+          "title": "# Review / Handoff"
+        },
+        {
+          "line": 635,
+          "title": "# Constraints / Known Limitation"
+        },
+        {
+          "line": 644,
+          "title": "# Rollback / Recovery"
+        },
+        {
+          "line": 654,
+          "title": "# Completion Record / Done Definition"
+        },
+        {
+          "line": 664,
+          "title": "## 갱신 전 원문 보관"
+        },
+        {
+          "line": 673,
+          "title": "# P1-MON-01 — Kubernetes-Integrated Hybrid Monitoring 구축 및 검증"
+        },
+        {
+          "line": 677,
+          "title": "## Notion 데이터 속성"
+        },
+        {
+          "line": 699,
+          "title": "## 이관 기준 및 확인 사항"
+        },
+        {
+          "line": 707,
+          "title": "## 원본 및 변경 출처"
+        },
+        {
+          "line": 715,
+          "title": "## 현행 정본 Runtime Acceptance"
+        },
+        {
+          "line": 736,
+          "title": "## Description — 보관 입력본"
+        },
+        {
+          "line": 740,
+          "title": "# 🎯 Technical Story"
+        },
+        {
+          "line": 746,
+          "title": "# 📌 Scope"
+        },
+        {
+          "line": 748,
+          "title": "## In Scope"
+        },
+        {
+          "line": 765,
+          "title": "## Out of Scope"
+        },
+        {
+          "line": 778,
+          "title": "# 📋 핵심 요구사항"
+        },
+        {
+          "line": 780,
+          "title": "## 1. Kubernetes 내부 배치"
+        },
+        {
+          "line": 788,
+          "title": "## 2. 보안 및 최소권한"
+        },
+        {
+          "line": 800,
+          "title": "## 3. 저장·Dashboard·Alert"
+        },
+        {
+          "line": 809,
+          "title": "## 4. 외부 Watchdog"
+        },
+        {
+          "line": 821,
+          "title": "# ✅ Acceptance Criteria"
+        },
+        {
+          "line": 842,
+          "title": "# 🧪 검증 및 증적"
+        },
+        {
+          "line": 860,
+          "title": "# 🔗 Dependency"
+        },
+        {
+          "line": 870,
+          "title": "# 🔌 Interface"
+        },
+        {
+          "line": 883,
+          "title": "# ⚖️ Decision / Risk Control"
+        },
+        {
+          "line": 892,
+          "title": "# 🔍 Review / Handoff"
+        },
+        {
+          "line": 903,
+          "title": "# ⚠️ Constraints / Known Limitation"
+        },
+        {
+          "line": 912,
+          "title": "# ↩️ Rollback / Recovery"
+        },
+        {
+          "line": 922,
+          "title": "# 📝 Completion Record / Done Definition"
+        }
+      ]
+    },
+    {
+      "id": "N10",
+      "repo": "fds-project-baseline",
+      "path": "tickets/v3.1.21/descriptions/P1-MON-02.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/tickets/v3.1.21/descriptions/P1-MON-02.md",
+      "git_blob": "65dda651cb8b2496f8538c2346e97ce9b29bdca5",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "587757ae4ed16755ed825363284fa0284f073392db804501a3aea39ff594dfad",
+      "bytes": 22830,
+      "local_path": "references/N10--P1-MON-02.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# P1-MON-02 — Dashboard / Alert Enhancement"
+        },
+        {
+          "line": 30,
+          "title": "## Source checklist"
+        },
+        {
+          "line": 44,
+          "title": "## Source body snapshot"
+        },
+        {
+          "line": 49,
+          "title": "## 2026-10-01 P1 Activation Contract v1"
+        },
+        {
+          "line": 51,
+          "title": "### Activate only if"
+        },
+        {
+          "line": 55,
+          "title": "### Deferred is valid when"
+        },
+        {
+          "line": 59,
+          "title": "### Acceptance"
+        },
+        {
+          "line": 64,
+          "title": "## 2026-10-01 공용 OCP Lab 실행경계"
+        },
+        {
+          "line": 68,
+          "title": "### 공통 자원·명명 규칙"
+        },
+        {
+          "line": 75,
+          "title": "### 허용/금지 경계"
+        },
+        {
+          "line": 80,
+          "title": "### Evidence / Cleanup"
+        },
+        {
+          "line": 86,
+          "title": "### 이 티켓 적용"
+        },
+        {
+          "line": 90,
+          "title": "## 증적 경로 일괄 변경 — 2026-09-23 (누락분 2026-09-25 반영)"
+        },
+        {
+          "line": 104,
+          "title": "## 사양·기록 전수 점검 후속 — 2026-09-14 점검 반영"
+        },
+        {
+          "line": 122,
+          "title": "## 대표 Milestone 배정 — 2026-09-11"
+        },
+        {
+          "line": 136,
+          "title": "# P1-MON-02 — Dashboard / Alert / HA / Retention Enhancement"
+        },
+        {
+          "line": 141,
+          "title": "## 티켓 속성"
+        },
+        {
+          "line": 164,
+          "title": "## 최신 운영 기록의 보존"
+        },
+        {
+          "line": 172,
+          "title": "## 정본에 반영된 실행·검토 상태 — 작성 시점 기록"
+        },
+        {
+          "line": 178,
+          "title": "## 일정 권장안"
+        },
+        {
+          "line": 182,
+          "title": "## 적용 기준"
+        },
+        {
+          "line": 190,
+          "title": "# User Story"
+        },
+        {
+          "line": 194,
+          "title": "# Scope"
+        },
+        {
+          "line": 196,
+          "title": "## In Scope"
+        },
+        {
+          "line": 204,
+          "title": "## Out of Scope"
+        },
+        {
+          "line": 210,
+          "title": "# 핵심 요구사항"
+        },
+        {
+          "line": 218,
+          "title": "# Acceptance Criteria"
+        },
+        {
+          "line": 229,
+          "title": "# 검증 및 증적"
+        },
+        {
+          "line": 234,
+          "title": "# Dependency"
+        },
+        {
+          "line": 240,
+          "title": "# Decision / Risk Control"
+        },
+        {
+          "line": 245,
+          "title": "# Review / Handoff"
+        },
+        {
+          "line": 249,
+          "title": "# Completion Record"
+        },
+        {
+          "line": 256,
+          "title": "## 갱신 전 원문 보관"
+        },
+        {
+          "line": 265,
+          "title": "# P1-MON-02 — Dashboard / Alert Enhancement"
+        },
+        {
+          "line": 269,
+          "title": "## Notion 데이터 속성"
+        },
+        {
+          "line": 291,
+          "title": "## 이관 기준 및 확인 사항"
+        },
+        {
+          "line": 298,
+          "title": "## 원본 및 변경 출처"
+        },
+        {
+          "line": 305,
+          "title": "## Description — 보관 입력본"
+        },
+        {
+          "line": 309,
+          "title": "# 🎯 User Story"
+        },
+        {
+          "line": 315,
+          "title": "# 📌 Scope"
+        },
+        {
+          "line": 317,
+          "title": "## In Scope"
+        },
+        {
+          "line": 325,
+          "title": "## Out of Scope"
+        },
+        {
+          "line": 333,
+          "title": "# 📋 핵심 요구사항"
+        },
+        {
+          "line": 342,
+          "title": "# ✅ Acceptance Criteria"
+        },
+        {
+          "line": 351,
+          "title": "# 🧪 검증 및 증적"
+        },
+        {
+          "line": 361,
+          "title": "# 🔗 Dependency"
+        },
+        {
+          "line": 370,
+          "title": "# ⚖️ Decision / Risk Control"
+        },
+        {
+          "line": 379,
+          "title": "# 📝 Completion Record"
+        }
+      ]
+    },
+    {
+      "id": "N11",
+      "repo": "fds-project-baseline",
+      "path": "tickets/v3.1.21/descriptions/P1-DR-01.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/tickets/v3.1.21/descriptions/P1-DR-01.md",
+      "git_blob": "79c803321f8c1a6f72f34d7da5e2683e0b784356",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "98e87063c7f72dd5549e034cc54791b31238bfc614424dda3f06b3b00f27396d",
+      "bytes": 19303,
+      "local_path": "references/N11--P1-DR-01.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# P1-DR-01 — PostgreSQL Backup / Restore"
+        },
+        {
+          "line": 30,
+          "title": "## Source checklist"
+        },
+        {
+          "line": 41,
+          "title": "## Source body snapshot"
+        },
+        {
+          "line": 46,
+          "title": "## 증적 경로 일괄 변경 — 2026-09-23"
+        },
+        {
+          "line": 58,
+          "title": "## 2026-09-18 요구사항·AC 증적 대조"
+        },
+        {
+          "line": 67,
+          "title": "## 사양·기록 전수 점검 후속 — 2026-09-14 점검 반영"
+        },
+        {
+          "line": 89,
+          "title": "# P1-DR-01 — PostgreSQL Backup / Restore"
+        },
+        {
+          "line": 94,
+          "title": "## 티켓 속성"
+        },
+        {
+          "line": 117,
+          "title": "## 최신 운영 기록의 보존"
+        },
+        {
+          "line": 126,
+          "title": "## 정본에 반영된 실행·검토 상태 — 작성 시점 기록"
+        },
+        {
+          "line": 132,
+          "title": "## 일정 권장안"
+        },
+        {
+          "line": 136,
+          "title": "## 적용 기준"
+        },
+        {
+          "line": 144,
+          "title": "# User Story"
+        },
+        {
+          "line": 150,
+          "title": "# Scope"
+        },
+        {
+          "line": 152,
+          "title": "## In Scope"
+        },
+        {
+          "line": 161,
+          "title": "## Out of Scope"
+        },
+        {
+          "line": 167,
+          "title": "# 핵심 요구사항"
+        },
+        {
+          "line": 178,
+          "title": "# Acceptance Criteria"
+        },
+        {
+          "line": 191,
+          "title": "# 검증 및 증적"
+        },
+        {
+          "line": 202,
+          "title": "# Dependency"
+        },
+        {
+          "line": 211,
+          "title": "# Decision / Risk Control"
+        },
+        {
+          "line": 220,
+          "title": "# Completion Record"
+        },
+        {
+          "line": 228,
+          "title": "## 갱신 전 원문 보관"
+        },
+        {
+          "line": 237,
+          "title": "# P1-DR-01 — PostgreSQL Backup / Restore"
+        },
+        {
+          "line": 241,
+          "title": "## Notion 데이터 속성"
+        },
+        {
+          "line": 263,
+          "title": "## 이관 기준 및 확인 사항"
+        },
+        {
+          "line": 270,
+          "title": "## 원본 및 변경 출처"
+        },
+        {
+          "line": 277,
+          "title": "## Description — 보관 입력본"
+        },
+        {
+          "line": 281,
+          "title": "# 🎯 User Story"
+        },
+        {
+          "line": 287,
+          "title": "# 📌 Scope"
+        },
+        {
+          "line": 289,
+          "title": "## In Scope"
+        },
+        {
+          "line": 298,
+          "title": "## Out of Scope"
+        },
+        {
+          "line": 304,
+          "title": "# 📋 핵심 요구사항"
+        },
+        {
+          "line": 313,
+          "title": "# ✅ Acceptance Criteria"
+        },
+        {
+          "line": 322,
+          "title": "# 🧪 검증 및 증적"
+        },
+        {
+          "line": 333,
+          "title": "# 🔗 Dependency"
+        },
+        {
+          "line": 342,
+          "title": "# ⚖️ Decision / Risk Control"
+        },
+        {
+          "line": 351,
+          "title": "# 📝 Completion Record"
+        }
+      ]
+    },
+    {
+      "id": "N12",
+      "repo": "fds-project-baseline",
+      "path": "tickets/v3.1.21/descriptions/P1-DR-02.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/tickets/v3.1.21/descriptions/P1-DR-02.md",
+      "git_blob": "630003d66a982dd35fd14c9b2d588128ebe6b73c",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "4e991e76efb40f034ac9667b375c966f6b1445dcd92997cb259d8ea3f1031342",
+      "bytes": 19936,
+      "local_path": "references/N12--P1-DR-02.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# P1-DR-02 — Harbor / etcd Backup and Restore"
+        },
+        {
+          "line": 30,
+          "title": "## Source checklist"
+        },
+        {
+          "line": 41,
+          "title": "## Source body snapshot"
+        },
+        {
+          "line": 46,
+          "title": "## 2026-10-01 P1 DR Activation Contract v1"
+        },
+        {
+          "line": 48,
+          "title": "### Activate only if"
+        },
+        {
+          "line": 52,
+          "title": "### Prohibited"
+        },
+        {
+          "line": 55,
+          "title": "### Deferred close"
+        },
+        {
+          "line": 60,
+          "title": "## 2026-10-01 공용 OCP Lab 실행경계"
+        },
+        {
+          "line": 64,
+          "title": "### 공통 자원·명명 규칙"
+        },
+        {
+          "line": 71,
+          "title": "### 허용/금지 경계"
+        },
+        {
+          "line": 76,
+          "title": "### Evidence / Cleanup"
+        },
+        {
+          "line": 82,
+          "title": "### 이 티켓 적용"
+        },
+        {
+          "line": 86,
+          "title": "## 증적 경로 일괄 변경 — 2026-09-23"
+        },
+        {
+          "line": 99,
+          "title": "## 사양·기록 전수 점검 후속 — 2026-09-14 점검 반영"
+        },
+        {
+          "line": 117,
+          "title": "## 대표 Milestone 배정 — 2026-09-11"
+        },
+        {
+          "line": 131,
+          "title": "# P1-DR-02 — Harbor / etcd Backup and Restore"
+        },
+        {
+          "line": 136,
+          "title": "## 티켓 속성"
+        },
+        {
+          "line": 159,
+          "title": "## 최신 운영 기록의 보존"
+        },
+        {
+          "line": 165,
+          "title": "## 정본에 반영된 실행·검토 상태 — 작성 시점 기록"
+        },
+        {
+          "line": 171,
+          "title": "## 일정 권장안"
+        },
+        {
+          "line": 175,
+          "title": "## 적용 기준"
+        },
+        {
+          "line": 182,
+          "title": "# User Story"
+        },
+        {
+          "line": 188,
+          "title": "# Scope"
+        },
+        {
+          "line": 190,
+          "title": "## In Scope"
+        },
+        {
+          "line": 198,
+          "title": "## Out of Scope"
+        },
+        {
+          "line": 206,
+          "title": "# 핵심 요구사항"
+        },
+        {
+          "line": 215,
+          "title": "# Acceptance Criteria"
+        },
+        {
+          "line": 224,
+          "title": "# 검증 및 증적"
+        },
+        {
+          "line": 234,
+          "title": "# Dependency"
+        },
+        {
+          "line": 243,
+          "title": "# Decision / Risk Control"
+        },
+        {
+          "line": 252,
+          "title": "# Completion Record"
+        },
+        {
+          "line": 260,
+          "title": "## 갱신 전 원문 보관"
+        },
+        {
+          "line": 269,
+          "title": "# P1-DR-02 — Harbor / etcd Backup and Restore"
+        },
+        {
+          "line": 273,
+          "title": "## Notion 데이터 속성"
+        },
+        {
+          "line": 295,
+          "title": "## 이관 기준 및 확인 사항"
+        },
+        {
+          "line": 302,
+          "title": "## 원본 및 변경 출처"
+        },
+        {
+          "line": 309,
+          "title": "## Description — 보관 입력본"
+        },
+        {
+          "line": 313,
+          "title": "# 🎯 User Story"
+        },
+        {
+          "line": 319,
+          "title": "# 📌 Scope"
+        },
+        {
+          "line": 321,
+          "title": "## In Scope"
+        },
+        {
+          "line": 329,
+          "title": "## Out of Scope"
+        },
+        {
+          "line": 337,
+          "title": "# 📋 핵심 요구사항"
+        },
+        {
+          "line": 346,
+          "title": "# ✅ Acceptance Criteria"
+        },
+        {
+          "line": 355,
+          "title": "# 🧪 검증 및 증적"
+        },
+        {
+          "line": 365,
+          "title": "# 🔗 Dependency"
+        },
+        {
+          "line": 374,
+          "title": "# ⚖️ Decision / Risk Control"
+        },
+        {
+          "line": 383,
+          "title": "# 📝 Completion Record"
+        }
+      ]
+    },
+    {
+      "id": "N13",
+      "repo": "fds-project-baseline",
+      "path": "tickets/v3.1.21/descriptions/MS-DELIVERABLE-FREEZE-01.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/tickets/v3.1.21/descriptions/MS-DELIVERABLE-FREEZE-01.md",
+      "git_blob": "29f0222d807463cc635fc4660295160de455a5a4",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "71f54a1718fa27dd9f7fa85febdc4a0176fa2b1cf71bc3f8e101883aea07b4da",
+      "bytes": 17504,
+      "local_path": "references/N13--MS-DELIVERABLE-FREEZE-01.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# MS-DELIVERABLE-FREEZE-01 — Deliverable Freeze"
+        },
+        {
+          "line": 30,
+          "title": "## Source checklist"
+        },
+        {
+          "line": 40,
+          "title": "## Source body snapshot"
+        },
+        {
+          "line": 45,
+          "title": "## 2026-10-01 Freeze Contract v1"
+        },
+        {
+          "line": 47,
+          "title": "### 10-23 Sequence"
+        },
+        {
+          "line": 50,
+          "title": "### Freeze checks"
+        },
+        {
+          "line": 57,
+          "title": "### Exit"
+        },
+        {
+          "line": 62,
+          "title": "## 2026-10-01 공용 OCP Lab 실행경계"
+        },
+        {
+          "line": 66,
+          "title": "### 공통 자원·명명 규칙"
+        },
+        {
+          "line": 73,
+          "title": "### 허용/금지 경계"
+        },
+        {
+          "line": 78,
+          "title": "### Evidence / Cleanup"
+        },
+        {
+          "line": 84,
+          "title": "### 이 티켓 적용"
+        },
+        {
+          "line": 88,
+          "title": "## 증적 경로 일괄 변경 — 2026-09-23"
+        },
+        {
+          "line": 101,
+          "title": "## 사양·기록 전수 점검 후속 — 2026-09-14 점검 반영"
+        },
+        {
+          "line": 118,
+          "title": "# MS-DELIVERABLE-FREEZE-01 — Deliverable Freeze"
+        },
+        {
+          "line": 123,
+          "title": "## 티켓 속성"
+        },
+        {
+          "line": 146,
+          "title": "## 최신 운영 기록의 보존"
+        },
+        {
+          "line": 152,
+          "title": "## 정본에 반영된 실행·검토 상태 — 작성 시점 기록"
+        },
+        {
+          "line": 158,
+          "title": "## 적용 기준"
+        },
+        {
+          "line": 165,
+          "title": "# User Story"
+        },
+        {
+          "line": 171,
+          "title": "# Scope"
+        },
+        {
+          "line": 173,
+          "title": "## In Scope"
+        },
+        {
+          "line": 180,
+          "title": "## Out of Scope"
+        },
+        {
+          "line": 186,
+          "title": "# 핵심 요구사항"
+        },
+        {
+          "line": 195,
+          "title": "# Acceptance Criteria"
+        },
+        {
+          "line": 203,
+          "title": "# 검증 및 증적"
+        },
+        {
+          "line": 213,
+          "title": "# Dependency"
+        },
+        {
+          "line": 222,
+          "title": "# Decision / Risk Control"
+        },
+        {
+          "line": 231,
+          "title": "# Completion Record"
+        },
+        {
+          "line": 239,
+          "title": "## 갱신 전 원문 보관"
+        },
+        {
+          "line": 248,
+          "title": "# MS-DELIVERABLE-FREEZE-01 — Deliverable Freeze"
+        },
+        {
+          "line": 252,
+          "title": "## Notion 데이터 속성"
+        },
+        {
+          "line": 274,
+          "title": "## 이관 기준 및 확인 사항"
+        },
+        {
+          "line": 281,
+          "title": "## 원본 및 변경 출처"
+        },
+        {
+          "line": 288,
+          "title": "## Description — 보관 입력본"
+        },
+        {
+          "line": 292,
+          "title": "# 🎯 User Story"
+        },
+        {
+          "line": 298,
+          "title": "# 📌 Scope"
+        },
+        {
+          "line": 300,
+          "title": "## In Scope"
+        },
+        {
+          "line": 307,
+          "title": "## Out of Scope"
+        },
+        {
+          "line": 313,
+          "title": "# 📋 핵심 요구사항"
+        },
+        {
+          "line": 322,
+          "title": "# ✅ Acceptance Criteria"
+        },
+        {
+          "line": 330,
+          "title": "# 🧪 검증 및 증적"
+        },
+        {
+          "line": 340,
+          "title": "# 🔗 Dependency"
+        },
+        {
+          "line": 349,
+          "title": "# ⚖️ Decision / Risk Control"
+        },
+        {
+          "line": 358,
+          "title": "# 📝 Completion Record"
+        }
+      ]
+    },
+    {
+      "id": "N14",
+      "repo": "fds-project-baseline",
+      "path": "baseline/FDS_Project_Implementation_Baseline_v3.1.21.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/baseline/FDS_Project_Implementation_Baseline_v3.1.21.md",
+      "git_blob": "69e66f3e2847bda49d9e5c4a96cfd20a0523ca2d",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "16ef604028c3c9b7826c0bd07d6d4b7774ead3e05df1c16befe11bfa30b67ed3",
+      "bytes": 132468,
+      "local_path": "references/N14--FDS_Project_Implementation_Baseline_v3.1.21.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# On-Premises / Hybrid FDS Implementation Baseline v3.1.21"
+        },
+        {
+          "line": 6,
+          "title": "## 1. 이번 버전의 권위와 변경"
+        },
+        {
+          "line": 18,
+          "title": "## 2. 일정과 실행 의존성"
+        },
+        {
+          "line": 24,
+          "title": "## 3. 테스트 전략"
+        },
+        {
+          "line": 30,
+          "title": "## 4. 비용·미확정 계약과 발행 경계"
+        },
+        {
+          "line": 36,
+          "title": "## 5. 현재 Record register"
+        },
+        {
+          "line": 119,
+          "title": "## 6. 상속 명세와 역사적 상태"
+        },
+        {
+          "line": 127,
+          "title": "# On-Premises / Hybrid FDS 프로젝트 Implementation Baseline v3.1.20"
+        },
+        {
+          "line": 140,
+          "title": "## 0. v3.1.20 통합 변경 (CANDIDATE)"
+        },
+        {
+          "line": 152,
+          "title": "## 0. v3.1.19 통합 변경"
+        },
+        {
+          "line": 158,
+          "title": "## 승인 입력과 적용 경계"
+        },
+        {
+          "line": 175,
+          "title": "## 승인·관측·보류 분류"
+        },
+        {
+          "line": 219,
+          "title": "## 0.1 Configuration-controlled Deliverables"
+        },
+        {
+          "line": 305,
+          "title": "# 1. 프로젝트 목표와 범위"
+        },
+        {
+          "line": 307,
+          "title": "## 1.1 Phase 1 목표"
+        },
+        {
+          "line": 326,
+          "title": "### Phase 1 P0 성공 조건"
+        },
+        {
+          "line": 338,
+          "title": "## 1.2 Phase 1 P1"
+        },
+        {
+          "line": 359,
+          "title": "## 1.3 Phase 1 Scope Out"
+        },
+        {
+          "line": 373,
+          "title": "## 1.4 Phase 2 목표"
+        },
+        {
+          "line": 379,
+          "title": "# 2. 일정 / 인력 Baseline"
+        },
+        {
+          "line": 399,
+          "title": "### Non-working / Absence"
+        },
+        {
+          "line": 409,
+          "title": "# 3. 3인 업무분장"
+        },
+        {
+          "line": 417,
+          "title": "## 3.1 Closed Ticket Register / Remaining Backlog Authority"
+        },
+        {
+          "line": 454,
+          "title": "## 3.2 Backlog Freeze Rules"
+        },
+        {
+          "line": 464,
+          "title": "## 3.3 DEC-P1-ENTRY-01 Dependency Correction"
+        },
+        {
+          "line": 471,
+          "title": "## 3.4 Ticket Lifecycle / Review Control"
+        },
+        {
+          "line": 483,
+          "title": "## 3.5 Decision Review / Distribution Control"
+        },
+        {
+          "line": 492,
+          "title": "## 3.6 P1-ANS-01 Closure / Handoff Control"
+        },
+        {
+          "line": 510,
+          "title": "## 3.7 DEC-P1-ENTRY-01 / DEC-P1-TLS-01 Approval Closure"
+        },
+        {
+          "line": 512,
+          "title": "### D18 Application Exposure"
+        },
+        {
+          "line": 520,
+          "title": "### D19 TLS Trust"
+        },
+        {
+          "line": 530,
+          "title": "## 3.8 DEC-P1-MON-01 / D33 Monitoring Change Control"
+        },
+        {
+          "line": 541,
+          "title": "# 4. Physical Resource / Placement"
+        },
+        {
+          "line": 543,
+          "title": "## 4.1 Physical Server"
+        },
+        {
+          "line": 552,
+          "title": "## 4.2 Physical Placement"
+        },
+        {
+          "line": 567,
+          "title": "# 5. OS / Platform Baseline"
+        },
+        {
+          "line": 589,
+          "title": "# 6. Network Baseline"
+        },
+        {
+          "line": 591,
+          "title": "## 6.1 Windows Host Fixed IP"
+        },
+        {
+          "line": 604,
+          "title": "## 6.2 Approved / Reserved / Unavailable IP"
+        },
+        {
+          "line": 622,
+          "title": "## 6.2.1 Physical LAN Parameters — Fixed"
+        },
+        {
+          "line": 638,
+          "title": "## 6.3 Service / Node Assignment"
+        },
+        {
+          "line": 660,
+          "title": "## 6.4 Network Design"
+        },
+        {
+          "line": 689,
+          "title": "## 6.5 Cluster / Cloud CIDR Reservation"
+        },
+        {
+          "line": 695,
+          "title": "## 6.6 Node Firewall / Management Endpoint Review"
+        },
+        {
+          "line": 712,
+          "title": "### 6.6.1 2026-09-10 실제 상태와 실행 경계"
+        },
+        {
+          "line": 716,
+          "title": "### 미결 사양과 실행 조건"
+        },
+        {
+          "line": 727,
+          "title": "# 7. Phase 1 MSA Application"
+        },
+        {
+          "line": 729,
+          "title": "## 7.1 transaction-api"
+        },
+        {
+          "line": 740,
+          "title": "## 7.2 fds-engine"
+        },
+        {
+          "line": 751,
+          "title": "## 7.3 Internal Contract"
+        },
+        {
+          "line": 773,
+          "title": "## 7.4 2026-09-09 현행 유지·기능 확대 유예 결정"
+        },
+        {
+          "line": 781,
+          "title": "# 8. Financial-style Kubernetes Security"
+        },
+        {
+          "line": 833,
+          "title": "# 9. DNS Design — P1 Supporting Service"
+        },
+        {
+          "line": 835,
+          "title": "## 9.1 Position"
+        },
+        {
+          "line": 846,
+          "title": "## 9.2 Design"
+        },
+        {
+          "line": 870,
+          "title": "## 9.3 Control"
+        },
+        {
+          "line": 885,
+          "title": "# 10. CI/CD / Supply Chain"
+        },
+        {
+          "line": 904,
+          "title": "# 11. Monitoring P0 — Kubernetes-Integrated Hybrid Model"
+        },
+        {
+          "line": 906,
+          "title": "## 11.1 Architecture Decision"
+        },
+        {
+          "line": 914,
+          "title": "## 11.2 In-cluster Component Baseline"
+        },
+        {
+          "line": 933,
+          "title": "## 11.3 Metrics / Dashboard Baseline"
+        },
+        {
+          "line": 947,
+          "title": "## 11.4 External Watchdog / Evidence Boundary"
+        },
+        {
+          "line": 956,
+          "title": "## 11.5 Network / Access Control"
+        },
+        {
+          "line": 965,
+          "title": "## 11.6 P1-MON-01 Acceptance / Evidence"
+        },
+        {
+          "line": 987,
+          "title": "## 11.7 Acceptance 집계와 현재 실증 범위"
+        },
+        {
+          "line": 995,
+          "title": "# 12. HA / DR"
+        },
+        {
+          "line": 997,
+          "title": "## P0"
+        },
+        {
+          "line": 1005,
+          "title": "## P1"
+        },
+        {
+          "line": 1015,
+          "title": "# 13. Phase 2 OCI / AWS / ROSA"
+        },
+        {
+          "line": 1051,
+          "title": "# 14. Gate Exit Criteria"
+        },
+        {
+          "line": 1053,
+          "title": "## MS-G0-01 / G0 Design Freeze — 08-26 — DONE / FULL PASS"
+        },
+        {
+          "line": 1073,
+          "title": "## G1 Infrastructure Ready — 09-07"
+        },
+        {
+          "line": 1096,
+          "title": "## G2 Security / Feature Ready — 09-11"
+        },
+        {
+          "line": 1109,
+          "title": "## G3 Review Ready — 09-18"
+        },
+        {
+          "line": 1122,
+          "title": "# 15. Decision Register"
+        },
+        {
+          "line": 1168,
+          "title": "### 후속 종결 Decision — 2026-09-09"
+        },
+        {
+          "line": 1176,
+          "title": "## 15.1 Interface Contract Register"
+        },
+        {
+          "line": 1218,
+          "title": "### 15.1.1 Alias / Supersession Register"
+        },
+        {
+          "line": 1229,
+          "title": "### 15.1.2 Interface Decision / Runtime Boundaries"
+        },
+        {
+          "line": 1238,
+          "title": "## 15.2 Interface Change Control"
+        },
+        {
+          "line": 1249,
+          "title": "# 16. Project Status Register — 2026-09-17 20:28 KST"
+        },
+        {
+          "line": 1327,
+          "title": "## 16.1 배포와 인수 경계"
+        },
+        {
+          "line": 1331,
+          "title": "## 16.2 이력과 근거"
+        }
+      ]
+    },
+    {
+      "id": "N15",
+      "repo": "fds-project-baseline",
+      "path": "releases/v3.1.21/FDS_Document_Distribution_Manifest_v3.1.21.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/releases/v3.1.21/FDS_Document_Distribution_Manifest_v3.1.21.md",
+      "git_blob": "460c1a79db6890b51d15495d1593e399c2baf2c0",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "3451de9b056fe5bd24cde19e6ddc6872846ed7a273b29f612668cc0be938f194",
+      "bytes": 16335,
+      "local_path": "references/N15--FDS_Document_Distribution_Manifest_v3.1.21.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# v3.1.21 Distribution Manifest"
+        }
+      ]
+    },
+    {
+      "id": "N16",
+      "repo": "fds-project-baseline",
+      "path": "tickets/v3.1.21/descriptions/D-ARC-01.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/tickets/v3.1.21/descriptions/D-ARC-01.md",
+      "git_blob": "2d12c50eadce7cfcf78e28e407b0ba40c3ef5f1f",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "501cafd1d1aa2a7c92c33be8d2d4a73b679ae0707c8d02569af80c481ec87a60",
+      "bytes": 31434,
+      "local_path": "references/N16--D-ARC-01.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# D-ARC-01 — Phase 1 Logical / Physical Architecture Design Freeze"
+        },
+        {
+          "line": 30,
+          "title": "## Source checklist"
+        },
+        {
+          "line": 55,
+          "title": "## Source body snapshot"
+        },
+        {
+          "line": 60,
+          "title": "## 사양·기록 전수 점검 후속 — 2026-09-14 점검 반영"
+        },
+        {
+          "line": 79,
+          "title": "# D-ARC-01 — Phase 1 Logical / Physical Architecture Design Freeze"
+        },
+        {
+          "line": 84,
+          "title": "## 사용자 날짜 정정 — 2026-09-11"
+        },
+        {
+          "line": 90,
+          "title": "## 티켓 속성"
+        },
+        {
+          "line": 113,
+          "title": "## 원본 속성 복원 — 2026-09-11 추가 유입"
+        },
+        {
+          "line": 122,
+          "title": "## 최신 운영 기록의 보존"
+        },
+        {
+          "line": 128,
+          "title": "## 정본에 반영된 실행·검토 상태 — 작성 시점 기록"
+        },
+        {
+          "line": 134,
+          "title": "## 적용 기준"
+        },
+        {
+          "line": 142,
+          "title": "# User Story"
+        },
+        {
+          "line": 150,
+          "title": "# Scope"
+        },
+        {
+          "line": 152,
+          "title": "## In Scope"
+        },
+        {
+          "line": 165,
+          "title": "## Out of Scope"
+        },
+        {
+          "line": 175,
+          "title": "# 핵심 요구사항"
+        },
+        {
+          "line": 192,
+          "title": "# Acceptance Criteria"
+        },
+        {
+          "line": 207,
+          "title": "# 검증 및 증적"
+        },
+        {
+          "line": 226,
+          "title": "# Dependency"
+        },
+        {
+          "line": 235,
+          "title": "# Decision / Risk Control"
+        },
+        {
+          "line": 245,
+          "title": "# Completion Record"
+        },
+        {
+          "line": 257,
+          "title": "## 담당자 속성 복원 근거 (2026-09-09)"
+        },
+        {
+          "line": 261,
+          "title": "## 갱신 전 원문 보관"
+        },
+        {
+          "line": 270,
+          "title": "# D-ARC-01 — Phase 1 Logical / Physical Architecture Design Freeze"
+        },
+        {
+          "line": 274,
+          "title": "## Notion 데이터 속성"
+        },
+        {
+          "line": 296,
+          "title": "## 이관 기준 및 확인 사항"
+        },
+        {
+          "line": 303,
+          "title": "## 원본 및 변경 출처"
+        },
+        {
+          "line": 309,
+          "title": "## Description — 보관 입력본"
+        },
+        {
+          "line": 313,
+          "title": "# 🎯 User Story"
+        },
+        {
+          "line": 321,
+          "title": "# 📌 Scope"
+        },
+        {
+          "line": 323,
+          "title": "## In Scope"
+        },
+        {
+          "line": 336,
+          "title": "## Out of Scope"
+        },
+        {
+          "line": 346,
+          "title": "# 📋 핵심 요구사항"
+        },
+        {
+          "line": 363,
+          "title": "# ✅ Acceptance Criteria"
+        },
+        {
+          "line": 378,
+          "title": "# 🧪 검증 및 증적"
+        },
+        {
+          "line": 397,
+          "title": "# 🔗 Dependency"
+        },
+        {
+          "line": 406,
+          "title": "# ⚖️ Decision / Risk Control"
+        },
+        {
+          "line": 416,
+          "title": "# 📝 Completion Record"
+        },
+        {
+          "line": 428,
+          "title": "## 담당자 속성 복원 근거 (2026-09-09)"
+        }
+      ]
+    },
+    {
+      "id": "N17",
+      "repo": "fds-project-baseline",
+      "path": "tickets/v3.1.21/descriptions/D-NET-01.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/tickets/v3.1.21/descriptions/D-NET-01.md",
+      "git_blob": "2367a93915d83d560d674371a71bacd4838f0674",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "2a3b8b0a662478f9e74897af5308f6015eeae15d3ba83e676c515a1d91d1df47",
+      "bytes": 24117,
+      "local_path": "references/N17--D-NET-01.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# D-NET-01 — Physical / Management Network Design Freeze"
+        },
+        {
+          "line": 30,
+          "title": "## Source checklist"
+        },
+        {
+          "line": 53,
+          "title": "## Source body snapshot"
+        },
+        {
+          "line": 58,
+          "title": "## 증적 경로 일괄 변경 — 2026-09-23"
+        },
+        {
+          "line": 71,
+          "title": "## 사양·기록 전수 점검 후속 — 2026-09-14 점검 반영"
+        },
+        {
+          "line": 90,
+          "title": "# D-NET-01 — Physical / Management Network Design Freeze"
+        },
+        {
+          "line": 95,
+          "title": "## 티켓 속성"
+        },
+        {
+          "line": 118,
+          "title": "## 최신 운영 기록의 보존"
+        },
+        {
+          "line": 124,
+          "title": "## 정본에 반영된 실행·검토 상태 — 작성 시점 기록"
+        },
+        {
+          "line": 130,
+          "title": "## 적용 기준"
+        },
+        {
+          "line": 138,
+          "title": "# User Story"
+        },
+        {
+          "line": 146,
+          "title": "# Scope"
+        },
+        {
+          "line": 148,
+          "title": "## In Scope"
+        },
+        {
+          "line": 158,
+          "title": "## Out of Scope"
+        },
+        {
+          "line": 167,
+          "title": "# 핵심 요구사항"
+        },
+        {
+          "line": 183,
+          "title": "# Acceptance Criteria"
+        },
+        {
+          "line": 197,
+          "title": "# 검증 및 증적"
+        },
+        {
+          "line": 215,
+          "title": "# Dependency"
+        },
+        {
+          "line": 224,
+          "title": "# Decision / Risk Control"
+        },
+        {
+          "line": 234,
+          "title": "# Completion Record"
+        },
+        {
+          "line": 245,
+          "title": "## 갱신 전 원문 보관"
+        },
+        {
+          "line": 254,
+          "title": "# D-NET-01 — Physical / Management Network Design Freeze"
+        },
+        {
+          "line": 258,
+          "title": "## Notion 데이터 속성"
+        },
+        {
+          "line": 280,
+          "title": "## 이관 기준 및 확인 사항"
+        },
+        {
+          "line": 288,
+          "title": "## 원본 및 변경 출처"
+        },
+        {
+          "line": 295,
+          "title": "## Description — 보관 입력본"
+        },
+        {
+          "line": 299,
+          "title": "# 🎯 User Story"
+        },
+        {
+          "line": 307,
+          "title": "# 📌 Scope"
+        },
+        {
+          "line": 309,
+          "title": "## In Scope"
+        },
+        {
+          "line": 319,
+          "title": "## Out of Scope"
+        },
+        {
+          "line": 328,
+          "title": "# 📋 핵심 요구사항"
+        },
+        {
+          "line": 344,
+          "title": "# ✅ Acceptance Criteria"
+        },
+        {
+          "line": 358,
+          "title": "# 🧪 검증 및 증적"
+        },
+        {
+          "line": 376,
+          "title": "# 🔗 Dependency"
+        },
+        {
+          "line": 385,
+          "title": "# ⚖️ Decision / Risk Control"
+        },
+        {
+          "line": 395,
+          "title": "# 📝 Completion Record"
+        }
+      ]
+    },
+    {
+      "id": "N18",
+      "repo": "fds-project-baseline",
+      "path": "tickets/v3.1.21/descriptions/D-SEC-01.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/tickets/v3.1.21/descriptions/D-SEC-01.md",
+      "git_blob": "803a632a38fad4ee8fd2bd12c6619f37d17306a3",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "20607ede32577e69863feba230d844316e15e4eed07bcc24e5475a7cb8fdf111",
+      "bytes": 23391,
+      "local_path": "references/N18--D-SEC-01.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# D-SEC-01 — Security Design Scope / Approval Review"
+        },
+        {
+          "line": 30,
+          "title": "## Source checklist"
+        },
+        {
+          "line": 42,
+          "title": "## Source body snapshot"
+        },
+        {
+          "line": 47,
+          "title": "## 증적 경로 일괄 변경 — 2026-09-23"
+        },
+        {
+          "line": 60,
+          "title": "## 사양·기록 전수 점검 후속 — 2026-09-14 점검 반영"
+        },
+        {
+          "line": 77,
+          "title": "# D-SEC-01 — Security Design Scope / Approval Review"
+        },
+        {
+          "line": 82,
+          "title": "## 티켓 속성"
+        },
+        {
+          "line": 105,
+          "title": "## 최신 운영 기록의 보존"
+        },
+        {
+          "line": 112,
+          "title": "## 정본에 반영된 실행·검토 상태 — 작성 시점 기록"
+        },
+        {
+          "line": 118,
+          "title": "## 적용 기준"
+        },
+        {
+          "line": 126,
+          "title": "# User Story"
+        },
+        {
+          "line": 132,
+          "title": "# Scope"
+        },
+        {
+          "line": 134,
+          "title": "## In Scope"
+        },
+        {
+          "line": 141,
+          "title": "## Out of Scope"
+        },
+        {
+          "line": 147,
+          "title": "# 핵심 요구사항"
+        },
+        {
+          "line": 156,
+          "title": "# Acceptance Criteria"
+        },
+        {
+          "line": 166,
+          "title": "# 검증 및 증적"
+        },
+        {
+          "line": 176,
+          "title": "# Dependency"
+        },
+        {
+          "line": 185,
+          "title": "# Decision / Risk Control"
+        },
+        {
+          "line": 194,
+          "title": "# Review / Handoff"
+        },
+        {
+          "line": 202,
+          "title": "# Completion Record"
+        },
+        {
+          "line": 210,
+          "title": "## 체크사항 보완 근거 (2026-09-09)"
+        },
+        {
+          "line": 221,
+          "title": "## 갱신 전 원문 보관"
+        },
+        {
+          "line": 230,
+          "title": "# D-SEC-01 — Security Design Scope / Approval Review"
+        },
+        {
+          "line": 234,
+          "title": "## Notion 데이터 속성"
+        },
+        {
+          "line": 256,
+          "title": "## 이관 기준 및 확인 사항"
+        },
+        {
+          "line": 264,
+          "title": "## 원본 및 변경 출처"
+        },
+        {
+          "line": 270,
+          "title": "## 최종 승인 기록"
+        },
+        {
+          "line": 272,
+          "title": "# D34 / D-SEC-01 Approval and Review Disposition Record v1.0"
+        },
+        {
+          "line": 286,
+          "title": "## 1. 승인 범위"
+        },
+        {
+          "line": 290,
+          "title": "## 2. 권장안 조치 결과"
+        },
+        {
+          "line": 307,
+          "title": "### 정본 교차검증 추가 교정"
+        },
+        {
+          "line": 314,
+          "title": "## 3. 상태 전이"
+        },
+        {
+          "line": 325,
+          "title": "## 4. 승인과 Runtime 검증의 경계"
+        },
+        {
+          "line": 332,
+          "title": "## 5. 형상관리"
+        },
+        {
+          "line": 341,
+          "title": "## Description — 승인 기록 반영 (2026-09-09)"
+        },
+        {
+          "line": 345,
+          "title": "# 🎯 User Story"
+        },
+        {
+          "line": 351,
+          "title": "# 📌 Scope"
+        },
+        {
+          "line": 353,
+          "title": "## In Scope"
+        },
+        {
+          "line": 360,
+          "title": "## Out of Scope"
+        },
+        {
+          "line": 366,
+          "title": "# 📋 핵심 요구사항"
+        },
+        {
+          "line": 375,
+          "title": "# ✅ Acceptance Criteria"
+        },
+        {
+          "line": 385,
+          "title": "# 🧪 검증 및 증적"
+        },
+        {
+          "line": 395,
+          "title": "# 🔗 Dependency"
+        },
+        {
+          "line": 404,
+          "title": "# ⚖️ Decision / Risk Control"
+        },
+        {
+          "line": 413,
+          "title": "# 🔍 Review / Handoff"
+        },
+        {
+          "line": 421,
+          "title": "# 📝 Completion Record"
+        },
+        {
+          "line": 429,
+          "title": "## 체크사항 보완 근거 (2026-09-09)"
+        }
+      ]
+    },
+    {
+      "id": "N19",
+      "repo": "fds-project-architecture",
+      "path": "logical_architecture.html",
+      "commit": "dd90efc09d5ab16e170499374736df97c7ea5559",
+      "url": "https://github.com/321Team/fds-project-architecture/blob/dd90efc09d5ab16e170499374736df97c7ea5559/logical_architecture.html",
+      "git_blob": "d048db9d50c3da642aef79fd2f5b79ff1661b625",
+      "content_kind": "HTML_VISIBLE_TEXT_EXTRACT",
+      "blob_verified": false,
+      "sha256": "bbdf32bd3282329bf8907b872de4791fc4277c267021227f09966ec1be9cac45",
+      "bytes": 5983,
+      "local_path": "references/N19--logical_architecture.html.txt",
+      "headings": []
+    },
+    {
+      "id": "N20",
+      "repo": "fds-project-architecture",
+      "path": "physical_architecture.html",
+      "commit": "dd90efc09d5ab16e170499374736df97c7ea5559",
+      "url": "https://github.com/321Team/fds-project-architecture/blob/dd90efc09d5ab16e170499374736df97c7ea5559/physical_architecture.html",
+      "git_blob": "d8794447feb3a2082015b12ffa7e1b991d473fe0",
+      "content_kind": "HTML_VISIBLE_TEXT_EXTRACT",
+      "blob_verified": false,
+      "sha256": "3cfe806dc4a23e77437412c1b0d636750cd9fe426d69bbfa109868b4fb5539cd",
+      "bytes": 111,
+      "local_path": "references/N20--physical_architecture.html.txt",
+      "headings": []
+    },
+    {
+      "id": "N21",
+      "repo": "infra-db",
+      "path": "docs/P1-DR-01_BACKUP_RESTORE_RUNBOOK.md",
+      "commit": "57f050eff31bdbfb05d6e75327d296047f89b1f0",
+      "url": "https://github.com/321Team/infra-db/blob/57f050eff31bdbfb05d6e75327d296047f89b1f0/docs/P1-DR-01_BACKUP_RESTORE_RUNBOOK.md",
+      "git_blob": "69447cd93e51ab6d6d6f285b2d533fd80c8d1cb9",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "cd694a6fffcbd7896381c8a530bb899c49c4e50dd64900dff3392b05cea23aa8",
+      "bytes": 12085,
+      "local_path": "references/N21--P1-DR-01_BACKUP_RESTORE_RUNBOOK.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# P1-DR-01 PostgreSQL Backup / Restore Runbook — 검토안"
+        },
+        {
+          "line": 7,
+          "title": "## 1. 현재 확보된 근거와 재사용 한계"
+        },
+        {
+          "line": 14,
+          "title": "## 2. 실행 전에 고정할 입력"
+        },
+        {
+          "line": 28,
+          "title": "## 3. 사전 수집 — 읽기 전용"
+        },
+        {
+          "line": 46,
+          "title": "## 4. 백업과 원본 봉인"
+        },
+        {
+          "line": 56,
+          "title": "## 5. 격리 복원과 대조"
+        },
+        {
+          "line": 67,
+          "title": "## 6. 복구본을 사용하는 E2E — 별도 변경 단계"
+        },
+        {
+          "line": 82,
+          "title": "## 7. 정리와 보관 인계"
+        },
+        {
+          "line": 97,
+          "title": "## 8. 제출 증적과 완료 판정"
+        }
+      ]
+    },
+    {
+      "id": "N22",
+      "repo": "infra-db",
+      "path": "ops/db01-firewall-5432/README.md",
+      "commit": "57f050eff31bdbfb05d6e75327d296047f89b1f0",
+      "url": "https://github.com/321Team/infra-db/blob/57f050eff31bdbfb05d6e75327d296047f89b1f0/ops/db01-firewall-5432/README.md",
+      "git_blob": "e042d168c57e0015c1b39defa71a3d5826edb80f",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "29e0a3d4981ad1a587867940c045dd64ff8223c70f8b41d77140d873d57b192c",
+      "bytes": 5099,
+      "local_path": "references/N22--README.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# db01 5432/tcp 승인 출발지 제한 — 변경안"
+        },
+        {
+          "line": 5,
+          "title": "## 현재 상태 (2026-09-25 수집 원본: [evidence#37](https://github.com/321Team/fds-project-evidence/pull/37) `db01/`)"
+        },
+        {
+          "line": 12,
+          "title": "## 변경 (Lead 판단: 승인 출발지로 제한)"
+        },
+        {
+          "line": 26,
+          "title": "## 적용 전 조건"
+        },
+        {
+          "line": 34,
+          "title": "## 절차 (db01, 기존 콘솔 계정)"
+        },
+        {
+          "line": 42,
+          "title": "## 적용 후 확인 (성공 기준)"
+        },
+        {
+          "line": 53,
+          "title": "## 중단·복구"
+        },
+        {
+          "line": 58,
+          "title": "## 후속 (이 PR 범위 밖, DB Lead 추적)"
+        },
+        {
+          "line": 62,
+          "title": "## 알려진 영향"
+        }
+      ]
+    },
+    {
+      "id": "N23",
+      "repo": "fds-project-evidence",
+      "path": "README.md",
+      "commit": "f0279ed4af8071917bae7d0de10ff553d4394d6e",
+      "url": "https://github.com/321Team/fds-project-evidence/blob/f0279ed4af8071917bae7d0de10ff553d4394d6e/README.md",
+      "git_blob": "f665e6f16954ff7d54cefc27ce59c232c4c9ec9f",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "f39e54c0080e956d4a09c06f5e752a04778a3f63ec87432368a31a944754ead4",
+      "bytes": 7220,
+      "local_path": "references/N23--README.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# FDS Project Evidence"
+        },
+        {
+          "line": 18,
+          "title": "## 읽는 순서"
+        },
+        {
+          "line": 26,
+          "title": "## 관리 경계"
+        },
+        {
+          "line": 32,
+          "title": "## 2026-09-09 병합 후 정정"
+        },
+        {
+          "line": 36,
+          "title": "## 2026-09-09 후속 착수 — 당시 이력"
+        },
+        {
+          "line": 45,
+          "title": "## 2026-09-07 Ansible 병합 후속"
+        },
+        {
+          "line": 56,
+          "title": "## Stage A 승인 범위 정정"
+        },
+        {
+          "line": 60,
+          "title": "## 2026-09-08 PR #4 재검토 자료"
+        },
+        {
+          "line": 64,
+          "title": "## 2026-09-08 FUP-01/02 우선 보완"
+        },
+        {
+          "line": 70,
+          "title": "## 2026-09-08 FUP-01 Rollback 원본 수신"
+        },
+        {
+          "line": 75,
+          "title": "## 2026-09-09 FUP-01 원본 보완 완료"
+        }
+      ]
+    },
+    {
+      "id": "N24",
+      "repo": "fds-project-evidence",
+      "path": "registry/SOURCE_AUTHORITY.md",
+      "commit": "f0279ed4af8071917bae7d0de10ff553d4394d6e",
+      "url": "https://github.com/321Team/fds-project-evidence/blob/f0279ed4af8071917bae7d0de10ff553d4394d6e/registry/SOURCE_AUTHORITY.md",
+      "git_blob": "67d188dc656067ee021e0a168985d645d1b687a0",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "d689ca96569c06fdf55c7cec7be42668ed2192f02e5ef0766caf1e1dd919ba6c",
+      "bytes": 1679,
+      "local_path": "references/N24--SOURCE_AUTHORITY.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# 상태·출처 대조 기록"
+        }
+      ]
+    },
+    {
+      "id": "N25",
+      "repo": "fds-project-evidence",
+      "path": "registry/COMPLETED_TICKETS.json",
+      "commit": "f0279ed4af8071917bae7d0de10ff553d4394d6e",
+      "url": "https://github.com/321Team/fds-project-evidence/blob/f0279ed4af8071917bae7d0de10ff553d4394d6e/registry/COMPLETED_TICKETS.json",
+      "git_blob": "0d082a25e20f07c3820e9a5f6e437647eae237d5",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "e6509129efbb019269c82dc468b24f743f49034ba5e52f118275ec656023fb11",
+      "bytes": 30183,
+      "local_path": "references/N25--COMPLETED_TICKETS.json",
+      "headings": []
+    },
+    {
+      "id": "N26",
+      "repo": "fds-project-evidence",
+      "path": "registry/RECEIVED_RECORDS.json",
+      "commit": "f0279ed4af8071917bae7d0de10ff553d4394d6e",
+      "url": "https://github.com/321Team/fds-project-evidence/blob/f0279ed4af8071917bae7d0de10ff553d4394d6e/registry/RECEIVED_RECORDS.json",
+      "git_blob": "98502fe9e242a32100eaac0dea070d0835e9d8e2",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "40e18139217134b067cce408bdef49358ed7d9957d288d754b564456ccdafc5c",
+      "bytes": 4823,
+      "local_path": "references/N26--RECEIVED_RECORDS.json",
+      "headings": []
+    },
+    {
+      "id": "N27",
+      "repo": "infra-kubernetes",
+      "path": "ops/p1-k8s-01-v4/RUNBOOK_FINAL.md",
+      "commit": "e60e022333a51a9a1690649ef170c0bda92ad9b9",
+      "url": "https://github.com/321Team/infra-kubernetes/blob/e60e022333a51a9a1690649ef170c0bda92ad9b9/ops/p1-k8s-01-v4/RUNBOOK_FINAL.md",
+      "git_blob": "b2a02c5caadd1808f3e4a864ddc3ecd0077d3840",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "b5388dc52071952608e6bcd642cda4d5a3d6d4c7d6ee8e820e8d4330b32c25c3",
+      "bytes": 32483,
+      "local_path": "references/N27--RUNBOOK_FINAL.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# P1-K8S-01 Gate 2 리드 전달 최종안 v4.0"
+        },
+        {
+          "line": 9,
+          "title": "## 1. 확정 설계와 적용 전 입력"
+        },
+        {
+          "line": 33,
+          "title": "### 1.1 입력값을 확정하는 방법"
+        },
+        {
+          "line": 57,
+          "title": "### 1.2 보호 범위와 failsafe 원칙"
+        },
+        {
+          "line": 67,
+          "title": "## 2. 실행 위치와 실패 분기"
+        },
+        {
+          "line": 82,
+          "title": "## 3. 전환 시작 조건"
+        },
+        {
+          "line": 92,
+          "title": "## 4. 노드별 기록 시작 및 Cockpit·firewalld 준비"
+        },
+        {
+          "line": 97,
+          "title": "# 각 대상 노드. Gate 1은 설치 전, Gate 2는 init/join/Calico 작업 전에 시작한다."
+        },
+        {
+          "line": 101,
+          "title": "# Gate 0 실제 차단 완료 증적이 있으면 check 결과와 연결한다."
+        },
+        {
+          "line": 103,
+          "title": "# 미차단으로 확인되고 해당 차단 조치를 수행할 단계인 경우에만:"
+        },
+        {
+          "line": 114,
+          "title": "## 5. Calico 설치와 6대 join의 직접 의존 수정"
+        },
+        {
+          "line": 121,
+          "title": "# 작성 호스트: 공식 v3.32.1 파일을 가져와 해시 확인 후 로컬 준비."
+        },
+        {
+          "line": 126,
+          "title": "# 이 검토에서 확인한 bytes: dce66b28fc93cd59fbc8edf98d54d5f62d91362c1a46c85cbc97ea59e78f15b8"
+        },
+        {
+          "line": 127,
+          "title": "# config/calico-image-lock.json에는 세 종류의 실제 승인 digest를 먼저 입력."
+        },
+        {
+          "line": 139,
+          "title": "# 승인 CP. 실제 kubeconfig/context 사용, 내용 출력 금지."
+        },
+        {
+          "line": 148,
+          "title": "## 6. 실측 입력, 테스트 리소스, API 검증과 GNP 선행"
+        },
+        {
+          "line": 153,
+          "title": "# 승인 CP"
+        },
+        {
+          "line": 165,
+          "title": "# 작성 호스트. 입력·근거 파일을 완성한 뒤 새 디렉터리로 생성."
+        },
+        {
+          "line": 178,
+          "title": "# 정책 전체의 서버 검증. create-hep는 이 시점에 실제 실행하지 않는다."
+        },
+        {
+          "line": 186,
+          "title": "# 승인 digest를 해당 Worker의 containerd k8s.io namespace에 사전반입하고 검증한 뒤:"
+        },
+        {
+          "line": 195,
+          "title": "## 7. 현재 노드 한 대의 보호 전환"
+        },
+        {
+          "line": 222,
+          "title": "# 필수 예상값: UnitFileState=disabled, ActiveState=inactive"
+        },
+        {
+          "line": 229,
+          "title": "## 8. 현재 노드 재부팅 지속성 검증"
+        },
+        {
+          "line": 241,
+          "title": "# 대상 노드"
+        },
+        {
+          "line": 248,
+          "title": "# 승인 CP. 이 파일명은 노드/시도/단계를 구분해 지정한다."
+        },
+        {
+          "line": 257,
+          "title": "## 9. 최종 판정과 후속 인수"
+        },
+        {
+          "line": 265,
+          "title": "## 10. 실패 시 복구 — 모든 실패 분기의 목적지"
+        },
+        {
+          "line": 269,
+          "title": "### 10.1 대상 노드에서 이전 firewalld 보호 복원"
+        },
+        {
+          "line": 283,
+          "title": "# root 콘솔, 검토된 config Drift에만 사용. 기존 디렉터리는 보존한다."
+        },
+        {
+          "line": 289,
+          "title": "# 이후 restore-firewall을 다시 실행하고 실제 보호 시험 수행."
+        },
+        {
+          "line": 294,
+          "title": "### 10.2 정상 CP의 API 복구 경로"
+        },
+        {
+          "line": 299,
+          "title": "# 정상 CP의 root 콘솔. SAN은 해당 CP 인증서에 실제 포함된 IP 또는 DNS 이름."
+        },
+        {
+          "line": 308,
+          "title": "### 10.3 대상 HEP·failsafe 복원"
+        },
+        {
+          "line": 313,
+          "title": "# 정상 CP의 검증된 loopback 관리 경로에서 수행."
+        },
+        {
+          "line": 325,
+          "title": "### 10.4 복구 판정"
+        }
+      ]
+    },
+    {
+      "id": "N28",
+      "repo": "infra-kubernetes",
+      "path": "ops/p1-sec01-secretbox-rollback/ac05-rollback-runbook-v4.md",
+      "commit": "e60e022333a51a9a1690649ef170c0bda92ad9b9",
+      "url": "https://github.com/321Team/infra-kubernetes/blob/e60e022333a51a9a1690649ef170c0bda92ad9b9/ops/p1-sec01-secretbox-rollback/ac05-rollback-runbook-v4.md",
+      "git_blob": "49a2e413ccc32eacaf6283e4715c504dfceb8399",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "78eec52df17694acf22229018ad88ce2a87420dcdb03ee7532b162c6f5e2f963",
+      "bytes": 29230,
+      "local_path": "references/N28--ac05-rollback-runbook-v4.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# P1-SEC-01 AC-05 Secretbox rollback 시험 절차서 (v4.4, rev v4.4-20261006, 승인 전)"
+        },
+        {
+          "line": 8,
+          "title": "## 0. v4 변경 이력 (재리뷰 반영)"
+        },
+        {
+          "line": 22,
+          "title": "## 1. 무엇을 증명하는가"
+        },
+        {
+          "line": 41,
+          "title": "## 2. 일정·역할 (제안, 확정 필요)"
+        },
+        {
+          "line": 53,
+          "title": "## 3. 사전 확인 (시작 전, 모두 충족해야 GO)"
+        },
+        {
+          "line": 93,
+          "title": "## 4. 절차 (대상 CP 콘솔에서, `rollback-test`가 자동 수행)"
+        },
+        {
+          "line": 105,
+          "title": "## 5. 중단 기준 (즉시 중단하고 7절로)"
+        },
+        {
+          "line": 115,
+          "title": "## 6. 증적 (수집·편입)"
+        },
+        {
+          "line": 120,
+          "title": "## 7. 수동 복구 (자동 복원이 실패했을 때)"
+        },
+        {
+          "line": 132,
+          "title": "## 8. 리뷰어가 볼 곳 (스크립트 `sec01-secretbox-rollback-v4.sh`)"
+        },
+        {
+          "line": 144,
+          "title": "## 9. 알려진 한계"
+        },
+        {
+          "line": 153,
+          "title": "## 10. 소스 PR과 승인 요건 (추적성 1)"
+        },
+        {
+          "line": 159,
+          "title": "## 11. v4.2-20261005 변경 기록 (지정 구현)"
+        },
+        {
+          "line": 167,
+          "title": "## 12. v4.3-20261005 — B59-3 실제 Secret 평문 잔여 탐지와 수동 조치"
+        },
+        {
+          "line": 176,
+          "title": "### 수동 점검·재암호화 (대상 CP 콘솔, 기존 승인 관리자 권한)"
+        },
+        {
+          "line": 183,
+          "title": "# 대상 CP root, 복원된 직접 endpoint; 실행 전 실제 값 지정"
+        },
+        {
+          "line": 191,
+          "title": "# 두 rc가 모두 0이어야 다음 확인으로 진행. 실패하면 STOP·보고."
+        },
+        {
+          "line": 205,
+          "title": "## 13. v4.4-20261006 — post 점검 apiserver Pod Ready 제한 시간 반복 확인"
+        }
+      ]
+    },
+    {
+      "id": "N29",
+      "repo": "infra-kubernetes",
+      "path": "ops/p1-http-probe/README.md",
+      "commit": "e60e022333a51a9a1690649ef170c0bda92ad9b9",
+      "url": "https://github.com/321Team/infra-kubernetes/blob/e60e022333a51a9a1690649ef170c0bda92ad9b9/ops/p1-http-probe/README.md",
+      "git_blob": "a3e2d1e0c2c0069e44f7eedff7e1e89f627d7660",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "fbdb7412f62822afd3bd4f91870dbed0e525316e584a608aa871117830d35756",
+      "bytes": 13089,
+      "local_path": "references/N29--README.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# Phase 1 실제 engine HTTP Probe → 최종 APP 회귀 실행 준비"
+        },
+        {
+          "line": 15,
+          "title": "## 현재 확인과 실행 경계"
+        },
+        {
+          "line": 44,
+          "title": "## 07:45 시작으로 조정 — 사용자 지정 시작, 진입 조건 확인 대기"
+        },
+        {
+          "line": 58,
+          "title": "## Probe 적용 위치·순서"
+        },
+        {
+          "line": 89,
+          "title": "## 중단·복구·결과"
+        },
+        {
+          "line": 111,
+          "title": "## APP 회귀 준비·DB 콘솔 인계"
+        },
+        {
+          "line": 139,
+          "title": "### db01 명령 예시 (창/경로 확정 후)"
+        },
+        {
+          "line": 142,
+          "title": "# db01 / server08 console; script와 로그는 기존 비공개 작업 경로에 보존."
+        },
+        {
+          "line": 147,
+          "title": "# 사후: RUN은 edge meta.json에서 수신한 실제 값으로 지정."
+        },
+        {
+          "line": 158,
+          "title": "## 검증과 인수 경계"
+        }
+      ]
+    },
+    {
+      "id": "N30",
+      "repo": "infra-kubernetes",
+      "path": "ops/p1-ha-01-availability/README.md",
+      "commit": "e60e022333a51a9a1690649ef170c0bda92ad9b9",
+      "url": "https://github.com/321Team/infra-kubernetes/blob/e60e022333a51a9a1690649ef170c0bda92ad9b9/ops/p1-ha-01-availability/README.md",
+      "git_blob": "8929dc60d32c7a5be8528839e1e5de45a2f77156",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "64c333032e09c3f99ee7af422c96824c914d78898bab0c2424121a0baf2717e2",
+      "bytes": 4806,
+      "local_path": "references/N30--README.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# P1-HA-01 Drain 가용성 측정 도구"
+        },
+        {
+          "line": 7,
+          "title": "## 파일"
+        },
+        {
+          "line": 16,
+          "title": "## fail-close"
+        },
+        {
+          "line": 32,
+          "title": "## 운영 영향 (`probe.py`)"
+        },
+        {
+          "line": 39,
+          "title": "## 사용"
+        },
+        {
+          "line": 42,
+          "title": "# edge01 — 기준선 60초 + drain + 재배치 + 60초 + uncordon + 60초를 덮도록 실행 초를 잡는다"
+        },
+        {
+          "line": 44,
+          "title": "# 판정 — timeline.txt: baseline_start / drain_start / rescheduled_ready / uncordon / end (epoch 초) 줄"
+        },
+        {
+          "line": 48,
+          "title": "## 자체시험"
+        }
+      ]
+    },
+    {
+      "id": "N31",
+      "repo": "infra-lb",
+      "path": "docs/OPERATIONS_BASELINE.md",
+      "commit": "070c8883fb692e5b82d2ab48b0a71837abc43da1",
+      "url": "https://github.com/321Team/infra-lb/blob/070c8883fb692e5b82d2ab48b0a71837abc43da1/docs/OPERATIONS_BASELINE.md",
+      "git_blob": "a91c2760c6bd9cb6741b44cf8581d7d037100444",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "bad04a010e6b8ce4840dc3856e842d4eadbc4315b875be2447e195ec27b98282",
+      "bytes": 7380,
+      "local_path": "references/N31--OPERATIONS_BASELINE.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# LB 운영 기준과 확인 출처"
+        },
+        {
+          "line": 5,
+          "title": "## HAProxy와 호스트"
+        },
+        {
+          "line": 20,
+          "title": "## 6443 Source 계약"
+        },
+        {
+          "line": 34,
+          "title": "## LB → GitHub 접근 (infra-lb pull 전용)"
+        },
+        {
+          "line": 62,
+          "title": "## 현재 후속과 복구 참고"
+        }
+      ]
+    },
+    {
+      "id": "N32",
+      "repo": "infra-lb",
+      "path": "docs/runbooks/FAILOVER.md",
+      "commit": "070c8883fb692e5b82d2ab48b0a71837abc43da1",
+      "url": "https://github.com/321Team/infra-lb/blob/070c8883fb692e5b82d2ab48b0a71837abc43da1/docs/runbooks/FAILOVER.md",
+      "git_blob": "24d4d425fb9eeedd7c550a749e454aff892da9c1",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "d6b6280588b9ea26098a069bdee54164b7f480a03797bef5e479525c1281e1cd",
+      "bytes": 6247,
+      "local_path": "references/N32--FAILOVER.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# 단일 backend 장애·복구 시험 준비"
+        },
+        {
+          "line": 7,
+          "title": "## 확정할 입력"
+        },
+        {
+          "line": 13,
+          "title": "## 제안 시험 범위"
+        },
+        {
+          "line": 21,
+          "title": "## 단계와 판정"
+        },
+        {
+          "line": 35,
+          "title": "## 즉시 중단·복구 조건"
+        },
+        {
+          "line": 44,
+          "title": "## 제출과 승인"
+        }
+      ]
+    },
+    {
+      "id": "N33",
+      "repo": "infra-harbor-trivy",
+      "path": "docs/runbooks/p1-hbr-01-worker-verify.md",
+      "commit": "35f3c24314e2cac0e9377c5d3484967c92f6c79c",
+      "url": "https://github.com/321Team/infra-harbor-trivy/blob/35f3c24314e2cac0e9377c5d3484967c92f6c79c/docs/runbooks/p1-hbr-01-worker-verify.md",
+      "git_blob": "e68e2b49bc33f09b3847923bc23ce168c9751782",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "1b3c9c8e8102d9ffa015d2c94cbbde059403d40737d4cedb1c489bfd2a4c1f31",
+      "bytes": 7401,
+      "local_path": "references/N33--p1-hbr-01-worker-verify.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# P1-HBR-01 Worker 검증 스크립트 Runbook"
+        },
+        {
+          "line": 5,
+          "title": "## 1. 승인된 외부 입력과 사전 준비"
+        },
+        {
+          "line": 28,
+          "title": "## 2. 실행과 판정 범위"
+        },
+        {
+          "line": 33,
+          "title": "# Secret 값을 여기에 입력하거나 명령줄 앞에 붙이지 않습니다."
+        },
+        {
+          "line": 34,
+          "title": "# 해당 Worker에서 실행하며 worker02, worker03도 각각 반복합니다."
+        },
+        {
+          "line": 46,
+          "title": "## 3. UID 조건부 정리"
+        },
+        {
+          "line": 54,
+          "title": "## 4. 종료 코드와 승인 증적"
+        },
+        {
+          "line": 67,
+          "title": "## 5. 관련 근거"
+        }
+      ]
+    },
+    {
+      "id": "N34",
+      "repo": "infra-harbor-trivy",
+      "path": "docs/runbooks/harbor-current-boot-recovery.md",
+      "commit": "35f3c24314e2cac0e9377c5d3484967c92f6c79c",
+      "url": "https://github.com/321Team/infra-harbor-trivy/blob/35f3c24314e2cac0e9377c5d3484967c92f6c79c/docs/runbooks/harbor-current-boot-recovery.md",
+      "git_blob": "c00778146c04834c6f15ef323e4b1359a416f048",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "e14fada699e37ad68bbdb312a015621f5d4ee0543cdc983aff83005bfa054343",
+      "bytes": 8302,
+      "local_path": "references/N34--harbor-current-boot-recovery.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# 고정된 10/11 부팅의 수동 앱 복구"
+        },
+        {
+          "line": 5,
+          "title": "## 확인한 현황과 새 회차의 근거"
+        },
+        {
+          "line": 28,
+          "title": "## 고정 입력과 의존 소스"
+        },
+        {
+          "line": 47,
+          "title": "## 실행 전 준비 및 위치"
+        },
+        {
+          "line": 74,
+          "title": "## 실행·정상 판정·중단"
+        },
+        {
+          "line": 115,
+          "title": "## 검증 경계"
+        }
+      ]
+    },
+    {
+      "id": "N35",
+      "repo": "infra-ansible",
+      "path": "docs/runbooks/Issue9-Operating-Transition-Readiness.md",
+      "commit": "fd5c56624256700e8c2e76f17ebd976b6b553b11",
+      "url": "https://github.com/321Team/infra-ansible/blob/fd5c56624256700e8c2e76f17ebd976b6b553b11/docs/runbooks/Issue9-Operating-Transition-Readiness.md",
+      "git_blob": "91baab4e95d8bba52ea4783b7c14a4cd82ec6a4c",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "e3db866f948f6c5d1da1d8a1f52375d1f87deef75512285fd1629b2596c7075e",
+      "bytes": 9936,
+      "local_path": "references/N35--Issue9-Operating-Transition-Readiness.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# Issue9 운영 호출 경로 전환·복귀 준비 — 2026-10-15"
+        },
+        {
+          "line": 7,
+          "title": "## 1. 완료된 작업과 남은 작업"
+        },
+        {
+          "line": 15,
+          "title": "## 2. 00:38~00:39 KST의 실제 읽기 결과"
+        },
+        {
+          "line": 44,
+          "title": "## 3. source 차이와 전환 범위"
+        },
+        {
+          "line": 51,
+          "title": "## 4. 호출 경로별 인수표"
+        },
+        {
+          "line": 62,
+          "title": "## 5. 다음 실행 카드에 고정할 항목"
+        },
+        {
+          "line": 71,
+          "title": "### 중단·복귀"
+        },
+        {
+          "line": 79,
+          "title": "## 단계와 판정"
+        }
+      ]
+    },
+    {
+      "id": "N36",
+      "repo": "fds-msa",
+      "path": "docs/transaction-api_fds-engine_contract_v1.0.md",
+      "commit": "c9c42cc1cc0c135320b81480984941f2a118f592",
+      "url": "https://github.com/321Team/fds-msa/blob/c9c42cc1cc0c135320b81480984941f2a118f592/docs/transaction-api_fds-engine_contract_v1.0.md",
+      "git_blob": "8e6ef012b337662ed681ac302ba2a23485ee236d",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "63814acd1a8f4ad270e16ed62a16500555b2666b8ba7f5d7caed3be2a7f36c27",
+      "bytes": 5448,
+      "local_path": "references/N36--transaction-api_fds-engine_contract_v1.0.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# transaction-api ↔ fds-engine Internal Contract v1.0"
+        },
+        {
+          "line": 10,
+          "title": "## 0. 설계 전제"
+        },
+        {
+          "line": 18,
+          "title": "## 1. Endpoint"
+        },
+        {
+          "line": 30,
+          "title": "## 2. Request: transaction-api → fds-engine"
+        },
+        {
+          "line": 68,
+          "title": "## 3. Response: fds-engine → transaction-api"
+        },
+        {
+          "line": 96,
+          "title": "## 4. Rule별 판정 기준 (초안 — 실제 threshold는 구현 시 확정)"
+        },
+        {
+          "line": 107,
+          "title": "## 5. 장애/타임아웃 처리 — **결정 필요 (OPEN ISSUE)**"
+        },
+        {
+          "line": 118,
+          "title": "## 6. Health Check (참고 — Probe 작업과 연계)"
+        },
+        {
+          "line": 126,
+          "title": "## 7. Open Issues"
+        }
+      ]
+    },
+    {
+      "id": "N37",
+      "repo": "fds-msa",
+      "path": "docs/p1-final-regression-readiness-20261010.md",
+      "commit": "c9c42cc1cc0c135320b81480984941f2a118f592",
+      "url": "https://github.com/321Team/fds-msa/blob/c9c42cc1cc0c135320b81480984941f2a118f592/docs/p1-final-regression-readiness-20261010.md",
+      "git_blob": "bbf0c82951ad6419ea4582f29b30e69e47e9c562",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "f3148ee7ae6ad17d7e122449e39fa3c5185f9877c9f0085c15ff2436f2ddf929",
+      "bytes": 11216,
+      "local_path": "references/N37--p1-final-regression-readiness-20261010.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# Phase 1 Final Regression 실행 준비 대조 — 2026-10-10"
+        },
+        {
+          "line": 5,
+          "title": "## 적용 기준과 코드 범위"
+        },
+        {
+          "line": 13,
+          "title": "## 오프라인 확인과 한계"
+        },
+        {
+          "line": 31,
+          "title": "## 실행 단계별 준비와 미확인 입력"
+        },
+        {
+          "line": 45,
+          "title": "## 실제 회차의 순서·판정·실패 처리"
+        }
+      ]
+    },
+    {
+      "id": "N38",
+      "repo": "fds-project-baseline",
+      "path": "governance/handoffs/phase1-parallel-acceptance-20261015/DOC_O01.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/governance/handoffs/phase1-parallel-acceptance-20261015/DOC_O01.md",
+      "git_blob": "5d22d97114f7462bad41311de77473ccdae2c62f",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "deb964d8a59512db78d4511900882190083ca67de5f316d6832edd37158a2eaf",
+      "bytes": 11708,
+      "local_path": "references/N38--DOC_O01.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# 문서 정합화와 O01 제3자 재현 준비"
+        },
+        {
+          "line": 5,
+          "title": "## 1. 기존 문서에 연결할 최신 상태"
+        },
+        {
+          "line": 20,
+          "title": "### 1.1 Grafana·CICD 확정 기록 연결 — 2026-10-15"
+        },
+        {
+          "line": 36,
+          "title": "## 2. O01 실행 준비 카드"
+        },
+        {
+          "line": 49,
+          "title": "### 검토한 기존 오프라인 진입점"
+        },
+        {
+          "line": 63,
+          "title": "## 3. 최종 Freeze 체크"
+        }
+      ]
+    },
+    {
+      "id": "N39",
+      "repo": "fds-project-evidence",
+      "path": "evidence/D-ARC-01/received-20260909/FDS_Phase1_Physical_Architecture_v3.1.2.mmd",
+      "commit": "f0279ed4af8071917bae7d0de10ff553d4394d6e",
+      "url": "https://github.com/321Team/fds-project-evidence/blob/f0279ed4af8071917bae7d0de10ff553d4394d6e/evidence/D-ARC-01/received-20260909/FDS_Phase1_Physical_Architecture_v3.1.2.mmd",
+      "git_blob": "895e9980628b9b4019edeb3fc21857aefbd4aedd",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "e90515a94b2a0864ef5b86e47c15565273cf021765cb71225a4bf7e55f7ddef2",
+      "bytes": 1909,
+      "local_path": "references/N39--FDS_Phase1_Physical_Architecture_v3.1.2.mmd",
+      "headings": []
+    },
+    {
+      "id": "N40",
+      "repo": "fds-project-evidence",
+      "path": "evidence/D-ARC-01/received-20260909/FDS_Phase1_Logical_Architecture_v3.1.2.mmd",
+      "commit": "f0279ed4af8071917bae7d0de10ff553d4394d6e",
+      "url": "https://github.com/321Team/fds-project-evidence/blob/f0279ed4af8071917bae7d0de10ff553d4394d6e/evidence/D-ARC-01/received-20260909/FDS_Phase1_Logical_Architecture_v3.1.2.mmd",
+      "git_blob": "f9420510354c579557e8b037301861d6d8c61a54",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "144f747aa7f8cdeb2a9edde4ebb4a4c77e4302fe5756f2567f8ec71c046dc16c",
+      "bytes": 2640,
+      "local_path": "references/N40--FDS_Phase1_Logical_Architecture_v3.1.2.mmd",
+      "headings": []
+    },
+    {
+      "id": "N41",
+      "repo": "infra-lb",
+      "path": "docs/runbooks/STAGE_B_RUNTIME_20260924.md",
+      "commit": "070c8883fb692e5b82d2ab48b0a71837abc43da1",
+      "url": "https://github.com/321Team/infra-lb/blob/070c8883fb692e5b82d2ab48b0a71837abc43da1/docs/runbooks/STAGE_B_RUNTIME_20260924.md",
+      "git_blob": "e783fcd13f5bbe7a56cde262eca2565eae61e16a",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "1314f30742f682ffb4e63a2023f6850c8c06b6c7b40cfafaa4333877fb3ddf13",
+      "bytes": 13383,
+      "local_path": "references/N41--STAGE_B_RUNTIME_20260924.md",
+      "headings": [
+        {
+          "line": 7,
+          "title": "# P1-LB-01 Stage B Runtime 검토 후보 — 2026-09-24 KST"
+        },
+        {
+          "line": 13,
+          "title": "## 확정 범위와 추가 연결 입력"
+        },
+        {
+          "line": 23,
+          "title": "## 동작과 중단·회수"
+        },
+        {
+          "line": 36,
+          "title": "## 전달 묶음과 명령"
+        },
+        {
+          "line": 51,
+          "title": "# 아래 경로는 기존 승인된 LB inventory의 실제 경로로 지정한다."
+        },
+        {
+          "line": 70,
+          "title": "## OOB 복구"
+        },
+        {
+          "line": 86,
+          "title": "## 검증 범위와 판정"
+        }
+      ]
+    },
+    {
+      "id": "N42",
+      "repo": "fds-project-evidence",
+      "path": "evidence/P1-DB-01/policy-readback-20261013T132447/README.md",
+      "commit": "f0279ed4af8071917bae7d0de10ff553d4394d6e",
+      "url": "https://github.com/321Team/fds-project-evidence/blob/f0279ed4af8071917bae7d0de10ff553d4394d6e/evidence/P1-DB-01/policy-readback-20261013T132447/README.md",
+      "git_blob": "83ecdfff05bc9afdf11c45b1d575aa0e119f2859",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "df7ed7c41c10affd43db4598ebee9606b519e7e4ad0c3f8a6bad06a024af561d",
+      "bytes": 9454,
+      "local_path": "references/N42--README.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# P1-DB-01 — 현재 앱별 DB 정책 조회와 기존 차단 증적 연결"
+        },
+        {
+          "line": 5,
+          "title": "## 1. 결과와 범위"
+        },
+        {
+          "line": 18,
+          "title": "## 2. 무엇을 수집했는가"
+        },
+        {
+          "line": 29,
+          "title": "## 3. 기존 관측 → 현재 정책 대응"
+        },
+        {
+          "line": 41,
+          "title": "## 4. 인수에 넘기는 판단과 남은 경계"
+        },
+        {
+          "line": 49,
+          "title": "## 5. 로컬 재현과 중단 기준"
+        }
+      ]
+    },
+    {
+      "id": "N43",
+      "repo": "fds-project-evidence",
+      "path": "evidence/P1-DR-01/received-20260929T0315Z/README.md",
+      "commit": "f0279ed4af8071917bae7d0de10ff553d4394d6e",
+      "url": "https://github.com/321Team/fds-project-evidence/blob/f0279ed4af8071917bae7d0de10ff553d4394d6e/evidence/P1-DR-01/received-20260929T0315Z/README.md",
+      "git_blob": "eecedd58166b3925815547284baf4bf153232ac1",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "b58ae9871de647825025da2d848ee7d2d991adbb733f383988bc5ef4b7e8f1dd",
+      "bytes": 9411,
+      "local_path": "references/N43--README.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# P1-DR-01 — PostgreSQL Backup → 격리 Restore → 원본 비교 → Restore 후 E2E (2026-09-29 12:15~12:38 KST)"
+        },
+        {
+          "line": 14,
+          "title": "## 수신·대조"
+        },
+        {
+          "line": 36,
+          "title": "## 1. Backup → 격리 Restore → 원본 비교 (`db01/dr-rehearsal.log`, 12:15:55~57)"
+        },
+        {
+          "line": 51,
+          "title": "## 2. 작업창 전 확인 (`db01/e2e-pre.log`, 12:26:08)"
+        },
+        {
+          "line": 63,
+          "title": "## 3. Restore 후 E2E (`db01/e2e-swap.log`·`e2e-swapback.log`, `edge01/…edge01.log`)"
+        },
+        {
+          "line": 79,
+          "title": "## 4. 정리 (`db01/cleanup.log`, 12:38:37)"
+        },
+        {
+          "line": 85,
+          "title": "## 한계와 후속"
+        }
+      ]
+    },
+    {
+      "id": "N44",
+      "repo": "fds-project-evidence",
+      "path": "evidence/P1-DOC-01/o01-receipts-20261015/O01_COVERAGE.md",
+      "commit": "f0279ed4af8071917bae7d0de10ff553d4394d6e",
+      "url": "https://github.com/321Team/fds-project-evidence/blob/f0279ed4af8071917bae7d0de10ff553d4394d6e/evidence/P1-DOC-01/o01-receipts-20261015/O01_COVERAGE.md",
+      "git_blob": "294867ffbfbab6996000467da468fad81275ea8e",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "d79f026923a6be2327c26bbe54e6be543bd406de0e4131e1f677168d639f2f14",
+      "bytes": 3283,
+      "local_path": "references/N44--O01_COVERAGE.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# O01 완료 범위와 잔여 판단"
+        },
+        {
+          "line": 14,
+          "title": "## 병행할 담당자 판단 입력"
+        }
+      ]
+    },
+    {
+      "id": "N45",
+      "repo": "fds-project-baseline",
+      "path": "tickets/v3.1.21/descriptions/P1-K8S-01.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/tickets/v3.1.21/descriptions/P1-K8S-01.md",
+      "git_blob": "ec52b6f6fbc7db19e5a6623e5a301b1592e549f4",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "6abd1ac68949bef3cf7ce9eb2de5ce2a99be65ae0d5849eafeac19233da599b7",
+      "bytes": 118175,
+      "local_path": "references/N45--P1-K8S-01.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# P1-K8S-01 — kubeadm 3CP + 3Worker / Calico"
+        },
+        {
+          "line": 30,
+          "title": "## Source checklist"
+        },
+        {
+          "line": 77,
+          "title": "## Source body snapshot"
+        },
+        {
+          "line": 82,
+          "title": "## 증적 경로 일괄 변경 — 2026-09-23 (누락분 2026-09-25 반영)"
+        },
+        {
+          "line": 95,
+          "title": "## 후속 전수 검수 반영 — 2026-09-23 KST"
+        },
+        {
+          "line": 109,
+          "title": "## API・etcd・CP 관리 경로 복구 — 2026-09-21 14:01 KST 증적 반영"
+        },
+        {
+          "line": 123,
+          "title": "## CP2/CP3 etcd 반복 실행·peer 단절 확인, 최소 복구 절차 준비 — 2026-09-21 10:14 KST"
+        },
+        {
+          "line": 148,
+          "title": "## 3CP 비교: peer 허용 누락·CP2/CP3 리스너 부재 — 2026-09-21 09:42~09:43 KST"
+        },
+        {
+          "line": 177,
+          "title": "## CP1 etcd peer 연결 실패·API 저장소 초기화 timeout — 2026-09-21 00:34~00:43 KST 관측"
+        },
+        {
+          "line": 200,
+          "title": "## CP1 kube-apiserver 반복 종료 확인 — 2026-09-21 00:20 KST"
+        },
+        {
+          "line": 218,
+          "title": "## CP1 API 리스너 부재 확인 — 2026-09-21 00:08 KST"
+        },
+        {
+          "line": 239,
+          "title": "## 독립 승인·병합 완료 — 2026-09-20 KST"
+        },
+        {
+          "line": 256,
+          "title": "## IF-06B 송신 연동 인계 진척 — 2026-09-19"
+        },
+        {
+          "line": 271,
+          "title": "## 최신 CP 구축 결과 — 2026-09-18 12:33 KST"
+        },
+        {
+          "line": 291,
+          "title": "## 6노드 상태·담당 후속 갱신 — 2026-09-18 15:56 KST"
+        },
+        {
+          "line": 300,
+          "title": "### 중복 없는 후속 분담"
+        },
+        {
+          "line": 314,
+          "title": "## 이전 진행 상황·후속 점검 — 2026-09-17"
+        },
+        {
+          "line": 332,
+          "title": "### 격리 시험 VM 준비 — 제출 캡처 확인 (2026-09-15)"
+        },
+        {
+          "line": 355,
+          "title": "### 격리 시험 VM 첫 부팅·준비 수집 — 17:46 당시 이력 (18:20 후속으로 준비 차단 해소)"
+        },
+        {
+          "line": 368,
+          "title": "### 격리 시험 VM 오프라인 보완 후 재검토 — 2026-09-15 18:20 KST"
+        },
+        {
+          "line": 386,
+          "title": "## 사양·기록 전수 점검 후속 — 2026-09-14 점검 반영"
+        },
+        {
+          "line": 414,
+          "title": "## 현재 운영 정리 — 2026-09-14"
+        },
+        {
+          "line": 418,
+          "title": "### 확보된 증적과 남은 작업"
+        },
+        {
+          "line": 427,
+          "title": "### 승인·후속 실행 기준"
+        },
+        {
+          "line": 434,
+          "title": "### 다음 추적 항목"
+        },
+        {
+          "line": 448,
+          "title": "# P1-K8S-01 — kubeadm 3CP + 3Worker / Calico"
+        },
+        {
+          "line": 453,
+          "title": "## 티켓 속성"
+        },
+        {
+          "line": 476,
+          "title": "## 최신 운영 기록의 보존"
+        },
+        {
+          "line": 483,
+          "title": "### 기존 확인 완료 항목 — 당시 범위 보존"
+        },
+        {
+          "line": 492,
+          "title": "## 정본에 반영된 실행·검토 상태 — 작성 시점 기록"
+        },
+        {
+          "line": 500,
+          "title": "## 2026-09-10 K8S 최신 이력 통합"
+        },
+        {
+          "line": 511,
+          "title": "### 미결 사양과 실행 조건"
+        },
+        {
+          "line": 519,
+          "title": "## 일정 권장안"
+        },
+        {
+          "line": 523,
+          "title": "## 적용 기준"
+        },
+        {
+          "line": 530,
+          "title": "### User Story"
+        },
+        {
+          "line": 534,
+          "title": "### Scope"
+        },
+        {
+          "line": 536,
+          "title": "#### In Scope"
+        },
+        {
+          "line": 545,
+          "title": "#### Out of Scope"
+        },
+        {
+          "line": 550,
+          "title": "### 핵심 요구사항"
+        },
+        {
+          "line": 563,
+          "title": "### Acceptance Criteria"
+        },
+        {
+          "line": 574,
+          "title": "### Evidence"
+        },
+        {
+          "line": 579,
+          "title": "### Dependency"
+        },
+        {
+          "line": 584,
+          "title": "### Decision / Risk Control"
+        },
+        {
+          "line": 589,
+          "title": "### Review / Handoff"
+        },
+        {
+          "line": 594,
+          "title": "### Completion Record"
+        },
+        {
+          "line": 601,
+          "title": "## 갱신 전 원문 보관"
+        },
+        {
+          "line": 610,
+          "title": "### 2026-09-10 현장 증적 검증 완료 — Runtime 인수 별도"
+        },
+        {
+          "line": 622,
+          "title": "## 2026-09-10 최신 후속 — 사용자 선행 허용·PR #2 보완"
+        },
+        {
+          "line": 635,
+          "title": "### 2026-09-10 정본 정합성 검토 결과 — 현재 HEAD 적용 보류"
+        },
+        {
+          "line": 657,
+          "title": "# P1-K8S-01 — kubeadm 3CP + 3Worker / Calico"
+        },
+        {
+          "line": 663,
+          "title": "### 2026-09-10 — 정본 보존 우선 조건"
+        },
+        {
+          "line": 670,
+          "title": "### 2026-09-10 후속 구현 착수 결과"
+        },
+        {
+          "line": 675,
+          "title": "### 2026-09-10 15:34 KST — Worker 보완 증적 검증 완료"
+        },
+        {
+          "line": 685,
+          "title": "### 2026-09-10 — Worker 제출 증적 검토 및 제한 보완"
+        },
+        {
+          "line": 695,
+          "title": "### 2026-09-10 — 리뷰어 지정 및 잔여 증적 수집 준비"
+        },
+        {
+          "line": 702,
+          "title": "## 최신 증적 확인 — 2026-09-10 13:56 KST"
+        },
+        {
+          "line": 709,
+          "title": "## 추가 검토 진행 — 2026-09-10"
+        },
+        {
+          "line": 716,
+          "title": "## 진행 업데이트 — 2026-09-10 CP 진단"
+        },
+        {
+          "line": 730,
+          "title": "### 가입 미완료 사유 — 확인 사실과 미확정 원인"
+        },
+        {
+          "line": 737,
+          "title": "### CP2 잔여 구성 및 etcd 확인 작업"
+        },
+        {
+          "line": 751,
+          "title": "### 진단 도구 준비 — 2026-09-10"
+        },
+        {
+          "line": 759,
+          "title": "## Notion 데이터 속성"
+        },
+        {
+          "line": 781,
+          "title": "## 이관 기준 및 확인 사항"
+        },
+        {
+          "line": 789,
+          "title": "## 원본 및 변경 출처"
+        },
+        {
+          "line": 797,
+          "title": "## 현재 리뷰·보완 현황 — 2026-09-10"
+        },
+        {
+          "line": 803,
+          "title": "### 리뷰 반영 추적"
+        },
+        {
+          "line": 820,
+          "title": "### 확인한 로컬 검증"
+        },
+        {
+          "line": 831,
+          "title": "### 다음 단계 / 남은 확인"
+        },
+        {
+          "line": 838,
+          "title": "### 전달 산출물"
+        },
+        {
+          "line": 848,
+          "title": "### 사용자 지정 추가 대화 — 요청 범위 반영"
+        },
+        {
+          "line": 856,
+          "title": "### 현재 Completion Record"
+        },
+        {
+          "line": 865,
+          "title": "## Description — 보관 입력본"
+        },
+        {
+          "line": 869,
+          "title": "### 🎯 User Story"
+        },
+        {
+          "line": 873,
+          "title": "### 📌 Scope"
+        },
+        {
+          "line": 875,
+          "title": "#### In Scope"
+        },
+        {
+          "line": 884,
+          "title": "#### Out of Scope"
+        },
+        {
+          "line": 889,
+          "title": "### 📋 핵심 요구사항"
+        },
+        {
+          "line": 900,
+          "title": "### ✅ Acceptance Criteria"
+        },
+        {
+          "line": 909,
+          "title": "### 🧪 Evidence"
+        },
+        {
+          "line": 914,
+          "title": "### 🔗 Dependency"
+        },
+        {
+          "line": 919,
+          "title": "### ⚖️ Decision / Risk Control"
+        },
+        {
+          "line": 924,
+          "title": "### 🔍 Review / Handoff"
+        },
+        {
+          "line": 929,
+          "title": "### 📝 Completion Record"
+        }
+      ]
+    },
+    {
+      "id": "N46",
+      "repo": "fds-project-baseline",
+      "path": "tickets/v3.1.21/descriptions/P1-SEC-01.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/tickets/v3.1.21/descriptions/P1-SEC-01.md",
+      "git_blob": "0e07566a16335754bfdae448e7265ba3e596c33a",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "367e13e6e091ab8bbe470f317458bea624260c92caeb5fd0d2e063c241d86f82",
+      "bytes": 58865,
+      "local_path": "references/N46--P1-SEC-01.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# P1-SEC-01 — Kubernetes Security Controls"
+        },
+        {
+          "line": 30,
+          "title": "## Source checklist"
+        },
+        {
+          "line": 54,
+          "title": "## Source body snapshot"
+        },
+        {
+          "line": 59,
+          "title": "## 2026-10-02 CR #126 최종 Disposition — WITHDRAWN / NO CHANGE"
+        },
+        {
+          "line": 69,
+          "title": "## 2026-10-01 CR #125 승인 구조 반영 — Secret AC 처리"
+        },
+        {
+          "line": 83,
+          "title": "### Acceptance 경계"
+        },
+        {
+          "line": 89,
+          "title": "## 2026-10-01 CR #127 최종 Disposition — NO CHANGE"
+        },
+        {
+          "line": 99,
+          "title": "## 증적 경로 일괄 변경 — 2026-09-23 (누락분 2026-09-25 반영)"
+        },
+        {
+          "line": 112,
+          "title": "## 현행 보호 전환·보안 후속 검수 — 2026-09-23 KST"
+        },
+        {
+          "line": 126,
+          "title": "## 호스트 관리 통신 회복·SEC-06 후속 연결 — 2026-09-21 14:01 KST"
+        },
+        {
+          "line": 138,
+          "title": "## 독립 승인·병합 완료 — 2026-09-20 KST"
+        },
+        {
+          "line": 155,
+          "title": "## monitor01 PKI 검증·TLS 보안 검토 인계 — 2026-09-19"
+        },
+        {
+          "line": 172,
+          "title": "## 사양·기록 전수 점검 후속 — 2026-09-14 점검 반영"
+        },
+        {
+          "line": 200,
+          "title": "# P1-SEC-01 — Kubernetes Security Controls"
+        },
+        {
+          "line": 205,
+          "title": "## 티켓 속성"
+        },
+        {
+          "line": 228,
+          "title": "## 최신 운영 기록의 보존"
+        },
+        {
+          "line": 239,
+          "title": "## 정본에 반영된 실행·검토 상태 — 작성 시점 기록"
+        },
+        {
+          "line": 245,
+          "title": "## 2026-09-10 K8S 최신 이력 통합"
+        },
+        {
+          "line": 256,
+          "title": "### 미결 사양과 실행 조건"
+        },
+        {
+          "line": 264,
+          "title": "## 일정 권장안"
+        },
+        {
+          "line": 268,
+          "title": "## 적용 기준"
+        },
+        {
+          "line": 276,
+          "title": "### User Story"
+        },
+        {
+          "line": 280,
+          "title": "### Scope"
+        },
+        {
+          "line": 282,
+          "title": "#### In Scope"
+        },
+        {
+          "line": 292,
+          "title": "#### Out of Scope"
+        },
+        {
+          "line": 298,
+          "title": "### 핵심 요구사항"
+        },
+        {
+          "line": 310,
+          "title": "### Acceptance Criteria"
+        },
+        {
+          "line": 321,
+          "title": "### Evidence"
+        },
+        {
+          "line": 326,
+          "title": "### Dependency"
+        },
+        {
+          "line": 331,
+          "title": "### Decision / Risk Control"
+        },
+        {
+          "line": 336,
+          "title": "### Review / Handoff"
+        },
+        {
+          "line": 341,
+          "title": "### Completion Record"
+        },
+        {
+          "line": 348,
+          "title": "## 갱신 전 원문 보관"
+        },
+        {
+          "line": 357,
+          "title": "### 2026-09-10 현장 증적 검증 완료 — Runtime 인수 별도"
+        },
+        {
+          "line": 369,
+          "title": "## 2026-09-10 최신 후속 — 사용자 선행 허용·PR 321Team/fds-project-baseline#2 보완"
+        },
+        {
+          "line": 382,
+          "title": "### 2026-09-10 정본 정합성 후속 — 보호 인수 미완료"
+        },
+        {
+          "line": 392,
+          "title": "# P1-SEC-01 — Kubernetes Security Controls"
+        },
+        {
+          "line": 398,
+          "title": "### 2026-09-10 후속 구현 착수 결과"
+        },
+        {
+          "line": 403,
+          "title": "### 2026-09-10 15:34 KST — Worker 보완 증적 검증 완료"
+        },
+        {
+          "line": 413,
+          "title": "### 2026-09-10 — Worker 제출 증적 검토 및 제한 보완"
+        },
+        {
+          "line": 422,
+          "title": "## 진행 업데이트 — 2026-09-10 호스트 보호 선행상태"
+        },
+        {
+          "line": 431,
+          "title": "### 선행 도구 진행 연계 — 2026-09-10"
+        },
+        {
+          "line": 438,
+          "title": "## 리뷰·진행상황 동기화 — 2026-09-10"
+        },
+        {
+          "line": 440,
+          "title": "### 근거 구분"
+        },
+        {
+          "line": 450,
+          "title": "### 현재 판정"
+        },
+        {
+          "line": 459,
+          "title": "### Acceptance Criteria 현황"
+        },
+        {
+          "line": 470,
+          "title": "### 책임 및 인계"
+        },
+        {
+          "line": 477,
+          "title": "### 다음 조치"
+        },
+        {
+          "line": 488,
+          "title": "## Notion 데이터 속성"
+        },
+        {
+          "line": 510,
+          "title": "## 이관 기준 및 확인 사항"
+        },
+        {
+          "line": 517,
+          "title": "## 원본 및 변경 출처"
+        },
+        {
+          "line": 525,
+          "title": "## Description — 보관 입력본"
+        },
+        {
+          "line": 529,
+          "title": "### 🎯 User Story"
+        },
+        {
+          "line": 533,
+          "title": "### 📌 Scope"
+        },
+        {
+          "line": 535,
+          "title": "#### In Scope"
+        },
+        {
+          "line": 545,
+          "title": "#### Out of Scope"
+        },
+        {
+          "line": 551,
+          "title": "### 📋 핵심 요구사항"
+        },
+        {
+          "line": 561,
+          "title": "### ✅ Acceptance Criteria"
+        },
+        {
+          "line": 570,
+          "title": "### 🧪 Evidence"
+        },
+        {
+          "line": 575,
+          "title": "### 🔗 Dependency"
+        },
+        {
+          "line": 580,
+          "title": "### ⚖️ Decision / Risk Control"
+        },
+        {
+          "line": 585,
+          "title": "### 🔍 Review / Handoff"
+        },
+        {
+          "line": 590,
+          "title": "### 📝 Completion Record"
+        }
+      ]
+    },
+    {
+      "id": "N47",
+      "repo": "fds-project-baseline",
+      "path": "tickets/v3.1.21/descriptions/P1-HA-01.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/tickets/v3.1.21/descriptions/P1-HA-01.md",
+      "git_blob": "a482c435579d14163aba6e05f99ad3d7580b5f63",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "0bd1a137de29382949c241c58eaf864fd38b6d31ebba001279fb5cdabf71824f",
+      "bytes": 17354,
+      "local_path": "references/N47--P1-HA-01.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# P1-HA-01 — Worker Drain Continuity"
+        },
+        {
+          "line": 30,
+          "title": "## Source checklist"
+        },
+        {
+          "line": 41,
+          "title": "## Source body snapshot"
+        },
+        {
+          "line": 46,
+          "title": "## 최신 판정 — 2026-09-27 KST"
+        },
+        {
+          "line": 50,
+          "title": "### 확인된 진행"
+        },
+        {
+          "line": 58,
+          "title": "### 잔여"
+        },
+        {
+          "line": 72,
+          "title": "## 증적 경로 일괄 변경 — 2026-09-23"
+        },
+        {
+          "line": 85,
+          "title": "## 사양·기록 전수 점검 후속 — 2026-09-14 점검 반영"
+        },
+        {
+          "line": 107,
+          "title": "# P1-HA-01 — Worker Drain Continuity"
+        },
+        {
+          "line": 112,
+          "title": "## 티켓 속성"
+        },
+        {
+          "line": 135,
+          "title": "## 최신 운영 기록의 보존"
+        },
+        {
+          "line": 143,
+          "title": "## 정본에 반영된 실행·검토 상태 — 작성 시점 기록"
+        },
+        {
+          "line": 149,
+          "title": "## 일정 권장안"
+        },
+        {
+          "line": 153,
+          "title": "## 적용 기준"
+        },
+        {
+          "line": 161,
+          "title": "# User Story"
+        },
+        {
+          "line": 167,
+          "title": "# Scope"
+        },
+        {
+          "line": 169,
+          "title": "## In Scope"
+        },
+        {
+          "line": 177,
+          "title": "## Out of Scope"
+        },
+        {
+          "line": 186,
+          "title": "# 핵심 요구사항"
+        },
+        {
+          "line": 195,
+          "title": "# Acceptance Criteria"
+        },
+        {
+          "line": 204,
+          "title": "# 검증 및 증적"
+        },
+        {
+          "line": 215,
+          "title": "# Dependency"
+        },
+        {
+          "line": 224,
+          "title": "# Decision / Risk Control"
+        },
+        {
+          "line": 233,
+          "title": "# Completion Record"
+        },
+        {
+          "line": 241,
+          "title": "## 갱신 전 원문 보관"
+        },
+        {
+          "line": 250,
+          "title": "# P1-HA-01 — Worker Drain Continuity"
+        },
+        {
+          "line": 254,
+          "title": "## Notion 데이터 속성"
+        },
+        {
+          "line": 276,
+          "title": "## 이관 기준 및 확인 사항"
+        },
+        {
+          "line": 283,
+          "title": "## 원본 및 변경 출처"
+        },
+        {
+          "line": 290,
+          "title": "## Description — 보관 입력본"
+        },
+        {
+          "line": 294,
+          "title": "# 🎯 User Story"
+        },
+        {
+          "line": 300,
+          "title": "# 📌 Scope"
+        },
+        {
+          "line": 302,
+          "title": "## In Scope"
+        },
+        {
+          "line": 310,
+          "title": "## Out of Scope"
+        },
+        {
+          "line": 319,
+          "title": "# 📋 핵심 요구사항"
+        },
+        {
+          "line": 328,
+          "title": "# ✅ Acceptance Criteria"
+        },
+        {
+          "line": 337,
+          "title": "# 🧪 검증 및 증적"
+        },
+        {
+          "line": 348,
+          "title": "# 🔗 Dependency"
+        },
+        {
+          "line": 357,
+          "title": "# ⚖️ Decision / Risk Control"
+        },
+        {
+          "line": 366,
+          "title": "# 📝 Completion Record"
+        }
+      ]
+    },
+    {
+      "id": "N48",
+      "repo": "fds-project-baseline",
+      "path": "tickets/v3.1.21/descriptions/P1-LB-01.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/tickets/v3.1.21/descriptions/P1-LB-01.md",
+      "git_blob": "122f4b8665d0bdf13b2406a7c8c1deda8dc7144f",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "be5accd39e8d20f722e1cf61fdeca7c747f4572d63a364fd7a4aa6198e986651",
+      "bytes": 70162,
+      "local_path": "references/N48--P1-LB-01.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# P1-LB-01 — Kubernetes API Load Balancer"
+        },
+        {
+          "line": 30,
+          "title": "## Source checklist"
+        },
+        {
+          "line": 51,
+          "title": "## Source body snapshot"
+        },
+        {
+          "line": 56,
+          "title": "## PR10 독립 승인·병합 완료 — 2026-09-26 KST"
+        },
+        {
+          "line": 69,
+          "title": "## 증적 경로 일괄 변경 — 2026-09-23 (누락분 2026-09-25 반영)"
+        },
+        {
+          "line": 83,
+          "title": "## PR10 독립 리뷰 대응 — 2026-09-24 KST"
+        },
+        {
+          "line": 99,
+          "title": "## 2026-09-24 KST — 복구 증적 보완 및 읽기 전용 잔여 점검 준비"
+        },
+        {
+          "line": 110,
+          "title": "## 2026-09-24 KST — Stage B 실행 코드 검토 후보 작성"
+        },
+        {
+          "line": 123,
+          "title": "## 2026-09-24 사전점검 완료 — LB 및 인증 API"
+        },
+        {
+          "line": 140,
+          "title": "## LB 후속 전수 검수 — 2026-09-23 KST"
+        },
+        {
+          "line": 153,
+          "title": "## CP 복구 후 LB 후속 검증 범위 — 2026-09-21 14:01 KST"
+        },
+        {
+          "line": 163,
+          "title": "## LB 경유 API 회복 확인 — 2026-09-21 12:16~12:40 KST"
+        },
+        {
+          "line": 175,
+          "title": "## CP2/CP3 peer 단절 확인·Runtime 복구 준비 — 2026-09-21 10:14 KST"
+        },
+        {
+          "line": 185,
+          "title": "## 3CP 현지 점검 추가 — 2026-09-21 09:42~09:43 KST"
+        },
+        {
+          "line": 195,
+          "title": "## CP1 etcd peer 통신 장애 관측 — 2026-09-21 00:34~00:43 KST"
+        },
+        {
+          "line": 205,
+          "title": "## CP1 API 반복 종료 관측 추가 — 2026-09-21 00:20 KST"
+        },
+        {
+          "line": 215,
+          "title": "## CP1 API 리스너 부재 확인 — 2026-09-21 00:08 KST"
+        },
+        {
+          "line": 236,
+          "title": "## API LB 접근 실패 관측 — 2026-09-20 23:34~23:35 KST"
+        },
+        {
+          "line": 252,
+          "title": "## 독립 승인·병합 완료 — 2026-09-20 KST"
+        },
+        {
+          "line": 269,
+          "title": "## monitor01 연계 준비 진척 — 2026-09-19"
+        },
+        {
+          "line": 283,
+          "title": "## 최신 실측 — 2026-09-18 21:27 KST backend 3/3 PASS"
+        },
+        {
+          "line": 303,
+          "title": "## LB 담당 후속 착수 — 2026-09-18"
+        },
+        {
+          "line": 315,
+          "title": "### IF-16 완료 후 LB 실행 착수 — 2026-09-18"
+        },
+        {
+          "line": 328,
+          "title": "## 상위 클러스터 상태 갱신 — 2026-09-18 15:56 KST"
+        },
+        {
+          "line": 340,
+          "title": "## LB 전용 PR 이관 완료 — infra-lb에서 후속 리뷰"
+        },
+        {
+          "line": 363,
+          "title": "## LB 소스·기존 자료 편입 — 승인·main 병합 완료"
+        },
+        {
+          "line": 376,
+          "title": "## 최신 Stage B 사전점검 — LB 정상·CP1 UP / CP2·CP3 미준비"
+        },
+        {
+          "line": 403,
+          "title": "## 최신 상태 — 현재 시점 DAD PASS·원본 등록 / 이하영 인수 확인 대기"
+        },
+        {
+          "line": 424,
+          "title": "## 사양·기록 전수 점검 후속 — 2026-09-14 점검 반영"
+        },
+        {
+          "line": 446,
+          "title": "# P1-LB-01 — Kubernetes API Load Balancer"
+        },
+        {
+          "line": 451,
+          "title": "## 티켓 속성"
+        },
+        {
+          "line": 474,
+          "title": "## 최신 운영 기록의 보존"
+        },
+        {
+          "line": 480,
+          "title": "## 정본에 반영된 실행·검토 상태 — 작성 시점 기록"
+        },
+        {
+          "line": 486,
+          "title": "## 일정 권장안"
+        },
+        {
+          "line": 490,
+          "title": "## 적용 기준"
+        },
+        {
+          "line": 497,
+          "title": "### User Story"
+        },
+        {
+          "line": 501,
+          "title": "### Scope"
+        },
+        {
+          "line": 503,
+          "title": "#### In Scope"
+        },
+        {
+          "line": 510,
+          "title": "#### Out of Scope"
+        },
+        {
+          "line": 515,
+          "title": "### 핵심 요구사항"
+        },
+        {
+          "line": 525,
+          "title": "### Acceptance Criteria"
+        },
+        {
+          "line": 532,
+          "title": "### Evidence"
+        },
+        {
+          "line": 537,
+          "title": "### Dependency"
+        },
+        {
+          "line": 542,
+          "title": "### Decision / Risk Control"
+        },
+        {
+          "line": 547,
+          "title": "### Review / Handoff"
+        },
+        {
+          "line": 552,
+          "title": "### Scope Boundary"
+        },
+        {
+          "line": 556,
+          "title": "### Completion Record"
+        },
+        {
+          "line": 563,
+          "title": "## 갱신 전 원문 보관"
+        },
+        {
+          "line": 572,
+          "title": "# P1-LB-01 — Kubernetes API Load Balancer"
+        },
+        {
+          "line": 576,
+          "title": "## Notion 데이터 속성"
+        },
+        {
+          "line": 598,
+          "title": "## 이관 기준 및 확인 사항"
+        },
+        {
+          "line": 605,
+          "title": "## 원본 및 변경 출처"
+        },
+        {
+          "line": 613,
+          "title": "## Description — 보관 입력본"
+        },
+        {
+          "line": 617,
+          "title": "### 🎯 User Story"
+        },
+        {
+          "line": 621,
+          "title": "### 📌 Scope"
+        },
+        {
+          "line": 623,
+          "title": "#### In Scope"
+        },
+        {
+          "line": 630,
+          "title": "#### Out of Scope"
+        },
+        {
+          "line": 635,
+          "title": "### 📋 핵심 요구사항"
+        },
+        {
+          "line": 643,
+          "title": "### ✅ Acceptance Criteria"
+        },
+        {
+          "line": 650,
+          "title": "### 🧪 Evidence"
+        },
+        {
+          "line": 655,
+          "title": "### 🔗 Dependency"
+        },
+        {
+          "line": 660,
+          "title": "### ⚖️ Decision / Risk Control"
+        },
+        {
+          "line": 665,
+          "title": "### 🔍 Review / Handoff"
+        },
+        {
+          "line": 670,
+          "title": "### ⚠️ Scope Boundary"
+        },
+        {
+          "line": 674,
+          "title": "### 📝 Completion Record"
+        }
+      ]
+    },
+    {
+      "id": "N49",
+      "repo": "fds-project-baseline",
+      "path": "tickets/v3.1.21/descriptions/P1-E2E-01.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/tickets/v3.1.21/descriptions/P1-E2E-01.md",
+      "git_blob": "d24f8db05ec9ca3f2e1f2db2c5ed45d7a23eca17",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "c25cda907da82e226ebd1b913850e1464b83bb2971c18468c151722af4835214",
+      "bytes": 19421,
+      "local_path": "references/N49--P1-E2E-01.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# P1-E2E-01 — Initial / Final E2E & Regression"
+        },
+        {
+          "line": 30,
+          "title": "## Source checklist"
+        },
+        {
+          "line": 43,
+          "title": "## Source body snapshot"
+        },
+        {
+          "line": 48,
+          "title": "## 증적 경로 일괄 변경 — 2026-09-23"
+        },
+        {
+          "line": 61,
+          "title": "## 사양·기록 전수 점검 후속 — 2026-09-14 점검 반영"
+        },
+        {
+          "line": 83,
+          "title": "# P1-E2E-01 — Initial / Final E2E & Regression"
+        },
+        {
+          "line": 88,
+          "title": "## 티켓 속성"
+        },
+        {
+          "line": 111,
+          "title": "## 최신 운영 기록의 보존"
+        },
+        {
+          "line": 119,
+          "title": "## 정본에 반영된 실행·검토 상태 — 작성 시점 기록"
+        },
+        {
+          "line": 125,
+          "title": "## 일정 권장안"
+        },
+        {
+          "line": 129,
+          "title": "## 적용 기준"
+        },
+        {
+          "line": 137,
+          "title": "# User Story"
+        },
+        {
+          "line": 143,
+          "title": "# Scope"
+        },
+        {
+          "line": 145,
+          "title": "## In Scope"
+        },
+        {
+          "line": 155,
+          "title": "## Out of Scope"
+        },
+        {
+          "line": 161,
+          "title": "# 핵심 요구사항"
+        },
+        {
+          "line": 171,
+          "title": "# Acceptance Criteria"
+        },
+        {
+          "line": 184,
+          "title": "# 검증 및 증적"
+        },
+        {
+          "line": 196,
+          "title": "# Dependency"
+        },
+        {
+          "line": 205,
+          "title": "# Decision / Risk Control"
+        },
+        {
+          "line": 214,
+          "title": "# Completion Record"
+        },
+        {
+          "line": 222,
+          "title": "## 갱신 전 원문 보관"
+        },
+        {
+          "line": 231,
+          "title": "# P1-E2E-01 — Initial / Final E2E & Regression"
+        },
+        {
+          "line": 235,
+          "title": "## Notion 데이터 속성"
+        },
+        {
+          "line": 257,
+          "title": "## 이관 기준 및 확인 사항"
+        },
+        {
+          "line": 264,
+          "title": "## 원본 및 변경 출처"
+        },
+        {
+          "line": 271,
+          "title": "## Description — 보관 입력본"
+        },
+        {
+          "line": 275,
+          "title": "# 🎯 User Story"
+        },
+        {
+          "line": 281,
+          "title": "# 📌 Scope"
+        },
+        {
+          "line": 283,
+          "title": "## In Scope"
+        },
+        {
+          "line": 293,
+          "title": "## Out of Scope"
+        },
+        {
+          "line": 299,
+          "title": "# 📋 핵심 요구사항"
+        },
+        {
+          "line": 309,
+          "title": "# ✅ Acceptance Criteria"
+        },
+        {
+          "line": 319,
+          "title": "# 🧪 검증 및 증적"
+        },
+        {
+          "line": 331,
+          "title": "# 🔗 Dependency"
+        },
+        {
+          "line": 340,
+          "title": "# ⚖️ Decision / Risk Control"
+        },
+        {
+          "line": 349,
+          "title": "# 📝 Completion Record"
+        }
+      ]
+    },
+    {
+      "id": "N50",
+      "repo": "fds-project-baseline",
+      "path": "tickets/v3.1.21/descriptions/P1-ANS-01.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/tickets/v3.1.21/descriptions/P1-ANS-01.md",
+      "git_blob": "a8b7765a79199eb36279aa338599007dc1406fc1",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "02bafcc2e68ecd3087368647ee95e57c6427978d1b4fecfb4e07ec6ca76ef753",
+      "bytes": 19011,
+      "local_path": "references/N50--P1-ANS-01.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# P1-ANS-01 — Ansible Inventory / OS-Node Bootstrap — Closed Update"
+        },
+        {
+          "line": 30,
+          "title": "## Source checklist"
+        },
+        {
+          "line": 42,
+          "title": "## Source body snapshot"
+        },
+        {
+          "line": 47,
+          "title": "## 증적 경로 일괄 변경 — 2026-09-23"
+        },
+        {
+          "line": 60,
+          "title": "## 사양·기록 전수 점검 후속 — 2026-09-14 점검 반영"
+        },
+        {
+          "line": 79,
+          "title": "# P1-ANS-01 — Ansible Inventory / OS-Node Bootstrap — Closed Update"
+        },
+        {
+          "line": 84,
+          "title": "## 티켓 속성"
+        },
+        {
+          "line": 107,
+          "title": "## 최신 운영 기록의 보존"
+        },
+        {
+          "line": 113,
+          "title": "## 정본에 반영된 실행·검토 상태 — 작성 시점 기록"
+        },
+        {
+          "line": 119,
+          "title": "## 적용 기준"
+        },
+        {
+          "line": 127,
+          "title": "# User Story"
+        },
+        {
+          "line": 133,
+          "title": "# Scope"
+        },
+        {
+          "line": 135,
+          "title": "## In Scope"
+        },
+        {
+          "line": 143,
+          "title": "## Out of Scope"
+        },
+        {
+          "line": 153,
+          "title": "# 핵심 요구사항"
+        },
+        {
+          "line": 162,
+          "title": "# Acceptance Criteria"
+        },
+        {
+          "line": 172,
+          "title": "# 검증 및 증적"
+        },
+        {
+          "line": 182,
+          "title": "# Dependency"
+        },
+        {
+          "line": 191,
+          "title": "# Decision / Risk Control"
+        },
+        {
+          "line": 200,
+          "title": "# Review / Handoff"
+        },
+        {
+          "line": 210,
+          "title": "# Completion Record"
+        },
+        {
+          "line": 218,
+          "title": "## 갱신 전 원문 보관"
+        },
+        {
+          "line": 227,
+          "title": "# P1-ANS-01 — Ansible Inventory / OS-Node Bootstrap — Closed Update"
+        },
+        {
+          "line": 232,
+          "title": "## 진행 업데이트 — 2026-09-10 후속 진단 접속 및 NTP 연계"
+        },
+        {
+          "line": 243,
+          "title": "### 후속 수집 도구 연계 — 2026-09-10"
+        },
+        {
+          "line": 249,
+          "title": "## Notion 데이터 속성"
+        },
+        {
+          "line": 271,
+          "title": "## 이관 기준 및 확인 사항"
+        },
+        {
+          "line": 278,
+          "title": "## 원본 및 변경 출처"
+        },
+        {
+          "line": 284,
+          "title": "## Description — 보관 입력본"
+        },
+        {
+          "line": 288,
+          "title": "# 🎯 User Story"
+        },
+        {
+          "line": 294,
+          "title": "# 📌 Scope"
+        },
+        {
+          "line": 296,
+          "title": "## In Scope"
+        },
+        {
+          "line": 304,
+          "title": "## Out of Scope"
+        },
+        {
+          "line": 314,
+          "title": "# 📋 핵심 요구사항"
+        },
+        {
+          "line": 323,
+          "title": "# ✅ Acceptance Criteria"
+        },
+        {
+          "line": 333,
+          "title": "# 🧪 검증 및 증적"
+        },
+        {
+          "line": 343,
+          "title": "# 🔗 Dependency"
+        },
+        {
+          "line": 352,
+          "title": "# ⚖️ Decision / Risk Control"
+        },
+        {
+          "line": 361,
+          "title": "# 🔍 Review / Handoff"
+        },
+        {
+          "line": 371,
+          "title": "# 📝 Completion Record"
+        }
+      ]
+    },
+    {
+      "id": "N51",
+      "repo": "fds-project-baseline",
+      "path": "tickets/v3.1.21/descriptions/P1-HBR-01.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/tickets/v3.1.21/descriptions/P1-HBR-01.md",
+      "git_blob": "1a9b2e85e93a1040b374c72c0c07dfb2131d17bf",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "899a4cda805e757c35f93c5d60bf99d46430225e1a82f6bf5f681ea1c27d21ad",
+      "bytes": 31949,
+      "local_path": "references/N51--P1-HBR-01.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# P1-HBR-01 — Harbor / Trivy Registry"
+        },
+        {
+          "line": 30,
+          "title": "## Source checklist"
+        },
+        {
+          "line": 53,
+          "title": "## Source body snapshot"
+        },
+        {
+          "line": 58,
+          "title": "## 2026-10-01 CR #130 승인 구조 반영 — OID-02 / HBR-AC-05A·05B"
+        },
+        {
+          "line": 62,
+          "title": "### OID-02 책임경계"
+        },
+        {
+          "line": 67,
+          "title": "### AC-05 구조"
+        },
+        {
+          "line": 73,
+          "title": "### 현재 상태 경계"
+        },
+        {
+          "line": 79,
+          "title": "## 증적 경로 일괄 변경 — 2026-09-23 (누락분 2026-09-25 반영)"
+        },
+        {
+          "line": 93,
+          "title": "## 사양·기록 전수 점검 후속 — 2026-09-14 점검 반영"
+        },
+        {
+          "line": 115,
+          "title": "# P1-HBR-01 — Harbor / Trivy Registry"
+        },
+        {
+          "line": 120,
+          "title": "## 티켓 속성"
+        },
+        {
+          "line": 143,
+          "title": "## 최신 운영 기록의 보존"
+        },
+        {
+          "line": 155,
+          "title": "## 정본에 반영된 실행·검토 상태 — 작성 시점 기록"
+        },
+        {
+          "line": 161,
+          "title": "## 일정 권장안"
+        },
+        {
+          "line": 165,
+          "title": "## 적용 기준"
+        },
+        {
+          "line": 174,
+          "title": "### User Story"
+        },
+        {
+          "line": 178,
+          "title": "### Scope"
+        },
+        {
+          "line": 180,
+          "title": "#### In Scope"
+        },
+        {
+          "line": 189,
+          "title": "#### Out of Scope"
+        },
+        {
+          "line": 196,
+          "title": "### 핵심 요구사항"
+        },
+        {
+          "line": 213,
+          "title": "### Acceptance Criteria"
+        },
+        {
+          "line": 228,
+          "title": "### 검증 및 증적"
+        },
+        {
+          "line": 233,
+          "title": "### Dependency"
+        },
+        {
+          "line": 239,
+          "title": "### Decision / Risk Control"
+        },
+        {
+          "line": 244,
+          "title": "### Review / Handoff"
+        },
+        {
+          "line": 250,
+          "title": "## 2026-09-10 — 6차 리뷰 및 AC-05 책임 경계 동기화"
+        },
+        {
+          "line": 252,
+          "title": "### 리뷰 판정"
+        },
+        {
+          "line": 265,
+          "title": "### Acceptance Criteria 상태"
+        },
+        {
+          "line": 276,
+          "title": "### AC-05 책임 경계"
+        },
+        {
+          "line": 290,
+          "title": "### 6차 리뷰 후속 조치"
+        },
+        {
+          "line": 300,
+          "title": "### 비차단·승인 대기 항목"
+        },
+        {
+          "line": 308,
+          "title": "### Completion Record"
+        },
+        {
+          "line": 315,
+          "title": "## 갱신 전 원문 보관"
+        },
+        {
+          "line": 324,
+          "title": "# P1-HBR-01 — Harbor / Trivy Registry"
+        },
+        {
+          "line": 328,
+          "title": "## Notion 데이터 속성"
+        },
+        {
+          "line": 350,
+          "title": "## 이관 기준 및 확인 사항"
+        },
+        {
+          "line": 358,
+          "title": "## 원본 및 변경 출처"
+        },
+        {
+          "line": 366,
+          "title": "## Description — 보관 입력본"
+        },
+        {
+          "line": 370,
+          "title": "### 🎯 User Story"
+        },
+        {
+          "line": 374,
+          "title": "### 📌 Scope"
+        },
+        {
+          "line": 376,
+          "title": "#### In Scope"
+        },
+        {
+          "line": 385,
+          "title": "#### Out of Scope"
+        },
+        {
+          "line": 391,
+          "title": "### 📋 핵심 요구사항"
+        },
+        {
+          "line": 401,
+          "title": "### ✅ Acceptance Criteria"
+        },
+        {
+          "line": 410,
+          "title": "### 🧪 검증 및 증적"
+        },
+        {
+          "line": 415,
+          "title": "### 🔗 Dependency"
+        },
+        {
+          "line": 421,
+          "title": "### ⚖️ Decision / Risk Control"
+        },
+        {
+          "line": 426,
+          "title": "### 🔍 Review / Handoff"
+        },
+        {
+          "line": 432,
+          "title": "## 2026-09-10 — 6차 리뷰 및 AC-05 책임 경계 동기화"
+        },
+        {
+          "line": 434,
+          "title": "### 리뷰 판정"
+        },
+        {
+          "line": 447,
+          "title": "### Acceptance Criteria 상태"
+        },
+        {
+          "line": 458,
+          "title": "### AC-05 책임 경계"
+        },
+        {
+          "line": 472,
+          "title": "### 6차 리뷰 후속 조치"
+        },
+        {
+          "line": 482,
+          "title": "### 비차단·승인 대기 항목"
+        },
+        {
+          "line": 490,
+          "title": "### 📝 Completion Record"
+        }
+      ]
+    },
+    {
+      "id": "N52",
+      "repo": "fds-project-baseline",
+      "path": "tickets/v3.1.21/descriptions/CR-P1-SEC-01-03.md",
+      "commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/0b7e8a0a1a6b920828b7e69e7e16e56016806351/tickets/v3.1.21/descriptions/CR-P1-SEC-01-03.md",
+      "git_blob": "02d5f6955428c687753889396e1a263cb87b4d6a",
+      "content_kind": "FULL_TEXT",
+      "blob_verified": true,
+      "sha256": "748a99385a075e3cfc4aeeaade0321d8ebc42a1785d1aeae1353452248e6edc0",
+      "bytes": 8721,
+      "local_path": "references/N52--CR-P1-SEC-01-03.md",
+      "headings": [
+        {
+          "line": 1,
+          "title": "# CR-P1-SEC-01-03 — B2 source-preservation(#63)의 AC-04 필수 여부 결정 요청"
+        },
+        {
+          "line": 30,
+          "title": "## Source checklist"
+        },
+        {
+          "line": 34,
+          "title": "## Source body snapshot"
+        },
+        {
+          "line": 39,
+          "title": "## 2026-10-02 Change Request 최종 Disposition"
+        },
+        {
+          "line": 50,
+          "title": "## 2026-10-01 AC-04 종결 계약 고도화"
+        },
+        {
+          "line": 52,
+          "title": "### 현재 Review Gate"
+        },
+        {
+          "line": 55,
+          "title": "### Required Path"
+        },
+        {
+          "line": 62,
+          "title": "### Stop / Evidence Rule"
+        },
+        {
+          "line": 67,
+          "title": "### Close"
+        },
+        {
+          "line": 71,
+          "title": "# CR-P1-SEC-01-03 — B2 source-preservation(#63)의 AC-04 필수 여부 결정 요청"
+        },
+        {
+          "line": 73,
+          "title": "## 티켓 속성"
+        },
+        {
+          "line": 95,
+          "title": "## 결정 요청"
+        },
+        {
+          "line": 106,
+          "title": "## 이 요청의 근거 — 그리고 기존 결정과의 관계"
+        },
+        {
+          "line": 112,
+          "title": "## 판정 근거 (B 선택 시)"
+        },
+        {
+          "line": 118,
+          "title": "## 남는 작업 (A/B 어느 쪽이든 필요)"
+        },
+        {
+          "line": 124,
+          "title": "## 영향"
+        },
+        {
+          "line": 132,
+          "title": "## 이 CR이 하지 않는 것"
+        },
+        {
+          "line": 138,
+          "title": "## 확인 요청"
+        },
+        {
+          "line": 143,
+          "title": "## Completion Record"
+        }
+      ]
+    },
+    {
+      "id": "R01",
+      "repo": "fds-project-baseline",
+      "commit": "a47ac7543b18b557707453fe708e8e225d916db6",
+      "path": "governance/handoffs/phase1-parallel-acceptance-20261015/DOC_O01.md",
+      "git_blob": "d9de823c708f1a8eedbb89fe7594cf5ca98cad53",
+      "local_path": "references/R01--DOC_O01.md",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/a47ac7543b18b557707453fe708e8e225d916db6/governance/handoffs/phase1-parallel-acceptance-20261015/DOC_O01.md",
+      "sha256": "a4ad4b2d5669cfcdbfcc4ec802ca51142b30123d9f3f87b3a7b7dfe9a5516fc5",
+      "bytes": 6698,
+      "headings": [
+        {
+          "line": 1,
+          "title": "# 문서 정합화와 O01 제3자 재현 준비"
+        },
+        {
+          "line": 5,
+          "title": "## 1. 기존 문서에 연결할 최신 상태"
+        },
+        {
+          "line": 18,
+          "title": "## 2. O01 실행 준비 카드"
+        },
+        {
+          "line": 31,
+          "title": "### 검토한 기존 오프라인 진입점"
+        },
+        {
+          "line": 45,
+          "title": "## 3. 최종 Freeze 체크"
+        }
+      ],
+      "current_commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "current_blob": "5d22d97114f7462bad41311de77473ccdae2c62f",
+      "tree_verification": "CURRENT_TREE",
+      "same_blob": false,
+      "blob_verified": true,
+      "content_kind": "REUSED_REVIEW_SNAPSHOT",
+      "latest_use": "N38 replaces historical R01"
+    },
+    {
+      "id": "R02",
+      "repo": "fds-project-baseline",
+      "commit": "a47ac7543b18b557707453fe708e8e225d916db6",
+      "path": "governance/handoffs/o01-ac07-correction-probe223-20261015/PROBE223_SESSION.md",
+      "git_blob": "d8a42ff29c58314e9aaadfb0c2ce81016c502ff7",
+      "local_path": "references/R02--PROBE223_SESSION.md",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/a47ac7543b18b557707453fe708e8e225d916db6/governance/handoffs/o01-ac07-correction-probe223-20261015/PROBE223_SESSION.md",
+      "sha256": "4872e63a86e3367a175a4e929b6ac72323fcc0bd7223ec5892b1b1c12a0b8ea7",
+      "bytes": 10355,
+      "headings": [
+        {
+          "line": 1,
+          "title": "# O01 후속 후보 — Probe223 원본 탐색과 오프라인 판독"
+        },
+        {
+          "line": 5,
+          "title": "## 목적과 입력"
+        },
+        {
+          "line": 18,
+          "title": "## 환경과 순서"
+        },
+        {
+          "line": 53,
+          "title": "## 판독 시 유지할 한계"
+        },
+        {
+          "line": 62,
+          "title": "## 시각 기준과 호스트 간 비교 한계"
+        },
+        {
+          "line": 80,
+          "title": "## 중단·복구와 완료 범위"
+        }
+      ],
+      "current_commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "current_blob": "d8a42ff29c58314e9aaadfb0c2ce81016c502ff7",
+      "tree_verification": "CURRENT_TREE",
+      "same_blob": true,
+      "blob_verified": true,
+      "content_kind": "REUSED_REVIEW_SNAPSHOT",
+      "latest_use": "unchanged blob at checked current commit"
+    },
+    {
+      "id": "R03",
+      "repo": "fds-project-baseline",
+      "commit": "a47ac7543b18b557707453fe708e8e225d916db6",
+      "path": "governance/handoffs/o01-ac07-correction-probe223-20261015/README.md",
+      "git_blob": "5729a440da4d8e4aacb3ab2f4c9d2600d82f3889",
+      "local_path": "references/R03--README.md",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/a47ac7543b18b557707453fe708e8e225d916db6/governance/handoffs/o01-ac07-correction-probe223-20261015/README.md",
+      "sha256": "40ea7fcfaed31a6c7d0c8a037e6c7f3b680cc3e6ff24ae4120d037682a2f3277",
+      "bytes": 3593,
+      "headings": [
+        {
+          "line": 1,
+          "title": "# O01 AC07 문서 정정 확인과 Probe223 후속 준비"
+        },
+        {
+          "line": 20,
+          "title": "## 후속 수신·시각 판독 보완"
+        }
+      ],
+      "current_commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "current_blob": "5729a440da4d8e4aacb3ab2f4c9d2600d82f3889",
+      "tree_verification": "CURRENT_TREE",
+      "same_blob": true,
+      "blob_verified": true,
+      "content_kind": "REUSED_REVIEW_SNAPSHOT",
+      "latest_use": "unchanged blob at checked current commit"
+    },
+    {
+      "id": "R04",
+      "repo": "fds-project-baseline",
+      "commit": "a47ac7543b18b557707453fe708e8e225d916db6",
+      "path": "governance/handoffs/phase1-execution-20261010/O02_NOTICE_DRILL_20261014.md",
+      "git_blob": "a0888cb2ed7ec4ae953da03a2ea7b06e8842bf8c",
+      "local_path": "references/R04--O02_NOTICE_DRILL_20261014.md",
+      "url": "https://github.com/321Team/fds-project-baseline/blob/a47ac7543b18b557707453fe708e8e225d916db6/governance/handoffs/phase1-execution-20261010/O02_NOTICE_DRILL_20261014.md",
+      "sha256": "b7356905b61e95b7a141c17551d0e794b9d2903e07deab608d94f3316e87f1eb",
+      "bytes": 16269,
+      "headings": [
+        {
+          "line": 1,
+          "title": "# O02 알림 게시·수신 시험안 — 2026-10-14"
+        },
+        {
+          "line": 5,
+          "title": "## 1. 목적과 기존 실적"
+        },
+        {
+          "line": 14,
+          "title": "## 2. 선택한 방식과 변경 범위"
+        },
+        {
+          "line": 32,
+          "title": "## 3. 작업창 — 오늘 10:00~10:45 KST"
+        },
+        {
+          "line": 50,
+          "title": "## 4. 관리 PC 실행 카드 — 한 단계씩 확인"
+        },
+        {
+          "line": 54,
+          "title": "### A. 시작 전"
+        },
+        {
+          "line": 69,
+          "title": "### B. 실제 대기1개 생성·식별"
+        },
+        {
+          "line": 79,
+          "title": "### C. 실제 경고와 사람 수신"
+        },
+        {
+          "line": 97,
+          "title": "### D. 소유 Run 취소·해소·증적"
+        },
+        {
+          "line": 111,
+          "title": "## 5. 중단·예상 밖 실행·판정"
+        },
+        {
+          "line": 128,
+          "title": "## 6. 검토·채택 및 출처"
+        }
+      ],
+      "current_commit": "0b7e8a0a1a6b920828b7e69e7e16e56016806351",
+      "current_blob": "a0888cb2ed7ec4ae953da03a2ea7b06e8842bf8c",
+      "tree_verification": "CURRENT_TREE",
+      "same_blob": true,
+      "blob_verified": true,
+      "content_kind": "REUSED_REVIEW_SNAPSHOT",
+      "latest_use": "unchanged blob at checked current commit"
+    },
+    {
+      "id": "R05",
+      "repo": "infra-cicd",
+      "commit": "fddc76e1c261cd938f06211b7ed035fdcb32e606",
+      "path": "docs/deploy-native-auth-probe.md",
+      "git_blob": "0f7877cd04842116516ce2397215dca40b8edc0f",
+      "local_path": "references/R05--deploy-native-auth-probe.md",
+      "url": "https://github.com/321Team/infra-cicd/blob/fddc76e1c261cd938f06211b7ed035fdcb32e606/docs/deploy-native-auth-probe.md",
+      "sha256": "a14df304bca66a546b64fc623656482df5153dac5f1bdd85dbff5c4dbdebbf5b",
+      "bytes": 14517,
+      "headings": [
+        {
+          "line": 1,
+          "title": "# CP1 native SA → Runner 인증 진단"
+        },
+        {
+          "line": 9,
+          "title": "## 도입 당시 관측과 진단 범위"
+        },
+        {
+          "line": 18,
+          "title": "## 고정 대상"
+        },
+        {
+          "line": 36,
+          "title": "## Source bundle 계약"
+        },
+        {
+          "line": 60,
+          "title": "## 실행 순서"
+        },
+        {
+          "line": 88,
+          "title": "## Runner 요청과 판정"
+        },
+        {
+          "line": 106,
+          "title": "## 기한·정리·실패 한계"
+        },
+        {
+          "line": 115,
+          "title": "## 검증 근거와 남은 현장 검사"
+        }
+      ],
+      "current_commit": "fddc76e1c261cd938f06211b7ed035fdcb32e606",
+      "current_blob": "0f7877cd04842116516ce2397215dca40b8edc0f",
+      "tree_verification": "CURRENT_HEAD_EQUALS_PREVIOUS_REVIEW",
+      "same_blob": true,
+      "blob_verified": true,
+      "content_kind": "REUSED_REVIEW_SNAPSHOT",
+      "latest_use": "unchanged blob at checked current commit"
+    },
+    {
+      "id": "R06",
+      "repo": "infra-cicd",
+      "commit": "fddc76e1c261cd938f06211b7ed035fdcb32e606",
+      "path": "docs/ac07-rbac-followup-20261014.md",
+      "git_blob": "4178fcd39451f42ebcace21351299d4b077af732",
+      "local_path": "references/R06--ac07-rbac-followup-20261014.md",
+      "url": "https://github.com/321Team/infra-cicd/blob/fddc76e1c261cd938f06211b7ed035fdcb32e606/docs/ac07-rbac-followup-20261014.md",
+      "sha256": "b19aebba8d584c004b107b8fa09c4efc9217812b3be6180353270fbbe6150a1a",
+      "bytes": 6664,
+      "headings": [
+        {
+          "line": 1,
+          "title": "# CICD AC07 RBAC·exec 거부 관측 보완"
+        },
+        {
+          "line": 7,
+          "title": "## 문제와 변경"
+        },
+        {
+          "line": 26,
+          "title": "## 확인된 범위"
+        },
+        {
+          "line": 33,
+          "title": "## 리뷰 후 실행 순서"
+        },
+        {
+          "line": 46,
+          "title": "## AC08 후속 설계 입력"
+        },
+        {
+          "line": 65,
+          "title": "## API 근거"
+        }
+      ],
+      "current_commit": "fddc76e1c261cd938f06211b7ed035fdcb32e606",
+      "current_blob": "4178fcd39451f42ebcace21351299d4b077af732",
+      "tree_verification": "CURRENT_HEAD_EQUALS_PREVIOUS_REVIEW",
+      "same_blob": true,
+      "blob_verified": true,
+      "content_kind": "REUSED_REVIEW_SNAPSHOT",
+      "latest_use": "unchanged blob at checked current commit"
+    },
+    {
+      "id": "R07",
+      "repo": "infra-cicd",
+      "commit": "fddc76e1c261cd938f06211b7ed035fdcb32e606",
+      "path": "docs/o01-ac07-reading-notes-20261015.md",
+      "git_blob": "d3f1daacd99c50a28d6c1ff585e6b182de49db7f",
+      "local_path": "references/R07--o01-ac07-reading-notes-20261015.md",
+      "url": "https://github.com/321Team/infra-cicd/blob/fddc76e1c261cd938f06211b7ed035fdcb32e606/docs/o01-ac07-reading-notes-20261015.md",
+      "sha256": "1f6c844ef66e8f9c40c25bbebdc396151866450bd6469cae3535fa2cced9b57f",
+      "bytes": 6003,
+      "headings": [
+        {
+          "line": 1,
+          "title": "# O01 AC07 고정 증적 판독 보완"
+        },
+        {
+          "line": 5,
+          "title": "## 적용 대상과 원본 보존"
+        },
+        {
+          "line": 15,
+          "title": "## 결함 후보별 대조와 처분"
+        },
+        {
+          "line": 27,
+          "title": "## 복사본에서 사용할 고정 링크"
+        },
+        {
+          "line": 34,
+          "title": "## 봉인 후 승인·인수 이력과 판독 범위"
+        },
+        {
+          "line": 40,
+          "title": "## 재검증과 되돌리기"
+        }
+      ],
+      "current_commit": "fddc76e1c261cd938f06211b7ed035fdcb32e606",
+      "current_blob": "d3f1daacd99c50a28d6c1ff585e6b182de49db7f",
+      "tree_verification": "CURRENT_HEAD_EQUALS_PREVIOUS_REVIEW",
+      "same_blob": true,
+      "blob_verified": true,
+      "content_kind": "REUSED_REVIEW_SNAPSHOT",
+      "latest_use": "unchanged blob at checked current commit"
+    },
+    {
+      "id": "R08",
+      "repo": "infra-cicd",
+      "commit": "fddc76e1c261cd938f06211b7ed035fdcb32e606",
+      "path": "docs/deploy-recovery-plan.md",
+      "git_blob": "ec8cfcd0793f019cdfca987ff8b69562e2b191e7",
+      "local_path": "references/R08--deploy-recovery-plan.md",
+      "url": "https://github.com/321Team/infra-cicd/blob/fddc76e1c261cd938f06211b7ed035fdcb32e606/docs/deploy-recovery-plan.md",
+      "sha256": "adae94b6ca22a6359da52671632cc2b8cd83c6059528d70928225f7a8ac5a514",
+      "bytes": 11154,
+      "headings": [
+        {
+          "line": 1,
+          "title": "# AC09 이전 digest 복구와 현행 이미지 복원 준비"
+        },
+        {
+          "line": 11,
+          "title": "## 계약과 승인 경계"
+        },
+        {
+          "line": 44,
+          "title": "## 실행 전 고정할 입력"
+        },
+        {
+          "line": 71,
+          "title": "## APP/DB 호환성 및 알려진 영향"
+        },
+        {
+          "line": 85,
+          "title": "## 권장 실행 순서 — 아직 승인·예약하지 않음"
+        },
+        {
+          "line": 115,
+          "title": "## 실패·중단·복원"
+        }
+      ],
+      "current_commit": "fddc76e1c261cd938f06211b7ed035fdcb32e606",
+      "current_blob": "ec8cfcd0793f019cdfca987ff8b69562e2b191e7",
+      "tree_verification": "CURRENT_HEAD_EQUALS_PREVIOUS_REVIEW",
+      "same_blob": true,
+      "blob_verified": true,
+      "content_kind": "REUSED_REVIEW_SNAPSHOT",
+      "latest_use": "unchanged blob at checked current commit"
+    },
+    {
+      "id": "R09",
+      "repo": "infra-cicd",
+      "commit": "fddc76e1c261cd938f06211b7ed035fdcb32e606",
+      "path": "docs/deploy-workflow-handoff.md",
+      "git_blob": "055fe42902ad5477e98a234240688399ede50a83",
+      "local_path": "references/R09--deploy-workflow-handoff.md",
+      "url": "https://github.com/321Team/infra-cicd/blob/fddc76e1c261cd938f06211b7ed035fdcb32e606/docs/deploy-workflow-handoff.md",
+      "sha256": "631ed6423c642c0343bfa18de69e75224f161de24a111c99d02964e745391fd2",
+      "bytes": 8321,
+      "headings": [
+        {
+          "line": 1,
+          "title": "# Deploy Workflow와 인증 전달 경로"
+        },
+        {
+          "line": 12,
+          "title": "## 실행 경로와 신뢰 경계"
+        },
+        {
+          "line": 40,
+          "title": "## 현장 준비 — 실행 전 확정할 항목"
+        },
+        {
+          "line": 73,
+          "title": "## 허용된 창의 실행 순서"
+        },
+        {
+          "line": 99,
+          "title": "## 실패·정리·복구"
+        },
+        {
+          "line": 112,
+          "title": "## 검증 범위"
+        }
+      ],
+      "current_commit": "fddc76e1c261cd938f06211b7ed035fdcb32e606",
+      "current_blob": "055fe42902ad5477e98a234240688399ede50a83",
+      "tree_verification": "CURRENT_HEAD_EQUALS_PREVIOUS_REVIEW",
+      "same_blob": true,
+      "blob_verified": true,
+      "content_kind": "REUSED_REVIEW_SNAPSHOT",
+      "latest_use": "unchanged blob at checked current commit"
+    },
+    {
+      "id": "R10",
+      "repo": "infra-monitoring",
+      "commit": "0dd0235b07d44ba7965490e3808e0a67a3bd903b",
+      "path": "docs/RUNBOOK_P1_MON_01_20261002.md",
+      "git_blob": "38fdffa5725def6a035044e4a771338be79d4a25",
+      "local_path": "references/R10--RUNBOOK_P1_MON_01_20261002.md",
+      "url": "https://github.com/321Team/infra-monitoring/blob/0dd0235b07d44ba7965490e3808e0a67a3bd903b/docs/RUNBOOK_P1_MON_01_20261002.md",
+      "sha256": "7a97894dc07b482489267e422435808391206b679e839cba2d64989e62569078",
+      "bytes": 23447,
+      "headings": [
+        {
+          "line": 1,
+          "title": "# P1-MON-01 운영 Runbook — 구축·확인·장애 복구·Rollback·Known Limitation (2026-10-02)"
+        },
+        {
+          "line": 8,
+          "title": "## 0. 공통 전제"
+        },
+        {
+          "line": 17,
+          "title": "## 1. 구성 (2026-10-02 기준)"
+        },
+        {
+          "line": 19,
+          "title": "### 1.1 클러스터 (`monitoring-api`, `monitoring-node`)"
+        },
+        {
+          "line": 35,
+          "title": "### 1.2 monitor01 외부 Watchdog (`10.250.10.30`)"
+        },
+        {
+          "line": 48,
+          "title": "## 2. 구축"
+        },
+        {
+          "line": 50,
+          "title": "### 2.1 클러스터 [검증: 9/22 최초 배포, 9/30~10/2 교체 — evidence#84·#89·#93]"
+        },
+        {
+          "line": 57,
+          "title": "### 2.2 monitor01 [검증: 10/1 Gate F·기동, 10/2 자동 기동 — evidence#91·#94]"
+        },
+        {
+          "line": 65,
+          "title": "## 3. 일상 확인"
+        },
+        {
+          "line": 80,
+          "title": "## 4. 장애 복구 (#17 순서)"
+        },
+        {
+          "line": 84,
+          "title": "### 4.1 Component 중지·복구"
+        },
+        {
+          "line": 95,
+          "title": "### 4.2 PVC 확인·재바인딩 [NOT RUN: 장애 상황 미발생, 정상 상태 조회는 9/29 기록]"
+        },
+        {
+          "line": 117,
+          "title": "### 4.3 Target 재등록 [검증: 9/30 node-exporter collector 변경 후 reload, 10/2 23/23 확인]"
+        },
+        {
+          "line": 123,
+          "title": "### 4.4 Alert Silence·복구 [NOT RUN: 절차만]"
+        },
+        {
+          "line": 130,
+          "title": "### 4.5 Watchdog 정상화"
+        },
+        {
+          "line": 137,
+          "title": "## 5. Rollback"
+        },
+        {
+          "line": 149,
+          "title": "### 5.1 클러스터 객체 되돌리기 [NOT RUN]"
+        },
+        {
+          "line": 169,
+          "title": "## 6. Known Limitation · Known Issue"
+        },
+        {
+          "line": 189,
+          "title": "## 7. 근거"
+        }
+      ],
+      "current_commit": "0dd0235b07d44ba7965490e3808e0a67a3bd903b",
+      "current_blob": "38fdffa5725def6a035044e4a771338be79d4a25",
+      "tree_verification": "CURRENT_TREE",
+      "same_blob": true,
+      "blob_verified": true,
+      "content_kind": "REUSED_REVIEW_SNAPSHOT",
+      "latest_use": "unchanged blob at checked current commit"
+    },
+    {
+      "id": "R11",
+      "repo": "infra-ansible",
+      "commit": "fd5c56624256700e8c2e76f17ebd976b6b553b11",
+      "path": "docs/runbooks/Ansible-CI-Operator-Card.md",
+      "git_blob": "e5a057ed7fe91b2e1e10369411bf293166f51c52",
+      "local_path": "references/R11--Ansible-CI-Operator-Card.md",
+      "url": "https://github.com/321Team/infra-ansible/blob/fd5c56624256700e8c2e76f17ebd976b6b553b11/docs/runbooks/Ansible-CI-Operator-Card.md",
+      "sha256": "59df5e611816bc0dd19c1d912e949ce09fb5d585d20fe35762adf630b3d5805c",
+      "bytes": 6246,
+      "headings": [
+        {
+          "line": 1,
+          "title": "# Ephemeral Runner — 운영자 실행 카드"
+        },
+        {
+          "line": 15,
+          "title": "## queued 조회와 담당 전달"
+        },
+        {
+          "line": 30,
+          "title": "## 인증 대기와 실패 분류"
+        },
+        {
+          "line": 36,
+          "title": "## 회차 증적·인수 필드"
+        }
+      ],
+      "current_commit": "fd5c56624256700e8c2e76f17ebd976b6b553b11",
+      "current_blob": "e5a057ed7fe91b2e1e10369411bf293166f51c52",
+      "tree_verification": "CURRENT_TREE",
+      "same_blob": true,
+      "blob_verified": true,
+      "content_kind": "REUSED_REVIEW_SNAPSHOT",
+      "latest_use": "unchanged blob at checked current commit"
+    },
+    {
+      "id": "R12",
+      "repo": "infra-ansible",
+      "commit": "fd5c56624256700e8c2e76f17ebd976b6b553b11",
+      "path": "docs/runbooks/Ansible-CI-Queue-Alert.md",
+      "git_blob": "40905179046e0afc3cf77e223fd1c0dc95c606c4",
+      "local_path": "references/R12--Ansible-CI-Queue-Alert.md",
+      "url": "https://github.com/321Team/infra-ansible/blob/fd5c56624256700e8c2e76f17ebd976b6b553b11/docs/runbooks/Ansible-CI-Queue-Alert.md",
+      "sha256": "1c4a7ee0875b68504d7b0ec5d48d30dea7c20efa7ec63eb22482a8c54b830bfa",
+      "bytes": 18821,
+      "headings": [
+        {
+          "line": 1,
+          "title": "# Ansible 격리 Job 대기 알림"
+        },
+        {
+          "line": 7,
+          "title": "## 동작과 권한"
+        },
+        {
+          "line": 22,
+          "title": "## 설정과 채택할 값"
+        },
+        {
+          "line": 32,
+          "title": "### 실행 시간과 야간 대응"
+        },
+        {
+          "line": 40,
+          "title": "### hosted 사용량과 활성화 전 확인"
+        },
+        {
+          "line": 54,
+          "title": "### 필수 설정 누락"
+        },
+        {
+          "line": 58,
+          "title": "## 최초 확인 및 실제 인수 순서 (완료 이력 재사용)"
+        },
+        {
+          "line": 75,
+          "title": "## #61에서 #82로 전환·복구"
+        },
+        {
+          "line": 90,
+          "title": "## 상태 변화·실패·중지"
+        },
+        {
+          "line": 102,
+          "title": "## 검증 범위"
+        }
+      ],
+      "current_commit": "fd5c56624256700e8c2e76f17ebd976b6b553b11",
+      "current_blob": "40905179046e0afc3cf77e223fd1c0dc95c606c4",
+      "tree_verification": "CURRENT_TREE",
+      "same_blob": true,
+      "blob_verified": true,
+      "content_kind": "REUSED_REVIEW_SNAPSHOT",
+      "latest_use": "unchanged blob at checked current commit"
+    },
+    {
+      "id": "R13",
+      "repo": "infra-monitoring",
+      "commit": "0dd0235b07d44ba7965490e3808e0a67a3bd903b",
+      "path": "docs/GRAFANA_ACCESS_LEDGER_20261009.md",
+      "git_blob": "4cb8c915775714723583772a9edc27659060b659",
+      "local_path": "references/R13--GRAFANA_ACCESS_LEDGER_20261009.md",
+      "url": "https://github.com/321Team/infra-monitoring/blob/0dd0235b07d44ba7965490e3808e0a67a3bd903b/docs/GRAFANA_ACCESS_LEDGER_20261009.md",
+      "sha256": "4d1f0d8335af0298ffaaa504d47731fad9906c82101f779e2c4a88f6c647daca",
+      "bytes": 11788,
+      "headings": [
+        {
+          "line": 1,
+          "title": "# Grafana 관리·비상 접근 기록 — 2026-10-09"
+        },
+        {
+          "line": 7,
+          "title": "## 1. 경로별 확인 상태"
+        },
+        {
+          "line": 21,
+          "title": "## 2. Lead 인계 입력 — 비밀값 없이 작성"
+        },
+        {
+          "line": 36,
+          "title": "## 3. 후속 확인의 실행 경계"
+        },
+        {
+          "line": 44,
+          "title": "## 4. 09:40 KST 참조 관계 보완 — 값 비수집"
+        },
+        {
+          "line": 56,
+          "title": "## 근거"
+        }
+      ],
+      "current_commit": "0dd0235b07d44ba7965490e3808e0a67a3bd903b",
+      "current_blob": "4cb8c915775714723583772a9edc27659060b659",
+      "tree_verification": "CURRENT_TREE",
+      "same_blob": true,
+      "blob_verified": true,
+      "content_kind": "REUSED_REVIEW_SNAPSHOT",
+      "latest_use": "unchanged blob at checked current commit"
+    }
+  ],
+  "p0_mapping": {
+    "path": "references/P0_32_MAPPING_SNAPSHOT.md",
+    "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-central-followup-20261015\\FREEZE_DECISION_MATRIX.md",
+    "sha256": "c6a8dd2a5f00702a890bca0a560bc4ec27691d45fa8844e8cac94f61cda6dbb6",
+    "rows": 32,
+    "status": "historical mapping reused; new decisions supplied as scoped overlay"
+  }
+}

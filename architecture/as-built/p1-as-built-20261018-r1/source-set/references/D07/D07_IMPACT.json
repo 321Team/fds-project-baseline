@@ -1,0 +1,123 @@
+{
+  "prepared_at_kst": "2026-10-16T18:02:07.898040+09:00",
+  "mode": "ONE_LOGICAL_DEFECT_ROW_LOCAL_READTHROUGH_ONLY",
+  "logical_row": {
+    "ID": "D-07",
+    "Owner": "이재환(APP Lead)",
+    "first_recheck": "APP 최종 인수 판정 직전",
+    "fix_due_date": null,
+    "p2_transfer": null,
+    "risk_acceptance_expiry": null,
+    "Severity": "Major",
+    "P1_code_change": "NONE_SELECTED",
+    "remaining_risk": "음수 이력에 의한 R07 합계 감소 가능성; 실제 음수 저장/후속 미탐 NOT_RUN",
+    "runtime_db01_constraints": "NOT_VERIFIED",
+    "I01": "Separate Minor, unchanged",
+    "existing_critical0_regression_defect_approval": "PRESERVED_PER_LEAD6206804605_AND_PR38",
+    "lead_management_fields": "CONFIRMED_IN_RECEIVED_REPLY",
+    "central_final_adoption": "NOT_PERFORMED_BY_DOC / separate central decision",
+    "external_issue_body_write": "NOT_PERFORMED",
+    "whole_APP_or_Phase1_acceptance": "NOT_DETERMINED_BY_THIS_TASK"
+  },
+  "source_authority": "https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-6211817978",
+  "source_body_sha256": "2a3b47629ec36f92258b314545902eeb9ec400c75e1617818a1787689bdfc107",
+  "source_row_sha256": "3f5de9224aea8d7a92108eb4f1d8b4f72ab55296db15fd9318a579dd1847d515",
+  "existing_form_sources": [
+    "https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-5980751335",
+    "https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-5981501458"
+  ],
+  "scoped_readthrough_locations": [
+    {
+      "source": "../acceptance-ready-20261016/KNOWN_ISSUE_HANDOFF.md",
+      "source_sha256": "4763e0ddb33846e91f38270eef79b4326da826bbe318c5f4350a2881a73ef83a",
+      "line": 24,
+      "before": "| APP 독립 음수 금액 Major 후보 | PR38 §2.3에 기록. 실제 음수 저장·후속 미탐 NOT_RUN, 서버 검증 미구현 | 정식 결함 ID·결함 Owner·Due·최종 처리 판단 미확정. 이재환이 APP Lead라는 사실만으로 새 결함 배정을 만들지 않음 |",
+      "D07_only_supplement": "D-07 / Owner 이재환(APP Lead) / 첫 재검토 APP 최종 인수 판정 직전 확정. 수정 완료기한·P2 이관·위험수용 만료일은 지정하지 않음. Major·P1 코드 무수정·잔여위험·NOT_RUN/NOT_VERIFIED 및 I01 별도 유지. 중앙 최종 채택/외부 반영·전체 인수는 별도.",
+      "original_edited": false,
+      "other_rows_or_claims_not_rejudged": true
+    },
+    {
+      "source": "../acceptance-ready-20261016/DECISION_TABLE.md",
+      "source_sha256": "f94024389db11ba016272b205d54d281ef13476f1ac3228960bb9b69332ebd85",
+      "line": 13,
+      "before": "| A3 | [Known Issue 인계 후보](KNOWN_ISSUE_HANDOFF.md)의 확인된 소유자·유효 조건은 재사용하고 빠진 공식 결함 책임/완료조건만 확정 | SEC30·D02·Grafana의 기존 처분, APP I01/독립 Major 잔여, 중앙의 기술 작업 목록 | 기존 각 책임자 및 이권욱(통합). 항목별 풀네임 Owner·Due 또는 승인된 재검토 조건·잔여위험·소비 대상 기록. 없는 날짜/승인을 채우지 않음 |",
+      "D07_only_supplement": "D-07의 ID·Owner·첫 재검토 추가 회신 대기는 해소. A3 전체 Known Issue 인계는 완료 판정하지 않음. D-07 / Owner 이재환(APP Lead) / 첫 재검토 APP 최종 인수 판정 직전 확정. 수정 완료기한·P2 이관·위험수용 만료일은 지정하지 않음. Major·P1 코드 무수정·잔여위험·NOT_RUN/NOT_VERIFIED 및 I01 별도 유지. 중앙 최종 채택/외부 반영·전체 인수는 별도.",
+      "original_edited": false,
+      "other_rows_or_claims_not_rejudged": true
+    },
+    {
+      "source": "../acceptance-ready-20261016/P1_DOC_01_FINAL_CANDIDATE.md",
+      "source_sha256": "02012e1b65335e2c3ec3838ccf607476c3781dbfd2b71ae6ca0e5b87d98b5110",
+      "line": 91,
+      "before": "- [Known Issue 인계 후보](KNOWN_ISSUE_HANDOFF.md)의 기존 SEC30·D02·Grafana 조건을 재사용한다. APP I01/독립 Major 및 다른 담당의 기술 잔여는 문서 병합과 별개다.",
+      "D07_only_supplement": "D-07 / Owner 이재환(APP Lead) / 첫 재검토 APP 최종 인수 판정 직전 확정. 수정 완료기한·P2 이관·위험수용 만료일은 지정하지 않음. Major·P1 코드 무수정·잔여위험·NOT_RUN/NOT_VERIFIED 및 I01 별도 유지. 중앙 최종 채택/외부 반영·전체 인수는 별도.",
+      "original_edited": false,
+      "other_rows_or_claims_not_rejudged": true
+    },
+    {
+      "source": "../acceptance-ready-20261016/FINAL_HANDOFF.md",
+      "source_sha256": "1f131741c588cb174262e8b3250ac8de8b6341fb988c1dd0203480e3bfde5311",
+      "line": 29,
+      "before": "- **기존 APP 책임 범위:** §5–7 정정 제안의 처리 범위와 현행 버전 반영/리뷰, 제품 잔여의 공식 처분. 정식 Major Owner/Due는 이 후보에서 배정하지 않았다.",
+      "D07_only_supplement": "D-07의 공식 ID·Owner·첫 재검토는 6211817978에서 Lead가 확정했다. DOC가 새 배정한 것이 아니며 수정 완료기한은 미지정. 다른 담당 범위 및 최종 인수는 그대로 유지.",
+      "original_edited": false,
+      "other_rows_or_claims_not_rejudged": true
+    },
+    {
+      "source": "../acceptance-ready-20261016/REVIEW_OUTPUT.json",
+      "source_sha256": "66ea12761a5587c4a4e6e5b66667293fdab9318ced2333fe3d502cf91bd0d9d6",
+      "json_pointer": "/rows/8",
+      "record_id": "P1-APP-01",
+      "before_D07_related": {
+        "Status": "D04 정상 소비·D03 기존 한정 판단 재사용. APP38 입력 규약 문서 승인·병합 완료. 전체 인수 별도",
+        "Blocker": "I01 Minor/P1 코드 유지·독립 음수 금액 Major 후보·전체 Critical0/Regression/Defect 처분 잔여. §5–7 문서 정정 별도",
+        "Owner": "이재환",
+        "owner_state": "기존 APP Lead. 새 Major 결함의 공식 Owner 배정과 구분",
+        "Due": null,
+        "due_state": "이번 DOC 작업에서 새 Due를 만들지 않음. 기존 승인 일정·조건 보존.",
+        "#32 Close 영향": "문서 대기는 해소. 제품 잔여의 공식 처리/인계와 전체 인수는 계속 필요"
+      },
+      "D07_only_supplement": "D-07 / Owner 이재환(APP Lead) / 첫 재검토 APP 최종 인수 판정 직전 확정. 수정 완료기한·P2 이관·위험수용 만료일은 지정하지 않음. Major·P1 코드 무수정·잔여위험·NOT_RUN/NOT_VERIFIED 및 I01 별도 유지. 중앙 최종 채택/외부 반영·전체 인수는 별도. 기존 Critical0·Regression/Defect 승인은 6206804605·PR38에 따라 유지하며 새 승인 대기나 재요청으로 해석하지 않음.",
+      "original_edited": false,
+      "other_rows_or_claims_not_rejudged": true
+    },
+    {
+      "source": "../acceptance-ready-20261016/REVIEW_OUTPUT.json",
+      "source_sha256": "66ea12761a5587c4a4e6e5b66667293fdab9318ced2333fe3d502cf91bd0d9d6",
+      "json_pointer": "/rows/13",
+      "record_id": "P1-E2E-01",
+      "before_D07_related": {
+        "Status": "기존 정상 E2E 소비 유지. APP38 문서 완료와 E2E 전체 인수 구분",
+        "Blocker": "D04 정상 입력을 전체 회귀·Critical0·결함 종결로 확대할 수 없음. 담당 전체 인수/유효 처분 잔여",
+        "Owner": "이재환",
+        "owner_state": "기존 APP/E2E Lead 범위, 새로운 결함 배정 아님",
+        "Due": null,
+        "due_state": "이번 DOC 작업에서 새 Due를 만들지 않음. 기존 승인 일정·조건 보존.",
+        "#32 Close 영향": "APP/E2E 최종 판정과 미완료 인계가 필요. 정상 POST 재요구는 없음"
+      },
+      "D07_only_supplement": "D-07 / Owner 이재환(APP Lead) / 첫 재검토 APP 최종 인수 판정 직전 확정. 수정 완료기한·P2 이관·위험수용 만료일은 지정하지 않음. Major·P1 코드 무수정·잔여위험·NOT_RUN/NOT_VERIFIED 및 I01 별도 유지. 중앙 최종 채택/외부 반영·전체 인수는 별도. 기존 Critical0·Regression/Defect 승인은 6206804605·PR38에 따라 유지하며 새 승인 대기나 재요청으로 해석하지 않음.",
+      "original_edited": false,
+      "other_rows_or_claims_not_rejudged": true
+    }
+  ],
+  "separate_central_decisions": [
+    "Adopt/connect D-07 management values to the existing #20 ledger; do not duplicate issue.",
+    "Consume named residual and first-recheck trigger for final acceptance/handoff; existing APP approvals stay valid, overall acceptance is separate."
+  ],
+  "not_new_approval_requests": [
+    "Severity",
+    "Critical0",
+    "Regression/Defect approval",
+    "P1 code unchanged",
+    "amount>0 / Z-offset document rules"
+  ],
+  "APP39": "Approved5545291060 received; merge not consumed by this task",
+  "actions": {
+    "external_writes": 0,
+    "PR_or_publication": 0,
+    "server_actions": 0,
+    "product_tests": 0,
+    "F1_F2_or_completed_document_rereviews": 0,
+    "shared_record_edits": 0
+  }
+}

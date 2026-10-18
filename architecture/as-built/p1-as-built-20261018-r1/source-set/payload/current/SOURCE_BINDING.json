@@ -1,0 +1,130 @@
+{
+  "prepared_at_kst": "2026-10-16T18:07:36.584662+09:00",
+  "mode": "SEPARATE_CURRENT_FACTS_CANDIDATE_NO_ARCHITECTURE_ADOPTION",
+  "original_three_files": [
+    {
+      "source": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-candidate/P1_AS_BUILT_CANDIDATE.md",
+      "relative_candidate": "P1_AS_BUILT_CANDIDATE.md",
+      "sha256": "6108ef73a402850b80d52cb656ade6c5239305e8d2e882ee35009b200909cf3c",
+      "bytes": 10073
+    },
+    {
+      "source": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-candidate/candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "relative_candidate": "candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "sha256": "ef8a3c43428123cf7945496e493ca94c18d033d0c64c8e679fa8698cc5278927",
+      "bytes": 2495
+    },
+    {
+      "source": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/as-built-candidate/candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "relative_candidate": "candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "sha256": "f28d7d469609810059da3d3bf4eb960c243313644929099482271fe864660922",
+      "bytes": 1454
+    }
+  ],
+  "original_decision_card": {
+    "source": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/AS_BUILT_DECISION_CARD.md",
+    "sha256": "82b4a5a8097a8d4ccc48c12118752e8367a2cf19f53b29630142a50158c07c13",
+    "bytes": 4067
+  },
+  "consumed_existing_receipts": [
+    {
+      "source": "deliverables/phase1-central-control-20261015/ANSIBLE_ROLE185_FINAL_HANDOFF_CENTRAL_20261016.json",
+      "copy": "references/ANSIBLE_ROLE185_FINAL_HANDOFF_CENTRAL.json",
+      "sha256": "d7c1fbb8efbbc4f608afcfed05f23786233d67956f5de6f89014e9757d2fd53e",
+      "bytes": 9913
+    },
+    {
+      "source": "deliverables/phase1-central-control-20261015/ANSIBLE_POST_PASS_HANDOFF_CENTRAL_20261016.json",
+      "copy": "references/ANSIBLE_POST_PASS_HANDOFF_CENTRAL.json",
+      "sha256": "7185297864be34d82d29fa0d3552a909af2f0ff8027b49221861f82e82ebe117",
+      "bytes": 8329
+    },
+    {
+      "source": "deliverables/phase1-central-control-20261015/ansible-role185-remediated-execution-20261016/RESULT_CENTRAL_VERIFICATION.json",
+      "copy": "references/ANSIBLE_RESULT_CENTRAL_VERIFICATION.json",
+      "sha256": "b4b1dd45c35492ef9bf7727021ac0390f198bf9354b3b395f3384938f0d854fe",
+      "bytes": 4241
+    },
+    {
+      "source": "deliverables/p1-ansible-role-evidence-20261015/role185-fixture-remediation-20261016/runtime-20261016-continuous/FINAL_HANDOFF.md",
+      "copy": "references/ANSIBLE_RUNTIME_FINAL_HANDOFF.md",
+      "sha256": "bd64738a8cd2f14aeb000dd5765a629c8f62dbd15c96652c8c85e0dc386c0cb9",
+      "bytes": 4808
+    },
+    {
+      "source": "deliverables/p1-ansible-role-evidence-20261015/role185-fixture-remediation-20261016/post-pass-handoff-20261016/ONE_PAGE_HANDOFF.md",
+      "copy": "references/ANSIBLE_POST_PASS_ONE_PAGE_HANDOFF.md",
+      "sha256": "e68e599658c4d24acd8a2b1310dfc0dfeee482e57de026ebb501a762035c52c7",
+      "bytes": 7319
+    },
+    {
+      "source": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/d02-final-linkage-20261016/D02_IMPACT_ROWS.json",
+      "copy": "references/D02_IMPACT_ROWS.json",
+      "sha256": "36b60b1b7c289a07249eb4a9890ff0d06533bcb13b7007ace15fa0b38257aaf3",
+      "bytes": 20680
+    },
+    {
+      "source": "deliverables/phase1-central-control-20261015/D07_REPLY_LINKAGE_CENTRAL_ACCEPTANCE_20261016.json",
+      "copy": "references/D07_CENTRAL_ACCEPTANCE.json",
+      "sha256": "3889d7c5fb630462fceeeb5336d987ac03b225a0142f3a8a71fd80316143cdf1",
+      "bytes": 5504
+    },
+    {
+      "source": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/defect-d07-reply-linkage-20261016/references/COMMENT_6211817978.json",
+      "copy": "references/D07_LEAD_REPLY.json",
+      "sha256": "f0292a53f4e9591e56b01df56c36354b21cd626d62ab3ffa7ac55119122e2e84",
+      "bytes": 4245
+    },
+    {
+      "source": "deliverables/p1-app-final-disposition-20261015/contract-sections5-7-publication-20261016/merge-20261016/MERGE_RECEIPT.json",
+      "copy": "references/APP39_MERGE_RECEIPT.json",
+      "sha256": "7f70e38932776ac3d5fa4b1e95c943c19b1a608f8353492134b863e6150c0a8a",
+      "bytes": 739
+    },
+    {
+      "source": "deliverables/p1-app-final-disposition-20261015/contract-sections5-7-publication-20261016/merge-20261016/CI_RECEIPT.json",
+      "copy": "references/APP39_CI_RECEIPT.json",
+      "sha256": "0ee0d01bf037388a4d95c113ee270645a1358ed539a4476e25ecaa8e524b4c98",
+      "bytes": 1986
+    },
+    {
+      "source": "deliverables/phase1-central-control-20261015/HARBOR_EFFECT_FULL_REVIEW_CENTRAL_20261016.json",
+      "copy": "references/HARBOR_EFFECT_FULL_REVIEW_CENTRAL.json",
+      "sha256": "3a755d3469cbe8eb6b7f549d50da6f86730c6686429a69b89c18865a4129ae03",
+      "bytes": 5637
+    },
+    {
+      "source": "deliverables/phase1-central-control-20261015/HARBOR_BUILD_EXPIRY_READINESS_CENTRAL_20261016.json",
+      "copy": "references/HARBOR_BUILD_EXPIRY_READINESS_CENTRAL.json",
+      "sha256": "a0225950f6484d80fe341c7b0dc98976dd68c155da85bb26b169e7efb7e4224c",
+      "bytes": 6610
+    },
+    {
+      "source": "deliverables/phase1-central-control-20261015/HARBOR_CORE_METADATA_CENTRAL_20261016.json",
+      "copy": "references/HARBOR_CORE_METADATA_CENTRAL.json",
+      "sha256": "a00c0ef95e451a0c2951b3e687e457f70566cece172e7862243103e6b774bd1b",
+      "bytes": 1500
+    },
+    {
+      "source": "deliverables/p1-harbor-review-publication-20261015/effect-contract-remediation-20261016/official-image-binding-20261016/HANDOFF.md",
+      "copy": "references/HARBOR_OFFICIAL_IMAGE_HANDOFF.md",
+      "sha256": "dde7bca5434db9177cf67247da00e5a432d6b21779da4390dcdb6fff58461299",
+      "bytes": 2086
+    },
+    {
+      "source": "deliverables/p1-harbor-review-publication-20261015/effect-contract-remediation-20261016/official-image-binding-20261016/BINDING_RESULT.json",
+      "copy": "references/HARBOR_OFFICIAL_IMAGE_BINDING.json",
+      "sha256": "95dad8324dfcbba2709d9e8c75191d26e16468a240020dd7424c708eece2d544",
+      "bytes": 1415
+    }
+  ],
+  "no_new_source_search_or_remote_get": true,
+  "product_tests_or_CI_repeated": false,
+  "APP39_final_package_not_assumed": true,
+  "official_version": null,
+  "repository_destination": null,
+  "publication_format": null,
+  "architecture_approval": false,
+  "DOC_freeze": false,
+  "whole_acceptance": false
+}

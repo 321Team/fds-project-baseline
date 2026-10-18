@@ -1,0 +1,15 @@
+{
+  "method": "1px arc-length sampling of existing SVG paths in isolated Chromium; node interior inset 2px; supporting check, not a substitute for visual review",
+  "at_kst": "2026-10-16 19:28:03 KST",
+  "results": [
+    {
+      "file": "proposal-layout-constraints/logical.svg",
+      "sha256": "a45c0fe005db339625f6ddc8f470eaa6bbe46589a888cea24c8eac97f9375d85",
+      "visible_edges": 22,
+      "nodes": 21,
+      "unrelated_node_edge_intersections": [],
+      "edge_label_node_intersections": [],
+      "edge_label_pair_intersections": []
+    }
+  ]
+}

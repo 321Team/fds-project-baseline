@@ -1,0 +1,32 @@
+{
+  "source": "proposal-layout-constraints/logical.png",
+  "crops": [
+    {
+      "file": "final-label-inspection.png",
+      "box": {
+        "left": 1000,
+        "top": 450,
+        "width": 850,
+        "height": 350
+      }
+    },
+    {
+      "file": "final-left-inspection.png",
+      "box": {
+        "left": 0,
+        "top": 500,
+        "width": 1500,
+        "height": 1180
+      }
+    },
+    {
+      "file": "final-right-inspection.png",
+      "box": {
+        "left": 1432,
+        "top": 500,
+        "width": 1500,
+        "height": 1180
+      }
+    }
+  ]
+}

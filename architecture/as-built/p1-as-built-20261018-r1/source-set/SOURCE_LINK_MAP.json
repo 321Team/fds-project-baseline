@@ -1,0 +1,920 @@
+{
+  "at_kst": "2026-10-16 20:23:51 KST",
+  "scope": "Active review entry links and core-source direct links checked locally. Historical preserved source links are separately mapped to their original context; no remote fetch or recursive source re-review.",
+  "active_review_links": [
+    {
+      "from": "HANDOFF.md",
+      "target": "ADOPTION_DECISION_CARD.md",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\ADOPTION_DECISION_CARD.md",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "HANDOFF.md",
+      "target": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\P1_AS_BUILT_CANDIDATE.md",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "HANDOFF.md",
+      "target": "RENDER_ADOPTION_ADDENDUM.md",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\RENDER_ADOPTION_ADDENDUM.md",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "HANDOFF.md",
+      "target": "payload/current/render-validation-20261016/proposal-layout-constraints/P1_LOGICAL_LAYOUT_PROPOSAL.mmd",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\render-validation-20261016\\proposal-layout-constraints\\P1_LOGICAL_LAYOUT_PROPOSAL.mmd",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "HANDOFF.md",
+      "target": "payload/current/render-validation-20261016/proposal-layout-constraints/logical.svg",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\render-validation-20261016\\proposal-layout-constraints\\logical.svg",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "HANDOFF.md",
+      "target": "payload/current/candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\candidate\\architecture\\P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "HANDOFF.md",
+      "target": "payload/current/render-validation-20261016/physical.svg",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\render-validation-20261016\\physical.svg",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "HANDOFF.md",
+      "target": "RENDERER_DEPENDENCIES.md",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\RENDERER_DEPENDENCIES.md",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "HANDOFF.md",
+      "target": "D07_LINKAGE.md",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\D07_LINKAGE.md",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "HANDOFF.md",
+      "target": "ADOPTION_MANIFEST.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\ADOPTION_MANIFEST.json",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "HANDOFF.md",
+      "target": "PACKAGE_CHECKS.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\PACKAGE_CHECKS.json",
+      "exists": true,
+      "generated_below": true
+    },
+    {
+      "from": "HANDOFF.md",
+      "target": "FINAL_BINDING.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\FINAL_BINDING.json",
+      "exists": true,
+      "generated_below": true
+    },
+    {
+      "from": "HANDOFF.md",
+      "target": "../../A1_UPDATED_DECISION_CARD.md",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\A1_UPDATED_DECISION_CARD.md",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "HANDOFF.md",
+      "target": "RENDER_ADOPTION_ADDENDUM.md",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\RENDER_ADOPTION_ADDENDUM.md",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "HANDOFF.md",
+      "target": "ADOPTION_DECISION_CARD.md",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\ADOPTION_DECISION_CARD.md",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "HANDOFF.md",
+      "target": "DECISION_FIELDS.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\DECISION_FIELDS.json",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "HANDOFF.md",
+      "target": "references/D07/D07_LEDGER_ROW.md",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\references\\D07\\D07_LEDGER_ROW.md",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "HANDOFF.md",
+      "target": "SOURCE_LINK_MAP.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\SOURCE_LINK_MAP.json",
+      "exists": true,
+      "generated_below": true
+    },
+    {
+      "from": "ADOPTION_DECISION_CARD.md",
+      "target": "ADOPTION_MANIFEST.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\ADOPTION_MANIFEST.json",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "ADOPTION_DECISION_CARD.md",
+      "target": "references/D07/D07_LEDGER_ROW.md",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\references\\D07\\D07_LEDGER_ROW.md",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "ADOPTION_DECISION_CARD.md",
+      "target": "references/ARCHITECTURE_RULE.md",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\references\\ARCHITECTURE_RULE.md",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "ADOPTION_DECISION_CARD.md",
+      "target": "DECISION_FIELDS.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\DECISION_FIELDS.json",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "ADOPTION_DECISION_CARD.md",
+      "target": "HANDOFF.md",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\HANDOFF.md",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "RENDER_ADOPTION_ADDENDUM.md",
+      "target": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\P1_AS_BUILT_CANDIDATE.md",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "RENDER_ADOPTION_ADDENDUM.md",
+      "target": "../../A1_UPDATED_DECISION_CARD.md",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\A1_UPDATED_DECISION_CARD.md",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "RENDER_ADOPTION_ADDENDUM.md",
+      "target": "payload/current/render-validation-20261016/SOURCE_SEMANTICS_CHECK.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\render-validation-20261016\\SOURCE_SEMANTICS_CHECK.json",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "RENDER_ADOPTION_ADDENDUM.md",
+      "target": "payload/current/render-validation-20261016/PROPOSAL_GEOMETRY_REVIEW.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\render-validation-20261016\\PROPOSAL_GEOMETRY_REVIEW.json",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "RENDER_ADOPTION_ADDENDUM.md",
+      "target": "payload/current/render-validation-20261016/VISUAL_REVIEW.md",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\render-validation-20261016\\VISUAL_REVIEW.md",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "D07_LINKAGE.md",
+      "target": "../../../defect-d07-reply-linkage-20261016/D07_LEDGER_ROW.md",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\D07_LEDGER_ROW.md",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "D07_LINKAGE.md",
+      "target": "references/D07/D07_LEDGER_ROW.md",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\references\\D07\\D07_LEDGER_ROW.md",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "D07_LINKAGE.md",
+      "target": "references/D07/FINAL_BINDING.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\references\\D07\\FINAL_BINDING.json",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "D07_LINKAGE.md",
+      "target": "https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-6211817978",
+      "type": "external_or_anchor_not_requeried"
+    },
+    {
+      "from": "D07_LINKAGE.md",
+      "target": "https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-5980751335",
+      "type": "external_or_anchor_not_requeried"
+    },
+    {
+      "from": "D07_LINKAGE.md",
+      "target": "https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-5981501458",
+      "type": "external_or_anchor_not_requeried"
+    },
+    {
+      "from": "D07_LINKAGE.md",
+      "target": "references/D07/FINAL_HANDOFF.md",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\references\\D07\\FINAL_HANDOFF.md",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "RENDERER_DEPENDENCIES.md",
+      "target": "payload/current/render-validation-20261016/proposal-layout-constraints/render-proposal.cjs",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\render-validation-20261016\\proposal-layout-constraints\\render-proposal.cjs",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "RENDERER_DEPENDENCIES.md",
+      "target": "payload/current/render-validation-20261016/proposal-layout-constraints/RENDER_CONFIG.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\render-validation-20261016\\proposal-layout-constraints\\RENDER_CONFIG.json",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "RENDERER_DEPENDENCIES.md",
+      "target": "payload/current/render-validation-20261016/proposal-layout-constraints/RENDER_RECEIPT.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\render-validation-20261016\\proposal-layout-constraints\\RENDER_RECEIPT.json",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "RENDERER_DEPENDENCIES.md",
+      "target": "payload/current/render-validation-20261016/proposal-layout-constraints/RENDERER_ASSET_MANIFEST.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\render-validation-20261016\\proposal-layout-constraints\\RENDERER_ASSET_MANIFEST.json",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\candidate\\architecture\\P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\candidate\\architecture\\P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "../as-built-candidate/P1_AS_BUILT_CANDIDATE.md",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\as-built-candidate\\P1_AS_BUILT_CANDIDATE.md",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "SOURCE_BINDING.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\SOURCE_BINDING.json",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "../../SOURCE_INDEX.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\SOURCE_INDEX.json",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "../../FINAL_HEAD_READBACK.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\FINAL_HEAD_READBACK.json",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "https://github.com/321Team/fds-project-baseline/issues/16#issuecomment-6190258707",
+      "type": "external_or_anchor_not_requeried"
+    },
+    {
+      "from": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "references/ANSIBLE_RUNTIME_FINAL_HANDOFF.md",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\references\\ANSIBLE_RUNTIME_FINAL_HANDOFF.md",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "references/ANSIBLE_ROLE185_FINAL_HANDOFF_CENTRAL.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\references\\ANSIBLE_ROLE185_FINAL_HANDOFF_CENTRAL.json",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "references/ANSIBLE_POST_PASS_HANDOFF_CENTRAL.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\references\\ANSIBLE_POST_PASS_HANDOFF_CENTRAL.json",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6208668917",
+      "type": "external_or_anchor_not_requeried"
+    },
+    {
+      "from": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "references/D02_IMPACT_ROWS.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\references\\D02_IMPACT_ROWS.json",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "https://github.com/321Team/fds-msa/pull/39",
+      "type": "external_or_anchor_not_requeried"
+    },
+    {
+      "from": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "references/APP39_MERGE_RECEIPT.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\references\\APP39_MERGE_RECEIPT.json",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "references/APP39_CI_RECEIPT.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\references\\APP39_CI_RECEIPT.json",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-6211817978",
+      "type": "external_or_anchor_not_requeried"
+    },
+    {
+      "from": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "references/D07_CENTRAL_ACCEPTANCE.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\references\\D07_CENTRAL_ACCEPTANCE.json",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "references/HARBOR_EFFECT_FULL_REVIEW_CENTRAL.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\references\\HARBOR_EFFECT_FULL_REVIEW_CENTRAL.json",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "references/HARBOR_BUILD_EXPIRY_READINESS_CENTRAL.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\references\\HARBOR_BUILD_EXPIRY_READINESS_CENTRAL.json",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "references/HARBOR_CORE_METADATA_CENTRAL.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\references\\HARBOR_CORE_METADATA_CENTRAL.json",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "references/HARBOR_OFFICIAL_IMAGE_BINDING.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\payload\\current\\references\\HARBOR_OFFICIAL_IMAGE_BINDING.json",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6208668917",
+      "type": "external_or_anchor_not_requeried"
+    },
+    {
+      "from": "references/D07/D07_LEDGER_ROW.md",
+      "target": "FINAL_HANDOFF.md",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\references\\D07\\FINAL_HANDOFF.md",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "references/D07/D07_LEDGER_ROW.md",
+      "target": "https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-6206804605",
+      "type": "external_or_anchor_not_requeried"
+    },
+    {
+      "from": "references/D07/D07_LEDGER_ROW.md",
+      "target": "https://github.com/321Team/fds-msa/pull/38",
+      "type": "external_or_anchor_not_requeried"
+    },
+    {
+      "from": "references/D07/FINAL_HANDOFF.md",
+      "target": "https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-6211314367",
+      "type": "external_or_anchor_not_requeried"
+    },
+    {
+      "from": "references/D07/FINAL_HANDOFF.md",
+      "target": "https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-6211817978",
+      "type": "external_or_anchor_not_requeried"
+    },
+    {
+      "from": "references/D07/FINAL_HANDOFF.md",
+      "target": "../app-contract-sections5-7-ready-20261016/references/BASE_CONTRACT.md",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\references\\app-contract-sections5-7-ready-20261016\\references\\BASE_CONTRACT.md",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "references/D07/FINAL_HANDOFF.md",
+      "target": "D07_IMPACT.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\references\\D07\\D07_IMPACT.json",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "references/D07/FINAL_HANDOFF.md",
+      "target": "https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-5980751335",
+      "type": "external_or_anchor_not_requeried"
+    },
+    {
+      "from": "references/D07/FINAL_HANDOFF.md",
+      "target": "https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-5981501458",
+      "type": "external_or_anchor_not_requeried"
+    },
+    {
+      "from": "references/D07/FINAL_HANDOFF.md",
+      "target": "D07_LEDGER_ROW.md",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\references\\D07\\D07_LEDGER_ROW.md",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "references/D07/FINAL_HANDOFF.md",
+      "target": "SOURCE_BINDING.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\references\\D07\\SOURCE_BINDING.json",
+      "exists": true,
+      "generated_below": false
+    },
+    {
+      "from": "references/D07/FINAL_HANDOFF.md",
+      "target": "FINAL_BINDING.json",
+      "type": "local",
+      "resolved": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\adoption-ready-package-20261016\\references\\D07\\FINAL_BINDING.json",
+      "exists": true,
+      "generated_below": false
+    }
+  ],
+  "historical_snapshot_links": [
+    {
+      "snapshot": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\candidate\\architecture\\P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": true,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\candidate\\architecture\\P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": true,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "../as-built-candidate/P1_AS_BUILT_CANDIDATE.md",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-candidate\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": true,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "SOURCE_BINDING.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\SOURCE_BINDING.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": true,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "../../SOURCE_INDEX.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\SOURCE_INDEX.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": true,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "../../FINAL_HEAD_READBACK.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\FINAL_HEAD_READBACK.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": true,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "references/ANSIBLE_RUNTIME_FINAL_HANDOFF.md",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\ANSIBLE_RUNTIME_FINAL_HANDOFF.md",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": true,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "references/ANSIBLE_ROLE185_FINAL_HANDOFF_CENTRAL.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\ANSIBLE_ROLE185_FINAL_HANDOFF_CENTRAL.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": true,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "references/ANSIBLE_POST_PASS_HANDOFF_CENTRAL.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\ANSIBLE_POST_PASS_HANDOFF_CENTRAL.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": true,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "references/D02_IMPACT_ROWS.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\D02_IMPACT_ROWS.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": true,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "references/APP39_MERGE_RECEIPT.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\APP39_MERGE_RECEIPT.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": true,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "references/APP39_CI_RECEIPT.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\APP39_CI_RECEIPT.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": true,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "references/D07_CENTRAL_ACCEPTANCE.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\D07_CENTRAL_ACCEPTANCE.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": true,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "references/HARBOR_EFFECT_FULL_REVIEW_CENTRAL.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\HARBOR_EFFECT_FULL_REVIEW_CENTRAL.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": true,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "references/HARBOR_BUILD_EXPIRY_READINESS_CENTRAL.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\HARBOR_BUILD_EXPIRY_READINESS_CENTRAL.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": true,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "references/HARBOR_CORE_METADATA_CENTRAL.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\HARBOR_CORE_METADATA_CENTRAL.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": true,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/P1_AS_BUILT_CANDIDATE.md",
+      "target": "references/HARBOR_OFFICIAL_IMAGE_BINDING.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\references\\HARBOR_OFFICIAL_IMAGE_BINDING.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": true,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/references/ANSIBLE_POST_PASS_ONE_PAGE_HANDOFF.md",
+      "target": "../runtime-20261016-continuous/FINAL_HANDOFF.md",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\p1-ansible-role-evidence-20261015\\role185-fixture-remediation-20261016\\post-pass-handoff-20261016\\ONE_PAGE_HANDOFF.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\p1-ansible-role-evidence-20261015\\role185-fixture-remediation-20261016\\runtime-20261016-continuous\\FINAL_HANDOFF.md",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": false,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/references/ANSIBLE_POST_PASS_ONE_PAGE_HANDOFF.md",
+      "target": "SOURCE_REFERENCES.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\p1-ansible-role-evidence-20261015\\role185-fixture-remediation-20261016\\post-pass-handoff-20261016\\ONE_PAGE_HANDOFF.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\p1-ansible-role-evidence-20261015\\role185-fixture-remediation-20261016\\post-pass-handoff-20261016\\SOURCE_REFERENCES.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": false,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/references/ANSIBLE_POST_PASS_ONE_PAGE_HANDOFF.md",
+      "target": "EXACT_INPUTS_AND_AC.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\p1-ansible-role-evidence-20261015\\role185-fixture-remediation-20261016\\post-pass-handoff-20261016\\ONE_PAGE_HANDOFF.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\p1-ansible-role-evidence-20261015\\role185-fixture-remediation-20261016\\post-pass-handoff-20261016\\EXACT_INPUTS_AND_AC.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": false,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/references/ANSIBLE_POST_PASS_ONE_PAGE_HANDOFF.md",
+      "target": "EXACT_INPUTS_AND_AC.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\p1-ansible-role-evidence-20261015\\role185-fixture-remediation-20261016\\post-pass-handoff-20261016\\ONE_PAGE_HANDOFF.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\p1-ansible-role-evidence-20261015\\role185-fixture-remediation-20261016\\post-pass-handoff-20261016\\EXACT_INPUTS_AND_AC.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": false,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/references/ANSIBLE_POST_PASS_ONE_PAGE_HANDOFF.md",
+      "target": "IMPACT_ROWS.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\p1-ansible-role-evidence-20261015\\role185-fixture-remediation-20261016\\post-pass-handoff-20261016\\ONE_PAGE_HANDOFF.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\p1-ansible-role-evidence-20261015\\role185-fixture-remediation-20261016\\post-pass-handoff-20261016\\IMPACT_ROWS.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": false,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/references/HARBOR_OFFICIAL_IMAGE_HANDOFF.md",
+      "target": "FINDINGS.md",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\p1-harbor-review-publication-20261015\\effect-contract-remediation-20261016\\official-image-binding-20261016\\HANDOFF.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\p1-harbor-review-publication-20261015\\effect-contract-remediation-20261016\\official-image-binding-20261016\\FINDINGS.md",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": false,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/references/HARBOR_OFFICIAL_IMAGE_HANDOFF.md",
+      "target": "COLLECTION_RESULT.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\p1-harbor-review-publication-20261015\\effect-contract-remediation-20261016\\official-image-binding-20261016\\HANDOFF.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\p1-harbor-review-publication-20261015\\effect-contract-remediation-20261016\\official-image-binding-20261016\\COLLECTION_RESULT.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": false,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/references/HARBOR_OFFICIAL_IMAGE_HANDOFF.md",
+      "target": "BINDING_RESULT.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\p1-harbor-review-publication-20261015\\effect-contract-remediation-20261016\\official-image-binding-20261016\\HANDOFF.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\p1-harbor-review-publication-20261015\\effect-contract-remediation-20261016\\official-image-binding-20261016\\BINDING_RESULT.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": false,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/references/HARBOR_OFFICIAL_IMAGE_HANDOFF.md",
+      "target": "INPUT_BINDINGS.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\p1-harbor-review-publication-20261015\\effect-contract-remediation-20261016\\official-image-binding-20261016\\HANDOFF.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\p1-harbor-review-publication-20261015\\effect-contract-remediation-20261016\\official-image-binding-20261016\\INPUT_BINDINGS.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": false,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/current/references/HARBOR_OFFICIAL_IMAGE_HANDOFF.md",
+      "target": "FINAL_BINDING.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\p1-harbor-review-publication-20261015\\effect-contract-remediation-20261016\\official-image-binding-20261016\\HANDOFF.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\p1-harbor-review-publication-20261015\\effect-contract-remediation-20261016\\official-image-binding-20261016\\FINAL_BINDING.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": false,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "references/D07/D07_LEDGER_ROW.md",
+      "target": "FINAL_HANDOFF.md",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\D07_LEDGER_ROW.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\FINAL_HANDOFF.md",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": true,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "references/D07/FINAL_HANDOFF.md",
+      "target": "../app-contract-sections5-7-ready-20261016/references/BASE_CONTRACT.md",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\FINAL_HANDOFF.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\app-contract-sections5-7-ready-20261016\\references\\BASE_CONTRACT.md",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": true,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "references/D07/FINAL_HANDOFF.md",
+      "target": "D07_IMPACT.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\FINAL_HANDOFF.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\D07_IMPACT.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": true,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "references/D07/FINAL_HANDOFF.md",
+      "target": "D07_LEDGER_ROW.md",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\FINAL_HANDOFF.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\D07_LEDGER_ROW.md",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": true,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "references/D07/FINAL_HANDOFF.md",
+      "target": "SOURCE_BINDING.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\FINAL_HANDOFF.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\SOURCE_BINDING.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": true,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "references/D07/FINAL_HANDOFF.md",
+      "target": "FINAL_BINDING.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\FINAL_HANDOFF.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\defect-d07-reply-linkage-20261016\\FINAL_BINDING.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": true,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/as-built-candidate/P1_AS_BUILT_CANDIDATE.md",
+      "target": "candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-candidate\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-candidate\\candidate\\architecture\\P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": false,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/as-built-candidate/P1_AS_BUILT_CANDIDATE.md",
+      "target": "candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-candidate\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-candidate\\candidate\\architecture\\P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": false,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/as-built-candidate/P1_AS_BUILT_CANDIDATE.md",
+      "target": "../references/ROUND33.md",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-candidate\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\references\\ROUND33.md",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": false,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/as-built-candidate/P1_AS_BUILT_CANDIDATE.md",
+      "target": "../references/PHASE1_REMAINING_WORK_20261016.md",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-candidate\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\references\\PHASE1_REMAINING_WORK_20261016.md",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": false,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/as-built-candidate/P1_AS_BUILT_CANDIDATE.md",
+      "target": "../APP_LINKAGE.md",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-candidate\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\APP_LINKAGE.md",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": false,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/as-built-candidate/P1_AS_BUILT_CANDIDATE.md",
+      "target": "../../sec30-adopted-linkage-20261016/README.md",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-candidate\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\sec30-adopted-linkage-20261016\\README.md",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": false,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/as-built-candidate/P1_AS_BUILT_CANDIDATE.md",
+      "target": "../../SOURCE_INDEX.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-candidate\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\SOURCE_INDEX.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": true,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    },
+    {
+      "snapshot": "payload/as-built-candidate/P1_AS_BUILT_CANDIDATE.md",
+      "target": "../../FINAL_HEAD_READBACK.json",
+      "source_origin": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-candidate\\P1_AS_BUILT_CANDIDATE.md",
+      "canonical_target": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\FINAL_HEAD_READBACK.json",
+      "canonical_target_exists": true,
+      "packaged_relative_target_exists": true,
+      "scope": "Historical source link retained verbatim; not an instruction to re-review or republish its dependency tree."
+    }
+  ],
+  "external_links_freshness": "NOT_REQUERIED"
+}

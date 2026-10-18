@@ -1,0 +1,39 @@
+%% CODEX_ASSISTED; Version: 20261015-CANDIDATE; NOT APPROVED / NOT RELEASED
+%% Placement inherited from approved D-ARC-01 v3.1.2; no fresh host inventory.
+%% Scoped observations and missing fields: ../../P1_AS_BUILT_CANDIDATE.md
+flowchart TB
+  NOTE["Physical placement candidate / inherited design plus scoped evidence / final review pending"]
+  LAN["VMnet0 / Physical 10.1.93.0/24"]
+  MGMT["VMnet1 / Management 10.250.10.0/24"]
+  subgraph S01["server01 / Windows 10.1.93.23 / inherited placement"]
+    MGW["mgmt-gw01 / .58 + 10.250.10.1"]
+    ANS["ansible01 / 10.250.10.10"]
+    RUN["cicd-runner01 / 10.250.10.20"]
+    MON["monitor01 / 10.250.10.30"]
+    LB["API LB / .109"]
+    DNS1["dns01 / .52"]
+  end
+  S02["server02 Windows .30 / control01 .102"]
+  S03["server03 Windows .31 / control02 .103"]
+  S04["server04 Windows .22 / control03 .104"]
+  S05["server05 Windows .26 / worker01 .105"]
+  S06["server06 Windows .24 / worker02 .107"]
+  S07["server07 Windows .25 / worker03 .108 / MON local PV observed 10-02"]
+  S08["server08 Windows .29 / edge .50; Harbor .54; DB .55; dns02 .53"]
+  NOTE --- LAN
+  LAN --- MGW
+  LAN --- LB
+  LAN --- DNS1
+  LAN --- S02
+  LAN --- S03
+  LAN --- S04
+  LAN --- S05
+  LAN --- S06
+  LAN --- S07
+  LAN --- S08
+  MGMT --- MGW
+  MGMT --- ANS
+  MGMT --- RUN
+  MGMT --- MON
+  BOUNDARY["No FDS workload NIC on VMnet8 / internal source NAT prohibited / management return route via .58 / Phase2 VPN excluded"]
+  BOUNDARY --- LAN

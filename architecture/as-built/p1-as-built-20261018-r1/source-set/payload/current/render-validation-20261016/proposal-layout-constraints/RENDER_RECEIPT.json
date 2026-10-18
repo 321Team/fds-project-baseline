@@ -1,0 +1,139 @@
+{
+  "started_at_kst": "2026-10-16 19:27:56 KST",
+  "command": [
+    "C:\\Users\\soldesk\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+    "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\proposal-layout-constraints\\render-proposal.cjs"
+  ],
+  "cwd": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\as-built-current-facts-20261016\\render-validation-20261016\\proposal-layout-constraints",
+  "mode": "LOCAL_EXISTING_BUNDLE_ONLY",
+  "source_preservation_before": [
+    {
+      "path": "./P1_LOGICAL_LAYOUT_PROPOSAL.mmd",
+      "sha256": "829890b4125006812b739ca87fbfe68c4a614e1198706c34e8015420a4340e9a",
+      "bytes": 2710
+    },
+    {
+      "path": "../../candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "sha256": "3093735816f09f1234d1e3b4a2ae0c2109e70ce773b705a76d74c52d4ff696b5",
+      "bytes": 2581
+    },
+    {
+      "path": "../../candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "sha256": "f28d7d469609810059da3d3bf4eb960c243313644929099482271fe864660922",
+      "bytes": 1454
+    },
+    {
+      "path": "../../P1_AS_BUILT_CANDIDATE.md",
+      "sha256": "4c746a65cb58c4fe772d57fe37a1031c8aa72aaf9b6d81541b92f81e029d6a59",
+      "bytes": 13716
+    },
+    {
+      "path": "../../FINAL_BINDING.json",
+      "sha256": "c73b14b5d9cb15f247ff1a15cdc84bea70f068a279fe923e80e7391e0f32240d",
+      "bytes": 9445
+    }
+  ],
+  "diagrams": [
+    {
+      "name": "logical",
+      "source": "./P1_LOGICAL_LAYOUT_PROPOSAL.mmd",
+      "source_sha256": "829890b4125006812b739ca87fbfe68c4a614e1198706c34e8015420a4340e9a",
+      "width": 2932,
+      "height": 1680,
+      "node_count": 21,
+      "expected_node_count": 21,
+      "edge_count": 22,
+      "expected_edge_count": 22,
+      "label_shape_overflow_count": 0,
+      "files": [
+        {
+          "path": "logical.svg",
+          "sha256": "a45c0fe005db339625f6ddc8f470eaa6bbe46589a888cea24c8eac97f9375d85",
+          "bytes": 60608
+        },
+        {
+          "path": "logical.png",
+          "sha256": "9a1a416018188f2366c92153350b21b880bf89d58615ae960743936098a35aab",
+          "bytes": 227151
+        },
+        {
+          "path": "logical-overview.png",
+          "sha256": "2ca3549ff214698d23d92455e2382e5425434540a977f17e929338765a0f58b9",
+          "bytes": 167381
+        },
+        {
+          "path": "logical-geometry.json",
+          "sha256": "994870ee39713b0f6a8bf9c0c38eb0d023bcbfe531122d4a6bc4829a28323ca8",
+          "bytes": 25223
+        }
+      ],
+      "parse_render": "PASS"
+    }
+  ],
+  "status": "RENDER_COMPLETE_VISUAL_REVIEW_PENDING",
+  "renderer": {
+    "layout_adjustment": {
+      "edge": "PM -> MGW",
+      "label": "remote write; observed source worker03 .108",
+      "translate_svg_units": [
+        160,
+        12
+      ],
+      "reason": "Separate label from EDGE -> WK label without changing content or edge geometry"
+    },
+    "mermaid_version": "11.17.0",
+    "version_source": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\infoDiagram-RXCK75RN-2T6V4JS2.js",
+    "version_source_sha256": "1863f91a1e3585d80b6fc626ef665fdd586f30449dd17c800a88709c807967d0",
+    "module": "C:\\Users\\soldesk\\AppData\\Local\\Programs\\Microsoft VS Code\\7debcd0e2a\\resources\\app\\extensions\\markdown-language-features\\markdown-editor-out\\mermaid.core-S5KCHHL2.js",
+    "module_sha256": "537eeee78e7978252c8dd8c7f31c508c334bfd4ee59de8eb5b6f5826a74ae03a",
+    "vscode_version": "1.138.0",
+    "node_version": "v24.19.0",
+    "playwright_version": "1.62.1",
+    "chromium_version": "155.0.8059.80",
+    "chromium_executable": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+    "config_path": "RENDER_CONFIG.json",
+    "config_sha256": "03e8d93d7f8029793be59f6008c71799c2daac71933a2486376da7103a47c337"
+  },
+  "rc": 0,
+  "finished_at_kst": "2026-10-16 19:27:57 KST",
+  "external_requests_blocked": [],
+  "browser_messages": [],
+  "source_preservation_after": [
+    {
+      "path": "./P1_LOGICAL_LAYOUT_PROPOSAL.mmd",
+      "sha256": "829890b4125006812b739ca87fbfe68c4a614e1198706c34e8015420a4340e9a",
+      "bytes": 2710,
+      "after_sha256": "829890b4125006812b739ca87fbfe68c4a614e1198706c34e8015420a4340e9a",
+      "unchanged": true
+    },
+    {
+      "path": "../../candidate/architecture/P1_LOGICAL_AS_BUILT_20261015.mmd",
+      "sha256": "3093735816f09f1234d1e3b4a2ae0c2109e70ce773b705a76d74c52d4ff696b5",
+      "bytes": 2581,
+      "after_sha256": "3093735816f09f1234d1e3b4a2ae0c2109e70ce773b705a76d74c52d4ff696b5",
+      "unchanged": true
+    },
+    {
+      "path": "../../candidate/architecture/P1_PHYSICAL_AS_BUILT_20261015.mmd",
+      "sha256": "f28d7d469609810059da3d3bf4eb960c243313644929099482271fe864660922",
+      "bytes": 1454,
+      "after_sha256": "f28d7d469609810059da3d3bf4eb960c243313644929099482271fe864660922",
+      "unchanged": true
+    },
+    {
+      "path": "../../P1_AS_BUILT_CANDIDATE.md",
+      "sha256": "4c746a65cb58c4fe772d57fe37a1031c8aa72aaf9b6d81541b92f81e029d6a59",
+      "bytes": 13716,
+      "after_sha256": "4c746a65cb58c4fe772d57fe37a1031c8aa72aaf9b6d81541b92f81e029d6a59",
+      "unchanged": true
+    },
+    {
+      "path": "../../FINAL_BINDING.json",
+      "sha256": "c73b14b5d9cb15f247ff1a15cdc84bea70f068a279fe923e80e7391e0f32240d",
+      "bytes": 9445,
+      "after_sha256": "c73b14b5d9cb15f247ff1a15cdc84bea70f068a279fe923e80e7391e0f32240d",
+      "unchanged": true
+    }
+  ],
+  "asset_manifest_sha256": "6310c6f77def1db1fdd40a119019029947ee141b692697380434448c2e1f2ddb"
+}

@@ -1,0 +1,119 @@
+{
+  "at_kst": "2026-10-16T17:33:25.496201+09:00",
+  "status": "EXACT_LOCAL_TECHNICAL_REVIEW_ACCEPTED_RUNTIME_HOLD",
+  "binding_sha256": "1c421703c31f2f1d33345cb8bff808a3790938d1c7b2a3900c963c92dc3a72e1",
+  "verified_inputs_outputs": [
+    {
+      "path": "reviews/phase1-harbor-effect-remediation-review-20261016/part2/REVIEW.md",
+      "bytes": 10326,
+      "sha256": "169d10d22803542a58f13fa0b34b1f107ad3753d438779348364d3a98ad4122c"
+    },
+    {
+      "path": "reviews/phase1-harbor-effect-remediation-review-20261016/part2/FINDINGS.json",
+      "bytes": 3653,
+      "sha256": "e65a8fbb91bbfbd449031ab9f685d1abdcd410cd099cf6b7bc2345a78405b62e"
+    },
+    {
+      "path": "reviews/phase1-harbor-effect-remediation-review-20261016/part2/CURRENT_TASK.md",
+      "bytes": 7300,
+      "sha256": "fb4aa555176e907006aacb84bfe119aded96bfdaf436ab83183e0740c2f8407a"
+    },
+    {
+      "path": "reviews/phase1-harbor-effect-remediation-review-20261016/part2/INPUT_AND_PIN_AUDIT.json",
+      "bytes": 4154,
+      "sha256": "53151fc7651d62fff723d9bfc281ca0ff36f76916a380ba9d1487b34e5d777b4"
+    },
+    {
+      "path": "reviews/phase1-harbor-effect-remediation-review-20261016/part2/REVIEWED_PART2_DELTA.diff",
+      "bytes": 19053,
+      "sha256": "f0701f0eeec64868191bbf00d44c4a343571a206f9879f92a265521ebfe3f3b7"
+    },
+    {
+      "path": "reviews/phase1-harbor-effect-remediation-review-20261016/part2/audit_part2.py",
+      "bytes": 5703,
+      "sha256": "48962667b472cd7c71372c5c8f453847327a0e16bfec05e0cb06b931483286a7"
+    },
+    {
+      "path": "reviews/phase1-harbor-effect-remediation-review-20261016/part2/finalize_review.py",
+      "bytes": 3942,
+      "sha256": "ac42222db1d9df4490ba998e5597da9e8ef715d5911375a360660719c8afcd93"
+    },
+    {
+      "path": "deliverables/p1-harbor-review-publication-20261015/effect-contract-remediation-20261016/candidate/rotation-orchestration/effect_contract.py",
+      "bytes": 5223,
+      "sha256": "b8fae5ad0ad7935d2ad5f6d8771d41d526c2982755aac59a06323a3c0816ddef"
+    },
+    {
+      "path": "deliverables/p1-harbor-review-publication-20261015/effect-contract-remediation-20261016/candidate/rotation-orchestration/orch_contract.py",
+      "bytes": 8689,
+      "sha256": "f9c54a40fa64764a8d216532f9dc0e5edfb3e5056cccbf2dc74aebdbeceb02ec"
+    },
+    {
+      "path": "deliverables/p1-harbor-review-publication-20261015/effect-contract-remediation-20261016/candidate/rotation-orchestration/orch_endpoint.py",
+      "bytes": 15332,
+      "sha256": "b1a613cc106373c24f5de97a31798ea799ef1f62f1c649f9be9538d87ab0c9fa"
+    },
+    {
+      "path": "deliverables/p1-harbor-review-publication-20261015/effect-contract-remediation-20261016/candidate/baseline_diagnostic.py",
+      "bytes": 19937,
+      "sha256": "2400b6f38843ee1cf4cb085b51cabd5c4409df555559d9f2be0b9f6f2164e134"
+    },
+    {
+      "path": "deliverables/p1-harbor-review-publication-20261015/effect-contract-remediation-20261016/candidate/prepare_diagnostic.py",
+      "bytes": 2439,
+      "sha256": "811954c678890e4b639eb3f0aac8d7679e9bb77239492191cdc87b321425d225"
+    },
+    {
+      "path": "deliverables/p1-harbor-review-publication-20261015/effect-contract-remediation-20261016/candidate/public-deployment-preparation/public_deploy.py",
+      "bytes": 20991,
+      "sha256": "8066181c76cfc728136b4d411b7958b8c89868aac216442d0c2d4050c29b3dec"
+    },
+    {
+      "path": "deliverables/p1-harbor-review-publication-20261015/effect-contract-remediation-20261016/candidate/rotation-orchestration/prepare_commands.py",
+      "bytes": 3878,
+      "sha256": "c45fc8e10ae10d8114ab96e30c6de730b2f6f2c6a10a7cf242f37e8ae2f3077e"
+    },
+    {
+      "path": "deliverables/p1-harbor-review-publication-20261015/effect-contract-remediation-20261016/candidate/rotation-orchestration/orch_launch.py",
+      "bytes": 3618,
+      "sha256": "c4e67ac7e58b4f94f8792d085d4e179cd98af6d3e4b562a73726f1c206918a9e"
+    },
+    {
+      "path": "deliverables/p1-harbor-review-publication-20261015/effect-contract-remediation-20261016/candidate/rotation-orchestration/orchestration-manifest.json",
+      "bytes": 571,
+      "sha256": "9a24696c98daf1a6a2fe929f4a9eea7483446c1c67823bace96f60aa323debcc"
+    },
+    {
+      "path": "deliverables/p1-harbor-review-publication-20261015/effect-contract-remediation-20261016/FINAL_BINDING.json",
+      "bytes": 1596,
+      "sha256": "e768127839f9b5b32f4ecbae3dca6b35d00bfa56dcc38ddb016ffdf895207472"
+    },
+    {
+      "path": "deliverables/p1-harbor-review-publication-20261015/effect-contract-remediation-20261016/ARTIFACT_MANIFEST.json",
+      "bytes": 10494,
+      "sha256": "87b3042085fe1850e4f3c6b6f7e5ac53e40071de32442c52bf5ce6ad1c0695e0"
+    },
+    {
+      "path": "deliverables/p1-harbor-review-publication-20261015/effect-contract-remediation-20261016/effect-contract-candidate.patch",
+      "bytes": 32723,
+      "sha256": "dadd35380ef8e1ef980c648be5a3d644b1d0880ffe2ac12d6791d1c9df8d8248"
+    },
+    {
+      "path": "reviews/phase1-harbor-effect-remediation-review-20261016/PART1_BINDING.json",
+      "bytes": 3937,
+      "sha256": "246c8cde45aeb537049e7d371774abd6c118550a5537fb3e3c2b89c82b01a67f"
+    }
+  ],
+  "reviewer_test_runs": 0,
+  "author_saved_model_cases_audited": 16,
+  "code_blockers": [],
+  "runtime_conditions": [
+    "exact current build and serializer",
+    "reviewed real profile",
+    "expired oldID2 recovery boundary",
+    "actual standalone diagnostic helper/context delivery when appropriate"
+  ],
+  "human_approval": false,
+  "runtime_go": false,
+  "candidate_changes": 0
+}

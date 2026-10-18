@@ -1,0 +1,93 @@
+{
+  "captured_at_kst": "2026-10-16T17:59:36.194970+09:00",
+  "scope": "D07_REPLY_ONLY",
+  "sources": [
+    {
+      "path": "deliverables/phase1-central-control-20261015/followup-check-20261016-175610/comments20.json",
+      "sha256": "d7278722b32958eead45f673cd248daaafadc6fb84bb5ef011c0288525267749",
+      "bytes": 6726
+    },
+    {
+      "path": "deliverables/phase1-central-control-20261015/followup-check-20261016-175610/SUMMARY.json",
+      "sha256": "4f88deaeb56c00d5ada88ae260223cccf0628451936dd1a7feb16c56e0054396",
+      "bytes": 9006
+    },
+    {
+      "path": "deliverables/p1-app-final-disposition-20261015/defect-registration-ready-20261016/REGISTRATION_AND_ACCEPTANCE.md",
+      "sha256": "b8fb9f67fd4ddf9224174bab9509e7281ea648ccdb2055b67b6e9a485d2006eb",
+      "bytes": 6173
+    },
+    {
+      "path": "deliverables/p1-app-final-disposition-20261015/defect-registration-ready-20261016/references/ledger-comment-5980751335.json",
+      "sha256": "3b1e543f5e0cfeeb906974116cabed83802181a5cf06f37ae20088d0155efafc",
+      "bytes": 9988
+    },
+    {
+      "path": "deliverables/p1-app-final-disposition-20261015/defect-registration-ready-20261016/references/ledger-comment-5981501458.json",
+      "sha256": "d48fed8033ab62aff8dd8e85bf91951cc78c54af3f13e1808195c606f29b7536",
+      "bytes": 10455
+    },
+    {
+      "path": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/app-contract-sections5-7-ready-20261016/references/BASE_CONTRACT.md",
+      "sha256": "512bdca10164aa43bb137638f35fbb5157cc92c7e21bcd3684d07f055af6b6e1",
+      "bytes": 11924
+    },
+    {
+      "path": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/app38-final-linkage-20261016/APP38_IMPACT_ROWS.json",
+      "sha256": "058649496456f3a0987cba1166c1db2c422b32a97e6bbbaf44d0b9d89e1b8803",
+      "bytes": 19778
+    },
+    {
+      "path": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/acceptance-ready-20261016/KNOWN_ISSUE_HANDOFF.md",
+      "sha256": "4763e0ddb33846e91f38270eef79b4326da826bbe318c5f4350a2881a73ef83a",
+      "bytes": 6277
+    },
+    {
+      "path": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/acceptance-ready-20261016/DECISION_TABLE.md",
+      "sha256": "f94024389db11ba016272b205d54d281ef13476f1ac3228960bb9b69332ebd85",
+      "bytes": 5104
+    },
+    {
+      "path": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/acceptance-ready-20261016/REVIEW_OUTPUT.json",
+      "sha256": "66ea12761a5587c4a4e6e5b66667293fdab9318ced2333fe3d502cf91bd0d9d6",
+      "bytes": 54346
+    },
+    {
+      "path": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/acceptance-ready-20261016/P1_DOC_01_FINAL_CANDIDATE.md",
+      "sha256": "02012e1b65335e2c3ec3838ccf607476c3781dbfd2b71ae6ca0e5b87d98b5110",
+      "bytes": 9026
+    },
+    {
+      "path": "deliverables/o01-scope-finalization-20261015/final-source-integration-20261016/acceptance-ready-20261016/FINAL_HANDOFF.md",
+      "sha256": "1f131741c588cb174262e8b3250ac8de8b6341fb988c1dd0203480e3bfde5311",
+      "bytes": 3786
+    }
+  ],
+  "comments": [
+    {
+      "id": 6211314367,
+      "author": "GWONUK",
+      "created_at": "2026-10-16T08:24:22Z",
+      "updated_at": "2026-10-16T08:24:22Z",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-6211314367",
+      "body_sha256_utf8_exact": "6f23f981907a0d6049f71f4c398e4db4aea04755a6421831a41ebc459549ab5e"
+    },
+    {
+      "id": 6211817978,
+      "author": "supreme33-kr",
+      "created_at": "2026-10-16T08:52:26Z",
+      "updated_at": "2026-10-16T08:52:26Z",
+      "url": "https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-6211817978",
+      "body_sha256_utf8_exact": "2a3b47629ec36f92258b314545902eeb9ec400c75e1617818a1787689bdfc107"
+    }
+  ],
+  "central_observed_at_kst": "2026-10-16T17:56:10.920363+09:00",
+  "current_issue20_body_D07_present": false,
+  "APP39_guard": {
+    "approved_review": 5545291060,
+    "approved_head": "9589230853f9fb491f3b4dc0412c22a513338ef5",
+    "status_as_of_central_snapshot": "OPEN / approved / merged=false",
+    "merge_not_consumed": true,
+    "live_merge_recheck_this_task": false
+  }
+}

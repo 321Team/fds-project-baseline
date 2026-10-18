@@ -1,0 +1,18 @@
+{
+  "at_kst": "2026-10-16 19:32:25 KST",
+  "status": "PASS",
+  "original_logical_source_is_unchanged_prefix": true,
+  "added_lines_only_layout_constraints": [
+    "EXP ~~~ API",
+    "HBR ~~~ LB",
+    "RUN ~~~ PM",
+    "DB ~~~ HBR"
+  ],
+  "rendered_node_labels_equal": true,
+  "rendered_visible_edge_ids_equal": true,
+  "rendered_edge_label_text_equal_after_whitespace_normalization": true,
+  "nodes": 21,
+  "visible_edges": 22,
+  "invisible_layout_constraints": 4,
+  "architecture_value_or_label_wording_change": false
+}
