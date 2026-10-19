@@ -31,7 +31,7 @@ CICD의 독립 리뷰 범위도 최종 결정대로 보존한다. PR219의 실�
 
 Grafana 위험 소유·기록 보관/집계는 이권욱, 사용 기록 검토는 Phase 1 최종 인수 전 SEC 이하영이다. C1의 5종 트리거(ClusterIP 외 노출, 상시 PF 신설, 팀원 변경/이탈, 사본 유출 의심, Worker 셸 접근자의 보고된 E1 보유 3명 밖 확대)와 재검토·미래 회전의 PARTIAL 복구/세션 검증 조건은 확정 처분 원문을 따른다. 접근자가 3명뿐이거나 모든 접근에 클러스터 자격증명이 필수라고 단정하지 않는다.
 
-**O01/Freeze의 정확한 잔여:** F1은 Architecture/As-built·Test/Evidence Index·전체 핵심 Runbook의 최종 제출 목록과 Source/Version, 실제 형상 차이·유효 Change/Known Issue 연결의 확정이다. F2는 AC07·Probe223·O02의 기존 재사용 범위와 미대응 핵심 절을 요구에 대응한 DOC Review 판정이다. 특히 [MON Runbook 고정본](https://github.com/321Team/infra-monitoring/blob/0dd0235b07d44ba7965490e3808e0a67a3bd903b/docs/RUNBOOK_P1_MON_01_20261002.md)의 §4.2 PVC 재바인딩·§4.4 Silence·§5.1 객체 Rollback 및 §5 미실행 행은 문서화와 실제 재현을 구분해 판단해야 한다. NOT_RUN을 전수 현장시험의 새 필수조건으로 바꾸지 않는다. F1/F2, 다른 필수 인수 입력·미해결 책임, 문서 Critical0·Version/Source·Review 및 인계가 남아 **O01 전체·DOC Freeze·문서 Critical0는 미판정**이다. 아래 기존 Freeze 조건은 그대로 적용한다.
+**O01/Freeze의 정확한 잔여:** F1은 Architecture/As-built·Test/Evidence Index·전체 핵심 Runbook의 최종 제출 목록과 Source/Version, 실제 형상 차이·유효 Change/Known Issue 연결의 확정이다. F2는 AC07·Probe223·O02의 기존 재사용 범위와 미대응 핵심 절을 요구에 대응한 DOC Review 판정이다. 특히 [MON Runbook 현재 소비본](https://github.com/321Team/infra-monitoring/blob/466d29e995a1a7e97f3d8ed09015250282a34dfe/docs/RUNBOOK_P1_MON_01_20261002.md)의 §4.2 PVC 재바인딩·§4.4 Silence·§5.1 객체 Rollback 및 §5 미실행 행은 문서화와 실제 재현을 구분해 판단해야 한다. NOT_RUN을 전수 현장시험의 새 필수조건으로 바꾸지 않는다. F1/F2, 다른 필수 인수 입력·미해결 책임, 문서 Critical0·Version/Source·Review 및 인계가 남아 **O01 전체·DOC Freeze·문서 Critical0는 미판정**이다. 아래 기존 Freeze 조건은 그대로 적용한다.
 
 ## 2. O01 실행 준비 카드
 
@@ -84,3 +84,13 @@ python -B evidence/P1-CICD-01/ac07-native-runtime-20261014/verify.py
 
 이 기록은 S08 수신 범위만 최신화한다. F1 문서군과 F2 전체 절의 최종 버전/범위 Review, 다른 원천 인수·Known Issue 및 Critical 문서결함0 판단을 대신하지 않는다. CODEX_ASSISTED · 문서 수신 연결.
 <!-- o01-s08-human-review-20261016:end -->
+
+<!-- o01-mon-source-reconciliation-20261019:start -->
+## MON 원천 버전 정합 — 2026-10-19 KST
+
+현재 문서 소비 원천은 infra-monitoring `466d29e995a1a7e97f3d8ed09015250282a34dfe`의 Runbook이다. 위 S08 회신의 `0dd0235b`는 당시 검토 입력으로 그대로 보존한다. 두 버전의 §3에는 edge 확인 행이 추가됐고 §3.1 D02 수행·기록 조건이 신설됐으며, §4.4의 2·3단계가 정정됐다. §4.2와 §5.1은 동일하므로 [PR39 정확 HEAD의 기존 승인](https://github.com/321Team/infra-monitoring/pull/39#pullrequestreview-5388942354)을 S07/S10 문서 검토로 재사용한다. S14는 [DB PR11 승인](https://github.com/321Team/infra-db/pull/11#pullrequestreview-5458483957)과 동일한 고정 Runbook 전체를 재사용한다. 추가 판독·복구 실행을 요구하지 않는다.
+
+S08은 [이재환의 문서 판독 댓글](https://github.com/321Team/fds-project-baseline/issues/17#issuecomment-6205472774)과 [MON43 병합](https://github.com/321Team/infra-monitoring/pull/43)을 연결한다. 댓글은 GitHub APPROVED가 아니며 MON43의 제출 리뷰는 0건이다. 일반 문서 처리에는 [Lead 위임 정책](https://github.com/321Team/fds-project-baseline/blob/505dce05a20a1172991835051c1bac34f65b4d16/governance/REVIEW_AUTHORITY_POLICY.md)을 적용한다. §3/3.1의 D02 계획은 [MON44 정확 HEAD 승인·병합](https://github.com/321Team/infra-monitoring/pull/44#pullrequestreview-5543174277)과 기존 한정 처분을 소비하되 실제 수동 점검 이행과 구분한다.
+
+Silence 생성·종료와 실제 amtool 가용성은 NOT_RUN/미검증이다. 이 연결로 S08 전체 Runtime, 최종 O01·문서 Critical0·Freeze·Phase1 인수를 선언하지 않는다. 최종 문서 판정은 기존 Lead가 담당하며 새 상시 Support 서명을 추가하지 않는다.
+<!-- o01-mon-source-reconciliation-20261019:end -->

@@ -1,10 +1,10 @@
 {
   "source_revision_proposal": "p1-as-built-20261018-r1",
-  "created_at_kst": "2026-10-18T22:22:32.840050+09:00",
-  "state": "LOCAL_CLEANUP_COMPLETE_FINAL_PUBLICATION_CANDIDATE_NOT_PUBLISHED",
+  "created_at_kst": "2026-10-19T09:04:51.613855+09:00",
+  "state": "LOCAL_DOC_PUBLICATION_WORDING_FOLLOWUP_NOT_PUBLISHED",
   "self_excluded": true,
   "requirements_baseline": "docs-v3.1.21",
-  "previous_candidate_manifest_sha256": "0e977bce6330dc595bf2521606c5c30c01edebc9e3618053e3deb628af908cce",
+  "previous_candidate_manifest_sha256": "6a23bd69f7563f3645ef1c4e386e45f6164309a3e9513d892c5224cbdd45e244",
   "observation_cutoff_kst": "2026-10-18T19:02:42+09:00",
   "files": [
     {
@@ -28,8 +28,8 @@
     {
       "path": "README.md",
       "repository_path": "architecture/as-built/p1-as-built-20261018-r1/README.md",
-      "bytes": 4788,
-      "sha256": "8a3beaf2697a153e2b30b938e267bb746e317a6275902a7ef2657175619aea43"
+      "bytes": 5222,
+      "sha256": "bdbe74edfbf3047db9c744175c1a5e99001663e1ea13de1d84dda75fcbe4d6a2"
     },
     {
       "path": "observations/20261018T1902.json",
@@ -531,5 +531,11 @@
     "new_cleanup_deadline": "2026-10-18T13:42:52.962926+00:00",
     "temporary_pairs_retired": 4,
     "source2_disposition_complete": false
+  },
+  "document_followup": {
+    "scope": "README actual PR183/184 merge wording only; old source/provenance/observations unchanged",
+    "PR184_merge": "505dce05a20a1172991835051c1bac34f65b4d16",
+    "prior_manifest_sha256": "6a23bd69f7563f3645ef1c4e386e45f6164309a3e9513d892c5224cbdd45e244",
+    "final_adoption_Freeze": false
   }
 }
