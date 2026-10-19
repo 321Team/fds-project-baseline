@@ -1,0 +1,22 @@
+{
+  "at_kst": "2026-10-19T19:33:02.206630+09:00",
+  "project": "https://github.com/orgs/321Team/projects/1",
+  "status_changes": 24,
+  "phase_changes": [
+    25,
+    26,
+    27
+  ],
+  "after_counts": {
+    "Todo": 20,
+    "In Progress": 13,
+    "Done": 45
+  },
+  "Done_includes_Cancelled": 3,
+  "implemented_Done": 42,
+  "phase2_label_with_phase1_field_filter_count": 0,
+  "Record_ID_Owner_Priority_Dates": "preserved",
+  "method": "Authenticated browser UI, no token/scopes changes",
+  "recording": "central protected PROJECT_UI_ACTIONS.json and screenshots; source ticket metadata GET readback",
+  "scope": "current existing78 project records; selected Status/Phase only, not new implementation or whole Close"
+}

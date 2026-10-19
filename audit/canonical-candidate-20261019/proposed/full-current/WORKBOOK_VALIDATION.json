@@ -1,0 +1,23 @@
+{
+  "at_kst": "2026-10-19T19:27:29.467558+09:00",
+  "workbook_sha256": "4d3baadf94ba4ddd4abe4bb29972418f83c4a4c41a9450814a8334b054775a1f",
+  "sheets": 10,
+  "records": 78,
+  "planned_cell_changes": 147,
+  "unexpected_values_formulas_styles": 0,
+  "formula_change": "Executive Summary B16 source drift metric replaced with Cancelled count; all other formulas preserved",
+  "native_features": "DV/CF/chart series/dimensions/merges/panes/comments/protection preserved",
+  "cached_formula_errors": 0,
+  "summary_counts": {
+    "Done": 42,
+    "Cancelled": 3,
+    "To Do": 20,
+    "In Progress": 13
+  },
+  "milestone_status_formula_readback": "MATCH",
+  "unknown_dates": "blank typed-date inputs preserved; exact TBD in per-record metadata/notes",
+  "scope": "all78 current Status/Phase/metadata with approved conditional outcomes; plan Gantt retains original plan rows",
+  "native_Excel": "NOT_RUN",
+  "authoring_process_rc": 1,
+  "export_independent_readback": "SUCCESS"
+}
