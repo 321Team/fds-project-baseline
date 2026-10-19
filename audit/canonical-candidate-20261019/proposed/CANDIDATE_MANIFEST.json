@@ -60,10 +60,15 @@
     },
     {
       "path": "RELEASE_NOTES_CANDIDATE.md",
-      "sha256": "7c7bc0a75bd9a40035d4d96d2420932abfcfc66c64e69eacfe6a84e60cfe75e7",
-      "bytes": 528
+      "sha256": "9425c5c61a0d9dc9a9109fabfa754dc1bd0c83af449f44ef403f744f0f473c35",
+      "bytes": 2236
     }
   ],
   "full_release_set": "NOT_GENERATED",
-  "tag_asset_publication": false
+  "tag_asset_publication": false,
+  "planned_phase2_input": {
+    "status": "OTHER_SESSION_PLANNED_NOT_RECEIVED",
+    "actual_specifications_added": 0,
+    "runtime_authorized": false
+  }
 }
