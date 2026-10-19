@@ -1,0 +1,11 @@
+{
+  "at_kst": "2026-10-19T21:09:00.616134+09:00",
+  "content_HEAD": "ccf4c2fd5d9d0cc6ff24694e6f11d437e6b309d1",
+  "content_merge": "881a38bd79b3f7c92ac3b68b528bf20e454d1da7",
+  "candidate_canonical_check": "PASS",
+  "candidate_WBS_check": "PASS",
+  "exact_content_CI": 2,
+  "record_differences": 0,
+  "scope": "Finalization changes release metadata only; final-stage checks after rebuild",
+  "new_Runtime_P2": false
+}

@@ -1,3 +1,9 @@
+# FDS v3.1.22 Canonical Documents
+
+RELEASED after reviewed finalization merge. 실제 GitHub 게시와 네 배포Asset 완료는 [CURRENT](CURRENT.md)·[Release](https://github.com/321Team/fds-project-baseline/releases/tag/docs-v3.1.22)의 실제 API/검증을 따른다. [Baseline](baseline/FDS_Project_Implementation_Baseline_v3.1.22.md) · [WBS](wbs/FDS_v3.1.22_WBS_and_Gantt_v1.0.xlsx) · [Ticket Pack](tickets/FDS_v3.1.22_Canonical_Ticket_Update_Pack_v1.0.md) · [WEB](web/v3.1.22/status-snapshot.html). 기존 위험/조건/이월·P2 사양과 Runtime 인수 구분 유지.
+
+<details><summary>이전 README 내용과 당시 상태</summary>
+
 # FDS Project Baseline
 
 Private canonical repository for the FDS hybrid cloud project's approved baseline, WBS/Gantt, ticket pack, release records, WEB snapshot and integrity audits.
@@ -137,3 +143,5 @@ FDS_RELEASE_ZIP=/tmp/fds-package/FDS_vX.Y.Z_Canonical_Baseline_Release_Package.z
 ```
 
 이 명령들은 Release 발행이나 GitHub 티켓 변경을 수행하지 않는다. 현재 승인 절차는 [Lead 위임 정책](governance/REVIEW_AUTHORITY_POLICY.md)을 적용한다.
+
+</details>
