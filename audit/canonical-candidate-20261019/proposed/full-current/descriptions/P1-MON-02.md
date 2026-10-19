@@ -24,6 +24,10 @@
 
 기존 P1 Record ID를 유지한 Phase2 이월이다. 구현 To Do·고정 구현 Due 미정·실제 인계수신과 기존 Activation Contract를 보존한다. Phase 변경은 실행/기술 Done 승인이 아니다.
 
+### P2 업무 대시보드 기존 조건·대체안 보충
+
+[기존 조건부 설계 선택](https://github.com/321Team/fds-project-baseline/issues/25#issuecomment-6158755475)의 “10/19까지 조건 미충족 시 콘솔 Observe → Metrics 대체안 사용, 미수행 Grafana 개선 Deferred/Known Issue”를 유지한다. 설치·회수 소스/버전, Thanos tenancy, 수집 경로, P2 대시보드 보정의 네 선행조건은 미완료이며 실제 설치 승인·수집 AC2 구현 완료가 아니다. 이 날짜를 고정 구현 Due로 전환하거나 이 문서로 새 ROSA 실행·대체안 시연 완료를 만들지 않는다. P0·G5 이후 여력 Activation Contract·Phase2 To Do·기존 담당/원 AC를 보존한다. 날짜만 있는 기존 조건의 시각을 임의로 정하거나, 10/19 당일 작성된 이 보충으로 자정 경과를 주장하지 않는다.
+
 ## 현재 원 AC — 체크 상태 보존
 
 아래는 기존 Baseline §1.2/§11 및 D33의 P1 범위를 구체화한 후보다. 미실행 상태로 유지하며 발행 전 리뷰 대상이다.

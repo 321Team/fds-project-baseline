@@ -24,6 +24,10 @@
 
 실제 GitHub 종결 `2026-10-19T18:04:23+09:00` / `completed`. 계획 End와 구분한다. Cancelled는 구현 완료가 아니다. Done도 각 원 인수·한정 처분의 범위이며 기술 전체 PASS를 뜻하지 않는다.
 
+### 10/19 현재 판정 보충 — 아래 10/6 메모는 당시 이력
+
+[10/19 native 재배치 실제 결과](https://github.com/321Team/fds-project-baseline/issues/15#issuecomment-6258431234)에 따라 API·engine은 Worker01/02/03 각1, Ready/Available/Updated3으로 복구됐고 API local endpoint3과 backend3·edge readiness HTTP200을 확인했다. 아래의 “현재 충족되지 않는다”는 10/6 시점 설명이며 10/19 현황을 뜻하지 않는다. 최종 인수·종결은 [#30 실제 Signoff](https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6265747689)와 이 문서의 실제 종결시각을 따른다. API 66.3초·engine 당시 실시간60초 확인 NOT_PROVEN의 한정 수용, D07/I01 등 기존 한계는 유지하며 새 Runtime/재시험은 없다.
+
 ## 현재 원 AC — 체크 상태 보존
 
 - [x] 업무·메트릭 Port 분리

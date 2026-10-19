@@ -3,7 +3,7 @@
   "base": "docs-v3.1.21",
   "base_main_commit": "d8f55d816cfe8ca894210695a7a582850c8c926c",
   "pre_update_PR191_head": "ee97ab30a970a8a5a239e6bbacf1130ffec98d3e",
-  "as_of_kst": "2026-10-19T20:15:25.541406+09:00",
+  "as_of_kst": "2026-10-19T20:43:58.192750+09:00",
   "records": 78,
   "phase1_records": 42,
   "phase2_records": 31,
@@ -345,8 +345,8 @@
     },
     {
       "path": "full-current/descriptions/P1-APP-01.md",
-      "sha256": "7710c696a1f33b9aa656a9ac8a73810a1685360c301600b42f3b20a719fbb47f",
-      "bytes": 5245
+      "sha256": "f399024dc9c324222d6567785c35b26f72bee5c41cf13d752e0fdc3554a415e3",
+      "bytes": 6047
     },
     {
       "path": "full-current/descriptions/P1-CICD-01.md",
@@ -380,8 +380,8 @@
     },
     {
       "path": "full-current/descriptions/P1-E2E-01.md",
-      "sha256": "2eaa70ef2fbf39d9e2a73aeca4b426e517c166c691308901ebd608eb01d29b6e",
-      "bytes": 5819
+      "sha256": "10605eb7a5c0b56e9da6639b3b45e1bd72fb80571a7d564ea365a492cebd229a",
+      "bytes": 6708
     },
     {
       "path": "full-current/descriptions/P1-HA-01.md",
@@ -420,8 +420,8 @@
     },
     {
       "path": "full-current/descriptions/P1-MON-02.md",
-      "sha256": "f82cc12203f27a22e9fd5d9b9a52a2237a1acbf233dec2f24129ced695ca4b00",
-      "bytes": 2932
+      "sha256": "0df2f7f567f242109e13b89df9aeced88ddf95549b517c2c1e3210d5fcc9d570",
+      "bytes": 3816
     },
     {
       "path": "full-current/descriptions/P1-NET-01.md",
@@ -517,6 +517,11 @@
       "path": "full-current/review-source-binding.json",
       "sha256": "ed651c4ef29e6165eecb0691836b58784261dbaa53d097be6c0d91ec9830bd47",
       "bytes": 10305
+    },
+    {
+      "path": "full-current/REVIEW191_DISPOSITION.json",
+      "sha256": "20d35745784876d2e26f4c69fa6f80efea03827d11ccb1a40a334e984349c3b4",
+      "bytes": 944
     },
     {
       "path": "full-current/review31-actual-adoption.json",
@@ -708,5 +713,22 @@
     "whole_Phase1_Close_actually_executed": true,
     "new_Release_Runtime_P2": false,
     "known_risk_scope": "original card tables 2-4 and actual adoption; no new system-wide Critical0"
+  },
+  "review191_nonblocking_disposition": {
+    "at_kst": "2026-10-19T20:43:58.191260+09:00",
+    "reviewed_head": "bcade180ba967eb8b465afd7f4e5cfe182bbf6ce",
+    "reviews": [
+      "https://github.com/321Team/fds-project-baseline/pull/191#pullrequestreview-5570847507",
+      "https://github.com/321Team/fds-project-baseline/pull/191#pullrequestreview-5570955357"
+    ],
+    "changes": [
+      "Git text conversion disabled within candidate only; 20 line-ending-only drift corrected to checksum-bound bytes",
+      "Current APP/E2E historical notes distinguished from later accepted results",
+      "Existing #25 conditional Grafana cutoff/fallback linked without changing activation, AC, Due or execution status"
+    ],
+    "frozen_inputs_preserved": 28,
+    "new_runtime": false,
+    "workbook_sha256": "2cca7830ed131b372506eb4af2ce6209c501097266a6fc59be83cb70acac88de",
+    "new_head_independent_approval": "Prior reviews apply to OLD head. Delta reviewed by central Lead; no claim of new reviewer signature."
   }
 }

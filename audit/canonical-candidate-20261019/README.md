@@ -1,3 +1,7 @@
+## PR191 최신 리뷰 반영
+
+비차단 권고3건(배포 바이트·APP/E2E 이력 구분·#25 기존 조건)을 반영했다. [처분 기록](proposed/full-current/REVIEW191_DISPOSITION.json). `.gitattributes`로 후보 파일의 원 바이트를 보존하므로 Git blob·Manifest·ZIP의 SHA256을 동일하게 대조한다. 기존 P1 입력11/P2 입력17·WBS·과거 정본은 보존하며 새 발행/Runtime은 없다.
+
 <!-- final-signoff-close-current -->
 # Phase1 최종 Signoff·전체 Close — 실제 판정 추적
 
