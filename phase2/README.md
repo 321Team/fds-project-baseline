@@ -1,4 +1,6 @@
 # Phase 2 Current Architecture / R-I-T-P Contract
+**2026-10-18 통합 검토본:** [#34 Architecture Freeze 사양·Interface·담당/완료조건](preparation/20261008/architecture-freeze-candidate-20261018.md). public/public·worker 1AZ 3대·D22 A·D23 보류·D1 3시간 고정의 기존 결정을 연결하고 추가 상세는 권고로 채웠다. 아래10/03의 private/3-AZ/Pod CIDR PENDING 등은 당시 후보 이력이다. 새 문서 역시 Freeze 승인·Runtime GO·정본 발행이 아니다.
+
 기준: 2026-10-03T15:10:46.525+09:00 · 상태: CANDIDATE / Architecture Freeze HOLD
 책임: #34 이권욱(Architecture), #35/#38 이하영(IaC/ROSA), #37/#43/#47 이재환(VPN/App/Hybrid).
 AI 사용: CODEX_ASSISTED. 문서 작성·기술검토는 독립 코드/증적 승인을 대체하지 않는다.

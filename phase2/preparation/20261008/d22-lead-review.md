@@ -1,5 +1,25 @@
 # D22 Lead 선행 검토·선택안 — 2026-10-08
 
+## 10/19 12:21 KST — CASE2 최소 변경 준비
+
+이권욱 / CODEX_ASSISTED. [D22 A 채택](https://github.com/321Team/fds-project-baseline/issues/42#issuecomment-6207939448)은 유지한다. [cold v5 STATIC 수용](https://github.com/321Team/infra-rosa/issues/12#issuecomment-6258893270)은 원본13/13·Judge18 PASS이며 실제 node pull/FINAL과 다르다.
+
+[S1 보고](https://github.com/321Team/infra-rosa/issues/12#issuecomment-6258748604)는 승인된 P2 principal·Harbor 허용 적용 증적을 연결하지 못했다는 기록 조사다. Harbor 실계정 부재를 독립 확인한 결과는 아니다. 현재 CASE2/새 준비·cold 실행 HOLD로 소비한다. P1 robot$worker 소비 확대, robot$push 목적 외 사용, P1 CA/암호 회전으로 우회하지 않는다.
+
+| #13 기존 실행 카드에 넣을 내용 | 최소 범위·완료조건 |
+|---|---|
+| P2 인증 | 이미 승인된 객체가 실제 확인되면 재사용 판단. 새 발급 시에만 P2 Robot1개/fds 프로젝트 pull-only/유한 만료·소유/갱신/회수 담당. 비공개 원문, 공개는 reference/scope/expiry만 |
+| Harbor 허용 | 필요한 source10.20.10.0/24→10.1.93.54:443 추가분과 반환 경로. 기존 적용분은 중복 반영 안 함, 기존 P1 허용·운영 접근 보존 |
+| Runtime 경계 | 하영/Harbor 소관 Lead가 대상·변경·기간·복구/P1 기준선 영향을 연결. STATIC 수용은 승인 대체 아님. root/새 IAM/DB 변경을 끼워 넣지 않음 |
+| 정리/회수 | 변경 전 기준선과 추가 객체/규칙 식별→기존 P1 동작 보존→해당 추가분만 회수/원복→reference/허용 readback. 모르는 현재값을 삭제 근거로 쓰지 않음 |
+| cold 진입 | 별도 승인 후 v5의 privileged debug·도구·identity/UID·strict TLS·counter/config 근거·안전 정리를 해당 창에 연결. 키트가 Robot/Secret/Harbor/경로를 만드는 것은 아님 |
+
+endpoint·기존 CA·D7 current2/previous=NONE 재사용. 갱신은 새 reference/expiry만 전달. auth/TLS/digest 실패는 신규 rollout STOP·정상 Pod 보존; 준비된 ECR A만 기존 수동 전환/복귀 계약으로 소비한다. 새 ECR 생성/비용 GO·자동 fallback 없음.
+
+보수적 가용시간 후보: v5 앱1개62분×2=124 + 개폐·준비60 + 실패/복구60 + 반출/검토30 = **274분, 약5시간**. 실측/예약이 아니며 담당·실제 범위로 조정한다. IAM 최대3시간·실제 credential/OAuth 수명·DB runtime120분을5시간과 혼합하지 않는다. DB 예외는 cold 창에 자동 포함되지 않는다. 날짜/시각·겹침·운영 담당은 미배정이다.
+
+권욱의 다음 판단: 정확 최소 변경/실제 유효 입력→해당 Runtime/cold GO→node pull/negative·복구·앱 소비→D22 FINAL. 추가 단가표·중복 비용 승인·이미지 재빌드는 요구하지 않는다.
+
 ## 10/16 18:25 D7 원본 소비 완료
 
 이권욱 / CODEX_ASSISTED. [재환 D7 전달](https://github.com/321Team/infra-rosa/issues/12#issuecomment-6209302835)과 [하영 수신·SEC 사후 수용](https://github.com/321Team/infra-rosa/issues/12#issuecomment-6209352775)을 확인한 뒤, 고정 비공개 공유 경로의 `d7-manifest-20261016` 6파일을 직접 수신했다. `SHA256SUMS` SHA256은 `27c38649f135b927305d0543d9b996bacc9dc67d61f6430828ff0910527280f6`, 내부 **5/5 일치**다. 작성자 전달·하영 수신·이번 권욱 수신/재해시/내용검토를 구분한다. 공개 저장소에는 raw·헤더·credential을 추가하지 않는다.
