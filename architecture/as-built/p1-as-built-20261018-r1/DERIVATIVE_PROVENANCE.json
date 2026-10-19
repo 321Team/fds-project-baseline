@@ -1,12 +1,12 @@
 {
   "proposed_source_revision": "p1-as-built-20261018-r1",
-  "approval_state": "LOCAL_CLEANUP_COMPLETE_FOLLOWUP_NOT_REVIEWED_NOT_PUBLISHED",
+  "approval_state": "LOCAL_RUNTIME_ANSIBLE_ROW_DELTA_NOT_ADOPTED_NOT_FROZEN",
   "requirements_baseline": "docs-v3.1.21 / 979facb98de8ca1f1e2ce22f38b27ac3366f3fc3",
   "as_built_explanation": {
     "repository_path": "architecture/as-built/p1-as-built-20261018-r1/AS_BUILT.md",
-    "sha256": "75dff4043397b38de0b318696bc1ff2de04051ef4fdd04ebdfff8b9d77ab5d31",
+    "sha256": "53a03ae193fbbf74b9aa2c53730d54dd0457a542cea6d9549bb5b1f1eeb3da2f",
     "source_sha256": "4c746a65cb58c4fe772d57fe37a1031c8aa72aaf9b6d81541b92f81e029d6a59",
-    "change_scope": "Only actual22:18 temporary4pairs cleanup delta added to the prior PR244 candidate. Historical STOP/deadline/source-set and all previous observation bytes preserved. source2 final disposition remains pending."
+    "change_scope": "Only dated native API/engine and Ansible metadata followup subsection plus3current logical row links; original observations/source71/render contract unchanged."
   },
   "original_adoption_manifest_sha256": "1695abbaba1e4ca563b80ed1349fab1115787a469891c77d9562a31458daf693",
   "reuse": "Existing render/visual review, no rerender or new visual certification",
@@ -113,7 +113,7 @@
   ],
   "render_contract": "Mermaid 11.17.0 + exact renderer/config + PM -> MGW label translate(160,12); MMD alone does not reproduce selected SVG.",
   "source_set_policy": "Prior package bytes unchanged; diagnostic originals and D07 row are provenance, not new selected derivative or acceptance",
-  "previous_candidate_manifest_sha256": "0e977bce6330dc595bf2521606c5c30c01edebc9e3618053e3deb628af908cce",
+  "previous_candidate_manifest_sha256": "eb7993dc71f4ce78f4221b3830e9027104c467946933d98ce6fd8902e6660af3",
   "observation_binding": {
     "path": "observations/20261018T1902.json",
     "sha256": "4b03f823a1b7de4d2ae7b62784c4b49971b4b64135aac5f3cbf36d5e93abf593",
@@ -191,5 +191,17 @@
     "path": "runtime-sources/20261018T2218/CLEANUP_PROOF.json",
     "sha256": "8a4e21951ee579c48454695bb6a415ab6b1cf9a907b776f4b76776068ff5536d",
     "scope": "Selected exact public receipts plus execution results and local original hash index; no credential body"
+  },
+  "runtime_20261019_binding": {
+    "path": "observations/20261019T1132-native-ansible.json",
+    "sha256": "feda09707c38fa1a2ff1208ef5796ffaade7b6ffcdd6a02dd0dd313a650ebdfb",
+    "scope": "engine60s exact historical condition MET, timely live procedure NOT_PROVEN; API late confirmation; bounded Ansible metadata partial only"
+  },
+  "runtime_delta_task_binding": {
+    "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/DOC/runtime-ansible-final-followup-20261019/CURRENT_TASK.json",
+    "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\DOC\\runtime-ansible-final-followup-20261019\\CURRENT_TASK.json",
+    "sha256": "8a785059f03c779dafb8604d35f702d99f544f373eaf64d72b5d1a0b1192fd14",
+    "bytes": 951,
+    "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
   }
 }

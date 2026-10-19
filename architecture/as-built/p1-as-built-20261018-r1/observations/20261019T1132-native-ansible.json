@@ -1,0 +1,484 @@
+{
+  "record_kind": "DOC_CONSUMPTION_OF_EXISTING_RUNTIME_AND_METADATA_ORIGINALS_NOT_NEW_EXECUTION",
+  "prepared_at_kst": "2026-10-19T11:38:24.126930+09:00",
+  "PR185": {
+    "url": "https://github.com/321Team/fds-project-baseline/pull/185",
+    "head": "4acbb0695c77c4da6e4d78252fb435d84612522d",
+    "merge": "34e95a219b03cac108e488c4349e7163c1936244",
+    "merged_at": "2026-10-19T00:43:11Z",
+    "scope": "Documentation source-state correction only; final adoption/Freeze separate"
+  },
+  "API": {
+    "write_return_at_kst": "2026-10-19T11:15:59.058585+09:00",
+    "rollout_client_return_at_kst": "2026-10-19T11:16:31.250964+09:00",
+    "observer_converged_at_kst": "2026-10-19T11:16:33.144080+09:00",
+    "placement": {
+      "k8s-worker01": 1,
+      "k8s-worker02": 1,
+      "k8s-worker03": 1
+    },
+    "minimum_observed_available": 3,
+    "observer_samples": 51,
+    "exact_change": "restartedAt annotation only",
+    "spec_sha256": "a57fa9451c5313c4205e46b718fca9dcd786e6396e4886aae611819a47a55c68",
+    "HTTP": {
+      "at_kst": "2026-10-19T11:19:11.202738+09:00",
+      "all4_HTTP200": true,
+      "scope": "post-API rollout existing .50-source three backends and ingress GET /readyz only; not Final E2E/HA/D02 human check",
+      "configuration_changes": 0,
+      "trade_writes": 0
+    },
+    "MON_23_23_confirmed_at_elapsed_s": 66.303778,
+    "MON_60s_timely_confirmation": "NOT_PROVEN; confirmation after60s",
+    "one_time_user_direction": {
+      "source": "Direct user question reply",
+      "answer": "이탈 기록 후 engine 진행 (권장)",
+      "scope": "Keep healthy API, record missed 60s confirmation, proceed engine once; not future exemption"
+    },
+    "no_future_or_engine_waiver": true
+  },
+  "engine": {
+    "write_return_at_kst": "2026-10-19T11:28:47.517176+09:00",
+    "rollout_client_return_at_kst": "2026-10-19T11:29:19.854886+09:00",
+    "observer_converged_at_kst": "2026-10-19T11:29:20.433483+09:00",
+    "placement": {
+      "k8s-worker01": 1,
+      "k8s-worker02": 1,
+      "k8s-worker03": 1
+    },
+    "minimum_observed_available": 3,
+    "observer_samples": 19,
+    "exact_change": "restartedAt annotation only",
+    "spec_sha256": "b26504e7def4d4b05d1de1ef48d90bbbd9b7d1b1423b5d2477d9821c7770a2f4",
+    "HTTP": {
+      "at_kst": "2026-10-19T11:31:00.072533+09:00",
+      "all4_HTTP200": true,
+      "scope": "post-engine rollout existing .50-source three backends and ingress GET /readyz only; not Final E2E/HA/D02 human check",
+      "configuration_changes": 0,
+      "trade_writes": 0
+    },
+    "live_POST_MON_polls": [
+      {
+        "at_kst": "2026-10-19T11:29:20.625784+09:00",
+        "elapsed_after_rollout_s": 0.7810000000026776,
+        "mon_23_23": false,
+        "health": {
+          "count": 23.0,
+          "ok": 22.0,
+          "down_series": 1,
+          "actual_series": 23,
+          "actual_unique_targets": 23,
+          "set_match": false,
+          "missing": [
+            [
+              "fds-engine",
+              "10.244.39.239:9090"
+            ],
+            [
+              "fds-engine",
+              "10.244.69.212:9090"
+            ],
+            [
+              "fds-engine",
+              "10.244.79.70:9090"
+            ]
+          ],
+          "extra": [
+            [
+              "fds-engine",
+              "10.244.39.221:9090"
+            ],
+            [
+              "fds-engine",
+              "10.244.39.234:9090"
+            ],
+            [
+              "fds-engine",
+              "10.244.39.236:9090"
+            ]
+          ]
+        },
+        "source": {
+          "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/fds-engine-AUTO_POST_MON_1.json",
+          "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\fds-engine-AUTO_POST_MON_1.json",
+          "sha256": "d14fe5d40799800693065941ae91572303059bbefb98d72552fde8c0761f8b33",
+          "bytes": 12916,
+          "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+        }
+      },
+      {
+        "at_kst": "2026-10-19T11:29:35.773216+09:00",
+        "elapsed_after_rollout_s": 15.921000000002095,
+        "mon_23_23": false,
+        "health": {
+          "count": 24.0,
+          "ok": 23.0,
+          "down_series": 1,
+          "actual_series": 24,
+          "actual_unique_targets": 24,
+          "set_match": false,
+          "missing": [
+            [
+              "fds-engine",
+              "10.244.39.239:9090"
+            ]
+          ],
+          "extra": [
+            [
+              "fds-engine",
+              "10.244.39.221:9090"
+            ],
+            [
+              "fds-engine",
+              "10.244.39.236:9090"
+            ]
+          ]
+        },
+        "source": {
+          "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/fds-engine-AUTO_POST_MON_2.json",
+          "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\fds-engine-AUTO_POST_MON_2.json",
+          "sha256": "e8769d9ff8a0882988daee6c93cec99d77a1f43ad46b170e68959317a71ebbd5",
+          "bytes": 12817,
+          "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+        }
+      },
+      {
+        "at_kst": "2026-10-19T11:29:50.791031+09:00",
+        "elapsed_after_rollout_s": 30.93699999999808,
+        "mon_23_23": false,
+        "health": {
+          "count": 23.0,
+          "ok": 22.0,
+          "down_series": 1,
+          "actual_series": 23,
+          "actual_unique_targets": 23,
+          "set_match": false,
+          "missing": [
+            [
+              "fds-engine",
+              "10.244.39.239:9090"
+            ]
+          ],
+          "extra": [
+            [
+              "fds-engine",
+              "10.244.39.236:9090"
+            ]
+          ]
+        },
+        "source": {
+          "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/fds-engine-AUTO_POST_MON_3.json",
+          "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\fds-engine-AUTO_POST_MON_3.json",
+          "sha256": "2100bc0e249c2a0990aaf2d4d5d04bed7fadfbd2d8252c4d88ac89e2364ccafa",
+          "bytes": 12595,
+          "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+        }
+      },
+      {
+        "at_kst": "2026-10-19T11:30:05.755137+09:00",
+        "elapsed_after_rollout_s": 45.90600000000268,
+        "mon_23_23": false,
+        "health": {
+          "count": 24.0,
+          "ok": 23.0,
+          "down_series": 1,
+          "actual_series": 24,
+          "actual_unique_targets": 24,
+          "set_match": false,
+          "missing": [],
+          "extra": [
+            [
+              "fds-engine",
+              "10.244.39.236:9090"
+            ]
+          ]
+        },
+        "source": {
+          "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/fds-engine-AUTO_POST_MON_4.json",
+          "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\fds-engine-AUTO_POST_MON_4.json",
+          "sha256": "d401714dfc2d9a86e4bdca52962196c05706e20ecd8ef0b73410255fb9c89687",
+          "bytes": 12673,
+          "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+        }
+      }
+    ],
+    "live_60s_sample_collected": false,
+    "historical_60s_health_condition": "MET_FOR_EXACT_EVALUATION_TIME_ONLY",
+    "historical_evaluation_time": "2026-10-19T11:30:19.854886+09:00",
+    "historical_query_collected_at_kst": "2026-10-19T11:32:31.787425+09:00",
+    "historical_health": {
+      "count": 23.0,
+      "ok": 23.0,
+      "down_series": 0,
+      "actual_series": 23,
+      "actual_unique_targets": 23,
+      "set_match": true,
+      "missing": [],
+      "extra": []
+    },
+    "historical_http_GET4_rc0": true,
+    "expected_engine3_UIDs_bound_to_current_observation": true,
+    "timely_live_confirmation_and_procedure": "NOT_PROVEN",
+    "current_MON_observed_at_kst": "2026-10-19T11:30:58.596635+09:00",
+    "current_MON_23_23_exact": true,
+    "own_PF_cleanup_confirmed": true,
+    "new_waiver_or_rollout": false
+  },
+  "execution_model": {
+    "Claude_r05_candidate_local_MOCK": 21,
+    "candidate_validation": "STATIC/MOCK only; not used as new Runtime helper",
+    "adopted_operational_path": "Existing native rollout",
+    "new_runtime_helper_installed": false
+  },
+  "Ansible": {
+    "actual_window_kst": [
+      "2026-10-19T11:20:45.955576+09:00",
+      "2026-10-19T11:20:46.166709+09:00"
+    ],
+    "actual_rc": 0,
+    "status": "COLLECTION_METADATA_READ_PARTIAL_SCOPE",
+    "checked_unique_roots": 6,
+    "MANIFEST_found_in_checked_roots": 0,
+    "all_installation_loader_zero_claim": false,
+    "pth_execution": "NOT_RUN; extra loader paths not followed",
+    "external_callers_and_shared17_human_read": "UNVERIFIED",
+    "source_head": "0d58598d8a3ce77ccd7eaa9e1dfba820b0a436ea",
+    "config_sha256": "73e6f6b5844a7a2dee8cf042b67a1c7b61c3e4b4198f4f7f7b65907e883de90e",
+    "compatibility_or_whole_operational_acceptance": false
+  },
+  "PR245_observed": {
+    "url": "https://github.com/321Team/fds-project-evidence/pull/245",
+    "head": "d7cce489cb3db85b77a4a1ee1293a794e69e32d7",
+    "state": "closed",
+    "merged": true,
+    "ci_success": 1,
+    "approved_review": {
+      "url": "https://github.com/321Team/fds-project-evidence/pull/245#pullrequestreview-5566347531",
+      "head": "d7cce489cb3db85b77a4a1ee1293a794e69e32d7",
+      "author": "hayeounglee",
+      "submitted_at": "2026-10-19T02:32:24Z"
+    },
+    "scope": "Evidence preservation inclusion complete only; not Runtime code approval/HBR AC/disposition/Close",
+    "merge_commit_sha": "96a8d76ce97217e3247abfd1cebb32288086c7af",
+    "merged_at_UTC": "2026-10-19T02:36:01Z",
+    "merged_at_kst": "2026-10-19T11:36:01+09:00"
+  },
+  "original_sources": [
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/transaction-api-NATIVE_ACCEPTANCE.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\transaction-api-NATIVE_ACCEPTANCE.json",
+      "sha256": "672df20da567eb0309f7a8eb39d0d32d6c327a133f1e3cca312164898207a058",
+      "bytes": 767,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/transaction-api-NATIVE_WRITE_RESULT.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\transaction-api-NATIVE_WRITE_RESULT.json",
+      "sha256": "fba849088cbd148debaaab2592d66dcdfd4c46523e473f400beeef168aa7d821",
+      "bytes": 324,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/transaction-api-ROLLOUT_STATUS_RESULT.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\transaction-api-ROLLOUT_STATUS_RESULT.json",
+      "sha256": "7e7fb46713c54d8aa4a2d468ad126bd813276aa23fa80916bfc17b1789dbfecb",
+      "bytes": 908,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/transaction-api-OBSERVE.stdout.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\transaction-api-OBSERVE.stdout.json",
+      "sha256": "728fb311bc4cd30fbd976efb768a0f3bca77d001c9a594ab03f67adaaf551a22",
+      "bytes": 111294,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/transaction-api-EXACT_POST_RESULT.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\transaction-api-EXACT_POST_RESULT.json",
+      "sha256": "b55c573f650cfbf79d4627bfe8915d037f5f5185933f50446e0e84a5d936f266",
+      "bytes": 1092,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/transaction-api-POST_MON_RESULT.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\transaction-api-POST_MON_RESULT.json",
+      "sha256": "6a344afcdef752a085de71df997cba9d6ab9640db0700ae81626c72fca332e02",
+      "bytes": 12866,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/transaction-api-POST_MON_POLL2_RESULT.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\transaction-api-POST_MON_POLL2_RESULT.json",
+      "sha256": "de0d43eaa305f72d09e896926352c8f2e74ad28dc91d1e5f5eebce9ceef87a25",
+      "bytes": 12431,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/API_EDGE_POST_RESULT.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\API_EDGE_POST_RESULT.json",
+      "sha256": "24d7635fd8754e71bfe807d907bcfe77d42f925b4abb54eb6e3a1da8cfc40a94",
+      "bytes": 3240,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/fds-engine-NATIVE_WRITE_RESULT.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\fds-engine-NATIVE_WRITE_RESULT.json",
+      "sha256": "54c221dbebcde0807ef64cb33eb351a352f3ad2104638f189a4ad7e658bd2cb6",
+      "bytes": 314,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/fds-engine-ROLLOUT_STATUS_RESULT.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\fds-engine-ROLLOUT_STATUS_RESULT.json",
+      "sha256": "039e13f073f07abf410ad74f3b759185abff8ee9edefc9660ceedf333dfdb02b",
+      "bytes": 1285,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/fds-engine-OBSERVE_RENEWED.stdout.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\fds-engine-OBSERVE_RENEWED.stdout.json",
+      "sha256": "3a0d7685e3cfff3d7fc71fc31a94c49ef32eef35a9ebd0e19f650b0bd51f7317",
+      "bytes": 45650,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/fds-engine-EXACT_POST_RESULT.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\fds-engine-EXACT_POST_RESULT.json",
+      "sha256": "06c04bd9f86f525836b3adf16521168d6287dabec293b18ab96f41139a78481a",
+      "bytes": 1080,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/fds-engine-AUTO_POST_MON_RESULT.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\fds-engine-AUTO_POST_MON_RESULT.json",
+      "sha256": "9f6580caee8a9f347b59d1dc33e201ee254d4d3459fc004188452e89029dc875",
+      "bytes": 384,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/ENGINE_SEQUENCE_RESULT.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\ENGINE_SEQUENCE_RESULT.json",
+      "sha256": "7a59fbe3589e7c92e93b0acbd08a55b87e102a718f98e5dd31900388ceeefa88",
+      "bytes": 969,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/ENGINE_FINAL_DIAGNOSTIC_RESULT.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\ENGINE_FINAL_DIAGNOSTIC_RESULT.json",
+      "sha256": "b1141841cc54514304898243e09a89678f2ce685ce9b9e734b02f9b7ba7bdaf5",
+      "bytes": 12569,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/ENGINE_MON_60S_HISTORICAL_RESULT.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\ENGINE_MON_60S_HISTORICAL_RESULT.json",
+      "sha256": "db092c3c7f0557495fe886100dc41ed9ce0e71d3c892a7c09544c2c1113e7314",
+      "bytes": 12864,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/ENGINE_EDGE_POST_RESULT.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\ENGINE_EDGE_POST_RESULT.json",
+      "sha256": "ce13e789eddfa1271e179eacfbea5619eec55302ac1201fc34c0a4e8ac8fb6f7",
+      "bytes": 3243,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/CANDIDATE_MOCK_RESULT.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\CANDIDATE_MOCK_RESULT.json",
+      "sha256": "195797c368b1830d737d1699985ab4ba1cfef31a44e5b197a46217dc6eb6f8d3",
+      "bytes": 13737,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/fds-engine-AUTO_POST_MON_1.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\fds-engine-AUTO_POST_MON_1.json",
+      "sha256": "d14fe5d40799800693065941ae91572303059bbefb98d72552fde8c0761f8b33",
+      "bytes": 12916,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/fds-engine-AUTO_POST_MON_2.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\fds-engine-AUTO_POST_MON_2.json",
+      "sha256": "e8769d9ff8a0882988daee6c93cec99d77a1f43ad46b170e68959317a71ebbd5",
+      "bytes": 12817,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/fds-engine-AUTO_POST_MON_3.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\fds-engine-AUTO_POST_MON_3.json",
+      "sha256": "2100bc0e249c2a0990aaf2d4d5d04bed7fadfbd2d8252c4d88ac89e2364ccafa",
+      "bytes": 12595,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/fds-engine-AUTO_POST_MON_4.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\fds-engine-AUTO_POST_MON_4.json",
+      "sha256": "d401714dfc2d9a86e4bdca52962196c05706e20ecd8ef0b73410255fb9c89687",
+      "bytes": 12673,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Ansible/current-collection-inventory-20261019/v2-execution/FINAL.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\Ansible\\current-collection-inventory-20261019\\v2-execution\\FINAL.json",
+      "sha256": "bbc21f5684a55bf46af2bbe453819ecf2ea29ba0ea2c99ead31d00c101c6f17f",
+      "bytes": 1700,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Ansible/current-collection-inventory-20261019/v2-execution/VERIFICATION.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\Ansible\\current-collection-inventory-20261019\\v2-execution\\VERIFICATION.json",
+      "sha256": "be5185f51f1e2ee69ebcca1fea4477ec931da4eef3e92d83ecd519c62df4a453",
+      "bytes": 1392,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Ansible/current-collection-inventory-20261019/v2-execution/RECEIPT.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\Ansible\\current-collection-inventory-20261019\\v2-execution\\RECEIPT.json",
+      "sha256": "effa5b9f0bbbc03499610f23d6f351ccd0db366746cc717afe4724fe74884cc0",
+      "bytes": 1672,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Ansible/current-collection-inventory-20261019/v2-execution/COLLECTION_INVENTORY_SCOPED.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\Ansible\\current-collection-inventory-20261019\\v2-execution\\COLLECTION_INVENTORY_SCOPED.json",
+      "sha256": "8b2c3919e570c1afbab7b5ea8d1515e305a27dc80c551b742c12d1b8b1f0f4e1",
+      "bytes": 8717,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Ansible/current-collection-inventory-20261019/v2-execution/stdout.json",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\Ansible\\current-collection-inventory-20261019\\v2-execution\\stdout.json",
+      "sha256": "fc39ad557fae9494301f420cd7ef073beef9e86693551d112b485a833aec888a",
+      "bytes": 10275,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/resume-execution-20261018-1853/Ansible/current-collection-inventory-20261019/v2-execution/stderr.txt",
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\Ansible\\current-collection-inventory-20261019\\v2-execution\\stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+    },
+    {
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\pr245-merge\\FINAL.json",
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/pr245-merge/FINAL.json",
+      "sha256": "ec18053f029abc23ad0bcd39bc7b6aae8bb5b4962cd1ddd395cd305751dc35fc",
+      "bytes": 355
+    },
+    {
+      "absolute_path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\app-r2-central-execution-20261019-1049\\pr245-merge\\MERGED_READBACK.json",
+      "local_project_relative_path": "deliverables/phase1-central-control-20261015/app-r2-central-execution-20261019-1049/pr245-merge/MERGED_READBACK.json",
+      "sha256": "e36f02ae4b3d0af8f2072f3724d6fe272dd8a706fba55ecf23f6c1289e944f5f",
+      "bytes": 24961
+    }
+  ],
+  "limits": [
+    "No overall APP/MON/Ansible acceptance or new60s waiver",
+    "D07 and D02 nonperformance remain existing final-decision inputs",
+    "#80 closed/not_planned, Push preservation and25-27 handoff records unchanged",
+    "No new G1/G2 gate or blanket Support signoff",
+    "Raw originals retained locally; no new publication by DOC"
+  ],
+  "DOC_server_actions": 0
+}
