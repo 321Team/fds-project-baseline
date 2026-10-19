@@ -1,3 +1,12 @@
+<!-- final-gates-current-20261019 -->
+## 최신 추가 반영 — stage1
+
+P1 선택11건의 실제 인수/판정 및 현재 추적 상태를 반영했다. 아래 이전 선택7건 설명은 해당 작성 시점의 이력이다. G2 Lead 조건부 수용과 사용자 ICR/Ansible/G1/G3 한정 채택은 [실제 결정](https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6264594986)을 따른다. 현재4건 상태는 In Progress이며 원 AC/기술 한계·계획/Owner를 보존한다. 전체 Phase1 Close·새Release/버전·Runtime 승인 아님.
+
+이 XLSX는 P1선택11건만 현행화한 부분후보이고 나머지67행·기존 통제 요약은10/03 이력이다. 타세션 P2확정사양/상태12건 입력은 기존 phase2/ 파일로 보존했으며 이번 XLSX에 적용하지 않았다. 최종 전체 WBS/TicketPack/발행물 통합은 별도다. P2파일 바이트 불변을 대조했다.
+
+<!-- final-gates-current-end -->
+
 # Phase1 정본 후속 반영 후보 — 2026-10-19
 
 상태: **선택7건 상태·실제종결 반영 후보 / 전체 정본 세트 미생성 / 발행 아님**. 기반 docs-v3.1.21·main `d8f55d816cfe8ca894210695a7a582850c8c926c`. Notion 재동기화 대신 정본 후보에 기록하라는 사용자 지시를 반영한다. Notion을 수정하지 않았고 Milestone 원조건을 임의 삭제하지 않았다.
