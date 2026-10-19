@@ -16,14 +16,14 @@
     {
       "path": "AS_BUILT.md",
       "repository_path": "architecture/as-built/p1-as-built-20261018-r1/AS_BUILT.md",
-      "bytes": 46261,
-      "sha256": "b65371699476457b23579146cb5f93f47fb22d360a8c5625a518247147593fa5"
+      "bytes": 53203,
+      "sha256": "e0024f8c616c455b3ae709104824d1acae50683c6550e370ef50df6a16483071"
     },
     {
       "path": "DERIVATIVE_PROVENANCE.json",
       "repository_path": "architecture/as-built/p1-as-built-20261018-r1/DERIVATIVE_PROVENANCE.json",
-      "bytes": 14127,
-      "sha256": "3c2d4027822713e231f9abd680998220826dcff95299315b1465efd0b9cd88a7"
+      "bytes": 14635,
+      "sha256": "e8ffe4f1210fb2e4287bf6498ff8d4f28f0b78e02b15d6a47a83fd6e54d1c435"
     },
     {
       "path": "README.md",
@@ -520,8 +520,8 @@
     {
       "path": "observations/20261019T1340-owner-evidence-intake.json",
       "repository_path": "architecture/as-built/p1-as-built-20261018-r1/observations/20261019T1340-owner-evidence-intake.json",
-      "bytes": 15901,
-      "sha256": "1c749dc8afacef0e3feaf639bfcf443bb46b3a64ffd63651ed11a86fdb3b68cc"
+      "bytes": 25039,
+      "sha256": "a4af1bbaa848189c9106590a7d8f52e1332dd07fa71d4203675c16278dd93aa4"
     }
   ],
   "packaging_note": "Directory-scoped -text preserves original bytes through Git checkout. Original 71 source-set files and prior candidate content remain byte-identical; manifest adds only this packaging entry.",
@@ -596,5 +596,20 @@
     "prior_HBR_pending_fields_are_timestamped_history": true,
     "original_source_and_render_entries_unchanged": true,
     "final_DOC_Freeze_Release_Close": false
+  },
+  "module_conditional_closure_followup_20261019": {
+    "at_kst": "2026-10-19T18:06:44.104210+09:00",
+    "integration_decision": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6263609528",
+    "actual_module_closures": [
+      10,
+      19,
+      13,
+      15,
+      17,
+      20
+    ],
+    "prior_pending_fields_are_timestamped_history": true,
+    "other_source_and_render_entries_unchanged": true,
+    "whole_Phase1_Close_Freeze_Release": false
   }
 }
