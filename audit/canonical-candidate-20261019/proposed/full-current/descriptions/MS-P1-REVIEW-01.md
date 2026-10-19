@@ -1,3 +1,12 @@
+<!-- review31-actual-adoption-current -->
+## #31 실제 최종 Review 한정 채택 — 후속 현행 기록
+
+사용자 직접 회신 **권장안 한정 채택** · [실제 기록](https://github.com/321Team/fds-project-baseline/issues/31#issuecomment-6265340124) · 당시 판단 대상 후보 `a896402a03086f78f8653b3c96ce486a31b1b862`. 기존 실제 증적을 열람하는 비동기 Review 방식과 최종 결과를 이번 #31에 한정 채택했다. 과거 회의·새 시연·동시 참석을 생성하지 않는다. 기존 기술 미검증·조건부 인수/Owner/재검토·원AC는 유지한다. #30 최종 Signoff/#32 전체Close/새발행·Runtime은 포함하지 않는다.
+
+현재 추적 단계: Review결과 후보 반영 완료, 실제 티켓 종결은 다음 별도 확인. 아래 처음 작성된 미채택/미완료 표기는 카드 판단 전 이력이다. R31-01은 실제 사용자 회신으로 처분했고 R31-02는 현재 결과 정합으로 처리한다. R30-01/R32-01은 별도 티켓 후속이다.
+
+<!-- review31-actual-adoption-end -->
+
 # MS-P1-REVIEW-01 — 현재 관리·인수 스냅샷
 
 기준 2026-10-19T19:25:19.982565+09:00. 미발행 정본 후보 / CODEX_ASSISTED. [GitHub 원본](https://github.com/321Team/fds-project-baseline/issues/31) · updated_at `2026-10-19T10:20:12Z` · body SHA256 `7b0b4bb69e61b8d39976ebfda39dbc7ea768c97c7c242e227ef6e3687d7387a1`. 아래 속성표는 현행이며, 발행 v3.1.21 원본은 수정하지 않았다.

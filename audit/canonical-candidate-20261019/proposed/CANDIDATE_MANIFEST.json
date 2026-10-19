@@ -16,11 +16,11 @@
   },
   "counts": {
     "Done": 42,
-    "In Progress": 13,
+    "Cancelled": 3,
     "To Do": 20,
-    "Cancelled": 3
+    "In Progress": 13
   },
-  "Review31_final_approval": "PENDING_USER",
+  "Review31_final_approval": "ACTUALLY_ADOPTED_ADOPTED",
   "publication": "NO_NEW_VERSION_TAG_RELEASE_ASSETS",
   "files": [
     {
@@ -95,8 +95,8 @@
     },
     {
       "path": "FDS_P1_WBS_Status_Candidate_20261019.xlsx",
-      "sha256": "4d3baadf94ba4ddd4abe4bb29972418f83c4a4c41a9450814a8334b054775a1f",
-      "bytes": 144254
+      "sha256": "81a29f955667a73b5addd757acd22cf05f688706bb59c7cd1edea940cae6ceb6",
+      "bytes": 144493
     },
     {
       "path": "full-current/baseline-original-v3.1.21.md",
@@ -320,8 +320,8 @@
     },
     {
       "path": "full-current/descriptions/MS-P1-REVIEW-01.md",
-      "sha256": "f3bc617396cddd34ee7e0fc1793c68d3ef7d4a3ca4285121b10671e964b07ef1",
-      "bytes": 2272
+      "sha256": "d143ac822d0f47fd6c8c03511b2e7d89cd14e806453bf55ccb549e6a24a446cf",
+      "bytes": 3337
     },
     {
       "path": "full-current/descriptions/MS-P2-REVIEW-01.md",
@@ -519,9 +519,14 @@
       "bytes": 10305
     },
     {
+      "path": "full-current/review31-actual-adoption.json",
+      "sha256": "629d20f7e2a2e770b53e390d141534c4de7734d8accf3c447ac3fd828956dada",
+      "bytes": 528
+    },
+    {
       "path": "full-current/REVIEW31_RESULTS_AND_DECISION_CARD.md",
-      "sha256": "b848d6b18e00af0d38477d7c3aa54aa860464b617f0736fbf4daa0264eed4566",
-      "bytes": 10082
+      "sha256": "b2e0b49446621febbc3265312d87fe7372bbb710026b4ed4ead0e291983ca8b3",
+      "bytes": 11147
     },
     {
       "path": "full-current/TICKET_PACK.md",
@@ -540,8 +545,8 @@
     },
     {
       "path": "full-current/WORKBOOK_VALIDATION.json",
-      "sha256": "5f8581d5484450a8f13e59fb4a1c45a0841943b854d8341432b4ac116e1966ad",
-      "bytes": 970
+      "sha256": "270917255671edaa607c387ad3426b6a60db6b12028275c267a52087c3d649b9",
+      "bytes": 968
     },
     {
       "path": "FULL_INTEGRATION_CURRENT.md",
@@ -653,5 +658,6 @@
       "sha256": "04ecc2e74fae33362a1a1e1ac02337dd8b33a87dee7c7c78d44865280f87535a",
       "bytes": 10895
     }
-  ]
+  ],
+  "workbook_sha256": "81a29f955667a73b5addd757acd22cf05f688706bb59c7cd1edea940cae6ceb6"
 }
