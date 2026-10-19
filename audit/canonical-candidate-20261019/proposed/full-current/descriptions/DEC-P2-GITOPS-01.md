@@ -1,0 +1,38 @@
+# DEC-P2-GITOPS-01 — 현재 관리·인수 스냅샷
+
+기준 2026-10-19T19:25:19.982565+09:00. 미발행 정본 후보 / CODEX_ASSISTED. [GitHub 원본](https://github.com/321Team/fds-project-baseline/issues/120) · updated_at `2026-10-13T16:41:58Z` · body SHA256 `f623c98cb5668222665cd9a54b2b91ff8c1b73532f43b2d3cc5eedf3c1c02ccc`. 아래 속성표는 현행이며, 발행 v3.1.21 원본은 수정하지 않았다.
+
+| Property | 현재 입력값 |
+|---|---|
+| Record ID | DEC-P2-GITOPS-01 |
+| Phase | Phase 2 |
+| Category | CI/CD / OpenShift GitOps |
+| Type | Decision |
+| Status | To Do |
+| Priority | P1 |
+| Start | TBD — G5 이후 P0 잔여 capacity 시 |
+| End | TBD — 10-26 이전 강제하지 않음 |
+| Calendar Days | TBD |
+| Working Days | TBD |
+| Lead | 이권욱 |
+| Support | 이하영, 이재환 |
+| Exit Criteria | OpenShift GitOps 도입/미도입/유예를 단일안으로 결정하고, 도입 시 #46 Delivery Contract 변경 CR·권한모델·Git Source·재생성/Rollback·D26 Operator 공급경로를 승인 |
+| Related Decision IDs | D26(Operator 공급망); 신규 Decision Register 순번은 차기 정본에서 부여 |
+| Related Risk IDs | RISK-06; RISK-08; RISK-11 |
+| Source | 2026-09-29 팀 회의 Red Hat 제품 검토; 2026-09-30 사용자 범위 결정; Red Hat ROSA/OpenShift GitOps 공식 문서; 현행 발행 정본: docs-v3.1.21 (979facb98de8ca1f1e2ce22f38b27ac3366f3fc3); 수집 후 실행 기록은 본문 최신 증적 기준 |
+| Schedule Note | 보류(Deferred) — 2026-10-14 이권욱 결정. GitOps 도입 결정·구현을 보류하며 기존 Runner direct ROSA Delivery Contract 유지. Owner 이권욱. G5 이후 P0 잔여 capacity와 별도 재개 판단 시에만 재검토; 10/26 이전 착수·완료를 강제하지 않는다. 기존 계획 기준: P1/non-blocking. #42/#46 P0 Registry/Delivery와 겹치지 않도록 G5 이후 capacity가 있을 때만 Go/No-Go를 판단한다. Go 전에는 기존 Runner direct ROSA Delivery Contract를 유지한다. |
+
+## 현재 원 AC — 체크 상태 보존
+
+- [ ] 도입 / 미도입 / 유예가 단일안으로 기록된다.
+- [ ] 미도입 또는 유예 시 기존 #46 Runner Delivery Contract가 그대로 유지됨을 확인한다.
+- [ ] 도입 시 #46의 Deploy 단계 변경을 별도 CR로 승인한다.
+- [ ] Build/Test/Scan/Registry Push와 Runtime Sync의 Producer/Consumer 경계를 명시한다.
+- [ ] Argo CD RBAC/Namespace 권한을 최소권한으로 설계한다.
+- [ ] Source Commit → Registry Digest → Git desired state → Argo CD sync revision → ROSA Runtime imageID → Evidence 체인을 정의한다.
+- [ ] Sync failure/drift/rollback/recreate 검증과 Evidence 위치를 정한다.
+- [ ] P0 G5/G6 지연 예상 시 Deferred로 전환한다.
+
+## 상태·원조건 추적
+
+기존 승인·위험수용·미검증·Reviewer/Approver는 해당 GitHub 원문/댓글과 [Review 원조건 표](../REVIEW31_RESULTS_AND_DECISION_CARD.md)를 따른다. 상태 동기화가 원 AC를 완화하거나 미실행을 MET로 바꾸지 않는다.

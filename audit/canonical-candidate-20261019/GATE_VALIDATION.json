@@ -1,0 +1,16 @@
+{
+  "at_kst": "2026-10-19T19:06:27.978237+09:00",
+  "stage": "stage2",
+  "workbook_sha256": "e5f541c3663cb7a01cbad0810aa3f77c9c5ebece36b8c47a5d00002913020c5a",
+  "planned_changes": 9,
+  "unexpected_values_formulas_styles": 0,
+  "sheets": 10,
+  "native_DV_CF_chart_series_dimensions_merges_freeze_preserved": true,
+  "cached_formula_errors": 0,
+  "Milestone_cached_status_matches_WBS": true,
+  "authoring_process_rc": 1,
+  "export_and_independent_readback_verified": true,
+  "native_Excel": "NOT_RUN",
+  "workbook_scope": "11selectedP1/other67historical; P2sidecar12notapplied",
+  "full_release": false
+}

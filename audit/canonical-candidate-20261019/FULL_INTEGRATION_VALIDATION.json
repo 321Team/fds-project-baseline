@@ -1,0 +1,88 @@
+{
+  "at_kst": "2026-10-19T20:15:25.320170+09:00",
+  "records": 78,
+  "Status_Phase_Lead_all_rows": "MATCH",
+  "description_records": 78,
+  "current_source_body_sha256_bound": 78,
+  "unique_Record_IDs": 78,
+  "relative_links": "PASS",
+  "preserved_prior_inputs": 28,
+  "workbook": {
+    "at_kst": "2026-10-19T20:15:24.070858+09:00",
+    "workbook_sha256": "2cca7830ed131b372506eb4af2ce6209c501097266a6fc59be83cb70acac88de",
+    "sheets": 10,
+    "records": 78,
+    "planned_cell_changes": 6,
+    "unexpected_values_formulas_styles": 0,
+    "formula_change": "No formula changes in this final Signoff/Close stage; existing Cancelled formula preserved",
+    "native_features": "DV/CF/chart series/dimensions/merges/panes/comments/protection preserved",
+    "cached_formula_errors": 0,
+    "summary_counts": {
+      "Done": 45,
+      "Cancelled": 3,
+      "To Do": 19,
+      "In Progress": 11
+    },
+    "milestone_status_formula_readback": "MATCH",
+    "unknown_dates": "blank typed-date inputs preserved; exact TBD in per-record metadata/notes",
+    "scope": "all78 current Status/Phase/metadata with approved conditional outcomes; plan Gantt retains original plan rows",
+    "native_Excel": "NOT_RUN",
+    "authoring_process_rc": 1,
+    "export_independent_readback": "SUCCESS"
+  },
+  "P2_runtime_actions": 0,
+  "main_release_tag_assets_changed": false,
+  "Review31_final_approval": "ACTUALLY_ADOPTED_CLOSED",
+  "whole_Close": false,
+  "scope": "full status/WBS/P2-spec candidate integration, original plan/history explicitly preserved",
+  "review31_adoption": {
+    "at_kst": "2026-10-19T19:41:26.357622+09:00",
+    "answer": "권장안 한정 채택",
+    "card": "https://github.com/321Team/fds-project-baseline/issues/31#issuecomment-6265271383",
+    "card_sha256": "ccc60a22da0c21981a6652cf67c39ef6191b496b13e6817ab9229545316c65b3",
+    "actual_record": "https://github.com/321Team/fds-project-baseline/issues/31#issuecomment-6265340124",
+    "bound_head": "a896402a03086f78f8653b3c96ce486a31b1b862",
+    "not_new_Demo_or_whole_Close": true
+  },
+  "current_counts": {
+    "Done": 45,
+    "Cancelled": 3,
+    "To Do": 19,
+    "In Progress": 11
+  },
+  "Review31_note_state_corrected": true,
+  "final_signoff_close": {
+    "at_kst": "2026-10-19T20:15:24.228703+09:00",
+    "stage": "closed32",
+    "A_actual_adoption": {
+      "at_kst": "2026-10-19T20:05:51.513852+09:00",
+      "human": "이권욱",
+      "question_call_id": "call_20da105a10594957a68d521f2698b32e",
+      "actual_answer": "A·B 채택 — 조건 확인 후 순차 종결 (권장)",
+      "card": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6265667213",
+      "card_sha256": "39395b6bc44f14267917d4ffae8711e046085e2aec63927d9c7d5c6ec3138818",
+      "bound_candidate": "b085e02776e64ea678891d99c3fcdf97837a1ce6",
+      "A": "ACTUAL_CONDITIONAL_FINAL_SIGNOFF",
+      "B": "ACTUALLY_AUTHORIZED_CONDITIONAL_SEQUENTIAL_CLOSE_NOT_EXECUTED",
+      "scope": "Existing named RA/KI and accepted carry-over retained; no system-wide Critical0 technical claim",
+      "new_Release_Runtime_P2": false,
+      "A_actual_record": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6265747689"
+    },
+    "A_closed_at_kst": "2026-10-19T20:10:15+09:00",
+    "B_actual_decision": {
+      "at_kst": "2026-10-19T20:12:49.706506+09:00",
+      "user_actual_adoption_at_kst": "2026-10-19T20:05:51.513852+09:00",
+      "user_actual_answer": "A·B 채택 — 조건 확인 후 순차 종결 (권장)",
+      "actual_record": "https://github.com/321Team/fds-project-baseline/issues/32#issuecomment-6265873856",
+      "A_signoff": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6265747689",
+      "A_closed_at": "2026-10-19T11:10:15Z",
+      "A_candidate": "e51e9980d88dcf8d7d19ab590e36d98df0d4c2f7",
+      "A_tracking_verified": true,
+      "new_Release_Runtime_P2": false
+    },
+    "B_closed_at_kst": "2026-10-19T20:12:53+09:00",
+    "whole_Phase1_Close_actually_executed": true,
+    "new_Release_Runtime_P2": false,
+    "known_risk_scope": "original card tables 2-4 and actual adoption; no new system-wide Critical0"
+  }
+}

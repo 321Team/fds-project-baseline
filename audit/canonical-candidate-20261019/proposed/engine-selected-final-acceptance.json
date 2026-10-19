@@ -1,0 +1,305 @@
+{
+  "actual_user_decision": {
+    "at_kst": "2026-10-19T18:59:05.136131+09:00",
+    "actual_user_answer": "네 항목 권장안 한정 채택",
+    "question_reply_id": "call_496ade826f954009b641925ce9e46462",
+    "decision_card": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6264546219",
+    "card_sha256": "0116c982622b1192ad079e5e77f7625444f5d0162836cef61c79a329de5e2164",
+    "scope": [
+      "ICR14 conditional final acceptance preserving AC20 limits",
+      "Ansible9 conditional final acceptance of selected manual opt-in and existing isolated CI",
+      "G1 conditional readiness",
+      "G3 conditional Review Ready under named existing residual risks"
+    ],
+    "new_system_Critical0": false,
+    "new_Runtime": false,
+    "whole_Phase1_Close": false,
+    "original_AC_changed": false,
+    "G2_not_reapproved": true,
+    "central_actual_record": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6264594986"
+  },
+  "scope": "infra-ansible9 selected manual opt-in and existing isolated CI, not new canonical RecordID",
+  "actual_post_adoption_metadata": {
+    "at_kst": "2026-10-19T18:52:38.752305+09:00",
+    "actual_ssh_rc": 0,
+    "stdout_sha256": "1f36ab03d69fb7bdc1d0d6962c44952023197eb25b13ddfd13e8d28baaf179c7",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "result": {
+      "task": "KNOWN_MANUAL_OPERATING_METADATA_20261019",
+      "started_utc": "2026-10-19T09:52:38.120605+00:00",
+      "cli": [
+        {
+          "kind": "candidate",
+          "cli": "ansible",
+          "executable": {
+            "path": "/home/server01_ansible/ansible-candidate.8oCqVUwx/result/runtime/venv-2.21.3/bin/ansible",
+            "sha256": "96dca1fdfea0f862e48baede081dfb79ab91fc81a2ca5ab7d5fff573a13226bc",
+            "uid": 1000,
+            "mode": "0o755"
+          },
+          "actual_rc": 0,
+          "stderr_bytes": 0,
+          "first_version_line": "ansible [core 2.21.3]",
+          "config_file": "/home/server01_ansible/worker02-session-plan-3hetha3t/source/ansible.cfg",
+          "collection_search_paths": [
+            "/home/server01_ansible/.ansible/collections",
+            "/usr/share/ansible/collections"
+          ],
+          "collection_search_paths_are_not_installed_collection_inventory": true
+        },
+        {
+          "kind": "candidate",
+          "cli": "ansible-playbook",
+          "executable": {
+            "path": "/home/server01_ansible/ansible-candidate.8oCqVUwx/result/runtime/venv-2.21.3/bin/ansible-playbook",
+            "sha256": "dec772998b595cdcf461e65682617cec78440366e93b1c80cdd9ffa10f954ba9",
+            "uid": 1000,
+            "mode": "0o755"
+          },
+          "actual_rc": 0,
+          "stderr_bytes": 0,
+          "first_version_line": "ansible-playbook [core 2.21.3]",
+          "config_file": "/home/server01_ansible/worker02-session-plan-3hetha3t/source/ansible.cfg",
+          "collection_search_paths": [
+            "/home/server01_ansible/.ansible/collections",
+            "/usr/share/ansible/collections"
+          ],
+          "collection_search_paths_are_not_installed_collection_inventory": true
+        },
+        {
+          "kind": "candidate",
+          "cli": "ansible-inventory",
+          "executable": {
+            "path": "/home/server01_ansible/ansible-candidate.8oCqVUwx/result/runtime/venv-2.21.3/bin/ansible-inventory",
+            "sha256": "07e4bb4668863c6841383c34ef0c2e5bd37289e066057074976a941469a5f100",
+            "uid": 1000,
+            "mode": "0o755"
+          },
+          "actual_rc": 0,
+          "stderr_bytes": 0,
+          "first_version_line": "ansible-inventory [core 2.21.3]",
+          "config_file": "/home/server01_ansible/worker02-session-plan-3hetha3t/source/ansible.cfg",
+          "collection_search_paths": [
+            "/home/server01_ansible/.ansible/collections",
+            "/usr/share/ansible/collections"
+          ],
+          "collection_search_paths_are_not_installed_collection_inventory": true
+        },
+        {
+          "kind": "candidate",
+          "cli": "ansible-config",
+          "executable": {
+            "path": "/home/server01_ansible/ansible-candidate.8oCqVUwx/result/runtime/venv-2.21.3/bin/ansible-config",
+            "sha256": "b6b79854faa761c577e803b3f08e19e6766a0e0e6fa1f719e524932d2c2c6111",
+            "uid": 1000,
+            "mode": "0o755"
+          },
+          "actual_rc": 0,
+          "stderr_bytes": 0,
+          "first_version_line": "ansible-config [core 2.21.3]",
+          "config_file": "/home/server01_ansible/worker02-session-plan-3hetha3t/source/ansible.cfg",
+          "collection_search_paths": [
+            "/home/server01_ansible/.ansible/collections",
+            "/usr/share/ansible/collections"
+          ],
+          "collection_search_paths_are_not_installed_collection_inventory": true
+        },
+        {
+          "kind": "previous-engine-identity",
+          "cli": "ansible",
+          "executable": {
+            "path": "/usr/bin/ansible",
+            "sha256": "8601f5ea1fcec5b651f579c695665c2809bf80bb7416d95f33048e90a13002c5",
+            "uid": 0,
+            "mode": "0o755"
+          },
+          "actual_rc": 0,
+          "stderr_bytes": 0,
+          "first_version_line": "ansible [core 2.16.19]"
+        }
+      ],
+      "checks": [
+        {
+          "label": "before-head",
+          "argv": [
+            "/usr/bin/git",
+            "--no-optional-locks",
+            "-c",
+            "core.fsmonitor=false",
+            "-c",
+            "core.untrackedCache=false",
+            "rev-parse",
+            "HEAD"
+          ],
+          "rc": 0,
+          "timed_out": false,
+          "stdout_bytes": 41,
+          "stderr_bytes": 0
+        },
+        {
+          "label": "before-tracked",
+          "argv": [
+            "/usr/bin/git",
+            "--no-optional-locks",
+            "-c",
+            "core.fsmonitor=false",
+            "-c",
+            "core.untrackedCache=false",
+            "status",
+            "--porcelain=v1",
+            "--untracked-files=no"
+          ],
+          "rc": 0,
+          "timed_out": false,
+          "stdout_bytes": 0,
+          "stderr_bytes": 0
+        },
+        {
+          "label": "candidate-ansible",
+          "argv": [
+            "/home/server01_ansible/ansible-candidate.8oCqVUwx/result/runtime/venv-2.21.3/bin/ansible",
+            "--version"
+          ],
+          "rc": 0,
+          "timed_out": false,
+          "stdout_bytes": 848,
+          "stderr_bytes": 0
+        },
+        {
+          "label": "candidate-ansible-playbook",
+          "argv": [
+            "/home/server01_ansible/ansible-candidate.8oCqVUwx/result/runtime/venv-2.21.3/bin/ansible-playbook",
+            "--version"
+          ],
+          "rc": 0,
+          "timed_out": false,
+          "stdout_bytes": 866,
+          "stderr_bytes": 0
+        },
+        {
+          "label": "candidate-ansible-inventory",
+          "argv": [
+            "/home/server01_ansible/ansible-candidate.8oCqVUwx/result/runtime/venv-2.21.3/bin/ansible-inventory",
+            "--version"
+          ],
+          "rc": 0,
+          "timed_out": false,
+          "stdout_bytes": 868,
+          "stderr_bytes": 0
+        },
+        {
+          "label": "candidate-ansible-config",
+          "argv": [
+            "/home/server01_ansible/ansible-candidate.8oCqVUwx/result/runtime/venv-2.21.3/bin/ansible-config",
+            "--version"
+          ],
+          "rc": 0,
+          "timed_out": false,
+          "stdout_bytes": 862,
+          "stderr_bytes": 0
+        },
+        {
+          "label": "previous-engine",
+          "argv": [
+            "/usr/bin/ansible",
+            "--version"
+          ],
+          "rc": 0,
+          "timed_out": false,
+          "stdout_bytes": 602,
+          "stderr_bytes": 0
+        },
+        {
+          "label": "after-head",
+          "argv": [
+            "/usr/bin/git",
+            "--no-optional-locks",
+            "-c",
+            "core.fsmonitor=false",
+            "-c",
+            "core.untrackedCache=false",
+            "rev-parse",
+            "HEAD"
+          ],
+          "rc": 0,
+          "timed_out": false,
+          "stdout_bytes": 41,
+          "stderr_bytes": 0
+        },
+        {
+          "label": "after-tracked",
+          "argv": [
+            "/usr/bin/git",
+            "--no-optional-locks",
+            "-c",
+            "core.fsmonitor=false",
+            "-c",
+            "core.untrackedCache=false",
+            "status",
+            "--porcelain=v1",
+            "--untracked-files=no"
+          ],
+          "rc": 0,
+          "timed_out": false,
+          "stdout_bytes": 0,
+          "stderr_bytes": 0
+        }
+      ],
+      "raw_stdout_or_stderr_saved": false,
+      "target_actions": 0,
+      "pycache_requested": false,
+      "host": "ansible01",
+      "account": "server01_ansible",
+      "uid": 1000,
+      "boot_id": "0317c0f8-cdc9-4c5e-a28e-48961c75e62e",
+      "cwd": "/home/server01_ansible/worker02-session-plan-3hetha3t/source",
+      "explicit_config": "/home/server01_ansible/worker02-session-plan-3hetha3t/source/ansible.cfg",
+      "limited_environment_keys": [
+        "ANSIBLE_CONFIG",
+        "GIT_CONFIG_GLOBAL",
+        "GIT_CONFIG_NOSYSTEM",
+        "GIT_OPTIONAL_LOCKS",
+        "HOME",
+        "LANG",
+        "LC_ALL",
+        "PATH",
+        "PYTHONDONTWRITEBYTECODE"
+      ],
+      "before": {
+        "head": "0d58598d8a3ce77ccd7eaa9e1dfba820b0a436ea",
+        "tracked_changes": 0,
+        "config": {
+          "path": "/home/server01_ansible/worker02-session-plan-3hetha3t/source/ansible.cfg",
+          "sha256": "73e6f6b5844a7a2dee8cf042b67a1c7b61c3e4b4198f4f7f7b65907e883de90e",
+          "uid": 1000,
+          "mode": "0o600"
+        }
+      },
+      "native_local_temp": {
+        "preexisting_private_parent": true,
+        "before_owned_pattern_count": 0,
+        "collector_created_parent": false,
+        "native_version_can_create_self_cleaned_children": true,
+        "after_owned_pattern_count": 0,
+        "new_native_pattern_children_remaining": 0,
+        "preexisting_pattern_children_removed": 0
+      },
+      "after": {
+        "head": "0d58598d8a3ce77ccd7eaa9e1dfba820b0a436ea",
+        "tracked_changes": 0,
+        "config": {
+          "path": "/home/server01_ansible/worker02-session-plan-3hetha3t/source/ansible.cfg",
+          "sha256": "73e6f6b5844a7a2dee8cf042b67a1c7b61c3e4b4198f4f7f7b65907e883de90e",
+          "uid": 1000,
+          "mode": "0o600"
+        }
+      },
+      "status": "PASS_EXACT_KNOWN_MANUAL_METADATA_NO_ENGINE_SWITCH",
+      "finished_utc": "2026-10-19T09:52:39.270216+00:00"
+    },
+    "automatic_retry": false
+  },
+  "whole_caller_migration": false,
+  "server_config_changes": 0,
+  "original_AC_checks_changed": false
+}

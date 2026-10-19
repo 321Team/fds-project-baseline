@@ -1,0 +1,17 @@
+{
+  "at_kst": "2026-10-19T20:43:58.191260+09:00",
+  "reviewed_head": "bcade180ba967eb8b465afd7f4e5cfe182bbf6ce",
+  "reviews": [
+    "https://github.com/321Team/fds-project-baseline/pull/191#pullrequestreview-5570847507",
+    "https://github.com/321Team/fds-project-baseline/pull/191#pullrequestreview-5570955357"
+  ],
+  "changes": [
+    "Git text conversion disabled within candidate only; 20 line-ending-only drift corrected to checksum-bound bytes",
+    "Current APP/E2E historical notes distinguished from later accepted results",
+    "Existing #25 conditional Grafana cutoff/fallback linked without changing activation, AC, Due or execution status"
+  ],
+  "frozen_inputs_preserved": 28,
+  "new_runtime": false,
+  "workbook_sha256": "2cca7830ed131b372506eb4af2ce6209c501097266a6fc59be83cb70acac88de",
+  "new_head_independent_approval": "Prior reviews apply to OLD head. Delta reviewed by central Lead; no claim of new reviewer signature."
+}
