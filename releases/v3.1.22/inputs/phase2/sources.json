@@ -1,0 +1,113 @@
+{
+  "kind": "NON_EXECUTABLE_CANONICAL_INPUT",
+  "freeze": {
+    "decision": "https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-6259117130",
+    "source": "https://github.com/321Team/fds-project-baseline/blob/38a6512aec35cb5e94b339a41ba506fc37113b01/phase2/preparation/20261008/architecture-freeze-candidate-20261018.md",
+    "source_commit": "38a6512aec35cb5e94b339a41ba506fc37113b01",
+    "source_blob": "6a62d6935ae0e97ed9f988bf33ea33ad041cdbd1",
+    "source_sha256": "aa36c2723cbbdd20ffd5d89407c93641ed984e89306dd167da5cb157fc76101e",
+    "merge": "acc513cf5c9f3e07e58d818a18e4b8fcf1e0cf70"
+  },
+  "status_receipts": [
+    {
+      "number": 34,
+      "record_id": "P2-ARC-01",
+      "status_comment": "https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-6264223768",
+      "source_reference": "https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-6259117130",
+      "after_body_sha256": "2dbc6ac6e298940f7405bbe86f262f73e623b59969b3ea31267d240abf153d48",
+      "snapshot_updated_at": "2026-10-19T09:38:19Z"
+    },
+    {
+      "number": 35,
+      "record_id": "P2-IAC-01",
+      "status_comment": "https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-6264225353",
+      "source_reference": "https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-6207104552",
+      "after_body_sha256": "677720e9b9fc7235f187a60f2dceecae874203e5a774a560821b584b7e8c8f49",
+      "snapshot_updated_at": "2026-10-19T09:38:24Z"
+    },
+    {
+      "number": 36,
+      "record_id": "P2-OCI-01",
+      "status_comment": "https://github.com/321Team/fds-project-baseline/issues/36#issuecomment-6264227043",
+      "source_reference": "https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-6259117130",
+      "after_body_sha256": "f70908ecded811819f4e556078f9d4b81fef8c6536027b01c4c02084348221c6",
+      "snapshot_updated_at": "2026-10-19T09:38:30Z"
+    },
+    {
+      "number": 37,
+      "record_id": "P2-VPN-01",
+      "status_comment": "https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-6264228990",
+      "source_reference": "https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-6264027866",
+      "after_body_sha256": "2b32f927a8fec876b349ab7a0b7fe51277a06c44fe85a8a05e814f2ef69fdada",
+      "snapshot_updated_at": "2026-10-19T09:38:36Z"
+    },
+    {
+      "number": 38,
+      "record_id": "P2-ROSA-01",
+      "status_comment": "https://github.com/321Team/fds-project-baseline/issues/38#issuecomment-6264230348",
+      "source_reference": "https://github.com/321Team/infra-rosa/issues/5#issuecomment-6264116497",
+      "after_body_sha256": "525d74d322a0646d320a0cffdc0f3275d39ad1f1a7de0d81d9609aecf2d923ce",
+      "snapshot_updated_at": "2026-10-19T09:38:41Z"
+    },
+    {
+      "number": 42,
+      "record_id": "DEC-P2-REG-01",
+      "status_comment": "https://github.com/321Team/fds-project-baseline/issues/42#issuecomment-6264231857",
+      "source_reference": "https://github.com/321Team/fds-project-baseline/issues/42#issuecomment-6207939448",
+      "after_body_sha256": "56c124765e65e344cca50ef4592e82bed6401df78f824ccdc822cbcf6e32c94d",
+      "snapshot_updated_at": "2026-10-19T09:38:46Z"
+    },
+    {
+      "number": 43,
+      "record_id": "P2-APP-01",
+      "status_comment": "https://github.com/321Team/fds-project-baseline/issues/43#issuecomment-6264233431",
+      "source_reference": "https://github.com/321Team/fds-msa/pull/40#issuecomment-6263919244",
+      "after_body_sha256": "449a971a44a453c5e1d84f320d02979d00c7332e3e3ecca8132f3c9389c77359",
+      "snapshot_updated_at": "2026-10-19T09:38:51Z"
+    },
+    {
+      "number": 46,
+      "record_id": "P2-CICD-01",
+      "status_comment": "https://github.com/321Team/fds-project-baseline/issues/46#issuecomment-6264234866",
+      "source_reference": "https://github.com/321Team/fds-project-baseline/issues/46#issuecomment-6261841502",
+      "after_body_sha256": "071fdb0ed2a22636685346e34c2c80cf651358d6bc9042e1f075e06877d22fbc",
+      "snapshot_updated_at": "2026-10-19T09:38:56Z"
+    },
+    {
+      "number": 47,
+      "record_id": "P2-HYB-01",
+      "status_comment": "https://github.com/321Team/fds-project-baseline/issues/47#issuecomment-6264236520",
+      "source_reference": "https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-6259117130",
+      "after_body_sha256": "c7b87656feb9c2ced065ac4ea9bca3323f3a955ee9b4038b3673e90eb7d64315",
+      "snapshot_updated_at": "2026-10-19T09:39:02Z"
+    },
+    {
+      "number": 49,
+      "record_id": "P2-DOC-01",
+      "status_comment": "https://github.com/321Team/fds-project-baseline/issues/49#issuecomment-6264238133",
+      "source_reference": "https://github.com/321Team/fds-project-baseline/issues/49#issuecomment-6211109828",
+      "after_body_sha256": "0df84e2a05a4c27c441290098efde7f3ec35a171b918eb172144258e870be26f",
+      "snapshot_updated_at": "2026-10-19T09:39:07Z"
+    },
+    {
+      "number": 52,
+      "record_id": "DEC-CAL-P2-01",
+      "status_comment": "https://github.com/321Team/fds-project-baseline/issues/52#issuecomment-6264239681",
+      "source_reference": "https://github.com/321Team/fds-project-baseline/issues/49#issuecomment-6211109828",
+      "after_body_sha256": "0bfffefa3778b8a96be52a1f4d53f2cd41813394aab5d98f61b517f3511528b5",
+      "snapshot_updated_at": "2026-10-19T09:39:13Z"
+    },
+    {
+      "number": 55,
+      "record_id": "P2-REV-01",
+      "status_comment": "https://github.com/321Team/fds-project-baseline/issues/55#issuecomment-6264241276",
+      "source_reference": "https://github.com/321Team/fds-project-baseline/issues/49#issuecomment-6211109828",
+      "after_body_sha256": "855e8842396a4a91a8d06b62a96712e12b7b2bc6446ec78e191e0f6303a1fd6e",
+      "snapshot_updated_at": "2026-10-19T09:39:18Z"
+    }
+  ],
+  "candidate_base": "86c888f12c349534cbadd985fe30de39ae79a4a6",
+  "phase1_existing_workbook_sha256": "a11f197e886a8780a51c9d05a045288ea64e900bcdfcf4c2271154cfadb54e0e",
+  "runtime_approval": false,
+  "new_specification_approval": false
+}
