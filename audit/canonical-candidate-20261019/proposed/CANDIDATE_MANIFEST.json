@@ -5,33 +5,33 @@
   "files": [
     {
       "path": "BASELINE_CHANGE_ADDENDUM.md",
-      "sha256": "d13a5bf9faf5125723c9628f1e90d12a8c749c065a6721597138636b2f0b474a",
-      "bytes": 4184
+      "sha256": "7de33bae7be1efe6eb76fd9892642694a5fbfbc1c4b7ec6f172d1b2a6ccafb6f",
+      "bytes": 4177
     },
     {
       "path": "canonical-status-delta.json",
-      "sha256": "eef9fe8b3db740cbcf10477f75e91c4896ef7eb3dedce209bebac45ae5e67a2a",
-      "bytes": 27717
+      "sha256": "a4abfcdd5d5e300045976052678c3c092069d5000167d302a90da1059ec51ba7",
+      "bytes": 28605
     },
     {
       "path": "descriptions/ICR-D-NET-01-01.md",
-      "sha256": "4a865072d6f70c849f9dfdd01b27fcc0fc1971de84de4e29afa88caad1550e7b",
-      "bytes": 174316
+      "sha256": "82f573f284e3305c2eeff09cb50d66f8bd1d30c186b44daf6c90bd5c12c363a4",
+      "bytes": 174371
     },
     {
       "path": "descriptions/MS-G1-01.md",
-      "sha256": "d276bcdcdcf9a5803cac023c001f1c956ff34766d27a4f675dd11b7e7b2b83cb",
-      "bytes": 20226
+      "sha256": "ec31a21589c0f2add1eac742a790ad8fa4026e1eada6452b608b8bb77640ac6a",
+      "bytes": 20304
     },
     {
       "path": "descriptions/MS-G2-01.md",
-      "sha256": "8d08953f31bc11fcf54c31f043e0ce481e3c6695d1242b80c98894e463ec9e4a",
-      "bytes": 17692
+      "sha256": "34bbdcf74e081360dd509b9de9d66d8d7d3522c950390ba5a8ec55f45677fa9f",
+      "bytes": 17696
     },
     {
       "path": "descriptions/MS-G3-01.md",
-      "sha256": "68ecadac0ba0aa4e199617354bfc13e460938bc41b65cfffba41b3df698bfbfe",
-      "bytes": 20390
+      "sha256": "99451ba8ba5b96e1db9edf680073cd4d17876128eb5c55e3af4c609637c2b1b9",
+      "bytes": 20477
     },
     {
       "path": "descriptions/P1-APP-01.md",
@@ -75,8 +75,8 @@
     },
     {
       "path": "FDS_P1_WBS_Status_Candidate_20261019.xlsx",
-      "sha256": "595925b63f79cef143333267b470006ac9cbcf428f7ed69713251e5b588fb726",
-      "bytes": 142322
+      "sha256": "e5f541c3663cb7a01cbad0810aa3f77c9c5ebece36b8c47a5d00002913020c5a",
+      "bytes": 142384
     },
     {
       "path": "gate-final-acceptance-20261019.md",
@@ -85,8 +85,8 @@
     },
     {
       "path": "P1_CANONICAL_UPDATE_PACK.md",
-      "sha256": "709c56a83e45af327ea00313a910da57752e5b1f29cd43455aa676e3c0012c19",
-      "bytes": 4786
+      "sha256": "55925a5b1413bbc3995b53b71ac24f66bb9e2ad9e63373aadbdc6ac0403f0c10",
+      "bytes": 4779
     },
     {
       "path": "phase2/descriptions/DEC-CAL-P2-01.md",
@@ -175,8 +175,8 @@
     },
     {
       "path": "RELEASE_NOTES_CANDIDATE.md",
-      "sha256": "0fb354478ea24e9ba4c9b15cf050f12eb53291f42aa5643fa1fd16b95ab23ec1",
-      "bytes": 2185
+      "sha256": "e3a4755d4f84cac4b180d346e00cd396a3aa9ea01a10adfc301cb10b2617abb6",
+      "bytes": 2178
     }
   ],
   "full_release_set": "NOT_GENERATED",
@@ -194,5 +194,5 @@
   "workbook_updated_records": 11,
   "phase2_wbs_delta": "phase2/status-delta.json",
   "phase2_final_wbs_regeneration": "PENDING_FINAL_CANONICAL_SET",
-  "gate_acceptance_stage": "stage1"
+  "gate_acceptance_stage": "stage2"
 }

@@ -1,8 +1,8 @@
 {
-  "at_kst": "2026-10-19T19:04:10.981004+09:00",
-  "stage": "stage1",
-  "workbook_sha256": "595925b63f79cef143333267b470006ac9cbcf428f7ed69713251e5b588fb726",
-  "planned_changes": 8,
+  "at_kst": "2026-10-19T19:06:27.978237+09:00",
+  "stage": "stage2",
+  "workbook_sha256": "e5f541c3663cb7a01cbad0810aa3f77c9c5ebece36b8c47a5d00002913020c5a",
+  "planned_changes": 9,
   "unexpected_values_formulas_styles": 0,
   "sheets": 10,
   "native_DV_CF_chart_series_dimensions_merges_freeze_preserved": true,

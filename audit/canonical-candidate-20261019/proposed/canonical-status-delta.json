@@ -2,7 +2,7 @@
   "state": "CANDIDATE_SELECTED11_P1_ACCEPTANCE_STATUS_NOT_FULL_RELEASE",
   "base_canonical": "docs-v3.1.21",
   "base_main": "d8f55d816cfe8ca894210695a7a582850c8c926c",
-  "at_kst": "2026-10-19T19:04:11.105786+09:00",
+  "at_kst": "2026-10-19T19:06:28.004313+09:00",
   "scope": "11selectedP1 acceptance/currentstatus, remaining67historical, P2status12sidecarpreserved",
   "records": [
     {
@@ -280,7 +280,7 @@
         "Phase": "Phase 1",
         "Category": "Network / Interface Change Control",
         "Type": "Change Request",
-        "Status": "In Progress",
+        "Status": "Done",
         "Priority": "P0",
         "Start": "2026-09-01",
         "End": "2026-09-21",
@@ -294,13 +294,17 @@
         "Source": "Baseline/Ticket Pack v3.1.18; GitHub #14; PR #2/#3/#4/#8 병합 기록; PR #9 b3f3374 승인·merge c08b798; CP1 최종 재적용·CP2 inspect·CNI 준비 및 p3dmjivl 실측 FAIL 증적. 원 정본 수집 이력: audit/v3.1.18/k8s-intake-20260910.json; 현행 발행 정본: docs-v3.1.21 (979facb98de8ca1f1e2ce22f38b27ac3366f3fc3); 수집 후 실행 기록은 본문 최신 증적 기준",
         "Schedule Note": "09-21은 권장 Plan End이며 실제 종료일 확정이나 AC 완료가 아니다. 기존 End TBD 이력은 보존한다. CP→Worker·NTP·IF-16을 먼저, IF-06B·Negative/Reboot/Rollback·보호 인계를 후속 검증한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
       },
-      "state": "open",
+      "state": "closed",
       "url": "https://github.com/321Team/fds-project-baseline/issues/14",
-      "current_disposition": "CONDITIONAL_ACCEPTANCE_RECORDED_TRACKING_IN_PROGRESS",
+      "current_disposition": "CONDITIONAL_ACCEPTANCE_RECORDED_TRACKING_COMPLETE",
       "acceptance_source": "https://github.com/321Team/fds-project-baseline/issues/14#issuecomment-6264595677",
       "actual_accepted_at_kst": "2026-10-19T18:59:05.136131+09:00",
-      "retained_limits": "- **잔여·경계:** 2026-10-19 사용자 실제 회신으로 ICR 원 AC20 한계/KI를 보존한 조건부 최종 인수을 채택했다. 실제 결정 https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6264594986 . 기존 기술 한계·미충족/미검증·원 AC 체크·Owner/재검토를 유지하며 전체 기술PASS/새 시스템Critical0/전caller전환이 아니다. 정본 후보의 현재 인수 결과·WBS/Description 반영 확인 후 한정 종결을 정합화한다. 실제Demo/Review/Signoff·전체Phase1 Close·새Release/서버/P2실행은 별도다.",
-      "whole_technical_MET": false
+      "retained_limits": "- **잔여·경계:** ICR 조건부 최종 인수 실제 채택 및 정본 후보 추적 반영 대조 후 조건부 종결. 기존 기술 한계/미검증·원 AC 체크·Owner/재검토는 보존하며 전체 기술PASS·새 시스템Critical0·전caller전환이 아니다. 실제Review/Demo/Signoff·전체Phase1 Close·새Release/서버/P2실행은 별도다. 실제 결정 https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6264594986 · 종결 근거 https://github.com/321Team/fds-project-baseline/issues/14#issuecomment-6264705121",
+      "whole_technical_MET": false,
+      "actual_completed_at_utc": "2026-10-19T10:05:24Z",
+      "actual_completed_at_kst": "2026-10-19T19:05:24+09:00",
+      "closure_source": "https://github.com/321Team/fds-project-baseline/issues/14#issuecomment-6264705121",
+      "state_reason": "completed"
     },
     {
       "number": 18,
@@ -311,7 +315,7 @@
         "Phase": "Phase 1",
         "Category": "Milestone / Infrastructure",
         "Type": "Milestone",
-        "Status": "In Progress",
+        "Status": "Done",
         "Priority": "P0",
         "Start": "2026-09-17",
         "End": "2026-09-17",
@@ -325,13 +329,17 @@
         "Source": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #18 snapshot 2026-09-09T12:01:41Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청; 현행 발행 정본: docs-v3.1.21 (979facb98de8ca1f1e2ce22f38b27ac3366f3fc3); 수집 후 실행 기록은 본문 최신 증적 기준",
         "Schedule Note": "09-17 오후 조건부 인수 목표. 6대·API/LB·Calico·DB·Harbor·Runner 증적 미충족이면 PASS 불가. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
       },
-      "state": "open",
+      "state": "closed",
       "url": "https://github.com/321Team/fds-project-baseline/issues/18",
-      "current_disposition": "CONDITIONAL_ACCEPTANCE_RECORDED_TRACKING_IN_PROGRESS",
+      "current_disposition": "CONDITIONAL_ACCEPTANCE_RECORDED_TRACKING_COMPLETE",
       "acceptance_source": "https://github.com/321Team/fds-project-baseline/issues/18#issuecomment-6264597081",
       "actual_accepted_at_kst": "2026-10-19T18:59:05.136131+09:00",
-      "retained_limits": "- **잔여·경계:** 2026-10-19 사용자 실제 회신으로 G1 원 Exit 준비도 조건부 수용을 채택했다. 실제 결정 https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6264594986 . 기존 기술 한계·미충족/미검증·원 AC 체크·Owner/재검토를 유지하며 전체 기술PASS/새 시스템Critical0/전caller전환이 아니다. 정본 후보의 현재 인수 결과·WBS/Description 반영 확인 후 한정 종결을 정합화한다. 실제Demo/Review/Signoff·전체Phase1 Close·새Release/서버/P2실행은 별도다.",
-      "whole_technical_MET": false
+      "retained_limits": "- **잔여·경계:** G1 준비도 조건부 수용 실제 채택 및 정본 후보 추적 반영 대조 후 조건부 종결. 기존 기술 한계/미검증·원 AC 체크·Owner/재검토는 보존하며 전체 기술PASS·새 시스템Critical0·전caller전환이 아니다. 실제Review/Demo/Signoff·전체Phase1 Close·새Release/서버/P2실행은 별도다. 실제 결정 https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6264594986 · 종결 근거 https://github.com/321Team/fds-project-baseline/issues/18#issuecomment-6264709975",
+      "whole_technical_MET": false,
+      "actual_completed_at_utc": "2026-10-19T10:05:40Z",
+      "actual_completed_at_kst": "2026-10-19T19:05:40+09:00",
+      "closure_source": "https://github.com/321Team/fds-project-baseline/issues/18#issuecomment-6264709975",
+      "state_reason": "completed"
     },
     {
       "number": 23,
@@ -342,7 +350,7 @@
         "Phase": "Phase 1",
         "Category": "Milestone / Security & Feature",
         "Type": "Milestone",
-        "Status": "In Progress",
+        "Status": "Done",
         "Priority": "P0",
         "Start": "2026-09-21",
         "End": "2026-09-21",
@@ -356,13 +364,17 @@
         "Source": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #23 snapshot 2026-09-09T12:03:10Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청; 현행 발행 정본: docs-v3.1.21 (979facb98de8ca1f1e2ce22f38b27ac3366f3fc3); 수집 후 실행 기록은 본문 최신 증적 기준",
         "Schedule Note": "09-21 오후 종료 시점 목표. 앱/보안/CI/Monitoring·초기 E2E/Negative/Drain 준비도와 해당 증적이 선행한다. 실제 상태·완료 판정은 유지한다. 세부 배정: Fast Track Plan 시트."
       },
-      "state": "open",
+      "state": "closed",
       "url": "https://github.com/321Team/fds-project-baseline/issues/23",
-      "current_disposition": "CONDITIONAL_ACCEPTANCE_RECORDED_TRACKING_IN_PROGRESS",
+      "current_disposition": "CONDITIONAL_ACCEPTANCE_RECORDED_TRACKING_COMPLETE",
       "acceptance_source": "https://github.com/321Team/fds-project-baseline/issues/23#issuecomment-6264221185",
       "actual_accepted_at_kst": "2026-10-19T18:38:10+09:00",
-      "retained_limits": "- **잔여·경계:** 2026-10-19 18:38 G2 Lead 이하영의 원 Exit 조건부 수용·기술 종결 차단 없음 회신을 수신했다(https://github.com/321Team/fds-project-baseline/issues/23#issuecomment-6264221185). 기존 D07/D02·SEC 복합미체크/5종KI·Negative/Drain 한계와 Owner/재검토를 유지한다. 남은 것은 사용자 선택 관리경로인 정본 후보 PR191의 G2 결과/WBS/Description 정합 반영 확인이며 현재7건 XLSX 부분후보를 G2 동기화 완료로 쓰지 않는다. 추가 Lead/Support 회신·HBR/DOC Freeze·P2 사양을 새 선행으로 요구하지 않는다. 실제 G2 종결은 추적 조건 확인 후다.",
-      "whole_technical_MET": false
+      "retained_limits": "- **잔여·경계:** G2 Lead 조건부 수용 및 추적 조건 반영 실제 채택 및 정본 후보 추적 반영 대조 후 조건부 종결. 기존 기술 한계/미검증·원 AC 체크·Owner/재검토는 보존하며 전체 기술PASS·새 시스템Critical0·전caller전환이 아니다. 실제Review/Demo/Signoff·전체Phase1 Close·새Release/서버/P2실행은 별도다. 실제 결정 https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6264594986 · 종결 근거 https://github.com/321Team/fds-project-baseline/issues/23#issuecomment-6264712221",
+      "whole_technical_MET": false,
+      "actual_completed_at_utc": "2026-10-19T10:05:48Z",
+      "actual_completed_at_kst": "2026-10-19T19:05:48+09:00",
+      "closure_source": "https://github.com/321Team/fds-project-baseline/issues/23#issuecomment-6264712221",
+      "state_reason": "completed"
     },
     {
       "number": 29,
@@ -373,7 +385,7 @@
         "Phase": "Phase 1",
         "Category": "Milestone / Review Readiness",
         "Type": "Milestone",
-        "Status": "In Progress",
+        "Status": "Done",
         "Priority": "P0",
         "Start": "2026-10-02",
         "End": "2026-10-02",
@@ -387,13 +399,17 @@
         "Source": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #29 snapshot 2026-09-09T12:04:58Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청; 현행 발행 정본: docs-v3.1.21 (979facb98de8ca1f1e2ce22f38b27ac3366f3fc3); 수집 후 실행 기록은 본문 최신 증적 기준",
         "Schedule Note": "10-02는 실작업·증적 cutoff/G3 Review Ready 판정일이다. 남은 Phase 1 P0는 담당자별 공유 Runtime으로 직렬화하고, 미완료 AC는 10-06 Review에서 사실 상태를 분류한다. 일정 도래만으로 Gate PASS 처리하지 않는다."
       },
-      "state": "open",
+      "state": "closed",
       "url": "https://github.com/321Team/fds-project-baseline/issues/29",
-      "current_disposition": "CONDITIONAL_ACCEPTANCE_RECORDED_TRACKING_IN_PROGRESS",
+      "current_disposition": "CONDITIONAL_ACCEPTANCE_RECORDED_TRACKING_COMPLETE",
       "acceptance_source": "https://github.com/321Team/fds-project-baseline/issues/29#issuecomment-6264597709",
       "actual_accepted_at_kst": "2026-10-19T18:59:05.136131+09:00",
-      "retained_limits": "- **잔여·경계:** 2026-10-19 사용자 실제 회신으로 G3 기존 Residual Risk 아래 Review Ready 조건부 수용을 채택했다. 실제 결정 https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6264594986 . 기존 기술 한계·미충족/미검증·원 AC 체크·Owner/재검토를 유지하며 전체 기술PASS/새 시스템Critical0/전caller전환이 아니다. 정본 후보의 현재 인수 결과·WBS/Description 반영 확인 후 한정 종결을 정합화한다. 실제Demo/Review/Signoff·전체Phase1 Close·새Release/서버/P2실행은 별도다.",
-      "whole_technical_MET": false
+      "retained_limits": "- **잔여·경계:** G3 기존 Residual Risk 아래 Review Ready 조건부 수용 실제 채택 및 정본 후보 추적 반영 대조 후 조건부 종결. 기존 기술 한계/미검증·원 AC 체크·Owner/재검토는 보존하며 전체 기술PASS·새 시스템Critical0·전caller전환이 아니다. 실제Review/Demo/Signoff·전체Phase1 Close·새Release/서버/P2실행은 별도다. 실제 결정 https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6264594986 · 종결 근거 https://github.com/321Team/fds-project-baseline/issues/29#issuecomment-6264714186",
+      "whole_technical_MET": false,
+      "actual_completed_at_utc": "2026-10-19T10:05:55Z",
+      "actual_completed_at_kst": "2026-10-19T19:05:55+09:00",
+      "closure_source": "https://github.com/321Team/fds-project-baseline/issues/29#issuecomment-6264714186",
+      "state_reason": "completed"
     }
   ],
   "untouched_released_records": 71,
