@@ -16,14 +16,14 @@
     {
       "path": "AS_BUILT.md",
       "repository_path": "architecture/as-built/p1-as-built-20261018-r1/AS_BUILT.md",
-      "bytes": 44340,
-      "sha256": "42ef7c4e9081050b00af30dbfebb23b7e9f29fe252e5db56974731252ed35e7b"
+      "bytes": 46261,
+      "sha256": "b65371699476457b23579146cb5f93f47fb22d360a8c5625a518247147593fa5"
     },
     {
       "path": "DERIVATIVE_PROVENANCE.json",
       "repository_path": "architecture/as-built/p1-as-built-20261018-r1/DERIVATIVE_PROVENANCE.json",
-      "bytes": 13564,
-      "sha256": "4f9f316007bc38eea8ef846d334171fbdc9fe17c1bb36c5a91cb25d1f78e13ff"
+      "bytes": 14127,
+      "sha256": "3c2d4027822713e231f9abd680998220826dcff95299315b1465efd0b9cd88a7"
     },
     {
       "path": "README.md",
@@ -520,8 +520,8 @@
     {
       "path": "observations/20261019T1340-owner-evidence-intake.json",
       "repository_path": "architecture/as-built/p1-as-built-20261018-r1/observations/20261019T1340-owner-evidence-intake.json",
-      "bytes": 14304,
-      "sha256": "c5b3c6bdc660ec95d95a514a14c8fc1d510a49a4e2d360741fd50d9ee4ca2ee3"
+      "bytes": 15901,
+      "sha256": "1c749dc8afacef0e3feaf639bfcf443bb46b3a64ffd63651ed11a86fdb3b68cc"
     }
   ],
   "packaging_note": "Directory-scoped -text preserves original bytes through Git checkout. Original 71 source-set files and prior candidate content remain byte-identical; manifest adds only this packaging entry.",
@@ -588,5 +588,13 @@
     "HBR_new_conditions_pending_separate_adoption": true,
     "prior_pending_fields_are_timestamped_history": true,
     "final_DOC_Freeze_Close": false
+  },
+  "HBR_actual_condition_adoption_followup_20261019": {
+    "recorded_at_kst": "2026-10-19T16:25:14.743311+09:00",
+    "decision_url": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6261947431",
+    "HBR_addendum_adopted": true,
+    "prior_HBR_pending_fields_are_timestamped_history": true,
+    "original_source_and_render_entries_unchanged": true,
+    "final_DOC_Freeze_Release_Close": false
   }
 }

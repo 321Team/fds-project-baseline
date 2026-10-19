@@ -244,5 +244,14 @@
     "previous_prepared_patch_sha256": "90e0e4a3c3ef0c40e5d9d136962ede597ae64a46b4c2e4396748b595d820f864",
     "raw_source_and_render_assets_preserved": true,
     "final_DOC_Freeze_Close": false
+  },
+  "HBR_actual_condition_adoption_followup_20261019": {
+    "recorded_at_kst": "2026-10-19T16:25:14.725431+09:00",
+    "decision_url": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6261947431",
+    "proposal_sha256": "a60aa8b1a433d7cd3bfbc00622239a2133c65247fd4ef48aeb57b22d837f0df0",
+    "official_HBR_addendum_adopted": true,
+    "previous_provenance_sha256": "4f9f316007bc38eea8ef846d334171fbdc9fe17c1bb36c5a91cb25d1f78e13ff",
+    "original_source_render_bytes_preserved": true,
+    "whole_HBR_Phase1_Close_Freeze_Release": false
   }
 }
