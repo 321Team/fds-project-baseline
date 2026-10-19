@@ -1,6 +1,6 @@
 {
-  "at_kst": "2026-10-19T20:08:14.848805+09:00",
-  "workbook_sha256": "f4338f6464727efc5547385d0ca0d11c517b1ada5b922aa5110ab222ca79d87f",
+  "at_kst": "2026-10-19T20:11:54.898196+09:00",
+  "workbook_sha256": "0ed8584e964d4c41e2284c952e40b6dad5475888e9563f4afa0a4fcad975d18c",
   "sheets": 10,
   "records": 78,
   "planned_cell_changes": 5,
@@ -9,10 +9,10 @@
   "native_features": "DV/CF/chart series/dimensions/merges/panes/comments/protection preserved",
   "cached_formula_errors": 0,
   "summary_counts": {
-    "Done": 43,
+    "Done": 44,
     "Cancelled": 3,
     "To Do": 20,
-    "In Progress": 12
+    "In Progress": 11
   },
   "milestone_status_formula_readback": "MATCH",
   "unknown_dates": "blank typed-date inputs preserved; exact TBD in per-record metadata/notes",

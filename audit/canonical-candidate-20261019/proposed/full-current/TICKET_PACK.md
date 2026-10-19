@@ -1,6 +1,6 @@
 # 전체78건 Ticket Pack — 정본 후보
 
-기준 2026-10-19T19:25:19.982565+09:00. Design5 / Phase1 42 / Phase2 31. Done43 / InProgress12 / ToDo20 / Cancelled3. 실제 상태이며 전체 기술 완료율이 아니다. 취소는 완료에서 제외한다. 사용자 지시로 Notion 대신 후보를 관리하며 기존 발행 원본은 보존한다.
+기준 2026-10-19T19:25:19.982565+09:00. Design5 / Phase1 42 / Phase2 31. Done44 / InProgress11 / ToDo20 / Cancelled3. 실제 상태이며 전체 기술 완료율이 아니다. 취소는 완료에서 제외한다. 사용자 지시로 Notion 대신 후보를 관리하며 기존 발행 원본은 보존한다.
 
 | Record ID | 현재 Phase | 현재 Status | Lead | 실제 종결 KST | 상세 |
 |---|---|---|---|---|---|
@@ -28,7 +28,7 @@
 | [P1-HA-02](https://github.com/321Team/fds-project-baseline/issues/27) | Phase 2 | To Do | 이하영 | 미종결 | [Description](descriptions/P1-HA-02.md) |
 | [DEC-CAL-P1-01](https://github.com/321Team/fds-project-baseline/issues/28) | Phase 1 | Done | 이권욱 | 2026-09-16T17:53:19+09:00 | [Description](descriptions/DEC-CAL-P1-01.md) |
 | [MS-G3-01](https://github.com/321Team/fds-project-baseline/issues/29) | Phase 1 | Done | 이권욱 | 2026-10-19T19:05:55+09:00 | [Description](descriptions/MS-G3-01.md) |
-| [P1-REV-01](https://github.com/321Team/fds-project-baseline/issues/30) | Phase 1 | In Progress | 이권욱 | 미종결 | [Description](descriptions/P1-REV-01.md) |
+| [P1-REV-01](https://github.com/321Team/fds-project-baseline/issues/30) | Phase 1 | Done | 이권욱 | 2026-10-19T20:10:15+09:00 | [Description](descriptions/P1-REV-01.md) |
 | [MS-P1-REVIEW-01](https://github.com/321Team/fds-project-baseline/issues/31) | Phase 1 | Done | 이권욱 | 2026-10-19T19:45:18+09:00 | [Description](descriptions/MS-P1-REVIEW-01.md) |
 | [MS-P1-CLOSE-01](https://github.com/321Team/fds-project-baseline/issues/32) | Phase 1 | To Do | 이권욱 | 미종결 | [Description](descriptions/MS-P1-CLOSE-01.md) |
 | [MS-P2-START-01](https://github.com/321Team/fds-project-baseline/issues/33) | Phase 2 | To Do | 이권욱 | 미종결 | [Description](descriptions/MS-P2-START-01.md) |

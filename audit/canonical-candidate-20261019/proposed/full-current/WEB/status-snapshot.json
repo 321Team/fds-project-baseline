@@ -1905,7 +1905,7 @@
         "Phase": "Phase 1",
         "Category": "PMO / Review",
         "Type": "Task",
-        "Status": "In Progress",
+        "Status": "Done",
         "Priority": "P0",
         "Start": "2026-10-06",
         "End": "2026-10-06",
@@ -1919,17 +1919,17 @@
         "Source": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #30 snapshot 2026-09-10T04:08:08Z; Fast Tracking 일정 권장안 2026-09-10 / 사용자 재편성 요청; 현행 발행 정본: docs-v3.1.21 (979facb98de8ca1f1e2ce22f38b27ac3366f3fc3); 수집 후 실행 기록은 본문 최신 증적 기준",
         "Schedule Note": "10-06 하루에 Phase 1 Review/Close를 수행한다. 10-02 cutoff 이후 신규 Scope 확장은 하지 않고, 미완료 항목을 MET / NOT MET-RISK ACCEPTED / KNOWN ISSUE / APPROVED DEFERRED로 분류해 Owner·Due·Evidence를 고정한 뒤 #32 Close로 인계한다."
       },
-      "state": "open",
-      "state_reason": null,
-      "closed_at_utc": null,
-      "closed_at_kst": null,
-      "updated_at": "2026-10-19T11:05:53Z",
-      "body_sha256": "fe8a93a561b1cf2b786909c20cd8ef4ff794f9559080d0df6c002ffe1dfd0ae6",
+      "state": "closed",
+      "state_reason": "completed",
+      "closed_at_utc": "2026-10-19T11:10:15Z",
+      "closed_at_kst": "2026-10-19T20:10:15+09:00",
+      "updated_at": "2026-10-19T11:10:16Z",
+      "body_sha256": "5302bed400055faa91c83b4c4217c060e37a0526ea05c0825b9fbaeba7fc43e0",
       "labels": [
         "priority:P0",
+        "status:done",
         "type:task",
         "phase:phase-1",
-        "status:in-progress",
         "area:pmo"
       ]
     },
@@ -2898,8 +2898,8 @@
   ],
   "review31_post_cutoff_update_at_kst": "2026-10-19T19:46:52.955175+09:00",
   "final_signoff_close": {
-    "at_kst": "2026-10-19T20:08:15.005276+09:00",
-    "stage": "signed",
+    "at_kst": "2026-10-19T20:11:55.050120+09:00",
+    "stage": "closed30",
     "A_actual_adoption": {
       "at_kst": "2026-10-19T20:05:51.513852+09:00",
       "human": "이권욱",
@@ -2914,12 +2914,12 @@
       "new_Release_Runtime_P2": false,
       "A_actual_record": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6265747689"
     },
-    "A_closed_at_kst": null,
+    "A_closed_at_kst": "2026-10-19T20:10:15+09:00",
     "B_actual_decision": null,
     "B_closed_at_kst": null,
     "whole_Phase1_Close_actually_executed": false,
     "new_Release_Runtime_P2": false,
     "known_risk_scope": "original card tables 2-4 and actual adoption; no new system-wide Critical0"
   },
-  "post_signoff_update_kst": "2026-10-19T20:08:15.978760+09:00"
+  "post_signoff_update_kst": "2026-10-19T20:11:56.014084+09:00"
 }

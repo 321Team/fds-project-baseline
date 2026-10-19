@@ -1,5 +1,5 @@
 {
-  "at_kst": "2026-10-19T19:33:02.206630+09:00",
+  "at_kst": "2026-10-19T20:11:34.223183+09:00",
   "project": "https://github.com/orgs/321Team/projects/1",
   "status_changes": 24,
   "phase_changes": [
@@ -9,15 +9,30 @@
   ],
   "after_counts": {
     "Todo": 20,
-    "In Progress": 12,
-    "Done": 46
+    "In Progress": 11,
+    "Done": 47
   },
   "Done_includes_Cancelled": 3,
-  "implemented_Done": 43,
+  "implemented_Done": 44,
   "phase2_label_with_phase1_field_filter_count": 0,
   "Record_ID_Owner_Priority_Dates": "preserved",
   "method": "Authenticated browser UI, no token/scopes changes",
   "recording": "central protected PROJECT_UI_ACTIONS.json and screenshots; source ticket metadata GET readback",
-  "scope": "current existing78 project records; selected Status/Phase only, not new implementation or whole Close",
-  "review31_followup_status_changed": 1
+  "scope": "Existing78 status/phase; actual final Signoff and Phase1 Close only; no P2/new Release",
+  "review31_followup_status_changed": 1,
+  "signoff_close_this_round_ui": {
+    "at_kst": "2026-10-19T20:11:34.223183+09:00",
+    "target": "Project1 baseline#30",
+    "actual_status": "Done",
+    "after_counts": {
+      "Todo": 20,
+      "In Progress": 11,
+      "Done": 47
+    },
+    "Cancelled_in_Done": 3,
+    "readback": "Direct Status Done and fresh board AX counts",
+    "scope": "Status only",
+    "screenshot": "PROJECT30_DONE.png",
+    "raw_read": "PROJECT30_BOARD_READ.txt"
+  }
 }

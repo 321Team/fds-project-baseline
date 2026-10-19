@@ -1,6 +1,6 @@
 {
-  "at_kst": "2026-10-19T20:08:15.005276+09:00",
-  "stage": "signed",
+  "at_kst": "2026-10-19T20:11:55.050120+09:00",
+  "stage": "closed30",
   "A_actual_adoption": {
     "at_kst": "2026-10-19T20:05:51.513852+09:00",
     "human": "이권욱",
@@ -15,7 +15,7 @@
     "new_Release_Runtime_P2": false,
     "A_actual_record": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6265747689"
   },
-  "A_closed_at_kst": null,
+  "A_closed_at_kst": "2026-10-19T20:10:15+09:00",
   "B_actual_decision": null,
   "B_closed_at_kst": null,
   "whole_Phase1_Close_actually_executed": false,

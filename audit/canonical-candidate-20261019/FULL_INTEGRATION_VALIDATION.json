@@ -1,5 +1,5 @@
 {
-  "at_kst": "2026-10-19T20:08:15.988197+09:00",
+  "at_kst": "2026-10-19T20:11:56.029978+09:00",
   "records": 78,
   "Status_Phase_Lead_all_rows": "MATCH",
   "description_records": 78,
@@ -8,8 +8,8 @@
   "relative_links": "PASS",
   "preserved_prior_inputs": 28,
   "workbook": {
-    "at_kst": "2026-10-19T20:08:14.848805+09:00",
-    "workbook_sha256": "f4338f6464727efc5547385d0ca0d11c517b1ada5b922aa5110ab222ca79d87f",
+    "at_kst": "2026-10-19T20:11:54.898196+09:00",
+    "workbook_sha256": "0ed8584e964d4c41e2284c952e40b6dad5475888e9563f4afa0a4fcad975d18c",
     "sheets": 10,
     "records": 78,
     "planned_cell_changes": 5,
@@ -18,10 +18,10 @@
     "native_features": "DV/CF/chart series/dimensions/merges/panes/comments/protection preserved",
     "cached_formula_errors": 0,
     "summary_counts": {
-      "Done": 43,
+      "Done": 44,
       "Cancelled": 3,
       "To Do": 20,
-      "In Progress": 12
+      "In Progress": 11
     },
     "milestone_status_formula_readback": "MATCH",
     "unknown_dates": "blank typed-date inputs preserved; exact TBD in per-record metadata/notes",
@@ -45,15 +45,15 @@
     "not_new_Demo_or_whole_Close": true
   },
   "current_counts": {
-    "Done": 43,
+    "Done": 44,
     "Cancelled": 3,
     "To Do": 20,
-    "In Progress": 12
+    "In Progress": 11
   },
   "Review31_note_state_corrected": true,
   "final_signoff_close": {
-    "at_kst": "2026-10-19T20:08:15.005276+09:00",
-    "stage": "signed",
+    "at_kst": "2026-10-19T20:11:55.050120+09:00",
+    "stage": "closed30",
     "A_actual_adoption": {
       "at_kst": "2026-10-19T20:05:51.513852+09:00",
       "human": "이권욱",
@@ -68,7 +68,7 @@
       "new_Release_Runtime_P2": false,
       "A_actual_record": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6265747689"
     },
-    "A_closed_at_kst": null,
+    "A_closed_at_kst": "2026-10-19T20:10:15+09:00",
     "B_actual_decision": null,
     "B_closed_at_kst": null,
     "whole_Phase1_Close_actually_executed": false,
