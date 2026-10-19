@@ -1,8 +1,10 @@
 # Phase 1 As-built 채택·발행 후보
 
-**PR183 병합본에 대한 로컬 후속 후보: p1-as-built-20261018-r1. 이번 변경은 미게시·미리뷰이며 사람 최종 채택·Freeze는 별도다.**
+**문서 개정 p1-as-built-20261018-r1: PR183·184의 기록 편입 검토·병합은 완료됐다. 사람 최종 채택·Freeze·Phase1 인수는 별도 판정이다.**
 
 승인 요구 정본은 [docs-v3.1.21](https://github.com/321Team/fds-project-baseline/releases/tag/docs-v3.1.21), 커밋 979facb98de8ca1f1e2ce22f38b27ac3366f3fc3을 유지한다. 이 개정은 이후 As-built 설명·증적 연결을 별도 식별하기 위한 제안이다. Baseline/AC/일정/담당을 변경하지 않고 기존 Architecture v3.1.3의 폐기·대체를 선언하지 않는다.
+
+[PR183](https://github.com/321Team/fds-project-baseline/pull/183)은 merge `b6a2381e501ef48ae380b9904c443a2ebfffafac`, [PR184](https://github.com/321Team/fds-project-baseline/pull/184)는 2026-10-18 23:59:36 KST merge `505dce05a20a1172991835051c1bac34f65b4d16`로 편입됐다. 원천 provenance·manifest의 과거 작성/준비 상태는 당시 기록으로 읽고 실제 편입 상태는 이 병합 기록과 구분한다.
 
 ## 읽는 순서
 
