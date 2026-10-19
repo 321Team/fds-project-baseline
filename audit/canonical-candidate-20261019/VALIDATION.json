@@ -1,0 +1,106 @@
+{
+  "at_kst": "2026-10-19T18:27:08.833144+09:00",
+  "scope": "SELECTED7_CANDIDATE_NOT_FULL_RELEASE",
+  "candidate_workbook_sha256": "a11f197e886a8780a51c9d05a045288ea64e900bcdfcf4c2271154cfadb54e0e",
+  "original_released_source_unchanged": true,
+  "sheet_count": 10,
+  "planned_value_changes": 23,
+  "unexpected_value_formula_style_changes": 0,
+  "native_preservation": [
+    {
+      "sheet": "Executive Summary",
+      "formulas_values_styles_preserved_except_planned_cells": true,
+      "DV": 0,
+      "CF": 0,
+      "chart_series_preserved": 2,
+      "merged_and_dimensions_preserved": true
+    },
+    {
+      "sheet": "WBS",
+      "formulas_values_styles_preserved_except_planned_cells": true,
+      "DV": 5,
+      "CF": 5,
+      "chart_series_preserved": 0,
+      "merged_and_dimensions_preserved": true
+    },
+    {
+      "sheet": "Phase 1 Gantt",
+      "formulas_values_styles_preserved_except_planned_cells": true,
+      "DV": 0,
+      "CF": 1,
+      "chart_series_preserved": 0,
+      "merged_and_dimensions_preserved": true
+    },
+    {
+      "sheet": "Phase 2 Gantt",
+      "formulas_values_styles_preserved_except_planned_cells": true,
+      "DV": 0,
+      "CF": 1,
+      "chart_series_preserved": 0,
+      "merged_and_dimensions_preserved": true
+    },
+    {
+      "sheet": "Milestones & Decisions",
+      "formulas_values_styles_preserved_except_planned_cells": true,
+      "DV": 0,
+      "CF": 0,
+      "chart_series_preserved": 0,
+      "merged_and_dimensions_preserved": true
+    },
+    {
+      "sheet": "Risks & Assumptions",
+      "formulas_values_styles_preserved_except_planned_cells": true,
+      "DV": 0,
+      "CF": 1,
+      "chart_series_preserved": 0,
+      "merged_and_dimensions_preserved": true
+    },
+    {
+      "sheet": "Sources & Change Log",
+      "formulas_values_styles_preserved_except_planned_cells": true,
+      "DV": 0,
+      "CF": 0,
+      "chart_series_preserved": 0,
+      "merged_and_dimensions_preserved": true
+    },
+    {
+      "sheet": "Team Calendar",
+      "formulas_values_styles_preserved_except_planned_cells": true,
+      "DV": 0,
+      "CF": 0,
+      "chart_series_preserved": 0,
+      "merged_and_dimensions_preserved": true
+    },
+    {
+      "sheet": "Fast Track Plan",
+      "formulas_values_styles_preserved_except_planned_cells": true,
+      "DV": 0,
+      "CF": 1,
+      "chart_series_preserved": 0,
+      "merged_and_dimensions_preserved": true
+    },
+    {
+      "sheet": "Test Strategy",
+      "formulas_values_styles_preserved_except_planned_cells": true,
+      "DV": 0,
+      "CF": 0,
+      "chart_series_preserved": 0,
+      "merged_and_dimensions_preserved": true
+    }
+  ],
+  "recalculated_summary": {
+    "Done": 34,
+    "InProgress": 6,
+    "ToDo": 37,
+    "scope": "7selectedupdates+historicalremaining71/notcurrentprojecttotal"
+  },
+  "selected7_ScheduleHealth": "Done",
+  "cached_formula_errors": 0,
+  "render": "before_and_after_reviewed_status_summary_Docnote",
+  "authoring_process_exit_code": 1,
+  "export_and_readback_verified": true,
+  "native_Excel_application_execution": "NOT_RUN",
+  "secret_scan": "document-secret-scan: files=13, literal_placeholders=0, findings=0\r\n",
+  "full_release_ready": false,
+  "Notion_write": false
+}
