@@ -302,5 +302,39 @@
     "source102_ID3": "retain; review P2 Push path decision or10/26 resource return whichever earlier; no permanent permit",
     "no_new_runtime": true,
     "whole_Close": false
+  },
+  "HBR_actual_condition_adoption_followup_20261019": {
+    "recorded_at_kst": "2026-10-19T16:25:14.724437+09:00",
+    "decision_url": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6261947431",
+    "proposal_sha256": "a60aa8b1a433d7cd3bfbc00622239a2133c65247fd4ef48aeb57b22d837f0df0",
+    "human_reply": "새 조건만 한정 채택 (권장)",
+    "status": "APPROVED_ADOPTED_RECORDED",
+    "new_condition_scope": [
+      {
+        "subject": "Worker23 issuance originals2 protected custody",
+        "risk_owner": "이하영",
+        "future_disposal_responsibility": "이하영",
+        "review": "2026-10-26 P1 resource return",
+        "existing_location_bound_to_local_metadata_ledger": true,
+        "current_files_remeasured": false,
+        "delete_authorized": false
+      },
+      {
+        "subject": ".102 temporary exception and PushID3 materials retain",
+        "owner": "이하영",
+        "review": "P2 Push path decision or2026-10-26 P1 resource return whichever earlier",
+        "permanent_allow_or_auto_extension": false
+      }
+    ],
+    "source_Lead_reply": "https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6261491388",
+    "HBR_technical_rows": {
+      "AC04": "PARTIAL_LIMITED_ACCEPTANCE",
+      "AC05A": "MET_OBSERVATION_TIME_ONLY",
+      "AC05B": "MET_HBR_SHARED_TRACE_ONLY",
+      "AC06": "PARTIAL_LIMITED_ACCEPTANCE"
+    },
+    "supersedes_only_prior_HBR_condition_pending": "Earlier timestamped intake is historical; technical limits retained",
+    "whole_HBR_or_Phase1_Close": false,
+    "new_Runtime": false
   }
 }

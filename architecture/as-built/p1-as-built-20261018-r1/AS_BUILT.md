@@ -205,3 +205,15 @@ B행의 날짜는 **이번에 채택한 재검토 시점**이며 구현 완료 �
 HBR회신은해당기술/Owner판정이고새잔여조건의효력은회신대로#30의별도통합채택대기다. 이번U2가명시적으로제외한HBR새위험을자동채택하지않았다. P2전용Robot/guard/cold-pull요청과도분리한다.
 
 현재순서: HBR새조건의한정통합결정·필수모듈최종처분확인 → DOC/O01최종검토/Freeze → 기존G1/G2/G3 → 실제공식Review/Action/Sign-off·#32 → 실제WBS/Notion동기화. 이는새서명/Gate/Review시각이나서버작업을만든것이아니다. 이문서후속의게시/병합과최종정본Release·전체Close는구분한다. CODEX_ASSISTED.
+
+
+## 2026-10-19 HBR 새 잔여조건 실제 추가 채택
+
+[이권욱의 추가채택](https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6261947431)은 사용자 실제회신 “새 조건만 한정 채택 (권장)”을 정확 제안 SHA256 `a60aa8b1a433d7cd3bfbc00622239a2133c65247fd4ef48aeb57b22d837f0df0`에 결속했다. 앞 HBR새조건 통합대기 표기는 당시 이력이며 현재는 **해당추가안채택·조건등록완료**다. U2 승인으로 소급하지 않는다.
+
+- **원본2개 보호보관:** 기존 목적있음/보호보관 결정과 정확control01 보관위치·마지막10/18 22:18 metadata를 로컬장부에 연결했다. HBR 위험수용·향후처분책임은 **이하영**, **10/26 P1자원회수 재검토**. 현재파일/본문/본문hash를새로조회하거나공개하지않았고지금삭제승인이아니다.
+- **.102임시예외·PushID3자료:** 기존보존유지, **이하영 / P2 Push경로결정 또는10/26자원회수 중먼저 재검토**. 영구허용·자동연장·새발급/갱신이나P2실행허용이아니다.
+- **구ID2:** 삭제미실행을새Gate로두지않는다. 다음실제Harbor관리작업때만만료/disable상태1회확인하며현재인증실측·disable/delete·새전체인증시험은없다.
+- **담당자판정소비:** AC04는PARTIAL/한정수용, AC05A는관측시점한정MET, AC05B는HBR공유구간MET, AC06은PARTIAL/한정수용으로유지한다. 위조건등록으로이름붙인잔여의Close비차단조건을연결했다. 원AC04/06을전체MET로변경하거나전체HBR/Phase1Close·최종Freeze/Release/Sign-off를대신하지않는다.
+
+이후기존모듈전체인수·원DOC/O01최종검토·Gates·실제공식Review/Action·Sign-off조건을각기판단한다. P2 Robot/guard/infra-ansible#88/cold-pull·실제원본/계정삭제·서버/보안변경·새시험은이번범위밖이다. CODEX_ASSISTED.
