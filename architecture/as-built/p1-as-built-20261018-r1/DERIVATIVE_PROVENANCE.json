@@ -203,5 +203,46 @@
     "sha256": "8a785059f03c779dafb8604d35f702d99f544f373eaf64d72b5d1a0b1192fd14",
     "bytes": 951,
     "availability": "LOCAL_ORIGINAL_RETAINED; not newly published by DOC"
+  },
+  "owner_evidence_intake_20261019": {
+    "recorded_at_kst": "2026-10-19T13:43:15.057272+09:00",
+    "source_observation": "observations/20261019T1340-owner-evidence-intake.json",
+    "source_stage": "Actual Owner reply and merged evidence; no new server raw",
+    "previous_provenance_sha256": "56310e1bd0b8feffc22be54127662c292beefbf414a201265ee6c5e4ece6ec1d",
+    "formal_final_adoption": false,
+    "old_sources_and_renders_preserved": true
+  },
+  "u1_limited_adoption_20261019": {
+    "recorded_at_kst": "2026-10-19T13:54:05.637037+09:00",
+    "decision": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6259937834",
+    "card_sha256": "25e7f4123201ab4e9857feb12bfb31e3e4dee3d6a0e0848cfb83e79709523545",
+    "previous_prepared_patch_sha256": "2b386c29915ab67f207ac2bd84a861f491ca59b323509ce5e3beef3cba973b45",
+    "official_U1_adoption": true,
+    "final_DOC_Freeze_Close": false
+  },
+  "PR187_owner_attribution_followup_20261019": {
+    "recorded_at_kst": "2026-10-19T15:28:09.789594+09:00",
+    "merge": "bf4be18850670968d98cc8494026e4ff83a9d839",
+    "source_comments": [
+      6260355852,
+      6260791512,
+      6259963778
+    ],
+    "previous_prepared_patch_sha256": "0a06587c308c511e8fa4a21d0b67ca33cd367efeb9982f391522c7f969d3681b",
+    "MON_scope_corrected_SEC_AC06_remaining": true,
+    "U2_adopted": false,
+    "final_DOC_Freeze_Close": false
+  },
+  "U2_actual_adoption_followup_20261019": {
+    "recorded_at_kst": "2026-10-19T16:04:54.946015+09:00",
+    "decision_url": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6261617347",
+    "proposal_sha256": "6bdfd59a473fa945eefcdb5910876cc2888997a1e43c063fcdf08a4a8531f4fb",
+    "card_sha256": "3d9db6462642d8c11be801a93ba8658c897e40173662d21d2d6c4e519d8673d4",
+    "official_U2_adoption": true,
+    "HBR_new_condition_adoption": false,
+    "HBR_source": "https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6261491388",
+    "previous_prepared_patch_sha256": "90e0e4a3c3ef0c40e5d9d136962ede597ae64a46b4c2e4396748b595d820f864",
+    "raw_source_and_render_assets_preserved": true,
+    "final_DOC_Freeze_Close": false
   }
 }

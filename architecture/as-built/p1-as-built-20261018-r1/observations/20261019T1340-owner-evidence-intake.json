@@ -1,0 +1,306 @@
+{
+  "recorded_at_kst": "2026-10-19T13:43:15.057272+09:00",
+  "record_type": "Owner and evidence publication intake; no new live service observation",
+  "baseline_main": "acc513cf5c9f3e07e58d818a18e4b8fcf1e0cf70",
+  "PR187_head": "f9db7cc8cca5cb55b5ef74efed7f64a2e7514ef3",
+  "PR247": {
+    "at_kst": "2026-10-19T13:39:18.969338+09:00",
+    "url": "https://github.com/321Team/fds-project-evidence/pull/247",
+    "head": "79d81b167fa7ca4e9a737e5826b616950eb67d09",
+    "merge_sha": "6439b5c0d6fc21f72a6a416e0428c0ddd7a34271",
+    "merged_at": "2026-10-19T04:39:17Z",
+    "state": "MERGED_SCOPED_EVIDENCE_ONLY",
+    "NTP_sync_loss_reboot_MET": false,
+    "ICR_AC18_19_MET": false,
+    "server_actions": 0
+  },
+  "rows": [
+    {
+      "id": "shared17",
+      "stage": "REVIEW_MERGE",
+      "scope": "17 originals direct review evidence only",
+      "source": "https://github.com/321Team/fds-project-evidence/pull/246",
+      "head": "f51505cf6f6fe64aed2c22b5293bf39f9a1a0f0d",
+      "merge": "171bdb774d78fa950dcb94955da44a8ca74a4cbc",
+      "whole_Ansible_accepted": false
+    },
+    {
+      "id": "NTP_NORMAL",
+      "stage": "RUNTIME_OWNER_REVIEW_EVIDENCE_MERGE",
+      "scope": "6 nodes x 6 points / >=60s intervals / >=300s span / 100ms only",
+      "source": "https://github.com/321Team/fds-project-baseline/pull/187#pullrequestreview-5566732044",
+      "evidence_merge": "6439b5c0d6fc21f72a6a416e0428c0ddd7a34271",
+      "max_Last_offset_ms": 0.40177,
+      "sync_loss_reboot": "NOT_TESTED",
+      "new_risk_adoption": "PENDING_ISSUE30"
+    },
+    {
+      "id": "APP_D07",
+      "stage": "ACTUAL_LEAD_REPLY",
+      "source": "https://github.com/321Team/fds-project-baseline/pull/187#issuecomment-6259373384",
+      "first_review": "COMPLETE_UNCHANGED_MAJOR_P1_CODE_UNCHANGED",
+      "APP": "LEAD_CONDITIONAL_ACCEPTANCE_INPUT",
+      "limits": [
+        "I01 Minor",
+        "D07 Major",
+        "negative storage/downstream NOT_RUN",
+        "db01 constraint NOT_VERIFIED",
+        "E1/E2 exact one-time timing scopes",
+        "HA/load/PG version limits"
+      ],
+      "integrated_adoption": "NOT_EFFECTIVE_YET"
+    },
+    {
+      "id": "MON_D02",
+      "stage": "LEAD_REPORTED_FACT_NOT_NEW_CENTRAL_RAW",
+      "source": "https://github.com/321Team/fds-project-baseline/pull/187#issuecomment-6259373384",
+      "2026-10-18": "NOT_PERFORMED",
+      "2026-10-19": "WORKDAY_START_REPORTED_NORMAL",
+      "routine_normal_log": "not required by existing Runbook",
+      "predemo": "record one line at actual shared demo event; no new event scheduled",
+      "MON5_remaining_row_judgment": "PENDING_AFTER_COMPLETED_MAP"
+    },
+    {
+      "id": "MON5",
+      "stage": "PRIMARY_SOURCE_MAPPING_NOT_RUNTIME",
+      "source": "https://github.com/321Team/fds-project-baseline/pull/187#issuecomment-6259508485",
+      "selected_primary_Git_blobs_verified": 28,
+      "exact_JSON_pointers": 31,
+      "healthy_and_definition": "HISTORICAL_OBSERVED",
+      "readiness_failure_endpoint_removal_recovery": "NOT_FOUND_IN_SELECTED_INPUTS_NOT_GLOBAL_NOT_RUN",
+      "all5_retest_or_startup_new_gate": false
+    },
+    {
+      "id": "ANSIBLE",
+      "stage": "SELECTED_SCOPE_LEAD_REPLY_NOT_WHOLE_ACCEPTANCE",
+      "source": "https://github.com/321Team/fds-project-baseline/pull/187#pullrequestreview-5566732044",
+      "scope": "Known manual opt-in source0d58598d and existing role185/CI/paired6/OSDNS reused",
+      "residual": [
+        "external/dynamic unidentified callers",
+        "loader/.pth limits"
+      ],
+      "issue9": "OPEN"
+    },
+    {
+      "id": "ICR_TARGET_CORRECTION",
+      "stage": "PRIMARY_BOUND_INTERPRETATION_CORRECTION",
+      "source": "https://github.com/321Team/fds-project-baseline/pull/187#issuecomment-6259431144",
+      "destination": "monitor01 10.250.10.30, IP SAN .30",
+      "source_expected_port": 8443,
+      "preserved_GW_allow_port": 443,
+      "actual_GET": "Harbor .54 TLS identity + connect-to .30:443",
+      "raw_result": "curl28/HTTP000/num_connects0",
+      "not_proven": [
+        "timeout cause",
+        "current complete NAT/listener",
+        "single rule attribution",
+        "global absence of exposure"
+      ],
+      "not_positive_IF06B_test": true,
+      "repeat_GET": false
+    },
+    {
+      "id": "OID03",
+      "stage": "TECHNICAL_REFERENCE_ACCEPTED_NOT_FULL_CONTRACT",
+      "source": "https://github.com/321Team/fds-project-baseline/pull/187#pullrequestreview-5566732044",
+      "scope": "13RPM/publickeys/preservation + worker02 native single package noinstall transaction",
+      "full_supply_update_restore_selection": "ICR_LEAD_PENDING"
+    },
+    {
+      "id": "HBR_RETAIN",
+      "stage": "EXISTING_USER_DECISION_REUSED",
+      "source": "https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6258666629",
+      "Worker23_source2": "PURPOSE_EXISTS_PROTECTED_RETAIN",
+      "Push_ID3_and_current_102": "RETAIN_FOR_POSSIBLE_P2_USE",
+      "current_file_or_credential_new_measurement": false,
+      "P2_new_Robot_guard_request": "SEPARATE_PENDING_NO_EXECUTION_NO_P1_CLOSURE_INFERENCE"
+    }
+  ],
+  "new_risk_acceptance_or_AC_changes": false,
+  "Freeze_or_Close": false,
+  "server_actions": 0,
+  "u1_adoption_followup": {
+    "recorded_at_kst": "2026-10-19T13:54:05.626108+09:00",
+    "master_decision": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6259937834",
+    "ICR_record": "https://github.com/321Team/fds-project-baseline/issues/14#issuecomment-6259938528",
+    "card_sha256": "25e7f4123201ab4e9857feb12bfb31e3e4dee3d6a0e0848cfb83e79709523545",
+    "status": "APPROVED_ADOPTED_U1_ONLY",
+    "scope": [
+      "GW actual postboot positive flow unproven",
+      "Edge inactive profile actual rollback NOT_TESTED",
+      "OID03 full P1 supply/update/actualrestore contract NOT_SELECTED"
+    ],
+    "review_by_date": "2026-10-26",
+    "earlier_triggers": [
+      "P1 resource return",
+      "related route/HEP/GNP/GW/package changes",
+      "actual profile reuse",
+      "decision to continue on-prem operation in P2"
+    ],
+    "automatic_extension": false,
+    "other_new_risk_adoption": false,
+    "original_AC_changed": false,
+    "whole_ICR_or_Phase1_Close": false,
+    "new_server_observations": false
+  },
+  "PR187_current_followup": {
+    "recorded_at_kst": "2026-10-19T15:28:09.772707+09:00",
+    "merge": {
+      "at_kst": "2026-10-19T15:22:26.851331+09:00",
+      "url": "https://github.com/321Team/fds-project-baseline/pull/187",
+      "head": "f9db7cc8cca5cb55b5ef74efed7f64a2e7514ef3",
+      "merge_sha": "bf4be18850670968d98cc8494026e4ff83a9d839",
+      "merged_at_utc": "2026-10-19T06:22:25Z",
+      "base_before_merge": "acc513cf5c9f3e07e58d818a18e4b8fcf1e0cf70",
+      "scope": "MERGED_OWNER_INPUT_DOCUMENTS_ONLY",
+      "U2_adopted": false,
+      "whole_Close": false
+    },
+    "MON": {
+      "author": "이재환",
+      "source": "https://github.com/321Team/fds-project-baseline/pull/187#issuecomment-6260355852",
+      "source_id": 6260355852,
+      "body_sha256": "d98b8ea0ba09f6070c983ffa3b0ae96a8b3257bee0b8d0efeae7a693269a9c4f",
+      "five_pointer_rows": "MATCHED_BY_LEAD_TO177",
+      "MON_control": "DEFINITION_AND_HISTORICAL_READY_SUFFICIENT_LEAD_MET",
+      "MON_final": "CONDITIONAL_ACCEPTANCE_NO_MON5_HOLD",
+      "previous_comment_corrected": 6259373384,
+      "retained_limits": [
+        "edge HTTPS NOT_MET/HTTP plaintext",
+        "automatic notification gap",
+        "PF exclusivity",
+        "10/26 applicability boundary",
+        "IF06B single rule attribution not proven"
+      ],
+      "unverified_five_failure_rows_belong_to": "SEC-AC06",
+      "nonblocking_excluded_candidates_addition": [
+        "10/4 worker03 heartbeat-only outage",
+        "10/17 image authentication401/startup and Robot23 recovery, not readiness failure"
+      ]
+    },
+    "SEC": {
+      "author": "이하영",
+      "source": "https://github.com/321Team/fds-project-baseline/pull/187#issuecomment-6260791512",
+      "source_id": 6260791512,
+      "body_sha256": "35fc248fc150a44d689bf7cdd57d7848bb4c7cd4fdd26ebb3e8922c348a1fe1b",
+      "definition_and_historicalReadyEndpoint5": "ACCEPTED_EXISTING177_SCOPE",
+      "actual_readiness_failure_to_endpoint_removal_recovery5": "NOT_CONFIRMED_IN_SELECTED_INPUTS",
+      "final_disposition": "If no exact additional source path/UID connected by Close, record Phase1 nonblocking Known Issue for named5targets",
+      "no_all5_retest_or_startup_gate": true,
+      "other_source_IF_present": "Rejudge only that row",
+      "global_NOT_RUN_or_auto_risk_acceptance": false
+    },
+    "source_search": {
+      "source": "https://github.com/321Team/fds-project-baseline/pull/187#issuecomment-6259963778",
+      "reported_result": "No additional raw path/UID in Lead selected evidence171 P1-MON-01 search, not all shares/repos searched"
+    },
+    "requirement_attribution_binding": "MON official Probe control versus SEC-AC06 actual failure/Endpoint exclusion",
+    "U1": "APPROVED_ADOPTED_RECORDED_6259937834",
+    "U2_other_new_risks": "PROPOSAL_PENDING_HUMAN_ADOPTION",
+    "new_Runtime": false,
+    "final_DOC_Freeze_Close": false
+  },
+  "U2_actual_adoption_followup_20261019": {
+    "recorded_at_kst": "2026-10-19T16:04:54.929128+09:00",
+    "decision_url": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6261617347",
+    "proposal_sha256": "6bdfd59a473fa945eefcdb5910876cc2888997a1e43c063fcdf08a4a8531f4fb",
+    "card_sha256": "3d9db6462642d8c11be801a93ba8658c897e40173662d21d2d6c4e519d8673d4",
+    "status": "APPROVED_ADOPTED_RECORDED",
+    "adopted_rows": [
+      {
+        "id": "U2-A",
+        "subject": "NTP sync-loss >=5min and reboot resync <=5min",
+        "technical_status": "NOT_TESTED",
+        "new_adoption": "Known Issue + conditional residual risk acceptance as proposed by existing K8S/SEC Lead",
+        "owner": "이하영",
+        "review_by_date": "2026-10-26",
+        "conditions": [
+          "Only if an already-planned reboot actually occurs, attach one chronyc tracking within5min",
+          "Re-review on time-related failure or expiry; no automatic extension"
+        ],
+        "source": "https://github.com/321Team/fds-project-baseline/pull/187#pullrequestreview-5566732044",
+        "limits": [
+          "Normal6series MET remains scoped",
+          "No sync-loss/reboot measurement inferred",
+          "chronyd resync guarantee or effective TLS/etcd warning detection not demonstrated",
+          "No new reboot/test authorization"
+        ]
+      },
+      {
+        "id": "U2-B1",
+        "subject": "Named5 MON readiness failure -> Endpoint removal -> recovery not confirmed",
+        "technical_status": "NOT_CONFIRMED_IN_SELECTED_DATA",
+        "new_adoption": "Consume SEC Lead conditional nonblocking KI if no exact additional raw path/UID connected by Close",
+        "owner": "이하영 (existing SEC Lead)",
+        "review_by_date": "2026-10-26",
+        "date_status": "NEW_PROPOSED_REVIEW_DATE_NOT_IMPLEMENTATION_DEADLINE",
+        "earlier_review": [
+          "Before affected Probe or deployment change",
+          "Before actual P2 reuse of this behavior",
+          "On exact additional source path/UID, rejudge only that row"
+        ],
+        "source": "https://github.com/321Team/fds-project-baseline/pull/187#issuecomment-6260791512",
+        "MON_requirement_attribution_source": "https://github.com/321Team/fds-project-baseline/pull/187#issuecomment-6260355852",
+        "targets": [
+          "Prometheus",
+          "Alertmanager",
+          "Grafana",
+          "kube-state-metrics",
+          "node-exporter"
+        ],
+        "limits": [
+          "MON official Probe control itself fulfilled by177 definitions/Ready per MONLead",
+          "No globalNOT_RUN or automatic MET",
+          "No all5 retest/startup new gate"
+        ]
+      },
+      {
+        "id": "U2-B2",
+        "subject": "Ansible unidentified external/dynamic callers and loader/.pth coverage",
+        "technical_status": "PARTIAL_SCOPE",
+        "new_adoption": "Record selected manual opt-in and nonblocking KI technical review; whole issue9 remains separate",
+        "owner": "이권욱 (existing operating responsibility)",
+        "review_by_date": "2026-10-26",
+        "date_status": "NEW_PROPOSED_REVIEW_DATE_NOT_IMPLEMENTATION_DEADLINE",
+        "earlier_review": [
+          "Before selecting an identified new external caller for transition",
+          "Before source/config/engine/Collection change or actual P2 reuse"
+        ],
+        "source": "https://github.com/321Team/fds-project-baseline/pull/187#pullrequestreview-5566732044",
+        "limits": [
+          "No globalPATH/RPM replacement",
+          "No claim all callers migrated or allCollection/loaders enumerated",
+          "No .pth execution requirement invented",
+          "No automatic issue9 Close"
+        ]
+      }
+    ],
+    "historical_pending_fields": "Earlier timestamped snapshots below remain historical; this followup is the current U2 decision",
+    "original_technical_statuses_unchanged": true,
+    "whole_Close": false,
+    "new_Runtime": false
+  },
+  "HBR_final_Lead_intake_20261019": {
+    "at_kst": "2026-10-19T16:04:54.917704+09:00",
+    "source": "https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6261491388",
+    "source_comment_id": 6261491388,
+    "source_body_sha256": "dd6e437a55a3213ffa9c63203973d4ae14b243e92b3660e5e35d9c96b283e0bf",
+    "actual_HBR_Lead": "이하영",
+    "AC04": "PARTIAL_LIMITED_ACCEPTANCE_INPUT",
+    "AC05A": "MET_OBSERVATION_TIME_ONLY_OWNER_ACCEPTED",
+    "AC05B": "MET_HBR_SHARED_TRACE_OWNER_ACCEPTED",
+    "AC06": "PARTIAL_CONDITIONAL_RISK_INPUT",
+    "new_condition_effect": "PENDING_SEPARATE_ISSUE30_ADOPTION_OUTSIDE_U2",
+    "source2_custody_purpose": "EXISTING_USER_RETAIN_DECISION_REUSED",
+    "source2_added_conditions_proposed": {
+      "disposal_responsibility": "이하영",
+      "review": "2026-10-26 P1 resource return",
+      "risk_acceptor": "이하영",
+      "deletion_permission": false
+    },
+    "ID2": "Lead historical expiry judgment; deletion not gate; status read at next Harbor admin work, not new live read",
+    "source102_ID3": "retain; review P2 Push path decision or10/26 resource return whichever earlier; no permanent permit",
+    "no_new_runtime": true,
+    "whole_Close": false
+  }
+}

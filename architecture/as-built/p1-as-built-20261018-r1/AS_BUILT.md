@@ -146,3 +146,62 @@ VMnet0/물리망 `10.1.93.0/24`, VMnet1 관리망 `10.250.10.0/24`, FDS workload
 3. physical HTML(N20)은 과거 커밋 `8af821ecf76cd13442210a1bb32b829696200b80`의 physical HTML을 fetch하는 JS loader를 포함한다. 이번 보존본은 visible-text 추출이므로 전체 실행 화면·원격 payload·렌더 성공을 확인한 것으로 세지 않는다. 최종 오프라인 편집 원본을 별도로 고정한다.
 4. 새 MMD는 승인된 물리 배치와 증적별 논리 차이를 표현한 후보다. 기존 렌더·시각 검토는 완료됐고 전체 As-built 승인은 미결정이다. 중앙의 이번 원천 선택은 문서 PR 준비 범위이며 사람 최종 채택·Freeze가 아니다. 최종 문서 source/version, 변경점의 기존 증적 대응, 남은 미확인/처분을 Lead가 확인해야 한다.
 5. 확정된 SEC30/Grafana 조건과 APP 기존 승인은 유지한다. 역할 185의 실제 LOCAL/MOCK 실행·회수 공백은 해소됐고 코드/증적 공개는 PR87/243 완료로 대체하고 운영 호출 경로 채택·전환은 별도로 유지한다. D-07 ID·Owner·첫 재검토 확정은 중앙의 로컬 연결 수용까지 소비하며 공식 대장 채택·전체 인수는 별도다. Harbor의 20:42 소비처 전환 및 20:47 MON 회복 관측은 위 범위로 연결하고, 22:18 임시 4쌍 정리 완료를 반영하되 source2/구세대/S1 처분·Push3 사용처/현재 인증·provenance 잔여, 다른 Known Issue의 미확정 책임/기한, DR02·MON02·Phase2 미완료 범위를 유지한다.
+
+
+## 2026-10-19 13시대 Owner 회신·증적 병합 — 최종 채택 전 후속
+
+[현재 단계별 입력](observations/20261019T1340-owner-evidence-intake.json)은 앞 절의 날짜별 이력을 보존하며, 새 서버 관측을 생성하지 않는다.
+
+- **공유17/NTP:** PR246은 17개 직접 열람 증적 범위로 병합됐다. PR247은 변경분 정확HEAD79d81b1의 독립승인·CI1·미해결0 확인 후 merge6439b5c0로 편입됐다. NTP 정상6대×6회는 기존 K8S Lead가 MET로 수용했고 sync-loss/reboot NOT_TESTED 및 그 새 조건부 위험수용 제안은 #30 통합채택 전 미발효다. 전체 NTP/K8S/ICR 인수가 아니다.
+- **APP/D07:** 실제 APP Lead는 affbc69 대비 source 검토와 D07 첫 재검토를 완료하고 Major/P1 코드 무수정·원 미검증을 유지했다. APP 조건부 수용 입력이 도착했으므로 과거 ‘첫 재검토 회신 미확인’은 당시 상태로만 읽는다. 원래 기능·부하·HA·E1/E2의 범위와 한계는 그대로다.
+- **MON:** 10/18 미수행과 별도로 10/19 근무일 시작 점검 정상이라는 Lead 수행 사실을 수신했다. 이는 중앙이 새 raw/종료코드를 수집했다는 뜻이 아니다. 기존 Runbook의 근무일 정상 미기록·시연 직전 정상 한 줄 기록을 유지한다. MON5 대응표는 원본28개/정확포인터31개 대조 후 전달했고 남은 담당자 행 판정은 대기다. 정의·과거 Ready는 실제 실패→Endpoint 제외→복원 시험과 다르며 전5종 재시험/startup 신설 Gate를 추가하지 않는다.
+- **자동화/보관:** PR246 직접 열람과 선택된 수동 caller의 기존 기술 수용을 연결한다. 미식별 외부/동적 caller·loader/.pth 및 전체 #9 인수 공백은 유지한다. Worker23 원본2개의 보관 목적 있음/보호 보관 유지라는 사용자 결정은 확정됐으며 다시 묻지 않는다. Push/ID3/현재 .102 보존도 유지하고 새 credential 발급·갱신이나 P2 실행을 승인한 것으로 바꾸지 않는다.
+- **IF06B/ICR 정정:** .30은 monitor01(IP SAN .30)이다. 앞 단회 GET은 Harbor .54 identity와 .30:443을 결합했으므로 정상 IF06B 양성 시험이 아니다. curl28/HTTP000/연결0 원문은 그대로이며 TLS identity 오류가 연결 전 timeout을 일으켰다고 판정하지 않는다. 설치 소스 기대8443·보존 GW443 allow 차이와 현재 전체 NAT/listener·정확 차단 원인 미확인을 남긴다. 위 논리 표의 `.30:443→nginx8443`은 승인/과거 구조 설명이지 이 회차에 확인한 현재 전이 증거가 아니다.
+- **인수 경계:** OID03 13RPM 보존/단1종 native 참조 기술 수용과 전체 공급·갱신·복구 계약 선택은 별개다. AC18/19 최종 행 처분·새 Known Issue/위험의 #30 통합채택·최종 DOC/Freeze/Gates/Review/Sign-off는 미완료다. 새 사람 승인·미확정 Due·시연 일정·전체 Close를 이 문서가 만들지 않는다.
+
+
+## 2026-10-19 U1 한정 처분 채택 — 앞 제안의 후속 결정
+
+사용자 이권욱의 직접 회신 “카드 한정 처분 채택 (권장)”에 따라 [#30 U1 결정](https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6259937834) 및 [#14 연결](https://github.com/321Team/fds-project-baseline/issues/14#issuecomment-6259938528)을 실제 기록했다. 승인 카드 SHA256 `25e7f4123201ab4e9857feb12bfb31e3e4dee3d6a0e0848cfb83e79709523545`. 앞 절의 **U1 ICR/OID03 처분 미확정**만 이 결정으로 갱신하며, 다른 모듈의 새 위험 제안/U2·전체 DOC/Freeze/Close는 여전히 별도다.
+
+- 기존 route/config/NodePort·207/MON 및 CP/Worker/rollback 한정 성과를 재사용한다. **GW 재부팅 후 정확 Source/GW/NAT 양성 흐름 미입증**, **Edge 비활성 프로필 실제 no→yes 복귀 NOT_TESTED**, **OID03 전체 공급·갱신·실제 복구 계약 P1 미선택**만 이름 붙인 한정 위험/미검증·이 잔여의 Close 비차단 처분으로 연결했다. 정확13RPM/공개키/단1종 native 기술참조는 그대로다.
+- 수용자/ICR 추적은 이권욱, OID03 기술 책임은 기존 이하영/이권욱이다. **재검토 2026-10-26 또는 P1 자원 회수·관련 route/HEP/GNP/GW/패키지 변경·실제 profile 재사용·P2 온프레미스 계속 운영 판단 중 먼저 도래하는 때**, 자동 연장0이다. 이 조건은 이번 사용자 승인으로 채택됐으며 과거 승인으로 소급하지 않는다.
+- 원 기술 NOT_VERIFIED/PARTIAL/NOT_TESTED와 AC 체크·전체 ICR PASS/Done은 바꾸지 않는다. 새 서버 변경·추가 진단/시험·P2 Robot/allowlist·전체 Phase1 Sign-off도 포함하지 않는다. 문서 내 제안/한정 채택과 실제 Runtime은 단계별로 구분한다.
+
+
+## 2026-10-19 15시대 PR187 병합·MON/SEC 원 요구 귀속 정정
+
+[PR187](https://github.com/321Team/fds-project-baseline/pull/187)은15:22:25 KST, exactHEAD `f9db7cc8cca5cb55b5ef74efed7f64a2e7514ef3`의문서승인2·CIverify1SUCCESS·미해결0확인후 merge `bf4be18850670968d98cc8494026e4ff83a9d839`로병합됐다. 추가14파일은작성당시검토입력과출처보존이다. 승인/병합tree동일·다른main변경0을확인했고원문사본을현재Owner판정으로덮어쓰지않았다.
+
+- **MON 귀속 정정:** [이재환의6260355852](https://github.com/321Team/fds-project-baseline/pull/187#issuecomment-6260355852)는원#17‘공식Probe PASS’에실패주입요구가없고177의정의/당시Ready·Endpoint로해당보조통제가충족됨을확인했다. **MON최종은조건부수용이며 MON5미확인행을MON판정보류로남기지않는다.** 원checkbox[x]를유지한다. 앞‘MON5행판정대기’표현은당시입력이고실제실패전이5행의책임은SEC-AC06이다.
+- **SEC 해당행 판정:** [이하영의6260791512](https://github.com/321Team/fds-project-baseline/pull/187#issuecomment-6260791512)는5종정의/과거Ready를177범위로인정하고실제readiness실패→Endpoint제외→복원은선택자료미확인으로남긴다. Close까지정확추가경로/UID가연결되지않으면지정5종Probe실패주입미검증을Phase1비차단KnownIssue로기록하는판정이다. 추가원본이오면그행만재판정하고전환경NOT_RUN·자동MET/위험수용으로바꾸지않는다. 173격리exec/223engineHTTP범위·전5종재시험/startup신설금지를유지한다.
+- **제외 후보:** KSMscale-to-zero·NE기동경고·계획rollout/재기동뿐아니라10/4worker03heartbeat단절/해소와10/17Harbor401/pull기동실패후Robot23회복도readiness실패전이로세지않는다. [MON추가검색회신](https://github.com/321Team/fds-project-baseline/pull/187#issuecomment-6259963778)은evidence171 P1-MON-01선택검색범위의미발견이며공유/다른저장소전수부재가아니다.
+- **종합 상태:** U1 ICR/OID03 한정처분은[사용자승인결정](https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6259937834)으로채택됐다. NTP sync-loss/reboot등새위험과새KI의U2통합채택은아직별도다. APP조건부판정·D07첫재검토·D02날짜별사실·기존SEC/보관처분을재사용하고최종DOC/Freeze/Gates/Review/Sign-off는대신완료하지않는다. HBR최종범위판정과P2신규Robot/guard승인요청도구분한다.
+
+이번후속은실제Owner회신·병합단계의문서입력이다. 운영설정/서버/증적원본71·렌더자산에변경이없고,새Runtime·원AC면제·시연/서명/미확정Due를생성하지않았다.
+
+
+## 2026-10-19 U2 한정 통합안 실제 채택·HBR 최종 회신 수신
+
+사용자 이권욱의 “일단 제안한대로 적용해주고, 잔여 항목 리스트 보여줘” 회신에 따라 [#30 U2 실제 채택](https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6261617347)을 기록했다. 대상 JSON SHA256 `6bdfd59a473fa945eefcdb5910876cc2888997a1e43c063fcdf08a4a8531f4fb`, 카드 SHA256 `3d9db6462642d8c11be801a93ba8658c897e40173662d21d2d6c4e519d8673d4`. 앞의 U2미채택/통합대기 표기는 해당 작성 시점 이력이며, 현재 판정은 이 단락과 관측JSON의 실제 채택 후속이다. **U2-A/B1/B2 한정 채택이며 전체 Phase1 Close·원 AC의 일괄 MET가 아니다.**
+
+| 현재 등록 | 기술 한계·유지 범위 | Owner·재검토 |
+|---|---|---|
+| NTP sync-loss/재부팅 재동기화: Known Issue + 조건부 잔여 위험수용 | 정상6대 관측 MET 재사용, 장애/재동기화는 NOT_TESTED 유지. 이미 예정된 재부팅이 실제 발생할 때만5분내 chronyc tracking1회 기록. 새 재부팅/장애시험 승인이 아님 | 이하영,10/26까지·시각 관련 장애 즉시,자동연장 없음 |
+| SEC-AC06 지정5종 실제 readiness실패→Endpoint제외→복원: 조건부 비차단KI 등록 | Close까지 정확추가원본 경로/UID가 없으면 해당KI로 남김. 추가원본은 그행만 재판정. 선택자료 미확인을 전환경NOT_RUN·자동MET로 확대하지 않음. 충족된 MON공식Probe 보조통제에 보류를 다시 걸지 않음 | 이하영,10/26 또는 해당Probe/배포변경·실제P2재사용 전 중 먼저 |
+| Ansible 미식별 외부/동적caller·전체loader/.pth: 비차단KI/PARTIAL_SCOPE 등록 | 알려진 수동opt-in·기존역할/CI/paired6/OSDNS만 재사용. 전체caller전환·Collection/loader전수호환 보장·전역RPM/PATH변경·.pth실행·전체#9종결 없음 | 이권욱,10/26 또는 새caller실제전환 선택·source/config/engine/Collection변경·실제P2재사용 전 중 먼저 |
+
+B행의 날짜는 **이번에 채택한 재검토 시점**이며 구현 완료 기한이 아니다. 정상offset만으로 chronyd 장애재동기화나 TLS/etcd경보 효과를 보장하지 않는다. U1 ICR/OID03의 기존한정처분, APP/D07첫재검토·MON조건부/D02/Grafana·기존SEC/보관/25~27이월 처분은 유효 범위를 재사용하며 재승인하지 않았다.
+
+### HBR 담당자 최종 판정은 수신 완료 — 새 조건 통합은 별도
+
+[HBR Lead 이하영6261491388](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6261491388)이 AC04/05A/05B/06의 최종 범위에 회신했다. 이제 **담당자 무응답 대기는 해소**됐다.
+
+- **AC04 PARTIAL/한정 수용 입력:** 기존 guard 허용/차단·.50회수·H4/H7 범위 재사용. IPv6/INPUT 전체대조·표본귀속·과거verifier rc2/자동기동FAIL 한계 보존. .102는 기존임시보존이며 영구허용이 아니다. 제안 재검토는 P2 Push경로 결정 또는10/26자원회수 중 먼저다.
+- **AC05A MET/관측시점 한정:** artifact27/28 기존Scan Success·HIGH0/CRITICAL0·당시DB기준과Worker23소비 식별을 담당Lead가 인수했다. 현재취약점DB최신성이나 새이미지Scan성공으로 확대하지 않는다.
+- **AC05B MET/HBR공유 인수:** 이미종결한CICD#16의TBS217→Push218→Deploy219·PR240rollback/restore를HBR/Worker구간에서 인수했다. 생산자재실행·DeliveryGate전체·업무E2E를 대신하지 않는다.
+- **AC06 PARTIAL/한정 수용 입력:** 비밀값비노출·Robot23소비처전환·임시4쌍정리·형상보존을재사용한다. 구ID2는과거만료기준의Lead판정이며새현재인증/disable확인이 아니다. **삭제미실행을Gate로추가하지 않고** 다음실제Harbor관리작업에상태1회확인한다. source2는이미사용자가목적있음/보호보관을결정했다. 이번회신의삭제담당이하영·10/26재검토·조건부위험수용은 **별도#30통합입력**이며실제삭제승인이아니다. PushID3/.102기존보존은유지한다.
+
+HBR회신은해당기술/Owner판정이고새잔여조건의효력은회신대로#30의별도통합채택대기다. 이번U2가명시적으로제외한HBR새위험을자동채택하지않았다. P2전용Robot/guard/cold-pull요청과도분리한다.
+
+현재순서: HBR새조건의한정통합결정·필수모듈최종처분확인 → DOC/O01최종검토/Freeze → 기존G1/G2/G3 → 실제공식Review/Action/Sign-off·#32 → 실제WBS/Notion동기화. 이는새서명/Gate/Review시각이나서버작업을만든것이아니다. 이문서후속의게시/병합과최종정본Release·전체Close는구분한다. CODEX_ASSISTED.

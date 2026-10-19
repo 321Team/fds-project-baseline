@@ -16,14 +16,14 @@
     {
       "path": "AS_BUILT.md",
       "repository_path": "architecture/as-built/p1-as-built-20261018-r1/AS_BUILT.md",
-      "bytes": 32024,
-      "sha256": "53a03ae193fbbf74b9aa2c53730d54dd0457a542cea6d9549bb5b1f1eeb3da2f"
+      "bytes": 44340,
+      "sha256": "42ef7c4e9081050b00af30dbfebb23b7e9f29fe252e5db56974731252ed35e7b"
     },
     {
       "path": "DERIVATIVE_PROVENANCE.json",
       "repository_path": "architecture/as-built/p1-as-built-20261018-r1/DERIVATIVE_PROVENANCE.json",
-      "bytes": 11413,
-      "sha256": "56310e1bd0b8feffc22be54127662c292beefbf414a201265ee6c5e4ece6ec1d"
+      "bytes": 13564,
+      "sha256": "4f9f316007bc38eea8ef846d334171fbdc9fe17c1bb36c5a91cb25d1f78e13ff"
     },
     {
       "path": "README.md",
@@ -516,6 +516,12 @@
       "repository_path": "architecture/as-built/p1-as-built-20261018-r1/source-set/references/app-contract-sections5-7-ready-20261016/references/BASE_CONTRACT.md",
       "bytes": 11924,
       "sha256": "512bdca10164aa43bb137638f35fbb5157cc92c7e21bcd3684d07f055af6b6e1"
+    },
+    {
+      "path": "observations/20261019T1340-owner-evidence-intake.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/observations/20261019T1340-owner-evidence-intake.json",
+      "bytes": 14304,
+      "sha256": "c5b3c6bdc660ec95d95a514a14c8fc1d510a49a4e2d360741fd50d9ee4ca2ee3"
     }
   ],
   "packaging_note": "Directory-scoped -text preserves original bytes through Git checkout. Original 71 source-set files and prior candidate content remain byte-identical; manifest adds only this packaging entry.",
@@ -549,5 +555,38 @@
     "health_vs_procedure": "engine60s historical condition MET; timely live confirmation NOT_PROVEN; API late66.303778s",
     "Ansible": "Metadata rc0/PARTIAL_SCOPE; no universal collection absence or acceptance",
     "final_adoption_Freeze": false
+  },
+  "owner_evidence_intake_20261019": {
+    "record_cutoff_kst": "2026-10-19T13:43:15.057272+09:00",
+    "observation": "observations/20261019T1340-owner-evidence-intake.json",
+    "previous_manifest_sha256": "7401f29746e1addb7ed2fabae8bad0b90d15741012ebfa0e85da3e1b6725bc01",
+    "server_observation_cutoff_unchanged": true,
+    "Freeze": false
+  },
+  "u1_limited_adoption_20261019": {
+    "recorded_at_kst": "2026-10-19T13:54:05.660382+09:00",
+    "decision": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6259937834",
+    "card_sha256": "25e7f4123201ab4e9857feb12bfb31e3e4dee3d6a0e0848cfb83e79709523545",
+    "original_source_and_render_entries_unchanged": true,
+    "Freeze_Close": false
+  },
+  "PR187_owner_attribution_followup_20261019": {
+    "recorded_at_kst": "2026-10-19T15:28:09.833300+09:00",
+    "PR187_merge": "bf4be18850670968d98cc8494026e4ff83a9d839",
+    "source_comments": [
+      6260355852,
+      6260791512
+    ],
+    "U2_pending": true,
+    "final_DOC_Freeze_Close": false
+  },
+  "U2_actual_adoption_followup_20261019": {
+    "recorded_at_kst": "2026-10-19T16:04:54.979790+09:00",
+    "decision_url": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6261617347",
+    "U2_adopted": true,
+    "HBR_Lead_reply_received": "https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6261491388",
+    "HBR_new_conditions_pending_separate_adoption": true,
+    "prior_pending_fields_are_timestamped_history": true,
+    "final_DOC_Freeze_Close": false
   }
 }
