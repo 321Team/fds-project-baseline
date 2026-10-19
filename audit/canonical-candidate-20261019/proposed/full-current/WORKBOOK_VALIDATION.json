@@ -1,18 +1,18 @@
 {
-  "at_kst": "2026-10-19T19:44:13.803333+09:00",
-  "workbook_sha256": "81a29f955667a73b5addd757acd22cf05f688706bb59c7cd1edea940cae6ceb6",
+  "at_kst": "2026-10-19T19:46:52.194475+09:00",
+  "workbook_sha256": "14ab5ed8e7526f22ac2289d7c98e096b20d02c4b5b847084105112963884753d",
   "sheets": 10,
   "records": 78,
-  "planned_cell_changes": 1,
+  "planned_cell_changes": 5,
   "unexpected_values_formulas_styles": 0,
   "formula_change": "Executive Summary B16 source drift metric replaced with Cancelled count; all other formulas preserved",
   "native_features": "DV/CF/chart series/dimensions/merges/panes/comments/protection preserved",
   "cached_formula_errors": 0,
   "summary_counts": {
-    "Done": 42,
+    "Done": 43,
     "Cancelled": 3,
     "To Do": 20,
-    "In Progress": 13
+    "In Progress": 12
   },
   "milestone_status_formula_readback": "MATCH",
   "unknown_dates": "blank typed-date inputs preserved; exact TBD in per-record metadata/notes",

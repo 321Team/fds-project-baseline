@@ -9,14 +9,15 @@
   ],
   "after_counts": {
     "Todo": 20,
-    "In Progress": 13,
-    "Done": 45
+    "In Progress": 12,
+    "Done": 46
   },
   "Done_includes_Cancelled": 3,
-  "implemented_Done": 42,
+  "implemented_Done": 43,
   "phase2_label_with_phase1_field_filter_count": 0,
   "Record_ID_Owner_Priority_Dates": "preserved",
   "method": "Authenticated browser UI, no token/scopes changes",
   "recording": "central protected PROJECT_UI_ACTIONS.json and screenshots; source ticket metadata GET readback",
-  "scope": "current existing78 project records; selected Status/Phase only, not new implementation or whole Close"
+  "scope": "current existing78 project records; selected Status/Phase only, not new implementation or whole Close",
+  "review31_followup_status_changed": 1
 }

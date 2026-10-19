@@ -1,6 +1,6 @@
 # 전체78건 Ticket Pack — 정본 후보
 
-기준 2026-10-19T19:25:19.982565+09:00. Design5 / Phase1 42 / Phase2 31. Done42 / InProgress13 / ToDo20 / Cancelled3. 실제 상태이며 전체 기술 완료율이 아니다. 취소는 완료에서 제외한다. 사용자 지시로 Notion 대신 후보를 관리하며 기존 발행 원본은 보존한다.
+기준 2026-10-19T19:25:19.982565+09:00. Design5 / Phase1 42 / Phase2 31. Done43 / InProgress12 / ToDo20 / Cancelled3. 실제 상태이며 전체 기술 완료율이 아니다. 취소는 완료에서 제외한다. 사용자 지시로 Notion 대신 후보를 관리하며 기존 발행 원본은 보존한다.
 
 | Record ID | 현재 Phase | 현재 Status | Lead | 실제 종결 KST | 상세 |
 |---|---|---|---|---|---|
@@ -29,7 +29,7 @@
 | [DEC-CAL-P1-01](https://github.com/321Team/fds-project-baseline/issues/28) | Phase 1 | Done | 이권욱 | 2026-09-16T17:53:19+09:00 | [Description](descriptions/DEC-CAL-P1-01.md) |
 | [MS-G3-01](https://github.com/321Team/fds-project-baseline/issues/29) | Phase 1 | Done | 이권욱 | 2026-10-19T19:05:55+09:00 | [Description](descriptions/MS-G3-01.md) |
 | [P1-REV-01](https://github.com/321Team/fds-project-baseline/issues/30) | Phase 1 | In Progress | 이권욱 | 미종결 | [Description](descriptions/P1-REV-01.md) |
-| [MS-P1-REVIEW-01](https://github.com/321Team/fds-project-baseline/issues/31) | Phase 1 | In Progress | 이권욱 | 미종결 | [Description](descriptions/MS-P1-REVIEW-01.md) |
+| [MS-P1-REVIEW-01](https://github.com/321Team/fds-project-baseline/issues/31) | Phase 1 | Done | 이권욱 | 2026-10-19T19:45:18+09:00 | [Description](descriptions/MS-P1-REVIEW-01.md) |
 | [MS-P1-CLOSE-01](https://github.com/321Team/fds-project-baseline/issues/32) | Phase 1 | To Do | 이권욱 | 미종결 | [Description](descriptions/MS-P1-CLOSE-01.md) |
 | [MS-P2-START-01](https://github.com/321Team/fds-project-baseline/issues/33) | Phase 2 | To Do | 이권욱 | 미종결 | [Description](descriptions/MS-P2-START-01.md) |
 | [P2-ARC-01](https://github.com/321Team/fds-project-baseline/issues/34) | Phase 2 | Done | 이권욱 | 2026-10-19T18:38:16+09:00 | [Description](descriptions/P2-ARC-01.md) |
@@ -87,4 +87,4 @@
 
 계획 Start/End는 기존 승인된 메타데이터 이력이다. 실제 closed_at을 계획 End에 대입하지 않는다. TBD 날짜는 XLSX의 날짜 입력을 빈칸으로 유지하고 원문 TBD를 각 Description/JSON에서 보존한다. WBS K열 Lead Workdays는 기존 휴일·개인부재 차감 수식으로 계산하므로 이슈 Working Days의 저장값과 의미가 다를 수 있다(6건). 수식을 저장 메타데이터로 덮어쓰지 않았다. Gantt는 원 계획 창/행을 유지하고 현재 분류는 WBS C열을 따른다. #25~27은 Phase2 carry-over로 명시한다.
 
-소스/정적/모의/CI/Runtime/Review/Merge/Publication/최종 인수를 구분한다. P2 사전 작업 InProgress와 #34 설계 Done은 실제 플랫폼·배포·G4/G5·전체Close 성공을 의미하지 않는다. P1 실제 한정 인수와 남은 #30/#31/#32를 [Review 표](REVIEW31_RESULTS_AND_DECISION_CARD.md)에 연결했다.
+소스/정적/모의/CI/Runtime/Review/Merge/Publication/최종 인수를 구분한다. P2 사전 작업 InProgress와 #34 설계 Done은 실제 플랫폼·배포·G4/G5·전체Close 성공을 의미하지 않는다. P1 실제 한정 인수와 남은 #30/#32를 [Review 표](REVIEW31_RESULTS_AND_DECISION_CARD.md)에 연결했다.

@@ -11,7 +11,7 @@
 
 ## 2. 전체 관리 상태·이월
 
-[전체78건 Ticket Pack](TICKET_PACK.md)·[현재값/원문SHA](current-records.json)·상위 WBS에 Phase/Status/실제 종결/기존 Owner·계획을 반영했다. #25~27은 기존 Record ID를 유지한 Phase2 이월/구현ToDo·Due미정이며 기존 인계수신 완료를 재사용한다. 취소CR126/127/128은 구현 Done이 아니다. #30/#31/#32는 계속 미완료다. P2 보류·조건부 항목은 구현 완료나 자동 재개로 바꾸지 않는다.
+[전체78건 Ticket Pack](TICKET_PACK.md)·[현재값/원문SHA](current-records.json)·상위 WBS에 Phase/Status/실제 종결/기존 Owner·계획을 반영했다. #25~27은 기존 Record ID를 유지한 Phase2 이월/구현ToDo·Due미정이며 기존 인계수신 완료를 재사용한다. 취소CR126/127/128은 구현 Done이 아니다. #31 Review는 실제 한정채택·종결됐고 #30/#32는 계속 미완료다. P2 보류·조건부 항목은 구현 완료나 자동 재개로 바꾸지 않는다.
 
 ## 3. Phase2 확정 사양 — 18:42 공급 입력의 통합
 
