@@ -1,0 +1,8 @@
+{
+  "at_kst": "2026-10-19T20:58:22.063719+09:00",
+  "human": "이권욱",
+  "actual_request": "권장안대로 기존 조건·잔여위험을 유지한 docs-v3.1.22 정본 발행 진행해줘. 필수 검증 통과 후 발행하고, 공유 폴더도 최종 발행본으로 업데이트해줘.",
+  "version": "docs-v3.1.22",
+  "scope": "content PR, finalization PR, Tag/Release/assets and published verification, final share update",
+  "Runtime_P2": false
+}

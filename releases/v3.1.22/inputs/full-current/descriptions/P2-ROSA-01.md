@@ -1,0 +1,36 @@
+# P2-ROSA-01 — 현재 관리·인수 스냅샷
+
+기준 2026-10-19T19:25:19.982565+09:00. 미발행 정본 후보 / CODEX_ASSISTED. [GitHub 원본](https://github.com/321Team/fds-project-baseline/issues/38) · updated_at `2026-10-19T09:38:41Z` · body SHA256 `525d74d322a0646d320a0cffdc0f3275d39ad1f1a7de0d81d9609aecf2d923ce`. 아래 속성표는 현행이며, 발행 v3.1.21 원본은 수정하지 않았다.
+
+| Property | 현재 입력값 |
+|---|---|
+| Record ID | P2-ROSA-01 |
+| Phase | Phase 2 |
+| Category | OpenShift / ROSA |
+| Type | Task |
+| Status | In Progress |
+| Priority | P0 |
+| Start | 2026-10-15 |
+| End | 2026-10-19 |
+| Calendar Days | 5 |
+| Working Days | 3 |
+| Lead | 이하영 |
+| Support | 이권욱 |
+| Exit Criteria | ROSA Cluster Ready, Namespace/RBAC/NetworkPolicy/SecurityContext, Hybrid Route 및 Application 배포 선행조건과 G5 Evidence 확보 |
+| Related Decision IDs | D10; D12; D17; D21 |
+| Related Risk IDs | RISK-07; RISK-10; RISK-11; RISK-12 |
+| Source | Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #38 snapshot 2026-09-10T02:09:51Z; 현행 발행 정본: docs-v3.1.21 (979facb98de8ca1f1e2ce22f38b27ac3366f3fc3); 수집 후 실행 기록은 본문 최신 증적 기준 |
+| Schedule Note | 10-14 G4 승인 후 10-15 Runtime 착수. 10-15 Basic Ready checkpoint를 #42/#43 선행입력으로 제공하고, Security/NetworkPolicy/Hybrid Route 등 #38 전체 AC는 10-19까지 계속 검증한다. |
+
+## 현재 원 AC — 체크 상태 보존
+
+- [ ] ROSA Cluster와 Worker가 Ready다.
+- [ ] 관리·배포 접근이 승인된 계정으로 성공한다.
+- [ ] 기본 보안정책이 적용된다.
+- [ ] On-Prem 승인 경로의 선행 TCP Test가 성공한다.
+
+---
+
+## 상태·원조건 추적
+
+기존 승인·위험수용·미검증·Reviewer/Approver는 해당 GitHub 원문/댓글과 [Review 원조건 표](../REVIEW31_RESULTS_AND_DECISION_CARD.md)를 따른다. 상태 동기화가 원 AC를 완화하거나 미실행을 MET로 바꾸지 않는다.

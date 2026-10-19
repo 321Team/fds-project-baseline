@@ -1,0 +1,23 @@
+{
+  "at_kst": "2026-10-19T21:00:47.126921+09:00",
+  "workbook_sha256": "2830564d9612198972219fa26aa84de8324587854cc577885f00ef0088220bfc",
+  "sheets": 10,
+  "records": 78,
+  "planned_cell_changes": 20,
+  "unexpected_values_formulas_styles": 0,
+  "formula_change": "No formula changes in this final Signoff/Close stage; existing Cancelled formula preserved",
+  "native_features": "DV/CF/chart series/dimensions/merges/panes/comments/protection preserved",
+  "cached_formula_errors": 0,
+  "summary_counts": {
+    "Done": 45,
+    "Cancelled": 3,
+    "To Do": 19,
+    "In Progress": 11
+  },
+  "milestone_status_formula_readback": "MATCH",
+  "unknown_dates": "blank typed-date inputs preserved; exact TBD in per-record metadata/notes",
+  "scope": "v3.1.22 publication labels only; all78 business values, plans, original conditions preserved",
+  "native_Excel": "NOT_RUN",
+  "authoring_process_rc": 1,
+  "export_independent_readback": "SUCCESS"
+}

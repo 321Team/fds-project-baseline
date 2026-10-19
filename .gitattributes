@@ -1,0 +1,9 @@
+# Canonical release exact-byte preservation; old versions unaffected.
+/baseline/*v3.1.22* -text
+/wbs/*v3.1.22* -text
+/tickets/*v3.1.22* -text
+/tickets/v3.1.22/** -text
+/tests/*v3.1.22* -text
+/web/v3.1.22/** -text
+/releases/v3.1.22/** -text
+/audit/canonical-release-20261019/** -text

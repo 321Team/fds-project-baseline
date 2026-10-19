@@ -1,0 +1,251 @@
+{
+  "at_kst": "2026-10-19T19:33:02.202656+09:00",
+  "sources": [
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/11",
+      "kind": "issues",
+      "title": "[P1-DB-01] PostgreSQL External VM",
+      "state": "closed",
+      "updated_at": "2026-10-14T02:12:27Z",
+      "merged_at": null,
+      "head": null,
+      "merge_commit": null,
+      "body_sha256": "410534fa4eddebc3ee1489d3131d9b8db051bfe10aa3fa4136ac3a4d2b6f4ed0"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/20",
+      "kind": "issues",
+      "title": "[P1-E2E-01] Initial / Final E2E & Regression",
+      "state": "closed",
+      "updated_at": "2026-10-19T09:04:41Z",
+      "merged_at": null,
+      "head": null,
+      "merge_commit": null,
+      "body_sha256": "71009256c5291fc337d56b13c89f33c90ee25d7925764728625d3aedcfe3bff1"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/21",
+      "kind": "issues",
+      "title": "[P1-DR-01] PostgreSQL Backup / Restore",
+      "state": "closed",
+      "updated_at": "2026-10-19T01:27:53Z",
+      "merged_at": null,
+      "head": null,
+      "merge_commit": null,
+      "body_sha256": "eb16fbacd6adf160c3d88489bc6bfc04d544f00093bc3c776e80e1ad8190dff9"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/22",
+      "kind": "issues",
+      "title": "[P1-HA-01] Worker Drain Continuity",
+      "state": "closed",
+      "updated_at": "2026-10-19T01:27:56Z",
+      "merged_at": null,
+      "head": null,
+      "merge_commit": null,
+      "body_sha256": "f6d54730794bd0c4d59e787a6daf1cb12e9e33164e9c0db94e9cae4afa192996"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/28",
+      "kind": "issues",
+      "title": "[DEC-CAL-P1-01] Phase 1 Weekend Review Decision",
+      "state": "closed",
+      "updated_at": "2026-10-09T13:06:04Z",
+      "merged_at": null,
+      "head": null,
+      "merge_commit": null,
+      "body_sha256": "baaa15a37335ebf3febbf4c70ff490cc511550c16becc41cd93c5c2ae4c40e5f"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/29",
+      "kind": "issues",
+      "title": "[MS-G3-01] G3 Review Ready",
+      "state": "closed",
+      "updated_at": "2026-10-19T10:05:56Z",
+      "merged_at": null,
+      "head": null,
+      "merge_commit": null,
+      "body_sha256": "33376af922bc87a462f52c1c9d733950035da169817a7081d0a08da4e0ece132"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/31",
+      "kind": "issues",
+      "title": "[MS-P1-REVIEW-01] Phase 1 Review",
+      "state": "open",
+      "updated_at": "2026-10-19T10:20:12Z",
+      "merged_at": null,
+      "head": null,
+      "merge_commit": null,
+      "body_sha256": "7b0b4bb69e61b8d39976ebfda39dbc7ea768c97c7c242e227ef6e3687d7387a1"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/34",
+      "kind": "issues",
+      "title": "[P2-ARC-01] Hybrid / OCI / AWS / ROSA Architecture Freeze",
+      "state": "closed",
+      "updated_at": "2026-10-19T09:38:19Z",
+      "merged_at": null,
+      "head": null,
+      "merge_commit": null,
+      "body_sha256": "2dbc6ac6e298940f7405bbe86f262f73e623b59969b3ea31267d240abf153d48"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-evidence/pull/224",
+      "kind": "pulls",
+      "title": "evidence: 최종 APP 회귀 RUN 202610141025 및 DB 23행 대조",
+      "state": "closed",
+      "updated_at": "2026-10-14T02:03:26Z",
+      "merged_at": "2026-10-14T01:58:22Z",
+      "head": "05e8891572a21a20ae2761e6b04751b3086670ba",
+      "merge_commit": "89f9d4cbd3ff77aa6fc70cfe3de34a71ffb09758",
+      "body_sha256": "f412c22f1b5dc2119e302ec44db5f68abfe525e7bf99f02be99ff84e1c5af85f"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-evidence/pull/233",
+      "kind": "pulls",
+      "title": "evidence(D03): 격리 실패·회복 Runtime PASS 및 정리 원본",
+      "state": "closed",
+      "updated_at": "2026-10-14T23:57:01Z",
+      "merged_at": "2026-10-14T23:57:01Z",
+      "head": "fc5714488453bc28eba6d0a676a75728649a1d1e",
+      "merge_commit": "130a52a5b925e53b6209a43cf1fc66caceb64ef0",
+      "body_sha256": "b0b36b398d8ef14bc3f5db9e0ed60426a684a68de44ccc39bd5302d508415362"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-evidence/pull/228",
+      "kind": "pulls",
+      "title": "evidence: Phase 1 이미지 전환 후 8400건 축약 회귀 결과",
+      "state": "closed",
+      "updated_at": "2026-10-14T05:44:05Z",
+      "merged_at": "2026-10-14T05:43:35Z",
+      "head": "25c8626d5f243727afa3b60b6b2f54ad7c3bb445",
+      "merge_commit": "ee4a9a25212dc5b7eb76c1125f4368d68026ff0a",
+      "body_sha256": "23cb67b41af59127ea04c54d008e7221d16e6009e3067151f35bc0c7656da748"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-evidence/pull/221",
+      "kind": "pulls",
+      "title": "evidence: 새 Deploy 후 Worker02 HA PASS 및 1/1/1 복원 원본",
+      "state": "closed",
+      "updated_at": "2026-10-14T00:46:35Z",
+      "merged_at": "2026-10-14T00:46:35Z",
+      "head": "fb931f5a59032607bd051206c192a77168c5752c",
+      "merge_commit": "851c3827f69160a6299c859f2cca3a32dab41054",
+      "body_sha256": "671b05aebe5ec3bce2ceaf07b43198a02436a9d6e6ed697ce598e4bc99ff80e0"
+    }
+  ],
+  "decisions": [
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6264594986",
+      "author": "GWONUK",
+      "created_at": "2026-10-19T09:59:06Z",
+      "updated_at": "2026-10-19T09:59:06Z",
+      "sha256": "835ddb95576d96533724d261a4853ebd9d6267112ec4d0bea54f616b1a83fada"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/23#issuecomment-6264221185",
+      "author": "hayeounglee",
+      "created_at": "2026-10-19T09:38:10Z",
+      "updated_at": "2026-10-19T09:38:10Z",
+      "sha256": "e00bf836e80fcbb584a238345dde574bb6031305468db8efef19745152f960b9"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/10#issuecomment-6263348401",
+      "author": "hayeounglee",
+      "created_at": "2026-10-19T08:48:07Z",
+      "updated_at": "2026-10-19T08:48:07Z",
+      "sha256": "65a4d371eb175cd8787fe960bc6995a63966d27ea5f8eff4a807b5f635343f40"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/19#issuecomment-6263349027",
+      "author": "hayeounglee",
+      "created_at": "2026-10-19T08:48:09Z",
+      "updated_at": "2026-10-19T08:48:09Z",
+      "sha256": "f96dfa647c9a410881b121a74f3a1541e9994e8bbd53d26847d81eeffe8f0939"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6261491388",
+      "author": "hayeounglee",
+      "created_at": "2026-10-19T06:53:08Z",
+      "updated_at": "2026-10-19T06:53:08Z",
+      "sha256": "dd6e437a55a3213ffa9c63203973d4ae14b243e92b3660e5e35d9c96b283e0bf"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-6263244501",
+      "author": "supreme33-kr",
+      "created_at": "2026-10-19T08:42:14Z",
+      "updated_at": "2026-10-19T08:42:14Z",
+      "sha256": "8c576a9130731115a1c0b9bcad758ebb0d9c693f4dc273c5719eea94fe6379fd"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/24#issuecomment-6263765512",
+      "author": "GWONUK",
+      "created_at": "2026-10-19T09:12:48Z",
+      "updated_at": "2026-10-19T09:12:48Z",
+      "sha256": "8f1a05bd3d29ff668f3a3156b6f3db385cc60ae2c2ca3537bd27ad98f966aa42"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6259937834",
+      "author": "GWONUK",
+      "created_at": "2026-10-19T04:52:09Z",
+      "updated_at": "2026-10-19T04:52:09Z",
+      "sha256": "a76b1335fb8b64d8324086d13e93942a595e103ee48626751e2b6d4076dbe425"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6261617347",
+      "author": "GWONUK",
+      "created_at": "2026-10-19T07:02:00Z",
+      "updated_at": "2026-10-19T07:02:00Z",
+      "sha256": "a6c874a314e0d34e2ca717d9763e9ccb8f32245bfa675d4815a85e255fa80aa1"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6261947431",
+      "author": "GWONUK",
+      "created_at": "2026-10-19T07:23:53Z",
+      "updated_at": "2026-10-19T07:23:53Z",
+      "sha256": "553bc6ee6c03726c1b731298e464650c8b111eb944c0a4f1cf63cdfed06392c5"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6205182638",
+      "author": "GWONUK",
+      "created_at": "2026-10-16T00:27:05Z",
+      "updated_at": "2026-10-16T00:27:05Z",
+      "sha256": "2fbe0a2e09590cfb83e1a2074c96b18c084d83903f9a76f36511980db76a7a6f"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/25#issuecomment-6256808772",
+      "author": "GWONUK",
+      "created_at": "2026-10-19T00:02:36Z",
+      "updated_at": "2026-10-19T00:02:36Z",
+      "sha256": "9946023d4242206db43ac3c7d97649b511646c1cb4e2d8c5391c831f182e0862"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/26#issuecomment-6250018800",
+      "author": "GWONUK",
+      "created_at": "2026-10-18T12:39:24Z",
+      "updated_at": "2026-10-18T12:39:24Z",
+      "sha256": "7b4fbbbf96a85246084c2d05c72f053dafda9b6141e9aa90ff05c44a59018371"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/27#issuecomment-6250019054",
+      "author": "GWONUK",
+      "created_at": "2026-10-18T12:39:26Z",
+      "updated_at": "2026-10-18T12:39:26Z",
+      "sha256": "868de402e1298fff118c6439ff64b5576cf1192f46d427eda8565f162aefa4be"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/11#issuecomment-6159292006",
+      "author": "GWONUK",
+      "created_at": "2026-10-14T02:07:31Z",
+      "updated_at": "2026-10-14T02:12:27Z",
+      "sha256": "83a1c63d5efc10ee6b0a95f63dcde644c6c2e4d159ffc9b98ace4049063fce9c"
+    },
+    {
+      "url": "https://github.com/321Team/fds-project-baseline/issues/34#issuecomment-6259117130",
+      "author": "GWONUK",
+      "created_at": "2026-10-19T03:38:18Z",
+      "updated_at": "2026-10-19T03:38:18Z",
+      "sha256": "c7ace2a505f895c00270cb129598fb44b2bf4736b8a196ab11ed74e5f73d89a4"
+    }
+  ]
+}
