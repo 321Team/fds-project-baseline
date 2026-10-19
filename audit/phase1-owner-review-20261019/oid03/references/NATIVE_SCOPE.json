@@ -1,0 +1,136 @@
+{
+  "status": "EXCERPT_OF_PRIOR_ACTUAL_EXECUTION_NOT_NEW_RUN",
+  "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\oid03-native-receipts-collected\\originals\\FINAL.json",
+  "native_status": "NATIVE_PRECHECK_PASS_NOT_INSTALL_OR_RECOVERY",
+  "host": "k8s-worker02",
+  "stage": {
+    "at_utc": "2026-10-18T10:49:30.512719+00:00",
+    "rpm_sha256": "0b7e019f5ca0efa1f4cee9d8fd83caa77d03394f90babb2ec378583e52022965",
+    "rpm": {
+      "path": "/root/p1-oid03-precheck-20261018-1940/containerd.io-2.4.1-2.el10.x86_64.rpm",
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o600",
+      "device": 64768,
+      "inode": 100947519,
+      "bytes": 36633188,
+      "mtime_ns": 1792320570470060836,
+      "selinux": "unconfined_u:object_r:admin_home_t:s0"
+    },
+    "directory": {
+      "path": "/root/p1-oid03-precheck-20261018-1940",
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o700",
+      "device": 64768,
+      "inode": 100947516,
+      "bytes": 71,
+      "mtime_ns": 1792320570469622295,
+      "selinux": "unconfined_u:object_r:admin_home_t:s0"
+    },
+    "custodian": "이권욱 / GWONUK",
+    "retention_review": "2026-10-19T08:00:00+09:00 or acceptance of this test result, whichever first; review only, no automatic deletion"
+  },
+  "commands": [
+    {
+      "name": "docker-public-key",
+      "argv": [
+        "/usr/bin/rpm",
+        "-q",
+        "gpg-pubkey-621e9f35",
+        "--qf",
+        "%{DESCRIPTION}\n"
+      ],
+      "limit_seconds": 30,
+      "start_utc": "2026-10-18T10:49:30.514237+00:00",
+      "pid": 28147,
+      "rc": 0,
+      "end_utc": "2026-10-18T10:49:30.524031+00:00",
+      "stdout_sha256": "806afd009f7f9bb34a8d2b59848808e951770b7d2289b7f6fc60eaa7a1915448",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_key_body_omitted": true
+    },
+    {
+      "name": "current-nevra",
+      "argv": [
+        "/usr/bin/rpm",
+        "-q",
+        "--qf",
+        "%{NAME}-%{EPOCHNUM}:%{VERSION}-%{RELEASE}.%{ARCH}\n",
+        "containerd.io"
+      ],
+      "limit_seconds": 30,
+      "start_utc": "2026-10-18T10:49:30.524561+00:00",
+      "pid": 28148,
+      "rc": 0,
+      "end_utc": "2026-10-18T10:49:30.534239+00:00",
+      "stdout_sha256": "b9741527c68ace0cbb76e38f22f1ecf500b647a32fd7c08d5cb41890af8dc365",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "containerd.io-0:2.4.1-2.el10.x86_64\n",
+      "stderr": ""
+    },
+    {
+      "name": "incoming-nevra",
+      "argv": [
+        "/usr/bin/rpm",
+        "-qp",
+        "--qf",
+        "%{NAME}-%{EPOCHNUM}:%{VERSION}-%{RELEASE}.%{ARCH}\n",
+        "/root/p1-oid03-precheck-20261018-1940/containerd.io-2.4.1-2.el10.x86_64.rpm"
+      ],
+      "limit_seconds": 30,
+      "start_utc": "2026-10-18T10:49:30.534662+00:00",
+      "pid": 28149,
+      "rc": 0,
+      "end_utc": "2026-10-18T10:49:30.544254+00:00",
+      "stdout_sha256": "b9741527c68ace0cbb76e38f22f1ecf500b647a32fd7c08d5cb41890af8dc365",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "containerd.io-0:2.4.1-2.el10.x86_64\n",
+      "stderr": ""
+    },
+    {
+      "name": "rpmkeys",
+      "argv": [
+        "/usr/bin/rpmkeys",
+        "--checksig",
+        "--verbose",
+        "/root/p1-oid03-precheck-20261018-1940/containerd.io-2.4.1-2.el10.x86_64.rpm"
+      ],
+      "limit_seconds": 30,
+      "start_utc": "2026-10-18T10:49:30.544715+00:00",
+      "pid": 28150,
+      "rc": 0,
+      "end_utc": "2026-10-18T10:49:30.663120+00:00",
+      "stdout_sha256": "514c2f885f7fe0fb436c91f53c746b66b5a502de3da4662a3fcea724b6986a1e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "/root/p1-oid03-precheck-20261018-1940/containerd.io-2.4.1-2.el10.x86_64.rpm:\n    Header V4 RSA/SHA512 Signature, key ID 621e9f35: OK\n    Header SHA256 digest: OK\n    Header SHA1 digest: OK\n    Payload SHA256 digest: OK\n    MD5 digest: OK\n",
+      "stderr": ""
+    },
+    {
+      "name": "transaction-test",
+      "argv": [
+        "/usr/bin/rpm",
+        "-U",
+        "--replacepkgs",
+        "--test",
+        "--noscripts",
+        "--notriggers",
+        "--noplugins",
+        "/root/p1-oid03-precheck-20261018-1940/containerd.io-2.4.1-2.el10.x86_64.rpm"
+      ],
+      "limit_seconds": 60,
+      "start_utc": "2026-10-18T10:49:30.663800+00:00",
+      "pid": 28151,
+      "rc": 0,
+      "end_utc": "2026-10-18T10:49:30.933045+00:00",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "install": 0,
+  "key_import": 0,
+  "service_actions": 0,
+  "before_after_equal": true
+}

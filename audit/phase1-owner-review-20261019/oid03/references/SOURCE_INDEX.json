@@ -1,0 +1,179 @@
+{
+  "status": "DERIVED_FROM_EXISTING_COPY_INTENT_NOT_NEW_CATALOG_OR_PAYLOAD_VERIFICATION",
+  "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\oid03-shared-originals-20261019\\INTENT.json",
+  "destination_recorded": "\\\\10.1.93.150\\HybridCloud과정공유디렉토리\\07_프로젝트\\제01조\\01차 프로젝트\\02 프로젝트 결과물\\Phase1-OID03-offline-originals-20261019",
+  "rpm_count": 13,
+  "entries": [
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\official-rpm-sources\\payloads\\pkg01.rpm",
+      "relative": "rpm/pkg01.rpm",
+      "sha256": "9e4fb880ee6ebad4b206f05a752eb3445a7449ac0c5390d4247bfc148c225891",
+      "bytes": 12730116,
+      "nevra": "kubeadm-0:1.36.4-150500.1.1.x86_64",
+      "official_url": "https://pkgs.k8s.io/core:/stable:/v1.36/rpm/x86_64/kubeadm-1.36.4-150500.1.1.x86_64.rpm",
+      "purpose": "EXACT_PRIMARY_ORIGINAL"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\official-rpm-sources\\payloads\\pkg02.rpm",
+      "relative": "rpm/pkg02.rpm",
+      "sha256": "33854d63f2019f7f4582b3292a4ac3a2314befe4e85c21696dfaca4ab8bbaeca",
+      "bytes": 11900628,
+      "nevra": "kubectl-0:1.36.4-150500.1.1.x86_64",
+      "official_url": "https://pkgs.k8s.io/core:/stable:/v1.36/rpm/x86_64/kubectl-1.36.4-150500.1.1.x86_64.rpm",
+      "purpose": "EXACT_PRIMARY_ORIGINAL"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\official-rpm-sources\\payloads\\pkg03.rpm",
+      "relative": "rpm/pkg03.rpm",
+      "sha256": "217fcdd849e623d5cca069c40341797322a0d51ac5db3a60b5d2757bda967007",
+      "bytes": 13510392,
+      "nevra": "kubelet-0:1.36.4-150500.1.1.x86_64",
+      "official_url": "https://pkgs.k8s.io/core:/stable:/v1.36/rpm/x86_64/kubelet-1.36.4-150500.1.1.x86_64.rpm",
+      "purpose": "EXACT_PRIMARY_ORIGINAL"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\official-rpm-sources\\payloads\\pkg04.rpm",
+      "relative": "rpm/pkg04.rpm",
+      "sha256": "a228e611f547cf3554873c383078a7ff9abf289e5b7ae315cd38c3811804e2f7",
+      "bytes": 9255068,
+      "nevra": "kubernetes-cni-0:1.9.1-150500.1.1.x86_64",
+      "official_url": "https://pkgs.k8s.io/core:/stable:/v1.36/rpm/x86_64/kubernetes-cni-1.9.1-150500.1.1.x86_64.rpm",
+      "purpose": "EXACT_PRIMARY_ORIGINAL"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\official-rpm-sources\\payloads\\pkg05.rpm",
+      "relative": "rpm/pkg05.rpm",
+      "sha256": "d63bae0ea50de1d5897a0456ef64bbd128dd2f9acc74f4dbed228a9320a2f9b6",
+      "bytes": 35289141,
+      "nevra": "containerd.io-0:2.3.5-1.el10.x86_64",
+      "official_url": "https://download.docker.com/linux/centos/10/x86_64/stable/Packages/containerd.io-2.3.5-1.el10.x86_64.rpm",
+      "purpose": "EXACT_PRIMARY_ORIGINAL"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\official-rpm-sources\\payloads\\pkg06.rpm",
+      "relative": "rpm/pkg06.rpm",
+      "sha256": "0b7e019f5ca0efa1f4cee9d8fd83caa77d03394f90babb2ec378583e52022965",
+      "bytes": 36633188,
+      "nevra": "containerd.io-0:2.4.1-2.el10.x86_64",
+      "official_url": "https://download.docker.com/linux/centos/10/x86_64/stable/Packages/containerd.io-2.4.1-2.el10.x86_64.rpm",
+      "purpose": "EXACT_PRIMARY_ORIGINAL"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\official-rpm-sources\\payloads\\pkg07.rpm",
+      "relative": "rpm/pkg07.rpm",
+      "sha256": "b98379433d44ab4ecf4246cfd8f06ca04ec3fffc1e64342545bc44c1e475d28c",
+      "bytes": 365797,
+      "nevra": "chrony-0:4.8-2.el10.x86_64",
+      "official_url": "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/chrony-4.8-2.el10.x86_64.rpm",
+      "purpose": "EXACT_PRIMARY_ORIGINAL"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\official-rpm-sources\\payloads\\pkg08.rpm",
+      "relative": "rpm/pkg08.rpm",
+      "sha256": "cf96f262ac383ef2ea566d9cb6390310a0efb95a5dbe8d6c89f222b350ffd23e",
+      "bytes": 27508,
+      "nevra": "python3-0:3.12.14-1.el10.x86_64",
+      "official_url": "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/python3-3.12.14-1.el10.x86_64.rpm",
+      "purpose": "EXACT_PRIMARY_ORIGINAL"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\official-rpm-sources\\payloads\\pkg09.rpm",
+      "relative": "rpm/pkg09.rpm",
+      "sha256": "707341af8afb687dedf37ee068ac8861005a5ae1039a4d2bb7fd878654434a8b",
+      "bytes": 1415803,
+      "nevra": "sudo-0:1.9.17-10.p2.el10.x86_64",
+      "official_url": "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/sudo-1.9.17-10.p2.el10.x86_64.rpm",
+      "purpose": "EXACT_PRIMARY_ORIGINAL"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\official-rpm-sources\\worker02-direct-providers\\d01.rpm",
+      "relative": "rpm/provider01.rpm",
+      "sha256": "31eaf885847a6671a93e2b6e0d48e937ae5520f0442265aae19f4294260b5618",
+      "bytes": 1897839,
+      "nevra": "bash-0:5.2.26-6.el10.x86_64",
+      "official_url": "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/bash-5.2.26-6.el10.x86_64.rpm",
+      "purpose": "WORKER02_CONTAINERD_DIRECT_PROVIDER_ONLY"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\official-rpm-sources\\worker02-direct-providers\\d02.rpm",
+      "relative": "rpm/provider02.rpm",
+      "sha256": "336b603f918836db9e8fe97cd6eb1815598c0d60e6651787a1b1649538b961b1",
+      "bytes": 61582,
+      "nevra": "container-selinux-4:2.250.0-1.el10.noarch",
+      "official_url": "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/container-selinux-2.250.0-1.el10.noarch.rpm",
+      "purpose": "WORKER02_CONTAINERD_DIRECT_PROVIDER_ONLY"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\official-rpm-sources\\worker02-direct-providers\\d03.rpm",
+      "relative": "rpm/provider03.rpm",
+      "sha256": "654051862cc301ed43501ab36b687ed5adeb3ca57689f54a80bf760ad9686e54",
+      "bytes": 72894,
+      "nevra": "libseccomp-0:2.5.6-1.el10.x86_64",
+      "official_url": "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/libseccomp-2.5.6-1.el10.x86_64.rpm",
+      "purpose": "WORKER02_CONTAINERD_DIRECT_PROVIDER_ONLY"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\official-rpm-sources\\worker02-direct-providers\\d04.rpm",
+      "relative": "rpm/provider04.rpm",
+      "sha256": "ad069e2548015564c8ceaaaada4cdab9e275d82cc2d0c0b4013500f04e883a17",
+      "bytes": 6082158,
+      "nevra": "systemd-0:257-34.el10.x86_64",
+      "official_url": "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/Packages/systemd-257-34.el10.x86_64.rpm",
+      "purpose": "WORKER02_CONTAINERD_DIRECT_PROVIDER_ONLY"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\official-rpm-sources\\keys\\centos.asc",
+      "relative": "keys/centos.asc",
+      "sha256": "5af55449d6c9bc594e2e2fb7222374cb25a8ad2d8ea6ce3de894a3201944daa2",
+      "bytes": 1683,
+      "purpose": "PUBLIC_SIGNING_KEY_NOT_NEW_TRUST_IMPORT"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\official-rpm-sources\\keys\\docker.asc",
+      "relative": "keys/docker.asc",
+      "sha256": "e6c650e0700b1bf4868b693b30761b926844befc8a0acb7ac0dd9b1faf1b7423",
+      "bytes": 1627,
+      "purpose": "PUBLIC_SIGNING_KEY_NOT_NEW_TRUST_IMPORT"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\official-rpm-sources\\keys\\kubernetes.asc",
+      "relative": "keys/kubernetes.asc",
+      "sha256": "7627818cf7bae52f9008c93e8b1f961f53dea11d40891778de216fb1b43be54d",
+      "bytes": 1738,
+      "purpose": "PUBLIC_SIGNING_KEY_NOT_NEW_TRUST_IMPORT"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\OID03_ORIGINAL_INVENTORY.json",
+      "relative": "records/RPM9_ORIGINAL_INVENTORY.json",
+      "sha256": "8125dcbb2fa2446abc8bcc2c75d9c6a8bd877124a57e4855932060375e1e437a",
+      "bytes": 11801,
+      "purpose": "PRESERVED_DATED_PUBLIC_EVIDENCE"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\OID03_SUPPLY_RESULT.json",
+      "relative": "records/RPM9_PREPARATION_RESULT.json",
+      "sha256": "a50b266ed8b0ec952f8ef3beb8ad671b943d02b26a6744063d9cfa37e7ef3148",
+      "bytes": 4224,
+      "purpose": "PRESERVED_DATED_PUBLIC_EVIDENCE"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\official-rpm-sources\\worker02-direct-providers\\RESULT.json",
+      "relative": "records/WORKER02_DIRECT_PROVIDER_RESULT.json",
+      "sha256": "1e0672d33b23776d9a4aff7adf6d99bfda6434d7a48b8e1615087bea0f253f84",
+      "bytes": 53595,
+      "purpose": "PRESERVED_DATED_PUBLIC_EVIDENCE"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\OID03_NATIVE_PRECHECK_ACCEPTANCE.json",
+      "relative": "records/ONE_RPM_NATIVE_PRECHECK_ACCEPTANCE.json",
+      "sha256": "7eb655b1b334e13feaea1fd3313fb6acbc657d1eb263d6f0d365b7d7775728eb",
+      "bytes": 758,
+      "purpose": "PRESERVED_DATED_PUBLIC_EVIDENCE"
+    }
+  ],
+  "not_read_or_rehashed": [
+    "RPM payloads",
+    "public key bytes",
+    "UNC share catalog or copied files"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "at_kst": "2026-10-19T12:50:45.807520+09:00",
+  "base": "acc513cf5c9f3e07e58d818a18e4b8fcf1e0cf70",
+  "copies": [
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\DOC\\owner-review-inputs-20261019-1245\\01_APP_D07_FINAL_REVIEW.md",
+      "target": "01_APP_D07_FINAL_REVIEW.md",
+      "bytes": 3983,
+      "sha256": "976096f3f5f48c3d001749e4111dae944b6835240b27213e3048331031e04aff",
+      "kind": "BYTE_EXACT_COPY"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\DOC\\owner-review-inputs-20261019-1245\\02_MON_D02_IF06B_REVIEW.md",
+      "target": "02_MON_D02_IF06B_REVIEW.md",
+      "bytes": 5247,
+      "sha256": "d2a22a816fc5891fc3364f21c268aeba8bd6506f30d0fd256c9539be8f32ecc3",
+      "kind": "BYTE_EXACT_COPY"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\DOC\\owner-review-inputs-20261019-1245\\03_K8S_ANSIBLE_SEC_REVIEW.md",
+      "target": "03_K8S_ANSIBLE_SEC_REVIEW.md",
+      "bytes": 5495,
+      "sha256": "6e1ca931bc2a6b27d3f8e24425355878d76c6d626cb5339c8fd9e3e0852c375f",
+      "kind": "BYTE_EXACT_COPY"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\DOC\\owner-review-inputs-20261019-1245\\04_ICR_OID03_ROW_REVIEW.md",
+      "target": "04_ICR_OID03_ROW_REVIEW.md",
+      "bytes": 5759,
+      "sha256": "6d584e70fac43ed6ac468ff0f8ff77c93e600f88784ace636f88561137d85149",
+      "kind": "BYTE_EXACT_COPY"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\DOC\\owner-review-inputs-20261019-1245\\FINAL_BINDING.json",
+      "target": "local-source-bindings/DOC_FINAL_BINDING.json",
+      "bytes": 16235,
+      "sha256": "382c63c3e7000f1486f0bd5fe21f683e436cad6887b013035398e811def2f832",
+      "kind": "BYTE_EXACT_COPY"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\DOC\\oid03-adoption-boundary-20261019-1223\\DECISION_CARD.md",
+      "target": "oid03/DECISION_CARD.md",
+      "bytes": 8875,
+      "sha256": "eb1a623c7b0a0545ca02b6ed0e264930c82803ad3e1bf946a5ea99efaf3485f8",
+      "kind": "BYTE_EXACT_COPY"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\DOC\\oid03-adoption-boundary-20261019-1223\\PRIMARY_BINDING.json",
+      "target": "oid03/PRIMARY_BINDING.json",
+      "bytes": 11546,
+      "sha256": "1eefe2c70515f1d1e12a779d493dc46830044331832bc820adaf9ab637f9d192",
+      "kind": "BYTE_EXACT_COPY"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\DOC\\oid03-adoption-boundary-20261019-1223\\references\\SOURCE_INDEX.json",
+      "target": "oid03/references/SOURCE_INDEX.json",
+      "bytes": 12009,
+      "sha256": "e82707168c6f7f78ac8a6866871abfddbf068458fde2d4d0c96133a87bcf4f0d",
+      "kind": "BYTE_EXACT_COPY"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\DOC\\oid03-adoption-boundary-20261019-1223\\references\\NATIVE_SCOPE.json",
+      "target": "oid03/references/NATIVE_SCOPE.json",
+      "bytes": 5081,
+      "sha256": "e78516b7855b7294411a35818018a76f20106728f086a2c4c0510c2256362a84",
+      "kind": "BYTE_EXACT_COPY"
+    },
+    {
+      "source": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\remaining-minimum-execution-20261019-1223\\OID03_REFERENCE_REGISTRATION.json",
+      "target": "local-source-bindings/OID03_REFERENCE_REGISTRATION.json",
+      "bytes": 2470,
+      "sha256": "0b82774b808a8e297189e41bd8032ead12a12ad1496b740baa18efa726a287c0",
+      "kind": "BYTE_EXACT_COPY"
+    }
+  ],
+  "owner_responses": "NOT_RECEIVED",
+  "document_only": true,
+  "policy": "governance/REVIEW_AUTHORITY_POLICY.md sections1/2/3.1/4",
+  "PR246": "APPROVED_SCOPED_UNMERGED",
+  "PR247": "OPEN_INDEPENDENT_REVIEW_REQUESTED",
+  "runtime_authorized_by_this_document": false
+}
