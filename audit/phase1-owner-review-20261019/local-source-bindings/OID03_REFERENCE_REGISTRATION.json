@@ -1,0 +1,43 @@
+{
+  "at_kst": "2026-10-19T12:33:46.272916+09:00",
+  "status": "EXACT_PRESERVED_MATERIALS_REGISTERED_AS_CURRENT_TECHNICAL_REFERENCE",
+  "action_scope": "Routine evidence/supply reference consolidation within requested remaining work; no new installation contract or human Owner acceptance",
+  "canonical": "979facb98de8ca1f1e2ce22f38b27ac3366f3fc3",
+  "source_card": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\DOC\\oid03-adoption-boundary-20261019-1223\\DECISION_CARD.md",
+  "source_card_sha256": "eb1a623c7b0a0545ca02b6ed0e264930c82803ad3e1bf946a5ea99efaf3485f8",
+  "bound_input_documents": 25,
+  "materials": {
+    "rpm_count": 13,
+    "rpm_bytes": 129242114,
+    "primary": 9,
+    "worker02_direct_providers": 4,
+    "copied_originals": 20,
+    "catalog_generated_files": 2,
+    "manifest_rows": 22,
+    "manifest_sha256": "0107c96fa7a590c85c6abc0982786b7361d91c2d47aeb7ef8ce66bc886a74376",
+    "current_share_requery": false,
+    "prior_preservation": "2026-10-19T07:09:40+09:00"
+  },
+  "scope_adopted_for_reference": [
+    "Exact official URL/NEVRA/build/arch/path/SHA source index, no latest substitution",
+    "Current stored13 RPMs plus public keys/evidence as immutable reference, no new trust-key import",
+    "worker02 containerd2.4.1-2.el10 one-package native parser/signature/no-install transaction rc0 reused",
+    "Installed direct provider4 are assumptions/archives, not concurrent reinstall targets",
+    "Future actual update/recovery needs difference-bound inputs and protected config/unit rollback; current file hash is not backup"
+  ],
+  "unchanged": [
+    "Existing technical owners 이하영/이권욱 and custodian/approved-access preservation conditions",
+    "ICR original AC18/19 and previous row-by-row limited dispositions",
+    "No new dates, permanent egress, broad risk waiver, or all-node reinstall test requirement"
+  ],
+  "not_established": [
+    "Clean OS dependency closure/all package/all node transaction",
+    "Actual reinstall/scriptlet/trigger/plugin or service/data restore",
+    "Current share ACL/person receipt/remote staging disposal",
+    "FullOID03 supply contract selection and original AC18/19 final acceptance"
+  ],
+  "install_or_runtime_actions": 0,
+  "new_human_Lead_approval": false,
+  "whole_OID03_accepted": false,
+  "AC_or_status_upgrade": false
+}

@@ -1,0 +1,180 @@
+{
+  "at_kst": "2026-10-19T12:28:03.340934+09:00",
+  "canonical_commit": "979facb98de8ca1f1e2ce22f38b27ac3366f3fc3",
+  "read_scope": "Selected primary issue14 and pinned canonical; existing local docs/receipts. No RPM/public-key/share-byte revalidation.",
+  "remote_current_issue_updated_at_utc": "2026-10-19T02:35:09Z",
+  "inputs": [
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\oid03-shared-originals-20261019\\INTENT.json",
+      "bytes": 11612,
+      "sha256": "ac87a2b4fb086b2be313d4f1a2b4009c4c00b9879ef02e2d691b70c566770461",
+      "kind": "document_or_prior_receipt_only"
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\oid03-shared-originals-20261019\\RESULT.json",
+      "bytes": 646,
+      "sha256": "46787f67737d77e6b70d5dfe0cc9ae9bcab41255a984a53c17c0f5330a7e3a6c",
+      "kind": "document_or_prior_receipt_only"
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\OID03_NATIVE_PRECHECK_RESULT.json",
+      "bytes": 3708,
+      "sha256": "13644d659b24f99d79946a561d85672040d0079935f6c86acec5061fefe775cb",
+      "kind": "document_or_prior_receipt_only"
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\OID03_NATIVE_PRECHECK_FINDINGS.md",
+      "bytes": 4129,
+      "sha256": "d202ad57c878d3d79ac83261452525e5c8b47a8c72af6bfcf11779e5beb7235d",
+      "kind": "document_or_prior_receipt_only"
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\OID03_WORKER02_BINDING.json",
+      "bytes": 4802,
+      "sha256": "920d53c43d1712b3ba0b5436023ec5cfff204eab8a19c1bced8e7b2745a30f63",
+      "kind": "document_or_prior_receipt_only"
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\OID03_WORKER02_REVIEW_PLAN.md",
+      "bytes": 9840,
+      "sha256": "627463f400231b0489a15133ff761cf7ff447ca11252ee124a0e832f96e03f3c",
+      "kind": "document_or_prior_receipt_only"
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\OID03_WORKER02_HANDOFF.json",
+      "bytes": 5925,
+      "sha256": "f87ef709699d0328d068de5f16840891c8ebf119e94bab84c5cd97f8cf3fc156",
+      "kind": "document_or_prior_receipt_only"
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\OID03_SUPPLY_RESULT.json",
+      "bytes": 4224,
+      "sha256": "a50b266ed8b0ec952f8ef3beb8ad671b943d02b26a6744063d9cfa37e7ef3148",
+      "kind": "document_or_prior_receipt_only"
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\OID03_SUPPLY_FINDINGS.md",
+      "bytes": 4688,
+      "sha256": "d0bd83b3efc7fcf2761d92e937e639d60837d5dac58f54b142b5ce56fbc8e785",
+      "kind": "document_or_prior_receipt_only"
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\OID03_NATIVE_PRECHECK_ACCEPTANCE.json",
+      "bytes": 758,
+      "sha256": "7eb655b1b334e13feaea1fd3313fb6acbc657d1eb263d6f0d365b7d7775728eb",
+      "kind": "document_or_prior_receipt_only"
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\final-icr-row-disposition-20261019\\FINAL.json",
+      "bytes": 781,
+      "sha256": "e344058666db4c2900344b7a27347a558070f974ff7ef8400de4dd8d9e9241f5",
+      "kind": "document_or_prior_receipt_only"
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\final-icr-row-disposition-20261019\\DECISION_CARD.md",
+      "bytes": 5625,
+      "sha256": "72fe930e8a45e2da2d2e1a6f5d354191e58cfd22003431f52f9901a72d2aad0a",
+      "kind": "document_or_prior_receipt_only"
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\OID03_OFFLINE_ORIGIN_CENTRAL_ACCEPTANCE_20261017.json",
+      "bytes": 1319,
+      "sha256": "46d839d63a0159898d2bf19fc6b12605ff3ef4c97b471472b327b44a844c26be",
+      "kind": "document_or_prior_receipt_only"
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\o01-scope-finalization-20261015\\final-source-integration-20261016\\oid03-concrete-inventory-20261017\\DECISION_CARD.md",
+      "bytes": 4024,
+      "sha256": "c03055f54ad06ab459e450890dc466e9ca31229331354634c61be3809db5fa7f",
+      "kind": "document_or_prior_receipt_only"
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\oid03-native-receipts-collected\\originals\\FINAL.json",
+      "bytes": 6413,
+      "sha256": "f27fa5ec573d628b200f1ca2859637fc4eae00aa9699dab80ed900d520bea8ad",
+      "kind": "document_or_prior_receipt_only"
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\oid03-native-receipts-collected\\originals\\incoming-nevra-intent.json",
+      "bytes": 306,
+      "sha256": "75dc743066d9d662bdcc4201260771a80adf3b8217c8dc77d26f055e69084a62",
+      "kind": "document_or_prior_receipt_only"
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\oid03-native-receipts-collected\\originals\\rpmkeys-intent.json",
+      "bytes": 256,
+      "sha256": "7db92016e72e43ab1bd3c407d3015663366f07a5937d0d6ce239f0bca208d543",
+      "kind": "document_or_prior_receipt_only"
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\oid03-native-receipts-collected\\originals\\rpmkeys.stdout",
+      "bytes": 238,
+      "sha256": "514c2f885f7fe0fb436c91f53c746b66b5a502de3da4662a3fcea724b6986a1e",
+      "kind": "document_or_prior_receipt_only"
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\APP\\oid03-native-receipts-collected\\originals\\transaction-test-intent.json",
+      "bytes": 329,
+      "sha256": "2acb938629d96f9bb7b02c249996faf5f3017b5e524a387656978d40188acb6a",
+      "kind": "document_or_prior_receipt_only"
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\DOC\\oid03-adoption-boundary-20261019-1223\\references\\issue14.json",
+      "bytes": 171467,
+      "sha256": "91a587e4940a51e2098376c657ba1c51452142bede6fadd025269175b30b2389",
+      "kind": "document_or_prior_receipt_only"
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\DOC\\oid03-adoption-boundary-20261019-1223\\references\\publication6255792476.json",
+      "bytes": 3988,
+      "sha256": "bb934399491293d50248c2860e81a969649e80130da2a19a2f7c8c417b14f249",
+      "kind": "document_or_prior_receipt_only"
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\DOC\\oid03-adoption-boundary-20261019-1223\\references\\owner-records-selected.json",
+      "bytes": 18082,
+      "sha256": "ca4b1f7ca367cab2c061b23c8cf613e16f89e0887bab5c82ade64a4b398ac24f",
+      "kind": "document_or_prior_receipt_only"
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\DOC\\oid03-adoption-boundary-20261019-1223\\references\\ICR-canonical.md",
+      "bytes": 171800,
+      "sha256": "c7474a4170295266278ddce9b7d5d79cbbd56d82b6b674fa8c44f7649de0bd53",
+      "kind": "document_or_prior_receipt_only"
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\DOC\\oid03-adoption-boundary-20261019-1223\\references\\baseline-canonical.md",
+      "bytes": 132469,
+      "sha256": "11c1549821fc763a5fd6dff4e2ddaf82c05b8f6714083e34de1ed9a88ebe5788",
+      "kind": "document_or_prior_receipt_only"
+    },
+    {
+      "path": "C:\\Users\\soldesk\\.codex\\.chatgpt-projects\\g-p-6a85069945708191b56059da202e4461\\deliverables\\phase1-central-control-20261015\\resume-execution-20261018-1853\\preserve_oid03_public_originals_once.py",
+      "bytes": 6816,
+      "sha256": "df387b0ece31d840a07d505e1f0df0257440920d4551f6a29d76817ff3c430e3",
+      "kind": "read_only_previous_copy_source_not_executed",
+      "reason": "Reconcile22manifestrows =20copiedsources+README+CATALOG; no share access"
+    }
+  ],
+  "precedence": [
+    "Published canonical original requirements",
+    "Current issue and recorded Owner decisions with bounded scope",
+    "Prior actual raw execution receipts",
+    "Existing technical maps/proposals (not human acceptance)"
+  ],
+  "conflicts_resolved": [
+    {
+      "older": "19:30 review plan proposes rpm -U --replacepkgs --test and native not run",
+      "newer": "19:49 actual receipt includes --noscripts --notriggers --noplugins and rc0",
+      "rule": "Actual argv controls execution claim; older plan preserved"
+    },
+    {
+      "older": "10/17 RPM originals not located and crictl provenance gap",
+      "newer": "10/18 exact13 originals prepared;10/19 share copy completed;crictl archive/member identity linked",
+      "rule": "Do not revive closed material availability gaps; retain original historical provenance limits"
+    }
+  ],
+  "actual_Lead_acceptance": false,
+  "github_writes": 0,
+  "server_calls": 0
+}
