@@ -1,27 +1,27 @@
 # Current Canonical Release
 
-최종화 PR 병합 후 적용하는 정본 메타데이터다. RELEASED는 승인 내용·최종화 병합·체크섬 기준이며 실제 GitHub 게시 완료 여부는 Release API와 Asset 검증 기록으로 확인한다.
+최종화 PR 병합 후 적용하는 정본 메타데이터다. 승인된 내용·최종화 병합·체크섬 기준 RELEASED이며 실제 GitHub 게시 완료는 Release API의 published_at과 네 Asset 검증으로 확인한다.
 
 | Field | Value |
 |---|---|
-| Canonical document version | v3.1.21 / RELEASED after finalization merge |
-| Source snapshot | 2026-10-03 KST / 78 Issue records |
-| Approved content HEAD | `4acd5a9af69ed7dcaa3cfc934ba8e4bd05b7c0d8` |
-| Content merge | `bb3cd4f44932e932984beaba7f279bd4b7321c0b` / PR112 |
-| Reviewer | 이하영 (`hayeounglee`), exact HEAD APPROVED; reviewed scope stated in review |
-| Content approval (KST) | 2026-10-04 09:36:58 +09:00 |
-| Content merge (KST) | 2026-10-04 13:43:03 +09:00 |
-| Finalization authority | 정본 Lead 이권욱; 사용자 배포 지시 / 문서 전용 최종화 |
-| Canonical release tag | `docs-v3.1.21` — finalization merge commit, resolved from Tag API |
-| GitHub publication | Not pre-asserted; Release API published_at and four Asset digests are authoritative |
+| Canonical document version | v3.1.22 / RELEASED after reviewed finalization merge |
+| Source snapshot | 2026-10-19 / 78 records · 발행 전 freshGET 실질차이0 |
+| Input integration merge | `caa13c1839b31675794abd1ca9c1071376561643` / PR191 |
+| Approved content HEAD | `ccf4c2fd5d9d0cc6ff24694e6f11d437e6b309d1` |
+| Content merge | `881a38bd79b3f7c92ac3b68b528bf20e454d1da7` / PR192 |
+| Review authority | 정본 Lead 이권욱 / 문서전용 최신HEAD검토·사용자 발행 지시 |
+| Earlier independent reviews | PR191 원HEAD bcade180 범위: 이하영·이재환 APPROVED; 후속정정/발행은 Lead검토 |
+| Finalization authority | 사용자 실제 docs-v3.1.22 발행 지시(2026-10-19 KST) |
+| Canonical release tag | `docs-v3.1.22` — 최종화 merge commit으로 Tag API에서 확인 |
+| Publication | 미리 완료로 기록하지 않음. Release API published_at·4 Asset 해시·published 검증이 최종근거 |
 
-- [독립 리뷰](https://github.com/321Team/fds-project-baseline/pull/112#pullrequestreview-5403611452)
-- [v3.1.21 Release](https://github.com/321Team/fds-project-baseline/releases/tag/docs-v3.1.21)
-- [Release API](https://api.github.com/repos/321Team/fds-project-baseline/releases/tags/docs-v3.1.21)
-- [최종화 기록](releases/v3.1.21/FDS_Release_Finalization_Record_v3.1.21.md)
+- [Release](https://github.com/321Team/fds-project-baseline/releases/tag/docs-v3.1.22)
+- [최종화 기록](releases/v3.1.22/FDS_Release_Finalization_Record_v3.1.22.md)
+- [Baseline](baseline/FDS_Project_Implementation_Baseline_v3.1.22.md) · [WBS](wbs/FDS_v3.1.22_WBS_and_Gantt_v1.0.xlsx) · [Ticket Pack](tickets/FDS_v3.1.22_Canonical_Ticket_Update_Pack_v1.0.md) · [WEB](web/v3.1.22/status-snapshot.html)
+- [원 조건과 잔여위험](tickets/v3.1.22/SIGNOFF_CLOSE_REVIEW.md) · [실제 Signoff/Close](tickets/v3.1.22/SIGNOFF_CLOSE_CURRENT.md)
 
-P1 Close·Architecture Freeze·Stage-A·D21 raw 잔여와 계획일은 수집 시점 판정을 유지한다. 이 발행은 Runtime·AC·티켓 종결을 부여하지 않는다. 보존된 audit/Description/source 안의 CANDIDATE·미발행 문구는 당시 수집 기록이며 현재 버전 상태는 이 문서와 Release 메타데이터를 따른다.
+Phase1 조건부 최종 Signoff/Close·기존 RA/KI/Owner/재검토·보호보관·#25~27 Phase2 구현ToDo/고정Due미배정을 보존한다. P2 #34 확정사양/작성시점운영스냅샷은 새 Runtime GO가 아니다. 전체기술PASS·새시스템Critical0·새서버/계정/보안 변경·P2실행을 이 발행으로 부여하지 않는다.
 
 ## Preserved publication history
 
-v3.1.20 Release는 2026-09-23 02:37:13 KST 발행됐다. `docs-v3.1.20`은 최종화 병합이 아닌 내용 병합 `336446500ef9a71c4796e6cfc8bc4db18daceb09`를 가리킨다. 과거 Tag/Asset/정본 바이트는 변경하지 않는다. v3.1.21이 실제 게시되기 전까지 마지막 게시 버전은 v3.1.20이다.
+기존 docs-v3.1.21/Tag/Assets/과거 정본은 변경하지 않는다. inputs/와 audit/의 후보·미발행·당시미완료 문구는 당시 원문이다. 실제 새 Release 게시/배포 검증 전까지 이전 게시본도 계속 보존한다.

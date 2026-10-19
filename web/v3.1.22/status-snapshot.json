@@ -2933,7 +2933,8 @@
   },
   "post_signoff_update_kst": "2026-10-19T20:15:25.303780+09:00",
   "canonical_version": "v3.1.22",
-  "publication_state": "CANDIDATE",
+  "publication_state": "RELEASED_AFTER_REVIEWED_FINALIZATION_MERGE",
   "content_source_merge": "caa13c1839b31675794abd1ca9c1071376561643",
-  "release_publication_not_Runtime": true
+  "release_publication_not_Runtime": true,
+  "content_merge": "881a38bd79b3f7c92ac3b68b528bf20e454d1da7"
 }
