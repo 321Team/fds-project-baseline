@@ -87,4 +87,4 @@
 
 계획 Start/End는 기존 승인된 메타데이터 이력이다. 실제 closed_at을 계획 End에 대입하지 않는다. TBD 날짜는 XLSX의 날짜 입력을 빈칸으로 유지하고 원문 TBD를 각 Description/JSON에서 보존한다. WBS K열 Lead Workdays는 기존 휴일·개인부재 차감 수식으로 계산하므로 이슈 Working Days의 저장값과 의미가 다를 수 있다(6건). 수식을 저장 메타데이터로 덮어쓰지 않았다. Gantt는 원 계획 창/행을 유지하고 현재 분류는 WBS C열을 따른다. #25~27은 Phase2 carry-over로 명시한다.
 
-소스/정적/모의/CI/Runtime/Review/Merge/Publication/최종 인수를 구분한다. P2 사전 작업 InProgress와 #34 설계 Done은 실제 플랫폼·배포·G4/G5·전체Close 성공을 의미하지 않는다. P1 실제 한정 인수와 남은 #30/#32를 [Review 표](REVIEW31_RESULTS_AND_DECISION_CARD.md)에 연결했다.
+소스/정적/모의/CI/Runtime/Review/Merge/Publication/최종 인수를 구분한다. P2 사전 작업 InProgress와 #34 설계 Done은 실제 플랫폼·배포·G4/G5·전체Close 성공을 의미하지 않는다. P1 실제 한정 인수와 최종 #30/#32 결과를 [Review 표](REVIEW31_RESULTS_AND_DECISION_CARD.md)에 연결했다.

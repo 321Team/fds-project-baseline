@@ -1,5 +1,5 @@
 {
-  "at_kst": "2026-10-19T19:48:19.537071+09:00",
+  "at_kst": "2026-10-19T20:08:15.988197+09:00",
   "records": 78,
   "Status_Phase_Lead_all_rows": "MATCH",
   "description_records": 78,
@@ -8,13 +8,13 @@
   "relative_links": "PASS",
   "preserved_prior_inputs": 28,
   "workbook": {
-    "at_kst": "2026-10-19T19:48:18.568185+09:00",
-    "workbook_sha256": "c9d69c0313a276dfb2998776150233f101299872923cb416267439768771e298",
+    "at_kst": "2026-10-19T20:08:14.848805+09:00",
+    "workbook_sha256": "f4338f6464727efc5547385d0ca0d11c517b1ada5b922aa5110ab222ca79d87f",
     "sheets": 10,
     "records": 78,
-    "planned_cell_changes": 1,
+    "planned_cell_changes": 5,
     "unexpected_values_formulas_styles": 0,
-    "formula_change": "Executive Summary B16 source drift metric replaced with Cancelled count; all other formulas preserved",
+    "formula_change": "No formula changes in this final Signoff/Close stage; existing Cancelled formula preserved",
     "native_features": "DV/CF/chart series/dimensions/merges/panes/comments/protection preserved",
     "cached_formula_errors": 0,
     "summary_counts": {
@@ -50,5 +50,29 @@
     "To Do": 20,
     "In Progress": 12
   },
-  "Review31_note_state_corrected": true
+  "Review31_note_state_corrected": true,
+  "final_signoff_close": {
+    "at_kst": "2026-10-19T20:08:15.005276+09:00",
+    "stage": "signed",
+    "A_actual_adoption": {
+      "at_kst": "2026-10-19T20:05:51.513852+09:00",
+      "human": "이권욱",
+      "question_call_id": "call_20da105a10594957a68d521f2698b32e",
+      "actual_answer": "A·B 채택 — 조건 확인 후 순차 종결 (권장)",
+      "card": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6265667213",
+      "card_sha256": "39395b6bc44f14267917d4ffae8711e046085e2aec63927d9c7d5c6ec3138818",
+      "bound_candidate": "b085e02776e64ea678891d99c3fcdf97837a1ce6",
+      "A": "ACTUAL_CONDITIONAL_FINAL_SIGNOFF",
+      "B": "ACTUALLY_AUTHORIZED_CONDITIONAL_SEQUENTIAL_CLOSE_NOT_EXECUTED",
+      "scope": "Existing named RA/KI and accepted carry-over retained; no system-wide Critical0 technical claim",
+      "new_Release_Runtime_P2": false,
+      "A_actual_record": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6265747689"
+    },
+    "A_closed_at_kst": null,
+    "B_actual_decision": null,
+    "B_closed_at_kst": null,
+    "whole_Phase1_Close_actually_executed": false,
+    "new_Release_Runtime_P2": false,
+    "known_risk_scope": "original card tables 2-4 and actual adoption; no new system-wide Critical0"
+  }
 }

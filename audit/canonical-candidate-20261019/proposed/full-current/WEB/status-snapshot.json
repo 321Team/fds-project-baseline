@@ -1849,8 +1849,8 @@
       "state_reason": null,
       "closed_at_utc": null,
       "closed_at_kst": null,
-      "updated_at": "2026-10-19T10:11:18Z",
-      "body_sha256": "be9aebeff65ac79011ff23b44cc48c092a0afbbc1cb924599667e473dd53bf2d",
+      "updated_at": "2026-10-19T11:01:14Z",
+      "body_sha256": "16439a147fb723a74ad60af9dd52a07ad2ba13438e66e2265d7a1fbb58bab72a",
       "labels": [
         "priority:P0",
         "phase:phase-1",
@@ -1886,7 +1886,7 @@
       "state_reason": "completed",
       "closed_at_utc": "2026-10-19T10:45:18Z",
       "closed_at_kst": "2026-10-19T19:45:18+09:00",
-      "updated_at": "2026-10-19T10:45:19Z",
+      "updated_at": "2026-10-19T10:50:13Z",
       "body_sha256": "74b462cf3f0af18efc70bc76e6e28254bdf9c8a59ce16842b06f10becfb7f637",
       "labels": [
         "priority:P0",
@@ -1923,8 +1923,8 @@
       "state_reason": null,
       "closed_at_utc": null,
       "closed_at_kst": null,
-      "updated_at": "2026-10-19T10:11:12Z",
-      "body_sha256": "adae54557399c247308542e86203987debf73ffcb7660aa20fa888d6e06764f5",
+      "updated_at": "2026-10-19T11:05:53Z",
+      "body_sha256": "fe8a93a561b1cf2b786909c20cd8ef4ff794f9559080d0df6c002ffe1dfd0ae6",
       "labels": [
         "priority:P0",
         "type:task",
@@ -2896,5 +2896,30 @@
       ]
     }
   ],
-  "review31_post_cutoff_update_at_kst": "2026-10-19T19:46:52.955175+09:00"
+  "review31_post_cutoff_update_at_kst": "2026-10-19T19:46:52.955175+09:00",
+  "final_signoff_close": {
+    "at_kst": "2026-10-19T20:08:15.005276+09:00",
+    "stage": "signed",
+    "A_actual_adoption": {
+      "at_kst": "2026-10-19T20:05:51.513852+09:00",
+      "human": "이권욱",
+      "question_call_id": "call_20da105a10594957a68d521f2698b32e",
+      "actual_answer": "A·B 채택 — 조건 확인 후 순차 종결 (권장)",
+      "card": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6265667213",
+      "card_sha256": "39395b6bc44f14267917d4ffae8711e046085e2aec63927d9c7d5c6ec3138818",
+      "bound_candidate": "b085e02776e64ea678891d99c3fcdf97837a1ce6",
+      "A": "ACTUAL_CONDITIONAL_FINAL_SIGNOFF",
+      "B": "ACTUALLY_AUTHORIZED_CONDITIONAL_SEQUENTIAL_CLOSE_NOT_EXECUTED",
+      "scope": "Existing named RA/KI and accepted carry-over retained; no system-wide Critical0 technical claim",
+      "new_Release_Runtime_P2": false,
+      "A_actual_record": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6265747689"
+    },
+    "A_closed_at_kst": null,
+    "B_actual_decision": null,
+    "B_closed_at_kst": null,
+    "whole_Phase1_Close_actually_executed": false,
+    "new_Release_Runtime_P2": false,
+    "known_risk_scope": "original card tables 2-4 and actual adoption; no new system-wide Critical0"
+  },
+  "post_signoff_update_kst": "2026-10-19T20:08:15.978760+09:00"
 }

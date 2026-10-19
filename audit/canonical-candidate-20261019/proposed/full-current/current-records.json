@@ -1,5 +1,5 @@
 {
-  "at_kst": "2026-10-19T19:25:19.982565+09:00",
+  "at_kst": "2026-10-19T20:05:51.020647+09:00",
   "count": 78,
   "records": [
     {
@@ -1848,8 +1848,8 @@
       "state_reason": null,
       "closed_at_utc": null,
       "closed_at_kst": null,
-      "updated_at": "2026-10-19T10:11:18Z",
-      "body_sha256": "be9aebeff65ac79011ff23b44cc48c092a0afbbc1cb924599667e473dd53bf2d",
+      "updated_at": "2026-10-19T11:01:14Z",
+      "body_sha256": "16439a147fb723a74ad60af9dd52a07ad2ba13438e66e2265d7a1fbb58bab72a",
       "labels": [
         "priority:P0",
         "phase:phase-1",
@@ -1885,7 +1885,7 @@
       "state_reason": "completed",
       "closed_at_utc": "2026-10-19T10:45:18Z",
       "closed_at_kst": "2026-10-19T19:45:18+09:00",
-      "updated_at": "2026-10-19T10:45:19Z",
+      "updated_at": "2026-10-19T10:50:13Z",
       "body_sha256": "74b462cf3f0af18efc70bc76e6e28254bdf9c8a59ce16842b06f10becfb7f637",
       "labels": [
         "priority:P0",
@@ -1922,8 +1922,8 @@
       "state_reason": null,
       "closed_at_utc": null,
       "closed_at_kst": null,
-      "updated_at": "2026-10-19T10:11:12Z",
-      "body_sha256": "adae54557399c247308542e86203987debf73ffcb7660aa20fa888d6e06764f5",
+      "updated_at": "2026-10-19T11:05:53Z",
+      "body_sha256": "fe8a93a561b1cf2b786909c20cd8ef4ff794f9559080d0df6c002ffe1dfd0ae6",
       "labels": [
         "priority:P0",
         "type:task",
@@ -2895,5 +2895,5 @@
       ]
     }
   ],
-  "review31_post_cutoff_update_at_kst": "2026-10-19T19:45:43.305941+09:00"
+  "post_signoff_update_kst": "2026-10-19T20:07:39.509088+09:00"
 }

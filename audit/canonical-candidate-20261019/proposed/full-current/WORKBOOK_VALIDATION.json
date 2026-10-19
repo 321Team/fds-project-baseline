@@ -1,11 +1,11 @@
 {
-  "at_kst": "2026-10-19T19:48:18.568185+09:00",
-  "workbook_sha256": "c9d69c0313a276dfb2998776150233f101299872923cb416267439768771e298",
+  "at_kst": "2026-10-19T20:08:14.848805+09:00",
+  "workbook_sha256": "f4338f6464727efc5547385d0ca0d11c517b1ada5b922aa5110ab222ca79d87f",
   "sheets": 10,
   "records": 78,
-  "planned_cell_changes": 1,
+  "planned_cell_changes": 5,
   "unexpected_values_formulas_styles": 0,
-  "formula_change": "Executive Summary B16 source drift metric replaced with Cancelled count; all other formulas preserved",
+  "formula_change": "No formula changes in this final Signoff/Close stage; existing Cancelled formula preserved",
   "native_features": "DV/CF/chart series/dimensions/merges/panes/comments/protection preserved",
   "cached_formula_errors": 0,
   "summary_counts": {
