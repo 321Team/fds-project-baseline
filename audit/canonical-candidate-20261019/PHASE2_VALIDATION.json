@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-19 18:42:43 KST",
+  "scope": "P2_CANONICAL_INTEGRATION_ONLY",
+  "status_records": 12,
+  "phase1_workbook_sha256_preserved": "a11f197e886a8780a51c9d05a045288ea64e900bcdfcf4c2271154cfadb54e0e",
+  "p1_seven_descriptions_preserved": true,
+  "p2_source_blob_verified": true,
+  "new_spec_or_runtime_go": false,
+  "ac_checkbox_changes": 0,
+  "candidate_manifest_payloads": 29,
+  "sha256sums_entries": 30,
+  "new_xlsx_authoring": false,
+  "full_release_set": "NOT_GENERATED",
+  "publication": "NOT_DONE"
+}

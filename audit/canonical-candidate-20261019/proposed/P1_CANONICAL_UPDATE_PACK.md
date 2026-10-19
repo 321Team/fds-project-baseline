@@ -21,3 +21,8 @@
 - v3.1.21 원본·기존 Tag/Asset/CURRENT·DOC exactd8f55d81 Freeze입력은 그대로다. 이번 후보는 release 브랜치의 Draft PR로 보관하며 main 병합·Tag/Release/자산게시를 실행하지 않는다. 후보내용만 필요하면 브랜치를 폐기하거나 후속commit으로 정정하고 과거 정본은 수정하지 않는다.
 
 AI 사용: CODEX_ASSISTED.
+
+
+## Phase2 확정 사양·Status 입력 편입 완료 (미발행)
+
+[Phase2 사양](phase2/specifications.md)·[현재실행/잔여](phase2/operational-snapshot.md)·[Ticket/WBS 상태12건](phase2/ticket-status-pack.md)·[기계대조용 status-delta](phase2/status-delta.json)·[정확출처/지문](phase2/sources.json)을 이 후보에 포함했다. 최종Freeze#34/불변사양38a6512와실제GitHub상태를대조했으며새Runtime승인/AC자동체크는없다. 기존P1 XLSX와선택7건Description은바이트보존했다. P2의최종통합WBS/전체TicketPack·Release세트재생성은정본Lead최종화잔여이며이부분후보를전체78건현행화/새Release로표시하지않는다.

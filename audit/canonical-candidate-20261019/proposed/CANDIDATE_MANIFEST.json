@@ -5,8 +5,8 @@
   "files": [
     {
       "path": "BASELINE_CHANGE_ADDENDUM.md",
-      "sha256": "a3580ad0e209c99024d9465f457666cadfbebf3e64df5a618690660a97b3d818",
-      "bytes": 2527
+      "sha256": "97e05d6ca509b7872806e08f419fe2d0e82d24e62120b04aa9f06c23c78b5cb2",
+      "bytes": 3230
     },
     {
       "path": "canonical-status-delta.json",
@@ -55,20 +55,113 @@
     },
     {
       "path": "P1_CANONICAL_UPDATE_PACK.md",
-      "sha256": "705420031220a3bb2301d0235d8730a1b165eae024b5b33a4f8e4f8cff3147b7",
-      "bytes": 3129
+      "sha256": "a6b8a34999081df46db651a84a576bd97eb943254a8e640538583ed546206501",
+      "bytes": 3832
+    },
+    {
+      "path": "phase2/descriptions/DEC-CAL-P2-01.md",
+      "sha256": "0bfffefa3778b8a96be52a1f4d53f2cd41813394aab5d98f61b517f3511528b5",
+      "bytes": 16415
+    },
+    {
+      "path": "phase2/descriptions/DEC-P2-REG-01.md",
+      "sha256": "56c124765e65e344cca50ef4592e82bed6401df78f824ccdc822cbcf6e32c94d",
+      "bytes": 20702
+    },
+    {
+      "path": "phase2/descriptions/P2-APP-01.md",
+      "sha256": "449a971a44a453c5e1d84f320d02979d00c7332e3e3ecca8132f3c9389c77359",
+      "bytes": 20521
+    },
+    {
+      "path": "phase2/descriptions/P2-ARC-01.md",
+      "sha256": "2dbc6ac6e298940f7405bbe86f262f73e623b59969b3ea31267d240abf153d48",
+      "bytes": 32473
+    },
+    {
+      "path": "phase2/descriptions/P2-CICD-01.md",
+      "sha256": "071fdb0ed2a22636685346e34c2c80cf651358d6bc9042e1f075e06877d22fbc",
+      "bytes": 21149
+    },
+    {
+      "path": "phase2/descriptions/P2-DOC-01.md",
+      "sha256": "0df84e2a05a4c27c441290098efde7f3ec35a171b918eb172144258e870be26f",
+      "bytes": 19903
+    },
+    {
+      "path": "phase2/descriptions/P2-HYB-01.md",
+      "sha256": "c7b87656feb9c2ced065ac4ea9bca3323f3a955ee9b4038b3673e90eb7d64315",
+      "bytes": 24231
+    },
+    {
+      "path": "phase2/descriptions/P2-IAC-01.md",
+      "sha256": "677720e9b9fc7235f187a60f2dceecae874203e5a774a560821b584b7e8c8f49",
+      "bytes": 31474
+    },
+    {
+      "path": "phase2/descriptions/P2-OCI-01.md",
+      "sha256": "f70908ecded811819f4e556078f9d4b81fef8c6536027b01c4c02084348221c6",
+      "bytes": 29866
+    },
+    {
+      "path": "phase2/descriptions/P2-REV-01.md",
+      "sha256": "855e8842396a4a91a8d06b62a96712e12b7b2bc6446ec78e191e0f6303a1fd6e",
+      "bytes": 20624
+    },
+    {
+      "path": "phase2/descriptions/P2-ROSA-01.md",
+      "sha256": "525d74d322a0646d320a0cffdc0f3275d39ad1f1a7de0d81d9609aecf2d923ce",
+      "bytes": 23727
+    },
+    {
+      "path": "phase2/descriptions/P2-VPN-01.md",
+      "sha256": "2b32f927a8fec876b349ab7a0b7fe51277a06c44fe85a8a05e814f2ef69fdada",
+      "bytes": 23966
+    },
+    {
+      "path": "phase2/operational-snapshot.md",
+      "sha256": "96394e69ec342ca534486555d4929dc4721abf5a025853e52a9aa4781a9e76f9",
+      "bytes": 2982
+    },
+    {
+      "path": "phase2/sources.json",
+      "sha256": "76bc6a323d5917b6a6929426a5c692905538b13dbbcad924c47100e748ebfbed",
+      "bytes": 6053
+    },
+    {
+      "path": "phase2/specifications.md",
+      "sha256": "ea7597f3ab4c84458b4ed289c70eda03cedf282a5e826e0a81513f90ec4ff595",
+      "bytes": 9515
+    },
+    {
+      "path": "phase2/status-delta.json",
+      "sha256": "9bb2d5d21d717fb3cc1e636fb82a5ba28fed789b90dcbb0a5d16f33a4dec9d05",
+      "bytes": 14668
+    },
+    {
+      "path": "phase2/ticket-status-pack.md",
+      "sha256": "b4e7e9fa23a6b1ee1fc959e062fe383b96e0f1519291dbe1b76a05d6f18d4ac1",
+      "bytes": 4716
     },
     {
       "path": "RELEASE_NOTES_CANDIDATE.md",
-      "sha256": "9425c5c61a0d9dc9a9109fabfa754dc1bd0c83af449f44ef403f744f0f473c35",
-      "bytes": 2236
+      "sha256": "b0cd1e5290c680f2251fd7b91b0c4d5b238896b82455a4be1bff740b68f52afb",
+      "bytes": 1231
     }
   ],
   "full_release_set": "NOT_GENERATED",
   "tag_asset_publication": false,
   "planned_phase2_input": {
-    "status": "OTHER_SESSION_PLANNED_NOT_RECEIVED",
-    "actual_specifications_added": 0,
+    "status": "RECEIVED_INTEGRATED_CANDIDATE_NOT_PUBLISHED",
+    "actual_specifications_added": 1,
+    "adopted_freeze_source_commit": "38a6512aec35cb5e94b339a41ba506fc37113b01",
+    "status_records": 12,
     "runtime_authorized": false
-  }
+  },
+  "selected_phase1_records": 7,
+  "selected_phase2_status_records": 12,
+  "selected_total_records": 19,
+  "workbook_updated_records": 7,
+  "phase2_wbs_delta": "phase2/status-delta.json",
+  "phase2_final_wbs_regeneration": "PENDING_FINAL_CANONICAL_SET"
 }

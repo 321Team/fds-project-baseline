@@ -18,3 +18,8 @@
 
 
 기존 승인된 U1/U2/HBR 처분과 DOC 한정source/O01/문서Critical0·Freeze만 소비한다. 기존 Baseline 요구/AC를 바꾸거나 Phase1 전체 Close·P2 실행을 승인하지 않는다. 최종 정본의 본문 편입은 전체 세트 정합성 검토 후 수행한다.
+
+
+## Phase2 확정 사양·Status 입력 편입 완료 (미발행)
+
+[Phase2 사양](phase2/specifications.md)·[현재실행/잔여](phase2/operational-snapshot.md)·[Ticket/WBS 상태12건](phase2/ticket-status-pack.md)·[기계대조용 status-delta](phase2/status-delta.json)·[정확출처/지문](phase2/sources.json)을 이 후보에 포함했다. 최종Freeze#34/불변사양38a6512와실제GitHub상태를대조했으며새Runtime승인/AC자동체크는없다. 기존P1 XLSX와선택7건Description은바이트보존했다. P2의최종통합WBS/전체TicketPack·Release세트재생성은정본Lead최종화잔여이며이부분후보를전체78건현행화/새Release로표시하지않는다.
