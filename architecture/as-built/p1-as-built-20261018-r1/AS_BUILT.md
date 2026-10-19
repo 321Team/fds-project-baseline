@@ -217,3 +217,28 @@ HBR회신은해당기술/Owner판정이고새잔여조건의효력은회신대�
 - **담당자판정소비:** AC04는PARTIAL/한정수용, AC05A는관측시점한정MET, AC05B는HBR공유구간MET, AC06은PARTIAL/한정수용으로유지한다. 위조건등록으로이름붙인잔여의Close비차단조건을연결했다. 원AC04/06을전체MET로변경하거나전체HBR/Phase1Close·최종Freeze/Release/Sign-off를대신하지않는다.
 
 이후기존모듈전체인수·원DOC/O01최종검토·Gates·실제공식Review/Action·Sign-off조건을각기판단한다. P2 Robot/guard/infra-ansible#88/cold-pull·실제원본/계정삭제·서버/보안변경·새시험은이번범위밖이다. CODEX_ASSISTED.
+
+
+## 2026-10-19 모듈 최종 조건부 수용·종결 반영
+
+이권욱의 [중앙 통합·종결 결정](https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6263609528)에 따라 K8S·SEC·HBR·APP·MON·E2E 6개 모듈의 현재 Status를 Done/GitHub CLOSED(completed)로 반영했다. 아래는 **업무의 조건부 종결**이며 기술 미입증·과거 원본 공백의 MET 전환이 아니다. 이전 단락의 해당 모듈 최종 회신 대기는 작성 시점 이력으로 보존한다.
+
+| 모듈 | 실제 Lead 판정 | 실제 종결 기록 | 기술·운영 경계 |
+|---|---|---|---|
+| #10 K8S | [원 회신](https://github.com/321Team/fds-project-baseline/issues/10#issuecomment-6263348401) | [종결 반영](https://github.com/321Team/fds-project-baseline/issues/10#issuecomment-6263610419), `2026-10-19T09:03:58Z` UTC | firewalld→HEP/GNP 무공백 전환 NOT_MET, 원 AC4c/4e/4g 및 BGP/VXLAN·NTP NOT_TESTED의 기존 처분 유지. Port Matrix/TCP179·IPIP 행은 기존 C2 PARTIAL(6035748014)로 보존하며 MET·새 위험수용으로 바꾸지 않음. Secret 변경창 지원 PARTIAL 체크도 유지. |
+| #19 SEC | [원 회신](https://github.com/321Team/fds-project-baseline/issues/19#issuecomment-6263349027) | [종결 반영](https://github.com/321Team/fds-project-baseline/issues/19#issuecomment-6263612875), `2026-10-19T09:04:07Z` UTC | AC01/03 MET, AC02/04/05/06 복합 체크 [ ] 보존. 미관측 Source/목적지 NOT_VERIFIED KI, 보호 전환 PARTIAL, rotation NOT_MET/RISK_ACCEPTED(CR125), SEC 지정5종 실패 전이 미확인/U2-B1 유지. 철회 CR126 집계를 재사용하지 않음. evidence#34는 Robot1 한정/기존 etcd·DB 위험수용 유지, infra-kubernetes#45는 기능 수용+역사 원본 공백 비차단 처분이며 raw MET 아님. |
+| #13 HBR | [원 회신](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6261491388) | [종결 반영](https://github.com/321Team/fds-project-baseline/issues/13#issuecomment-6263615041), `2026-10-19T09:04:15Z` UTC | AC04/06 PARTIAL, AC05A 관측 시점 MET·AC05B HBR 공유 범위 유지. Worker23 발급 원본2개 보호보관·이하영/10월26일 재검토, .102·Push ID3 보존은 P2 Push경로 결정 또는10월26일 중 먼저 재검토. 구ID2 삭제는 새 Gate 아님. 별도 C1/C2/C3 설계·정확 Runtime 예외 요청은 독립 범위이며 이번 P1 종결로 Runtime GO/계정·route 변경을 부여하지 않음. |
+| #15 APP | [원 회신](https://github.com/321Team/fds-project-baseline/pull/187#issuecomment-6259373384) | [종결 반영](https://github.com/321Team/fds-project-baseline/issues/15#issuecomment-6263617401), `2026-10-19T09:04:23Z` UTC | D07 Major/P1 코드 무수정·해당 Negative NOT_RUN/운영 DB 제약 NOT_VERIFIED, I01 Minor, E1/E2 단회, 2분 NodePort 부하·PG16.8/16.14·HA POST 무손실/전체 Drain 미입증 경계 유지. 최종224/실패233/부하228·DB11·HA221/10월19일 분산 증거의 실제 범위만 수용. |
+| #17 MON | [원 회신](https://github.com/321Team/fds-project-baseline/pull/187#issuecomment-6260355852) | [종결 반영](https://github.com/321Team/fds-project-baseline/issues/17#issuecomment-6263619666), `2026-10-19T09:04:31Z` UTC | MON 최종 조건부 수용(6260355852)과 MON 공식Probe 항목의177 정의·Ready 충족을 소비. 실패→Endpoint제외→회복 지정5종은 SEC-AC06/U2-B1 처분으로 연결. D02 edge HTTPS NOT_MET·평문/자동 통보 공백·PF 배타성·IF06B 규칙 귀속 미입증·기존10월26일 재검토 유지. 10월18일 수동점검 미수행과10월19일 근무일 정상 Owner 보고를 구분하며 새 중앙 Runtime으로 쓰지 않음. |
+| #20 E2E | [원 회신](https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-6263244501) | [종결 반영](https://github.com/321Team/fds-project-baseline/issues/20#issuecomment-6263622038), `2026-10-19T09:04:40Z` UTC | 원 SEC19·MON17 처분을 이번 #30 기록에서 먼저 소비한 뒤 전체 Final 조건부 종결. D07 Major/P1 코드 무수정/Negative NOT_RUN·운영 DB 제약 NOT_VERIFIED, I01 Minor, E1/E2 단회·부하/PG/HA·D02 한계 유지. 옛 Final 회귀 대기는 최종224/6205473163, 옛 DB위험10월20일 대기는 실제 SEC 종료6063472395·DB최종6159292006으로 해소되어 재승인 조건으로 남기지 않음. |
+
+원 AC·Exit 체크는 변경0이며 Status와 현재 잔여만 정합화했다. 같은 검사를 반복하거나 추가 Runtime·서버 변경을 수행하지 않았다. evidence#34의 [Robot1 한정 종결](https://github.com/321Team/fds-project-evidence/issues/34#issuecomment-6263369877)은 기존 etcd/DB 위험수용의 제거가 아니다. infra-kubernetes#45의 [선택안A](https://github.com/321Team/infra-kubernetes/issues/45#issuecomment-6263370809)는 기능 수용과 Historical Evidence Limitation 비차단 처분이며, 변경 전·dry-run/diff raw의 소급 확보나 MET가 아니다.
+
+### DOC·Gate·Review로 넘기는 현재 입력
+
+- F1-02/04의 기존 문서·O01 근거, F2 S05/S09의 기존 Owner 보고·S22의 실제 공유17 직접열람(PR246)은 재사용한다. F2 S15/S16의 K8S/SEC 최종 회신 대기와 E2E Final 회신 대기는 위 실제 회신·종결 기록으로 해소됐다. 과거 F1/F2/P0 명세·원 AC·원본71·기존 렌더를 바꾸지 않는다.
+- #25~27 인계 수신은 [#25 6256808772](https://github.com/321Team/fds-project-baseline/issues/25#issuecomment-6256808772)·[#26 6250018800](https://github.com/321Team/fds-project-baseline/issues/26#issuecomment-6250018800)·[#27 6250019054](https://github.com/321Team/fds-project-baseline/issues/27#issuecomment-6250019054)로 완료다. #25 중앙 수신은10/19 09:02 KST로08:00 목표 이후이며 소급하지 않는다. 구현은 기존 Owner·To Do·Due 미정/이월이며 새 구현 일정·P2 실행을 만들지 않는다.
+- G1은 원 LB/K8S/HBR/DB/CICD 등 입력, G2는 원 APP/CICD/SEC/MON/E2E 준비도, G3는 E2E/HA/DR/DOC를 소비해 각 Lead가 판단한다. G1/G2를 원문에 없는 직렬 Gate로 추가하지 않는다. 필수 WBS/Notion 동일 반영의 실제 결과는 별도로 확인해야 한다.
+- **미결:** ICR 전체 인수·infra-ansible#9 전체 운영 인수, DOC 최종 source/version·O01 충분성·문서 Critical0/Freeze, 각 Gate, 실제 Review/Demo/Action·Sign-off/#32 Close. 문서 Critical0과 시스템 Critical Issue0은 별도다. 이 후속 문서 병합 자체를 최종 정본 채택·Freeze·전체 Phase1 Close로 쓰지 않는다.
+
+Claude Code는 실제 High로 새 회신의 원조건 대조를 보조했고, Grok은 인계·Review 경계를 검토했다. 인계 누락 오판3건은 실제 수신 원문 대조 후 철회됐다. AI 반환은 사람 독립 승인·Runtime·Lead 인수를 대신하지 않는다. 새로운 source/renderer·서버/보안/계정 변경과 P2 실행은 없다. CODEX_ASSISTED.
