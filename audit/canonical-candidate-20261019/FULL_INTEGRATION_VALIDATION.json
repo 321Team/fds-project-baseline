@@ -1,5 +1,5 @@
 {
-  "at_kst": "2026-10-19T20:11:56.029978+09:00",
+  "at_kst": "2026-10-19T20:15:25.320170+09:00",
   "records": 78,
   "Status_Phase_Lead_all_rows": "MATCH",
   "description_records": 78,
@@ -8,19 +8,19 @@
   "relative_links": "PASS",
   "preserved_prior_inputs": 28,
   "workbook": {
-    "at_kst": "2026-10-19T20:11:54.898196+09:00",
-    "workbook_sha256": "0ed8584e964d4c41e2284c952e40b6dad5475888e9563f4afa0a4fcad975d18c",
+    "at_kst": "2026-10-19T20:15:24.070858+09:00",
+    "workbook_sha256": "2cca7830ed131b372506eb4af2ce6209c501097266a6fc59be83cb70acac88de",
     "sheets": 10,
     "records": 78,
-    "planned_cell_changes": 5,
+    "planned_cell_changes": 6,
     "unexpected_values_formulas_styles": 0,
     "formula_change": "No formula changes in this final Signoff/Close stage; existing Cancelled formula preserved",
     "native_features": "DV/CF/chart series/dimensions/merges/panes/comments/protection preserved",
     "cached_formula_errors": 0,
     "summary_counts": {
-      "Done": 44,
+      "Done": 45,
       "Cancelled": 3,
-      "To Do": 20,
+      "To Do": 19,
       "In Progress": 11
     },
     "milestone_status_formula_readback": "MATCH",
@@ -45,15 +45,15 @@
     "not_new_Demo_or_whole_Close": true
   },
   "current_counts": {
-    "Done": 44,
+    "Done": 45,
     "Cancelled": 3,
-    "To Do": 20,
+    "To Do": 19,
     "In Progress": 11
   },
   "Review31_note_state_corrected": true,
   "final_signoff_close": {
-    "at_kst": "2026-10-19T20:11:55.050120+09:00",
-    "stage": "closed30",
+    "at_kst": "2026-10-19T20:15:24.228703+09:00",
+    "stage": "closed32",
     "A_actual_adoption": {
       "at_kst": "2026-10-19T20:05:51.513852+09:00",
       "human": "이권욱",
@@ -69,9 +69,19 @@
       "A_actual_record": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6265747689"
     },
     "A_closed_at_kst": "2026-10-19T20:10:15+09:00",
-    "B_actual_decision": null,
-    "B_closed_at_kst": null,
-    "whole_Phase1_Close_actually_executed": false,
+    "B_actual_decision": {
+      "at_kst": "2026-10-19T20:12:49.706506+09:00",
+      "user_actual_adoption_at_kst": "2026-10-19T20:05:51.513852+09:00",
+      "user_actual_answer": "A·B 채택 — 조건 확인 후 순차 종결 (권장)",
+      "actual_record": "https://github.com/321Team/fds-project-baseline/issues/32#issuecomment-6265873856",
+      "A_signoff": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6265747689",
+      "A_closed_at": "2026-10-19T11:10:15Z",
+      "A_candidate": "e51e9980d88dcf8d7d19ab590e36d98df0d4c2f7",
+      "A_tracking_verified": true,
+      "new_Release_Runtime_P2": false
+    },
+    "B_closed_at_kst": "2026-10-19T20:12:53+09:00",
+    "whole_Phase1_Close_actually_executed": true,
     "new_Release_Runtime_P2": false,
     "known_risk_scope": "original card tables 2-4 and actual adoption; no new system-wide Critical0"
   }

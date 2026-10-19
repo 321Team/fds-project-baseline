@@ -1831,7 +1831,7 @@
         "Phase": "Phase 1",
         "Category": "Milestone / Close",
         "Type": "Milestone",
-        "Status": "To Do",
+        "Status": "Done",
         "Priority": "P0",
         "Start": "2026-10-06",
         "End": "2026-10-06",
@@ -1845,16 +1845,16 @@
         "Source": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #32 snapshot 2026-09-09T12:06:14Z; 현행 발행 정본: docs-v3.1.21 (979facb98de8ca1f1e2ce22f38b27ac3366f3fc3); 수집 후 실행 기록은 본문 최신 증적 기준",
         "Schedule Note": "2026-09-23 Lead 결정으로 10-06에 종결한다(Phase 1 진행 항목 #74·#75 등 10-06 계획 감안). #31 Review → #30 보완·Sign-off → Close 순으로 같은 날 진행하며, Close 판정 후 Phase 2 Start(#33)로 이어진다."
       },
-      "state": "open",
-      "state_reason": null,
-      "closed_at_utc": null,
-      "closed_at_kst": null,
-      "updated_at": "2026-10-19T11:01:14Z",
-      "body_sha256": "16439a147fb723a74ad60af9dd52a07ad2ba13438e66e2265d7a1fbb58bab72a",
+      "state": "closed",
+      "state_reason": "completed",
+      "closed_at_utc": "2026-10-19T11:12:53Z",
+      "closed_at_kst": "2026-10-19T20:12:53+09:00",
+      "updated_at": "2026-10-19T11:12:54Z",
+      "body_sha256": "1101f33ab227192594a8a25772c5fa1d41d520bf869f572f7f04cd4df1ceecd7",
       "labels": [
         "priority:P0",
+        "status:done",
         "phase:phase-1",
-        "status:to-do",
         "type:milestone",
         "area:milestone"
       ]
@@ -1923,8 +1923,8 @@
       "state_reason": "completed",
       "closed_at_utc": "2026-10-19T11:10:15Z",
       "closed_at_kst": "2026-10-19T20:10:15+09:00",
-      "updated_at": "2026-10-19T11:10:16Z",
-      "body_sha256": "5302bed400055faa91c83b4c4217c060e37a0526ea05c0825b9fbaeba7fc43e0",
+      "updated_at": "2026-10-19T11:14:22Z",
+      "body_sha256": "352142fde228b0a5f78b054f3b741a8451ac4b422f6dbdcf7cfd7d569af5a99f",
       "labels": [
         "priority:P0",
         "status:done",
@@ -2898,8 +2898,8 @@
   ],
   "review31_post_cutoff_update_at_kst": "2026-10-19T19:46:52.955175+09:00",
   "final_signoff_close": {
-    "at_kst": "2026-10-19T20:11:55.050120+09:00",
-    "stage": "closed30",
+    "at_kst": "2026-10-19T20:15:24.228703+09:00",
+    "stage": "closed32",
     "A_actual_adoption": {
       "at_kst": "2026-10-19T20:05:51.513852+09:00",
       "human": "이권욱",
@@ -2915,11 +2915,21 @@
       "A_actual_record": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6265747689"
     },
     "A_closed_at_kst": "2026-10-19T20:10:15+09:00",
-    "B_actual_decision": null,
-    "B_closed_at_kst": null,
-    "whole_Phase1_Close_actually_executed": false,
+    "B_actual_decision": {
+      "at_kst": "2026-10-19T20:12:49.706506+09:00",
+      "user_actual_adoption_at_kst": "2026-10-19T20:05:51.513852+09:00",
+      "user_actual_answer": "A·B 채택 — 조건 확인 후 순차 종결 (권장)",
+      "actual_record": "https://github.com/321Team/fds-project-baseline/issues/32#issuecomment-6265873856",
+      "A_signoff": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6265747689",
+      "A_closed_at": "2026-10-19T11:10:15Z",
+      "A_candidate": "e51e9980d88dcf8d7d19ab590e36d98df0d4c2f7",
+      "A_tracking_verified": true,
+      "new_Release_Runtime_P2": false
+    },
+    "B_closed_at_kst": "2026-10-19T20:12:53+09:00",
+    "whole_Phase1_Close_actually_executed": true,
     "new_Release_Runtime_P2": false,
     "known_risk_scope": "original card tables 2-4 and actual adoption; no new system-wide Critical0"
   },
-  "post_signoff_update_kst": "2026-10-19T20:11:56.014084+09:00"
+  "post_signoff_update_kst": "2026-10-19T20:15:25.303780+09:00"
 }

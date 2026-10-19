@@ -1,17 +1,17 @@
 {
-  "at_kst": "2026-10-19T20:11:54.898196+09:00",
-  "workbook_sha256": "0ed8584e964d4c41e2284c952e40b6dad5475888e9563f4afa0a4fcad975d18c",
+  "at_kst": "2026-10-19T20:15:24.070858+09:00",
+  "workbook_sha256": "2cca7830ed131b372506eb4af2ce6209c501097266a6fc59be83cb70acac88de",
   "sheets": 10,
   "records": 78,
-  "planned_cell_changes": 5,
+  "planned_cell_changes": 6,
   "unexpected_values_formulas_styles": 0,
   "formula_change": "No formula changes in this final Signoff/Close stage; existing Cancelled formula preserved",
   "native_features": "DV/CF/chart series/dimensions/merges/panes/comments/protection preserved",
   "cached_formula_errors": 0,
   "summary_counts": {
-    "Done": 44,
+    "Done": 45,
     "Cancelled": 3,
-    "To Do": 20,
+    "To Do": 19,
     "In Progress": 11
   },
   "milestone_status_formula_readback": "MATCH",

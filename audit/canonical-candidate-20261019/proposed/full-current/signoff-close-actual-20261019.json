@@ -1,6 +1,6 @@
 {
-  "at_kst": "2026-10-19T20:11:55.050120+09:00",
-  "stage": "closed30",
+  "at_kst": "2026-10-19T20:15:24.228703+09:00",
+  "stage": "closed32",
   "A_actual_adoption": {
     "at_kst": "2026-10-19T20:05:51.513852+09:00",
     "human": "이권욱",
@@ -16,9 +16,19 @@
     "A_actual_record": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6265747689"
   },
   "A_closed_at_kst": "2026-10-19T20:10:15+09:00",
-  "B_actual_decision": null,
-  "B_closed_at_kst": null,
-  "whole_Phase1_Close_actually_executed": false,
+  "B_actual_decision": {
+    "at_kst": "2026-10-19T20:12:49.706506+09:00",
+    "user_actual_adoption_at_kst": "2026-10-19T20:05:51.513852+09:00",
+    "user_actual_answer": "A·B 채택 — 조건 확인 후 순차 종결 (권장)",
+    "actual_record": "https://github.com/321Team/fds-project-baseline/issues/32#issuecomment-6265873856",
+    "A_signoff": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6265747689",
+    "A_closed_at": "2026-10-19T11:10:15Z",
+    "A_candidate": "e51e9980d88dcf8d7d19ab590e36d98df0d4c2f7",
+    "A_tracking_verified": true,
+    "new_Release_Runtime_P2": false
+  },
+  "B_closed_at_kst": "2026-10-19T20:12:53+09:00",
+  "whole_Phase1_Close_actually_executed": true,
   "new_Release_Runtime_P2": false,
   "known_risk_scope": "original card tables 2-4 and actual adoption; no new system-wide Critical0"
 }

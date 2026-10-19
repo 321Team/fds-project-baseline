@@ -3,7 +3,7 @@
   "base": "docs-v3.1.21",
   "base_main_commit": "d8f55d816cfe8ca894210695a7a582850c8c926c",
   "pre_update_PR191_head": "ee97ab30a970a8a5a239e6bbacf1130ffec98d3e",
-  "as_of_kst": "2026-10-19T20:11:56.263793+09:00",
+  "as_of_kst": "2026-10-19T20:15:25.541406+09:00",
   "records": 78,
   "phase1_records": 42,
   "phase2_records": 31,
@@ -15,9 +15,9 @@
     "phase2_input_files": 17
   },
   "counts": {
-    "Done": 44,
+    "Done": 45,
     "Cancelled": 3,
-    "To Do": 20,
+    "To Do": 19,
     "In Progress": 11
   },
   "Review31_final_approval": "ACTUALLY_ADOPTED_CLOSED",
@@ -25,8 +25,8 @@
   "files": [
     {
       "path": "BASELINE_CHANGE_ADDENDUM.md",
-      "sha256": "3f81d01e3458f058f0538f14a988f1d06fc1cd0a4f86fea27f46b0e6a9ad973b",
-      "bytes": 8520
+      "sha256": "b3c7ff8b32ec62b1acfc6cb41f34a005ee28f66c5708456184f30c7570e652b2",
+      "bytes": 8487
     },
     {
       "path": "canonical-status-delta.json",
@@ -95,8 +95,8 @@
     },
     {
       "path": "FDS_P1_WBS_Status_Candidate_20261019.xlsx",
-      "sha256": "0ed8584e964d4c41e2284c952e40b6dad5475888e9563f4afa0a4fcad975d18c",
-      "bytes": 144691
+      "sha256": "2cca7830ed131b372506eb4af2ce6209c501097266a6fc59be83cb70acac88de",
+      "bytes": 144668
     },
     {
       "path": "full-current/baseline-original-v3.1.21.md",
@@ -105,8 +105,8 @@
     },
     {
       "path": "full-current/BASELINE_INTEGRATED_CANDIDATE.md",
-      "sha256": "9cd05693f1d920d658452bfd6e596c8c92efa95f03751290ccd149e5b7fca72f",
-      "bytes": 14016
+      "sha256": "688fee3f89c863ab92af9068bc489cfcc267b2f48cb9a51b6cf6dc0b65f1791a",
+      "bytes": 13983
     },
     {
       "path": "full-current/change-request-dispositions.json",
@@ -115,8 +115,8 @@
     },
     {
       "path": "full-current/current-records.json",
-      "sha256": "d154a5bd2421f3f60cc8e91446e959e026bc703e053e1b312a63e963f82caf9f",
-      "bytes": 150009
+      "sha256": "bdaa5d8f615cbca93748a4e77aafad4ef75ac2aae1f3d2fde2245cc219c02ae5",
+      "bytes": 150057
     },
     {
       "path": "full-current/descriptions/CR-P1-ANS-01-01.md",
@@ -315,8 +315,8 @@
     },
     {
       "path": "full-current/descriptions/MS-P1-CLOSE-01.md",
-      "sha256": "183a95c7f6762f1e250da42edf48b9545c655b70c2659743b7a42560a96e9362",
-      "bytes": 3499
+      "sha256": "a2176800627b6b224878ea5b6d4fb33a57bfe4f4a5bb130318bd6123e324f1ee",
+      "bytes": 3434
     },
     {
       "path": "full-current/descriptions/MS-P1-REVIEW-01.md",
@@ -430,8 +430,8 @@
     },
     {
       "path": "full-current/descriptions/P1-REV-01.md",
-      "sha256": "1b61a83d41ef74c8187d525bda6716cf3092e4454d10451b869177d4b8d237fe",
-      "bytes": 3545
+      "sha256": "4e141461c9b44143382102177bae7d469ffc3f3903dee6791f03e28ec1e459fe",
+      "bytes": 3465
     },
     {
       "path": "full-current/descriptions/P1-SEC-01.md",
@@ -510,8 +510,8 @@
     },
     {
       "path": "full-current/project-sync.json",
-      "sha256": "b284cc919ea1d8b54c7329d594c89c501ebe62ebdd39fb5286447e35b727ce84",
-      "bytes": 1190
+      "sha256": "3a35c50c5e2517d01c556eb51edaf196008df4204e28571308604de0bd8d14b1",
+      "bytes": 1246
     },
     {
       "path": "full-current/review-source-binding.json",
@@ -530,13 +530,13 @@
     },
     {
       "path": "full-current/signoff-close-actual-20261019.json",
-      "sha256": "1e47ef045506c9f53c8d410a9ec6f00439f2163bdbadd8f12e896f3f9eb3ec64",
-      "bytes": 1242
+      "sha256": "146df4e8831866a3915385ebfff17f1c7279f6c7564067937141f11d8b26c1f8",
+      "bytes": 1855
     },
     {
       "path": "full-current/SIGNOFF_CLOSE_CURRENT.md",
-      "sha256": "d78edf38d768869d1088ca31e6e19bfaeb67f0f1e4c22f8a9dceefff6d74c512",
-      "bytes": 1740
+      "sha256": "06749c896b59b4fc87f1854d2707a1b055b245aa96aeedb6533a78ee9672d817",
+      "bytes": 1660
     },
     {
       "path": "full-current/SIGNOFF_CLOSE_REVIEW.md",
@@ -545,28 +545,28 @@
     },
     {
       "path": "full-current/TICKET_PACK.md",
-      "sha256": "5fa0947bc4c4e10c7c311160c42833a8184c2a70b5425c67345c18943a394e37",
-      "bytes": 15038
+      "sha256": "7848b1910d3f422964694f9f6460970e7ba558f0db74a7105860f94fd4878708",
+      "bytes": 15053
     },
     {
       "path": "full-current/WEB/status-snapshot.html",
-      "sha256": "cf29ac2434404a21b62523fe3d8674bedca30c1943f84c0c7a64dabfa6708d99",
-      "bytes": 15049
+      "sha256": "21a65d169d6697a680bd1e92541201c33c0e84e7f824bbeceeb49bf072b511e8",
+      "bytes": 15060
     },
     {
       "path": "full-current/WEB/status-snapshot.json",
-      "sha256": "9b069b2220a76bfa7de68fe5ffd325aa549d1f85de1c787d6fa1bde648cad03c",
-      "bytes": 151543
+      "sha256": "abeb3346aa50dfb6664baad3698ff4e3bf17ac62091f0f74f1bd309f13d47e12",
+      "bytes": 152224
     },
     {
       "path": "full-current/WORKBOOK_VALIDATION.json",
-      "sha256": "a5d94a2ce9a524200ac268411ca60b0f54e61d4718ef57744677079fd8800ea7",
+      "sha256": "e5b5a08f47ed68021f1253477d21014f19b8d33d2a0ba19182ff1a7544c9e1ce",
       "bytes": 957
     },
     {
       "path": "FULL_INTEGRATION_CURRENT.md",
-      "sha256": "c3dcb6208b0bc685cb58447bacfb8c26941e15fba72d227873294d082ff48c17",
-      "bytes": 4223
+      "sha256": "dd14e2ceabada96049f2882c5bcdbdfb9020760a71dd3ab6d42e639b91c45a4f",
+      "bytes": 4190
     },
     {
       "path": "gate-final-acceptance-20261019.md",
@@ -575,8 +575,8 @@
     },
     {
       "path": "P1_CANONICAL_UPDATE_PACK.md",
-      "sha256": "b1ce548612bf27706180201fd58ab51ae94b279f20717dfad7b3216f323edd1c",
-      "bytes": 9122
+      "sha256": "0ba34a80c39072c0e28f85ff4b607d05574ae73b673da6e5d6dfb56a2fdb77b3",
+      "bytes": 9089
     },
     {
       "path": "phase2/descriptions/DEC-CAL-P2-01.md",
@@ -665,8 +665,8 @@
     },
     {
       "path": "RELEASE_NOTES_CANDIDATE.md",
-      "sha256": "b4a649a1ee91c3598b9cdebabdca24777ae8bd176f1ecd7799c244c887b4975f",
-      "bytes": 6521
+      "sha256": "f1d3ed93fecd4b32617f2827d2f61d5944aa746a4b6142f1f75d56bded2a276e",
+      "bytes": 6488
     },
     {
       "path": "tests/FDS_Test_Strategy_v3.1.21.md",
@@ -674,10 +674,10 @@
       "bytes": 10895
     }
   ],
-  "workbook_sha256": "0ed8584e964d4c41e2284c952e40b6dad5475888e9563f4afa0a4fcad975d18c",
+  "workbook_sha256": "2cca7830ed131b372506eb4af2ce6209c501097266a6fc59be83cb70acac88de",
   "final_signoff_close": {
-    "at_kst": "2026-10-19T20:11:55.050120+09:00",
-    "stage": "closed30",
+    "at_kst": "2026-10-19T20:15:24.228703+09:00",
+    "stage": "closed32",
     "A_actual_adoption": {
       "at_kst": "2026-10-19T20:05:51.513852+09:00",
       "human": "이권욱",
@@ -693,9 +693,19 @@
       "A_actual_record": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6265747689"
     },
     "A_closed_at_kst": "2026-10-19T20:10:15+09:00",
-    "B_actual_decision": null,
-    "B_closed_at_kst": null,
-    "whole_Phase1_Close_actually_executed": false,
+    "B_actual_decision": {
+      "at_kst": "2026-10-19T20:12:49.706506+09:00",
+      "user_actual_adoption_at_kst": "2026-10-19T20:05:51.513852+09:00",
+      "user_actual_answer": "A·B 채택 — 조건 확인 후 순차 종결 (권장)",
+      "actual_record": "https://github.com/321Team/fds-project-baseline/issues/32#issuecomment-6265873856",
+      "A_signoff": "https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6265747689",
+      "A_closed_at": "2026-10-19T11:10:15Z",
+      "A_candidate": "e51e9980d88dcf8d7d19ab590e36d98df0d4c2f7",
+      "A_tracking_verified": true,
+      "new_Release_Runtime_P2": false
+    },
+    "B_closed_at_kst": "2026-10-19T20:12:53+09:00",
+    "whole_Phase1_Close_actually_executed": true,
     "new_Release_Runtime_P2": false,
     "known_risk_scope": "original card tables 2-4 and actual adoption; no new system-wide Critical0"
   }

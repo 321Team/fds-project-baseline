@@ -1,5 +1,5 @@
 {
-  "at_kst": "2026-10-19T20:05:51.020647+09:00",
+  "at_kst": "2026-10-19T20:14:29.121524+09:00",
   "count": 78,
   "records": [
     {
@@ -1830,7 +1830,7 @@
         "Phase": "Phase 1",
         "Category": "Milestone / Close",
         "Type": "Milestone",
-        "Status": "To Do",
+        "Status": "Done",
         "Priority": "P0",
         "Start": "2026-10-06",
         "End": "2026-10-06",
@@ -1844,16 +1844,16 @@
         "Source": "Baseline v3.1.18; Ticket Pack v3.1.18; GitHub #32 snapshot 2026-09-09T12:06:14Z; 현행 발행 정본: docs-v3.1.21 (979facb98de8ca1f1e2ce22f38b27ac3366f3fc3); 수집 후 실행 기록은 본문 최신 증적 기준",
         "Schedule Note": "2026-09-23 Lead 결정으로 10-06에 종결한다(Phase 1 진행 항목 #74·#75 등 10-06 계획 감안). #31 Review → #30 보완·Sign-off → Close 순으로 같은 날 진행하며, Close 판정 후 Phase 2 Start(#33)로 이어진다."
       },
-      "state": "open",
-      "state_reason": null,
-      "closed_at_utc": null,
-      "closed_at_kst": null,
-      "updated_at": "2026-10-19T11:01:14Z",
-      "body_sha256": "16439a147fb723a74ad60af9dd52a07ad2ba13438e66e2265d7a1fbb58bab72a",
+      "state": "closed",
+      "state_reason": "completed",
+      "closed_at_utc": "2026-10-19T11:12:53Z",
+      "closed_at_kst": "2026-10-19T20:12:53+09:00",
+      "updated_at": "2026-10-19T11:12:54Z",
+      "body_sha256": "1101f33ab227192594a8a25772c5fa1d41d520bf869f572f7f04cd4df1ceecd7",
       "labels": [
         "priority:P0",
+        "status:done",
         "phase:phase-1",
-        "status:to-do",
         "type:milestone",
         "area:milestone"
       ]
@@ -1922,8 +1922,8 @@
       "state_reason": "completed",
       "closed_at_utc": "2026-10-19T11:10:15Z",
       "closed_at_kst": "2026-10-19T20:10:15+09:00",
-      "updated_at": "2026-10-19T11:10:16Z",
-      "body_sha256": "5302bed400055faa91c83b4c4217c060e37a0526ea05c0825b9fbaeba7fc43e0",
+      "updated_at": "2026-10-19T11:14:22Z",
+      "body_sha256": "352142fde228b0a5f78b054f3b741a8451ac4b422f6dbdcf7cfd7d569af5a99f",
       "labels": [
         "priority:P0",
         "status:done",
@@ -2895,5 +2895,5 @@
       ]
     }
   ],
-  "post_signoff_update_kst": "2026-10-19T20:11:35.646327+09:00"
+  "post_signoff_update_kst": "2026-10-19T20:14:30.626031+09:00"
 }
