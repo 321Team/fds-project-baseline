@@ -1,5 +1,5 @@
 {
-  "at_kst": "2026-10-19T19:46:52.965276+09:00",
+  "at_kst": "2026-10-19T19:48:19.537071+09:00",
   "records": 78,
   "Status_Phase_Lead_all_rows": "MATCH",
   "description_records": 78,
@@ -8,11 +8,11 @@
   "relative_links": "PASS",
   "preserved_prior_inputs": 28,
   "workbook": {
-    "at_kst": "2026-10-19T19:46:52.194475+09:00",
-    "workbook_sha256": "14ab5ed8e7526f22ac2289d7c98e096b20d02c4b5b847084105112963884753d",
+    "at_kst": "2026-10-19T19:48:18.568185+09:00",
+    "workbook_sha256": "c9d69c0313a276dfb2998776150233f101299872923cb416267439768771e298",
     "sheets": 10,
     "records": 78,
-    "planned_cell_changes": 5,
+    "planned_cell_changes": 1,
     "unexpected_values_formulas_styles": 0,
     "formula_change": "Executive Summary B16 source drift metric replaced with Cancelled count; all other formulas preserved",
     "native_features": "DV/CF/chart series/dimensions/merges/panes/comments/protection preserved",
@@ -49,5 +49,6 @@
     "Cancelled": 3,
     "To Do": 20,
     "In Progress": 12
-  }
+  },
+  "Review31_note_state_corrected": true
 }
