@@ -1,6 +1,27 @@
 # 생성·운영·삭제·Review 선행 준비
 
+## 10/19 12:21 KST — #49/#52/#55 인수 준비 갱신
+
+이권욱 / CODEX_ASSISTED. 기존 I01~I16·90분 의제·Action 필드·정리 순서를 재사용하고 새 증거만 연결한다. 실제 금융 규제 준수 완료, Runtime/인수/Sign-off를 문서 준비로 주장하지 않는다.
+
+| 자료 / 기존 소비 업무 | 지금 연결한 단계 | 남은 입력·담당 |
+|---|---|---|
+| Architecture #34 | PR182 기술 입력2건·통합 정정/READY_FOR_LEAD_DECISION. API443/source /24/A2·P1 예외/Secret 책임 연결 | 권욱 최종 Freeze·변경통제 채택 기록. #54 산출물 Freeze와 별개 |
+| ROSA 생성 #38/#49 | [실제 승인 회차](https://github.com/321Team/infra-rosa/issues/4#issuecomment-6248849533)3add/rc0·ready, [readback 수용](https://github.com/321Team/infra-rosa/issues/4#issuecomment-6258494105) | 하영 실제 Basic/Full·Node/UID/보안·인증/정리 증거. cluster ready≠BASIC_READY/G4/G5 |
+| source/Delivery #43/#46 | MSA PR40 host 기록 수용·실제 offline render, CICD PR89/90 독립 승인/CI2씩·Draft 미병합, source pack 원문 동일성 연결 | 하영 플랫폼 receipt·재환 clean render→권욱 운영 provider/CLI·실제 RUN-A/B. CI/원문 hash≠Deploy/Health/Smoke PASS |
+| Registry #42 | cold v5 STATIC 수용·S1 CASE2/HOLD, D7/CA 재사용 | #13 정확 P2 인증/허용 준비·별도 Runtime 승인, 하영 cold/negative·복구→권욱 FINAL |
+| zone/최종 정리 #55 | [exact-ID3개 귀속 검토](https://github.com/321Team/infra-rosa/issues/4#issuecomment-6258891664)·기존 delete 키트 수용 | 하영 #8의 기존 삭제 범위에 연결. CallerReference 시간은 요청자 문자열, AWS 생성시각 증명 아님. 현재 exact-ID/이름/구분/전체 reference 대조→실제 승인 삭제→잔존 확인 |
+| Hybrid #37/#47/#50 | #37 TCP runtime과 #47 A2 영구 설정의 창 내 변경/원복을 분리. 영구 유지 미채택 | 재환/하영 exact A2 예외·새 RUN·Secret 경로→권욱 경계/원복 판단. P1 변경을 Freeze 승인으로 대체하지 않음 |
+
+검증권한은 준비→시험→결함 재시험→증적 검토 완료까지 유지하고 이후 전용권한/운영 최소권한을 구분한다. 회의/파일전송/작업창 종료만으로 회수하거나 새 정책을 재부착하지 않는다. raw Plan/state/credential은 비공개 고정 경로에 보존한다. 검증·Demo 필요가 남았는데 날짜만으로 ROSA/VPN/관리 경로를 먼저 삭제하지 않는다. 정리 실패는 다음 의존 자원 삭제 STOP·상태/receipt 대조다.
+
+#52는 **10/23 14:00~15:30 제안·권욱 참석 미정**을 유지한다. 필수 참석/대체·Live 필요 여부도 아직 미확정이며 초대/일정 쓰기 없음. 기존 의제로 기록형 Review를 준비하고 실제 회신 후 값만 동기화한다. 운영 실행 창은 별도이며 첫 설정 약4시간 후보, cold2앱 약5시간 가용 후보를 회의90분·DB120분·IAM3시간과 혼합하지 않는다.
+
+권욱이 지금 할 일은 위 자료의 식별/수신/검토/리뷰·병합·미확인 단계 매핑과 동일 candidate 목록 관리다. 새 실제 결과가 오면 그 행만 갱신한다. Review 개최·P0 예외·#55 Action·#57 Close/Sign-off는 실제 Lead 판단 기록이 필요하며 이번 준비로 티켓을 닫지 않는다. 비용은 지정 비용 채팅의 새 사용자 리포트만 반영하고400/450/500·지원확정/자부담0을 유지한다.
+
 **10/16 최신 인계:** [#49/#55와 milestone 완료조건](readiness-handoff-20261016.md#49--55-후속-인수-준비). 기존90분 의제·10/23 시간/참석 미정을 유지한다. 10/17 생성만의 한정 GO와 F5 실제 재생성 생략 위험 수용을 반영하며, 아래 과거 “정확한 생성 시각 미정/Stage2 대기”는 당시 이력이다. 새 Review/삭제/정본 발행 승인은 아니다.
+
+비용 입력: 지정 세션 `[클라우드] 비용 통제 정보 입력`의 **10/19 사용자 제공 표 $17.97/₩24,362**(EC2 $16.53, VPC $1.44, Credit0)를 수신했다. 청구기간·정확 cutoff·예상 총비용은 미확인이다. 하루 사용액/ROSA 전체 비용/잔여예산으로 환산하지 않고 새 Cost GO를 발행하지 않는다. 교육장 지원·자부담0·목표400/중단450/상한500 유지, Credit0은 지원 취소가 아니다.
 
 ## 10/15 Review 준비 선택과 자료 인계
 

@@ -1,5 +1,37 @@
 # Phase 2 사전 준비·인계 갱신 — 2026-10-16
 
+## 10/19 12:21 KST — 현황 및 권욱 순차 착수
+
+이권욱 / CODEX_ASSISTED. 이 표가 현재 입력이며 아래10/16 기록은 당시 이력이다. 설계·코드·생산자 원문·실제 실행·인수를 분리한다.
+
+| 순서 / 업무 | 이번 수행·현재 사실 | 다음 담당·완료조건 |
+|---|---|---|
+| 1 #34 | [Freeze 검토본](architecture-freeze-candidate-20261018.md)에 API443/source /24/A2·P1 예외/Secret 분담, EBS·etcd·IF-19 정정 및 기존 AC 연결 반영 | 권욱: 수정 HEAD·문서 검사/CI 확인 후 최종 Freeze/변경통제 채택 기록. READY_FOR_LEAD_DECISION은 승인·정본 발행 아님 |
+| 2 #46 | CICD PR89 dd06c005·PR90 adc9cdc3 각각 하영/재환 APPROVED·CI2 SUCCESS. Draft OPEN·미병합. 과거 독립 리뷰 대기는 해소. 현재 MSA source9파일 결속 완료 | 권욱: actual provider/운영 CLI·진단 영속화·RUN-A/B 준비. 하영 API443/CA/identity/SA 권한/UID/유효기간 receipt, 재환 승인 Registry의 clean render 후 실행 판단 |
+| 3 #42 | D22 A 방향·D7/CA 재사용, [cold v5 STATIC 수용](https://github.com/321Team/infra-rosa/issues/12#issuecomment-6258893270). S1은 승인 P2 인증/허용 증적 미연결 | 하영/Harbor Lead #13 정확 Runtime 범위→권욱 실제 입력·cold GO·결과 후 FINAL. P1 Robot 차용/전체 P1 재시험 불요 |
+| 4 #39 | [10/18 생성](https://github.com/321Team/infra-rosa/issues/4#issuecomment-6248849533)3add/rc0/ROSA ready와 [readback 수용](https://github.com/321Team/infra-rosa/issues/4#issuecomment-6258494105). G4/BASIC_READY 전체 미완료 | 하영/재환 C/D·route/SG·positive/negative·원복 원본→권욱 Gate 판정. 새 DB/경로 GO 없음 |
+| 5 #49/#55 | [증적·Review 대응표](lifecycle-review-preparation.md)에 생성/readback/source/키트/zone 귀속의 확인 단계 연결. 기존 I01~I16 재사용 | 새 원본만 수신/검토·AC·리뷰/병합에 연결. 실제 종료 조건 전 Live/삭제/권한 회수 안 함 |
+| 6 #52 | 10/23 14:00~15:30 제안·권욱 참석 미정, 10/26 Close 계획·#40/#48/#120 보류 유지 | 참석/시간/초대 합성 없음. 기존90분 의제와 기록형 Demo 준비 가능 |
+
+### #46 source pack·이식성 확인
+
+검토된 PR90 collector adc9cdc3로 고정 Git 객체를 읽었다. 별도 로컬 저장소에 source를 취득한 뒤 capture 함수는 네트워크/source 실행/렌더/cluster 호출 없이 동작했고 source worktree 불변이다.
+
+| MSA source | manifest SHA256 | 압축 전 tar SHA256 |
+|---|---|---|
+| 이전93800f09 | `c075531ce810b4df7cdd1ad250459db0b858768a2701246fc1a8624b5b3bf88e` | `cfa46fac81dc50c0bf44451e1594a4ef4de7f6d8ca5d5f483243ef0bed3ab1cd` |
+| host 반영fe9e8277 | `2db8b8cc616ea741e9884a33abc745dd66484a1a9cbf6818a5808b70f249b508` | `9994e718da9a229aee00f601c055a5e58bb52cf7b0169cb9b58f26f4635cbd27` |
+
+이전 두 값은 [재환 독립 리뷰](https://github.com/321Team/infra-cicd/pull/90#pullrequestreview-5550002356)의 다른 압축 라이브러리 결과와 일치했다. 현재9파일은 [MSA PR40 검토](https://github.com/321Team/fds-msa/pull/40#pullrequestreview-5566547370)의 실제 오프라인 렌더 입력과 9/9 바이트 일치하며, 현 resources/components/patches.path는 고정 경로 안에 있다. 같은 런타임 현재 pack2회도 바이트 일치. 일반 dependency closure 검증기 구현 완료는 아니다.
+
+pack의 source_approval=NOT_VERIFIED/render_generation=NOT_RUN/execution_authorized=false, Registry .invalid 차단을 유지한다. 기존23단위+2Kustomize 검증을 반복하거나 capture를 새 render PASS로 표시하지 않는다. PR43 730b54c는 B1 해소·MOCK16×2 PASS이나 우리 제안 코드의 재환 독립 확인 대기다. 이 대기로 다른 준비를 멈추지 않는다.
+
+이번 AWS/ROSA/DB/Runner/OCP/Harbor/IAM/token/Apply/Deploy/삭제 호출0, Phase1 변경0이다.
+
+비용 입력: 지정 세션 `[클라우드] 비용 통제 정보 입력`의 **10/19 사용자 제공 표 $17.97/₩24,362**(EC2 $16.53, VPC $1.44, Credit0)를 수신했다. 청구기간·정확 cutoff·예상 총비용은 미확인이다. 하루 사용액/ROSA 전체 비용/잔여예산으로 환산하지 않고 새 Cost GO를 발행하지 않는다. 교육장 지원·자부담0·목표400/중단450/상한500 유지, Credit0은 지원 취소가 아니다.
+
+## 10/16 인계 이력
+
 조회 기준: 2026-10-16 18:25 KST. 이권욱 / CODEX_ASSISTED. 기존 준비표의 최신 인계이며 실행 승인·정본·As-built가 아니다. 과거 문서/댓글은 당시 이력으로 보존한다. 17:02의 #34/#39/#42/#46/#49/#52/#55 및 선행 #30~#33 조회를 재사용하고, 이번에는 PR33/41/87 새 리뷰·변경·병합과 #12 D7 수신분만 갱신했다.
 
 ## 순차 수행 결과와 잔여
