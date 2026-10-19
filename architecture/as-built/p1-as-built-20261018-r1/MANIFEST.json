@@ -1,10 +1,10 @@
 {
   "source_revision_proposal": "p1-as-built-20261018-r1",
-  "created_at_kst": "2026-10-19T09:04:51.613855+09:00",
-  "state": "LOCAL_DOC_PUBLICATION_WORDING_FOLLOWUP_NOT_PUBLISHED",
+  "created_at_kst": "2026-10-19T11:38:24.126930+09:00",
+  "state": "LOCAL_RUNTIME_ANSIBLE_ROW_DELTA_NOT_PUBLISHED",
   "self_excluded": true,
   "requirements_baseline": "docs-v3.1.21",
-  "previous_candidate_manifest_sha256": "6a23bd69f7563f3645ef1c4e386e45f6164309a3e9513d892c5224cbdd45e244",
+  "previous_candidate_manifest_sha256": "eb7993dc71f4ce78f4221b3830e9027104c467946933d98ce6fd8902e6660af3",
   "observation_cutoff_kst": "2026-10-18T19:02:42+09:00",
   "files": [
     {
@@ -16,14 +16,14 @@
     {
       "path": "AS_BUILT.md",
       "repository_path": "architecture/as-built/p1-as-built-20261018-r1/AS_BUILT.md",
-      "bytes": 29133,
-      "sha256": "75dff4043397b38de0b318696bc1ff2de04051ef4fdd04ebdfff8b9d77ab5d31"
+      "bytes": 32024,
+      "sha256": "53a03ae193fbbf74b9aa2c53730d54dd0457a542cea6d9549bb5b1f1eeb3da2f"
     },
     {
       "path": "DERIVATIVE_PROVENANCE.json",
       "repository_path": "architecture/as-built/p1-as-built-20261018-r1/DERIVATIVE_PROVENANCE.json",
-      "bytes": 10491,
-      "sha256": "2b5f83195a13d0bff36f6d986affb45c5729d40a57fb25f5930b9aa498157209"
+      "bytes": 11413,
+      "sha256": "56310e1bd0b8feffc22be54127662c292beefbf414a201265ee6c5e4ece6ec1d"
     },
     {
       "path": "README.md",
@@ -60,6 +60,12 @@
       "repository_path": "architecture/as-built/p1-as-built-20261018-r1/observations/20261018T2218-harbor-cleanup.json",
       "bytes": 1691,
       "sha256": "e2a3f75bff97c7f8afbdb4fa8b66e34d8dce61c40edc13e757f07600a26933bd"
+    },
+    {
+      "path": "observations/20261019T1132-native-ansible.json",
+      "repository_path": "architecture/as-built/p1-as-built-20261018-r1/observations/20261019T1132-native-ansible.json",
+      "bytes": 28592,
+      "sha256": "feda09707c38fa1a2ff1208ef5796ffaade7b6ffcdd6a02dd0dd313a650ebdfb"
     },
     {
       "path": "runtime-sources/20261018T2047/HARBOR_PUBLIC_COMMENT.json",
@@ -536,6 +542,12 @@
     "scope": "README actual PR183/184 merge wording only; old source/provenance/observations unchanged",
     "PR184_merge": "505dce05a20a1172991835051c1bac34f65b4d16",
     "prior_manifest_sha256": "6a23bd69f7563f3645ef1c4e386e45f6164309a3e9513d892c5224cbdd45e244",
+    "final_adoption_Freeze": false
+  },
+  "runtime_followup_20261019": {
+    "observation_path": "observations/20261019T1132-native-ansible.json",
+    "health_vs_procedure": "engine60s historical condition MET; timely live confirmation NOT_PROVEN; API late66.303778s",
+    "Ansible": "Metadata rc0/PARTIAL_SCOPE; no universal collection absence or acceptance",
     "final_adoption_Freeze": false
   }
 }

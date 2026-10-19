@@ -95,17 +95,28 @@ CODEX_ASSISTED · **PROPOSED / 채택·발행·Freeze 미승인**. 제안 개정
 
 19:02·20:47·PR244 연결 및 20:43 STOP 원본은 바이트 그대로 보존했다. DOC는 제공된 실제 출력의 결속과 변경 문서만 검증했으며 새 서버 실행은 하지 않았다. 전체 원본은 로컬 보관·미공개이고, 이 후보의 게시·독립 리뷰·Freeze·최종 인수는 별도다.
 
+## 2026-10-19 11:15~11:32 native 전환·제한 조회 — 기존 기록의 후속
+
+[이번 원본·시각·판정 결속](observations/20261019T1132-native-ansible.json)은 DOC185 병합본의 변경 행만 보충한다. 10/18 worker03 집중·MON7·STOP 등 원 관측은 해당 시점 기록 그대로 보존한다.
+
+- **API:** native 요청 11:15:59 → rollout client 성공 11:16:31 KST. Worker1/2/3 각 1개·관측 최소 가용 3개이며 exact spec 변경은 restartedAt뿐이다. edge01의 3 backend와 기존 ingress GET 4건 모두 HTTP200. MON23/23 확인은 66.303778초로, 60초 내 확인은 미입증이다. 사용자 ‘이탈 기록 후 engine 진행’은 정상 API 유지·engine 1회 진행에 한정되며 미래/engine 면제가 아니다.
+- **engine:** native 11:28:47 → client 성공 11:29:19 KST. 각 Worker 1개·최소 가용 3개·19표본, exact spec은 restartedAt만 변경됐다. 실시간 POST-MON 0.781/15.921/30.937/45.906초는 미충족이고 60초 표본은 없다. 이후 공식 instant query의 평가 시각을 **11:30:19.854886 KST(client return+60초)** 로 지정해 GET4 rc0·count23/ok23/down0·정확 target set을 확인했다. 기대 engine3 Pod UID도 현재와 결속돼 **그 60초 시점의 시계열 건강조건은 MET**, 당시 실시간 확인·절차 준수는 **NOT_PROVEN** 으로 구분한다. 새 면제나 소급 실시간 PASS가 아니다.
+- **후속 현재 관측:** 11:30:58 MON23/23 exact·자기 PF 회수 true, engine 후 edge GET4 HTTP200. 전체 E2E/HA/D02 사람 점검·지속 가용성의 대체 증거는 아니다. Claude r05의 로컬21 MOCK/정적은 그 범위로 유지하고, 운영은 기존 native 경로를 채택했으며 신규 Runtime helper 설치는 0건이다.
+- **Ansible:** 11:20:45~46 메타데이터 읽기 rc0. 정확 6경로에서 Collection MANIFEST 미발견이나 PARTIAL_SCOPE이며 .pth 실행·추가 loader 경로 추적은 하지 않았다. 전체 미설치/호환성 PASS로 확대하지 않고 외부 caller·공유17 사람 직접 열람·운영 인수는 미확인/미완료다.
+
+실제 결과의 연결이며 새 운영 지시·원 AC 면제·최종 채택/Freeze 판정이 아니다. D-07·D02 미수행·SEC/MON의 기존 판단·Push 보존·#80 보류·이월25~27의 기존 책임과 조건을 유지한다.
+
 ## 논리 구성과 실제 범위
 
 | 경로·기능 | 승인 설계 / 실제 확인된 구성 | 증적·차이·한계 / 책임 |
 |---|---|---|
 | Client→edge→앱 | edge01 `.50` nginx, HTTP80→Worker NodePort30080→transaction-api Service80/target8000 | APP6190096759의 169+234+224/228 결합 재사용. 현행 digest Client→edge 새 POST는 없음. 읽은 nginx3파일만 연결, include 전체/모든 정책 실효 동일성 미입증. [D02 최종 6208668917](https://github.com/321Team/fds-project-baseline/issues/30#issuecomment-6208668917)으로 MON 수행 인수·문서 반영 대기는 해소. HTTPS NOT_MET·평문·자동 통보 공백과 기존 한정 조건은 유지. APP 이재환 / 위험 소유 이권욱 |
-| transaction-api→engine | 두 서비스 각 3 Ready·Worker별 분산은 기존 인수 관측.10/18 19:02 APP6 Ready이나 모두 worker03 배치. 내부 engine8001; API metrics9091/engine9090 분리 | Delivery/Probe 원본·N29/N37. 고정 app source의 `/livez`,`/readyz` 직접 대조. startupProbe는 실제 manifest별 판단. APP 이재환/SEC 이하영 |
+| transaction-api→engine | 두 서비스 각 3 Ready·Worker별 분산은 기존 인수 관측.10/18 19:02 APP6 Ready이나 모두 worker03 배치. 내부 engine8001; API metrics9091/engine9090 분리 | Delivery/Probe 원본·N29/N37. 고정 app source의 `/livez`,`/readyz` 직접 대조. startupProbe는 실제 manifest별 판단. APP 이재환/SEC 이하영  10/19 native 후 두 서비스 각 Worker1·관측 최소 가용3으로 연결하며, API66.303778초 확인·engine60초 시점 시계열 MET/당시 실시간 절차 NOT_PROVEN은 위 후속 절을 따른다. |
 | transaction-api→DB | db01 `.55:5432` 저장/조회, engine DB 직접 접근은 정책상 차단 | DB#11 최종 6159292006·224 23ID/23행. N42의 10/13 API7조회는 NP3/GNP7 형상 동일성이지 새 패킷 허용/거부 시험이 아님. 전체 namespace/모든 5xx는 미입증. 이재환/이하영 |
 | API 관리 | k8s-api-lb01 `.109:6443` HAProxy TCP TLS passthrough→CP `.102/.103/.104:6443` | N31/N41·StageB backend 제외/복귀·기존#9 종결. 실제 source allowlist/예산 한계는 Runbook 연결. 이권욱 |
 | 이미지 공급 | Runner `.20`→Harbor `.54:443` push, Worker `.105/.107/.108` pull/Pod start | CICD AC02/06 기존 인수 소비. 19:02의 Robot23 인증 미검증은 당시 상태다. 20:42 실제 Worker 3대·시험 Pod 5개·Secret 3개·worker01 파일 검증과 소비처 전환을 위 후속 절에 연결했다. 20:43 finish STOP은 당시 이력이며, 별도 22:18 정리로 임시 4쌍은 4/4 완료됐다. source2는 보호 보존·최종 처분 미완료. Push3 사용처/현재 인증·10/16 config/imageID provenance·구세대/S1은 별도 잔여. 이하영/이권욱 |
-| 자동화 | ansible01 `10.250.10.10`→승인 SSH/관리 경로 | 기존 P1-ANS/O02·CI86 및 역할 185 격리 결과를 재사용한다. PR87/243에 이어 PR244가 22:02 증적 편입됐다. source 0d58598의 19:27 후보 CLI/기본 복귀·legacy 실패, 19:56 paired 6대 성공, 20:19 같은 boot OS/DNS 6대 조회는 위 별도 시각·범위를 따른다. child-only 호출이며 전역 엔진 교체·서비스 apply·전체 NTP/운영 #9 인수가 아니다. 공유 원본 17개 사람 열람·최종 운영 선택/인수는 잔여. 이권욱 |
-| 클러스터 MON | monitoring-api Prometheus/Alertmanager/Grafana/KSM, monitoring-node node-exporter; 앱 metrics9091/9090·node9100·kubelet10250 | 19:02의 MON 7개 ImagePullBackOff/401 기록은 보존한다. 20:47 같은 UID·image ref/imageID의 7개 Running/Ready/started를 단발 관측했다. 재시작 증가·Probe/fresh pull/지속 관측 한계는 위 후속 절을 따른다. MON 핵심 3종 single replica·local PV worker03·Recreate 공백, 보존 15d/size16GB와 MON02 후속 범위는 유지. 이재환 |
+| 자동화 | ansible01 `10.250.10.10`→승인 SSH/관리 경로 | 기존 P1-ANS/O02·CI86 및 역할 185 격리 결과를 재사용한다. PR87/243에 이어 PR244가 22:02 증적 편입됐다. source 0d58598의 19:27 후보 CLI/기본 복귀·legacy 실패, 19:56 paired 6대 성공, 20:19 같은 boot OS/DNS 6대 조회는 위 별도 시각·범위를 따른다. child-only 호출이며 전역 엔진 교체·서비스 apply·전체 NTP/운영 #9 인수가 아니다. 공유 원본 17개 사람 열람·최종 운영 선택/인수는 잔여. 이권욱  10/19 11:20 6경로 메타데이터 rc0·MANIFEST 미발견은 PARTIAL_SCOPE(.pth 미실행)이며 전체 미설치·호환성·운영 인수가 아니다. |
+| 클러스터 MON | monitoring-api Prometheus/Alertmanager/Grafana/KSM, monitoring-node node-exporter; 앱 metrics9091/9090·node9100·kubelet10250 | 19:02의 MON 7개 ImagePullBackOff/401 기록은 보존한다. 20:47 같은 UID·image ref/imageID의 7개 Running/Ready/started를 단발 관측했다. 재시작 증가·Probe/fresh pull/지속 관측 한계는 위 후속 절을 따른다. MON 핵심 3종 single replica·local PV worker03·Recreate 공백, 보존 15d/size16GB와 MON02 후속 범위는 유지. 이재환  10/19 11:30:58 exact23/23·PF 회수와 engine60초 시점 과거 query 조건 MET을 별도로 연결하며 D02 이행·당시 실시간 확인·전체 MON 인수로 확대하지 않는다. |
 | 외부 Watchdog | in-cluster Prometheus(worker03 `.108`)→mgmt-gw01→monitor01 `.30:443`→nginx8443→localhost receiver19090 | R10 10/2 구조. localhost blackbox9115가 `.109:6443` TCP probe. 기존 IF06B 한계/귀속은 원천 SEC 판정 연결. monitor01 전체광범위 scrape 설계로 복원하지 않음. 이재환/이하영 |
 | Grafana 관리 | ClusterIP, 승인된 관리 PF 요구와 실제 배타성 입증을 구분 | 19:14:40 PF NOT_MET+한정 위험수용. E1/E2/E4 조건 내 유효·E3 정상 사용 금지·C1 회전 보류. 사람 사본·과거 감사 공백 유지. 이권욱/이하영 |
 | Backup/Restore | PostgreSQL16.14,9/29 dump51,491B·1,209행·격리복원·R02 E2E·원복/정리 | N21/N43·DR#21 최종 6138444604. 9/3 D01 5,206B dump와 다른 원본. PC/SHARE 보관·10/26 재검토는 자동 폐기 아님. 이재환/이권욱 |
