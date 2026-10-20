@@ -1,3 +1,5 @@
+> **2026-10-20 최신 운영 delta:** [권욱 사전 준비 통합](../20261020/README.md)을 우선 읽는다. Review는 10/23 18:00~19:30으로 통합했고 양측 담당 회신·증적/정리 인계를 연결했다. 아래 과거 제안·Phase1 일괄 경계·비용 제한은 당시 이력이며 최신 결정으로 해석한다. 정본/Runtime/티켓 완료를 자동 상향하지 않는다.
+
 # Phase 2 전용 사전 준비 — 2026-10-08
 
 **10/19 설계 Freeze 보완:** [통합 사양 검토안](architecture-freeze-candidate-20261018.md). API443·DB source /24·A2/P1 예외·Secret 분담과 두 담당 기술 입력을 반영하고, #34 AC 연결 및 후속 실측/실행 조건을 정리했다. READY_FOR_LEAD_DECISION이며 실제 최종 승인과 구분한다. D22는 A 방향 확정·FINAL PENDING_RUNTIME이며, 아래 과거의 ‘미선택’과 구분한다. Full Freeze·새 Create GO·인수 완료를 선언하지 않는다.
