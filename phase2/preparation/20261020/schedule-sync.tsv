@@ -1,0 +1,4 @@
+Record ID	Issue	Meeting Start KST	Meeting End KST	Operational Decision	Canonical Sync
+DEC-CAL-P2-01	52	2026-10-23T18:00:00+09:00	2026-10-23T19:30:00+09:00	세 명 가용 회신을 반영한 단일 회의계획	현재 운영 delta/발행 WBS 변경 아님
+P2-REV-01	55	2026-10-23T18:00:00+09:00	2026-10-23T19:30:00+09:00	Review/Action 접수 시간 연결·Close 10/26 유지	후보 편입/Calendar 사용 기록 별도
+MS-P2-REVIEW-01	56	2026-10-23T18:00:00+09:00	2026-10-23T19:30:00+09:00	회의 실시·Gate PASS·완료일 미기재	후보 편입/Calendar 사용 기록 별도
