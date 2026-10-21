@@ -37,3 +37,31 @@
 10/23 Review 18:00~19:30·10/26 Close와, 기존 VPN/route의10/23 00:00 전 정리·Robot/정상 pull Secret의10/23 23:59 수명은 별개다. 승인 규모의 자원을 프로젝트 종료일까지 유지하는 비용 결정만으로 보안 수명이 자동 연장되지 않는다.
 
 근거: [PR109](https://github.com/321Team/infra-cicd/pull/109), [PR110](https://github.com/321Team/infra-cicd/pull/110), [#42 D22](https://github.com/321Team/fds-project-baseline/issues/42#issuecomment-6293161531), [#47 v1.1](https://github.com/321Team/fds-project-baseline/issues/47#issuecomment-6315050301), [앱 SA 결정](https://github.com/321Team/infra-rosa/issues/12#issuecomment-6315085580), [기존 증적 대장](evidence-roster.md).
+
+## 10/22 자격 전달 경로 구체화 — 기존 SSH 운반부 재사용 우선 권고
+
+**권고이며 실제 채택/구현 완료가 아니다.** [#82 10/20 실행 보고](https://github.com/321Team/infra-ansible/issues/82#issuecomment-6283088910)와 당시 배치 helper의 동일 SHA 원본을 대조했다. 실제 관측 방향은 **B `ansible01` → A `cicd-runner01`**이며 역방향 성공을 추정하지 않는다.
+
+| 기존 근거 | 재사용 가능 범위 | #46에 그대로 가져오지 않는 부분 |
+|---|---|---|
+| 검증 SSH key/known_hosts를 사용하는 관리 전송, 코드의 `StrictHostKeyChecking=yes`·`IdentitiesOnly=yes`·`BatchMode=yes` | 새 외부 중계 서비스·SSH key·root 작업을 먼저 만들기보다 기존 관리 SSH 운반부를 후보로 검토 | 당시 경로 성공을 현재 접속/host key·ROSA named admin 권한/issuer 위치·TokenRequest 허용으로 확대하지 않음 |
+| 기존 Runner host/account·UID의 10/20 배치/readback | 기존 P1 workflow의 문자열 후보 외에 역사적 호스트 관측 출처가 있음. 현재 P2 채택값과는 분리 | 지금 실제 호스트를 다시 접속·인수했다고 쓰지 않음. 다른 회차의 등록/삭제 token·sudo 예외·GO를 재사용하지 않음 |
+| `release-ci88.py`의 packet 전송/삭제·회수 보고 | SSH 운반과 당시 절차의 추적 근거만 참고 | 이 helper는 SCP로0600 packet 파일을 전달한다. **#46 메모리 전달에는 그대로 호출/복사하지 않음**. 임시 파일도 같은 제한이며 현재 별도 실행0 |
+
+### 연결 순서와 실제 구현 공백
+
+1. 자격을 발급하기 전에 실제 issuer 위치/기존 권한, 운반 경로, 정확한 대기 job의 연결점을 정한다. 현재 named admin이 어디에서 작업하는지 확인되지 않았으므로 CloudShell/ansible01 중 하나로 단정하거나 관리 호스트에 ROSA 로그인·권한을 추가하지 않는다.
+2. 검토된 Runner/구성에서 해당 job의 native repository·Run/Attempt·workflow SHA와 실제 Binding을 대조하고 ready 상태를 만든다. 이 실행 식별값·1회 준비 식별자는 그 실행에서 생성되며 지금 값이나 미래 hash를 만들지 않는다. ready/식별자는 Runtime GO를 대체하지 않는다.
+3. 준비된 job을 대상으로 기존 named admin 절차에서 실행 직전 자격을 발급한다. source token은 실제 original/control pin의 저장소와 기존 reader 기능에 필요한 최소 범위로 별도 전달한다. 저장소별 발급이나 새 GitHub App 설치를 의무화하지 않는다.
+4. **아직 없는 부분은 교차 호스트 수신을 정확한 Actions job의 신뢰된 부모 메모리에 결속하는 1회 ingress다.** SSH remote process stdin은 그 job의 stdin/부모 메모리가 아니며 `PipeCredentialReceiver(fd>=3)`도 아니다. 원격 명령을 하나 붙이는 것만으로 연결됐다고 처리하지 않는다. peer/정확 job 결속·소유 수신 자원·메시지 경계/길이·재사용 거부가 검토될 때 기존 `JobSite.build(context, command)` 앞단에 연결한다. 현재 새로운 socket/FIFO/daemon·수신 경로를 설치하거나 기존 anonymous-pipe 계약을 변경하지 않았다.
+5. 실제 자격이 모두 부모 메모리에 들어온 뒤에만 PR110 `build_owned_invocation`을 호출한다. 이때 `config/plan/finish_slot`·ROSA token·`SourceHandoff` tuple·`wire`를 명시적으로 넘기며 내부의 별도 익명 pipe·EOF·소유권 인계로 연결한다. **공동10초는 이 내부 준비/수신 예산**이므로 사람 대기·SSH 협상·발급을 이 안에 넣거나 매 저장소 갱신하지 않는다. 그렇다고 교차 호스트 준비 시간을 무제한 허용하는 것은 아니다. 실제900초 수명·승인 종료·최초 쓰기 잔여 예산은 계속 소비된다.
+
+최소 후속 확인은 **하영의 실제 issuer 작업 위치/기존 발급 권한**과 **권욱·재환의 정확한 대기 job에 연결할 수신 소유권/관리 경로**다. 이미 수용한 Route host/current/원본·개인 D-11d·기존 Runner 시험 전체를 다시 제출받는 절차가 아니다. 후속 peer/직렬화/수신부를 선택하기 전에는 `SITE=None`을 유지한다.
+
+### 실패 인수와 검증 범위
+
+- 오접속·옛 Run/Attempt·잘못된 Binding은 자격 전달 전에 차단해야 한다. 교차 호스트 ingress의 replay/정확 job 결속은 **현재 미구현/미시험**이며 기존 CI로 증명하지 않는다.
+- 발급 뒤 지연·만료 임박, 부분 source 수신·전달 중복·EOF 누락·용량/문법 오류·ROSA/source bytes 재사용은 자동 재발급/재전송으로 넘기지 않는다. 기존 handoff의 오류·FD 정리 시험은 재사용하고, 아직 없는 ingress의 실패 시험을 실행했다고 쓰지 않는다.
+- 응답 불명확/정리 실패는 해당 회차의 소유 자원과 책임을 인계한다. 로컬 close/프로세스 종료는 서버 자격 회수나 전체 배포 원복의 증명이 아니다. 정상 Runner/Worker·다른 job을 광범위하게 종료하지 않는다.
+
+이번에는 기존 소스/보고의 읽기·정적 대조만 수행했다. 실제 SSH/서버 접속·named admin 로그인·token 발급/전달·수신 경로 설치·운영 SITE 채택·Runtime은 모두 미실행이다.
