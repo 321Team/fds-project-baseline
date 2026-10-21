@@ -15,3 +15,15 @@
 
 #33/#36의 기존 In Progress를 유지한다. 일정/소스/증적 정리와 Milestone/전체 AC 인수·티켓 종결은 구분한다.
 #40/#48/#120의 승인된 Deferred와 기존 Known Issue·이월 Risk의 Owner/기한/재검토 trigger를 보존한다.
+
+## 10/22 단독 AC 대조 결과
+
+기존 인계표를 재작성하지 않고 원 AC와의 차이만 정리했다.
+
+| 대상 | 이번 대조로 정리한 것 | 인수로 올리지 않은 잔여 |
+|---|---|---|
+| #33 Start | Phase1 Close·#34 Freeze·계정/기반·P0 범위·단일 Review 시간·기존 Risk 인계 출처 연결 | 공식 Entry/Exit 판단 기록과 그 결과의 관리 추적은 별도. 준비표/실제 과거 작업을 소급 Start GO·완료일로 바꾸지 않음 |
+| #36 D21 | OCI project-suitability NO-GO·AWS Relay 단일 FINAL과 #35/#37 소비 입력·ev161 편입 재사용 | 전체 capture 명령·RC/version·일부 initiator/cleanup raw는 미수집으로 보존. 이를 전체 미결 전제0/모든 AC PASS로 바꾸거나 OCI 전량 재시험을 요구하지 않음 |
+| #52 일정 소비 | 10/23 18:00~19:30·세 담당 참석/기존 승인권자 확정, 기존 AC3체크·PR194 편입 유지 | 실제 Calendar 등록/초대·발행 WBS 정합은 미실행. 같은 참석 회신·ICS를 다시 요구하지 않음 |
+
+이 대조는 기존 진행 상태·보류·인수 기준을 유지하는 로컬/문서 검토다. 티켓 상태·AC 체크·종결·새 GO는 변경하지 않았다.
