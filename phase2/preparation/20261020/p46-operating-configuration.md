@@ -38,7 +38,7 @@
 
 근거: [PR109](https://github.com/321Team/infra-cicd/pull/109), [PR110](https://github.com/321Team/infra-cicd/pull/110), [#42 D22](https://github.com/321Team/fds-project-baseline/issues/42#issuecomment-6293161531), [#47 v1.1](https://github.com/321Team/fds-project-baseline/issues/47#issuecomment-6315050301), [앱 SA 결정](https://github.com/321Team/infra-rosa/issues/12#issuecomment-6315085580), [기존 증적 대장](evidence-roster.md).
 
-## 10/22 자격 전달 경로 구체화 — 기존 SSH 운반부 재사용 우선 권고
+## 10/22 01시대 자격 전달 경로 검토 이력 — 기존 SSH 운반부 재사용 우선 권고
 
 **권고이며 실제 채택/구현 완료가 아니다.** [#82 10/20 실행 보고](https://github.com/321Team/infra-ansible/issues/82#issuecomment-6283088910)와 당시 배치 helper의 동일 SHA 원본을 대조했다. 실제 관측 방향은 **B `ansible01` → A `cicd-runner01`**이며 역방향 성공을 추정하지 않는다.
 
@@ -53,15 +53,23 @@
 1. 자격을 발급하기 전에 실제 issuer 위치/기존 권한, 운반 경로, 정확한 대기 job의 연결점을 정한다. 현재 named admin이 어디에서 작업하는지 확인되지 않았으므로 CloudShell/ansible01 중 하나로 단정하거나 관리 호스트에 ROSA 로그인·권한을 추가하지 않는다.
 2. 검토된 Runner/구성에서 해당 job의 native repository·Run/Attempt·workflow SHA와 실제 Binding을 대조하고 ready 상태를 만든다. 이 실행 식별값·1회 준비 식별자는 그 실행에서 생성되며 지금 값이나 미래 hash를 만들지 않는다. ready/식별자는 Runtime GO를 대체하지 않는다.
 3. 준비된 job을 대상으로 기존 named admin 절차에서 실행 직전 자격을 발급한다. source token은 실제 original/control pin의 저장소와 기존 reader 기능에 필요한 최소 범위로 별도 전달한다. 저장소별 발급이나 새 GitHub App 설치를 의무화하지 않는다.
-4. **아직 없는 부분은 교차 호스트 수신을 정확한 Actions job의 신뢰된 부모 메모리에 결속하는 1회 ingress다.** SSH remote process stdin은 그 job의 stdin/부모 메모리가 아니며 `PipeCredentialReceiver(fd>=3)`도 아니다. 원격 명령을 하나 붙이는 것만으로 연결됐다고 처리하지 않는다. peer/정확 job 결속·소유 수신 자원·메시지 경계/길이·재사용 거부가 검토될 때 기존 `JobSite.build(context, command)` 앞단에 연결한다. 현재 새로운 socket/FIFO/daemon·수신 경로를 설치하거나 기존 anonymous-pipe 계약을 변경하지 않았다.
+4. **당시 미구현은 교차 호스트 수신을 정확한 job 부모에 결속하는 1회 ingress였다. 아래 09시대 구현 delta와 구분한다.** SSH remote process stdin은 그 job의 stdin/부모 메모리가 아니며 `PipeCredentialReceiver(fd>=3)`도 아니다. 원격 명령 하나로 연결됐다고 처리하지 않는다. 실제 SSH peer/정확 job rendezvous·수신 소유권 채택은 여전히 잔여다. 새로운 socket/FIFO/daemon·수신 경로를 설치하거나 기존 anonymous-pipe 계약을 변경하지 않았다.
 5. 실제 자격이 모두 부모 메모리에 들어온 뒤에만 PR110 `build_owned_invocation`을 호출한다. 이때 `config/plan/finish_slot`·ROSA token·`SourceHandoff` tuple·`wire`를 명시적으로 넘기며 내부의 별도 익명 pipe·EOF·소유권 인계로 연결한다. **공동10초는 이 내부 준비/수신 예산**이므로 사람 대기·SSH 협상·발급을 이 안에 넣거나 매 저장소 갱신하지 않는다. 그렇다고 교차 호스트 준비 시간을 무제한 허용하는 것은 아니다. 실제900초 수명·승인 종료·최초 쓰기 잔여 예산은 계속 소비된다.
 
 최소 후속 확인은 **하영의 실제 issuer 작업 위치/기존 발급 권한**과 **권욱·재환의 정확한 대기 job에 연결할 수신 소유권/관리 경로**다. 이미 수용한 Route host/current/원본·개인 D-11d·기존 Runner 시험 전체를 다시 제출받는 절차가 아니다. 후속 peer/직렬화/수신부를 선택하기 전에는 `SITE=None`을 유지한다.
 
 ### 실패 인수와 검증 범위
 
-- 오접속·옛 Run/Attempt·잘못된 Binding은 자격 전달 전에 차단해야 한다. 교차 호스트 ingress의 replay/정확 job 결속은 **현재 미구현/미시험**이며 기존 CI로 증명하지 않는다.
+- 오접속·옛 Run/Attempt·잘못된 Binding은 자격 전달 전에 차단해야 한다. 교차 호스트 ingress의 replay/정확 job 결속은 **당시 미구현/미시험**이었다. 아래 새 구현의 오프라인 결과와 실제 현장 인증을 구분한다.
 - 발급 뒤 지연·만료 임박, 부분 source 수신·전달 중복·EOF 누락·용량/문법 오류·ROSA/source bytes 재사용은 자동 재발급/재전송으로 넘기지 않는다. 기존 handoff의 오류·FD 정리 시험은 재사용하고, 아직 없는 ingress의 실패 시험을 실행했다고 쓰지 않는다.
 - 응답 불명확/정리 실패는 해당 회차의 소유 자원과 책임을 인계한다. 로컬 close/프로세스 종료는 서버 자격 회수나 전체 배포 원복의 증명이 아니다. 정상 Runner/Worker·다른 job을 광범위하게 종료하지 않는다.
 
 이번에는 기존 소스/보고의 읽기·정적 대조만 수행했다. 실제 SSH/서버 접속·named admin 로그인·token 발급/전달·수신 경로 설치·운영 SITE 채택·Runtime은 모두 미실행이다.
+
+## 10/22 09시대 구현 delta — 운영 입력과 분리된 전송부·부모 helper
+
+[PR111](https://github.com/321Team/infra-cicd/pull/111) HEAD `96b483b5ff8c7d77eb80bc6b6ee03cc134af54a8`에 strict UTF-8 프레임·정확 job/Binding/nonce·1회 수신 core, 명시한 owned Linux pipe FD의 송수신 adapter, `ParentJobBuilder`를 구현했다. 공개 ready→새 요청/마감 재확인→검토된 channel 수신→PR110 별도 익명 pipe→기존 driver 순서다. peer receipt/nonce는 인증·GO가 아니며 실제 SSH 프로세스·listener·issuer를 기본으로 설치하지 않는다.
+
+- [Linux hosted CI](https://github.com/321Team/infra-cicd/actions/runs/39698307687) **763=759 PASS/4 SKIP**, 실제 로컬 pipe→부모 helper→수신 core→기존 pipe/driver/factory/finish 연결 포함. Windows **763=663 PASS/100 SKIP**. 첫 Linux 실패 1건은 재사용 거부 시험 helper의 잘못된 요청을 수정한 뒤 통과했으며 제품 코드는 그 수정에서 불변이다.
+- 미확정 운영 입력 없이 구현한 core/helper 범위다. 실제 두 호스트의 SSH 인증·현재 host key·정확한 job rendezvous, 하영 issuer 위치/권한·UID/CA/IP·운영 자격, 권욱의 source/control·Binding·finish/경로 채택은 여전히 잔여다. monotonic 숫자를 다른 호스트의 절대 시각으로 보내거나900초 수명을 갱신하지 않는다.
+- PR111은 독립 코드 리뷰·병합 전이다. PR110의 하영 명시 범위 승인을 남은 재환 영역으로 확대하지 않는다. 문서 PR195는 실행 입력이 아닌 준비 기록이므로 [REVIEW_AUTHORITY_POLICY §2](../../../governance/REVIEW_AUTHORITY_POLICY.md)에 따라 Lead 검토로 병합 가능하며 별도 이중 승인을 추가하지 않는다. 이 기록의 병합은 코드/Runtime GO·정본 발행·티켓 완료가 아니다.

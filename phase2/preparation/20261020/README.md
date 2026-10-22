@@ -1,11 +1,11 @@
 # 권욱 담당 Phase 2 사전 준비 통합 — 2026-10-20
 
-이권욱 / CODEX_ASSISTED. 기준: PR194 병합 main `cec05db28347d5d1e6016af423991629d7133fd7`, 2026-10-22 00시대 KST 최신 Issue·PR 재조회. 기존 운영 인계의 delta만 반영한다.
+이권욱 / CODEX_ASSISTED. 기준: PR194 병합 main `cec05db28347d5d1e6016af423991629d7133fd7`, 2026-10-22 09시대 KST PR·검사 재조회. 기존 운영 인계의 delta만 반영한다.
 발행 정본 `docs-v3.1.22` 이후 운영 delta다. 기존 Tag·발행 WBS/패키지·과거 원문은 변경하지 않는다.
 
 | 순서 | 이번 정리 | 실제 완료 범위·다음 조건 |
 |---|---|---|
-| 1 #46 | PR100~109 MERGED, PR110 부모 자격·reader 연결은 하영 승인/재환 리뷰 대기. [운영 구성 연결표](p46-operating-configuration.md) | 코드 연결·실제 운영 구성 채택·Runtime 인수 분리. 미확정 field는 유지하고 실제 원본/자격/고정 경로·finish scope 도착 후 변경분만 연결 |
+| 1 #46 | PR100~109 MERGED, PR110 하영 범위 승인/재환 범위 대기. PR111 수신 core·pipe 전송부·job 부모 helper 구현/CI 성공, 독립 코드 리뷰 대기. [운영 구성 연결표](p46-operating-configuration.md) | 실제 SSH/job rendezvous·issuer/원본/자격/고정 경로·finish scope는 미채택. 코드 연결·운영 구성·Runtime 인수를 분리하고 미확정 field 유지 |
 | 2 #42 | C1C3 v1 기존 정적 B1~B3 수정 연결·앱 SA (가) 결정, [증적 대장](evidence-roster.md) | 실제 C1C3/SA readback·TLS/인증·cold-pull·실패/회수 수신 후 D22 FINAL. 기존 정적 수정·원본을 다시 요구하지 않음 |
 | 3 #49 | [증적 대장](evidence-roster.md) | 양측 회신·MERGE 반영. #54 Freeze/AC 인수는 별도 |
 | 4 #52 | [Review 계획](review-plan.md), [Calendar 가져오기용 파일](review-20261023.ics), [WBS/Calendar 변경표](schedule-sync.tsv) | 10/23 18:00~19:30, 세 명 참석 가능. 회의 실시·초대 발송·정본 발행과 구분 |
