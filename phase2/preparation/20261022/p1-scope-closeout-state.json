@@ -29,8 +29,8 @@
       "proposed_state": "closed",
       "proposed_state_reason": "not_planned",
       "authority": "LEAD_CONFIRMATION_PENDING",
-      "actual_state": "NOT_APPLIED",
-      "confirmation_comment": null,
+      "actual_state": "LEAD_REPLY_PENDING_OPEN_UNCHANGED",
+      "confirmation_comment": "https://github.com/321Team/fds-project-baseline/issues/25#issuecomment-6331493193",
       "close_comment": null,
       "evidence": [
         "https://github.com/321Team/fds-project-baseline/issues/25#issuecomment-6256808772",
@@ -56,8 +56,8 @@
       "proposed_state": "closed",
       "proposed_state_reason": "not_planned",
       "authority": "LEAD_CONFIRMATION_PENDING",
-      "actual_state": "NOT_APPLIED",
-      "confirmation_comment": null,
+      "actual_state": "LEAD_REPLY_PENDING_OPEN_UNCHANGED",
+      "confirmation_comment": "https://github.com/321Team/fds-project-baseline/issues/26#issuecomment-6331493894",
       "close_comment": null,
       "evidence": [
         "https://github.com/321Team/fds-project-baseline/issues/26#issuecomment-6250018800",
@@ -83,8 +83,8 @@
       "proposed_state": "closed",
       "proposed_state_reason": "not_planned",
       "authority": "LEAD_CONFIRMATION_PENDING",
-      "actual_state": "NOT_APPLIED",
-      "confirmation_comment": null,
+      "actual_state": "LEAD_REPLY_PENDING_OPEN_UNCHANGED",
+      "confirmation_comment": "https://github.com/321Team/fds-project-baseline/issues/27#issuecomment-6331494437",
       "close_comment": null,
       "evidence": [
         "https://github.com/321Team/fds-project-baseline/issues/27#issuecomment-6250019054",
@@ -110,13 +110,16 @@
       "proposed_state": "closed",
       "proposed_state_reason": "completed",
       "authority": "USER_CONFIRMED",
-      "actual_state": "NOT_APPLIED",
+      "actual_state": "CLOSED_VERIFIED",
       "confirmation_comment": null,
-      "close_comment": null,
+      "close_comment": "https://github.com/321Team/fds-project-baseline/issues/40#issuecomment-6331489750",
       "evidence": [
         "https://github.com/321Team/fds-project-baseline/issues/40#issuecomment-6073998820",
         "https://github.com/321Team/fds-project-baseline/issues/40#issuecomment-6150473837"
-      ]
+      ],
+      "actual_status": "Done",
+      "actual_state_reason": "completed",
+      "actual_closed_at": "2026-10-22T02:50:39Z"
     },
     {
       "number": 41,
@@ -137,8 +140,8 @@
       "proposed_state": "closed",
       "proposed_state_reason": "completed",
       "authority": "LEAD_CONFIRMATION_PENDING",
-      "actual_state": "NOT_APPLIED",
-      "confirmation_comment": null,
+      "actual_state": "LEAD_REPLY_PENDING_OPEN_UNCHANGED",
+      "confirmation_comment": "https://github.com/321Team/fds-project-baseline/issues/41#issuecomment-6331495009",
       "close_comment": null,
       "evidence": [
         "https://github.com/321Team/fds-project-baseline/issues/41#issuecomment-6099807120",
@@ -164,8 +167,8 @@
       "proposed_state": "closed",
       "proposed_state_reason": "not_planned",
       "authority": "LEAD_CONFIRMATION_PENDING",
-      "actual_state": "NOT_APPLIED",
-      "confirmation_comment": null,
+      "actual_state": "LEAD_REPLY_PENDING_OPEN_UNCHANGED",
+      "confirmation_comment": "https://github.com/321Team/fds-project-baseline/issues/44#issuecomment-6331495597",
       "close_comment": null,
       "evidence": [
         "https://github.com/321Team/fds-project-baseline/issues/44#issuecomment-5907064831",
@@ -191,13 +194,16 @@
       "proposed_state": "closed",
       "proposed_state_reason": "not_planned",
       "authority": "USER_CONFIRMED",
-      "actual_state": "NOT_APPLIED",
+      "actual_state": "CLOSED_VERIFIED",
       "confirmation_comment": null,
-      "close_comment": null,
+      "close_comment": "https://github.com/321Team/fds-project-baseline/issues/48#issuecomment-6331490896",
       "evidence": [
         "https://github.com/321Team/fds-project-baseline/issues/48#issuecomment-5976876088",
         "https://github.com/321Team/fds-project-baseline/issues/48#issuecomment-6150475259"
-      ]
+      ],
+      "actual_status": "Cancelled",
+      "actual_state_reason": "not_planned",
+      "actual_closed_at": "2026-10-22T02:50:45Z"
     },
     {
       "number": 51,
@@ -218,8 +224,8 @@
       "proposed_state": "closed",
       "proposed_state_reason": "not_planned",
       "authority": "LEAD_CONFIRMATION_PENDING",
-      "actual_state": "NOT_APPLIED",
-      "confirmation_comment": null,
+      "actual_state": "LEAD_REPLY_PENDING_OPEN_UNCHANGED",
+      "confirmation_comment": "https://github.com/321Team/fds-project-baseline/issues/51#issuecomment-6331496186",
       "close_comment": null,
       "evidence": [
         "https://github.com/321Team/fds-project-baseline/issues/51#issuecomment-5907195667",
@@ -245,8 +251,8 @@
       "proposed_state": "closed",
       "proposed_state_reason": "completed",
       "authority": "LEAD_CONFIRMATION_PENDING",
-      "actual_state": "NOT_APPLIED",
-      "confirmation_comment": null,
+      "actual_state": "LEAD_REPLY_PENDING_OPEN_UNCHANGED",
+      "confirmation_comment": "https://github.com/321Team/fds-project-baseline/issues/95#issuecomment-6331496737",
       "close_comment": null,
       "evidence": [
         "https://github.com/321Team/fds-project-baseline/issues/95#issuecomment-5907067523",
@@ -272,13 +278,16 @@
       "proposed_state": "closed",
       "proposed_state_reason": "completed",
       "authority": "USER_CONFIRMED",
-      "actual_state": "NOT_APPLIED",
+      "actual_state": "CLOSED_VERIFIED",
       "confirmation_comment": null,
-      "close_comment": null,
+      "close_comment": "https://github.com/321Team/fds-project-baseline/issues/120#issuecomment-6331492045",
       "evidence": [
         "https://github.com/321Team/fds-project-baseline/issues/120#issuecomment-5912507218",
         "https://github.com/321Team/fds-project-baseline/issues/120#issuecomment-6150476545"
-      ]
+      ],
+      "actual_status": "Done",
+      "actual_state_reason": "completed",
+      "actual_closed_at": "2026-10-22T02:50:50Z"
     },
     {
       "number": 121,
@@ -299,13 +308,17 @@
       "proposed_state": "closed",
       "proposed_state_reason": "completed",
       "authority": "LEAD_CONFIRMATION_PENDING",
-      "actual_state": "NOT_APPLIED",
-      "confirmation_comment": null,
+      "actual_state": "LEAD_REPLY_PENDING_OPEN_UNCHANGED",
+      "confirmation_comment": "https://github.com/321Team/fds-project-baseline/issues/121#issuecomment-6331497306",
       "close_comment": null,
       "evidence": [
         "https://github.com/321Team/fds-project-baseline/issues/121#issuecomment-5912511435",
         "https://github.com/321Team/fds-project-baseline/issues/121#issuecomment-6182868066"
       ]
     }
-  ]
+  ],
+  "pr": "https://github.com/321Team/fds-project-baseline/pull/197",
+  "actual_issue_closures": 3,
+  "lead_confirmation_requests": 8,
+  "lead_replies_received": 0
 }

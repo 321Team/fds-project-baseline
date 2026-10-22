@@ -28,6 +28,26 @@
 
 현재 실제 적용·담당 요청 링크는 [적용 기록](p1-scope-closeout-state.json), 기술 미완료·위험·재개 조건은 [잔여 대장](p1-remaining-register.md)을 함께 본다. 표의 후보를 실제 종결로 읽지 않는다.
 
+## 실제 반영·확인 요청 결과
+
+권욱 본인 결정 3건은 원본 직전 조회·최소 줄 변경·사후 대조 후 실제 종결했다. 다른 8건은 현재 확인 요청만 등록했으며 OPEN/To Do를 유지한다. 미회신은 동의가 아니다.
+
+| 티켓 | 실제 처리 | 판정/요청 기록 |
+|---|---|---|
+| [#25](https://github.com/321Team/fds-project-baseline/issues/25) | open/To Do · 담당 확인 대기 | [현재 delta 확인 요청](https://github.com/321Team/fds-project-baseline/issues/25#issuecomment-6331493193) |
+| [#26](https://github.com/321Team/fds-project-baseline/issues/26) | open/To Do · 담당 확인 대기 | [현재 delta 확인 요청](https://github.com/321Team/fds-project-baseline/issues/26#issuecomment-6331493894) |
+| [#27](https://github.com/321Team/fds-project-baseline/issues/27) | open/To Do · 담당 확인 대기 | [현재 delta 확인 요청](https://github.com/321Team/fds-project-baseline/issues/27#issuecomment-6331494437) |
+| [#40](https://github.com/321Team/fds-project-baseline/issues/40) | **closed/completed · Done** | [Lead 확정·종결](https://github.com/321Team/fds-project-baseline/issues/40#issuecomment-6331489750) |
+| [#41](https://github.com/321Team/fds-project-baseline/issues/41) | open/To Do · 담당 확인 대기 | [현재 delta 확인 요청](https://github.com/321Team/fds-project-baseline/issues/41#issuecomment-6331495009) |
+| [#44](https://github.com/321Team/fds-project-baseline/issues/44) | open/To Do · 담당 확인 대기 | [현재 delta 확인 요청](https://github.com/321Team/fds-project-baseline/issues/44#issuecomment-6331495597) |
+| [#48](https://github.com/321Team/fds-project-baseline/issues/48) | **closed/not_planned · Cancelled** | [Lead 확정·종결](https://github.com/321Team/fds-project-baseline/issues/48#issuecomment-6331490896) |
+| [#51](https://github.com/321Team/fds-project-baseline/issues/51) | open/To Do · 담당 확인 대기 | [현재 delta 확인 요청](https://github.com/321Team/fds-project-baseline/issues/51#issuecomment-6331496186) |
+| [#95](https://github.com/321Team/fds-project-baseline/issues/95) | open/To Do · 담당 확인 대기 | [현재 delta 확인 요청](https://github.com/321Team/fds-project-baseline/issues/95#issuecomment-6331496737) |
+| [#120](https://github.com/321Team/fds-project-baseline/issues/120) | **closed/completed · Done** | [Lead 확정·종결](https://github.com/321Team/fds-project-baseline/issues/120#issuecomment-6331492045) |
+| [#121](https://github.com/321Team/fds-project-baseline/issues/121) | open/To Do · 담당 확인 대기 | [현재 delta 확인 요청](https://github.com/321Team/fds-project-baseline/issues/121#issuecomment-6331497306) |
+
+#40은 결정/미적용 근거 2개, #48은 IP 선택 시 제외 결정 근거 1개, #120은 미도입 선택/기존 계약 유지 2개만 체크했다. 조건부 도입·실제 Query/보안·Argo sync 시험 체크를 성공으로 바꾸지 않았다. 관리 Status/Schedule Note와 위 체크 외 본문·제목·담당·Priority·일정·보관 원문은 대조해 보존했다.
+
 ## 권욱 담당 확정 범위
 
 1. **#40 D23:** 이번 프로젝트에서는 추가 Hybrid DNS를 도입하지 않는다. DB/Harbor의 기존 IP endpoint와 ROSA public API/Route의 기존 DNS·엄격 TLS 계약을 유지한다. 새 Resolver·조건부 전달·hosted zone·hosts override·53포트 허용을 자동 부여하지 않는다. 이 선택이 기존 DNS 가용성/접속 Runtime PASS를 새로 선언한 것은 아니다.
