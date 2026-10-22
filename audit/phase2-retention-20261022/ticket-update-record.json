@@ -1,0 +1,173 @@
+{
+  "schema": "fds.p2.retention-change-record.v1",
+  "decision": {
+    "decision_owner": "이권욱",
+    "instruction": "우리 자원(클라우드 포함) 월요일 오전까지 유지·티켓 반영·PR 등록",
+    "user_exact_deadline_answer": "10/26(월) 12:00 완료",
+    "deadline_kst": "2026-10-26T12:00:00+09:00",
+    "review_time_unchanged": "2026-10-23T18:00:00+09:00/2026-10-23T19:30:00+09:00",
+    "runtime_performed_by_reviewer": false,
+    "date_scope_change_only": true
+  },
+  "decision_url": "https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-6338609757",
+  "recorded_kst": "2026-10-22 19:31 KST",
+  "ticket_update_receipts": [
+    {
+      "repository": "321Team/fds-project-baseline",
+      "number": 35,
+      "checked_updated_at": "2026-10-22T00:26:36Z",
+      "before_sha256": "677720e9b9fc7235f187a60f2dceecae874203e5a774a560821b584b7e8c8f49",
+      "after_sha256": "abe9c026611d566d0fdf0ca924e91506948db06e78f874cb3f1a3245497bbda0",
+      "changed_field": "Schedule Note",
+      "before_line": "| Schedule Note | 10-08 Stage-A 목표는 #36 D21 결정 → #34 최종 Freeze 이후에만 유효하다. Transport Adapter·Subnet/AZ·Route·backend/state 계약 및 reviewed plan/evidence를 고정한 뒤 #37(10-12)이 소비한다. 10-14 Full completion/G4 목표 유지. 당일 작업창 부족 또는 선행 HOLD 시 handoff를 완료로 기록하지 않고 후속 일정 재평가; Stage-A는 전체 AC PASS가 아니다. |",
+      "after_line": "| Schedule Note | 10-08 Stage-A 목표는 #36 D21 결정 → #34 최종 Freeze 이후에만 유효하다. Transport Adapter·Subnet/AZ·Route·backend/state 계약 및 reviewed plan/evidence를 고정한 뒤 #37(10-12)이 소비한다. 10-14 Full completion/G4 목표 유지. 당일 작업창 부족 또는 선행 HOLD 시 handoff를 완료로 기록하지 않고 후속 일정 재평가; Stage-A는 전체 AC PASS가 아니다. / 자원 보관/최종 정리는10/26(월)12:00 KST로 변경. 실제 IaC 구현 완료일·AC·새 Plan/Apply·권한 범위는 유지. 자원 유지 변경 결정: [6338609757](https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-6338609757). |",
+      "non_target_diff": 0,
+      "damage_increase": 0,
+      "protected_fields_unchanged": true,
+      "comment": "https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-6338611421"
+    },
+    {
+      "repository": "321Team/fds-project-baseline",
+      "number": 37,
+      "checked_updated_at": "2026-10-22T10:31:56Z",
+      "before_sha256": "2b32f927a8fec876b349ab7a0b7fe51277a06c44fe85a8a05e814f2ef69fdada",
+      "after_sha256": "3cd64407f3275b75bbdb2227fc5336b37e7e250de88ff11030266a91acb0f2ab",
+      "changed_field": "Schedule Note",
+      "before_line": "| Schedule Note | #35 전체 완료를 기다리지 않고 10-08 Stage-A handoff(VPC/Subnet/Route/VPN 입력) 수신 후 10-12 착수한다. #35 Full과 #37 완료는 모두 10-14 G4 판정 전에 충족해야 한다. |",
+      "after_line": "| Schedule Note | #35 전체 완료를 기다리지 않고 10-08 Stage-A handoff(VPC/Subnet/Route/VPN 입력) 수신 후 10-12 착수한다. #35 Full과 #37 완료는 모두 10-14 G4 판정 전에 충족해야 한다. / 기승인 동일 VPN_RUN/route1+SG2·자기 MSS 유지 및 P8/V9·정리 보고 마감10/26(월)12:00 KST. DB 회차별90/120분 원복은 유지. 자원 유지 변경 결정: [6338609757](https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-6338609757). |",
+      "non_target_diff": 0,
+      "damage_increase": 0,
+      "protected_fields_unchanged": true,
+      "comment": "https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-6338613077"
+    },
+    {
+      "repository": "321Team/fds-project-baseline",
+      "number": 38,
+      "checked_updated_at": "2026-10-22T08:56:52Z",
+      "before_sha256": "525d74d322a0646d320a0cffdc0f3275d39ad1f1a7de0d81d9609aecf2d923ce",
+      "after_sha256": "a6ddf92f97b3d251f21d81b79b099821a2f4ff377608641d62f8033e1ddd817a",
+      "changed_field": "Schedule Note",
+      "before_line": "| Schedule Note | 10-14 G4 승인 후 10-15 Runtime 착수. 10-15 Basic Ready checkpoint를 #42/#43 선행입력으로 제공하고, Security/NetworkPolicy/Hybrid Route 등 #38 전체 AC는 10-19까지 계속 검증한다. |",
+      "after_line": "| Schedule Note | 10-14 G4 승인 후 10-15 Runtime 착수. 10-15 Basic Ready checkpoint를 #42/#43 선행입력으로 제공하고, Security/NetworkPolicy/Hybrid Route 등 #38 전체 AC는 10-19까지 계속 검증한다. / 현 ROSA/Worker·종속 AWS 유지 및 최종 정리 보고10/26(월)12:00 KST. 실제 삭제는 당일 inventory/정확 Plan/별도 실행 범위로 판단. 자원 유지 변경 결정: [6338609757](https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-6338609757). |",
+      "non_target_diff": 0,
+      "damage_increase": 0,
+      "protected_fields_unchanged": true,
+      "comment": "https://github.com/321Team/fds-project-baseline/issues/38#issuecomment-6338614760"
+    },
+    {
+      "repository": "321Team/fds-project-baseline",
+      "number": 46,
+      "checked_updated_at": "2026-10-22T10:16:29Z",
+      "before_sha256": "071fdb0ed2a22636685346e34c2c80cf651358d6bc9042e1f075e06877d22fbc",
+      "after_sha256": "b40158bcc0e49de0ec1512aaf22788bad754b38625ebc58922fa848a2ab1ec9e",
+      "changed_field": "Schedule Note",
+      "before_line": "| Schedule Note | #38/#43의 10-19 완료와 #42 결정 완료 후 10-20 단일 Delivery window에서 Runner→ROSA 배포·실패차단·증적을 집중 검증한다. |",
+      "after_line": "| Schedule Note | #38/#43의 10-19 완료와 #42 결정 완료 후 10-20 단일 Delivery window에서 Runner→ROSA 배포·실패차단·증적을 집중 검증한다. / 현 자원 유지/최종 정리는10/26(월)12:00 KST. SITE 실제 채택·현재 발급/전달/종료 권한·오늘1회 C GO·Runtime AC는 별도. 자원 유지 변경 결정: [6338609757](https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-6338609757). |",
+      "non_target_diff": 0,
+      "damage_increase": 0,
+      "protected_fields_unchanged": true,
+      "comment": "https://github.com/321Team/fds-project-baseline/issues/46#issuecomment-6338616353"
+    },
+    {
+      "repository": "321Team/fds-project-baseline",
+      "number": 47,
+      "checked_updated_at": "2026-10-22T10:16:26Z",
+      "before_sha256": "c7b87656feb9c2ced065ac4ea9bca3323f3a955ee9b4038b3673e90eb7d64315",
+      "after_sha256": "cfb3167dac1eb5053dcfaac2c5b71a363c6be6c50464673e7c7defd99e9f7e5a",
+      "changed_field": "Schedule Note",
+      "before_line": "| Schedule Note | 10-20 G5 이전에는 read-only/precheck·입력 준비만 수행하고, 10-20 G5 완료 후 10-21 단일 Runtime window에서 Hybrid DB/Registry 통합을 검증해 #50에 인계한다. |",
+      "after_line": "| Schedule Note | 10-20 G5 이전에는 read-only/precheck·입력 준비만 수행하고, 10-20 G5 완료 후 10-21 단일 Runtime window에서 Hybrid DB/Registry 통합을 검증해 #50에 인계한다. / 자원 최종 P8/V9 정리 보고10/26(월)12:00 KST. C회차 DB90/120분 원복·S Secret10/23 16:30·Robot 자연 만료는 유지. 자원 유지 변경 결정: [6338609757](https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-6338609757). |",
+      "non_target_diff": 0,
+      "damage_increase": 0,
+      "protected_fields_unchanged": true,
+      "comment": "https://github.com/321Team/fds-project-baseline/issues/47#issuecomment-6338617976"
+    },
+    {
+      "repository": "321Team/fds-project-baseline",
+      "number": 49,
+      "checked_updated_at": "2026-10-22T02:24:05Z",
+      "before_sha256": "0df84e2a05a4c27c441290098efde7f3ec35a171b918eb172144258e870be26f",
+      "after_sha256": "7a2cb0bca3bf211271f9f7deab4cef25a7b36a285107fc73018348a6fe29f79a",
+      "changed_field": "Schedule Note",
+      "before_line": "| Schedule Note | 구현 티켓은 실행 시점에 Evidence/Runbook/결정기록을 각자 누적한다. #49는 10-23에 #50/G6 완료 산출물을 최종 집계·무결성 대조하고 Deliverable Freeze 입력을 확정한다. |",
+      "after_line": "| Schedule Note | 구현 티켓은 실행 시점에 Evidence/Runbook/결정기록을 각자 누적한다. #49는 10-23에 #50/G6 완료 산출물을 최종 집계·무결성 대조하고 Deliverable Freeze 입력을 확정한다. / 10/23 Review 집계에 승인 유지/최종 정리 미실행을 구분.10/26(월)12:00 자원 정리 결과는 후속 인수로 연결. 자원 유지 변경 결정: [6338609757](https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-6338609757). |",
+      "non_target_diff": 0,
+      "damage_increase": 0,
+      "protected_fields_unchanged": true,
+      "comment": "https://github.com/321Team/fds-project-baseline/issues/49#issuecomment-6338619451"
+    },
+    {
+      "repository": "321Team/fds-project-baseline",
+      "number": 55,
+      "checked_updated_at": "2026-10-20T14:25:24Z",
+      "before_sha256": "855e8842396a4a91a8d06b62a96712e12b7b2bc6446ec78e191e0f6303a1fd6e",
+      "after_sha256": "8dd23588af6540927b02c3619e3c903e55b632b8fb4384b6ff2134509985d80d",
+      "changed_field": "Schedule Note",
+      "before_line": "| Schedule Note | 10-23에는 #49 Final Aggregation → #54 Deliverable Freeze → #56 Phase 2 Review → #55 Review Action 접수 순으로 처리한다. 10-24~25 주말은 작업하지 않고, 잔여 Close Action·비용/자원 정리·Sign-off는 10-26에 수행해 #57로 인계한다. |",
+      "after_line": "| Schedule Note | 10-23에는 #49 Final Aggregation → #54 Deliverable Freeze → #56 Phase 2 Review → #55 Review Action 접수 순으로 처리한다. 10-24~25 주말은 작업하지 않고, 잔여 Close Action·비용/자원 정리·Sign-off는 10-26에 수행해 #57로 인계한다. / Review10/23 18:00~19:30 유지. 자원 최종 정리·복구·반출·보고10/26(월)12:00 완료 목표를 Close 입력으로 편입. Sign-off/Close 자동 완료 아님. 자원 유지 변경 결정: [6338609757](https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-6338609757). |",
+      "non_target_diff": 0,
+      "damage_increase": 0,
+      "protected_fields_unchanged": true,
+      "comment": "https://github.com/321Team/fds-project-baseline/issues/55#issuecomment-6338620930"
+    }
+  ],
+  "linked_ticket_comments": {
+    "37": "https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-6338613077",
+    "35": "https://github.com/321Team/fds-project-baseline/issues/35#issuecomment-6338611421",
+    "38": "https://github.com/321Team/fds-project-baseline/issues/38#issuecomment-6338614760",
+    "46": "https://github.com/321Team/fds-project-baseline/issues/46#issuecomment-6338616353",
+    "47": "https://github.com/321Team/fds-project-baseline/issues/47#issuecomment-6338617976",
+    "49": "https://github.com/321Team/fds-project-baseline/issues/49#issuecomment-6338619451",
+    "55": "https://github.com/321Team/fds-project-baseline/issues/55#issuecomment-6338620930",
+    "rosa8": "https://github.com/321Team/infra-rosa/issues/8#issuecomment-6338621657",
+    "rosa12": "https://github.com/321Team/infra-rosa/issues/12#issuecomment-6338622221"
+  },
+  "issue_body_changes": "top Schedule Note value only; no whole body rewrite",
+  "runtime": "NOT_RUN",
+  "status_ac_lead_dates_unchanged": true,
+  "not_a_runtime_input": true,
+  "validation": {
+    "changed_documents_secret_scan": "PASS;3 files,0 findings",
+    "local_links": "PASS;0 broken",
+    "utf8_lf": "PASS;3 files",
+    "old_owner_closeout_history": "exact Git blob bytes preserved",
+    "local_canonical_rc": 1,
+    "immutable_base_canonical_rc": 1,
+    "same_failure_on_immutable_base": true,
+    "hard_failure_on_lf_export": [
+      "scripts/verify-document-secrets.py: release manifest checksum mismatch"
+    ],
+    "policy": "do not rewrite immutable manifests or bypass security checks; no merge while mandatory check unresolved",
+    "ci": "query actual PR checks after creation; local failure is not CI",
+    "runtime": "NOT_RUN"
+  },
+  "external_review": {
+    "claude_code": {
+      "model_requested": "claude-opus-5-5",
+      "effort_requested": "high",
+      "model_metadata_confirmed": true,
+      "adopted": [
+        "own-ACK/Secret cleanup before namespace deletion",
+        "P2-only other roots scope; unknown ownership remains residual",
+        "explicit no credential/Runtime expansion"
+      ],
+      "not_adopted": [
+        "expired Robot implies no approved consumption",
+        "unconfirmed weekend availability described as no monitoring"
+      ]
+    },
+    "antigravity_cli": {
+      "model_requested": "gemini-4-argon-high",
+      "effort_requested": "high",
+      "model_metadata_confirmed": true,
+      "adopted": [
+        "P8 executor explicit",
+        "120min credential reserve is not deletion duration",
+        "SITE HOLD and historical-deadline override priority"
+      ]
+    },
+    "grok_cli": "recent same-path zero-output timeout; no repeated identical call; not classified as service-wide unavailable",
+    "independent_human_review_claimed": false,
+    "internal_subagents_started": 0
+  }
+}

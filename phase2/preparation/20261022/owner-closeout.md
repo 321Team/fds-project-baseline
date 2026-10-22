@@ -49,3 +49,8 @@ OCI Primary는 project-suitability NO-GO, **AWS EC2+EIP self-managed Libreswan R
 남은 주요 묶음은 창 A 기수신 원본의 증적 PR 편입(재환), C1C3·앱 SA/cold-pull/D22(하영), #46 실제 운영 입력/현장 배포(권욱 통합), 최종 공급/clean render(재환), PG-03 Pod/Route/삭제·DB A2/Secret·종료 증적(각 기존 Lead)이다. 이미 받은 파일·해시·같은 시험을 재요구하지 않는다. 10/23 Review에는 실제 수용/미실행/한계를 그대로 전달하며 이를 #49/#54 전체 완료로 만들지 않는다.
 
 STATIC/MOCK/CI·사람 REVIEW·MERGE·RUNTIME·정본 PUBLICATION·최종 인수를 구분한다. 실제 서버/Runner/ROSA/DB 접속·Token 발급/IAM/Apply/Deploy·새 GO는 수행하지 않았다. 비공개 원본 Plan/state/credential은 이 문서·운영 WBS에 포함하지 않았다.
+
+
+## 10/22 저녁 추가 변경 — 자원 유지·최종 정리10/26 12:00
+
+[사용자 변경 결정](https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-6338609757)과 [자원 유지 운영표](resource-retention-to-20261026.md)를 적용한다. 기존 Review10/23 18:00~19:30·#55 실행기간/10/26 Close 계획은 유지하고, 자원 최종 정리를 Review 전에 끝내야 한다는 결합만 해제했다. 각 C 회차 소비 중지·DB 원복/보고는 늦추지 않으며, 최종 P8/V9·ROSA/AWS·Harbor 연결 구성 정리는10/26 12:00 완료 목표로 재배치한다. DB90/120분·S Secret10/23 16:30·Robot 자연 만료·임시 권한/토큰 수명은 별개다. SITE 실제 채택 대기/오늘1회 GO 범위·정확 saved Plan별 Apply는 유지한다. 현재 보관/최종 정리 미실행과 실제 Cleanup PASS를 구분해 #49/#55 인수에 연결한다. 월요일 가용/실제 삭제창은 미확정이며 자원 보관을 주말 근무나 새 Runtime GO로 표시하지 않는다. 발행본/WBS/Tag·기존 AC/Status는 보존하고, 이 절 이전의 시점별 상태는 이력으로 유지한다.
