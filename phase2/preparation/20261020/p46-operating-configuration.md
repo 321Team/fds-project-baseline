@@ -73,3 +73,9 @@
 - [Linux hosted CI](https://github.com/321Team/infra-cicd/actions/runs/39698307687) **763=759 PASS/4 SKIP**, 실제 로컬 pipe→부모 helper→수신 core→기존 pipe/driver/factory/finish 연결 포함. Windows **763=663 PASS/100 SKIP**. 첫 Linux 실패 1건은 재사용 거부 시험 helper의 잘못된 요청을 수정한 뒤 통과했으며 제품 코드는 그 수정에서 불변이다.
 - 미확정 운영 입력 없이 구현한 core/helper 범위다. 실제 두 호스트의 SSH 인증·현재 host key·정확한 job rendezvous, 하영 issuer 위치/권한·UID/CA/IP·운영 자격, 권욱의 source/control·Binding·finish/경로 채택은 여전히 잔여다. monotonic 숫자를 다른 호스트의 절대 시각으로 보내거나900초 수명을 갱신하지 않는다.
 - PR111은 독립 코드 리뷰·병합 전이다. PR110의 하영 명시 범위 승인을 남은 재환 영역으로 확대하지 않는다. 문서 PR195는 실행 입력이 아닌 준비 기록이므로 [REVIEW_AUTHORITY_POLICY §2](../../../governance/REVIEW_AUTHORITY_POLICY.md)에 따라 Lead 검토로 병합 가능하며 별도 이중 승인을 추가하지 않는다. 이 기록의 병합은 코드/Runtime GO·정본 발행·티켓 완료가 아니다.
+
+
+## 10/22 후속 운영 연결 delta
+
+[PR110](https://github.com/321Team/infra-cicd/pull/110#issuecomment-6330928010)은 양측 담당 exact HEAD 승인·CI·변경범위/이력 확인 후 merge `05e97b559b16ff441e8956a1e02f250de337cba2`로 편입했다. PR111은 재환 job/Runner 영역 승인을 재조회했으며 하영 issuer/peer core 영역 검토는 별도다. 기존 09시대 helper 구현과 오프라인 시험을 재사용하고 같은 코드를 중복 작성/재시험하지 않았다.
+[D21 종결·실제 운영 입력별 책임](../20261022/owner-closeout.md)에 실제 SSH/rendezvous·issuer 위치/권한·source/control/finish의 미채택 부분만 분리했다. D21 최종 인수나 일정 반영을 #46 새 Runtime GO로 바꾸지 않으며 `delivery_job_site.SITE=None`을 유지한다. 실제 추가 운영 원본이 없으므로 임의 기본값을 채택하지 않았다.
