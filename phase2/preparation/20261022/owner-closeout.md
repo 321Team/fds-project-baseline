@@ -1,5 +1,7 @@
 # D21 최종 인수·D24 일정 운영 반영·증적 인계
 
+**현행 안내(10/23):** 아래11:07 및 저녁 절은 당시 기록이다. 최신 인수 잔여는 [10/23 변경분](../20261023/acceptance-delta.md)·[접수 대장](../20261020/evidence-roster.md)을 우선 소비한다. PR111/112·ev250·MSA42는 병합됐고 D22 FINAL/기존 발급 권한 입력은 확인됐다. DB/자격의 이전 기한은 [현재 유지표](resource-retention-to-20261026.md)로 대체한다. 과거 미수신·Draft·각 사용 DB 원복 문구를 현재 새 게이트로 재요구하지 않는다.
+
 이권욱 / CODEX_ASSISTED · 2026-10-22 11:07 KST. 사용자 “#36 최종 인수·종결 판단·#52 일정 반영부터 진행”, 기존 한계 확인 후 “이미 협의된 내용이라면 수용하고 편입” 지시에 따른 운영 기록이다.
 
 ## #36 D21 — 기존 한계를 수용한 Decision 종결
@@ -54,3 +56,12 @@ STATIC/MOCK/CI·사람 REVIEW·MERGE·RUNTIME·정본 PUBLICATION·최종 인수
 ## 10/22 저녁 추가 변경 — 자원 유지·최종 정리10/26 12:00
 
 [사용자 변경 결정](https://github.com/321Team/fds-project-baseline/issues/37#issuecomment-6338609757)과 [자원 유지 운영표](resource-retention-to-20261026.md)를 적용한다. 기존 Review10/23 18:00~19:30·#55 실행기간/10/26 Close 계획은 유지하고, 자원 최종 정리를 Review 전에 끝내야 한다는 결합만 해제했다. 각 C 회차 소비 중지·DB 원복/보고는 늦추지 않으며, 최종 P8/V9·ROSA/AWS·Harbor 연결 구성 정리는10/26 12:00 완료 목표로 재배치한다. DB90/120분·S Secret10/23 16:30·Robot 자연 만료·임시 권한/토큰 수명은 별개다. SITE 실제 채택 대기/오늘1회 GO 범위·정확 saved Plan별 Apply는 유지한다. 현재 보관/최종 정리 미실행과 실제 Cleanup PASS를 구분해 #49/#55 인수에 연결한다. 월요일 가용/실제 삭제창은 미확정이며 자원 보관을 주말 근무나 새 Runtime GO로 표시하지 않는다. 발행본/WBS/Tag·기존 AC/Status는 보존하고, 이 절 이전의 시점별 상태는 이력으로 유지한다.
+
+
+## 10/23 변경분 통합
+
+#46은 기존 PR113에 자격 수신 후 1회 계획 완성 경로를 추가하는 검토 후보를 준비했다. public ready는 상관관계 표식이며 발급/원본 인증을 대신하지 않는다. 원본10/10·기존 ci-cd 발급 인가는 재사용하고, 실제 parent/peer/메모리 전달 채널·control/finish 의미·수동 C 이후6객체 기준선은 아직 운영 채택이 필요하다. `SITE=None`과 Runtime 미실행을 유지한다.
+
+#49에는 ev250 편입·창 B 원본 검토·D22 FINAL/MSA42·ROSA52/53 병합·C 종료 owner 보고·10/22 22:46 유지 RUN/자격 기한 결정을 반영했다. C raw/Pod↔node·A5 잔여, T6 INCONCLUSIVE를 PASS로 바꾸지 않는다. #33/#39/#42는 [담당별 최종 인수 정리](../20261023/acceptance-delta.md)에서 기존 요건·정리 책임을 연결하며 자동 AC 체크/종결은 하지 않는다.
+
+삭제 v8은 기존284 MOCK을 재사용하고 새 zone override만 생성 원본과 비교했다. Namespace 계정 A는 기존 제안의 대상별 `-n <같은 이름>` 인가 확인을 재사용한다. Namespace 객체의 cluster scope만으로 실제 요청의 namespace 속성을 비우거나 관리자 필요로 단정하지 않는다. 계정 B 임시 권한/실제 삭제창·새 inventory·saved Plan별 실행은 별도이며 이번 기록은 삭제 GO가 아니다.
