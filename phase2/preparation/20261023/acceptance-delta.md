@@ -1,6 +1,6 @@
 # 10/23 인수·증적·최종 정리 변경분
 
-이권욱 / CODEX_ASSISTED. 기준: 2026-10-23 KST, 10/22 야간 원본 검토·결정까지. 검토 후보이며 새 정본 발행·Runtime GO·AC 인수·Issue 종결이 아니다.
+이권욱 / CODEX_ASSISTED. 기준: 2026-10-23 KST, 10/23 20:05 KST 원본 검토·담당자 보고까지. 검토 후보이며 새 정본 발행·Runtime GO·AC 인수·Issue 종결이 아니다.
 
 ## #33·#39·#42 인수 준비
 
@@ -14,7 +14,7 @@
 
 ## #49·Review 인계
 
-[현행 접수 대장](../20261020/evidence-roster.md)을 단일 집계표로 사용한다. 수신·재해시·내용 검토·증적 PR 병합·AC 인수는 별개다. 창 C는 담당자 종료 보고/수치 정합 확인까지이며 raw/Pod↔node 대조·A5 미실행과 절차 이탈은 그대로 남긴다. #46은 실제 입력이 일부 수용됐지만 도구 Runtime0·SITE 미채택이다.
+[현행 접수 대장](../20261020/evidence-roster.md)을 단일 집계표로 사용한다. 수신·재해시·내용 검토·증적 PR 병합·AC 인수는 별개다. 창 C TGZ는 양측 모두 수신·내용 검토를 마쳤다. **하영 묶음은 ev251에 편입됐고, 재환 `p47-windowC-20261022.tgz`는 증적 PR 미제출(재환 담당)**이다. 수신·검토 완료를 공개 편입으로 확대하지 않는다. Pod↔node 귀속 미확인·A5 미실행과 절차 이탈은 그대로 남긴다. 오늘 앱 SCC·UID JSON은 수집 보고가 있지만 공유 반출 대기다. #46은 실제 입력이 일부 수용됐지만 도구 Runtime0·SITE 미채택이다.
 
 #54 제출 후보→10/23 18:00~19:30 #52 Review/#55 Action→#56 Review 결과→10/26 #55/#57 실제 정리·Close 순서다. 회의 일정 Decision 완료와 실제 회의·최종 Sign-off는 구분한다. 월요일12:00은 정리 시작이 아닌 완료 목표이며 실제 삭제창/복구 가용은 아직 미확정이다.
 
@@ -24,8 +24,8 @@
 - 이 원본 일치는 소유 근거 초안 수용이며, 실제 삭제 당일 inventory/final hash·DELETED 상태·참조·record 소유권·saved Plan·실제 실행 권한은 별도다. 실패 뒤 이전 final.json을 새 성공 결과로 쓰지 않고 새 RUN 출력 경로/rc를 확인한다. private raw는 GitHub에 게시하지 않는다.
 - A안(기존 일반 계정)을 먼저 사용한다. 기존 제안의 `oc auth can-i delete namespaces/<정확한 이름> -n <같은 이름>`을 대상3개 각각 확인하는 방법을 재사용한다. namespace 객체의 cluster scope만으로 이 검사를 namespace=""로 바꾸거나 관리자 필요로 단정하지 않는다. [Kubernetes 요청 해석 소스](https://github.com/kubernetes/kubernetes/blob/v1.35.0/staging/src/k8s.io/apiserver/pkg/endpoints/request/requestinfo.go#L175-L187)는 `/api/v1/namespaces/{name}`에도 Namespace 속성을 해당 이름으로 설정한다. SSAR를 직접 쓸 때도 실제 DELETE와 같은 group="", resource="namespaces", verb="delete", name=namespace=정확한 이름으로 대조한다. 최종 허용은 실제 API/사용자의 현재 응답이며, 이 인가 확인은 삭제 실행이 아니다. 05의 core Namespace 경로를 Project API로 임의 변경하지 않는다.
 - B안(임시 cluster-admin)은 A에서 불가할 때의 별도 권한/실행 후보다. 기존 검토된 always-revoke/watchdog를 재사용해 중단·화면 유실 시에도 회수하고 실제 revoke/readback까지 예산에 포함한다. 로그인/MFA·inventory/삭제·회수·보고를 포함한 창을 연결하며 이 문서가 새 임시 관리자/삭제 GO는 아니다.
-- 05는 UID precondition DELETE·다른 UID/응답 불명 STOP·bounded NotFound poll을 유지한다. 부분 삭제 후 전체05를 다시 실행하지 말고 실제 잔존 UID/receipt를 읽어 남은 대상만 정리 인수한다. force finalizer 제거/자동 재시도는 추가하지 않는다. 비차단 권고: 공유 `/tmp/nsdel-err-*` 전체 삭제 대신 현재 호출 소유 임시파일만 정리하도록 좁힌다.
+- 05는 UID precondition DELETE·다른 UID/응답 불명 STOP·bounded NotFound poll을 유지한다. 부분 삭제 후 전체05를 다시 실행하지 말고 실제 잔존 UID/receipt를 읽어 남은 대상만 정리 인수한다. force finalizer 제거/자동 재시도는 추가하지 않는다. [v8.1](https://github.com/321Team/infra-rosa/issues/8#issuecomment-6360894119)에서 현재 호출 전용 임시 디렉터리 정리로 보완됐고 집중24 MOCK을 확인했다. 이전 임시파일 권고는 해소됐으며 SIGKILL 잔존 한계는 유지한다.
 
 ## 현재 유지 결정의 소비
 
-[10/22 22:46 결정6342339344](https://github.com/321Team/fds-project-baseline/issues/47#issuecomment-6342339344)과 [유지표](../20261022/resource-retention-to-20261026.md)를 따른다. 새 유지 DB_RUN·NP4+앱 NP2/새 연결 검증·미사용 앱0·같은 Robot 유한 만료 편집1회·현재 DB Secret UID의 회수 상한10/26 12:00을 연결한다. 실제 적용/만료 readback은 미수신이며 승인 사실을 Runtime 결과로 바꾸지 않는다. 원 담당자 회신 대기 중에도 #46 구현·#49 접수·Review 준비는 독립 진행한다.
+[10/22 22:46 결정6342339344](https://github.com/321Team/fds-project-baseline/issues/47#issuecomment-6342339344)과 [유지표](../20261022/resource-retention-to-20261026.md)를 따른다. 새 유지 DB_RUN·NP4+앱 NP2/새 연결 검증·미사용 앱0·같은 Robot 유한 만료 편집1회·현재 DB Secret UID의 회수 상한10/26 12:00을 연결한다. 실제 DB 유지 RUN·NP6·Robot 유한 TTL 편집 보고는 수용됐다. 오늘 앱0/DB세션0·SCC/UID는 담당자 보고와 중앙 원본 수신을 구분해 [접수 대장](../20261020/evidence-roster.md)에 반영했다. 최종 회수는 미실행이다. 원 담당자 회신 대기 중에도 #46 구현·#49 접수·Review 준비는 독립 진행한다.
