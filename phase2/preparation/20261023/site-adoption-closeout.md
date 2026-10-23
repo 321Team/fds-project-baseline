@@ -24,7 +24,7 @@
 - 발급 전 READY/UID/기한 실패에는 발급하지 않는다. POST를 시도했는데 응답이 불명확하면 발급 여부 불명으로 보존하고 자동 재시도하지 않는다.
 - 발급 후 전달 실패도 유효 자격이 남을 수 있다. 기존 supplier의 `take_receipt()`로 실제 receipt를 먼저 비공개 인계한 다음 `close()`한다. 로컬 참조/FD 정리는 서버 토큰 회수가 아니다. 상세 만료·인증 확인은 실행 GO와 실제 자격 수명 범위에서 정하며, 코드 병합만으로 추가 발급·SA 삭제를 허용하지 않는다.
 - PR121 부모 정리와 PR124 계획 실패 정리는 source/session/FD의 소유권을 보존한다. borrowed full plan을 임의로 닫거나 실패를 성공으로 바꾸지 않는다.
-- PR120~124 로컬 통합 `b9a975aa`에서 Windows944건(787 PASS/157 SKIP/0 FAIL)을 확인했다. 테스트 의존성 누락·격리 계정 읽기 오류는 해시 고정 PyYAML6.0.3과 사용자 실행 경로로 해결했고 실패 로그도 보존했다. 이후 PR121→122→123→124를 main에 병합해 `49f2ecbe` Linux932건(928 PASS/4 SKIP/0 FAIL), validate/p2-intake2 SUCCESS를 확인했다. main과 로컬 통합본의 차이는 미병합 PR120 patch와 정확히 같다. PR120의 Linux 통합 결과까지 완료로 확대하지 않는다. 테스트 fixture는 운영 승인값이 아니다.
+- PR120~124 로컬 통합 `b9a975aa`에서 Windows944건(787 PASS/157 SKIP/0 FAIL)을 확인했다. 테스트 의존성 누락·격리 계정 읽기 오류는 해시 고정 PyYAML6.0.3과 사용자 실행 경로로 해결했고 실패 로그도 보존했다. 이후 PR121→122→123→124를 main에 병합해 `49f2ecbe` Linux932건(928 PASS/4 SKIP/0 FAIL), validate/p2-intake2 SUCCESS를 확인했다. 이후 PR120도 양측 담당 범위 승인 후 main `aa64731c`로 병합했다. 이 main과 기존 로컬 통합본의 전체 tree가 일치하고 validate/p2-intake 2건 SUCCESS·Linux944건(940 PASS/4 SKIP/0 FAIL)을 확인했다. 과거 932건은 PR120 제외 당시 범위다. 테스트 fixture는 운영 승인값이 아니다.
 - 실제 채택 뒤 수행할 정상 배포·실패 차단·복구/finish 검증은 별도 Runtime 단계다. 기존 수동 창 C 결과와 코드 MOCK/CI를 #46 Runtime 인수로 전용하지 않는다.
 
 ## 외부 AI 검토의 반영 범위
