@@ -1,6 +1,6 @@
-# 10/23 인수·증적·최종 정리 변경분
+# 인수·증적·최종 정리 변경분 — 10/24 갱신
 
-이권욱 / CODEX_ASSISTED. 기준: 2026-10-23 KST, 10/23 20:05 KST 원본 검토·담당자 보고까지. 검토 후보이며 새 정본 발행·Runtime GO·AC 인수·Issue 종결이 아니다.
+이권욱 / CODEX_ASSISTED. 기준: 2026-10-24 18:21 KST. 이전 원본 검토는 재사용하고 PR201·252·135 및 #55 회신만 갱신했다. 검토 후보이며 새 정본 발행·Runtime GO·AC 인수·Issue 종결이 아니다.
 
 ## #33·#39·#42 인수 준비
 
@@ -12,11 +12,24 @@
 
 이미 정리한 [PR197 대상11건](https://github.com/321Team/fds-project-baseline/pull/197#issuecomment-6339659621)은 Decision5 Done·Task6 Cancelled를 유지한다. P1 미구현 잔여/재개 Owner·조건을 기록한 관리 정리이며, 이를 P0 신규 구현으로 복원하거나 Runtime 완료로 표시하지 않는다.
 
+## #33·#42 원 AC별 정리와 관리 잔여
+
+| 티켓·원 AC | 근거와 현재 판정 | 남은 단독 작업 / 종료 조건 |
+|---|---|---|
+| #33 선행조건·착수 승인 | 기존 Start 입력표, #32 Close/KI·Approved Deferred, #34 Freeze, #36 D21, #52 일정 연결. 준비·구현 진행 사실로 과거 착수 승인일을 만들어 넣지 않음 | 권욱: 기존 승인 기록을 모은 공식 Entry/Exit 인수 결과 기록. 새 환경 시험이나 담당자 동일 회신은 요구하지 않음 |
+| #33 Decision/Risk·KI | 위 확정 기록과 PR197의 Decision5/Task6 관리 정리 재사용. 공용 Lab 제약은 실제 Lab 사용 시에만 적용 | 기존 Risk/Owner·후속 Action을 인수 결과와 연결. Runtime 미실행을 PASS로 바꾸지 않음 |
+| #33 WBS·Notion 일치 | GitHub 준비 인계표의 상태는 확인. Notion 실시간 반영 결과는 미확인 | 권욱: 동일 Milestone 결과를 관리 기록에 반영하고 확인. 이번 문서/PR만으로 Notion 동기화 완료 표시 금지 |
+| #42 소스·Fallback 승인 | [D22 FINAL](https://github.com/321Team/fds-project-baseline/issues/42#issuecomment-6337537087) Harbor Primary, ECR 수동 A 조건 유지. 현재 ECR 운영 준비 미확인, 실패 시 신규 rollout STOP·previous=NONE | 선택 완료. 다시 Registry를 고르거나 ECR 구축·전환 시험을 현재 필수조건으로 추가하지 않음 |
+| #42 Pull Route/TLS/Credential 시험 정의 | 실제 창 B cold-pull·strict TLS·승인 digest와 ev251, Robot 유한 연장 보고가 연결됨 | 정의/수신 범위는 재사용. 최종 Robot·Secret 회수는 #12/#55 책임으로 추적하며 이를 D22 재선택/새 선행시험으로 만들지 않음 |
+| #42 P2-APP/HYB WBS·IF-19 | MSA42 병합으로 소비 계약/IF-19 소스 연결. WBS·관리 Interface 상태의 최종 반영 확인은 별도 | 권욱: 선택 `FINAL_GO_HARBOR`, fallback 조건부/미활성, APP/HYB 후속과 #12/#55 회수 책임을 같은 관리 행에 반영·확인 |
+
+위 표는 종료 판단을 위한 근거 정리다. #33/#42 Status·AC 체크·완료일은 이번에 바꾸지 않는다. Decision 범위의 인수와 #39/G4·#46 실행·#55 최종 회수를 각각 구분한다. 이미 충족한 선택/시험 정의를 미결로 되돌리지 않는다.
+
 ## #49·Review 인계
 
-[현행 접수 대장](../20261020/evidence-roster.md)을 단일 집계표로 사용한다. 수신·재해시·내용 검토·증적 PR 병합·AC 인수는 별개다. 창 C TGZ는 양측 모두 수신·내용 검토를 마쳤다. **하영 묶음은 ev251에 편입됐고, 재환 `p47-windowC-20261022.tgz`는 증적 PR 미제출(재환 담당)**이다. 수신·검토 완료를 공개 편입으로 확대하지 않는다. Pod↔node 귀속 미확인·A5 미실행과 절차 이탈은 그대로 남긴다. 오늘 앱 SCC·UID JSON은 수집 보고가 있지만 공유 반출 대기다. #46은 실제 입력이 일부 수용됐지만 도구 Runtime0·SITE 미채택이다.
+[현행 접수 대장](../20261020/evidence-roster.md)을 단일 집계표로 사용한다. 수신·재해시·내용 검토·증적 PR 병합·AC 인수는 별개다. 창 C TGZ는 양측 모두 수신·내용 검토를 마쳤다. **하영 묶음 ev251과 재환 묶음 ev252가 모두 병합됐다.** 재환 텍스트58개는 byte 동일하며 큰 원본5개는 비공개 보관소 참조로 유지한다. 수신·검토 완료를 공개 편입으로 확대하지 않는다. Pod↔node 귀속 미확인·A5 미실행과 절차 이탈은 그대로 남긴다. 앱 SCC·UID 투영 JSON은 중앙 10/23 23:53 수신·재해시·6/6 대응 검토 완료로 반출 대기를 해제했다. full Pod 객체/6객체 baseline과는 다르다. #46 운영 선택은 10/24 사용자 채택, 구현은 PR135까지 병합됐지만 실제 배치·인증 연결은 미완료이고 `SITE=None`·도구 Runtime NOT_RUN이다.
 
-#54 제출 후보→10/23 18:00~19:30 #52 Review/#55 Action→#56 Review 결과→10/26 #55/#57 실제 정리·Close 순서다. 회의 일정 Decision 완료와 실제 회의·최종 Sign-off는 구분한다. 월요일12:00은 정리 시작이 아닌 완료 목표이며 실제 삭제창/복구 가용은 아직 미확정이다.
+#54 제출 후보→#56 실제 Review 결과/#55 Action→10/26 #55/#57 실제 정리·Close 순서다. #52의 10/23 18:00~19:30은 확정된 계획 이력이며 실제 회의 개최 증적은 별도다. 회의 일정 Decision 완료와 실제 회의·최종 Sign-off는 구분한다. 월요일12:00은 정리 시작이 아닌 완료 목표이며 실제 삭제창/복구 가용은 아직 미확정이다.
 
 ## 삭제안 추가 검토
 

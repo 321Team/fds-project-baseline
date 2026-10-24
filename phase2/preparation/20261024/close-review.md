@@ -1,6 +1,6 @@
 # #55 최종 정리 검토·미확정 결정 — 2026-10-24
 
-기준: 2026-10-24 13:23 KST 조회. 이권욱 / CODEX_ASSISTED.
+기준: 2026-10-24 18:21 KST 조회. 13:23 검토 이후 담당자 회신·PR201/252/135 병합을 반영했다. 이권욱 / CODEX_ASSISTED.
 [하영 삭제 목록](https://github.com/321Team/fds-project-baseline/issues/55#issuecomment-6379305046),
 [담당별 확인 요청](https://github.com/321Team/fds-project-baseline/issues/55#issuecomment-6379606167),
 [기존 인계표](../20261020/cleanup-handoff.md)를 대조했다.
@@ -104,9 +104,9 @@ history 정리도 외부 clone·fork·참조의 사본 회수를 보장하지 �
 
 | 다음 순서 | 권욱이 지금 진행한/진행할 준비 | 회신·실행이 필요한 부분 |
 |---|---|---|
-| 1 #55 목록 정합화 | 승인 범위·소유권·기한·실행 순서를 위와 같이 검토 | 하영·재환의 실제 삭제/복구 창, D4~D6 전체 소유 목록. 신규 계정해지/전체폐기 결정 |
-| 2 #49 원본 집계 | 6-2 SCC·UID 수신·검토 완료를 접수 대장에 반영 | 증적 저장소 편입·Full 인수는 별도. 재환 창 C 증적 PR 최신 제출 근거 |
-| 3 #46 운영 연결 | [PR132](https://github.com/321Team/infra-cicd/pull/132) HEAD `12717ede9c1452eed1325f59ad547eb0aab38ff2`: 하영·재환 각 담당 영역 APPROVED, 검사2 SUCCESS, Draft/미병합 | 실제 배치값·본인 인증/발급/서버회수·원본/control/finish 결속 및 replicas 인계 후 fresh baseline |
+| 1 #55 목록 정합화 | 하영·재환이 기존 회수와 VM/공용 자원 전체폐기 분리 및 권한 회수 순서에 동의 | 정확한 당일 시작·복구 가용, egress-proxy 인계 동의와 PKI 볼륨 실위치/폐기 기준만 미확인. 신규 계정해지/전체폐기 결정 별도 |
+| 2 #49 원본 집계 | SCC·UID 수신과 창 C ev252 편입 완료를 접수 대장에 반영 | 큰 원본5개·DB DR백업 보존. 미실행/절차 한계와 Full 인수는 별도 |
+| 3 #46 운영 연결 | [PR135](https://github.com/321Team/infra-cicd/pull/135)까지 MERGED `f65ae9c35ef23a91f106e6903277553f3aed1b55`: 하영·재환 각 담당 영역 APPROVED, 검사2 SUCCESS | 실제 배치값·본인 인증/발급/서버회수·원본/control/finish 결속 및 replicas 인계 후 fresh baseline |
 | 4 D7·공개 준비 | 19개 저장소의 가시성·보관상태 대조, 범위별 정리/공개 판정표 준비 | 실제 Runner/Secret/키/Hook 소유 목록과 마지막 소비. Public 방식에 대한 사용자 결정 |
 | 5 #57 인수 | 실제 완료/미실행·Known Issue·Owner/Due·잔존 책임을 모아 Sign-off 후보로 연결 | #54/#56 실제 결과와 최종 정리 readback. 문서 준비로 AC/Close를 완료하지 않음 |
 
@@ -116,9 +116,28 @@ native job checkout의 helper, 종료 후 object/rollout 관측이다.
 실제 workspace/Python/SSH port·alias/현재 UID·netns·READY/store와 승인 원본/control은 미확정으로 남긴다.
 현재 `SITE=None`, dispatch false, `RUNTIME=NOT_RUN`. 관리자 역할 부여 보고가 연결 완료나 시험 GO를 대신하지 않는다.
 #46 finish 관측 완료도 DB·Robot·VPN·클라우드 정리 완료가 아니다.
-[재환 최신 리뷰](https://github.com/321Team/infra-cicd/pull/132#pullrequestreview-5636785957)의
-helper 파일 존재·`includes_resource_cleanup=False` 시험 보강 2건은 비차단 권고로 다음 코드 변경에 연결한다.
+PR132 이후의 helper/종료 관측 보강은 기존 병합 이력으로 추적한다. PR135의 비차단 로그인 입력·수동 OAuth 회수 안내는 다음 코드/문서 변경으로 연결하며 Runtime 선행 승인으로 확대하지 않는다.
 `remote_python=/usr/bin/python3`은 workflow에 근거한 후보이며 실제 발급측/SSH 배치 확인을 대신하지 않는다.
+
+## 10/24 담당자 회신 반영·회수 순서
+
+[하영 6379995948](https://github.com/321Team/fds-project-baseline/issues/55#issuecomment-6379995948), [재환 6380250868](https://github.com/321Team/fds-project-baseline/issues/55#issuecomment-6380250868) 및 [큰 원본 보존 정정](https://github.com/321Team/fds-project-baseline/issues/55#issuecomment-6381489077)을 수신했다. 같은 확인 요청을 반복하지 않는다.
+
+| 순서·의존성 | 실행 책임 | 완료조건 / 현재 상태 |
+|---|---|---|
+| 최종 앱 소비·DB 소비 중지 | 권욱·재환·하영 각 소비 범위 | 앱0·P2 DB세션0와 마지막 소비 인계. 유지 RUN 10/24 16:33 관측은 신규 세션/거래0 보고이며 월요일 최종 조회를 대신하지 않음 |
+| DB·Registry 예외/자격 회수 | DB 재환, Registry·SA/Secret 하영 | 같은 DB_RUN `20261023T1248` A2-OFF 및 자기 추가분 원복. SA 자기 참조→Secret/Robot·Harbor guard/반환 경로의 기존 절차·readback. 현재 최종 회수 NOT_RUN |
+| P8→V9·MSS 정리 | P8 하영, vpn-gw01/V9 재환 및 Relay 기존 담당 | 기존 P8 saved Plan 3 delete·state/ID 불변 등 유효 조건 확인 후 처리, 같은 VPN_RUN `20261022T1500` V9와 MSS2 제거. 새로운 Apply/재실행 허용을 만들지 않음 |
+| #46 마지막 소비·본인 OAuth 인수→RoleBinding2 회수→namespace 삭제 | 권욱 인계, 하영 회수/삭제 | `gwonuk-p2-admin-temp` 2개 삭제·부재/기존 `can-i=no` readback을 namespace 삭제 전에 확보. #46 finish는 전체 자원 정리 증거가 아님 |
+| 비공개 원본 보존·최종 readback·보고 | 각 생산자→권욱 집계 | 기존 10/26 12:00 완료 유지. backend·SSM·관리망·DNS·Runner 등 필요한 수단을 그 전에 없애지 않음. 실제 시작·복구 가용은 당일 확인 |
+| 발표 뒤 VM 전체폐기·계정 해지·Public | 별도 범위 결정 뒤 원 소유자 | 12:00 필수 작업으로 추가하지 않음. 명확한 대상·의존성·보존 인수와 별도 GO 전 실행 없음 |
+
+표의 독립 행은 전체 직렬 일정으로 강제하지 않는다. 소비 종료와 각 의존성을 기준으로 기존 담당자가 순서를 연결한다. ROSA/namespace 삭제는 검토된 키트와 당일 범위·권한/GO를 따르며, 이 표가 삭제 승인은 아니다.
+
+- 재환의 VM 전 원본 편입 선행조건은 **ev252 병합으로 해소**됐다. 원문58개만 Git에 편입됐고 큰 원본5개는 공유 보관소 참조이므로 유지한다. 계정/VM 삭제나 공유 원본 일괄 삭제 허용으로 확대하지 않는다.
+- db01의 P1 DR백업 `fdsdb_backup_20260903.dump`는 재환 PC 사본 재해시 일치 보고가 있다. 장기 보존 결정 전에는 기존 사본을 유지하는 준비안으로 남기며 이번에 이동·삭제하지 않는다. DB 시험 데이터이므로 공개 저장소에 넣지 않는다.
+- edge01 담당은 재환 확인 완료. egress-proxy01의 재환 인수는 하영 동의 전까지 제안이다. Alertmanager 소비 종료 뒤 처리한다. 정본 배치 목록은 현재 host inventory 조회로 표시하지 않는다.
+- D4 앱 중지(edge01→Worker)와 db01 전체 폐기는 별도 VM 창에서 연결한다. mgmt-gw01·DNS는 마지막 관리/이름해석 소비 후, Runner는 마지막 #46/CI·반출 뒤 등록 해제→VM 순서다. PKI 실제 볼륨 위치·폐기 방법은 NOT VERIFIED.
 
 ## 검토 범위
 
