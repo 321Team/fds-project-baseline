@@ -1,6 +1,6 @@
 # #55 최종 정리 검토·미확정 결정 — 2026-10-24
 
-기준: 2026-10-24 13:15 KST 조회. 이권욱 / CODEX_ASSISTED.
+기준: 2026-10-24 13:23 KST 조회. 이권욱 / CODEX_ASSISTED.
 [하영 삭제 목록](https://github.com/321Team/fds-project-baseline/issues/55#issuecomment-6379305046),
 [담당별 확인 요청](https://github.com/321Team/fds-project-baseline/issues/55#issuecomment-6379606167),
 [기존 인계표](../20261020/cleanup-handoff.md)를 대조했다.
@@ -106,7 +106,7 @@ history 정리도 외부 clone·fork·참조의 사본 회수를 보장하지 �
 |---|---|---|
 | 1 #55 목록 정합화 | 승인 범위·소유권·기한·실행 순서를 위와 같이 검토 | 하영·재환의 실제 삭제/복구 창, D4~D6 전체 소유 목록. 신규 계정해지/전체폐기 결정 |
 | 2 #49 원본 집계 | 6-2 SCC·UID 수신·검토 완료를 접수 대장에 반영 | 증적 저장소 편입·Full 인수는 별도. 재환 창 C 증적 PR 최신 제출 근거 |
-| 3 #46 운영 연결 | [PR132](https://github.com/321Team/infra-cicd/pull/132) HEAD `12717ede9c1452eed1325f59ad547eb0aab38ff2`: 하영 영역 APPROVED, 검사2 SUCCESS, Draft/재환 영역 대기 | 실제 배치값·본인 인증/발급/서버회수·원본/control/finish 결속 및 replicas 인계 후 fresh baseline |
+| 3 #46 운영 연결 | [PR132](https://github.com/321Team/infra-cicd/pull/132) HEAD `12717ede9c1452eed1325f59ad547eb0aab38ff2`: 하영·재환 각 담당 영역 APPROVED, 검사2 SUCCESS, Draft/미병합 | 실제 배치값·본인 인증/발급/서버회수·원본/control/finish 결속 및 replicas 인계 후 fresh baseline |
 | 4 D7·공개 준비 | 19개 저장소의 가시성·보관상태 대조, 범위별 정리/공개 판정표 준비 | 실제 Runner/Secret/키/Hook 소유 목록과 마지막 소비. Public 방식에 대한 사용자 결정 |
 | 5 #57 인수 | 실제 완료/미실행·Known Issue·Owner/Due·잔존 책임을 모아 Sign-off 후보로 연결 | #54/#56 실제 결과와 최종 정리 readback. 문서 준비로 AC/Close를 완료하지 않음 |
 
@@ -116,6 +116,9 @@ native job checkout의 helper, 종료 후 object/rollout 관측이다.
 실제 workspace/Python/SSH port·alias/현재 UID·netns·READY/store와 승인 원본/control은 미확정으로 남긴다.
 현재 `SITE=None`, dispatch false, `RUNTIME=NOT_RUN`. 관리자 역할 부여 보고가 연결 완료나 시험 GO를 대신하지 않는다.
 #46 finish 관측 완료도 DB·Robot·VPN·클라우드 정리 완료가 아니다.
+[재환 최신 리뷰](https://github.com/321Team/infra-cicd/pull/132#pullrequestreview-5636785957)의
+helper 파일 존재·`includes_resource_cleanup=False` 시험 보강 2건은 비차단 권고로 다음 코드 변경에 연결한다.
+`remote_python=/usr/bin/python3`은 workflow에 근거한 후보이며 실제 발급측/SSH 배치 확인을 대신하지 않는다.
 
 ## 검토 범위
 
