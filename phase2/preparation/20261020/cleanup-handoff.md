@@ -1,5 +1,7 @@
 # #55 정리·Review·Close 인계
 
+> **2026-10-24 후속:** 이 표의 A2 NOT_RUN 등은 10/20 작성 시점 기록이다. 현재 유지 RUN·10/26 12:00 정리 및 전체 삭제/공개 제안의 승인 범위·소유권 정정은 [최신 정리 검토](../20261024/close-review.md)를 따른다. 공용 자원의 기본 보존은 새 제안만으로 삭제 승인으로 바뀌지 않는다.
+
 근거: [하영 회신](https://github.com/321Team/fds-project-baseline/issues/55#issuecomment-6291486761),
 [재환 회신](https://github.com/321Team/fds-project-baseline/issues/55#issuecomment-6291990233), 2026-10-20 KST.
 기존 계획의 확인된 누락과 의존관계만 보완한다. **실제 삭제/회수 GO는 이 문서에 포함하지 않는다.**
