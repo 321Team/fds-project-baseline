@@ -1,6 +1,6 @@
 # #55 최종 정리 검토·미확정 결정 — 2026-10-24
 
-기준: 2026-10-24 18:21 KST 조회. 13:23 검토 이후 담당자 회신·PR201/252/135 병합을 반영했다. 이권욱 / CODEX_ASSISTED.
+기준: 2026-10-25 13:03 KST 조회. 기존 담당자 회신·PR201/202·ev252를 재사용하고 #46 PR145~147 병합·PR148 검토와 P2 실제 환경 준비·회수 담당을 반영했다. 이권욱 / CODEX_ASSISTED.
 [하영 삭제 목록](https://github.com/321Team/fds-project-baseline/issues/55#issuecomment-6379305046),
 [담당별 확인 요청](https://github.com/321Team/fds-project-baseline/issues/55#issuecomment-6379606167),
 [기존 인계표](../20261020/cleanup-handoff.md)를 대조했다.
@@ -106,18 +106,18 @@ history 정리도 외부 clone·fork·참조의 사본 회수를 보장하지 �
 |---|---|---|
 | 1 #55 목록 정합화 | 하영·재환이 기존 회수와 VM/공용 자원 전체폐기 분리 및 권한 회수 순서에 동의 | 정확한 당일 시작·복구 가용, egress-proxy 인계 동의와 PKI 볼륨 실위치/폐기 기준만 미확인. 신규 계정해지/전체폐기 결정 별도 |
 | 2 #49 원본 집계 | SCC·UID 수신과 창 C ev252 편입 완료를 접수 대장에 반영 | 큰 원본5개·DB DR백업 보존. 미실행/절차 한계와 Full 인수는 별도 |
-| 3 #46 운영 연결 | [PR135](https://github.com/321Team/infra-cicd/pull/135)까지 MERGED `f65ae9c35ef23a91f106e6903277553f3aed1b55`: 하영·재환 각 담당 영역 APPROVED, 검사2 SUCCESS | 실제 배치값·본인 인증/발급/서버회수·원본/control/finish 결속 및 replicas 인계 후 fresh baseline |
+| 3 #46 운영 연결 | PR145·146까지 MERGED·통합 검사2 SUCCESS, source/store/private parser 실제 준비·재조회. PR147 MERGED99e10efc·재환 독립 APPROVED·검사2 SUCCESS. 기존 공급/native 대응은 [Draft PR148](https://github.com/321Team/infra-cicd/pull/148) | 실제 RUN grant·인계 후 새 baseline·본인 메모리 인증/실효 권한·actual helper/READY·finish scope. 확인한 과거 SSH/경로/UID를 재제출 대상으로 되돌리지 않음 |
 | 4 D7·공개 준비 | 19개 저장소의 가시성·보관상태 대조, 범위별 정리/공개 판정표 준비 | 실제 Runner/Secret/키/Hook 소유 목록과 마지막 소비. Public 방식에 대한 사용자 결정 |
 | 5 #57 인수 | 실제 완료/미실행·Known Issue·Owner/Due·잔존 책임을 모아 Sign-off 후보로 연결 | #54/#56 실제 결과와 최종 정리 readback. 문서 준비로 AC/Close를 완료하지 않음 |
 
 #46의 고정 선택은 ansible01/server01_ansible → 기존 Runner, 개인 actor gwonuk,
 native job checkout의 helper, 종료 후 object/rollout 관측이다.
 선택된 값은 현재 host 인증·설치·권한 검증 결과가 아니다.
-실제 workspace/Python/SSH port·alias/현재 UID·netns·READY/store와 승인 원본/control은 미확정으로 남긴다.
+10/24~25 읽기 원본의 SSH port/alias·계정/UID/netns와 P2 source/store·private Python 경로를 재사용한다. 이 관측이 미래 native job의 실제 workspace/helper/READY나 본인 인증·실효 권한을 보증하지 않는다. control 구성은 채택됐지만 실제 RUN grant와 역할 원문의 최종 결속은 남는다.
 현재 `SITE=None`, dispatch false, `RUNTIME=NOT_RUN`. 관리자 역할 부여 보고가 연결 완료나 시험 GO를 대신하지 않는다.
 #46 finish 관측 완료도 DB·Robot·VPN·클라우드 정리 완료가 아니다.
 PR132 이후의 helper/종료 관측 보강은 기존 병합 이력으로 추적한다. PR135의 비차단 로그인 입력·수동 OAuth 회수 안내는 다음 코드/문서 변경으로 연결하며 Runtime 선행 승인으로 확대하지 않는다.
-`remote_python=/usr/bin/python3`은 workflow에 근거한 후보이며 실제 발급측/SSH 배치 확인을 대신하지 않는다.
+관리 SSH JSON helper의 `/usr/bin/python3`과 consumer의 준비된 private Python3.12/PyYAML6.0.3을 구분한다. 같은 UID의 다른 job이 변경하지 않는 기존 비중첩 조건을 유지하며 interpreter 위치 검사만으로 파일 무결성을 주장하지 않는다.
 
 ## 10/24 담당자 회신 반영·회수 순서
 
@@ -147,3 +147,12 @@ Claude Code·Grok CLI·Antigravity CLI에는 비공개 원문 없이 각각 종�
 자문에서 backend 삭제까지 기존 승인으로 분류한 내용은 원 승인과 달라 기각했다.
 Grok의 “모든 Package가 함께 공개” 주장은 일반화하지 않았다.
 새 Runtime·권한 변경·계정 해지·공개 전환·정본 발행·티켓 종결은 수행하지 않았다.
+
+### 권욱의 P2 전용 파일 회수
+
+[#55 인계](https://github.com/321Team/fds-project-baseline/issues/55#issuecomment-6382548801)에 따라
+`/home/server01_cicd-runner/fds-p2-delivery`의 private Python·source cache·inputs·state는 권욱이 맡는다.
+마지막 #46 소비·앱/claim/fence·메모리/프로세스 세션 상태 확인과 필요한 증적 보존/반출 뒤
+자기 P2 파일만 회수·부재 readback한다. 기존 Runner HOME/workspace/다른 job은 제외한다.
+사용 중 state·해제되지 않은 fence·보존 전 원본은 지우지 않는다. 10/26 12:00 이전 완료 조건이며
+하영의 ROSA/RoleBinding 회수, 발표 뒤 별도 GO의 Runner 등록 해제→VM 폐기는 별개다.
