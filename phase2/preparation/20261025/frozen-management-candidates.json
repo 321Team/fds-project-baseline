@@ -1,0 +1,307 @@
+{
+  "id": "FDS-P2-MANAGEMENT-FREEZE-20261025",
+  "recorded_at": "2026-10-25T22:07:04.126825+09:00",
+  "decision_owner": "이권욱",
+  "decision_source": "사용자: 일부 관리 모두 종결해줘",
+  "kind": "FROZEN_MANAGEMENT_CANDIDATES_WITH_OPEN_ACTIONS",
+  "default_branch_snapshot": [
+    {
+      "name": "fds-msa-legacy",
+      "url": "https://github.com/321Team/fds-msa-legacy",
+      "visibility": "PRIVATE",
+      "isArchived": true,
+      "defaultBranchRef": {
+        "name": "main",
+        "target": {
+          "oid": "254b82231f8af79a06419b581174647bbccbe2bc"
+        }
+      }
+    },
+    {
+      "name": "infra-ansible",
+      "url": "https://github.com/321Team/infra-ansible",
+      "visibility": "PRIVATE",
+      "isArchived": false,
+      "defaultBranchRef": {
+        "name": "main",
+        "target": {
+          "oid": "7f04e18371f5d10aec678460f5dcd6e28d98d7d3"
+        }
+      }
+    },
+    {
+      "name": "fds-project-baseline",
+      "url": "https://github.com/321Team/fds-project-baseline",
+      "visibility": "PRIVATE",
+      "isArchived": false,
+      "defaultBranchRef": {
+        "name": "main",
+        "target": {
+          "oid": "ee2d6ee9a78078401f312af1ffdcee4d570adff0"
+        }
+      }
+    },
+    {
+      "name": "fds-project-evidence",
+      "url": "https://github.com/321Team/fds-project-evidence",
+      "visibility": "PRIVATE",
+      "isArchived": false,
+      "defaultBranchRef": {
+        "name": "main",
+        "target": {
+          "oid": "38c959950b908e2d016b1d4f84040cae1160fe78"
+        }
+      }
+    },
+    {
+      "name": "infra-db",
+      "url": "https://github.com/321Team/infra-db",
+      "visibility": "PRIVATE",
+      "isArchived": false,
+      "defaultBranchRef": {
+        "name": "main",
+        "target": {
+          "oid": "57f050eff31bdbfb05d6e75327d296047f89b1f0"
+        }
+      }
+    },
+    {
+      "name": "infra-harbor-trivy",
+      "url": "https://github.com/321Team/infra-harbor-trivy",
+      "visibility": "PRIVATE",
+      "isArchived": false,
+      "defaultBranchRef": {
+        "name": "main",
+        "target": {
+          "oid": "153e789bd3e4cdaaa27c2ce1dc21cc9ee54e355c"
+        }
+      }
+    },
+    {
+      "name": "infra-cicd",
+      "url": "https://github.com/321Team/infra-cicd",
+      "visibility": "PRIVATE",
+      "isArchived": false,
+      "defaultBranchRef": {
+        "name": "main",
+        "target": {
+          "oid": "54cec0173e032b5e0d07f95afc8f5ce507efb95e"
+        }
+      }
+    },
+    {
+      "name": "infra-kubernetes",
+      "url": "https://github.com/321Team/infra-kubernetes",
+      "visibility": "PRIVATE",
+      "isArchived": false,
+      "defaultBranchRef": {
+        "name": "main",
+        "target": {
+          "oid": "e60e022333a51a9a1690649ef170c0bda92ad9b9"
+        }
+      }
+    },
+    {
+      "name": "infra-lb",
+      "url": "https://github.com/321Team/infra-lb",
+      "visibility": "PRIVATE",
+      "isArchived": false,
+      "defaultBranchRef": {
+        "name": "main",
+        "target": {
+          "oid": "070c8883fb692e5b82d2ab48b0a71837abc43da1"
+        }
+      }
+    },
+    {
+      "name": "infra-monitoring",
+      "url": "https://github.com/321Team/infra-monitoring",
+      "visibility": "PRIVATE",
+      "isArchived": false,
+      "defaultBranchRef": {
+        "name": "main",
+        "target": {
+          "oid": "466d29e995a1a7e97f3d8ed09015250282a34dfe"
+        }
+      }
+    },
+    {
+      "name": "fds-msa",
+      "url": "https://github.com/321Team/fds-msa",
+      "visibility": "PRIVATE",
+      "isArchived": false,
+      "defaultBranchRef": {
+        "name": "main",
+        "target": {
+          "oid": "69e28c494a120c388afe18d901043d05333d7c7c"
+        }
+      }
+    },
+    {
+      "name": "infra-pki",
+      "url": "https://github.com/321Team/infra-pki",
+      "visibility": "PRIVATE",
+      "isArchived": false,
+      "defaultBranchRef": {
+        "name": "main",
+        "target": {
+          "oid": "f8bded5c02b4497452da0a3117fc7e08aab8f9bb"
+        }
+      }
+    },
+    {
+      "name": "infra-dns",
+      "url": "https://github.com/321Team/infra-dns",
+      "visibility": "PRIVATE",
+      "isArchived": false,
+      "defaultBranchRef": {
+        "name": "main",
+        "target": {
+          "oid": "5f7505f9613e4b94aedd4bcdaba52f2b3f1a5f19"
+        }
+      }
+    },
+    {
+      "name": ".github",
+      "url": "https://github.com/321Team/.github",
+      "visibility": "PUBLIC",
+      "isArchived": false,
+      "defaultBranchRef": {
+        "name": "main",
+        "target": {
+          "oid": "15da97219e4a973040c0fd884a7150007112db73"
+        }
+      }
+    },
+    {
+      "name": ".github-private",
+      "url": "https://github.com/321Team/.github-private",
+      "visibility": "PRIVATE",
+      "isArchived": false,
+      "defaultBranchRef": {
+        "name": "main",
+        "target": {
+          "oid": "f5ecbf8a0a207e9bd4c6c7147fe0a5360455118c"
+        }
+      }
+    },
+    {
+      "name": "fds-project-architecture",
+      "url": "https://github.com/321Team/fds-project-architecture",
+      "visibility": "PUBLIC",
+      "isArchived": false,
+      "defaultBranchRef": {
+        "name": "main",
+        "target": {
+          "oid": "d6490828f975578857a9b91042f7ec03717a241d"
+        }
+      }
+    },
+    {
+      "name": "infra-terraform",
+      "url": "https://github.com/321Team/infra-terraform",
+      "visibility": "PRIVATE",
+      "isArchived": false,
+      "defaultBranchRef": {
+        "name": "main",
+        "target": {
+          "oid": "366e176805b885d20d34a76ed9fa02f0d6eb7a03"
+        }
+      }
+    },
+    {
+      "name": "infra-rosa",
+      "url": "https://github.com/321Team/infra-rosa",
+      "visibility": "PRIVATE",
+      "isArchived": false,
+      "defaultBranchRef": {
+        "name": "main",
+        "target": {
+          "oid": "3a140aa8ed744f46d3e396508d02a3decd90399f"
+        }
+      }
+    },
+    {
+      "name": "infra-vpn",
+      "url": "https://github.com/321Team/infra-vpn",
+      "visibility": "PRIVATE",
+      "isArchived": false,
+      "defaultBranchRef": {
+        "name": "main",
+        "target": {
+          "oid": "c9bac129fffd3634a05a13e1ee3b9db3fbd6196c"
+        }
+      }
+    }
+  ],
+  "technical_results": {
+    "G4": "NOT_READY_WITH_KNOWN_ISSUES",
+    "G5": "UNCHANGED_OTHER_LEAD",
+    "G6": "NOT_READY_WITH_KNOWN_ISSUES",
+    "P2_CICD": "RUNTIME_NOT_RUN"
+  },
+  "managed_issue_closure": [
+    39,
+    49,
+    53,
+    54,
+    56
+  ],
+  "actual_execution_and_close_tickets_kept_open": [
+    46,
+    55,
+    57
+  ],
+  "unchanged_other_lead_tickets": [
+    35,
+    37,
+    38,
+    43,
+    45,
+    47,
+    50
+  ],
+  "no_technical_ac_auto_checked": true,
+  "no_runtime_or_teardown_go_added": true,
+  "no_release_tag_or_republication": true,
+  "post_freeze_changes": "append-only follow-up record in #46/#55/#57; do not silently replace this candidate set",
+  "management_output_sha256": {
+    "phase2/preparation/20261025/management-closeout.md": "820cca7920992f45bf15e7db271b1ae9b4bbf692c699c7fe461fd3fa06dfe905",
+    "phase2/preparation/20261022/FDS_Phase2_Review_Operating_WBS_20261022.xlsx": "a50f3fc809b8807a692dc332987bacc658088a33e9701588dca05c49a8c24f27"
+  },
+  "evidence_refs": [
+    "https://github.com/321Team/fds-project-evidence/pull/250",
+    "https://github.com/321Team/fds-project-evidence/pull/251",
+    "https://github.com/321Team/fds-project-evidence/pull/252"
+  ],
+  "open_actions": [
+    {
+      "id": "M01",
+      "register": "management-closeout.md#open-action-인계"
+    },
+    {
+      "id": "M02",
+      "register": "management-closeout.md#open-action-인계"
+    },
+    {
+      "id": "M03",
+      "register": "management-closeout.md#open-action-인계"
+    },
+    {
+      "id": "M04",
+      "register": "management-closeout.md#open-action-인계"
+    },
+    {
+      "id": "M05",
+      "register": "management-closeout.md#open-action-인계"
+    },
+    {
+      "id": "M06",
+      "register": "management-closeout.md#open-action-인계"
+    },
+    {
+      "id": "M07",
+      "register": "management-closeout.md#open-action-인계"
+    }
+  ]
+}
