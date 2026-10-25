@@ -1,12 +1,12 @@
-# 인수·증적·최종 정리 변경분 — 10/24 갱신
+# 인수·증적·최종 정리 변경분 — 10/25 갱신
 
-이권욱 / CODEX_ASSISTED. 기준: 2026-10-25 13:03 KST. 이전 원본 검토·PR201/202·ev252 인수를 재사용하고 #46 PR145~147 병합·PR148 검토와 실제 source/환경·producer 근거를 갱신했다. 검토 후보이며 새 정본 발행·Runtime GO·AC 인수·Issue 종결이 아니다.
+이권욱 / CODEX_ASSISTED. 기준: 2026-10-25 15:43 KST. 사용자 요청의 #46 운영 입력 대조와 #33·#42 관리 기록 마감을 병행했다. PR201/202·ev251/252·PR150의 기존 검증을 재사용한다. 아래 관리 범위 인수 기록과 실제 Runtime·전체 Gate·정본 발행은 구분한다.
 
 ## #33·#39·#42 인수 준비
 
 | 항목 | 확정·편입 근거 | 남은 담당·완료조건 |
 |---|---|---|
-| #33 Phase 2 Kick-off | [기존 Start 인계표](../20261020/start-relay-handoff.md)의 #32 Close/KI·Approved Deferred, #34 Freeze/docs-v3.1.22, 계정·기반·P0 범위·단일 Review 시간·Risk 근거를 재사용. 실제 소비는 ROSA `fds-app`, 공용 Lab 제약은 해당 Lab을 실제 사용할 때 적용 | 권욱: 공식 Entry/Exit 판단 결과와 WBS/Notion 추적 잔여를 #49/Review에 연결. 과거 실행을 소급 Start GO·완료일로 만들지 않으며 #34/#36/#52 Done/closed를 다시 열지 않음 |
+| #33 Phase 2 Kick-off | [기존 Start 인계표](../20261020/start-relay-handoff.md)의 #32 Close/KI·Approved Deferred, #34 Freeze/docs-v3.1.22, 계정·기반·P0 범위·단일 Review 시간·Risk 근거를 재사용. 실제 소비는 ROSA `fds-app`, 공용 Lab 제약은 해당 Lab을 실제 사용할 때 적용 | 권욱: 아래 10/25 관리 인수 결과와 운영 WBS에 연결. GitHub 이관 후 Notion 미사용 결정 적용. 과거 Start GO·완료일 합성 및 #34/#36/#52 재개 없음 |
 | #39 G4 | [ev250](https://github.com/321Team/fds-project-evidence/pull/250) merge `eadec9f53cb9f1e13877f2e9a02779ef785aa366`: T3/T3-R·원복/정리 원본과 공개 정제 경로 편입 | 권욱 인수, 하영·재환 생산: T6 INCONCLUSIVE·#7 B/A/N3 등 실제 미실행의 원 AC 처분 근거 연결. 병합만으로 Gate PASS 처리하지 않으며 같은 원본 재제출/전체 시험 반복은 요구하지 않음 |
 | #42 D22 | [FINAL6337537087](https://github.com/321Team/fds-project-baseline/issues/42#issuecomment-6337537087), 창 B 실제 원본 검토·Harbor Primary, [MSA42](https://github.com/321Team/fds-msa/pull/42) merge `69e28c494a120c388afe18d901043d05333d7c7c`의 IF-19/strict clean render·2앱6객체 | 권욱 인수/추적, 하영 Registry·재환 소비: 기존 IF-19/WBS의 선택·정상 URI·인증 갱신/실패/복구 연결을 최신 운영 결정과 대조. D22를 미선택으로 돌리거나 ECR 실제 전환 시험·세 번째 이미지 생산을 새 필수조건으로 추가하지 않음. 실제 최종 자격 회수는 별도 |
 
@@ -16,14 +16,54 @@
 
 | 티켓·원 AC | 근거와 현재 판정 | 남은 단독 작업 / 종료 조건 |
 |---|---|---|
-| #33 선행조건·착수 승인 | 기존 Start 입력표, #32 Close/KI·Approved Deferred, #34 Freeze, #36 D21, #52 일정 연결. 준비·구현 진행 사실로 과거 착수 승인일을 만들어 넣지 않음 | 권욱: 기존 승인 기록을 모은 공식 Entry/Exit 인수 결과 기록. 새 환경 시험이나 담당자 동일 회신은 요구하지 않음 |
+| #33 선행조건·착수 승인 | 기존 Start 입력표, #32 Close/KI·Approved Deferred, #34 Freeze, #36 D21, #52 일정 연결. 준비·구현 진행 사실로 과거 착수 승인일을 만들어 넣지 않음 | 아래 10/25 기록에 기존 선행조건·Decision/Risk·후속 Action을 연결했다. 과거 착수 승인 시각은 합성하지 않음 |
 | #33 Decision/Risk·KI | 위 확정 기록과 PR197의 Decision5/Task6 관리 정리 재사용. 공용 Lab 제약은 실제 Lab 사용 시에만 적용 | 기존 Risk/Owner·후속 Action을 인수 결과와 연결. Runtime 미실행을 PASS로 바꾸지 않음 |
-| #33 WBS·Notion 일치 | GitHub 준비 인계표의 상태는 확인. Notion 실시간 반영 결과는 미확인 | 권욱: 동일 Milestone 결과를 관리 기록에 반영하고 확인. 이번 문서/PR만으로 Notion 동기화 완료 표시 금지 |
+| #33 관리 시스템 일치 | 10/25 사용자 확인: GitHub 이관 후 Notion 미사용·연결 금지. 옛 Notion 동기화는 현행 완료조건으로 적용하지 않음 | 운영 WBS A22:H22와 본 인수 기록을 대조. 발행 원본·보관 AC 문구는 이력으로 보존 |
 | #42 소스·Fallback 승인 | [D22 FINAL](https://github.com/321Team/fds-project-baseline/issues/42#issuecomment-6337537087) Harbor Primary, ECR 수동 A 조건 유지. 현재 ECR 운영 준비 미확인, 실패 시 신규 rollout STOP·previous=NONE | 선택 완료. 다시 Registry를 고르거나 ECR 구축·전환 시험을 현재 필수조건으로 추가하지 않음 |
 | #42 Pull Route/TLS/Credential 시험 정의 | 실제 창 B cold-pull·strict TLS·승인 digest와 ev251, Robot 유한 연장 보고가 연결됨 | 정의/수신 범위는 재사용. 최종 Robot·Secret 회수는 #12/#55 책임으로 추적하며 이를 D22 재선택/새 선행시험으로 만들지 않음 |
-| #42 P2-APP/HYB WBS·IF-19 | MSA42 병합으로 소비 계약/IF-19 소스 연결. WBS·관리 Interface 상태의 최종 반영 확인은 별도 | 권욱: 선택 `FINAL_GO_HARBOR`, fallback 조건부/미활성, APP/HYB 후속과 #12/#55 회수 책임을 같은 관리 행에 반영·확인 |
+| #42 P2-APP/HYB WBS·IF-19 | MSA42 병합의 소비 계약과 아래 IF-19 운영 행·운영 WBS A23:H25에 동일 선택/후속 책임 반영 | 권욱 관리 반영, 하영 Registry/자격·재환 앱/Hybrid 소비. 최종 회수 #12/#55와 전체 앱/G5 인수는 별도 |
 
-위 표는 종료 판단을 위한 근거 정리다. #33/#42 Status·AC 체크·완료일은 이번에 바꾸지 않는다. Decision 범위의 인수와 #39/G4·#46 실행·#55 최종 회수를 각각 구분한다. 이미 충족한 선택/시험 정의를 미결로 되돌리지 않는다.
+관리 문서·WBS 반영과 GitHub 티켓의 Status/AC/종결 반영은 각각 확인한다. 아래 기록은 #33 Start 입력·인계와 #42 D22 Decision 범위이며 #39/G4·#46 실행·#55 최종 회수의 인수를 대신하지 않는다.
+
+## 10/25 관리 마감·IF-19
+
+사용자 이권욱의 “2, 4번 먼저 병행” 지시 범위로 기존 확정 기록을 정리했다. **관리 기준은 GitHub 저장소·티켓·WBS·Interface 단일 경로**다. 사용자 추가 확인에 따라 Notion은 GitHub 이관 후 사용하지 않으며 연결·수정을 중단했다. 과거 발행본/보관 입력본의 Notion 문구는 이력으로 보존하고 Notion 동기화 완료를 주장하지 않는다.
+
+### #33 Start 입력·인계 인수 기록
+
+- 책임/기록 주체: **이권욱 / CODEX_ASSISTED**, 관리 기록일 2026-10-25 KST. 기존 확정 판단을 모은 현재 인계 기록이며 과거 실제 착수일·당시 승인자·회의 실시일을 새로 만들지 않았다.
+- Entry 대조: [기존 Start 입력표6270090544](https://github.com/321Team/fds-project-baseline/issues/33#issuecomment-6270090544)·[Start 인계표](../20261020/start-relay-handoff.md)의 Phase1 Close/KI·Approved Deferred, #34 Freeze·정본, 계정/기반·P0 범위·일정, [#36 D21 최종 인수6330828733](https://github.com/321Team/fds-project-baseline/issues/36#issuecomment-6330828733), #52 단일 회의계획을 재사용한다.
+- 관리 범위 결과: **선행조건·Decision/Risk·KI 인계 기록 수용**. D21은 EC2 Relay FINAL이며 새 OCI 시험/선택을 요구하지 않는다. PR197의 미구현 잔여와 재개 Owner/조건은 그대로 인계한다.
+- 후속 Action: #39 권욱 인수/하영·재환 증적(미실행·INCONCLUSIVE 처분), #46 권욱 실제 grant/baseline/인증/finish, #49 집계, #55 각 담당 최종 회수, #57 Lead Sign-off. 이들 미완료를 Start 관리 범위 완료 때문에 PASS로 바꾸지 않는다.
+- 관리 추적: [운영 WBS](../20261022/FDS_Phase2_Review_Operating_WBS_20261022.xlsx) `WBS!A22:H22`에 동일 결과·책임·기록일 반영. 원 계획일/과거 Completed Date는 변경하지 않는다. 새 Runtime 실행 GO는 없다.
+
+### #42 D22·IF-19 현행 운영 행
+
+| 항목 | 현행 결정·후속 책임 |
+|---|---|
+| IF-19 경로/소스 | ROSA **node image pull** → Harbor `10.1.93.54:443`; Primary `FINAL_GO_HARBOR`. [D22 FINAL6337537087](https://github.com/321Team/fds-project-baseline/issues/42#issuecomment-6337537087) 재사용. Pod NetworkPolicy를 node pull 경계로 해석하지 않음 |
+| TLS·이미지 | strict TLS·기존 CA, 승인 immutable digest 2개. MSA42 merge `69e28c494a120c388afe18d901043d05333d7c7c`의 동일2앱6객체·IF-19 계약 유지. 창 B 실제 cold-pull/TLS/digest와 [ev251](https://github.com/321Team/fds-project-evidence/pull/251) 편입을 근거로 삼으며 앱 기동/정책 AC는 별도 |
+| 자격·갱신 | P2 pull-only Robot 1개·지정 pull Secret/SA 참조. 하영이 기존 동일 Robot의 유한 연장·readback을 관리. 만료·회수·pull 실패 시 rollout STOP. 갱신 시 Secret 참조/readback·strict TLS/digest를 유지하며 token 원문은 비공개. 새 무기한 자격이나 재발급을 이 기록으로 승인하지 않음 |
+| Fallback·복구 | ECR 수동 A는 기존 조건부 대안이며 현재 운영 준비 미확인·미활성. 자동 ECR 전환이나 추가 이미지 생산 없음. 현재 신규 rollout STOP·`previous=NONE`; 실제 별도 전환/복귀가 필요하면 그 경로·자격·digest와 수동 승인 계약을 적용 |
+| APP/HYB WBS | `WBS!A23:H25`: D22 선택·P2-APP-01 소비 계약·P2-HYB-01 IF-19 연결을 같은 근거로 기록. 선택과 시험 정의의 인수이며 #43/#47 전체 AC·G5/G6 PASS가 아님 |
+| Owner·마감 | Decision/관리 추적 권욱, Registry·TLS·Robot/Secret 하영, 앱/Hybrid 소비 재환. 실제 최종 SA/Secret·Robot/경로 회수는 #12/#55에서 10/26 12:00 완료로 별도 확인. 정상 소비 종료 계획08:30과 회수 결과를 혼합하지 않음 |
+
+### #46 확인된 입력 연결·미수신 원본
+
+코드 기준 [PR150 HEAD6c76311d](https://github.com/321Team/infra-cicd/pull/150): 발급측 `ansible01/server01_ansible`, 실행측 `cicd-runner01/server01_cicd-runner` UID1000, 관리 SSH key/known_hosts·22/tcp·host-key alias, 날짜가 있는 API/OAuth/TLS 관측, source69e28c49·render/contract·P2 root/private Python 준비를 재사용한다. 기존 `build_observed_run_inputs`·native job 선언과 로그인 공급부가 같은 config/context·repository 순서로 연결되는 코드/통합시험은 이미 이 PR에 모여 있다. helper는 과거 workspace에 고정하지 않고 실제 native job의 exact checkout에서 선택한다.
+
+control은 전용 ref `heads/codex/p46-operating-control-20261025`, commit `6531ba8e301858c0e180c377d06908f895158a70`, `docs/phase2/operating-handoff.md` body SHA256 `4bbac06d284a7d8c68ff867a5fb6f69ead4881ba56973bd7bcbb6f20c4e9311b`다. 이는 기존 채택 pin이며 준비댓글6385867126을 실행 grant로 쓰지 않는다. 상시 시간대와 실제 grant의 유한기간은 구분한다.
+
+| 남은 입력/행위 | 담당·완료조건 |
+|---|---|
+| 실제 RUN/action의 5역할 grant·기간/control 및 별도 finish scope | 권욱. 실제 원본의 대상·행위·유효기간을 CODE 선택에 명시. 코드 승인·준비댓글·자원 유지기한/과거 수동 C GO로 대체하지 않음 |
+| replicas 인계 후 새 full6 baseline metadata·실물·명시 staging | 권욱. 기존 하영·재환 인계 재사용 후 새 현재 상태/UID/spec/owner/previous와 동일 RUN을 결속. 오래된 archive·SCC/UID 투영 대체 금지 |
+| 양호스트 동일 config/context·source 채널 및 본인 메모리 인증 | 권욱. 실제 native context와 source 자격 순서 결속. 확인된 경로를 재요청하지 않으며 password/token을 파일·환경·argv·채팅에 넣지 않음 |
+| 실효 권한·인증된 READY·실제 finish/복구 인수 | 권욱. 실행 승인 후 검증/생성. 미래 nativeID/nonce/발급receipt/finish hash는 사전 제출 입력이 아님 |
+
+이번에는 기존 구성 함수의 무I/O 조립 상태를 **12개 오프라인 assertion**으로 대조했다. 선택 상태·기간/control·Runner/준비 경로·미수신 인증/finish 구분을 확인했으며 `SITE=None`, 실제 호스트 접속·자격 발급·권한 변경·배포/dispatch는 0이다. PR150의 기존 Windows1235=1036PASS199SKIP/Linux1235=1230PASS5SKIP·필수2SUCCESS를 재사용한다. 새 원본 없이 같은 시험이나 기능 PR을 추가하지 않는다.
+
+PR150 최신 확인: 두 담당자(하영·재환)의 정확한 HEAD `6c76311d623bf707004b858da7cbfbb36303e203` APPROVED와 필수 검사2 SUCCESS를 확인했다. 이번 요청은 운영 입력 정리/관리 기록 마감이며 실제 배포 또는 도구 Runtime을 수행하지 않았다. PR150 병합 결과와 Runtime 입력 채택 결과는 각각 추적한다.
 
 ## #49·Review 인계
 
